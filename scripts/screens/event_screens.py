@@ -185,7 +185,7 @@ class EventsScreen(Screens):
                     for i in game.other_events_list:
                         for c in game.clan.clan_cats:
                             if Cat.all_cats.get(c).favourite:
-                                if str(Cat.all_cats.get(c).name) in i:
+                                if str(Cat.all_cats.get(c).name) in i.text:
                                     self.relation_events.append(c)
                                     break
                                   
