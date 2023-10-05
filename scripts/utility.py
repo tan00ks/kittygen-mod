@@ -113,7 +113,7 @@ def get_living_clan_cat_count(Cat):
     return count
 
 
-def get_cats_same_age(cat, Relationship, range=10):  # pylint: disable=redefined-builtin
+def get_cats_same_age(cat, range=10):  # pylint: disable=redefined-builtin
     """Look for all cats in the Clan and returns a list of cats, which are in the same age range as the given cat."""
     cats = []
     for inter_cat in cat.all_cats.values():
@@ -134,7 +134,7 @@ def get_cats_same_age(cat, Relationship, range=10):  # pylint: disable=redefined
     return cats
 
 
-def get_free_possible_mates(cat, Relationship):
+def get_free_possible_mates(cat):
     """Returns a list of available cats, which are possible mates for the given cat."""
     cats = []
     for inter_cat in cat.all_cats.values():
@@ -149,8 +149,7 @@ def get_free_possible_mates(cat, Relationship):
                 inter_cat.create_one_relationship(cat)
             continue
 
-        if inter_cat.is_potential_mate(cat, for_love_interest=True) and cat.is_potential_mate(inter_cat,
-                                                                                              for_love_interest=True):
+        if inter_cat.is_potential_mate(cat, for_love_interest=True):
             cats.append(inter_cat)
     return cats
 
@@ -194,9 +193,9 @@ def change_clan_relations(other_clan, difference):
     """
     will change the Clan's relation with other clans according to the difference parameter.
     """
+    # grab the clan that has been indicated
+    other_clan = other_clan
     # grab the relation value for that clan
-    if other_clan not in game.clan.all_clans:
-        return
     y = game.clan.all_clans.index(other_clan)
     clan_relations = int(game.clan.all_clans[y].relations)
     # change the value
@@ -479,11 +478,6 @@ def create_outside_cat(Cat, status, backstory, alive=True, thought=None):
 #                             Cat Relationships                                #
 # ---------------------------------------------------------------------------- #
 
-resource_directory = "resources/dicts/"
-PERSONALITY_COMPATIBILITY = None
-with open(f"{resource_directory}personality_compatibility.json", 'r') as read_file:
-    PERSONALITY_COMPATIBILITY = ujson.loads(read_file.read())
-
 
 def get_highest_romantic_relation(relationships, exclude_mate=False, potential_mate=False):
     """Returns the relationship with the highest romantic value."""
@@ -567,8 +561,8 @@ def get_personality_compatibility(cat1, cat2):
     return None
 
 
-def get_cats_of_romantic_interest(cat, Relationship):
-    """Returns a list of cats, those cats are love interest of the given cat."""
+def get_cats_of_romantic_interest(cat):
+    """Returns a list of cats, those cats are love interest of the given cat"""
     cats = []
     for inter_cat in cat.all_cats.values():
         if inter_cat.dead or inter_cat.outside or inter_cat.exiled:
@@ -581,8 +575,9 @@ def get_cats_of_romantic_interest(cat, Relationship):
             if cat.ID not in inter_cat.relationships:
                 inter_cat.create_one_relationship(cat)
             continue
-
-        if cat.relationships[inter_cat.ID].romantic_love > 0:
+        
+        # Extra check to ensure they are potential mates
+        if inter_cat.is_potential_mate(cat, for_love_interest=True) and cat.relationships[inter_cat.ID].romantic_love > 0:
             cats.append(inter_cat)
     return cats
 
@@ -950,6 +945,7 @@ def ongoing_event_text_adjust(Cat, text, clan=None, other_clan_name=None):
             clan_name = str(game.clan.name)
 
     text = text.replace("c_n", clan_name + "Clan")
+
     return text
 
 
@@ -960,7 +956,7 @@ def event_text_adjust(Cat,
                       other_clan_name=None,
                       new_cat=None,
                       clan=None,
-                      murder_reveal=None,
+                      murder_reveal=False,
                       victim=None):
     """
     This function takes the given text and returns it with the abbreviations replaced appropriately
@@ -974,6 +970,7 @@ def event_text_adjust(Cat,
     :param murder_reveal: Whether or not this event is a murder reveal
     :return: the adjusted text
     """
+
     cat_dict = {}
 
     if cat:
@@ -1402,7 +1399,7 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                     new_sprite.blit(sprites.sprites['acc_tail2' + cat.pelt.accessory + cat_sprite], (0, 0))
 
         # Apply fading fog
-        if cat.pelt.opacity <= 97 and not cat.prevent_fading and game.settings["fading"] and dead:
+        if cat.pelt.opacity <= 97 and not cat.prevent_fading and game.clan.clan_settings["fading"] and dead:
 
             stage = "0"
             if 80 >= cat.pelt.opacity > 45:

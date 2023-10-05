@@ -127,9 +127,8 @@ class History:
         :param cat: cat object
         :return:
         """
-        if cat:
-            if not cat.history:
-                cat.load_history()
+        if not cat.history:
+            cat.load_history()
 
     @staticmethod
     def make_dict(cat):
@@ -655,10 +654,8 @@ class History:
         """
 
         History.check_load(cat)
-        if cat:
-            if cat.history:
-                return cat.history.murder
-        return None
+
+        return cat.history.murder
 
     @staticmethod
     def reveal_murder(cat, other_cat, Cat, victim, murder_index):

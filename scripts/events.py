@@ -852,7 +852,7 @@ class Events:
                 ceremony_txt = random.choice(self.c_txt['mate_events'])
                 ceremony_txt = ceremony_txt.replace("mate1", str(mate1.name))
                 game.cur_events_list.insert(1, Single_Event(ceremony_txt))
-            if game.settings['affair']:
+            if game.clan.clan_settings['affair']:
                 if random.randint(1,50) == 1:
                     mate1 = Cat.all_cats.get(random.choice(game.clan.your_cat.mate))
                     if mate1.dead or mate1.outside:
@@ -861,7 +861,7 @@ class Events:
                     ceremony_txt = ceremony_txt.replace("mate1", str(mate1.name))
                     game.cur_events_list.insert(1, Single_Event(ceremony_txt))
         if random.randint(1,30) == 1:
-            if (len(game.clan.your_cat.mate) > 0 and game.settings['affair']) or (len(game.clan.your_cat.mate) == 0):
+            if (len(game.clan.your_cat.mate) > 0 and game.clan.clan_settings['affair']) or (len(game.clan.your_cat.mate) == 0):
                 if len(game.clan.your_cat.mate) > 0:
                     if random.randint(1,50) != 1:
                         return
@@ -959,7 +959,7 @@ class Events:
                 game.cur_events_list.append(
                     Single_Event(text, "other_clans", cat.ID))
 
-        if game.settings['become_mediator']:
+        if game.clan.clan_settings['become_mediator']:
             # Note: These chances are large since it triggers every moon.
             # Checking every moon has the effect giving older cats more chances to become a mediator
             _ = game.config["roles"]["become_mediator_chances"]
@@ -1352,7 +1352,7 @@ class Events:
         """
         TODO: DOCS
         """
-        if game.settings["fading"] and not cat.prevent_fading \
+        if game.clan.clan_settings["fading"] and not cat.prevent_fading \
                 and cat.ID != game.clan.instructor.ID and not cat.faded:
 
             age_to_fade = game.config["fading"]["age_to_fade"]
@@ -1823,7 +1823,7 @@ class Events:
                 "medicine cat apprentice", "queen's apprentice"
             ]:
 
-                if game.settings["12_moon_graduation"]:
+                if game.clan.clan_settings["12_moon_graduation"]:
                     _ready = cat.moons >= 12
                 else:
                     _ready = (cat.experience_level not in ["untrained", "trainee"] and
@@ -1831,7 +1831,7 @@ class Events:
                              or cat.moons >= game.config["graduation"]["max_apprentice_age"][cat.status]
 
                 if _ready:
-                    if game.settings["12_moon_graduation"]:
+                    if game.clan.clan_settings["12_moon_graduation"]:
                         preparedness = "prepared"
                     else:
                         if cat.moons == game.config["graduation"]["min_graduating_age"]:

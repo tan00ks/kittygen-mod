@@ -7,6 +7,7 @@ from scripts.cat_relations.inheritance import Inheritance
 from scripts.cat.history import History
 from scripts.event_class import Single_Event
 from scripts.events import events_class
+from .Screens import Screens
 
 from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
 from scripts.cat.cats import Cat
@@ -204,7 +205,7 @@ class NameKitsScreen(Screens):
         self.selected_details = {}
         if self.selected_cat:
             name = str(self.selected_cat.name)  # get name
-            if self.selected_cat.name.prefix != "":
+            if self.selected_cat.name.prefix.strip() != "":
                 if 11 <= len(name):  # check name length
                     short_name = str(name)[0:9]
                     name = short_name + '...'

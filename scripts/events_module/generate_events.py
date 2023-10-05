@@ -274,7 +274,7 @@ class GenerateEvents:
         severe = []
         
         # Chance to bypass the skill or trait requirements. 
-        trait_skill_bypass = 10
+        trait_skill_bypass = 15
 
         if war and random.randint(1, 10) != 1 and other_clan == enemy_clan:
             war_event = True
@@ -564,13 +564,9 @@ class GenerateEvents:
                     final_events = minor
                 elif severity_chosen[0] == 'major':
                     final_events = major
-                elif severity_chosen[0] == 'severe':
+                else:
                     final_events = severe
-                if not final_events:
-                    final_events.extend(minor + major + severe)
 
-        # if not final_events:
-        #     print('no final events')
         return final_events
 
     @staticmethod

@@ -11,7 +11,7 @@ import ujson
 
 from scripts.utility import event_text_adjust, scale, ACC_DISPLAY, process_text, chunks
 
-from .base_screens import Screens
+from .Screens import Screens
 
 from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit
 from scripts.cat.cats import Cat, BACKSTORIES

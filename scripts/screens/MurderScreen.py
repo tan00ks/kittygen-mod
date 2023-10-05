@@ -8,6 +8,7 @@ from scripts.cat.history import History
 from scripts.event_class import Single_Event
 from scripts.events import events_class
 
+from .Screens import Screens
 from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache

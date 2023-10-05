@@ -24,7 +24,7 @@ class EventsScreen(Screens):
     health_events = ""
     other_clans_events = ""
     misc_events = ""
-    display_text = "<center>See which events are currently happening in the Clan.</center>"
+    display_text = ""
     display_events = ""
     
     def __init__(self, name=None):
@@ -287,7 +287,7 @@ class EventsScreen(Screens):
             self.update_display_events_lists()
             self.display_events = self.all_events
 
-        self.heading = pygame_gui.elements.UITextBox("See which events are currently happening in the Clan.",
+        self.heading = pygame_gui.elements.UITextBox("",
                                                      scale(pygame.Rect((200, 220), (1200, 80))),
                                                      object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                      manager=MANAGER)

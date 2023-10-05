@@ -152,6 +152,9 @@ class Screens():
         
         if not isinstance(work_thread, PropagatingThread):
             return
+
+        # Place to store the loading window(s)
+        self.loading_window = {}
         
         # Handled the loading animation, both creating and killing it. 
         if not self.loading_window.get(work_thread.name) and work_thread.is_alive() \
