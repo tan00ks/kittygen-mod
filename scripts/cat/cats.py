@@ -218,6 +218,9 @@ class Cat():
         self.revealed = 0
         self.inventory = []
         self.revives = 0
+        self.no_kits = False
+        self.no_mates = False
+        self.no_retire = False
 
         
         self.prevent_fading = False  # Prevents a cat from fading.
@@ -2126,9 +2129,13 @@ class Cat():
         # just to be sure, check if it is not the same cat
         if self.ID == other_cat.ID:
             return False
+        
+        #No Mates Check
+        if self.no_mates or other_cat.no_mates:
+            return False
 
         # Inheritance check
-        if self.is_related(other_cat, game.settings["first cousin mates"]):
+        if self.is_related(other_cat, game.clan.clan_settings["first cousin mates"]):
             return False
 
         # check exiled, outside, and dead cats
@@ -2152,7 +2159,7 @@ class Cat():
 
         # check for mentor
         is_former_mentor = (other_cat.ID in self.former_apprentices or self.ID in other_cat.former_apprentices or other_cat.ID in self.apprentice or self.ID in other_cat.apprentice)
-        if is_former_mentor and not game.settings['romantic with former mentor']:
+        if is_former_mentor and not game.clan.clan_settings['romantic with former mentor']:
             return False
 
         return True
@@ -2318,7 +2325,7 @@ class Cat():
                 comfortable = 0
                 jealousy = 0
                 trust = 0
-                if game.settings['random relation']:
+                if game.clan.clan_settings['random relation']:
                     if game.clan:
                         if the_cat == game.clan.instructor:
                             pass
@@ -2462,7 +2469,7 @@ class Cat():
         direct_related = cat1.is_sibling(cat2) or cat1.is_parent(cat2) or cat2.is_parent(cat1)
         indirect_related = cat1.is_uncle_aunt(cat2) or \
                            cat2.is_uncle_aunt(cat1)
-        if not game.settings["first cousin mates"]:
+        if not game.clan.clan_settings["first cousin mates"]:
             indirect_related = indirect_related or cat1.is_cousin(cat2)
         related = direct_related or indirect_related
 
@@ -2547,7 +2554,7 @@ class Cat():
             mediator.experience += max(randint(1, 6), 1)
 
         no_romantic_mentor = False
-        if not game.settings['romantic with former mentor']:
+        if not game.clan.clan_settings['romantic with former mentor']:
             if cat2.ID in cat1.former_apprentices or cat1.ID in cat2.former_apprentices:
                 no_romantic_mentor = True
 

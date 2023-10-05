@@ -83,11 +83,12 @@
 	},
 	"mates":{
 		"age_range": 40,
-		"chance_fulfilled_condition": 4,
-		"chance_friends_to_lovers": 200,
+		"overide_same_age_group": false,
+		"chance_fulfilled_condition": 5,
+		"chance_friends_to_lovers": 170,
 		"confession": {
 			"make_confession" : {
-				"romantic": 20,
+				"romantic": 30,
 				"platonic": 15,
 				"dislike": -15,
 				"admiration": 0,
@@ -106,7 +107,7 @@
 			}
 		},
 		"mate_condition": {
-			"romantic": 15,
+			"romantic": 20,
 			"platonic": 30,
 			"dislike": -10,
 			"admiration": 0,
@@ -119,7 +120,7 @@
 			"platonic": 30,
 			"dislike": -15,
 			"admiration": 0,
-			"comfortable": 25,
+			"comfortable": 20,
 			"jealousy": 0,
 			"trust": 0
 		},
@@ -219,8 +220,8 @@
 	},
 	"pregnancy": {
 		"birth_cooldown": 6,
-		"primary_chance_mated": 70,
-		"primary_chance_unmated": 120,
+		"primary_chance_mated": 80,
+		"primary_chance_unmated": 130,
 		"random_affair_chance": 50,
 		"unmated_random_affair_chance": 10,
 		"one_kit_possibility": {"young adult": 8, "adult": 9, "senior adult": 10, "senior": 4},
@@ -260,7 +261,7 @@
 		]
 	},
 	"accessory_generation": {
-		"base_acc_chance": 140,
+		"base_acc_chance": 150,
 		"med_modifier": -80,
 		"baby_modifier": -20,
 		"elder_modifier": 20,
@@ -274,7 +275,7 @@
 		"visual_fading_speed": 5
 	},
 	"roles": {
-		"mediator_app_chance": 40,
+		"mediator_app_chance": 50,
 		"base_medicine_app_chance": 41,
 		"become_mediator_chances": {
 			"warrior": 5000,
@@ -347,8 +348,7 @@
 		"max_apprentice_age": {
 			"medicine cat apprentice": 30,
 			"apprentice": 25,
-			"mediator apprentice": 25,
-			"queen's apprentice": 25
+			"mediator apprentice": 25
 		},
 		"min_graduating_age": 10
 	},

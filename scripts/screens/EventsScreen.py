@@ -1,8 +1,6 @@
 import pygame_gui
-import threading
-import time
 
-from .base_screens import Screens, cat_profiles
+from .Screens import Screens
 import pygame
 from scripts.events import events_class
 from scripts.utility import get_living_clan_cat_count, get_text_box_theme, scale, shorten_text_to_fit
@@ -26,7 +24,7 @@ class EventsScreen(Screens):
     health_events = ""
     other_clans_events = ""
     misc_events = ""
-    display_text = "<center> Check this page to see which events are currently happening in the Clan.</center>"
+    display_text = ""
     display_events = ""
     
     def __init__(self, name=None):
@@ -203,7 +201,7 @@ class EventsScreen(Screens):
             
         elif event.type == pygame.KEYDOWN and game.settings['keybinds']:
             if event.key == pygame.K_RIGHT:
-                self.change_screen('clan screen')
+                self.change_screen('camp screen')
             elif event.key == pygame.K_UP:
                 if self.event_display_type == 'ceremony events':
                     self.event_display_type = "all events"
@@ -284,10 +282,11 @@ class EventsScreen(Screens):
 
     def screen_switches(self):
         # On first open, update display events list
-        self.first_opened = True
-        self.update_display_events_lists()
-        self.display_events = self.all_events
-        self.event_display_type = "all events"
+        if not self.first_opened:
+            self.first_opened = True
+            self.update_display_events_lists()
+            self.display_events = self.all_events
+
         self.heading = pygame_gui.elements.UITextBox("",
                                                      scale(pygame.Rect((200, 220), (1200, 80))),
                                                      object_id=get_text_box_theme("#text_box_30_horizcenter"),
@@ -679,9 +678,8 @@ class EventsScreen(Screens):
         else:
             self.event_container.set_dimensions((box_length, self.events_container_y))
         # Set the scroll bar to the last position it was at
-        if self.event_container.vert_scroll_bar:
-            if self.scroll_height.get(self.event_display_type):
-                self.event_container.vert_scroll_bar.set_scroll_from_start_percentage(self.scroll_height[self.event_display_type])
+        if self.scroll_height.get(self.event_display_type):
+            self.event_container.vert_scroll_bar.set_scroll_from_start_percentage(self.scroll_height[self.event_display_type])
 
     def make_cat_buttons(self, button_pressed):
         """ Makes the buttons that take you to the profile. """
