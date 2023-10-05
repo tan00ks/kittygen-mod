@@ -61,11 +61,17 @@ class Events:
         TODO: DOCS
         """
         if self.checks == [-1,-1,-1] and game.clan.your_cat and game.clan.your_cat.inheritance:
-            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), game.clan.leader.ID]
+            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]
+            if game.clan.leader:
+                self.checks[3] = game.clan.leader.ID
         elif game.clan.your_cat.inheritance:
-            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), game.clan.leader.ID]
+            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]
+            if game.clan.leader:
+                self.checks[3] = game.clan.leader.ID
         else:
-            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), 0, game.clan.leader.ID]
+            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), 0, None]
+            if game.clan.leader:
+                self.checks[3] = game.clan.leader.ID
         game.cur_events_list = []
         game.herb_events_list = []
         game.mediated = []
@@ -293,8 +299,9 @@ class Events:
         game.clan.murdered = False
         
         self.check_achievements()
-        self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), game.clan.leader.ID]
-
+        self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]
+        if game.clan.leader:
+                self.checks[3] = game.clan.leader.ID
             
         # Resort
         if game.sort_type != "id":
