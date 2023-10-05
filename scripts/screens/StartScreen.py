@@ -16,6 +16,7 @@ import os
 import platform
 import subprocess
 import traceback
+import random
 from html import escape
 
 import pygame
@@ -45,7 +46,8 @@ class StartScreen(Screens):
     def __init__(self, name=None):
         super().__init__(name)
         self.warning_label = None
-        self.bg = pygame.image.load("resources/images/menu.png").convert()
+        bg = random.randint(1, 45)
+        self.bg = pygame.image.load("resources/images/menu" + str(bg) + ".png").convert()
         self.bg = pygame.transform.scale(self.bg, (screen_x, screen_y))
         self.social_buttons = {}
 
@@ -242,6 +244,8 @@ class StartScreen(Screens):
         self.error_gethelp.hide()
         self.open_data_directory_button.hide()
         self.closebtn.hide()
+        # self.continue_button.hide()
+        # self.switch_clan_button.hide()
 
         self.update_button = UIImageButton(scale(pygame.Rect((1154, 50), (382.5, 75))), "",
                                            object_id="#update_button", manager=MANAGER)
@@ -287,7 +291,7 @@ class StartScreen(Screens):
                     write_file.write(get_version_info().version_number)
 
         self.warning_label = pygame_gui.elements.UITextBox(
-            "Warning: this game includes some mild descriptions of gore, violence, and animal abuse",
+            "Warning: this game includes descriptions of gore, violence, murder, kit death, and animal abuse",
             scale(pygame.Rect((100, 1244), (1400, 60))),
             object_id="#default_dark",
             manager=MANAGER)

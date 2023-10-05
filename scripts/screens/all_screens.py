@@ -28,6 +28,7 @@ from .TalkScreen import TalkScreen
 from .InsultScreen import InsultScreen
 from .FlirtScreen import FlirtScreen
 from .ChooseRebornCat import ChooseRebornCat
+from .AchievementScreen import AchievementScreen
 from .MurderScreen import MurderScreen
 from .AccessoryScreen import AccessoryScreen
 from .DeputyScreen import DeputyScreen
@@ -93,6 +94,7 @@ talk_screen = TalkScreen('talk screen')
 insult_screen = InsultScreen('insult screen')
 flirt_screen = FlirtScreen('flirt screen')
 
+achivement_screen = AchievementScreen('achivement screen')
 choose_reborn_cat_screen = ChooseRebornCat('choose reborn screen')
 murder_screen = MurderScreen("murder screen")
 accessory_screen = AccessoryScreen("accessory screen")
@@ -103,3 +105,4 @@ patrol_screen = PatrolScreen('patrol screen')
 patrol_screen2 = LifeGenPatrolScreen('lifegen patrol screen')
 patrol_screen3 = DFPatrolScreen('df patrol screen')
 patrol_screen4 = DatePatrolScreen('date patrol screen')
+
