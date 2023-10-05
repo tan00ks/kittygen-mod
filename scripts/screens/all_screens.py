@@ -100,8 +100,8 @@ accessory_screen = ChangeAccessoryScreen("accessory screen")
 deputy_screen = DeputyScreen("deputy screen")
 name_kits_screen = NameKitsScreen("name kits screen")
 
-patrol_screen = PatrolScreen('patrol screen')
-patrol_screen2 = LifeGenPatrolScreen('lifegen patrol screen')
-patrol_screen3 = DFPatrolScreen('df patrol screen')
-patrol_screen4 = DatePatrolScreen('date patrol screen')
+patrol_screen = PatrolScreen('patrol screen2')
+patrol_screen2 = LifeGenPatrolScreen('patrol screen')
+patrol_screen3 = DFPatrolScreen('patrol screen3')
+patrol_screen4 = DatePatrolScreen('patrol screen4')
 

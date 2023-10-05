@@ -163,30 +163,30 @@ class LifeGenPatrolScreen(Screens):
             self.current_page -= 1
             self.update_cat_images_buttons()
             self.update_button()
-        elif event.ui_element == self.elements["paw"]:
-            if self.patrol_type == 'training':
-                self.patrol_type = 'general'
-            else:
-                self.patrol_type = 'training'
-            self.update_button()
-        elif event.ui_element == self.elements["claws"]:
-            if self.patrol_type == 'border':
-                self.patrol_type = 'general'
-            else:
-                self.patrol_type = 'border'
-            self.update_button()
-        elif event.ui_element == self.elements["herb"]:
-            if self.patrol_type == 'med':
-                self.patrol_type = 'general'
-            else:
-                self.patrol_type = 'med'
-            self.update_button()
-        elif event.ui_element == self.elements["mouse"]:
-            if self.patrol_type == 'hunting':
-                self.patrol_type = 'general'
-            else:
-                self.patrol_type = 'hunting'
-            self.update_button()
+        # elif event.ui_element == self.elements["paw"]:
+        #     if self.patrol_type == 'training':
+        #         self.patrol_type = 'general'
+        #     else:
+        #         self.patrol_type = 'training'
+        #     self.update_button()
+        # elif event.ui_element == self.elements["claws"]:
+        #     if self.patrol_type == 'border':
+        #         self.patrol_type = 'general'
+        #     else:
+        #         self.patrol_type = 'border'
+        #     self.update_button()
+        # elif event.ui_element == self.elements["herb"]:
+        #     if self.patrol_type == 'med':
+        #         self.patrol_type = 'general'
+        #     else:
+        #         self.patrol_type = 'med'
+        #     self.update_button()
+        # elif event.ui_element == self.elements["mouse"]:
+        #     if self.patrol_type == 'hunting':
+        #         self.patrol_type = 'general'
+        #     else:
+        #         self.patrol_type = 'hunting'
+        #     self.update_button()
         elif event.ui_element == self.elements['patrol_start']:
             self.selected_cat = None
             self.start_patrol_thread = self.loading_screen_start_work(self.run_patrol_start, "start")

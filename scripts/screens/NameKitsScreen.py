@@ -61,6 +61,8 @@ class NameKitsScreen(Screens):
                 if not self.selected_cat.dead:
                     # self.update_selected_cat()
                     self.change_cat(self.selected_cat)
+                    if "mentor_name" in self.selected_details:
+                        self.selected_details['mentor_name'].kill()
                     name = str(self.selected_cat.name)  # get name
                     if self.selected_cat.name.prefix != "":
                         if 11 <= len(name):  # check name length

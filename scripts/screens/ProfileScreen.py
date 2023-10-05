@@ -1860,6 +1860,23 @@ class ProfileScreen(Screens):
             self.choose_mate_button = UIImageButton(scale(pygame.Rect((100, 1116), (344, 72))), "",
                                                     starting_height=2, object_id="#choose_mate_button", manager=MANAGER)
             self.update_disabled_buttons_and_text()
+            
+    def toggle_your_tab(self):
+        # Save what is previously open, for toggle purposes.
+        previous_open_tab = self.open_tab
+
+        # This closes the current tab, so only one can be open as a time
+        self.close_current_tab()
+
+        if previous_open_tab == 'your tab':
+            '''If the current open tab is relations, just close the tab and do nothing else. '''
+            pass
+        else:
+            self.open_tab = 'your tab'
+            self.have_kits_button = None
+            self.request_apprentice_button = None
+            self.change_accessory_button = None
+            self.update_disabled_buttons_and_text()
 
     def toggle_roles_tab(self):
         # Save what is previously open, for toggle purposes.
@@ -2032,6 +2049,8 @@ class ProfileScreen(Screens):
                 self.cis_trans_button.disable()
            
         elif self.open_tab == 'your tab':
+            if 'have kits' not in game.switches:
+                    game.switches['have kits'] = True
             if self.the_cat.age in ['young adult', 'adult', 'senior adult', 'senior'] and not self.the_cat.dead and not self.the_cat.outside and game.switches['have kits']:
                 self.have_kits_button = UIImageButton(scale(pygame.Rect((804, 1172), (344, 72))), "",
                                                     starting_height=2, object_id="#have_kits_button", tool_tip_text='You will be more likely to have kits the next moon.',
