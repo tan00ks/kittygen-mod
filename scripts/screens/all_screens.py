@@ -27,7 +27,7 @@ from .ClanSettingsScreen import ClanSettingsScreen
 from .TalkScreen import TalkScreen
 from .InsultScreen import InsultScreen
 from .FlirtScreen import FlirtScreen
-from .ChooseRebornCat import ChooseRebornCat
+from .ChooseRebornScreen import ChooseRebornScreen
 from .AchievementScreen import AchievementScreen
 from .MurderScreen import MurderScreen
 from .AccessoryScreen import ChangeAccessoryScreen
@@ -99,6 +99,7 @@ murder_screen = MurderScreen("murder screen")
 accessory_screen = ChangeAccessoryScreen("accessory screen")
 deputy_screen = DeputyScreen("deputy screen")
 name_kits_screen = NameKitsScreen("name kits screen")
+choose_reborn_screen = ChooseRebornScreen("choose reborn screen")
 
 patrol_screen = PatrolScreen('patrol screen2')
 patrol_screen2 = LifeGenPatrolScreen('patrol screen')
