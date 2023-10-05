@@ -2,6 +2,7 @@ import pygame.transform
 import pygame_gui.elements
 from random import choice, randint
 import ujson
+from .Screens import Screens
 
 from scripts.cat_relations.inheritance import Inheritance
 from scripts.cat.history import History

@@ -10,8 +10,7 @@ from scripts.cat.cats import Cat
 from scripts.game_structure.game_essentials import game, MANAGER
 from scripts.game_structure.propagating_thread import PropagatingThread
 
-
-class PatrolScreen(Screens):
+class DatePatrolScreen(Screens):
     able_box = pygame.transform.scale(pygame.image.load("resources/images/patrol_able_cats.png").convert_alpha(),
                                       (540, 402))
     patrol_box = pygame.transform.scale(pygame.image.load("resources/images/patrol_cats.png").convert_alpha(),
@@ -22,6 +21,12 @@ class PatrolScreen(Screens):
                                        (332, 340))
     mate_frame = pygame.transform.scale(pygame.image.load("resources/images/patrol_mate_frame.png").convert_alpha(),
                                         (332, 340))
+    cat_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/cat_icon.png").convert_alpha(),
+                                      (100, 100))
+    df_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/df_toggle.png").convert_alpha(),
+                                      (100, 100))
+    date_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/flirt.png").convert_alpha(),
+                                      (100, 100))
 
     current_patrol = []
     patrol_stage = 'choose_cats'  # Can be 'choose_cats' or 'patrol_events' Controls the stage of patrol.
@@ -69,10 +74,25 @@ class PatrolScreen(Screens):
                 self.change_screen('list screen')
 
     def handle_choose_cats_events(self, event):
+        if 'cat_icon' in self.elements:
+            if event.ui_element == self.elements['cat_icon']:
+                    self.change_screen("patrol screen2")
+                    self.elements['cat_icon'].disable()
+        if 'df_icon' in self.elements:
+            if event.ui_element == self.elements['df_icon']:
+                self.change_screen("patrol screen3")
+                self.elements['df_icon'].disable()
+        if "date_icon" in self.elements:
+            self.elements['date_icon'].disable()
+        if "your_cat" in self.elements:
+            if event.ui_element == self.elements['your_cat']:
+                self.change_screen("patrol screen")
+                self.elements['your_cat'].disable()
         if event.ui_element == self.elements["random"]:
             self.selected_cat = choice(self.able_cats)
             self.update_selected_cat()
             self.update_button()
+        
         # Check is a cat is clicked
         elif event.ui_element in self.cat_buttons.values():
             self.selected_cat = event.ui_element.return_cat_object()
@@ -143,31 +163,7 @@ class PatrolScreen(Screens):
             self.current_page -= 1
             self.update_cat_images_buttons()
             self.update_button()
-        elif event.ui_element == self.elements["paw"]:
-            if self.patrol_type == 'training':
-                self.patrol_type = 'general'
-            else:
-                self.patrol_type = 'training'
-            self.update_button()
-        elif event.ui_element == self.elements["claws"]:
-            if self.patrol_type == 'border':
-                self.patrol_type = 'general'
-            else:
-                self.patrol_type = 'border'
-            self.update_button()
-        elif event.ui_element == self.elements["herb"]:
-            if self.patrol_type == 'med':
-                self.patrol_type = 'general'
-            else:
-                self.patrol_type = 'med'
-            self.update_button()
-        elif event.ui_element == self.elements["mouse"]:
-            if self.patrol_type == 'hunting':
-                self.patrol_type = 'general'
-            else:
-                self.patrol_type = 'hunting'
-            self.update_button()
-        elif event.ui_element == self.elements['patrol_start']:
+        elif event.ui_element == self.elements['patrol_start'] and len(self.current_patrol) == 2:
             self.selected_cat = None
             self.start_patrol_thread = self.loading_screen_start_work(self.run_patrol_start, "start")
         elif event.ui_element == self.elements.get('mate_button'):
@@ -236,7 +232,7 @@ class PatrolScreen(Screens):
             if self.selected_cat in self.current_patrol:
                 self.elements["add_remove_cat"] = UIImageButton(scale(pygame.Rect((672, 920), (254, 60))), "",
                                                                 object_id="#remove_cat_button", manager=MANAGER)
-            elif self.selected_cat is None or len(self.current_patrol) >= 6:
+            elif self.selected_cat is None or len(self.current_patrol) >= 2:
                 self.elements["add_remove_cat"] = UIImageButton(scale(pygame.Rect((700, 920), (196, 60))), "",
                                                                 object_id="#add_cat_button", manager=MANAGER)
                 self.elements["add_remove_cat"].disable()
@@ -252,10 +248,10 @@ class PatrolScreen(Screens):
 
             # Update add random cat buttons
             # Enable all the buttons, to reset them
-            self.elements['add_one'].enable()
-            self.elements['add_three'].enable()
-            self.elements['add_six'].enable()
-            self.elements["random"].enable()
+            self.elements['add_one'].disable()
+            self.elements['add_three'].disable()
+            self.elements['add_six'].disable()
+            self.elements["random"].disable()
 
             # making sure meds don't get the option for other patrols
             if any((cat.status in ['medicine cat', 'medicine cat apprentice'] for cat in self.current_patrol)):
@@ -265,15 +261,17 @@ class PatrolScreen(Screens):
                     self.patrol_type = 'general'
 
             if game.clan.game_mode != 'classic':
-                self.elements['paw'].enable()
-                self.elements['mouse'].enable()
-                self.elements['claws'].enable()
-                self.elements['herb'].enable()
+                self.elements['cat_icon'].enable()
+                self.elements['your_cat'].enable()
+                if game.clan.your_cat.joined_df:
+                    self.elements['df_icon'].enable()
+                if game.clan.your_cat.moons >= 12:
+                    self.elements['date_icon'].disable()
 
                 self.elements['info'].kill()  # clearing the text before displaying new text
 
                 if self.patrol_type != 'med' and self.current_patrol:
-                    self.elements['herb'].disable()
+                    # self.elements['herb'].disable()
                     if self.patrol_type == 'med':
                         self.patrol_type = 'general'
 
@@ -288,9 +286,9 @@ class PatrolScreen(Screens):
                 elif self.patrol_type == 'med':
                     if self.current_patrol:
                         text = 'herb gathering'
-                        self.elements['mouse'].disable()
-                        self.elements['claws'].disable()
-                        self.elements['paw'].disable()
+                        # self.elements['mouse'].disable()
+                        # self.elements['claws'].disable()
+                        # self.elements['paw'].disable()
                     else:
                         text = 'herb gathering'
                 else:
@@ -300,11 +298,11 @@ class PatrolScreen(Screens):
                     text, scale(pygame.Rect((500, 1050), (600, 800))),
                     object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
                 )
-            else:
-                self.elements['paw'].hide()
-                self.elements['mouse'].hide()
-                self.elements['claws'].hide()
-                self.elements['herb'].hide()
+            # else:
+            #     self.elements['paw'].hide()
+            #     self.elements['mouse'].hide()
+            #     self.elements['claws'].hide()
+            #     self.elements['herb'].hide()
 
             able_no_med = [cat for cat in self.able_cats if
                            cat.status not in ['medicine cat', 'medicine cat apprentice']]
@@ -312,10 +310,10 @@ class PatrolScreen(Screens):
                 able_no_med = self.able_cats
             if len(able_no_med) == 0:
                 able_no_med = self.able_cats
-            if len(self.current_patrol) >= 6 or len(able_no_med) < 1:
+            if len(self.current_patrol) >= 2 or len(able_no_med) < 1:
                 self.elements['add_one'].disable()
                 self.elements["random"].disable()
-            if len(self.current_patrol) > 3 or len(able_no_med) < 3:
+            if len(self.current_patrol) > 0 or len(able_no_med) < 3:
                 self.elements['add_three'].disable()
             if len(self.current_patrol) > 0 or len(able_no_med) < 6:
                 self.elements['add_six'].disable()
@@ -419,22 +417,24 @@ class PatrolScreen(Screens):
                                                  , manager=MANAGER)
 
         # patrol type buttons - disabled for now
-        self.elements['paw'] = UIImageButton(scale(pygame.Rect((646, 1120), (68, 68))), "",
-                                             object_id="#paw_patrol_button"
+        
+            
+        self.elements['cat_icon'] = UIImageButton(scale(pygame.Rect((646, 1120), (68, 68))), "",
+                                             object_id="#events_cat_button"
                                              , manager=MANAGER)
-        self.elements['paw'].disable()
-        self.elements['mouse'] = UIImageButton(scale(pygame.Rect((726, 1120), (68, 68))), "",
-                                               object_id="#mouse_patrol_button"
+        self.elements['cat_icon'].disable()
+        self.elements['df_icon'] = UIImageButton(scale(pygame.Rect((726, 1120), (68, 68))), "",
+                                               object_id="#dark_forest_button"
                                                , manager=MANAGER)
-        self.elements['mouse'].disable()
-        self.elements['claws'] = UIImageButton(scale(pygame.Rect((806, 1120), (68, 68))), "",
-                                               object_id="#claws_patrol_button"
+        self.elements['df_icon'].disable()
+        self.elements['date_icon'] = UIImageButton(scale(pygame.Rect((806, 1120), (68, 68))), "",
+                                               object_id="#flirt_button"
                                                , manager=MANAGER)
-        self.elements['claws'].disable()
-        self.elements['herb'] = UIImageButton(scale(pygame.Rect((886, 1120), (68, 68))), "",
-                                              object_id="#herb_patrol_button"
+        self.elements['date_icon'].disable()
+        self.elements['your_cat'] = UIImageButton(scale(pygame.Rect((886, 1120), (68, 68))), "",
+                                              object_id="#paw_patrol_button"
                                               , manager=MANAGER)
-        self.elements['herb'].disable()
+        self.elements['your_cat'].disable()
 
         # Able cat page buttons
         self.elements['last_page'] = UIImageButton(scale(pygame.Rect((150, 924), (68, 68))), "",
@@ -467,6 +467,7 @@ class PatrolScreen(Screens):
                                                       object_id="#start_patrol_button", manager=MANAGER)
         self.elements['patrol_start'].disable()
 
+        self.current_patrol.append(game.clan.your_cat)
         self.update_cat_images_buttons()
         self.update_button()
 
@@ -622,19 +623,22 @@ class PatrolScreen(Screens):
         """Updates all the cat sprite buttons. Also updates the skills tab, if open, and the next and
             previous page buttons.  """
         self.clear_cat_buttons()  # Clear all the cat buttons
-
+        
+        
         self.able_cats = []
+        
+        you = game.clan.your_cat
 
         # ASSIGN TO ABLE CATS
-        for the_cat in Cat.all_cats_list:
-            if not the_cat.dead and the_cat.in_camp and the_cat.ID not in game.patrolled and the_cat.status not in [
-                'elder', 'kitten', 'mediator', 'mediator apprentice'
-            ] and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working():
-                if the_cat.status == 'newborn' or game.config['fun']['all_cats_are_newborn']:
-                    if game.config['fun']['newborns_can_patrol']:
+        # print(game.patrolled)
+        if 'patrolled' not in game.switches:
+            game.switches['patrolled'] = []
+        if not you.dead and "4" not in game.switches['patrolled'] and not you.outside and not you.not_working():
+            for the_cat in Cat.all_cats_list:
+                if not the_cat.dead and the_cat.in_camp and the_cat.ID not in game.patrolled and the_cat.status not in [
+                    'newborn', 'kitten', 'apprentice', 'mediator apprentice', 'medicine cat apprentice', "queen's apprentice"
+                ] and not the_cat.outside and the_cat not in self.current_patrol and the_cat.is_potential_mate(game.clan.your_cat) and the_cat.moons < game.clan.your_cat.moons + 40 and the_cat.moons > game.clan.your_cat.moons - 40:
                         self.able_cats.append(the_cat)
-                else:
-                    self.able_cats.append(the_cat)
 
         if not self.able_cats:
             all_pages = []
@@ -959,6 +963,5 @@ class PatrolScreen(Screens):
         # Removes duplicates.
         patrol_set = list(patrol_list)
         return ", ".join(patrol_set)
-
 
 

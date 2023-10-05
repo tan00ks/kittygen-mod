@@ -2,6 +2,8 @@ import pygame.transform
 import pygame_gui.elements
 from random import choice, randint
 import ujson
+from .Screens import Screens
+
 
 from scripts.cat_relations.inheritance import Inheritance
 from scripts.cat.history import History
@@ -16,8 +18,6 @@ from scripts.cat.pelts import Pelt
 from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton, UIRelationStatusBar
 from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
-from scripts.game_structure.windows import RelationshipLog
-from scripts.game_structure.propagating_thread import PropagatingThread
 
 class ChangeAccessoryScreen(Screens):
     selected_cat = None
