@@ -2325,7 +2325,7 @@ class Cat():
                 comfortable = 0
                 jealousy = 0
                 trust = 0
-                if game.clan.clan_settings['random relation']:
+                if game.settings['random relation']:
                     if game.clan:
                         if the_cat == game.clan.instructor:
                             pass

@@ -1,7 +1,7 @@
 import pygame
 from random import choice, randrange
 import pygame_gui
-
+import random
 from .Screens import Screens
 
 from scripts.utility import get_text_box_theme, scale

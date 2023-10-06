@@ -84,6 +84,9 @@ class ClanSettingsScreen(Screens):
             elif event.ui_element == self.clan_stats_button:
                 self.open_clan_stats()
                 return
+            elif "achievements" in self.checkboxes_text:
+                if event.ui_element == self.checkboxes_text["achievements"]:
+                    self.change_screen("achievement screen")
             self.handle_checkbox_events(event)
             self.menu_button_pressed(event)
 
@@ -366,6 +369,12 @@ class ClanSettingsScreen(Screens):
         self.checkboxes_text["stat_box"] = pygame_gui.elements.UITextBox(text,
                                                                          scale(pygame.Rect((300, 400, 1060, 690))),
                                                                          object_id=get_text_box_theme("#text_box_30_horizcenter"))
+        
+        self.checkboxes_text["achievements"] = UIImageButton(
+            scale(pygame.Rect((750, 1290), (68, 68))),
+            "",
+            object_id="#events_cat_button",
+            manager=MANAGER)
 
     def refresh_checkboxes(self):
         """

@@ -348,7 +348,8 @@
 		"max_apprentice_age": {
 			"medicine cat apprentice": 30,
 			"apprentice": 25,
-			"mediator apprentice": 25
+			"mediator apprentice": 25,
+			"queen's apprentice": 25
 		},
 		"min_graduating_age": 10
 	},
