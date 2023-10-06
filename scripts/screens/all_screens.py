@@ -94,7 +94,7 @@ talk_screen = TalkScreen('talk screen')
 insult_screen = InsultScreen('insult screen')
 flirt_screen = FlirtScreen('flirt screen')
 
-achivement_screen = AchievementScreen('achivement screen')
+achivement_screen = AchievementScreen('achievement screen')
 murder_screen = MurderScreen("murder screen")
 accessory_screen = ChangeAccessoryScreen("accessory screen")
 deputy_screen = DeputyScreen("deputy screen")

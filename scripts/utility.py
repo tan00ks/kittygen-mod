@@ -1038,7 +1038,7 @@ def event_text_adjust2(Cat, text, cat, other_cat=None,
             random_warrior2 = Cat.fetch_cat(choice(game.clan.clan_cats))
             counter = 0
             while random_warrior2.ID == cat.ID or random_warrior2.ID == random_warrior.ID or random_warrior2.status != "warrior" or len(random_warrior2.mate) > 0 or random_warrior2.is_related(random_warrior, False):
-                random_warrior2 = Cat.fetch_cat(choice(random_warrior2.clan.clan_cats))
+                random_warrior2 = Cat.fetch_cat(choice(game.clan.clan_cats))
                 counter += 1
                 if counter == 30:
                     break
