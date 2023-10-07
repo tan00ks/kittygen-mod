@@ -750,11 +750,7 @@
             "mediator apprentice",
             "assertive",
             "random_cat",
-            "platonic_like",
-            "from_parent",
-            "from_mate",
-            "sibling",
-            "adopted_sibling"
+            "platonic_love"
         ],
         [
             "Tch. Did you see what a snake-heart r_c was acting like earlier? And over a piece of prey, no less!",
@@ -1590,9 +1586,7 @@
         [
             "assertive",
             "silly",
-            "platonic_like",
-            "romantic_like",
-            "from_mate",
+            "platonic_love",
             "warrior",
             "apprentice",
             "deputy",
