@@ -189,22 +189,28 @@ class MurderScreen(Screens):
         for ele in self.selected_details:
             self.selected_details[ele].kill()
         self.selected_details = {}
+        
+        if self.heading:
+            self.heading.kill()
+            del self.heading
 
-        self.heading.kill()
-        del self.heading
+        if self.mentor_frame:
+            self.mentor_frame.kill()
+            del self.mentor_frame
 
-        self.mentor_frame.kill()
-        del self.mentor_frame
-
-        self.back_button.kill()
-        del self.back_button
-        self.confirm_mentor.kill()
-        del self.confirm_mentor
-
-        self.previous_page_button.kill()
-        del self.previous_page_button
-        self.next_page_button.kill()
-        del self.next_page_button
+        if self.back_button:
+            self.back_button.kill()
+            del self.back_button
+        if self.confirm_mentor:
+            self.confirm_mentor.kill()
+            del self.confirm_mentor
+        if self.previous_page_button:
+            self.previous_page_button.kill()
+            del self.previous_page_button
+            
+        if self.next_page_button:
+            self.next_page_button.kill()
+            del self.next_page_button
         
         if self.next:
             self.next.kill()
@@ -260,6 +266,7 @@ class MurderScreen(Screens):
             self.choose_murder_text(you, cat_to_murder, accomplice, accompliced)
         else:
             self.handle_murder_fail(you, cat_to_murder, accomplice, accompliced)
+
         game.switches['cur_screen'] = "events screen"
     
     RESOURCE_DIR = "resources/dicts/events/lifegen_events/"
@@ -319,7 +326,9 @@ class MurderScreen(Screens):
                 History.add_death(cat_to_murder, f"{you.name} murdered this cat.")
                 History.add_murders(cat_to_murder, you, True, f"{you.name} murdered this cat.")
                 game.cur_events_list.insert(1, Single_Event("You successfully murdered "+ str(cat_to_murder.name) + ". It seems no one is aware of your actions."))
-                
+        
+        
+          
     def choose_discover_punishment(self, you, cat_to_murder, accomplice, accompliced):
         # 1 = you punished, 2 = accomplice punished, 3 = both punished
         punishment_chance = randint(1,3)
