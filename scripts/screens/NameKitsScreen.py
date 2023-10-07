@@ -74,6 +74,9 @@ class NameKitsScreen(Screens):
                             object_id="#text_box_34_horizcenter", manager=MANAGER)
                     # self.update_buttons()
             elif event.ui_element == self.back_button:
+                for cat in Cat.all_cats_list:
+                    if not cat.dead and not cat.outside and cat.age == 'newborn' and cat.ID in game.clan.your_cat.inheritance.get_kits() and cat.name.prefix.strip() == "":
+                        cat.name.give_prefix(cat.pelt.eye_colour, cat.pelt.colour, game.clan.biome)
                 self.change_screen('events screen')
             elif event.ui_element == self.next_cat_button:
                 if isinstance(Cat.fetch_cat(self.next_cat), Cat):
