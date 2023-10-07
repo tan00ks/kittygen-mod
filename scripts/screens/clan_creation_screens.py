@@ -1013,6 +1013,7 @@ class MakeClanScreen(Screens):
         Cat.outside_cats.clear()
         Patrol.used_patrols.clear()
         convert_camp = {1: 'camp1', 2: 'camp2', 3: 'camp3'}
+        self.your_cat.create_inheritance_new_cat()
         game.clan = Clan(self.clan_name,
                          self.leader,
                          self.deputy,

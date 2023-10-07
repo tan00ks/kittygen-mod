@@ -402,10 +402,24 @@ class Events:
                     achievements.add("3")
                 if num_victims >= 50:
                     achievements.add("4")
+                ##Doesn't currently work, for some reason. - Chibi
+                if num_victims == 0 and you.moons >= 120:
+                    achievements.add("25")
+
         for cat in clan_cats:
             if Cat.all_cats.get(cat).pelt.tortiebase and Cat.all_cats.get(cat).gender == 'male':
                 achievements.add("5")
+            if Cat.all_cats.get(cat).insulted == True:
+                achievements.add("29")
+            if Cat.all_cats.get(cat).name.prefix == "Coffee" and Cat.all_cats.get(cat).name.suffix == "dot":
+                achievements.add("30")
+            ##if Cat.all_cats.get(cat).mate
+            ##  achievements.add("31")   
         
+        wildcard_chance = game.config["cat_generation"]["wildcard_tortie"]
+        if not wildcard_chance or random.getrandbits(wildcard_chance) == 1:
+            achievements.add("6")
+
         if you.joined_df:
             achievements.add("7")
         
@@ -436,6 +450,8 @@ class Events:
             achievements.add('18')
         elif you.status == 'elder':
             achievements.add('19')
+        elif you.status == 'queen':
+            achievements.add('32')
         
         if you.moons >= 200:
             achievements.add('20')
@@ -446,6 +462,15 @@ class Events:
         
         if len(clan_cats) == 1 and not you.dead:
             achievements.add('23')
+        if len(clan_cats) >= 100:
+            achievements.add('23')
+            
+        if you.experience >= 100:
+            achievements.add('26')
+        if you.experience >= 200:
+            achievements.add('27')
+        if you.experience >= 300:
+            achievements.add('28')
         
         for i in game.clan.achievements:
             achievements.add(i)
