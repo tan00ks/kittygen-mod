@@ -146,7 +146,7 @@ class TalkScreen(Screens):
             pygame.image.load(all_backgrounds[3]).convert(), (screen_x, screen_y))
     
     def on_use(self):
-        if game.settings['backgrounds']:
+        if game.clan.clan_settings['backgrounds']:
             if game.clan.current_season == 'Newleaf':
                 screen.blit(self.newleaf_bg, (0, 0))
             elif game.clan.current_season == 'Greenleaf':

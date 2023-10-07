@@ -4374,6 +4374,29 @@
             }
         }
     },
+    "#affair_button": 
+    {
+        "prototype": "#image_button",
+		"images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/affair.png"
+            },
+			"hovered_image":
+            {
+                "path": "resources/images/buttons/affair_hover.png"
+            },
+			"selected_image":
+            {
+                "path": "resources/images/buttons/affair_hover.png"
+            },
+            "disabled_image":
+            {
+                "path":"resources/images/buttons/affair_unavailable.png"
+            }
+        }
+    },
   "#events_cat_button":
     {
         "prototype": "#image_button",

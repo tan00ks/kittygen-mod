@@ -36,6 +36,7 @@ from .NameKitsScreen import NameKitsScreen
 from .LifeGenPatrolScreen import LifeGenPatrolScreen
 from .DFPatrolScreen import DFPatrolScreen
 from .DatePatrolScreen import DatePatrolScreen
+from .AffairScreen import AffairScreen
 
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
@@ -100,6 +101,7 @@ accessory_screen = ChangeAccessoryScreen("accessory screen")
 deputy_screen = DeputyScreen("deputy screen")
 name_kits_screen = NameKitsScreen("name kits screen")
 choose_reborn_screen = ChooseRebornScreen("choose reborn screen")
+affair_screen = AffairScreen("affair screen")
 
 patrol_screen = PatrolScreen('patrol screen2')
 patrol_screen2 = LifeGenPatrolScreen('patrol screen')
