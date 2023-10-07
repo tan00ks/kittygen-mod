@@ -57,7 +57,6 @@
       "Now, c'mon. Let's go for a little stroll by the water. I know you need it!",
       "The clan will still be here when we get back."
     ]
-
   ],
   "assertive_love": [
     [
@@ -129,7 +128,7 @@
       "assertive",
       "cool",
       "silly",
-      "from_mate"
+      "platonic_love"
     ],
     [
       "Hey, mouse-brain. I saved your favorite piece of prey for you.",
@@ -156,8 +155,7 @@
       "Any",
       "assertive",
       "unabashed",
-      "romantic_like",
-      "platonic_like"
+      "platonic_love"
     ],
     [
       "... y_c? Is everything okay?",
@@ -165,6 +163,79 @@
       "[t_c sits down beside you and presses their pelt into yours.]",
       "I don't know what's been getting you down, but just know that, to me, you're the strongest cat in this clan by a long shot. And if any cat's been bothering you, just tell me and I'll send 'em straight to the Dark Forest!",
       "[t_c licks your ear reassuringly, and sits with you until all the anxiety you felt is completely gone.]"
+    ]
+  ],
+  "assertive_love": [
+    [
+      "Any",
+      "assertive",
+      "cool",
+      "platonic_love"
+    ],
+    [
+      "[t_c is talking with a huge group of cats across camp, their voice reverberating off the walls.]",
+      "[They're so funny and energetic and well-liked ... How can you ever keep up?]",
+      "[Suddenly, t_c catches your eye, and shoots you a huge smile.]",
+      "[Somehow, they can always make you feel like the most special cat in all of c_nClan.]"
+    ]
+  ],
+  "assertive_love_1": [
+    [
+      "no_kit",
+      "assertive",
+      "silly",
+      "platonic_love"
+    ],
+    [
+      "Sneak attack!",
+      "[t_c suddenly tackles you from behind. You chase them around camp trying to get them back, squealing with laughter.]",
+      "[Somehow, their antics always make you feel like a kit again!]"
+    ]
+  ],
+  "assertive_love_11": [
+    [
+      "any",
+      "assertive",
+      "silly",
+      "platonic_love",
+      "random_cat"
+    ],
+    [
+      "Hey, flea-brain. I've been looking for you all over, what's --",
+      "Wait. Something's up. I can tell you're upset about something.",
+      "Was someone mean to you? Was it r_c? I swear to StarClan, I'll --",
+      "It wasn't r_c?",
+      "Well, okay ... but I'll still shoot them a few dirty looks, just for good measure."
+    ]
+  ],
+  "assertive_love_2": [
+    [
+      "Any",
+      "assertive",
+      "platonic_like"
+    ],
+    [
+      "You're absolutely never going to guess what happened today. Like, I'm serious, this story's about to blow your ears clean off.",
+      "Ready?",
+      "Ta-da!",
+      "[t_c drops a SNAKE at your paws! You shriek and leap backwards.]",
+      "Haha, it's okay, it's okay! It's dead!",
+      "I caught this bugger trying to sneak into camp. One good stomp to the head and WHAM! No more snake.",
+      "Say, do you think we could eat it? I heard c_nClan eats snakes ..."
+    ]
+  ],
+  "assertive_love_3": [
+    [
+      "Any",
+      "assertive",
+      "leafbare",
+      "random_cat"
+    ],
+    [
+      "[t_c hates leafbare, and they're prepared to make it everyone in c_nClan's problem.]",
+      "[They zip around camp, skidding on patches of snow, exploding with pent-up energy.]",
+      "Watch out, o_cClan! Ahahahaha - woah!",
+      "[They slip on a patch of ice, slamming into the ground. Hopefully r_m won't have to patch that up later ...]"
     ]
   ],
   "introspective_kit_or_app": [
@@ -186,7 +257,7 @@
   ],
   "introspective_kit_4": [
     [
-      "kitten",
+      "any",
       "Introspective",
       "dislike"
     ],
@@ -539,12 +610,10 @@
     [
       "murder",
       "assertive",
-      "from_mate",
       "platonic_like",
       "romantic_like",
       "trust",
       "comfort",
-      "from_parent",
       "no_kit",
       "stable",
       "upstanding",
@@ -590,10 +659,8 @@
   "assertive_you_ill": [
     [
       "Any",
-      "platonic_like",
-      "romantic_like",
-      "from_mate",
-      "from_parent",
+      "platonic_love",
+      "random_cat",
       "assertive",
       "silly",
       "unlawful",
@@ -602,10 +669,10 @@
     ],
     [
       "Hey, y_c ...",
-      "The medicine cat said I shouldn't visit you, but who cares what that mouse-brain thinks? If they think they can keep me away from you ... they must be dumber than I thought!",
+      "r_m said I shouldn't visit you, but who cares what that mouse-brain thinks? If they think they can keep me away from you ... they must be dumber than I thought!",
       "Everyone around camp is missing you ... hoping you get better soon ...",
       "Hey, that reminds me, the funniest thing happened today ...",
-      "[r_c sits by your side, talking to you until the medicine cat literally forces them to leave. Their company makes you feel better than any herbs ever could.]"
+      "[t_c sits by your side, talking to you until r_m literally forces them to leave. Their company makes you feel better than any herbs ever could.]"
     ]
   ],
   "assertive_ill1": [
@@ -779,20 +846,7 @@
       "You can stare for five more seconds, and that's it!"
     ]
   ],
-  "assertive_theyill3": [
-    [
-      "Any",
-      "assertive",
-      "unlawful",
-      "they_injured",
-      "they_ill"
-    ],
-    [
-      "Psh, this mouse-brained medicine cat, trying to imprison me in this den over something that's not even a problem.",
-      "I am completely fine! More than fine! I could run laps around camp! I could take on three rogues at once!",
-      "If only the medicine cat would listen ..."
-    ]
-  ],
+
   "assertive_theyill4": [
     [
       "Any",
@@ -816,18 +870,14 @@
   "assertive_theyill5": [
     [
       "Any",
-      "platonic_like",
+      "platonic_love",
       "romantic_like",
-      "from_mate",
-      "from_parent",
       "assertive",
       "silly",
       "cool",
       "neurotic",
       "introspective",
       "brooding",
-      "you_injured",
-      "they_ill",
       "they_injured"
     ],
     [
@@ -875,10 +925,7 @@
   "assertive_deadclose3": [
     [
       "Any",
-      "platonic_like",
-      "romantic_like",
-      "from_mate",
-      "from_parent",
+      "platonic_love",
       "assertive",
       "sweet",
       "stable",
@@ -898,9 +945,6 @@
     [
       "Any",
       "platonic_like",
-      "romantic_like",
-      "from_mate",
-      "from_parent",
       "assertive",
       "cool",
       "silly",
@@ -920,10 +964,7 @@
   "assertive_deadclose6": [
     [
       "Any",
-      "platonic_like",
-      "romantic_like",
-      "from_mate",
-      "from_parent",
+      "platonic_love",
       "assertive",
       "silly",
       "they_grieving",
@@ -943,8 +984,7 @@
       "brooding",
       "unlawful",
       "they_grieving",
-      "neutral",
-      "dislike"
+      "neutral"
     ],
     [
       "[You hear quiet sobbing coming from t_c's nest.]",
@@ -1055,8 +1095,7 @@
       "silly",
       "insult",
       "random_cat",
-      "platonic_like",
-      "neutral"
+      "platonic_like"
     ],
     [
       "Hehehe! Little guy's got a mouth on 'em! That's hilarious!",
@@ -1754,8 +1793,8 @@
     ],
     [
       "Hey, y_c. Want to share tongues?",
-      "[You and t_c cuddle up together, pelts brushing, soaking up the bright sunlight coming into camp. Their fur is so soft, and smells wonderful, you bury your face into it.",
-      "Suddenly, they stopped grooming you, like their attention was stolen by something.",
+      "[You and t_c cuddle up together, pelts brushing, soaking up the bright sunlight coming into camp. Their fur is so soft, and smells wonderful, you bury your face into it.]",
+      "[Suddenly, they stop grooming you, like their attention was stolen by something.]",
       "...",
       "Huh? Oh! You want to know if something's wrong?",
       "Oh, no. Nothing's wrong! I was just thinking...",
