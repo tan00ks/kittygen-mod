@@ -298,6 +298,23 @@
             "I won't let that happen ... I just won't!"
         ]
     ],
+    "assertivefun_2": [
+        [
+            "Any",
+            "platonic_love",
+            "assertive",
+            "silly",
+            "unlawful"
+        ],
+        [
+            "Ah, StarClan ... I totally got sprayed by a skunk today.",
+            "Do I stink? Be honest.",
+            "[You tell t_c that their stench is probably strong enough to stir the dead from their graves.]",
+            "Oh, really? Well, in that case ...",
+            "[t_c presses their pelt into yours, laughing like a maniac. You shriek and run away, but they quickly pursue, giving chase all around camp.]",
+            "Come back, y_c!!! I just want to share tongues! Hahaha!"
+        ]
+    ],
   "introspective_kit_or_app": [
     [
       "no_kit",
