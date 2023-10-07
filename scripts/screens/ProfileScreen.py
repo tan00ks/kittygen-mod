@@ -356,6 +356,8 @@ class ProfileScreen(Screens):
             elif event.ui_element == self.exit_df_button:
                 game.clan.your_cat.joined_df = False
                 self.exit_df_button.disable()
+            elif event.ui_element == self.affair_button:
+                self.change_screen('affair screen')
             elif event.ui_element == self.exile_cat_button:
                 if not self.the_cat.dead and not self.the_cat.exiled:
                     Cat.exile(self.the_cat)
@@ -1955,11 +1957,9 @@ class ProfileScreen(Screens):
             )
             if game.clan.murdered:
                 self.murder_cat_button.disable()
-            
-            
             if game.clan.your_cat.joined_df:
                 self.exit_df_button = UIImageButton(
-                scale(pygame.Rect((1156, 1118), (344, 72))),
+                scale(pygame.Rect((1156, 1115), (344, 72))),
                 "",
                 object_id="#exit_df_button",
                 tool_tip_text='Leave the Dark Forest',
@@ -1967,12 +1967,21 @@ class ProfileScreen(Screens):
                 )
             else:
                 self.join_df_button = UIImageButton(
-                scale(pygame.Rect((1156, 1118), (344, 72))),
+                scale(pygame.Rect((1156, 1115), (344, 72))),
                 "",
                 object_id="#join_df_button",
                 tool_tip_text='Join the Dark Forest',
                 starting_height=2, manager=MANAGER
             )
+            self.affair_button = UIImageButton(
+                scale(pygame.Rect((1156, 1188), (344, 72))),
+                "",
+                object_id="#affair_button",
+                tool_tip_text='Have an affair with one of your clanmates',
+                starting_height=2, manager=MANAGER
+            )
+            if len(game.clan.your_cat.mate) == 0:
+                self.affair_button.disable()
 
             # These are a placeholders, to be killed and recreated in self.update_disabled_buttons_and_text().
             #   This it due to the image switch depending on the cat's status, and the location switch the close button
@@ -2131,6 +2140,7 @@ class ProfileScreen(Screens):
                     self.join_df_button.hide()
                 if self.exit_df_button:
                     self.exit_df_button.hide()
+                self.affair_button.hide()
             else:
                 self.murder_cat_button.show()
                 if self.join_df_button:
@@ -2143,12 +2153,15 @@ class ProfileScreen(Screens):
                         self.join_df_button.disable()
                     if self.exit_df_button:
                         self.exit_df_button.disable()
+                self.affair_button.show()
 
             if game.clan.your_cat.status == 'kitten':
                 if self.join_df_button:
                     self.join_df_button.hide()
                 elif self.exit_df_button:
                     self.exit_df_button.hide()
+                if self.affair_button:
+                    self.affair_button.hide()
         # History Tab:
         elif self.open_tab == 'history':
             # show/hide fav tab star
@@ -2277,6 +2290,7 @@ class ProfileScreen(Screens):
                 self.join_df_button.kill()
             if self.exit_df_button:
                 self.exit_df_button.kill()
+            self.affair_button.kill()
         elif self.open_tab == 'history':
             self.backstory_background.kill()
             self.sub_tab_1.kill()
