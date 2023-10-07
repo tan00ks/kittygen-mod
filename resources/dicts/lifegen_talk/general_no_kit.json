@@ -12,21 +12,21 @@
     ]
   ],
   "assertive_elder_7": [
-        [
-          "elder",
-          "assertive",
-          "cool",
-          "silly",
-          "unlawful",
-          "platonic_like"
-        ],
-        [
-          "Hey, furbag. I brought you something!",
-          "[r_c lays a colorful feather at your paws.",
-          "I know this is your favorite color, and you miss exploring the territory. So I knew I just had to bring it to you.",
-          "Yeah, yeah, don't get all soft on me, hehe. Wanna grab a meal together?"
-        ]
+    [
+      "elder",
+      "assertive",
+      "cool",
+      "silly",
+      "unlawful",
+      "platonic_like"
     ],
+    [
+      "Hey, furbag. I brought you something!",
+      "[r_c lays a colorful feather at your paws.",
+      "I know this is your favorite color, and you miss exploring the territory. So I knew I just had to bring it to you.",
+      "Yeah, yeah, don't get all soft on me, hehe. Wanna grab a meal together?"
+    ]
+  ],
   "assertive_rom4": [
     [
       "Any",
@@ -58,7 +58,7 @@
       "The clan will still be here when we get back."
     ]
   ],
-  "assertive_love": [
+  "assertive_love1": [
     [
       "Any",
       "assertive",
@@ -239,98 +239,98 @@
     ]
   ],
   "assertive_love4": [
-        [
-            "mediator",
-            "mediator apprentice",
-            "assertive",
-            "random_cat",
-            "platonic_love"
-        ],
-        [
-            "Tch. Did you see what a snake-heart r_c was acting like earlier? And over a piece of prey, no less!",
-            "Cat's so mouse-brained, probably can't even tell their own tail from a willow branch ...",
-            "... Whoa, what? Wait, you want me to apologize to them?",
-            "But they were in the wrong, not me! Why even entertain their behavior with an apology?",
-            "If they're mad, who cares! Let 'em stay mad! They can stay mad forever, for all I care!",
-            "Look, I know you're the mediator, and it's your job to resolve conflicts, or whatever, but ... you love me. Shouldn't you be on my side?",
-            "You'd really choose them over me?"
-        ]
+    [
+      "mediator",
+      "mediator apprentice",
+      "assertive",
+      "random_cat",
+      "platonic_love"
     ],
-      "assertive_comfort": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "unlawful",
-            "silly",
-            "stable",
-            "brooding",
-            "neurotic",
-            "platonic_love"
-        ],
-        [
-            "[t_c shakes you from your sleep in the night.]",
-            "Psst ... y_c?",
-            "Sorry to wake you ... this will sound really embarrassing, but I, uh ... had a nightmare. Heh.",
-            "Can I ... stay with you?",
-            "[You and t_c curl up together in your nest. Their pelt is warm, but their body is still trembling a little.]",
-            "... Can I tell you about my nightmare?",
-            "In my nightmare, you were drowning. You were screaming for help, and I kept trying to swim out to save you, but you just kept getting further and further away.",
-            "Imagine that. I've faced rogues and dogs and foxes and monsters, but out of everything, the thing that scares me the most is ...",
-            "... Losing you.",
-            "[You both eventually drift off to sleep, and it takes a long time for anyone to rouse you in the morning.]"
-        ]
+    [
+      "Tch. Did you see what a snake-heart r_c was acting like earlier? And over a piece of prey, no less!",
+      "Cat's so mouse-brained, probably can't even tell their own tail from a willow branch ...",
+      "... Whoa, what? Wait, you want me to apologize to them?",
+      "But they were in the wrong, not me! Why even entertain their behavior with an apology?",
+      "If they're mad, who cares! Let 'em stay mad! They can stay mad forever, for all I care!",
+      "Look, I know you're the mediator, and it's your job to resolve conflicts, or whatever, but ... you love me. Shouldn't you be on my side?",
+      "You'd really choose them over me?"
+    ]
+  ],
+  "assertive_comfort": [
+    [
+      "Any",
+      "assertive",
+      "cool",
+      "unlawful",
+      "silly",
+      "stable",
+      "brooding",
+      "neurotic",
+      "platonic_love"
     ],
-    "assertive_comfort_2": [
-        [
-            "Any",
-            "assertive",
-            "neurotic",
-            "comfort",
-            "trust",
-            "platonic_love"
-        ],
-        [
-            "Hey, y_c? Have you ever thought about, uh ...",
-            "What if something happens to you? Or something happens to me? Or something happens to the clan, and we're both demolished in a fiery pit of nothingness!",
-            "Phew ... sorry, I know I'm not usually so grim. But I guess I'm just really worried.",
-            "What if something goes wrong, and I'm not there to protect you?",
-            "I won't let that happen ... I just won't!"
-        ]
+    [
+      "[t_c shakes you from your sleep in the night.]",
+      "Psst ... y_c?",
+      "Sorry to wake you ... this will sound really embarrassing, but I, uh ... had a nightmare. Heh.",
+      "Can I ... stay with you?",
+      "[You and t_c curl up together in your nest. Their pelt is warm, but their body is still trembling a little.]",
+      "... Can I tell you about my nightmare?",
+      "In my nightmare, you were drowning. You were screaming for help, and I kept trying to swim out to save you, but you just kept getting further and further away.",
+      "Imagine that. I've faced rogues and dogs and foxes and monsters, but out of everything, the thing that scares me the most is ...",
+      "... Losing you.",
+      "[You both eventually drift off to sleep, and it takes a long time for anyone to rouse you in the morning.]"
+    ]
+  ],
+  "assertive_comfort_2": [
+    [
+      "Any",
+      "assertive",
+      "neurotic",
+      "comfort",
+      "trust",
+      "platonic_love"
     ],
-    "assertivefun_2": [
-        [
-            "Any",
-            "platonic_love",
-            "assertive",
-            "silly",
-            "unlawful"
-        ],
-        [
-            "Ah, StarClan ... I totally got sprayed by a skunk today.",
-            "Do I stink? Be honest.",
-            "[You tell t_c that their stench is probably strong enough to stir the dead from their graves.]",
-            "Oh, really? Well, in that case ...",
-            "[t_c presses their pelt into yours, laughing like a maniac. You shriek and run away, but they quickly pursue, giving chase all around camp.]",
-            "Come back, y_c!!! I just want to share tongues! Hahaha!"
-        ]
+    [
+      "Hey, y_c? Have you ever thought about, uh ...",
+      "What if something happens to you? Or something happens to me? Or something happens to the clan, and we're both demolished in a fiery pit of nothingness!",
+      "Phew ... sorry, I know I'm not usually so grim. But I guess I'm just really worried.",
+      "What if something goes wrong, and I'm not there to protect you?",
+      "I won't let that happen ... I just won't!"
+    ]
+  ],
+  "assertivefun_2": [
+    [
+      "Any",
+      "platonic_love",
+      "assertive",
+      "silly",
+      "unlawful"
     ],
-    "assertive_12": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "unlawful",
-            "from_mate"
-        ],
-        [
-            "y_c, what if we ran away?",
-            "Forgot the clan, forgot the code ... Just left and made our own life together, the two of us.",
-            "We could be gone by tomorrow with no one ever knowing ...",
-            "[t_c grins. They're kidding.]",
-            "[But their twitching tail tells you some small part of them can't help but imagine what it might be like ...]"
-        ]
+    [
+      "Ah, StarClan ... I totally got sprayed by a skunk today.",
+      "Do I stink? Be honest.",
+      "[You tell t_c that their stench is probably strong enough to stir the dead from their graves.]",
+      "Oh, really? Well, in that case ...",
+      "[t_c presses their pelt into yours, laughing like a maniac. You shriek and run away, but they quickly pursue, giving chase all around camp.]",
+      "Come back, y_c!!! I just want to share tongues! Hahaha!"
+    ]
+  ],
+  "assertive_12": [
+    [
+      "Any",
+      "assertive",
+      "cool",
+      "unlawful",
+      "from_mate"
     ],
+    [
+      "y_c, what if we ran away?",
+      "Forgot the clan, forgot the code ... Just left and made our own life together, the two of us.",
+      "We could be gone by tomorrow with no one ever knowing ...",
+      "[t_c grins. They're kidding.]",
+      "[But their twitching tail tells you some small part of them can't help but imagine what it might be like ...]"
+    ]
+  ],
   "introspective_kit_or_app": [
     [
       "no_kit",
@@ -939,7 +939,6 @@
       "You can stare for five more seconds, and that's it!"
     ]
   ],
-
   "assertive_theyill4": [
     [
       "Any",
@@ -2218,7 +2217,6 @@
       "Now you try!"
     ]
   ],
-
   "silly_3": [
     [
       "Any",
@@ -4151,7 +4149,6 @@
       "Hey! Don't give me that look! Can't you sea my genius?"
     ]
   ],
-
   "silly_gen_cliff": [
     [
       "Any",
@@ -5396,6 +5393,487 @@
       "Nevermind that. Here, I caught you something!",
       "[Purring softly, t_c settled down beside you, pressing their pelt against yours.]",
       "I'm really excited you know. Our kits will be perfect."
+    ]
+  ],
+  "general_1": [
+    [
+      "any",
+      "insult",
+      "platonic_like"
+    ],
+    [
+      "Hey! What gives?"
+    ]
+  ],
+  "general_2": [
+    [
+      "any",
+      "insult",
+      "dislike"
+    ],
+    [
+      "As if I couldn't like you any less …"
+    ]
+  ],
+  "Abandoned_insult": [
+    [
+      "insult",
+      "you_abandoned",
+      "hate"
+    ],
+    [
+      "StarClan above. No wonder your parents left you."
+    ]
+  ],
+  "brooding_insult_1": [
+    [
+      "any",
+      "insult",
+      "brooding"
+    ],
+    [
+      "What did you just say to me … ?"
+    ]
+  ],
+  "brooding_insult_02": [
+    [
+      "any",
+      "insult",
+      "brooding"
+    ],
+    [
+      "Um. Okay."
+    ]
+  ],
+  "brooding_insult_2": [
+    [
+      "any",
+      "insult",
+      "brooding",
+      "platonic_like"
+    ],
+    [
+      "Haha. Good one."
+    ]
+  ],
+  "brooding_insult_3": [
+    [
+      "any",
+      "insult",
+      "brooding",
+      "cool",
+      "platonic_like"
+    ],
+    [
+      "[t_c curls their lip at you and stalks away.]"
+    ]
+  ],
+  "brooding_insult_4": [
+    [
+      "no_kit",
+      "insult",
+      "brooding"
+    ],
+    [
+      "[t_c just stares at you for a second, saying nothing.]",
+      "[Finally, they walk up to you, grabbing you with their claws and yanking you inches from their face.]",
+      "Say that again."
+    ]
+  ],
+  "neurotic_insult_1": [
+    [
+      "any",
+      "insult",
+      "neurotic"
+    ],
+    [
+      "Oh yeah? Well you're a - a … uhm … uh …",
+      "Ugh! I can't think of a comeback!"
+    ]
+  ],
+  "neurotic_insult_2": [
+    [
+      "any",
+      "insult",
+      "neurotic",
+      "platonic_like"
+    ],
+    [
+      "W-What? You're just joking, right?",
+      "Is that really how you think of me?"
+    ]
+  ],
+  "neurotic_insult_3": [
+    [
+      "any",
+      "insult",
+      "neurotic"
+    ],
+    [
+      "Psh. Whatever. I don't even care.",
+      "Totally not gonna overthink and cry about it later …"
+    ]
+  ],
+  "neurotic_insult_4": [
+    [
+      "any",
+      "insult",
+      "neurotic",
+      "random_cat"
+    ],
+    [
+      "Huh? Is that really true?",
+      "Who else agrees with you? Did r_c tell you to say that?",
+      "[t_c rushes off in a panic.]"
+    ]
+  ],
+  "neurotic_ insult_5": [
+    [
+      "any",
+      "insult",
+      "neurotic",
+      "platonic_like",
+      "romantic_like"
+    ],
+    [
+      "You don't mean that, right, y_c? ...y_c? Please tell me you don't mean it...!"
+    ]
+  ],
+  "neurotic_ insult_6": [
+    [
+      "any",
+      "insult",
+      "neurotic",
+      "platonic_like",
+      "romantic_like",
+      "respect"
+    ],
+    [
+      "What did I do wrong? I can– I– I can fix it! Or at least try!"
+    ]
+  ],
+  "neurotic_ insult_7": [
+    [
+      "any",
+      "insult",
+      "neurotic",
+      "platonic_like",
+      "romantic_like",
+      "respect"
+    ],
+    [
+      "Please tell me how I can make it up to you... I'll do anything."
+    ]
+  ],
+  "assertive_insult_1": [
+    [
+      "no_kit",
+      "assertive"
+    ],
+    [
+      "Fight me like a real warrior does!"
+    ]
+  ],
+  "assertive_insult_2": [
+    [
+      "any",
+      "assertive"
+    ],
+    [
+      "Hmph. Think you're tough, huh?",
+      "We'll see who the tougher cat is on the battlefield."
+    ]
+  ],
+  "assertive_insult_3": [
+    [
+      "no_kit",
+      "assertive",
+      "brooding",
+      "unlawful",
+      "dislike"
+    ],
+    [
+      "Laugh all you want. One of these days, you're gonna get what's coming to you.",
+      "I'll see to it myself."
+    ]
+  ],
+  "cool_insult_1": [
+    [
+      "any",
+      "cool"
+    ],
+    [
+      "Tch …"
+    ]
+  ],
+  "cool_insult_2": [
+    [
+      "any",
+      "cool",
+      "dislike"
+    ],
+    [
+      "Aw, look! It thinks it's clever."
+    ]
+  ],
+  "cool_insult_3": [
+    [
+      "any",
+      "cool",
+      "assertive"
+    ],
+    [
+      "Please. I've heard worse from the kits in the nursery."
+    ]
+  ],
+  "sweet_insult_1": [
+    [
+      "any",
+      "insult",
+      "sweet"
+    ],
+    [
+      "That's not very nice of you to say..."
+    ]
+  ],
+  "sweet_insult_2": [
+    [
+      "any",
+      "insult",
+      "sweet",
+      "dislike"
+    ],
+    [
+      "Why are you so mean all the time?"
+    ]
+  ],
+  "sweet_insult_3": [
+    [
+      "any",
+      "insult",
+      "sweet",
+      "neurotic",
+      "platonic_like",
+      "romantic_like"
+    ],
+    [
+      "You... you don't really mean that... do you, y_c...?"
+    ]
+  ],
+  "sweet_insult_4": [
+    [
+      "any",
+      "insult",
+      "sweet",
+      "platonic_like",
+      "romantic_like"
+    ],
+    [
+      "I.. I’m sorry... I don’t know what I did, but I’ll make it up to you!"
+    ]
+  ],
+  "silly_insult_1": [
+    [
+      "any",
+      "insult",
+      "silly"
+    ],
+    [
+      "...you're just mad I'm funnier than you, aren'tcha?"
+    ]
+  ],
+  "silly_insult_2": [
+    [
+      "any",
+      "insult",
+      "silly"
+    ],
+    [
+      "Whatever. Stay mad about it, because I sure won't. I'll forget you even talked to me in like, two seconds."
+    ]
+  ],
+  "silly_insult_3": [
+    [
+      "any",
+      "insult",
+      "silly"
+    ],
+    [
+      "You're just jealous of my inherently whimsical nature."
+    ]
+  ],
+  "silly_insult_4": [
+    [
+      "any",
+      "insult",
+      "silly",
+      "dislike"
+    ],
+    [
+      "Oh, like I'd take anything you say seriously."
+    ]
+  ],
+  "silly_insult_05": [
+    [
+      "any",
+      "insult",
+      "silly",
+      "dislike"
+    ],
+    [
+      "You're just a joke to me. And not a very funny one, either."
+    ]
+  ],
+  "silly_insult_5": [
+    [
+      "any",
+      "insult",
+      "silly",
+      "platonic_like",
+      "romantic_like"
+    ],
+    [
+      "Haha... uh... we need to work on your jokes. That... was a joke right?",
+      "...right...?"
+    ]
+  ],
+  "silly_insult_6": [
+    [
+      "any",
+      "insult",
+      "silly",
+      "platonic_like",
+      "romantic_like"
+    ],
+    [
+      "I'm... I'm sorry... I'm guessing you're mad I don't take things seriously enough... I'm trying to, but... It's hard."
+    ]
+  ],
+  "silly_insult_7": [
+    [
+      "any",
+      "insult",
+      "silly",
+      "platonic_like",
+      "romantic_like"
+    ],
+    [
+      "Haha...ha... I'll... um, keep that in mind next time we talk."
+    ]
+  ],
+  "silly_insult_8": [
+    [
+      "any",
+      "insult",
+      "silly",
+      "platonic_like",
+      "comfort"
+    ],
+    [
+      "Is someone hungry? Because you're really not acting like yourself. Have a snack, y_c."
+    ]
+  ],
+  "silly_insult_9": [
+    [
+      "elder",
+      "insult",
+      "silly"
+    ],
+    [
+      "Yeah, yeah, go back to sleep, grandpa."
+    ]
+  ],
+  "unlawful_insult_1": [
+    [
+      "any",
+      "insult",
+      "unlawful"
+    ],
+    [
+      "...you should take that back. Before someone gets hurt."
+    ]
+  ],
+  "unlawful_insult_2": [
+    [
+      "any",
+      "insult",
+      "unlawful"
+    ],
+    [
+      "...You're lucky that r_c is here. Otherwise, I don't think you'd want to know what I would do to you."
+    ]
+  ],
+  "unlawful_insult_3": [
+    [
+      "any",
+      "insult",
+      "unlawful",
+      "dislike"
+    ],
+    [
+      "...you're so damn lucky I haven't shredded you to pieces yet."
+    ]
+  ],
+  "unlawful_insult_4": [
+    [
+      "any",
+      "insult",
+      "unlawful"
+    ],
+    [
+      "Watch yourself, r_c."
+    ]
+  ],
+  "unabashed_insult_1": [
+    [
+      "any",
+      "insult",
+      "unabashed"
+    ],
+    [
+      "Well, you suck."
+    ]
+  ],
+  "unabashed_insult_2": [
+    [
+      "insult",
+      "unabashed",
+      "you_cool"
+    ],
+    [
+      "I may not be cool, but you're mean. And personally, I think that's worse."
+    ]
+  ],
+  "unabashed_insult_3": [
+    [
+      "any",
+      "insult",
+      "unabashed"
+    ],
+    [
+      "Okay, grumpy."
+    ]
+  ],
+  "unabashed_insult_4": [
+    [
+      "any",
+      "insult",
+      "unabashed"
+    ],
+    [
+      "Okay. So what?"
+    ]
+  ],
+  "unabashed_insult_5": [
+    [
+      "no_kit",
+      "insult",
+      "unabashed",
+      "hate"
+    ],
+    [
+      "You know, you're going to regret being so mean when you're in the elder's den, cold and alone without anyone to keep you company because you were such a huge jerk.",
+      "...just saying."
     ]
   ]
 }

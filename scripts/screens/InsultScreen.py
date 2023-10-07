@@ -25,7 +25,6 @@ from scripts.game_structure.game_essentials import game, screen_x, screen_y, MAN
 from scripts.cat.names import names, Name
 from scripts.clan_resources.freshkill import FRESHKILL_ACTIVE
 
-   
 class InsultScreen(Screens):
 
     def __init__(self, name=None):
@@ -189,93 +188,454 @@ class InsultScreen(Screens):
                     self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
         return
     
+    def get_cluster(self, trait):
+        # Mapping traits to their respective clusters
+        trait_to_clusters = {
+            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "competitive", "rebellious", "impulsive", "noisy"],
+            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying"],
+            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming"],
+            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all"],
+            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer"],
+            "neurotic": ["nervous", "insecure", "lonesome", "quiet"],
+            "silly": ["troublesome", "childish", "playful", "careful", "strange", "noisy", "attention-seeker"],
+            "stable": ["loyal", "responsible", "wise", "faithful"],
+            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer"],
+            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy"],
+            "unlawful": ["troublesome", "bloodthirsty", "sneaky", "rebellious", "troublesome"]
+        }
+
+        clusters = [key for key, values in trait_to_clusters.items() if trait in values]
+
+        # Assign cluster and second_cluster based on the length of clusters list
+        cluster = clusters[0] if clusters else ""
+        second_cluster = clusters[1] if len(clusters) > 1 else ""
+
+        return cluster, second_cluster
+    
+    def get_cluster_list(self):
+        return ["assertive", "brooding", "cool", "upstanding", "introspective", "neurotic", "silly", "stable", "sweet", "unabashed", "unlawful"]
+    
+    def get_cluster_list_you(self):
+        return ["you_assertive", "you_brooding", "you_cool", "you_upstanding", "you_introspective", "you_neurotic", "you_silly", "you_stable", "you_sweet", "you_unabashed", "you_unlawful"]
+    
+    
+    def relationship_check(self, talk, cat_relationship):
+        relationship_conditions = {
+            'hate': 50,
+            'romantic_like': 30,
+            'platonic_like': 30,
+            'jealousy': 30,
+            'dislike': 30,
+            'comfort': 30,
+            'respect': 30,
+            'trust': 30
+        }
+        
+        for key, value in relationship_conditions.items():
+            if key in talk[0] and cat_relationship < value:
+                return True
+        return False
+    
+    def handle_random_cat(self, cat):
+        random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
+        counter = 0
+        while random_cat.outside or random_cat.dead or random_cat.ID in [game.clan.your_cat.ID, cat.ID]:
+            counter += 1
+            if counter == 15:
+                break
+            random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
+        return random_cat
+        
     def get_possible_text(self, cat):
-        status = cat.status
-        trait = cat.personality.trait
-        skill = cat.skills
         text = ""
+        texts_list = []
+        you = game.clan.your_cat
+
         resource_dir = "resources/dicts/lifegen_talk/"
         possible_texts = None
-        with open(f"{resource_dir}{status}.json", 'r') as read_file:
+        with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
             
-        texts_list = []
-        for talk in possible_texts.values():
-            if "insult" not in talk[0]:
+        if cat.status not in ['kitten', "newborn"] and you.status not in ['kitten', 'newborn']:
+            with open(f"{resource_dir}general_no_kit.json", 'r') as read_file:
+                possible_texts2 = ujson.loads(read_file.read())
+                possible_texts.update(possible_texts2)
+        
+        if cat.status not in ['kitten', "newborn"] and you.status in ['kitten', 'newborn']:
+            with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
+                possible_texts3 = ujson.loads(read_file.read())
+                possible_texts.update(possible_texts3)
+        
+        cluster1, cluster2 = self.get_cluster(cat.personality.trait)
+        cluster3, cluster4 = self.get_cluster(you.personality.trait)
+        
+        their_trait_list = ['troublesome', 'fierce', 'bold', 'daring', 'confident', 'adventurous', 'arrogant', 'competitive', 'rebellious', 'bloodthirsty', 'cold', 'strict', 'vengeful', 'grumpy', 'charismatic', 'sneaky', 'cunning', 'arrogant', 'righteous', 'ambitious', 'strict', 'competitive', 'responsible', 'lonesome', 'righteous', 'calm', 'gloomy', 'wise', 'thoughtful', 'nervous', 'insecure', 'lonesome', 'troublesome', 'childish', 'playful', 'strange', 'loyal', 'responsible', 'wise', 'faithful', 'compassionate', 'faithful', 'loving', 'oblivious', 'sincere', 'childish', 'confident', 'bold', 'shameless', 'strange', 'oblivious', 'flamboyant', 'troublesome', 'bloodthirsty', 'sneaky', 'rebellious']
+        you_trait_list = ['you_troublesome', 'you_fierce', 'you_bold', 'you_daring', 'you_confident', 'you_adventurous', 'you_arrogant', 'you_competitive', 'you_rebellious', 'you_bloodthirsty', 'you_cold', 'you_strict', 'you_vengeful', 'you_grumpy', 'you_charismatic', 'you_sneaky', 'you_cunning', 'you_arrogant', 'you_righteous', 'you_ambitious', 'you_strict', 'you_competitive', 'you_responsible', 'you_lonesome', 'you_righteous', 'you_calm', 'you_gloomy', 'you_wise', 'you_thoughtful', 'you_nervous', 'you_insecure', 'you_lonesome', 'you_troublesome', 'you_childish', 'you_playful', 'you_strange', 'you_loyal', 'you_responsible', 'you_wise', 'you_faithful', 'you_compassionate', 'you_faithful', 'you_loving', 'you_oblivious', 'you_sincere', 'you_childish', 'you_confident', 'you_bold', 'you_shameless', 'you_strange', 'you_oblivious', 'you_flamboyant', 'you_troublesome', 'you_bloodthirsty', 'you_sneaky', 'you_rebellious']
+        you_backstory_list = [
+            "you_clanfounder",
+            "you_clanborn",
+            "you_outsiderroots",
+            "you_half-Clan",
+            "you_formerlyloner",
+            "you_formerlyrogue",
+            "you_formerlykittypet",
+            "you_formerlyoutsider",
+            "you_originallyanotherclan",
+            "you_orphaned",
+            "you_abandoned"
+        ]
+        they_backstory_list = ["they_clanfounder",
+            "they_clanborn",
+            "they_outsiderroots",
+            "they_half-Clan",
+            "they_formerlyloner",
+            "they_formerlyrogue",
+            "they_formerlykittypet",
+            "they_formerlyoutsider",
+            "they_originallyanotherclan",
+            "they_orphaned",
+            "they_abandoned"
+        ]
+        skill_list = ['teacher', 'hunter', 'fighter', 'runner', 'climber', 'swimmer', 'speaker', 'mediator1', 'clever', 'insightful', 'sense', 'kit', 'story', 'lore', 'camp', 'healer', 'star', 'omen', 'dream', 'clairvoyant', 'prophet', 'ghost', 'explorer', 'tracker', 'artistan', 'guardian', 'tunneler', 'navigator', 'song', 'grace', 'clean', 'innovator', 'comforter', 'matchmaker', 'thinker', 'cooperative', 'scholar', 'time', 'treasure', 'fisher', 'language', 'sleeper']
+        you_skill_list = ['you_teacher', 'you_hunter', 'you_fighter', 'you_runner', 'you_climber', 'you_swimmer', 'you_speaker', 'you_mediator1', 'you_clever', 'you_insightful', 'you_sense', 'you_kit', 'you_story', 'you_lore', 'you_camp', 'you_healer', 'you_star', 'you_omen', 'you_dream', 'you_clairvoyant', 'you_prophet', 'you_ghost', 'you_explorer', 'you_tracker', 'you_artistan', 'you_guardian', 'you_tunneler', 'you_navigator', 'you_song', 'you_grace', 'you_clean', 'you_innovator', 'you_comforter', 'you_matchmaker', 'you_thinker', 'you_cooperative', 'you_scholar', 'you_time', 'you_treasure', 'you_fisher', 'you_language', 'you_sleeper']
+        for talk_key, talk in possible_texts.items():
+            tags = talk[0]
+            for i in range(len(tags)):
+                tags[i] = tags[i].lower()
+                
+            if "insult" not in tags:
                 continue
-            if game.clan.your_cat.status not in talk[0] and "Any" not in talk[0]:
+
+            # Status tags
+            if you.status not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags and "newborn" not in tags:
                 continue
+            elif "young elder" in tags and cat.status == 'elder' and cat.moons >= 100:
+                continue
+            elif "no_kit" in tags and you.status in ['kitten', 'newborn']:
+                continue
+            elif "newborn" in tags and you.moons != 0:
+                continue
+            
+            if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
+                continue
+            if "they_grieving" in tags and "grief stricken" not in cat.illnesses:
+                continue
+            
+            # Cluster tags
+            if any(i in self.get_cluster_list() for i in tags):
+                if cluster1 not in tags and cluster2 not in tags:
+                    continue
+            if any(i in self.get_cluster_list_you() for i in tags):
+                if ("you_"+cluster3) not in tags and ("you_"+cluster4) not in tags:
+                    continue
+            
+            # Trait tags
+            if any(i in you_trait_list for i in tags):
+                ts = you_trait_list
+                for j in range(len(ts)):
+                    ts[j] = ts[j][3:]
+                if you.personality.trait not in ts:
+                    continue
+            if any(i in their_trait_list for i in tags):
+                if cat.personality.trait not in tags:
+                    continue
+                
+            # Backstory tags
+            if any(i in you_backstory_list for i in tags):
+                ts = you_backstory_list
+                for j in range(len(ts)):
+                    ts[j] = ts[j][3:]
+                if you.backstory not in ts:
+                    continue
+            if any(i in they_backstory_list for i in tags):
+                ts = they_backstory_list
+                for j in range(len(ts)):
+                    ts[j] = ts[j][4:]
+                if cat.backstory not in ts:
+                    continue
+                
+            # Skill tags
+            if any(i in you_skill_list for i in tags):
+                ts = you_skill_list
+                for j in range(len(ts)):
+                    ts[j] = ts[j][3:]
+                    ts[j] = ''.join([q for q in ts[j] if not q.isdigit()])
+                if (you.skills.primary.path not in ts) or (you.skills.secondary.path not in ts):
+                    continue
+            if any(i in skill_list for i in tags):
+                ts = skill_list
+                for j in range(len(ts)):
+                    ts[j] = ''.join([q for q in ts[j] if not q.isdigit()])
+                if (cat.skills.primary.path not in ts) or (cat.skills.secondary.path not in ts):
+                    continue
+                
+            # Season tags
             if ('leafbare' in talk[0] and game.clan.current_season != 'Leaf-bare') or ('newleaf' in talk[0] and game.clan.current_season != 'Newleaf') or ('leaffall' in talk[0] and game.clan.current_season != 'Leaf-bare') or ('greenleaf' in talk[0] and game.clan.current_season != 'Greenleaf'):
                 continue
-            if any(i in ['bloodthirsty', 'cold', 'childish', 'faithful', 'strict', 'insecure', "nervous", "lonesome", "vengeful", "fierce"] for i in talk[0]):
-                if trait not in talk[0]:
+            
+            # Biome tags
+            if any(i in ['beach', 'forest', 'plains', 'mountainous', 'wetlands', 'desert'] for i in talk[0]):
+                if game.clan.biome.lower() not in talk[0]:
                     continue
-            if any(i in ['beach', 'forest', 'plains', 'mountainous', 'wetlands'] for i in talk[0]):
-                if game.clan.biome not in talk[0]:
+                
+            # Injuries, grieving and illnesses tags
+            
+            if "you_pregnant" in tags and "pregnant" not in you.injuries:
+                continue
+            if "they_pregnant" in tags and "pregnant" not in cat.injuries:
+                continue
+            
+            if "grief stricken" not in you.illnesses and "you_grieving" in tags:
+                continue
+            
+            if any(i in ["you_ill", "you_injured"] for i in tags):
+                ill_injured = False
+
+                if you.is_ill() and "you_ill" in tags and "grief stricken" not in you.illnesses:
+                    ill_injured = True
+                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries:
+                    ill_injured = True
+                
+                if not ill_injured:
+                    continue 
+            
+            if any(i in ["they_ill", "they_injured"] for i in tags):
+                ill_injured = False
+                
+                if cat.is_ill() and "they_ill" in tags and "grief stricken" not in cat.illnesses:
+                    ill_injured = True
+                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries:
+                    ill_injured = True
+
+                if not ill_injured:
+                    continue 
+            
+            # Relationships
+            # Family tags:
+            if any(i in ["half sibling", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
+                
+                fam = False
+                if "from_mentor" in tags:
+                    if you.mentor == cat.ID:
+                        fam = True
+                if "from_your_apprentice" in tags:
+                    if cat.mentor == you.ID:
+                        fam = True
+                if "from_mate" in tags:
+                    if cat.ID in you.mate:
+                        fam = True   
+                if "from_parent" in tags:
+                    if you.parent1:
+                        if you.parent1 == cat.ID:
+                            fam = True
+                    if you.parent2:
+                        if you.parent2 == cat.ID:
+                            fam = True
+                if "adopted_parent" in tags:
+                    if cat.ID in you.inheritance.get_no_blood_parents():
+                        fam = True
+                if "from_kit" in tags:
+                    if cat.ID in you.inheritance.get_blood_kits():
+                        fam = True
+                if "from_adopted_kit" in tags:
+                    if cat.ID in you.inheritance.get_not_blood_kits():
+                        fam = True
+
+                if "sibling" in tags:
+                    if cat.ID in you.inheritance.get_siblings():
+                        fam = True
+                if "half sibling" in tags:
+                    c_p1 = cat.parent1
+                    if not c_p1:
+                        c_p1 = "no_parent1_cat"
+                    c_p2 = cat.parent2
+                    if not c_p2:
+                        c_p2 = "no_parent2_cat"
+                    y_p1 = you.parent1
+                    if not y_p1:
+                        y_p1 = "no_parent1_you"
+                    y_p2 = you.parent2
+                    if not y_p2:
+                        y_p2 = "no_parent2_you"
+                    if ((c_p1 == y_p1 or c_p1 == y_p2) or (c_p2 == y_p1 or c_p2 == y_p2)) and not (c_p1 == y_p1 and c_p2 == y_p2) and not (c_p2 == y_p1 and c_p1 == y_p2) and not (c_p1 == y_p2 and c_p2 == y_p1):
+                        fam = True
+                if "adopted_sibling" in tags:
+                    if cat.ID in you.inheritance.get_no_blood_siblings():
+                        fam = True
+                if "parents_siblings" in tags:
+                    if cat.ID in you.inheritance.get_parents_siblings():
+                        fam = True
+                if "cousin" in tags:
+                    if cat.ID in you.inheritance.get_cousins():
+                        fam = True
+                if "siblings_mate" in tags:
+                    if cat.ID in you.inheritance.get_siblings_mates():
+                        fam = True
+                if not fam:
                     continue
-            if (not game.clan.your_cat.is_ill() and not game.clan.your_cat.is_injured()) and 'injured' in talk[0]:
-                continue
-            if (game.clan.your_cat.status == 'kitten') and 'no_kit' in talk[0]:
-                continue
-            if ("you_insecure" in talk[0]) and game.clan.your_cat.personality.trait != "insecure":
-                continue
-            if "from_mentor" in talk[0]:
-                if game.clan.your_cat.mentor != cat.ID:
+                
+
+            if "non-related" in tags:
+                if cat.ID in you.inheritance.all_inheritances:
                     continue
-            if "from_parent" in talk[0]:
-                if game.clan.your_cat.parent1:
-                    if game.clan.your_cat.parent1 != cat.ID:
+                
+            # If you have murdered someone and have been revealed
+            if "murder" in talk[0]:
+                if game.clan.your_cat.revealed:
+                    if game.clan.your_cat.history:
+                        if "is_murderer" in game.clan.your_cat.history.murder:
+                            if len(game.clan.your_cat.history.murder["is_murderer"]) == 0:
+                                continue
+                            elif 'accomplices' in game.switches:
+                                if cat.ID in game.switches['accomplices']:
+                                    continue
+                        else:
+                            continue
+                    else:
                         continue
-                if game.clan.your_cat.parent2:
-                    if game.clan.your_cat.parent2 != cat.ID:
-                        continue
-            if "newborn" in talk[0]:
-                if game.clan.your_cat.moons != 0:
+                else:
                     continue
-            if game.clan.your_cat.ID in cat.relationships:
-                if cat.relationships[game.clan.your_cat.ID].dislike < 50 and 'hate' in talk[0]:
+            
+            if "war" in tags:
+                if game.clan.war.get("at_war", False):
                     continue
-                if cat.relationships[game.clan.your_cat.ID].romantic_love < 30 and 'romantic_like' in talk[0]:
+        
+            
+            # Relationship conditions
+            if you.ID in cat.relationships:
+                if cat.relationships[you.ID].dislike < 30 and 'hate' in tags:
                     continue
-                if cat.relationships[game.clan.your_cat.ID].platonic_like < 30 and 'platonic_like' in talk[0]:
+                if cat.relationships[you.ID].romantic_love < 20 and 'romantic_like' in tags:
                     continue
-                if cat.relationships[game.clan.your_cat.ID].jealousy < 30 and 'jealousy' in talk[0]:
+                if cat.relationships[you.ID].platonic_like < 20 and 'platonic_like' in tags:
                     continue
-                if cat.relationships[game.clan.your_cat.ID].dislike < 30 and 'dislike' in talk[0]:
+                if cat.relationships[you.ID].platonic_like < 50 and 'platonic_love' in tags:
                     continue
-                if cat.relationships[game.clan.your_cat.ID].comfortable < 30 and 'comfort' in talk[0]:
+                if cat.relationships[you.ID].jealousy < 5 and 'jealousy' in tags:
                     continue
-                if cat.relationships[game.clan.your_cat.ID].admiration < 30 and 'respect' in talk[0]:
+                if cat.relationships[you.ID].dislike < 20 and 'dislike' in tags:
                     continue
-                if cat.relationships[game.clan.your_cat.ID].trust < 30 and 'trust' in talk[0]:
+                if cat.relationships[you.ID].comfortable < 5 and 'comfort' in tags:
                     continue
-                if "talk_dead" in talk[0]:
-                    dead_cat = str(Cat.all_cats.get(choice(game.clan.starclan_cats)).name)
-                    text = [t1.replace("d_c", dead_cat) for t1 in text]
-                    texts_list.append(talk[1])
+                if cat.relationships[you.ID].admiration < 5 and 'respect' in tags:
+                    continue         
+                if cat.relationships[you.ID].trust < 5 and 'trust' in tags:
                     continue
-                texts_list.append(talk[1])
+                if cat.relationships[you.ID].platonic_like > 10 and cat.relationships[you.ID].dislike > 10 and "neutral" in tags:
+                    continue
             else:
-                if any(i in ['hate', 'crush', 'romantic_like', 'platonic_like', 'jealousy', 'dislike', 'comfort', 'respect', 'trust'] for i in talk[0]):
+                if any(i in ["hate","romantic_like","platonic_like","jealousy","dislike","comfort","respect","trust"] for i in tags):
                     continue
-                if "talk_dead" in talk[0]:
-                    dead_cat = str(Cat.all_cats.get(choice(game.clan.starclan_cats)).name)
-                    text = [t1.replace("d_c", dead_cat) for t1 in text]
-                    texts_list.append(talk[1])
-                    continue
-                texts_list.append(talk[1])
+            
+            if "talk_dead" in talk[0]:
+                dead_cat = str(Cat.all_cats.get(choice(game.clan.starclan_cats)).name)
+                text = [t1.replace("d_c", dead_cat) for t1 in talk[1]]
+            
+            if "random_cat" in talk[0]:
+                random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
+                counter = 0
+                while random_cat.outside or random_cat.dead or random_cat.ID == you.ID or random_cat.ID == cat.ID:
+                    counter+=1
+                    if counter == 15:
+                        continue
+                    random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
+                text = [t1.replace("r_c", str(random_cat.name)) for t1 in talk[1]]
+                texts_list.append(text)
+                continue
+           
+            texts_list.append(talk[1])
+            
         if not texts_list:
             resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
             texts_list.append(possible_texts['general'][1])
-        
+
         text = choice(texts_list)
+
+        if any(abbrev in t for abbrev in ["r_k", "r_a", "r_w", "r_m", "r_d", "r_q", "r_e", "r_s", "r_i"] for t in text):
+            living_meds = []
+            living_mediators = []
+            living_warriors = []
+            living_apprentices = []
+            living_queens = []
+            living_kits = []
+            living_elders = []
+            sick_cats = []
+            injured_cats = []
+            
+            for c in Cat.all_cats.values():
+                if not c.dead and not c.outside and c.ID != you.ID and c.ID != cat.ID:
+                    if c.status == "medicine cat":
+                        living_meds.append(c)
+                    elif c.status == "warrior":
+                        living_warriors.append(c)
+                    elif c.status == "mediator":
+                        living_mediators.append(c)
+                    elif c.status == 'queen':
+                        living_queens.append(c)
+                    elif c.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"]:
+                        living_apprentices.append(c)
+                    elif c.status in ["kitten", "newborn"]:
+                        living_kits.append(c)
+                    elif c.status == "elder":
+                        living_elders.append(c)
+
+            replace_mappings = {
+                "r_k": living_kits,
+                "r_a": living_apprentices,
+                "r_w": living_warriors,
+                "r_m": living_meds,
+                "r_d": living_mediators,
+                "r_q": living_queens,
+                "r_e": living_elders
+            }
+            
+            for abbrev, replace_list in replace_mappings.items():
+                for idx, t in enumerate(text):
+                    if abbrev in t:
+                        text[idx] = t.replace(abbrev, str(choice(replace_list).name))
+                        
+
         text = [t1.replace("c_n", game.clan.name) for t1 in text]
-        text = [t1.replace("y_c", str(game.clan.your_cat.name)) for t1 in text]
-        text = [t1.replace("r_c", str(Cat.all_cats[choice(game.clan.clan_cats)].name)) for t1 in text]
-
-        
-
+        text = [t1.replace("y_c", str(you.name)) for t1 in text]
+        text = [t1.replace("t_c", str(cat.name)) for t1 in text]   
+         
+        other_clan = choice(game.clan.all_clans)
+        if other_clan:
+            text = [t1.replace("o_c", str(other_clan.name)) for t1 in text]
+        if game.clan.leader:
+            lead = game.clan.leader.name
+            text = [t1.replace("l_n", str(lead)) for t1 in text]
+        if game.clan.deputy:
+            dep = game.clan.deputy.name
+            text = [t1.replace("d_n", str(dep)) for t1 in text]
+        if cat.mentor:
+            mentor = Cat.all_cats.get(cat.mentor).name
+            text = [t1.replace("tm_n", str(mentor)) for t1 in text]
+        if you.mentor:
+            mentor = Cat.all_cats.get(you.mentor).name
+            text = [t1.replace("m_n", str(mentor)) for t1 in text]
+        if "grief stricken" in cat.illnesses:
+            try:
+                dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
+                text = [t1.replace("d_c", str(dead_cat.name)) for t1 in text]  
+            except:
+                dead_cat = str(Cat.all_cats.get(game.clan.starclan_cats[-1]).name)
+                text = [t1.replace("d_c", dead_cat) for t1 in text]    
+        elif "grief stricken" in you.illnesses:
+            try:
+                dead_cat = Cat.all_cats.get(you.illnesses['grief stricken'].get("grief_cat"))
+                text = [t1.replace("d_c", str(dead_cat.name)) for t1 in text]  
+            except:
+                dead_cat = str(Cat.all_cats.get(game.clan.starclan_cats[-1]).name)
+                text = [t1.replace("d_c", dead_cat) for t1 in text]
+        d_c_found = False
+        for t in text:
+            if "d_c" in t:
+                d_c_found = True
+        if d_c_found:
+            dead_cat = str(Cat.all_cats.get(game.clan.starclan_cats[-1]).name)
+            text = [t1.replace("d_c", dead_cat) for t1 in text]
         return text
