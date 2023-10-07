@@ -232,8 +232,7 @@
             "medicine cat",
             "medicine cat apprentice",
             "assertive",
-            "platonic_like",
-            "neutral"
+            "platonic_like"
         ],
         [
             "Eeek! The half-moon meeting is coming up! Aren't you excited?",
@@ -246,8 +245,7 @@
         [
             "medicine cat",
             "assertive",
-            "platonic_like",
-            "neutral"
+            "platonic_like"
         ],
         [
             "Is it just me, or has r_w been coming into the medicine den an awful lot lately?",
@@ -553,26 +551,6 @@
             "Just think about it, okay?"
         ]
     ],
-    "assertivemedapp_2": [
-        [
-            "Any",
-            "platonic_like",
-            "assertive",
-            "silly",
-            "unlawful",
-            "sibling",
-            "adopted_sibling",
-            "half sibling"
-        ],
-        [
-            "Ah, StarClan ... I totally tripped and fell into the wild garlic supply today.",
-            "Do I stink? Be honest.",
-            "[You tell t_c that their stench is probably strong enough to stir the dead from their graves.]",
-            "Oh, really? Well, in that case ...",
-            "[t_c presses their pelt into yours, laughing like a maniac. You shriek and run away, but they quickly pursue, giving chase all around camp.]",
-            "Come back, y_c!!! I just want to share tongues! Hahaha!"
-        ]
-    ],
     "assertivemedapp_3": [
         [
             "kitten",
@@ -606,7 +584,7 @@
         [
             "*Shudder* I gotta get out of this den, y_c. Come gather herbs with me later?",
             "Sweet! It's a date! Hehe!",
-            "[r_c's eyes flash a little too intently for it to just be a joke.]"
+            "[t_c's eyes flash a little too intently for it to just be a joke.]"
         ]
     ],
     "assertivemedapp_5": [
@@ -639,10 +617,7 @@
         [
             "Any",
             "assertive",
-            "sibling",
-            "half sibling",
-            "adopted_sibling",
-            "platonic_like"
+            "platonic_love"
         ],
         [
             "Hey. Bet I could beat ya in a fight!",
