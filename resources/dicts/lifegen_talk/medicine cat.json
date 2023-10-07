@@ -178,7 +178,6 @@
         [
             "assertive",
             "dislike",
-            "neutral",
             "cool",
             "upstanding",
             "brooding",
@@ -449,13 +448,8 @@
             "medicine cat",
             "medicine cat apprentice",
             "assertive",
-            "platonic_like",
-            "romantic_like",
-            "from_mate",
-            "sibling",
-            "adopted_sibling",
-            "trust",
-            "comfort"
+            "platonic_love",
+            "romantic_like"
         ],
         [
             "Oh my StarClan, I just remembered the craziest story from when I was a kit!!!",
