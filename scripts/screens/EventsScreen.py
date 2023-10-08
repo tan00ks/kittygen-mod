@@ -184,7 +184,7 @@ class EventsScreen(Screens):
                         for c in game.clan.clan_cats:
                             if Cat.all_cats.get(c).favourite:
                                 if str(Cat.all_cats.get(c).name) in i.text:
-                                    self.relation_events.append(c)
+                                    self.relation_events.append(i)
                                     break
                                   
                     self.display_events = self.relation_events
@@ -195,7 +195,7 @@ class EventsScreen(Screens):
                 self.make_cat_buttons(event.ui_element)
             elif event.ui_element in self.cat_profile_buttons:
                 game.switches['cat'] = event.ui_element.ids
-                self.change_screen('profile screen')    
+                self.change_screen('profile screen')
             else:
                 self.menu_button_pressed(event)
             
