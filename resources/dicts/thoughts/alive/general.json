@@ -2450,7 +2450,7 @@
             "Tells r_c about a time that they struggled in a hunt",
             "Quietly listens while r_c vents ",
             "Offers to move their nest closer to r_c's nest so they don't have to be alone",
-            "Tells r_w to get some rest, and that they'll replace them on the patrol"
+            "Tells r_c to get some rest, and that they'll replace them on the patrol"
         ],
         "main_age_constraint": [
             "adolescent",
@@ -2469,26 +2469,26 @@
     {
         "id": "MATCHMAKER",
         "thoughts": [
-            "Is teasing r_w about their love interest",
+            "Is teasing r_c about their love interest",
             "Gives advice to r_c on how to share their interests",
             "Is silently pairing cats together",
-            "Feels second-hand embarrassment after thinking about something r_w said to their crush",
-            "Thinks r_w and r_a would make a great pair",
-            "Wishes r_w and r_w would hurry up and get together already",
+            "Feels second-hand embarrassment after thinking about something some cat said to their crush",
+            "Thinks about who would make a great pair",
+            "Wishes two cats would hurry up and get together already",
             "Gives an apprentice advice about their crush",
-            "Purrs watching r_w talk to their crush",
-            "Gossips to r_w about who should end up together",
-            "Teases r_w about who they like",
+            "Purrs watching another cat talk to their crush",
+            "Gossips to r_c about who should end up together",
+            "Teases r_c about who they like",
             "Asks the deputy to set up two warriors on a patrol together",
             "Makes the medicine cat feel glad they aren't supposed to have a mate",
-            "Has to remind r_w for the tenth time to just be honest with the cat they like",
-            "Winks at r_w when they're talking to their crush",
-            "Tries to convince r_w to ask their crush on a date",
+            "Has to remind r_c for the tenth time to just be honest with the cat they like",
+            "Winks at r_c when they're talking to their crush",
+            "Tries to convince r_c to ask their crush on a date",
             "Silently cheers when their favourite couple gets together",
             "Is pairing up cats in other clans, fully aware that it is a bad idea",
-            "Jokes about pushing r_w into a river so a pretty cat can save them",
+            "Jokes about pushing r_c into a river so a pretty cat can save them",
             "Sighs when they realise that this clan is full of mousebrains refusing to admit their feelings",
-            "Is certain they know who r_w likes"
+            "Is certain they know who r_c likes"
         ],
         "main_age_constraint": [
             "adolescent",
