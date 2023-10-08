@@ -1044,8 +1044,6 @@ def event_text_adjust2(Cat, text, cat, other_cat=None,
                     break
             text = text.replace("r_a", str(random_warrior2.name))
         text = text.replace("r_w", str(random_warrior.name))
-        
-        
     return text
 
 

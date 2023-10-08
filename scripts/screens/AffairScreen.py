@@ -200,7 +200,7 @@ class AffairScreen(Screens):
             if self.get_fail_consequence() == 0:
                 ceremony_txt = self.adjust_txt(choice(self.mu_txt['fail breakup']), affair_cat)
                 for i in game.clan.your_cat.mate:
-                    Romantic_Events.handle_breakup(game.clan.your_cat, Cat.fetch_cat(i))
+                    Cat.fetch_cat(i).unset_mate(game.clan.your_cat)
                 game.cur_events_list.insert(1, Single_Event(ceremony_txt))
             else:
                 ceremony_txt = self.adjust_txt(choice(self.mu_txt['fail none']), affair_cat)

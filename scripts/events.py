@@ -358,7 +358,11 @@ class Events:
         if not game.clan.your_cat.inventory:
             game.clan.your_cat.inventory = []
         acc = random.choice(acc_list)
+        counter = 0
         while acc in game.clan.your_cat.inventory:
+            counter+=1
+            if counter == 30:
+                break
             acc = random.choice(acc_list)
         game.clan.your_cat.inventory.append(acc)
         string = f"You found a new accessory, {self.accessory_display_name(acc)}! You choose to store it in a safe place for now."
@@ -461,8 +465,12 @@ class Events:
                 
     def pick_valid_parent(self):
         parent = random.choice(Cat.all_cats_list).ID
+        counter = 0
         while parent == game.clan.your_cat.ID or Cat.all_cats[parent].moons < 14 or Cat.all_cats[parent].moons > 100 or Cat.all_cats[parent].dead:
             parent = random.choice(Cat.all_cats_list).ID
+            counter+=1
+            if counter == 30:
+                break
         return parent
         
 

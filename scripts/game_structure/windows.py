@@ -1581,22 +1581,25 @@ class NameKitsWindow(UIWindow):
         super().process_event(event)
 
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
-            if event.ui_element == self.begin_anew_button:
-                game.last_screen_forupdate = None
-                game.switches['window_open'] = False
-                self.begin_anew_button.kill()
-                self.pick_path_message.kill()
-                self.mediator_button.kill()
-                self.kill()
-            elif event.ui_element == self.mediator_button:
-                game.last_screen_forupdate = None
-                game.switches['window_open'] = False
-                game.switches['cur_screen'] = "name kits screen"
-                self.begin_anew_button.kill()
-                self.pick_path_message.kill()
-                self.mediator_button.kill()
-                self.kill()
-                game.all_screens['events screen'].exit_screen()
+            try:
+                if event.ui_element == self.begin_anew_button:
+                    game.last_screen_forupdate = None
+                    game.switches['window_open'] = False
+                    self.begin_anew_button.kill()
+                    self.pick_path_message.kill()
+                    self.mediator_button.kill()
+                    self.kill()
+                elif event.ui_element == self.mediator_button:
+                    game.last_screen_forupdate = None
+                    game.switches['window_open'] = False
+                    game.switches['cur_screen'] = "name kits screen"
+                    self.begin_anew_button.kill()
+                    self.pick_path_message.kill()
+                    self.mediator_button.kill()
+                    self.kill()
+                    game.all_screens['events screen'].exit_screen()
+            except:
+                print("failure with kits window")
 
                 
 class MateScreen(UIWindow):

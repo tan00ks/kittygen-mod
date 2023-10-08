@@ -678,7 +678,7 @@ class EventsScreen(Screens):
         else:
             self.event_container.set_dimensions((box_length, self.events_container_y))
         # Set the scroll bar to the last position it was at
-        if self.scroll_height.get(self.event_display_type):
+        if self.event_container.vert_scroll_bar and self.scroll_height.get(self.event_display_type):
             self.event_container.vert_scroll_bar.set_scroll_from_start_percentage(self.scroll_height[self.event_display_type])
 
     def make_cat_buttons(self, button_pressed):

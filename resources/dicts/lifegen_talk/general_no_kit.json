@@ -5549,7 +5549,7 @@
       "respect"
     ],
     [
-      "What did I do wrong? I can– I– I can fix it! Or at least try!"
+      "What did I do wrong? I can- I- I can fix it! Or at least try!"
     ]
   ],
   "neurotic_ insult_7": [
@@ -5568,7 +5568,8 @@
   "assertive_insult_1": [
     [
       "no_kit",
-      "assertive"
+      "assertive",
+      "insult"
     ],
     [
       "Fight me like a real warrior does!"
@@ -5577,7 +5578,8 @@
   "assertive_insult_2": [
     [
       "any",
-      "assertive"
+      "assertive",
+      "insult"
     ],
     [
       "Hmph. Think you're tough, huh?",
@@ -5590,7 +5592,8 @@
       "assertive",
       "brooding",
       "unlawful",
-      "dislike"
+      "dislike",
+      "insult"
     ],
     [
       "Laugh all you want. One of these days, you're gonna get what's coming to you.",
@@ -5600,7 +5603,8 @@
   "cool_insult_1": [
     [
       "any",
-      "cool"
+      "cool",
+      "insult"
     ],
     [
       "Tch ..."
@@ -5610,7 +5614,8 @@
     [
       "any",
       "cool",
-      "dislike"
+      "dislike",
+      "insult"
     ],
     [
       "Aw, look! It thinks it's clever."
@@ -5620,7 +5625,8 @@
     [
       "any",
       "cool",
-      "assertive"
+      "assertive",
+      "insult"
     ],
     [
       "Please. I've heard worse from the kits in the nursery."
@@ -5669,7 +5675,7 @@
       "romantic_like"
     ],
     [
-      "I.. I’m sorry... I don’t know what I did, but I’ll make it up to you!"
+      "I.. I'm sorry... I don't know what I did, but I'll make it up to you!"
     ]
   ],
   "silly_insult_1": [
