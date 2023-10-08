@@ -111,6 +111,7 @@ class Pregnancy_Events():
         if "have kits" in game.switches:
             if game.switches['have kits']:
                 chance = random.randint(0,3)
+                game.switches['have kits'] = False
 
         if not int(random.random() * chance):
             # If you've reached here - congrats, kits!
