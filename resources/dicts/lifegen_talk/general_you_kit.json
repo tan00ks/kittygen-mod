@@ -438,6 +438,17 @@
             "As if I couldn't like you any less ..."
         ]
     ],
+    "parent_you_ill": [
+        [
+            "you_ill",
+            "from_parent"
+        ],
+        [
+            "[You wake up in the middle of the night to a warmth against your pelt and soft humming.]",
+            "[Looking up, you see t_c pressed against your side, humming a lullaby they used to sing to you].",
+            "[You close your eyes and drift off to sleep again, comforted by their presence.]"
+        ]
+    ],
     "brooding_insult_1": [
         [
             "any",
@@ -663,6 +674,51 @@
         ],
         [
             "Okay. So what?"
+        ]
+    ],
+    "brooding_nice_tokit": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "What do you need?",
+            "You ... want to know if I wanna play with you and r_k?",
+            "Er, sorry. I don't really care for kits.",
+            "... Yes, I suppose that you are a kit.",
+            "I guess you're the only exception."
+        ]
+    ],
+    "brooding_nice_tokit1": [
+        [
+            "kitten",
+            "brooding",
+            "sibling"
+        ],
+        [
+            "Oh- Uhh, hey there, y_c.",
+            "Uhmm- I mean, I haven't seen you around so often.",
+            "...",
+            "You've grown up quite a lot, haven't you?",
+            "...",
+            "Sorry, I'm not good at being around with kits. Just- Just get back to the nursery. I think that r_q is waiting for you there.",
+            "[t_c lowers their gaze to you sadly, then looks at the nursery before stalking off.]"
+        ]
+    ],
+    "brooding_nice_tokit01": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "[You see t_c sitting alone near the clearing and decide to approach\nthem.]",
+            "Hm?",
+            "[They look up surprised as you slowly slide a little flower over\nto them.]",
+            "Oh...thanks, kid.",
+            "[They don't say much, but they seem happy about the small gift.]"
         ]
     ]
 }

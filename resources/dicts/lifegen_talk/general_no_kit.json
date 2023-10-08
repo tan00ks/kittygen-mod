@@ -5882,5 +5882,23 @@
       "You know, you're going to regret being so mean when you're in the elder's den, cold and alone without anyone to keep you company because you were such a huge jerk.",
       "...just saying."
     ]
-  ]
+  ],
+  "brooding_tomedapp51": [
+    [
+      "medicine cat apprentice",
+      "medicine cat",
+      "brooding",
+      "they_grieving",
+      "dead_close"
+    ],
+    [
+      "It wasn't your fault.",
+      "[t_c's quiet voice nearly makes you jump out of your own fur. You turn to see them standing at the medicine den entrance, avoiding your gaze.]",
+      "d_c's death. It wasn't your fault. You couldn't have saved them.",
+      "No one could've.",
+      "I ... um.",
+      "[t_c's voice breaks suddenly and they flee the medicine den as swiftly as physically possible.]"
+    ]
+    ]
+  
 }
