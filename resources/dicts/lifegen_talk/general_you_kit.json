@@ -507,6 +507,7 @@
     "cool_insult_1": [
         [
             "any",
+            "insult",
             "cool"
         ],
         [
@@ -517,6 +518,7 @@
         [
             "any",
             "cool",
+            "insult",
             "dislike"
         ],
         [
