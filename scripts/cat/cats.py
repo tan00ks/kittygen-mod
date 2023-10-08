@@ -1340,10 +1340,13 @@ class Cat():
         biome = game.switches['biome']
         camp = game.switches['camp_bg']
         dead_chance = getrandbits(4)
-        try:
-            season = game.clan.current_season
-        except:
-            season = None
+        season = None
+        if game.clan:
+            try:
+                season = game.clan.current_season
+            except:
+                season = None
+        
 
         # this figures out where the cat is
         where_kitty = None

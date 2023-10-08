@@ -1450,17 +1450,17 @@
     "sweet_meddie_1": [
         [
             "newborn",
-             "sweet"
+            "sweet"
         ],
         [
             "Welcome to the world, y_c! I can already tell you're going to do so many great things.",
             "But first, let's start with taking your medicine, alright?"
         ]
     ],
-"sweet_meddie_2": [
+    "sweet_meddie_2": [
         [
             "kitten",
-             "sweet"
+            "sweet"
         ],
         [
             "Well, hello there, y_c! How's my favorite patient doing today?.",
@@ -1468,10 +1468,10 @@
             "Ah, perfect! Here you go, a little bit of honey. Make sure to only have a little bit!"
         ]
     ],
-"sweet_meddie_3": [
+    "sweet_meddie_3": [
         [
             "kitten",
-             "sweet"
+            "sweet"
         ],
         [
             "Hm? Oh, hello there, y_c! What's on your mind today, little one?",
@@ -1479,10 +1479,10 @@
             "Will you go to StarClan? Of course! A fierce little warrior like you probably has a special spot up there, hehe."
         ]
     ],
-"sweet_meddie_4": [
+    "sweet_meddie_4": [
         [
             "kitten",
-             "sweet"
+            "sweet"
         ],
         [
             "Oh, hi there y_c! What's on your mind, little fella?",
@@ -1490,27 +1490,27 @@
             "You are your best when you're happy, so choose whichever role you feel like is calling to you! And it's okay if you change your mind later, we don't all always know what we want immediately, especially not at such a young age."
         ]
     ],
-"sweet_meddie_5": [
+    "sweet_meddie_5": [
         [
             "apprentice",
             "queen's apprentice",
             "medicine cat apprentice",
             "mediator apprentice",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "Hm..? Oh hello, y_c! Today is your day off, right? Do you think you could help me with something real fast?",
             "I need to do a check up on r_c, can you go and get them for me? I have some berries to give you for your work!"
         ]
     ],
-"sweet_meddie_6": [
+    "sweet_meddie_6": [
         [
             "apprentice",
             "queen's apprentice",
             "medicine cat apprentice",
             "mediator apprentice",
-             "sweet"
+            "sweet"
         ],
         [
             "Hey y_c! It's time for a check up! Can you come with me to my den for a moment?",
@@ -1518,10 +1518,10 @@
             "Thank you for your patience! Have some berries, as a treat!"
         ]
     ],
-"sweet_meddie_7": [
+    "sweet_meddie_7": [
         [
             "apprentice",
-             "sweet"
+            "sweet"
         ],
         [
             "Oh, what's up, y_c? Is there anything you need?",
@@ -1529,30 +1529,30 @@
             "Here, you can play with this while you wait. I'll be back momentarily!"
         ]
     ],
-"sweet_meddie_8": [
+    "sweet_meddie_8": [
         [
             "queen's apprentice",
-             "sweet"
+            "sweet"
         ],
         [
             "Mm? y_c? What is it that you- oh.. Oh I see.",
             "Hehe, looks like some of the kits pulled some of your fur out, hmm? Here, have these, should ease the stinging pain a bit. Oh, and this honey? It's just to make you feel a bit better. Just don't eat too much!"
         ]
     ],
-"sweet_meddie_9": [
+    "sweet_meddie_9": [
         [
             "medicine cat apprentice",
-             "sweet"
+            "sweet"
         ],
         [
             "Mm? y_c? What is it that you- oh.. Oh I see.",
             "Hehe, looks like some of the kits pulled some of your fur out, hmm? Here, have these, should ease the stinging pain a bit. Oh, and this honey? It's just to make you feel a bit better. Just don't eat too much!"
         ]
     ],
-"sweet_meddie_10": [
+    "sweet_meddie_10": [
         [
             "mediator apprentice",
-             "sweet"
+            "sweet"
         ],
         [
             "Oh, y_c! What happened?",
@@ -1561,14 +1561,14 @@
             "I'll talk to their Medicine Cat at the next meeting, I promise."
         ]
     ],
-"sweet_meddie_11": [
+    "sweet_meddie_11": [
         [
             "warrior",
             "medicine cat",
             "mediator",
             "queen",
             "dead_close",
-             "sweet"
+            "sweet"
         ],
         [
             "[t_c's gaze seems fixated on the sky, unwavering. Something must be bugging them, you think.]",
@@ -1578,13 +1578,13 @@
             "[You decide it's best to leave them to it. You know they'd immediately give up trying to figure /whatever that is/ out, just to make sure you're doing alright.. but it sounds like this is important.]"
         ]
     ],
-"sweet_meddie_12": [
+    "sweet_meddie_12": [
         [
             "warrior",
             "medicine cat",
             "mediator",
             "queen",
-             "sweet"
+            "sweet"
         ],
         [
             "Hmm.. that should go here.. ah, kits...",
@@ -1593,11 +1593,11 @@
             "Is there anything you need? If not, you're more than welcome to just keep me company whilst I clean up this mess. I wouldn't mind a friend, hehe."
         ]
     ],
-"sweet_meddie_13": [
+    "sweet_meddie_13": [
         [
             "warrior",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "Hey y_c! I've actually got a very special job for you.",
@@ -1606,10 +1606,10 @@
             "I hope you guys have fun! Don't forget to take plenty of rest breaks!!"
         ]
     ],
-"sweet_meddie_14": [
+    "sweet_meddie_14": [
         [
             "medicine cat",
-             "sweet"
+            "sweet"
         ],
         [
             "Oh, y_c! Just the cat I was looking for!",
@@ -1618,11 +1618,11 @@
             "You're the best! Come on, let's go."
         ]
     ],
-"sweet_meddie_15": [
+    "sweet_meddie_15": [
         [
             "mediator",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "Oh, y_c! Hi there- ah-",
@@ -1631,11 +1631,11 @@
             "Do you think you could talk to them at all? ... It'd mean a lot."
         ]
     ],
-"sweet_meddie_16": [
+    "sweet_meddie_16": [
         [
             "queen",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "y_c! I brought the herbs for r_k.",
@@ -1645,11 +1645,11 @@
             "Although, your patients are way cuter when they're being stubborn."
         ]
     ],
-"sweet_meddie_17": [
+    "sweet_meddie_17": [
         [
             "deputy",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "Greetings, y_c! I hope your evening has been fine.",
@@ -1660,11 +1660,11 @@
             "I just want everyone to be alright."
         ]
     ],
-"sweet_meddie_18": [
+    "sweet_meddie_18": [
         [
             "deputy",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "[t_c is sorting their herbs, they seem a bit worried about something. They nod as they see you, their voice quiet.]",
@@ -1676,11 +1676,11 @@
             "[They let you lean against them as a comforting gesture, and you're reminded of just how caring this cat can be.]"
         ]
     ],
-"sweet_meddie_19": [
+    "sweet_meddie_19": [
         [
             "deputy",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "Hello y_c! I need to speak with l_n, if that's alright?",
@@ -1688,11 +1688,11 @@
             "You can come in and sit with us, if you'd like! You /are/ the deputy, after all~."
         ]
     ],
-"sweet_meddie_20": [
+    "sweet_meddie_20": [
         [
             "leader",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "[You go to approach y_c, but you find they're surrounded by kits.]",
@@ -1700,11 +1700,11 @@
             "[This is too cute to interrupt. You sit by the entrance of the den, waiting for them to finish before talking to them.]"
         ]
     ],
-"sweet_meddie_21": [
+    "sweet_meddie_21": [
         [
             "leader",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "[You're walking through the camp, peeking into the dens to make sure nothing is amiss. You notice, however, that t_c doesn't seem to be in their nest.]",
@@ -1712,11 +1712,11 @@
             "[At least everything is alright... You leave them be, not wanting to disturb them.]"
         ]
     ],
-"sweet_meddie_22": [
+    "sweet_meddie_22": [
         [
             "leader",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "y_c? I need to speak with you for a moment, it's very important.",
@@ -1724,10 +1724,10 @@
             "Is there anything you can do to help?"
         ]
     ],
-"sweet_meddie_23": [
+    "sweet_meddie_23": [
         [
             "elder",
-             "sweet"
+            "sweet"
         ],
         [
             "y_c? I've got some herbs for you. I also brought you some prey and fresh moss, just to your liking!",
@@ -1736,10 +1736,10 @@
             "Alright, I'll listen to one, but only if you take your herbs first."
         ]
     ],
-"sweet_meddie_24": [
+    "sweet_meddie_24": [
         [
             "elder",
-             "sweet"
+            "sweet"
         ],
         [
             "[You wake up with a start, a nightmare about your past making you panic pretty badly. You run out of the elder's den, sobbing loud enough that you wake some cats up.]",
@@ -1750,11 +1750,11 @@
             "Cry as much as you need... it's okay."
         ]
     ],
-"sweet_meddie_25": [
+    "sweet_meddie_25": [
         [
             "elder",
             "random_cat",
-             "sweet"
+            "sweet"
         ],
         [
             "[You glance up as you hear pawsteps entering your den, only to be surprised to see y_c carrying r_k in here.]",
@@ -1763,5 +1763,4 @@
             "I'm not busy right now, and the little guy really wants me near, so..."
         ]
     ]
-
 }

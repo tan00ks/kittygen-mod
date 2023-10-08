@@ -241,7 +241,7 @@ class NameKitsScreen(Screens):
             if game.settings['dark mode']:
                 self.selected_details["clan"] = pygame_gui.elements.UITextBox("-kit",
                                                               scale(pygame.Rect((320, 325), (200, 50))),
-                                                              object_id="#text_box_30_horizcenter_light",
+                                                              object_id="#text_box_30_horizcenter",
                                                               manager=MANAGER)
         
             else:

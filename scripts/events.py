@@ -301,7 +301,7 @@ class Events:
         self.check_achievements()
         self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]
         if game.clan.leader:
-                self.checks[3] = game.clan.leader.ID
+            self.checks[3] = game.clan.leader.ID
             
         # Resort
         if game.sort_type != "id":
@@ -846,8 +846,9 @@ class Events:
                 print("You rejected a cat but an event could not be shown")
     
     def check_leader(self, checks):
-        if checks[3] != game.clan.leader.ID and game.clan.your_cat.status == 'leader':
-            DeputyScreen('events screen')
+        if game.clan.leader:
+            if checks[3] != game.clan.leader.ID and game.clan.your_cat.status == 'leader':
+                DeputyScreen('events screen')
             
     def check_gain_kits(self, checks):
         if len(game.clan.your_cat.inheritance.get_blood_kits()) > checks[2]:
@@ -1364,7 +1365,7 @@ class Events:
         # Proform a ceremony if needed
         for x in [lost_cat] + [Cat.fetch_cat(i) for i in additional_cats]:             
            
-            if x.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice" "kitten", "newborn"]: 
+            if x.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice", "kitten", "newborn"]:
                 if x.moons >= 15:
                     if x.status == "medicine cat apprentice":
                         self.ceremony(x, "medicine cat")
