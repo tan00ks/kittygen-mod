@@ -2155,7 +2155,8 @@
   "brooding_1": [
     [
       "Any",
-      "brooding"
+      "brooding",
+      "neutral"
     ],
     [
       "Hmph... Do you need something?",
