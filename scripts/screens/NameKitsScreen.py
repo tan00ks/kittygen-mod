@@ -241,22 +241,14 @@ class NameKitsScreen(Screens):
             if game.settings['dark mode']:
                 self.selected_details["clan"] = pygame_gui.elements.UITextBox("-kit",
                                                               scale(pygame.Rect((320, 325), (200, 50))),
-                                                              object_id="#default_dark",
+                                                              object_id="#text_box_30_horizcenter_light",
                                                               manager=MANAGER)
         
             else:
                 self.selected_details["clan"] = pygame_gui.elements.UITextBox("-kit",
                                                               scale(pygame.Rect((320, 325), (200, 50))),
-                                                              object_id="#default_light",
+                                                              object_id="#text_box_30_horizcenter",
                                                               manager=MANAGER)
-            # name = str(self.selected_cat.name)  # get name
-            # if 11 <= len(name):  # check name length
-            #     short_name = str(name)[0:9]
-            #     name = short_name + '...'
-            # self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
-            #     scale(pygame.Rect((690, 230), (220, 60))),
-            #     name,
-            #     object_id="#text_box_34_horizcenter", manager=MANAGER)
 
     def update_cat_list(self):
         """Updates the cat sprite buttons. """

@@ -2425,7 +2425,7 @@ class Events:
             return True
 
         # disaster death chance
-        if game.settings.get('disasters'):
+        if game.clan.clan_settings['disasters']:
             if not random.getrandbits(9):  # 1/512
                 self.handle_mass_extinctions(cat)
                 return True

@@ -64,7 +64,7 @@ class Patrol():
             str(game.clan.current_season).casefold(),
             str(game.clan.biome).casefold(),
             patrol_type,
-            game.settings.get('disasters')
+            game.clan.clan_settings['disasters']
         )
         
         print(f'Total Number of Possible Patrols | normal: {len(final_patrols)}, romantic: {len(final_romance_patrols)} ')

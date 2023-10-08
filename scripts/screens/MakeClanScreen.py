@@ -775,13 +775,13 @@ class MakeClanScreen(Screens):
         if game.settings['dark mode']:
             self.elements["clan"] = pygame_gui.elements.UITextBox("-kit",
                                                               scale(pygame.Rect((820, 1005), (200, 50))),
-                                                              object_id="#default_dark",
+                                                              object_id="#text_box_30_horizcenter_light",
                                                               manager=MANAGER)
         
         else:
             self.elements["clan"] = pygame_gui.elements.UITextBox("-kit",
                                                               scale(pygame.Rect((820, 1005), (200, 50))),
-                                                              object_id="#default_light",
+                                                              object_id="#text_box_30_horizcenter",
                                                               manager=MANAGER)
         
 
