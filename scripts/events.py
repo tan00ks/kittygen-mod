@@ -295,7 +295,6 @@ class Events:
         
         elif game.clan.your_cat.status == 'exiled':
             self.generate_exile_event()
-            
         game.clan.murdered = False
         
         self.check_achievements()

@@ -1,7 +1,6 @@
 import random
 from enum import Enum, Flag, auto
 from typing import Union
-from scripts.game_structure.game_essentials import game
 
 class SkillPath(Enum):
     TEACHER = (
@@ -387,9 +386,7 @@ class Skill():
         """Generates a random skill. If wanted, you can specify a tier for the points
         value to be randomized within. """
         
-        if isinstance(points, int):
-            points = points
-        elif isinstance(point_tier, int) and 1 <= point_tier <= 3:
+        if isinstance(point_tier, int) and 1 <= point_tier <= 3:
             points = random.randint(Skill.tier_ranges[point_tier-1][0], Skill.tier_ranges[point_tier-1][1])
         else:
             points = random.randint(Skill.point_range[0], Skill.point_range[1])
@@ -443,7 +440,7 @@ class Skill():
         to set points to tier 1, 2, or 3, and never 0. Tier 0 is retricted to interest_only
         skills"""
         
-        # Make sure it in the right range. If not, return. 
+        # Make sure it in the right range. If not, return.
         if not (1 <= tier <= 3):
             return
         

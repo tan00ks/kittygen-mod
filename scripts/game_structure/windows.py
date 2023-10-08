@@ -1504,7 +1504,8 @@ class DeputyScreen(UIWindow):
                 self.kill()
             elif event.ui_element == self.mediator_button:
                 game.last_screen_forupdate = None
-                game.clan.deputy.status_change('warrior')
+                if game.clan.deputy:
+                    game.clan.deputy.status_change('warrior')
                 game.switches['window_open'] = False
                 game.switches['cur_screen'] = "deputy screen"
                 self.begin_anew_button.kill()

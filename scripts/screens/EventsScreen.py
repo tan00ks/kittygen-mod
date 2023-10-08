@@ -68,18 +68,21 @@ class EventsScreen(Screens):
         if game.switches['window_open']:
             pass
         elif event.type == pygame_gui.UI_BUTTON_ON_HOVERED:
-            if event.ui_element == self.ceremonies_events_button and self.ceremony_alert:
-                self.ceremony_alert.kill()
-            elif event.ui_element == self.birth_death_events_button and self.birth_death_alert:
-                self.birth_death_alert.kill()
-            elif event.ui_element == self.relationship_events_button and self.relation_alert:
-                self.relation_alert.kill()
-            elif event.ui_element == self.health_events_button and self.health_alert:
-                self.health_alert.kill()
-            elif event.ui_element == self.other_clans_events_button and self.other_clans_alert:
-                self.other_clans_alert.kill()
-            elif event.ui_element == self.misc_events_button and self.misc_alert:
-                self.misc_alert.kill()
+            try:
+                if event.ui_element == self.ceremonies_events_button and self.ceremony_alert:
+                    self.ceremony_alert.kill()
+                elif event.ui_element == self.birth_death_events_button and self.birth_death_alert:
+                    self.birth_death_alert.kill()
+                elif event.ui_element == self.relationship_events_button and self.relation_alert:
+                    self.relation_alert.kill()
+                elif event.ui_element == self.health_events_button and self.health_alert:
+                    self.health_alert.kill()
+                elif event.ui_element == self.other_clans_events_button and self.other_clans_alert:
+                    self.other_clans_alert.kill()
+                elif event.ui_element == self.misc_events_button and self.misc_alert:
+                    self.misc_alert.kill()
+            except:
+                print("too much button pressing!")
         if game.switches['window_open']:
             pass
         elif event.type == pygame_gui.UI_BUTTON_START_PRESS:
