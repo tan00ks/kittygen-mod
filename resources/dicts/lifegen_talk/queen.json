@@ -52,6 +52,24 @@
             "Where are your manners?"
         ]
     ],
+    "queen_3_2_2": [
+        [
+            "insult",
+            "Any"
+        ],
+        [
+            "Haven't I taught you better?"
+        ]
+    ],
+    "queen_3_2_3": [
+        [
+            "insult",
+            "Any"
+        ],
+        [
+            "That's it, no more moss-ball for today!"
+        ]
+    ],
     "assertive_mentor11": [
         [
             "queen's apprentice",
