@@ -52,6 +52,24 @@
             "Where are your manners?"
         ]
     ],
+    "queen_3_2_2": [
+        [
+            "insult",
+            "Any"
+        ],
+        [
+            "Haven't I taught you better?"
+        ]
+    ],
+    "queen_3_2_3": [
+        [
+            "insult",
+            "Any"
+        ],
+        [
+            "That's it, no more moss-ball for today!"
+        ]
+    ],
     "assertive_mentor11": [
         [
             "queen's apprentice",
@@ -906,8 +924,7 @@
             "medicine cat apprentice",
             "mediator apprentice",
             "assertive",
-            "platonic_like",
-            "neutral"
+            "platonic_like"
         ],
         [
             "StarClan, y_c, look at you ... could you really have been one of my kits here in the nursery just a few moons ago?",

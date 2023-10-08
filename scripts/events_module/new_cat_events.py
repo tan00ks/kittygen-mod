@@ -10,7 +10,7 @@ from scripts.game_structure.game_essentials import game
 from scripts.event_class import Single_Event
 from scripts.cat.names import Name
 from scripts.cat.history import History
-from scripts.cat.names import names, Name
+
 
 # ---------------------------------------------------------------------------- #
 #                               New Cat Event Class                              #

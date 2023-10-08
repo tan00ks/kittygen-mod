@@ -260,5 +260,52 @@
                 "weight": 20
             }
         ]
+    },
+    {
+        "patrol_id": "gen_your_catdf_01",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "border"
+        ],
+        "patrol_art": "gen_hunt_mouse",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "Soon after you fall asleep, you wake up in the Dark Forest. r_c bounds out of the gloom, asking if you would like to train with them.",
+        "decline_text": "You politely decline and wander off to train on your own.",
+        "chance_of_success": 60,
+        "success_outcomes": [
+            {
+                "text": "You and r_c make good progress on some advanced battle moves.",
+                "exp": 10,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "The training session doesn't go as planned, as a Dark Forest warrior interrupts and demands that you spar with your claws unsheathed. You and r_c hesitantly agree and both of you wake up with several scratches.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["r_c", "s_c"],
+                        "injuries": ["claw-wound"],
+                        "scars": ["SNOUT", "ONE"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "This cat is scarred from training in the Dark Forest"
+                }
+            }
+        ]
     }
 ]

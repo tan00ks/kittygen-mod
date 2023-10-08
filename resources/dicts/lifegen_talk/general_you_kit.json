@@ -417,5 +417,250 @@
         [
             "[t_c doesn't seem like they want to talk right now.]"
         ]
+    ],
+    "general_1": [
+        [
+            "any",
+            "insult",
+            "platonic_like"
+        ],
+        [
+            "Hey! What gives?"
+        ]
+    ],
+    "general_2": [
+        [
+            "any",
+            "insult",
+            "dislike"
+        ],
+        [
+            "As if I couldn't like you any less ..."
+        ]
+    ],
+    "brooding_insult_1": [
+        [
+            "any",
+            "insult",
+            "brooding"
+        ],
+        [
+            "What did you just say to me ... ?"
+        ]
+    ],
+    "brooding_insult_02": [
+        [
+            "any",
+            "insult",
+            "brooding"
+        ],
+        [
+            "Um. Okay."
+        ]
+    ],
+    "brooding_insult_2": [
+        [
+            "any",
+            "insult",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "Haha. Good one."
+        ]
+    ],
+    "brooding_insult_3": [
+        [
+            "any",
+            "insult",
+            "brooding",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "[t_c curls their lip at you and stalks away.]"
+        ]
+    ],
+    "neurotic_insult_1": [
+        [
+            "any",
+            "insult",
+            "neurotic"
+        ],
+        [
+            "Oh yeah? Well you're a - a ... uhm ... uh ...",
+            "Ugh! I can't think of a comeback!"
+        ]
+    ],
+    "neurotic_insult_2": [
+        [
+            "any",
+            "insult",
+            "neurotic",
+            "platonic_like"
+        ],
+        [
+            "W-What? You're just joking, right?",
+            "Is that really how you think of me?"
+        ]
+    ],
+    "cool_insult_1": [
+        [
+            "any",
+            "cool"
+        ],
+        [
+            "Tch ..."
+        ]
+    ],
+    "cool_insult_2": [
+        [
+            "any",
+            "cool",
+            "dislike"
+        ],
+        [
+            "Aw, look! It thinks it's clever."
+        ]
+    ],
+    "sweet_insult_1": [
+        [
+            "any",
+            "insult",
+            "sweet"
+        ],
+        [
+            "That's not very nice of you to say..."
+        ]
+    ],
+    "sweet_insult_3": [
+        [
+            "any",
+            "insult",
+            "sweet",
+            "neurotic",
+            "platonic_like",
+            "romantic_like"
+        ],
+        [
+            "You... you don't really mean that... do you, y_c...?"
+        ]
+    ],
+    "silly_insult_4": [
+        [
+            "any",
+            "insult",
+            "silly",
+            "dislike"
+        ],
+        [
+            "Oh, like I'd take anything you say seriously."
+        ]
+    ],
+    "silly_insult_7": [
+        [
+            "any",
+            "insult",
+            "silly",
+            "platonic_like",
+            "romantic_like"
+        ],
+        [
+            "Haha...ha... I'll... um, keep that in mind next time we talk."
+        ]
+    ],
+    "silly_insult_8": [
+        [
+            "any",
+            "insult",
+            "silly",
+            "platonic_like",
+            "comfort"
+        ],
+        [
+            "Is someone hungry? Because you're really not acting like yourself. Have a snack, y_c."
+        ]
+    ],
+    "unlawful_insult_1": [
+        [
+            "any",
+            "insult",
+            "unlawful"
+        ],
+        [
+            "...you should take that back. Before someone gets hurt."
+        ]
+    ],
+    "unlawful_insult_2": [
+        [
+            "any",
+            "insult",
+            "unlawful",
+            "random_cat"
+        ],
+        [
+            "...You're lucky that r_c is here. Otherwise, I don't think you'd want to know what I would do to you."
+        ]
+    ],
+    "unlawful_insult_3": [
+        [
+            "any",
+            "insult",
+            "unlawful",
+            "dislike"
+        ],
+        [
+            "...you're so damn lucky I haven't shredded you to pieces yet."
+        ]
+    ],
+    "unlawful_insult_4": [
+        [
+            "any",
+            "insult",
+            "unlawful"
+        ],
+        [
+            "Watch yourself, r_c."
+        ]
+    ],
+    "unabashed_insult_1": [
+        [
+            "any",
+            "insult",
+            "unabashed"
+        ],
+        [
+            "Well, you suck."
+        ]
+    ],
+    "unabashed_insult_2": [
+        [
+            "insult",
+            "unabashed",
+            "you_cool"
+        ],
+        [
+            "I may not be cool, but you're mean. And personally, I think that's worse."
+        ]
+    ],
+    "unabashed_insult_3": [
+        [
+            "any",
+            "insult",
+            "unabashed"
+        ],
+        [
+            "Okay, grumpy."
+        ]
+    ],
+    "unabashed_insult_4": [
+        [
+            "any",
+            "insult",
+            "unabashed"
+        ],
+        [
+            "Okay. So what?"
+        ]
     ]
 }

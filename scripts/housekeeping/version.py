@@ -7,8 +7,9 @@ from configparser import ConfigParser
 from platformdirs import user_data_dir
 logger = logging.getLogger(__name__)
 
-VERSION_NAME = "v0.6.1"
-SAVE_VERSION_NUMBER = 1  # This is saved in the clan save-file, and is used for save-file converstion. 
+VERSION_NAME = "0.9.0"
+# This is saved in the Clan save-file, and is used for save-file converstion.
+SAVE_VERSION_NUMBER = 2
 
 
 def get_version_info():

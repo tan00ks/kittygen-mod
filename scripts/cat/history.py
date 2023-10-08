@@ -127,9 +127,8 @@ class History:
         :param cat: cat object
         :return:
         """
-        if cat:
-            if not cat.history:
-                cat.load_history()
+        if not cat.history:
+            cat.load_history()
 
     @staticmethod
     def make_dict(cat):
@@ -250,6 +249,7 @@ class History:
                 SkillPath.CAMP: [ "caring for camp" ],
                 SkillPath.HEALER: [ "healing" ],
                 SkillPath.STAR: [ "connecting to starclan" ],
+                SkillPath.DARK: [ "connecting to the dark forest"],
                 SkillPath.OMEN: [ "finding omens" ],
                 SkillPath.DREAM: [ "understanding dreams" ],
                 SkillPath.CLAIRVOYANT: [ "predicting the future" ],
@@ -655,10 +655,8 @@ class History:
         """
 
         History.check_load(cat)
-        if cat:
-            if cat.history:
-                return cat.history.murder
-        return None
+
+        return cat.history.murder
 
     @staticmethod
     def reveal_murder(cat, other_cat, Cat, victim, murder_index):
@@ -678,12 +676,12 @@ class History:
                 murder_history = murder_history["is_murderer"][murder_index]
                 murder_history["revealed"] = True
                 murder_history["revealed_by"] = other_cat.ID
-                murder_history["revelation_text"] = "The truth of {PRONOUN/m_c/subject} crime against [victim] was discovered by [discoverer]."
+                murder_history["revelation_text"] = "The truth of {PRONOUN/m_c/poss} crime against [victim] was discovered by [discoverer]."
 
                 victim_history = victim_history["is_victim"][0]
                 victim_history["revealed"] = True
                 victim_history["revealed_by"] = other_cat.ID
-                victim_history["revelation_text"] = "The truth of {PRONOUN/m_c/subject} murder was discovered by [discoverer]."
+                victim_history["revelation_text"] = "The truth of {PRONOUN/m_c/poss} murder was discovered by [discoverer]."
 
                 murder_history["revelation_text"] = murder_history["revelation_text"].replace('[victim]', str(victim.name))
                 murder_history["revelation_text"] = murder_history["revelation_text"].replace('[discoverer]', str(other_cat.name))

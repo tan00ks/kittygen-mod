@@ -178,7 +178,6 @@
         [
             "assertive",
             "dislike",
-            "neutral",
             "cool",
             "upstanding",
             "brooding",
@@ -449,13 +448,8 @@
             "medicine cat",
             "medicine cat apprentice",
             "assertive",
-            "platonic_like",
-            "romantic_like",
-            "from_mate",
-            "sibling",
-            "adopted_sibling",
-            "trust",
-            "comfort"
+            "platonic_love",
+            "romantic_like"
         ],
         [
             "Oh my StarClan, I just remembered the craziest story from when I was a kit!!!",
@@ -1168,7 +1162,7 @@
         ],
         [
             "... Oh! y_c? How long have you been there? I'm sorry, I wasn't ignoring you.",
-            "I was looking up at the night sky, Silverpelt is in full display to us, StarClan must be in a pleasant mood today.",
+            "I was looking up at the night sky. Silverpelt is in full display to us; StarClan must be in a pleasant mood today.",
             "... Yeah, I come out of the den to stare at the sky a lot. I wonder if StarClan knows I'm looking up at them, do they appreciate it? That they're always on my mind?",
             "If I show them enough appreciation, will they send me more messages, so I can continue to look after everyone properly? So I can remove the burden off my mind of some... disaster happening that I can't prevent?",
             "I think I'm worrying about that too much."

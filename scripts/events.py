@@ -61,11 +61,17 @@ class Events:
         TODO: DOCS
         """
         if self.checks == [-1,-1,-1] and game.clan.your_cat and game.clan.your_cat.inheritance:
-            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), game.clan.leader.ID]
+            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]
+            if game.clan.leader:
+                self.checks[3] = game.clan.leader.ID
         elif game.clan.your_cat.inheritance:
-            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), game.clan.leader.ID]
+            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]
+            if game.clan.leader:
+                self.checks[3] = game.clan.leader.ID
         else:
-            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), 0, game.clan.leader.ID]
+            self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), 0, None]
+            if game.clan.leader:
+                self.checks[3] = game.clan.leader.ID
         game.cur_events_list = []
         game.herb_events_list = []
         game.mediated = []
@@ -293,8 +299,9 @@ class Events:
         game.clan.murdered = False
         
         self.check_achievements()
-        self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), game.clan.leader.ID]
-
+        self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]
+        if game.clan.leader:
+                self.checks[3] = game.clan.leader.ID
             
         # Resort
         if game.sort_type != "id":
@@ -351,7 +358,11 @@ class Events:
         if not game.clan.your_cat.inventory:
             game.clan.your_cat.inventory = []
         acc = random.choice(acc_list)
+        counter = 0
         while acc in game.clan.your_cat.inventory:
+            counter+=1
+            if counter == 30:
+                break
             acc = random.choice(acc_list)
         game.clan.your_cat.inventory.append(acc)
         string = f"You found a new accessory, {self.accessory_display_name(acc)}! You choose to store it in a safe place for now."
@@ -479,8 +490,12 @@ class Events:
                 
     def pick_valid_parent(self):
         parent = random.choice(Cat.all_cats_list).ID
+        counter = 0
         while parent == game.clan.your_cat.ID or Cat.all_cats[parent].moons < 14 or Cat.all_cats[parent].moons > 100 or Cat.all_cats[parent].dead:
             parent = random.choice(Cat.all_cats_list).ID
+            counter+=1
+            if counter == 30:
+                break
         return parent
         
 
@@ -877,7 +892,7 @@ class Events:
                 ceremony_txt = random.choice(self.c_txt['mate_events'])
                 ceremony_txt = ceremony_txt.replace("mate1", str(mate1.name))
                 game.cur_events_list.insert(1, Single_Event(ceremony_txt))
-            if game.settings['affair']:
+            if game.clan.clan_settings['affair']:
                 if random.randint(1,50) == 1:
                     mate1 = Cat.all_cats.get(random.choice(game.clan.your_cat.mate))
                     if mate1.dead or mate1.outside:
@@ -886,7 +901,7 @@ class Events:
                     ceremony_txt = ceremony_txt.replace("mate1", str(mate1.name))
                     game.cur_events_list.insert(1, Single_Event(ceremony_txt))
         if random.randint(1,30) == 1:
-            if (len(game.clan.your_cat.mate) > 0 and game.settings['affair']) or (len(game.clan.your_cat.mate) == 0):
+            if (len(game.clan.your_cat.mate) > 0 and game.clan.clan_settings['affair']) or (len(game.clan.your_cat.mate) == 0):
                 if len(game.clan.your_cat.mate) > 0:
                     if random.randint(1,50) != 1:
                         return
@@ -984,7 +999,7 @@ class Events:
                 game.cur_events_list.append(
                     Single_Event(text, "other_clans", cat.ID))
 
-        if game.settings['become_mediator']:
+        if game.clan.clan_settings['become_mediator']:
             # Note: These chances are large since it triggers every moon.
             # Checking every moon has the effect giving older cats more chances to become a mediator
             _ = game.config["roles"]["become_mediator_chances"]
@@ -1377,7 +1392,7 @@ class Events:
         """
         TODO: DOCS
         """
-        if game.settings["fading"] and not cat.prevent_fading \
+        if game.clan.clan_settings["fading"] and not cat.prevent_fading \
                 and cat.ID != game.clan.instructor.ID and not cat.faded:
 
             age_to_fade = game.config["fading"]["age_to_fade"]
@@ -1848,7 +1863,7 @@ class Events:
                 "medicine cat apprentice", "queen's apprentice"
             ]:
 
-                if game.settings["12_moon_graduation"]:
+                if game.clan.clan_settings["12_moon_graduation"]:
                     _ready = cat.moons >= 12
                 else:
                     _ready = (cat.experience_level not in ["untrained", "trainee"] and
@@ -1856,7 +1871,7 @@ class Events:
                              or cat.moons >= game.config["graduation"]["max_apprentice_age"][cat.status]
 
                 if _ready:
-                    if game.settings["12_moon_graduation"]:
+                    if game.clan.clan_settings["12_moon_graduation"]:
                         preparedness = "prepared"
                     else:
                         if cat.moons == game.config["graduation"]["min_graduating_age"]:
