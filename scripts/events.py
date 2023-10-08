@@ -474,7 +474,7 @@ class Events:
         if len(clan_cats) == 1 and not you.dead:
             achievements.add('23')
         if len(clan_cats) >= 100:
-            achievements.add('23')
+            achievements.add('24')
             
         if you.experience >= 100:
             achievements.add('26')
@@ -2818,7 +2818,7 @@ class Events:
         """Checks if a new deputy needs to be appointed, and appointed them if needed. """
         if (not game.clan.deputy or game.clan.deputy.dead
                 or game.clan.deputy.outside or game.clan.deputy.status == "elder"):
-            if game.settings.get('deputy'):
+            if game.clan.clan_settings['deputy']:
 
                 # This determines all the cats who are eligible to be deputy.
                 possible_deputies = list(
