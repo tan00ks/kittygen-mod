@@ -567,6 +567,10 @@ class TalkScreen(Screens):
             
             for c in Cat.all_cats.values():
                 if not c.dead and not c.outside and c.ID != you.ID and c.ID != cat.ID:
+                    if len(c.illnesses) > 0:
+                        sick_cats.append(c)
+                    if len(c.injuries) > 0:
+                        injured_cats.append(c)
                     if c.status == "medicine cat":
                         living_meds.append(c)
                     elif c.status == "warrior":
@@ -589,7 +593,9 @@ class TalkScreen(Screens):
                 "r_m": living_meds,
                 "r_d": living_mediators,
                 "r_q": living_queens,
-                "r_e": living_elders
+                "r_e": living_elders,
+                "r_s": sick_cats,
+                "r_i": injured_cats
             }
             
             for abbrev, replace_list in replace_mappings.items():
