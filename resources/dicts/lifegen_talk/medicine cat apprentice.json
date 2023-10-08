@@ -322,7 +322,6 @@
             "[You and t_c dissolve into a fit of giggles.]"
         ]
     ],
-
     "assertivewarrior_deputy2": [
         [
             "deputy",
@@ -904,6 +903,316 @@
             "Fox-dung! How's the weather? I mean that.",
             "Uh, hold on. I think I just heard my mentor calling me!",
             "[You feel the heat coming from t_c's pelt as they embarrassedly pad away to hide in the medicine den.]"
+        ]
+    ],
+    "sweet_medapp_1": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "Oh, you're so tiny!! I've never gotten to see a newborn before.. And- oh- you're laying on my paw now.",
+            "[They blink, looking around for assistance, then chuckle awkwardly as they realize no one is going to help them.]",
+            "I guess I'm stuck here now."
+        ]
+    ],
+    "sweet_medapp_2": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "Oh, y_c- don't eat that- that's a nasty herb. That'll make you feel super sick!",
+            "Why do we have it then? Uhhh... I dunno- I should ask... But how about instead, you have this? It's honey!",
+            "Honey can be really bad for you in big doses, so just have a little lick, alright? Not too much!"
+        ]
+    ],
+    "sweet_medapp_3": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "Oh hey there, little buddy! Would you like to learn about this herb?",
+            "It's called poppy seed. It helps when you're feeling super bad, and need a little bit of rest. Don't take it without supervision, okay?",
+            "And this one is garlic! It gets rid of nasty stuff when you're bitten by things... but it smells super bad!",
+            "Oh, and this is- ... oh, you fell asleep. Hehe, let's get you back to the Nursery, then."
+        ]
+    ],
+    "sweet_medapp_4": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! Why are you crying? What's upsetting you, little buddy?",
+            "Do I have an herb for feeling sad? Well, let's see... Ah, I think this'll do just fine! Blackberries and raspberries are sure to ease the sadness and lift your spirit!",
+            "Though, it might make your fur a bit colorful, hehe."
+        ]
+    ],
+    "sweet_medapp_5": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "sweet"
+        ],
+        [
+            "Hey y_c! Would you like to see something cool? I found this really neat looking herb.",
+            "It's white lavender!! I've never seen lavender be any other color but purple... Ah, don't eat it! I've been told it's toxic... but it's super cool!"
+        ]
+    ],
+    "sweet_medapp_6": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "sweet"
+        ],
+        [
+            "Now how did you end up here, hmm?",
+            "Oh, I see, you snuck in here and had too much honey? Well, try not to do that, it could've been something toxic!",
+            "Here you go, hehe. That should help with your bellyache... now get some rest, you're gonna need to sleep some of it off."
+        ]
+    ],
+    "sweet_medapp_7": [
+        [
+            "apprentice",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Hm, y_c? You and r_a need someone to tally up points for a competition?",
+            "Sure thing! I'll bring some snacks too. Oh, and some herbs in case anyone gets hurt, of course!"
+        ]
+    ],
+    "sweet_medapp_8": [
+        [
+            "queen's apprentice",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! Thanks for seeing me, I wanted to know how r_k was doing?",
+            "Ah, I see. A small cold... not too unusual for a little one. Here, have these, they should help out some!"
+        ]
+    ],
+    "sweet_medapp_9": [
+        [
+            "medicine cat apprentice",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! Have you seen the yarrow anywhere?! It's important!",
+            "Oh thank StarClan you threw it out...!",
+            "Some of the kits got into the Medicine Den, and all of our yarrow was missing."
+        ]
+    ],
+    "sweet_medapp_10": [
+        [
+            "mediator apprentice",
+            "sweet"
+        ],
+        [
+            "[t_c seems really upset, sitting there as two cats argue in their den. Looks like a job for you!]",
+            "Oh thank StarClan, I need your help, y_c! These two won't stop arguing, and they aren't listening to a word I'm saying!",
+            "One of them has a raspy throat... I'm really worried... They might hurt themselves if they keep shouting like that!",
+            "You'll help? Thank you so much! Let me go get some honey for that sore throat.. It can't be feeling good right now."
+        ]
+    ],
+    "sweet_medapp_11": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! I need your help with something, if you aren't too busy?",
+            "tm_n is busy right now, but I have to go out and collect herbs.",
+            "I'd rather not go alone... can you come with me? I understand if not, but the others are super busy right now."
+        ]
+    ],
+    "sweet_medapp_12": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "sweet"
+        ],
+        [
+            "Ah- y_c!! Are you okay? That looked like a nasty fall...",
+            "Here, let me take a look, okay? I'll be as fast as I can!",
+            "...",
+            "Mmm... Alright, you look okay! Just seems to be bruising a bit. Please be more careful, alright? I- I know I'm just an apprentice, but it's important!"
+        ]
+    ],
+    "sweet_medapp_13": [
+        [
+            "warrior",
+            "sweet"
+        ],
+        [
+            "Hey y_c, I have a question if that's alright?",
+            "What's it like being a warrior? I can't imagine wanting to fight anyone, it's why I chose being a medicine cat! Even back when I was a kit, I heard some kits saying I'd be too soft to be a warrior..",
+            "...",
+            "I sometimes wonder if they were wrong... Don't get me wrong, I'd never change the path I chose but... I don't know."
+        ]
+    ],
+    "sweet_medapp_14": [
+        [
+            "medicine cat",
+            "sweet"
+        ],
+        [
+            "Oh y_c, I have a question if that's alright?",
+            "I've always kinda wondered... Why'd you choose to become a Medicine Cat? I know why I chose to, I don't like the thought of hurting anyone and have always had a love for herbs, but... what about you?"
+        ]
+    ],
+    "sweet_medapp_15": [
+        [
+            "mediator",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! Just the cat who I was looking for!",
+            "r_k had a fight with another one of the kits... they um- they tore up the Medicine Den... think you could talk to them about it?",
+            "Actually- wait-! I.. have a small question.",
+            "What made you choose the path of a mediator? I know a lot of cats would prefer to serve their whole life hunting and fighting, or healing with herbs like me... But you choose differently... why?"
+        ]
+    ],
+    "sweet_medapp_16": [
+        [
+            "queen",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You lay there, r_k curled up by your side, watching as the day goes by. They tired themselves out playing all sorts of games, and you felt exhausted having to keep up with them, but it was worth it for such a fun day.]",
+            "y_c..?",
+            "[You closed your eyes for a second, and now t_c is here, staring at you with round eyes.]",
+            "I brought the herbs like you asked me to. Hopefully this should suffice! Gotta make sure those cuties grow up big and strong.",
+            "[t_c's eyes flicker over to the kitten by your side, they have a warm smile on their expression as they look back at you.]",
+            "Is this why you chose to become a queen? This moment of peace...? It's... really nice. It almost makes me want to go up to l_n and ask to swap roles, hehe.",
+            "Ah... I could never take care of all of the clan's kits like this... especially not all day every day... but it does seem really nice. Maybe one day I'll have my own kits to take care of.",
+            "I /do/ love caring for others after all, hehe. I get teased about it all the time! Especially by r_a!"
+        ]
+    ],
+    "sweet_medapp_17": [
+        [
+            "deputy",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Oh, are you sending out patrols, y_c?",
+            "I need to go herb gathering, but tm_n is really busy. Could you send r_c with me, please?",
+            "Thank you so much! I'll see if I can find something nice while I'm out as a ‘thank you' gift!",
+            "[Before you can say that you don't really need to be thanked that much for that, they bound off. At least they're happy?"
+        ]
+    ],
+    "sweet_medapp_18": [
+        [
+            "deputy",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Hey, y_c? I really need to speak with l_n, are they busy right now?",
+            "Mm.. Okay! Thank you! I'll let you know what we're speaking about once I get back, but it's pretty urgent!"
+        ]
+    ],
+    "sweet_medapp_19": [
+        [
+            "deputy",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! There you are! You've been working so much today, I've barely gotten a chance to catch up!",
+            "I had something important to tell you- oh wait, I think tm_n is calling me. You stay there a second, I'll be right back!",
+            "[It appears t_c just tricked you into taking a break, knowing you wouldn't take one willingly.]"
+        ]
+    ],
+    "sweet_medapp_20": [
+        [
+            "leader",
+            "sweet"
+        ],
+        [
+            "Um... y_c? Can I come in?",
+            "[You see the fuzzy face of t_c in the doorway. They seem pretty startled about something, their fur standing on end and their ears pinned back.]",
+            "[You invite them inside, it's not normal to see the typically sweet cat so bothered by something.]",
+            "[They meet your eyes, letting out a deep breath as they say...]",
+            "I think I just got my first prophecy."
+        ]
+    ],
+    "sweet_medapp_21": [
+        [
+            "leader",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! Quick, I need your help!",
+            "[You rush over to the medicine cat apprentice, startled to see them so serious.]",
+            "r_w is starting to get really sick! Everyone else is out of camp and I can't carry them by myself. Can you please help me?"
+        ]
+    ],
+    "sweet_medapp_22": [
+        [
+            "leader",
+            "sweet"
+        ],
+        [
+            "[Your gaze is fixated on the sky, watching the stars shimmer in the night sky. You're focused, the day having been a stressful one, when a voice breaks the silence.]",
+            "y_c... Are you alright?",
+            "[You feel like you should be the one asking t_c that, they are the apprentice here, after all. When did they get so mature?]",
+            "[They climb up next to you, stumbling a bit and reminding you of their apprentice status, but eventually they make it up next to you.]",
+            "Today was pretty rough... I hope you're taking care of yourself! After all, we still have tomorrow to look forward to. I'm betting it'll go way better than today did.",
+            "I don't need a prophecy or a sign to know things will get better."
+        ]
+    ],
+    "sweet_medapp_23": [
+        [
+            "elder",
+            "sweet"
+        ],
+        [
+            "[t_c enters the den, a bundle of herbs tightly clamped in their jaws. They brighten as they wander over to you, placing the mixture of herbs on the ground in front of you.]",
+            "Good evening, y_c! I've brought you your herbs for today. I also brought you a snack too, in case you were getting hungry!"
+        ]
+    ],
+    "sweet_medapp_24": [
+        [
+            "elder",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[y_c tends to r_c as you sit in the Medicine Den, humming as they work. They've really grown into their role, even in the short time. It was pretty impressive, honestly.]",
+            "Aaaaalright! That should be all! Now y_c, what seems to be the problem today?",
+            "[You explain what your issues are, and then question where tm_n is.]",
+            "We had a bit of a wasp problem, and tm_n is checking the warriors who dealt with it. I'm on regular tasks until then! Now then, let me see what I have for that..."
+        ]
+    ],
+    "sweet_medapp_25": [
+        [
+            "elder",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You wake up from a nightmare about your past, your heart beating rapidly. You haven't been able to sleep well in moons, and finally admit to yourself that you need help.]",
+            "[You go to the Medicine Cat's Den, finding that only t_c seems to be awake.]",
+            "Huh, y_c?? What are you doing up at this hour? ... Oohhh... I understand.",
+            "[They set up a nest in the den just for you, grabbing some herbs to help you sleep.]",
+            "Don't take too many of them, okay? I'll talk to tm_n in the morning about what we should do. In the meantime, would you mind telling me a story? Just to get your mind off things."
         ]
     ]
 }

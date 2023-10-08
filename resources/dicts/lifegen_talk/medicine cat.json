@@ -1446,5 +1446,322 @@
             "So, the herb I applied to r_c's pelt is burdock root, right? It's commonly applied to rat bites and burns because of its soothing and numbing properties. Well, we got curious about something.",
             "What would happen if you put the burdock root on the rat instead? I mean, what's the rat going to do, bite you? It's already been treated!"
         ]
+    ],
+    "sweet_meddie_1": [
+        [
+            "newborn",
+             "sweet"
+        ],
+        [
+            "Welcome to the world, y_c! I can already tell you're going to do so many great things.",
+            "But first, let's start with taking your medicine, alright?"
+        ]
+    ],
+"sweet_meddie_2": [
+        [
+            "kitten",
+             "sweet"
+        ],
+        [
+            "Well, hello there, y_c! How's my favorite patient doing today?.",
+            "You've got a sore throat? Well, we can't have that, now can we! Let's see, what do I have that can help...",
+            "Ah, perfect! Here you go, a little bit of honey. Make sure to only have a little bit!"
+        ]
+    ],
+"sweet_meddie_3": [
+        [
+            "kitten",
+             "sweet"
+        ],
+        [
+            "Hm? Oh, hello there, y_c! What's on your mind today, little one?",
+            "What's it like in StarClan? Well, it's certainly bright. It's a land full of stars everywhere you look, it's welcoming and free...",
+            "Will you go to StarClan? Of course! A fierce little warrior like you probably has a special spot up there, hehe."
+        ]
+    ],
+"sweet_meddie_4": [
+        [
+            "kitten",
+             "sweet"
+        ],
+        [
+            "Oh, hi there y_c! What's on your mind, little fella?",
+            "You want advice on what role to choose? I see... Well, I feel like I should say, never let anyone else pressure you into any particular role.",
+            "You are your best when you're happy, so choose whichever role you feel like is calling to you! And it's okay if you change your mind later, we don't all always know what we want immediately, especially not at such a young age."
+        ]
+    ],
+"sweet_meddie_5": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "Hm..? Oh hello, y_c! Today is your day off, right? Do you think you could help me with something real fast?",
+            "I need to do a check up on r_c, can you go and get them for me? I have some berries to give you for your work!"
+        ]
+    ],
+"sweet_meddie_6": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+             "sweet"
+        ],
+        [
+            "Hey y_c! It's time for a check up! Can you come with me to my den for a moment?",
+            "Alright... Everything looks alright! Your shoulders do seem to be a bit tense, so I'd recommend taking it a little easy on them for the next few days.",
+            "Thank you for your patience! Have some berries, as a treat!"
+        ]
+    ],
+"sweet_meddie_7": [
+        [
+            "apprentice",
+             "sweet"
+        ],
+        [
+            "Oh, what's up, y_c? Is there anything you need?",
+            "Oh, I see! I can help you out with that in a moment. I just need to tend to r_i first, if that's alright?",
+            "Here, you can play with this while you wait. I'll be back momentarily!"
+        ]
+    ],
+"sweet_meddie_8": [
+        [
+            "queen's apprentice",
+             "sweet"
+        ],
+        [
+            "Mm? y_c? What is it that you- oh.. Oh I see.",
+            "Hehe, looks like some of the kits pulled some of your fur out, hmm? Here, have these, should ease the stinging pain a bit. Oh, and this honey? It's just to make you feel a bit better. Just don't eat too much!"
+        ]
+    ],
+"sweet_meddie_9": [
+        [
+            "medicine cat apprentice",
+             "sweet"
+        ],
+        [
+            "Mm? y_c? What is it that you- oh.. Oh I see.",
+            "Hehe, looks like some of the kits pulled some of your fur out, hmm? Here, have these, should ease the stinging pain a bit. Oh, and this honey? It's just to make you feel a bit better. Just don't eat too much!"
+        ]
+    ],
+"sweet_meddie_10": [
+        [
+            "mediator apprentice",
+             "sweet"
+        ],
+        [
+            "Oh, y_c! What happened?",
+            "You tried to mediate something in o_cClan and they attacked you?",
+            "At least it isn't too serious... here, have these. They should make you feel better. Just try to take it easy, okay?",
+            "I'll talk to their Medicine Cat at the next meeting, I promise."
+        ]
+    ],
+"sweet_meddie_11": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "dead_close",
+             "sweet"
+        ],
+        [
+            "[t_c's gaze seems fixated on the sky, unwavering. Something must be bugging them, you think.]",
+            "There has to be something we can do...",
+            "[You feel your heart stop as they mention a certain cat...]",
+            "d_c... What did all of that mean? What did you mean... Why did you tell me this? I have to help... I have to.",
+            "[You decide it's best to leave them to it. You know they'd immediately give up trying to figure /whatever that is/ out, just to make sure you're doing alright.. but it sounds like this is important.]"
+        ]
+    ],
+"sweet_meddie_12": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+             "sweet"
+        ],
+        [
+            "Hmm.. that should go here.. ah, kits...",
+            "[The den is a wreck... it isn't hard to imagine what happened here.]",
+            "Ah, y_c! Welcome welcome- apologies about the mess.",
+            "Is there anything you need? If not, you're more than welcome to just keep me company whilst I clean up this mess. I wouldn't mind a friend, hehe."
+        ]
+    ],
+"sweet_meddie_13": [
+        [
+            "warrior",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "Hey y_c! I've actually got a very special job for you.",
+            "l_n needs to speak with our ancestors, and you were one of the warriors chosen to go with! I think that's pretty exciting.",
+            "You just need to take these traveling herbs. r_w, r_a and d_n are going too.",
+            "I hope you guys have fun! Don't forget to take plenty of rest breaks!!"
+        ]
+    ],
+"sweet_meddie_14": [
+        [
+            "medicine cat",
+             "sweet"
+        ],
+        [
+            "Oh, y_c! Just the cat I was looking for!",
+            "[Smiling, t_c bounds over to you with a soft purr. They give you a friendly headbutt as a greeting, walking by your side.]",
+            "There was a training accident between some of the warriors, and we're out of herbs. Would you like to come with me to get more?",
+            "You're the best! Come on, let's go."
+        ]
+    ],
+"sweet_meddie_15": [
+        [
+            "mediator",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "Oh, y_c! Hi there- ah-",
+            "[You can tell they want to ask for your help, but don't want to bother you. You offer to help them instead.]",
+            "Oh, would you? r_w said the rudest thing the other day... that medicine cats shouldn't even be roles, and that I chose this path just to be lazy.",
+            "Do you think you could talk to them at all? ... It'd mean a lot."
+        ]
+    ],
+"sweet_meddie_16": [
+        [
+            "queen",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "y_c! I brought the herbs for r_k.",
+            "[t_c gives you a smile, settling down next to you as you gently help the little one eat their herbs.]",
+            "You know, I never saw our roles as that different. Like- of course, there's differences, but at the end of the day... we're caring for our clanmates. We guide them, and we help them when they fall down.",
+            "[The sweet cat has a playful smile appear on their face as they glance at you.]",
+            "Although, your patients are way cuter when they're being stubborn."
+        ]
+    ],
+"sweet_meddie_17": [
+        [
+            "deputy",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "Greetings, y_c! I hope your evening has been fine.",
+            "[t_c sits down by you, overlooking the whole clan.]",
+            "Can I be honest about something? ... I'm super worried for our clan.",
+            "I've never been the type to worry about things, I don't flinch at even the worst of wounds and can handle cats snarling at me relatively well...",
+            "But some of the signs l_n and I have been getting... mmm...",
+            "I just want everyone to be alright."
+        ]
+    ],
+"sweet_meddie_18": [
+        [
+            "deputy",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "[t_c is sorting their herbs, they seem a bit worried about something. They nod as they see you, their voice quiet.]",
+            "Worried about r_s too?",
+            "That's not a bad thing, you know. It's a desired trait in most leaders, the concern for your clanmates.",
+            "Here, you can have this. I ate earlier.",
+            "[They nudge a fresh mouse over to you, almost as if they anticipated your arrival and got you something to eat... though they didn't seen keen on admitting that.]",
+            "Here, you can stay with me for a little while, and we can plan for the scenario if things do go wrong.",
+            "[They let you lean against them as a comforting gesture, and you're reminded of just how caring this cat can be.]"
+        ]
+    ],
+"sweet_meddie_19": [
+        [
+            "deputy",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "Hello y_c! I need to speak with l_n, if that's alright?",
+            "It's a bit sudden, I know, but I think I finally figured out the solution to a problem we'd been having.",
+            "You can come in and sit with us, if you'd like! You /are/ the deputy, after all~."
+        ]
+    ],
+"sweet_meddie_20": [
+        [
+            "leader",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "[You go to approach y_c, but you find they're surrounded by kits.]",
+            "... And that, r_k, is what yarrow does!",
+            "[This is too cute to interrupt. You sit by the entrance of the den, waiting for them to finish before talking to them.]"
+        ]
+    ],
+"sweet_meddie_21": [
+        [
+            "leader",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "[You're walking through the camp, peeking into the dens to make sure nothing is amiss. You notice, however, that t_c doesn't seem to be in their nest.]",
+            "[You find t_c curled up by r_i, seems they fell asleep trying to comfort them.]",
+            "[At least everything is alright... You leave them be, not wanting to disturb them.]"
+        ]
+    ],
+"sweet_meddie_22": [
+        [
+            "leader",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "y_c? I need to speak with you for a moment, it's very important.",
+            "I'm incredibly worried about r_w... I've seen them in my den more and more, they've been pushing themselves way too far and won't listen to me, d_n or r_d.",
+            "Is there anything you can do to help?"
+        ]
+    ],
+"sweet_meddie_23": [
+        [
+            "elder",
+             "sweet"
+        ],
+        [
+            "y_c? I've got some herbs for you. I also brought you some prey and fresh moss, just to your liking!",
+            "No, you can't get out of taking your herbs by telling a story- /sigh/.",
+            "[They give you an amused smile, settling down.]",
+            "Alright, I'll listen to one, but only if you take your herbs first."
+        ]
+    ],
+"sweet_meddie_24": [
+        [
+            "elder",
+             "sweet"
+        ],
+        [
+            "[You wake up with a start, a nightmare about your past making you panic pretty badly. You run out of the elder's den, sobbing loud enough that you wake some cats up.]",
+            "y_c?! Is everything okay?!",
+            "[You bury your face in their fur and sob, making a mental note to apologize for it later.]",
+            "y_c...",
+            "[They gently hold you, letting you cry for a while. They're just glad that the sobs are now muffled, so hopefully more cats won't wake up.]",
+            "Cry as much as you need... it's okay."
+        ]
+    ],
+"sweet_meddie_25": [
+        [
+            "elder",
+            "random_cat",
+             "sweet"
+        ],
+        [
+            "[You glance up as you hear pawsteps entering your den, only to be surprised to see y_c carrying r_k in here.]",
+            "y_c? We had a nightmare, and could use a story to go back to sleep, if you're up for it.",
+            "[As they settle down as well, you question what they're doing in here.]",
+            "I'm not busy right now, and the little guy really wants me near, so..."
+        ]
     ]
+
 }
