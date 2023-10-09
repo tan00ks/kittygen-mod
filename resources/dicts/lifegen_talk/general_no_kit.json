@@ -6262,6 +6262,142 @@
             "Look, I'm not about to pour my heart out to you, so can we promise to never speak of this again?",
             "... Thank you."
         ]
+    ],
+    "stable_1_2": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "Oh, hello there, y_c.",
+            "How has the day been treating you so far? Well? Fair?",
+            "Well, I do hope it only gets better! Keep your chin up, there's always more to look forward to, see you around!"
+        ]
+    ],
+    "stable_2_2": [
+        [
+            "Any",
+            "stable",
+            "random_cat"
+        ],
+        [
+            "There you are, y_c.",
+            "I just came to let you know that r_c left you some of your favourite prey at the fresh kill pile... Though they unfortunately had to perform some other kind of task and can't stay around to look after it.",
+            "If you're currently busy, I can watch it for you and make sure no one takes it if you'd like."
+        ]
+    ],
+    "stable_3_2": [
+        [
+            "warrior",
+            "stable"
+        ],
+        [
+            "Y_c, how was the patrol? You look a little tired.",
+            "Do you need anything?",
+            "Fresh moss? Prey? Grooming? A story? Just let me know and I'll see what I can do."
+        ]
+    ],
+    "stable_4": [
+        [
+            "no_kit",
+            "stable"
+        ],
+        [
+            "Why are kits so difficult...",
+            "Y_c, I didn't see you there.",
+            "Oh, please, don't worry about me. Though, I wish I had an extra set of paws.",
+            "Wait, you'll help? Really? Thank you! It really means a lot-",
+            "HEY! NO! DON'T TOUCH THAT!"
+        ]
+    ],
+    "stable_5": [
+        [
+            "Any",
+            "stable",
+            "random_cat"
+        ],
+        [
+            "Huh?",
+            "What was r_c saying to me just now?",
+            "You're not getting a word from me, ask them yourself if you wish to know. It's not my place, y_c, seriously, I thought you knew better."
+        ]
+    ],
+    "stable_6": [
+        [
+            "Any",
+            "stable",
+            "you_injured"
+        ],
+        [
+            "Oh my- what happened to you?",
+            "Take it easy, you're clearly not doing too well. Okay, I... Is there anything you need?",
+            "Right. Sit tight and I'll be back. If you need anything else, just ask and I'll come running."
+        ]
+    ],
+    "stable_10": [
+        [
+            "Any",
+            "stable",
+            "you_ill"
+        ],
+        [
+            "Yikes, y_c, you should probably lay back down.",
+            "Get some rest, drink plenty of water.",
+            "Remember not to push yourself, we need all cats in c_n to be the best they can be."
+        ]
+    ],
+    "stable_15": [
+        [
+            "Any",
+            "stable",
+            "no_kit",
+            "they_grieving"
+        ],
+        [
+            "Oh, it's- it's just you, y_c. How are you? I'm guessing you knew how to find me. You've always been god at reading others. You're so in sync with those around you. I envy it honestly...",
+            "I miss them... so, so much. They were always there for me, they for as long as I can remember were always by my side. And now- can I be selfish for a moment?",
+            "They always knew what to do. What was the right thing to do, they did so much good. Even though they made mistakes. This grief, it's horrible. I don't know what to do or where to go next. Though I think that it's normal to feel that way.",
+            "I know it's okay to cry, but I guess I just feel shame- it's weird like I can't think straight, I feel angry, sad and... lost...",
+            "They're gone. Starclan has taken them now. And I'm still here. They're gone... They left me, it hurts, it hurts so much I... I don't know what to do. Sorry, I just, these tears- I can't...",
+            "Can you please just stay here, with me y_c? I know that's a strange thing to ask but please, just stay."
+        ]
+    ],
+    "stable_16": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "[t_c paces around the camp, checking in on their clanmates with a smile.]",
+            "[First they check on the kits, next the apprentices and then the warriors.]",
+            "[You watch as their whiskers twitch calmly as they report back to the leader with their tail held high.]"
+        ]
+    ],
+    "stable_13": [
+        [
+            "Any",
+            "stable",
+            "no_kit",
+            "they_grieving"
+        ],
+        [
+            "Oh, it's- it's just you, y_c... I- I-...",
+            "They're gone... They left me, it hurts, it hurts so much I... I don't know what to do. Sorry, I just, these tears- I can't...",
+            "Can you please just stay here, with me y_c? I know that's a strange thing to ask but please, just stay."
+        ]
+    ],
+    "stable_11": [
+        [
+            "Any",
+            "stable",
+            "you_grieving",
+            "no_kit"
+        ],
+        [
+            "I thought you may be here, though, I hoped not... y_c... Are you- are you staying here for the day?",
+            "Okay. I'll let your friends know, but- it's not bad to cry and you shouldn't share your grief alone. No cat wants that. You need time, you need space. And that's okay.",
+            "I am sorry for your loss. I know they meant so much to you. There's not a lot I can say, to offer comfort. Nor do I want to neglect your grief in favour of strength because that's not what you need right now.",
+            "You don't need me to tell you that it will get better, or to have faith. So I will leave with this, don't shut yourself off, please... Talk to your clanmates, it's okay. Ask for help. Seek comfort and support. I'll leave you with your grief, goodbye, y_c."
+        ]
     ]
-      
 }

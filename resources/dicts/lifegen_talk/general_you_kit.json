@@ -11,6 +11,43 @@
             "Rest now, little one. Dream of the great warrior you'll become one day."
         ]
     ],
+    "stable_8": [
+        [
+            "newborn",
+            "stable",
+            "silly",
+            "sweet"
+        ],
+        [
+            "So small and cute, aww!",
+            "Your little button nose and beady eyes, your fluffy tail and ears.",
+            "I could just gobble you up- No! No, no, no, no, no... That was a joke, I didn't mean to make you cry..."
+        ]
+    ],
+    "stable_9": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Look at you, young one. Soon it won't be long before your running around camp, stirring up a storm.",
+            "I remember when I was that age, goodness, that was so long ago. Well, not that I remember, what I could see nor hear- but I remember my parent's voice.",
+            "Their calm whispers of support, their promises of love and the way they said my name- I don't remember much, but just a sense of protection. A sense of love.",
+            "Little kit, you may not remember this when you're older, but I hope you remember this feeling of warmth.",
+            "So I'll say this, you are loved y_c, loved by c_n and all the cats here. We can't wait to see what you do next."
+        ]
+    ],
+    "stable_9_2": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "...",
+            "...",
+            "Why do you look like that?"
+        ]
+    ],
     "you_kitten_2": [
         [
             "kitten",
@@ -790,6 +827,33 @@
             "Stay away from me, you murderer! I don't want anything to do with you!"
         ]
     ],
+    "stable_14": [
+        [
+            "Any",
+            "stable",
+            "kitten",
+            "they_grieving"
+        ],
+        [
+            "What are you doing here, y_c? You shouldn't be here... I just need time alone, please.",
+            "What's it like? It feels like it's eating me up from the inside, tearing me apart, ripping me open, swallowing me whole. This hole, this pit, it's agonising. But- that's the cost to lose someone you love.",
+            "With love, comes loss, that's the price we pay. And it's so worth it. Because if we could do it again, we would, and wouldn't change a thing. To love is both a blessing and a curse. Don't let the fear of losing someone stop you from loving them, ever. Cherish every moment, every fight, every breath.",
+            "Thank you for visiting me, y_c. You remind me so much of them, thank you... Now run off and play, and please, y_c, never stop loving those around you. Kin or clanmate."
+        ]
+    ],
+    "stable_12": [
+        [
+            "Any",
+            "stable",
+            "kitten",
+            "you_grieving"
+        ],
+        [
+            "Little kit... It's okay, it's okay y_c.",
+            "I know this isn't easy, you didn't deserve it- you don't deserve this grief. You're okay, little kit, you're okay. If you need a shoulder to cry on, I'm here. It's okay. It's okay.",
+            "Let it out, I'm here for you. It's okay. You're okay, y_c."
+        ]
+    ],
     "unabashed_you_ill": [
         [
             "Unabashed",
@@ -802,6 +866,17 @@
             "Is there anything I can do to help...?",
             "Even if it's just, I dunno, grabbing some moss for you.",
             "...I'm worried about you, y_c."
+        ]
+    ],
+    "stable_7": [
+        [
+            "kitten",
+            "stable"
+        ],
+        [
+            "Really, you want to hear the song again? Ok, fine... Remember, you asked for this.",
+            "There's no place like c_n, because here we are wild and free! And nobody can disagree! Look at the stars, the way they shine! Starclan has given us bountiful time.",
+            "And prey and rocks and leaves of gold- may Starclan continue to sing the songs of old. From once before and now onwards, as a clan we strive forward. We push on. And this is the c_nClan cats' song!"
         ]
     ]
 }
