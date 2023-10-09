@@ -1,3 +1,13 @@
+<strong>v0.6.2: </strong>
+- Many new dialogue options!
+- Added murder text
+- Added insults
+- "Name kits" prompt
+- Relationship event filtering
+- Ability to patrol in the DF with other cats
+- Affair system
+- New achievements
+
 <strong>v0.6.1: </strong>
 - Many new dialogues!
 - Added murder text
