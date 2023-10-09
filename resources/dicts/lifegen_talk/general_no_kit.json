@@ -6290,7 +6290,7 @@
             "stable"
         ],
         [
-            "Y_c, how was the patrol? You look a little tired.",
+            "y_c, how was the patrol? You look a little tired.",
             "Do you need anything?",
             "Fresh moss? Prey? Grooming? A story? Just let me know and I'll see what I can do."
         ]
@@ -6302,7 +6302,7 @@
         ],
         [
             "Why are kits so difficult...",
-            "Y_c, I didn't see you there.",
+            "y_c, I didn't see you there.",
             "Oh, please, don't worry about me. Though, I wish I had an extra set of paws.",
             "Wait, you'll help? Really? Thank you! It really means a lot-",
             "HEY! NO! DON'T TOUCH THAT!"
