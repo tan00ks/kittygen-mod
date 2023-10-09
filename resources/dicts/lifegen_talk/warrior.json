@@ -211,6 +211,41 @@
             "Oh, a kit with a warrior's spirit, I see."
         ]
     ],
+    "brooding_medapp": [
+        [
+            "apprentice",
+            "brooding",
+            "dislike",
+            "random_cat"
+        ],
+        [
+            "[After a lot of pestering from the kits, you agree to show off some of the skills m_n taught you, and host a little training session.]",
+    "[t_c pads by the nursery, pausing to watch your demonstration.]",
+    "You call that a hunter’s crouch? Tch…",
+    "Your stance is all wrong- your tail is too high and your paws are too close together.",
+    "And not to mention that mangy pelt… m_n has got some work to do, that’s for sure."
+    "[t_c flicks their tail as they leave the nursery, leaving you dumbfounded.]"
+        ]
+        ],
+        "brooding_jealous": [
+            [
+                "warrior",
+                "jealousy",
+        "they_clanborn",
+        "they_clanfounder",
+        "you_outsiderroots",
+        "you_halfclan",
+        "you_orphaned",
+        "you_abandoned",
+        "random_cat"		
+            ],
+            [
+        "[t_c walks up to you, tail lashing wildly.]",
+        "y_c, I don’t know how you manage it, but I’m not surprised you have to cheat in our training sessions.",
+        "It makes sense you can’t naturally compare to a clanborn cat, but it doesn’t mean you can show me up in front of d_n, and especially not l_n!",
+        "[t_c sneers at you one last time before stalking off without giving you a chance to reply.]"
+            ]
+            ],        
     "warrior_4324": [
         [
             "apprentice",

@@ -714,11 +714,49 @@
             "platonic_like"
         ],
         [
-            "[You see t_c sitting alone near the clearing and decide to approach\nthem.]",
+            "[You see t_c sitting alone near the clearing and decide to approach them.]",
             "Hm?",
-            "[They look up surprised as you slowly slide a little flower over\nto them.]",
+            "[They look up surprised as you slowly slide a little flower over to them.]",
             "Oh...thanks, kid.",
             "[They don't say much, but they seem happy about the small gift.]"
+        ]
+    ],
+    "brooding_fromparent1": [
+        [
+            "any",
+            "brooding",
+            "from_parent",
+            "platonic_love"
+        ],
+        [
+            "Hehe. That's my little y_c."
+        ]
+    ],
+    "brooding_fromparent2": [
+        [
+            "any",
+            "brooding",
+            "from_parent",
+            "platonic_love"
+        ],
+        [
+            "y_c, what happened to your fur?",
+            "It's full of thistles, you didn't notice?",
+            "Come here ...",
+            "[Purring all the while, t_c carefully picks all of the thistles out of your fur.]"
+        ]
+    ],
+    "brooding_fromparent4": [
+        [
+            "any",
+            "brooding",
+            "from_parent",
+            "neutral"
+        ],
+        [
+            "Um. Hello ...",
+            "What do you need?",
+            "[Even though they're your own parent, t_c clearly has no idea how to talk to you."
         ]
     ]
 }

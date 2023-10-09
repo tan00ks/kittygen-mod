@@ -312,10 +312,10 @@ class Cat():
             else:
                 self.genderalign = self.gender
 
-            """if self.genderalign in ["female", "trans female"]:
-                self.pronouns = [self.default_pronouns[1].copy()]
-            elif self.genderalign in ["male", "trans male"]:
-                self.pronouns = [self.default_pronouns[2].copy()]"""
+            # """if self.genderalign in ["female", "trans female"]:
+            #     self.pronouns = [self.default_pronouns[1].copy()]
+            # elif self.genderalign in ["male", "trans male"]:
+            #     self.pronouns = [self.default_pronouns[2].copy()]"""
 
             # APPEARANCE
             self.pelt = Pelt.generate_new_pelt(self.gender, [Cat.fetch_cat(i) for i in (self.parent1, self.parent2) if i], self.age)

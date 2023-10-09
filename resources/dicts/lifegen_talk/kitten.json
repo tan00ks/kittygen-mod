@@ -2173,5 +2173,18 @@
             "Um... you just... you're so... composed! You always know w-what to do and you never worry about it! Y- You work hard and I...",
             "I wish I was you..."
         ]
-    ]
+    ],
+    "brooding_kitten_like": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "Hey, y_c, do you remember that time when I tripped r_k and they fell in that mud puddle?",
+    "That was so funny, wasn't it? I bet I could do it again. Wanna help?"
+        ]
+        ]
+    
 }

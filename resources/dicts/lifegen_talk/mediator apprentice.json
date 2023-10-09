@@ -27,6 +27,111 @@
             "[Still, you sit with them through the night, hoping to stabilize them through whatever storm they might be weathering right now.]"
         ]
     ],
+    "brooding_mediator": [
+        [
+            "no_kit",
+            "Any"
+        ],
+        [
+            "Oh, y_c. l_n has been wanting to see you about your performance.",
+            "Is it good or bad …?",
+            "Sorry. Couldn't tell you. You'll have to go see for yourself."
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "Any",
+            "from_your_apprentice",
+            "brooding",
+            "neutral",
+            "dislike"
+        ],
+        [
+            "Hm? What's that, y_c?",
+            "You … want us to do a bonding exercise, to get to know each other better as mentor and apprentice?",
+            "Ha. Please.",
+            "[t_c stalks off before you can even finish explaining the exercise. Clearly, you'll need to find another way of getting through to them …]"
+        ]
+        ],
+    
+    
+    "brooding_medapp": [
+        [
+            "Any",
+            "from_your_apprentice",
+            "brooding",
+            "neutral",
+            "dislike"
+        ],
+        [
+            "[You notice your apprentice is looking a little stressed, and ask them how they're feeling.]",
+            "Um … Are you serious?",
+            "Look, can we get one thing straight, y_c? I'm your apprentice, you're my mentor, that's it. That's all this has to be.",
+            "We don't need to get into any of the 'feelings' stuff, because it really isn't necessary. Got it?",
+            "[They storm off, lashing their tail. If that isn't the most brutal little cat you've ever met in your life …]"
+        ]
+        ],
+    
+    "brooding_mediatorapp": [
+        [
+            "brooding",
+            "upstanding",
+            "warrior",
+            "queen",
+            "deputy",
+            "leader",
+            "medicine cat"
+        ],
+        [
+            "What do you need, y_c? Who are you upset with?",
+            "No one?",
+            "... Then don't waste my time.",
+            "[For such a young cat, t_c sure doesn't mince words …]"
+        ]
+        ],
+    
+    "brooding_mediatorapp": [
+        [
+            "brooding",
+            "any",
+            "platonic_like"
+        ],
+        [
+            "What is it, y_c? I was just about to leave with tm_n on a visit to c_nClan …",
+            "You're upset with somecat?",
+            "[t_c casts a glance at their mentor over their shoulder, then turns back to you with a rare smile.]",
+            "It's okay. tm_n can wait. Now, tell me what's wrong."
+        ]
+        ],
+    
+    "brooding_mediatorapp": [
+        [
+            "brooding",
+            "dislike",
+            "any"
+        ],
+        [
+            "y_c? You’re here again?",
+    "No. I refuse. You always come here, always have some banal argument for me to mediate.",
+    "Have you ever considered that maybe you’re the problem?",
+        "You wouldn’t have so much work for me if you didn’t start so many discussions and provocations. Most of the time you’re not even in the right.",
+    "You’re obnoxious, annoying, stupid and self-absorbed. There, that's the answer. Now, kindly leave me to go find something worth my time.",
+    "[t_c just refused to help you out. But they can’t do that ... Can they?]”
+        ]
+        ],
+    
+    "brooding_mediatorapp": [
+        [
+            "brooding",
+            "Any"
+        ],
+        [
+            "Hm …",
+            "[For a mediator, t_c sure doesn't seem to talk much.]"
+        ]
+        ],
+    
     "medi_11x": [
         [
             "insult",

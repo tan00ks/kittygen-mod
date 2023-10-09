@@ -1457,6 +1457,163 @@
             "But first, let's start with taking your medicine, alright?"
         ]
     ],
+    "brooding_medapp": [
+        [
+            "any",
+            "random_cat",
+            "brooding"
+        ],
+        [
+            "Move. r_s needs treatment."
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "[t_c glances at you, their tail flicking in annoyance.]",
+    "The medicine den is no place for kits like you. Go on back to the nursery.",
+    "[They turn back to their herbs, shuffling through the stores. It stays quiet for a couple moments as you make no efforts to move.]",
+    "*Sigh* … Fine. I guess you can stay.",
+    "But absolutely no touching the herbs!"
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "newborn",
+            "kitten",
+            "apprentice",
+            "warrior",
+            "mediator apprentice",
+            "mediator",
+            "queen's apprentice",
+            "queen",
+            "deputy",
+            "leader",
+            "brooding"
+        ],
+        [
+            "Chervil, tansy …",
+            "What is it, y_c? Are you hurt? Sick?",
+            "No? Good. Then leave.",
+            "The medicine den is far too busy for perfectly healthy cats to be taking up space."
+        ]
+        ],
+    
+    
+    "brooding_medapp": [
+        [
+            "any",
+            "brooding"
+        ],
+        [
+            "[t_c sits in the medicine den with their eyes squeezed shut, seemingly searching for something in the darkness.]",
+            "StarClan, where are you …?"
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "kitten",
+            "apprentice",
+            "warrior",
+            "mediator apprentice",
+            "mediator",
+            "queen's apprentice",
+            "queen",
+            "deputy",
+            "leader",
+            "brooding",
+            "neutral",
+            "platonic_like"
+        ],
+        [
+            "You … want to know if there's anything you can do to help?",
+            "Hm. Well, if you're really that desperate, I … suppose you could bring us some fresh moss?",
+            "... Thank you. You're very kind."
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "apprentice",
+            "you_assertive",
+            "you_silly",
+            "you_upstanding"
+            "you_unlawful",
+            "brooding"
+        ],
+        [
+            "Do c_nClan a favor and try not to pull any stupid stunts out there today.",
+            "The medicine den is crowded enough without apprentices injuring themselves for foolish reasons."
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "kitten",
+            "brooding",
+            "non-related",
+            "neutral",
+            "dislike"
+        ],
+        [
+            "Pah. Scram, kit! You're messing up the herb stores …"
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "kitten",
+            "brooding",
+            "non-related",
+            "neutral",
+            "dislike"
+        ],
+        [
+            "The medicine den is no place for a kit …",
+    "Go back to the nursery, where you're safe."
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "kitten",
+            "brooding",
+            "non-related",
+            "neutral"
+        ],
+        [
+            "[You've heard stories about the mean, grumpy medicine cat apprentice of c_nClan, and decide to pay them a visit.]",
+            "Tansy, horsetail …",
+            "Hm? A kit?",
+            "You … want to know what I'm doing?",
+            "[You flinch, expecting the worst … but, to your surprise, t_c actually softens.]",
+            "Heh. You're very curious. That's good. I wish I were more curious, at your age.",
+            "Right now, I'm sorting herbs. Do you want to see?",
+            "[t_c spends the rest of the afternoon patiently explaining the herbs and their properties to you. Maybe you have a future in the medicine den when you're older?]"
+        ]
+        ],
+    
+    "brooding_medapp": [
+        [
+            "Any",
+            "you_injured",
+            "brooding"
+        ],
+        [
+            "*Sigh* What did you do to yourself this time, y_c?",
+            "Hold still … Tell me where it hurts.",
+            "[For their brooding and stoic demeanor, t_c's touch is surprisingly gentle …]"
+        ]
+        ],
+    
+    
     "sweet_meddie_2": [
         [
             "kitten",
@@ -1575,7 +1732,7 @@
             "There has to be something we can do...",
             "[You feel your heart stop as they mention a certain cat...]",
             "d_c... What did all of that mean? What did you mean... Why did you tell me this? I have to help... I have to.",
-            "[You decide it's best to leave them to it. You know they'd immediately give up trying to figure /whatever that is/ out, just to make sure you're doing alright.. but it sounds like this is important.]"
+            "[You decide it's best to leave them to it. You know they'd immediately give up trying to figure \/whatever that is\/ out, just to make sure you're doing alright.. but it sounds like this is important.]"
         ]
     ],
     "sweet_meddie_12": [
@@ -1685,7 +1842,7 @@
         [
             "Hello y_c! I need to speak with l_n, if that's alright?",
             "It's a bit sudden, I know, but I think I finally figured out the solution to a problem we'd been having.",
-            "You can come in and sit with us, if you'd like! You /are/ the deputy, after all~."
+            "You can come in and sit with us, if you'd like! You \/are\/ the deputy, after all~."
         ]
     ],
     "sweet_meddie_20": [
@@ -1731,7 +1888,7 @@
         ],
         [
             "y_c? I've got some herbs for you. I also brought you some prey and fresh moss, just to your liking!",
-            "No, you can't get out of taking your herbs by telling a story- /sigh/.",
+            "No, you can't get out of taking your herbs by telling a story- \/sigh\/.",
             "[They give you an amused smile, settling down.]",
             "Alright, I'll listen to one, but only if you take your herbs first."
         ]
