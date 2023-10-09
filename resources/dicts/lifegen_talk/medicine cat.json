@@ -1477,7 +1477,7 @@
             "[t_c glances at you, their tail flicking in annoyance.]",
             "The medicine den is no place for kits like you. Go on back to the nursery.",
             "[They turn back to their herbs, shuffling through the stores. It stays quiet for a couple moments as you make no efforts to move.]",
-            "*Sigh* \u00e2\u20ac\u00a6 Fine. I guess you can stay.",
+            "*Sigh* ... Fine. I guess you can stay.",
             "But absolutely no touching the herbs!"
         ]
     ],
@@ -1496,7 +1496,7 @@
             "brooding"
         ],
         [
-            "Chervil, tansy \u00e2\u20ac\u00a6",
+            "Chervil, tansy ...",
             "What is it, y_c? Are you hurt? Sick?",
             "No? Good. Then leave.",
             "The medicine den is far too busy for perfectly healthy cats to be taking up space."
@@ -1528,8 +1528,8 @@
             "platonic_like"
         ],
         [
-            "You \u00e2\u20ac\u00a6 want to know if there's anything you can do to help?",
-            "Hm. Well, if you're really that desperate, I \u00e2\u20ac\u00a6 suppose you could bring us some fresh moss?",
+            "You ... want to know if there's anything you can do to help?",
+            "Hm. Well, if you're really that desperate, I ... suppose you could bring us some fresh moss?",
             "... Thank you. You're very kind."
         ]
     ],
@@ -1556,7 +1556,7 @@
             "dislike"
         ],
         [
-            "Pah. Scram, kit! You're messing up the herb stores \u00e2\u20ac\u00a6"
+            "Pah. Scram, kit! You're messing up the herb stores ..."
         ]
     ],
     "brooding_medapp_8": [
@@ -1568,7 +1568,7 @@
             "dislike"
         ],
         [
-            "The medicine den is no place for a kit \u00e2\u20ac\u00a6",
+            "The medicine den is no place for a kit ...",
             "Go back to the nursery, where you're safe."
         ]
     ],
@@ -1581,10 +1581,10 @@
         ],
         [
             "[You've heard stories about the mean, grumpy medicine cat apprentice of c_nClan, and decide to pay them a visit.]",
-            "Tansy, horsetail \u00e2\u20ac\u00a6",
+            "Tansy, horsetail ...",
             "Hm? A kit?",
-            "You \u00e2\u20ac\u00a6 want to know what I'm doing?",
-            "[You flinch, expecting the worst \u00e2\u20ac\u00a6 but, to your surprise, t_c actually softens.]",
+            "You ... want to know what I'm doing?",
+            "[You flinch, expecting the worst ... but, to your surprise, t_c actually softens.]",
             "Heh. You're very curious. That's good. I wish I were more curious, at your age.",
             "Right now, I'm sorting herbs. Do you want to see?",
             "[t_c spends the rest of the afternoon patiently explaining the herbs and their properties to you. Maybe you have a future in the medicine den when you're older?]"
@@ -1598,8 +1598,8 @@
         ],
         [
             "*Sigh* What did you do to yourself this time, y_c?",
-            "Hold still \u00e2\u20ac\u00a6 Tell me where it hurts.",
-            "[For their brooding and stoic demeanor, t_c's touch is surprisingly gentle \u00e2\u20ac\u00a6]"
+            "Hold still ... Tell me where it hurts.",
+            "[For their brooding and stoic demeanor, t_c's touch is surprisingly gentle ...]"
         ]
     ],
     "sweet_meddie_2": [
