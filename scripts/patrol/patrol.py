@@ -210,9 +210,11 @@ class Patrol():
         # DETERMINE RANDOM CAT
         #Find random cat
         if game.current_screen == 'patrol screen4':
-            possible_random_cats = [i for i in patrol_cats if i.ID != game.clan.your_cat.ID]
-            self.patrol_random_cat = choice(possible_random_cats)
-        if len(patrol_cats) > 1 and game.current_screen == 'patrol screen3':
+            for date_cat in patrol_cats:
+                if date_cat.ID != game.clan.your_cat.ID:
+                    self.patrol_random_cat = date_cat
+                    break
+        elif len(patrol_cats) > 1 and game.current_screen == 'patrol screen3':
             possible_random_cats = [i for i in patrol_cats if i.ID != game.clan.your_cat.ID]
             self.patrol_random_cat = choice(possible_random_cats)
         else:

@@ -370,7 +370,7 @@ class TalkScreen(Screens):
                     continue
                 
             # Season tags
-            if ('leafbare' in talk[0] and game.clan.current_season != 'Leaf-bare') or ('newleaf' in talk[0] and game.clan.current_season != 'Newleaf') or ('leaffall' in talk[0] and game.clan.current_season != 'Leaf-bare') or ('greenleaf' in talk[0] and game.clan.current_season != 'Greenleaf'):
+            if ('leafbare' in talk[0] and game.clan.current_season != 'Leaf-bare') or ('newleaf' in talk[0] and game.clan.current_season != 'Newleaf') or ('leaffall' in talk[0] and game.clan.current_season != 'Leaf-fall') or ('greenleaf' in talk[0] and game.clan.current_season != 'Greenleaf'):
                 continue
             
             # Biome tags
