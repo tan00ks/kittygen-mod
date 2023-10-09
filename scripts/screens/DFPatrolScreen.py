@@ -231,7 +231,7 @@ class DFPatrolScreen(Screens):
             if self.selected_cat in self.current_patrol:
                 self.elements["add_remove_cat"] = UIImageButton(scale(pygame.Rect((672, 920), (254, 60))), "",
                                                                 object_id="#remove_cat_button", manager=MANAGER)
-            elif self.selected_cat is None or len(self.current_patrol) >= 6:
+            elif self.selected_cat is None or len(self.current_patrol) >= 2:
                 self.elements["add_remove_cat"] = UIImageButton(scale(pygame.Rect((700, 920), (196, 60))), "",
                                                                 object_id="#add_cat_button", manager=MANAGER)
                 self.elements["add_remove_cat"].disable()
@@ -629,9 +629,9 @@ class DFPatrolScreen(Screens):
         if not the_cat.dead and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working():
             if "3" not in game.switches['patrolled']:
                 self.able_cats.append(game.clan.your_cat)
-                for the_cat in Cat.all_cats_list:
-                    if not the_cat.dead and the_cat.in_camp and the_cat.ID != game.clan.your_cat.ID and the_cat.ID not in game.patrolled and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working() and the_cat.joined_df:
-                        self.able_cats.append(the_cat)
+        for c in Cat.all_cats_list:
+            if not c.dead and c.in_camp and c.ID != game.clan.your_cat.ID and c.ID not in game.patrolled and not c.outside and c not in self.current_patrol and not c.not_working():
+                self.able_cats.append(c)
                 
         if not self.able_cats:
             all_pages = []

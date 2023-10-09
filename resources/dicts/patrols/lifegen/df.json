@@ -297,14 +297,179 @@
                 "weight": 20,
                 "injury": [
                     {
-                        "cats": ["r_c", "s_c"],
-                        "injuries": ["claw-wound"],
-                        "scars": ["SNOUT", "ONE"]
+                        "cats": [
+                            "r_c",
+                            "s_c"
+                        ],
+                        "injuries": [
+                            "claw-wound"
+                        ],
+                        "scars": [
+                            "SNOUT",
+                            "ONE"
+                        ]
                     }
                 ],
                 "history_text": {
                     "scar": "This cat is scarred from training in the Dark Forest"
                 }
+            }
+        ]
+    },
+    {
+        "patrol_id": "lifegen_1223",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "border",
+            "convince_rc"
+        ],
+        "patrol_art": "gen_hunt_mouse",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As you go for a stroll around the Dark Forest, just enjoying the gloomy forest before training begins, you stumble upon a confused r_c. They look up at you, panicked, as they ask where they are.",
+        "decline_text": "Meh. Not your business. You walk away, leaving them startled, confused and sputtering out your name.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they wish to become stronger. They agree, following your lead.",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they wish to become stronger. Their eyes are wide with horror as they scream out a loud 'no'. They call you a traitor, swinging their claws at you though missing as you gracefully dodge their attack. Sobbing, they run away, deeper into the forest as you can only watch with pity. Your Dark Forest mentor will have a field day with them, that's for sure.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lifegen_123",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "border",
+            "convince_rc"
+        ],
+        "patrol_art": "gen_hunt_mouse",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "You're wandering beneath the shadowy treetops when... Is that r_c?",
+        "decline_text": "You dart out of sight, not wanting to confront the possibility of seeing your clanmate.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "It is r_c! They bound towards you, purring that they didn't know anyone else in c_nClan who trained in the Dark Forest! The two of you walk side by side, discussing training plans, hopes and dreams, and planning your future together as training mates.",
+                "exp": 20,
+                "weight": 20
+            },
+            {
+                "text": "r_c greets you with a respectful nod, and the two of you go your separate ways.",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You call out to r_c, but as soon as they see you they dart into the brush. When you wake up the next morning, they carefully avoid eye contact.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lifegen_123",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "border",
+            "convince_rc"
+        ],
+        "patrol_art": "gen_hunt_mouse",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As you wade deeper into the sticky mud of the Dark Forest's domain, you can't help but feel glistering eyes on your pelt, filling it with prickles and uncertainty. The pitiful rustling of leaves makes you anxious and fearful, and you ponder who or what could be watching you at this time...",
+        "decline_text": "You wake up, horrified. Maybe your little stay at the Dark Forest didn't go unnoticed.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You quickly turn around, only to come eyes to eyes with r_c! They don't seem bothered by your presence, bounding over to you with a welcoming sparkle in their eyes. They seem.. Happy? They explain to you that they've been needing a place to gossip, and when they stumbled over the shadows of the Dark Forest, they couldn't help themselves! Apparently the Clan hasn't been very accepting of their rumors.. But here you are! When you return home from the ever-lasting darkness, you have more secrets than you can carry.",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. They grab your scruff, dragging you out of the mud. When you turn to thank them, their eyes are wide with horror as they escape your gaze, running away with their tail between their legs and the darkness slowly swallowing them.",
+                "exp": 0,
+                "weight": 20
+            }
+        ]
+    },
+    {
+        "patrol_id": "lifegen_1223",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "hunting"
+        ],
+        "tags": [
+            "border",
+            "convince_rc"
+        ],
+        "patrol_art": "gen_hunt_mouse",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "As you go for a stroll around the Dark Forest, just enjoying the gloomy forest before training begins, you stumble upon a confused r_c. They look up at you, panicked, as they ask where they are.",
+        "decline_text": "Meh. Not your business. You walk away, leaving them startled, confused and sputtering out your name.",
+        "chance_of_success": 50,
+        "success_outcomes": [
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they wish to become stronger. They agree, following your lead.",
+                "exp": 20,
+                "weight": 20
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they wish to become stronger. Their eyes are wide with horror as they scream out a loud 'no'. They call you a traitor, swinging their claws at you though missing as you gracefully dodge their attack. Sobbing, they run away, deeper into the forest as you can only watch with pity. Your Dark Forest mentor will have a field day with them, that's for sure.",
+                "exp": 0,
+                "weight": 20
             }
         ]
     }

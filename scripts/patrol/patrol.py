@@ -212,6 +212,9 @@ class Patrol():
         if game.current_screen == 'patrol screen4':
             possible_random_cats = [i for i in patrol_cats if i.ID != game.clan.your_cat.ID]
             self.patrol_random_cat = choice(possible_random_cats)
+        if len(patrol_cats) > 1 and game.current_screen == 'patrol screen3':
+            possible_random_cats = [i for i in patrol_cats if i.ID != game.clan.your_cat.ID]
+            self.patrol_random_cat = choice(possible_random_cats)
         else:
             if len(patrol_cats) > 1:
                 self.patrol_random_cat = choice([i for i in patrol_cats if i != self.patrol_leader])
