@@ -559,7 +559,6 @@ class TalkScreen(Screens):
             
             if text_chosen_key not in game.clan.talks and new_text:
                 game.clan.talks.append(text_chosen_key)
-                print(game.clan.talks)
                 return new_text
 
             counter += 1
