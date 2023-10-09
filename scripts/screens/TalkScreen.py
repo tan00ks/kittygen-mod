@@ -486,7 +486,7 @@ class TalkScreen(Screens):
                         if "is_murderer" in game.clan.your_cat.history.murder:
                             if len(game.clan.your_cat.history.murder["is_murderer"]) == 0:
                                 continue
-                            elif 'accomplices' in game.switches:
+                            if 'accomplices' in game.switches:
                                 if cat.ID in game.switches['accomplices']:
                                     continue
                         else:
@@ -553,7 +553,16 @@ class TalkScreen(Screens):
             texts_list.append(possible_texts['general'][1])
 
         text = choice(texts_list)
+        new_text = self.get_adjusted_txt(text, cat)
+        while not new_text:
+            text = choice(texts_list)
+            new_text = self.get_adjusted_txt(text, cat)
+        return text
+        
+        #TODO: y_m, y_k, y_p, y_s
 
+    def get_adjusted_txt(self, text, cat):
+        you = game.clan.your_cat
         if any(abbrev in t for abbrev in ["r_k", "r_a", "r_w", "r_m", "r_d", "r_q", "r_e", "r_s", "r_i"] for t in text):
             living_meds = []
             living_mediators = []
@@ -601,12 +610,14 @@ class TalkScreen(Screens):
             for abbrev, replace_list in replace_mappings.items():
                 for idx, t in enumerate(text):
                     if abbrev in t:
+                        if not replace_list:
+                            return ""
                         text[idx] = t.replace(abbrev, str(choice(replace_list).name))
                         
 
         text = [t1.replace("c_n", game.clan.name) for t1 in text]
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
-        text = [t1.replace("t_c", str(cat.name)) for t1 in text]   
+        text = [t1.replace("t_c", str(cat.name)) for t1 in text]
          
         other_clan = choice(game.clan.all_clans)
         if other_clan:
@@ -629,7 +640,7 @@ class TalkScreen(Screens):
                 text = [t1.replace("d_c", str(dead_cat.name)) for t1 in text]  
             except:
                 dead_cat = str(Cat.all_cats.get(game.clan.starclan_cats[-1]).name)
-                text = [t1.replace("d_c", dead_cat) for t1 in text]    
+                text = [t1.replace("d_c", dead_cat) for t1 in text]
         elif "grief stricken" in you.illnesses:
             try:
                 dead_cat = Cat.all_cats.get(you.illnesses['grief stricken'].get("grief_cat"))

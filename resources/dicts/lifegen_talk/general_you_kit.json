@@ -477,6 +477,7 @@
     ],
     "parent_you_ill": [
         [
+            "any",
             "you_ill",
             "from_parent"
         ],
@@ -685,6 +686,7 @@
     ],
     "unabashed_insult_2": [
         [
+            "any",
             "insult",
             "unabashed",
             "you_cool"
@@ -811,7 +813,8 @@
     "unabashed_murder": [
         [
             "Unabashed",
-            "Murder"
+            "Murder",
+            "any"
         ],
         [
             "How could you, you little, fox-hearted piece of dung?",
@@ -821,7 +824,8 @@
     "unabashed_murder1": [
         [
             "Unabashed",
-            "Murder"
+            "Murder",
+            "any"
         ],
         [
             "Stay away from me, you murderer! I don't want anything to do with you!"
@@ -856,6 +860,7 @@
     ],
     "unabashed_you_ill": [
         [
+            "any",
             "Unabashed",
             "you_ill",
             "you_injured"

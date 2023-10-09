@@ -273,7 +273,8 @@
             "hunting"
         ],
         "tags": [
-            "border"
+            "border",
+            "non_lethal"
         ],
         "patrol_art": "gen_hunt_mouse",
         "min_cats": 2,
@@ -298,8 +299,7 @@
                 "injury": [
                     {
                         "cats": [
-                            "r_c",
-                            "s_c"
+                            "r_c"
                         ],
                         "injuries": [
                             "claw-wound"

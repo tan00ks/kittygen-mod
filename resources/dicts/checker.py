@@ -35,7 +35,7 @@ cluster_list = ["assertive", "brooding", "cool", "upstanding", "introspective", 
 you_cluster_list = ["you_assertive", "you_brooding", "you_cool", "you_upstanding", "you_introspective", "you_neurotic", "you_silly", "you_stable", "you_sweet", "you_unabashed", "you_unlawful"]
 
 def process_json_data(data):
-    list_of_tags = ["has_mate","reject","accept","heartbroken","from_parent","siblings_mate","non-related","murder","war","dead_close","talk_dead","hate","romantic_like","platonic_like","jealousy","dislike","comfort","respect","trust","random_cat","neutral","insult", "flirt", "leafbare", "newleaf", "greenleaf", "leaffall", 'beach', 'forest', 'plains', 'mountainous', 'wetlands', 'desert', "you_ill", "you_injured", "they_ill","you_grieving", "they_injured", "they_grieving","adopted_parent","from_mentor","from_your_apprentice","from_kit","from_mate","from_adopted_kit",
+    list_of_tags = ["mate", "they_half-clan", "you_half-clan", "platonic_love", "has_mate","reject","accept","heartbroken","from_parent","siblings_mate","non-related","murder","war","dead_close","talk_dead","hate","romantic_like","platonic_like","jealousy","dislike","comfort","respect","trust","random_cat","neutral","insult", "flirt", "leafbare", "newleaf", "greenleaf", "leaffall", 'beach', 'forest', 'plains', 'mountainous', 'wetlands', 'desert', "you_ill", "you_injured", "they_ill","you_grieving", "they_injured", "they_grieving","adopted_parent","from_mentor","from_your_apprentice","from_kit","from_mate","from_adopted_kit",
 "from_kit","sibling", "half sibling", "adopted_sibling", "parents_siblings", "cousin", "you_pregnant","they_pregnant"]
     list_of_tags.extend(cluster_list + you_cluster_list + roles + their_trait_list + you_trait_list + you_backstory_list + they_backstory_list + skill_list + you_skill_list)
     no_tags = set()
@@ -48,6 +48,14 @@ def process_json_data(data):
                 no_tags.add(i)
                 
     return no_tags
+
+def find_no_roles(data):
+    for key, value in data.items():
+        l = value[0]
+        for i in range(len(l)):
+            l[i] = l[i].lower()
+        if not any(a in l for a in roles):
+            print(key)
         
 
 def read_json_files_in_folder(folder_path):
@@ -57,6 +65,7 @@ def read_json_files_in_folder(folder_path):
             with open(os.path.join(folder_path, filename), 'r') as json_file:
                 try:
                     data = ujson.load(json_file)
+                    find_no_roles(data)
                     nono_tags.update(process_json_data(data))
                 except ValueError:
                     print(f"Error reading JSON data from {filename}")

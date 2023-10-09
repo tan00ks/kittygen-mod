@@ -5841,6 +5841,7 @@
     ],
     "unabashed_insult_2": [
         [
+            "any",
             "insult",
             "unabashed",
             "you_cool"
@@ -6176,7 +6177,8 @@
         [
             "platonic_love",
             "comfort",
-            "brooding"
+            "brooding",
+            "any"
         ],
         [
             "[You notice t_c sitting alone by the empty fresh-kill pile.]",
@@ -6189,7 +6191,7 @@
         ]
     ],
     "brooding_love_2": [
-        [
+        ["any",
             "platonic_love",
             "brooding",
             "random_cat"
@@ -6207,6 +6209,7 @@
     ],
     "brooding_love_3": [
         [
+            "any",
             "platonic_love",
             "brooding"
         ],
@@ -6221,6 +6224,7 @@
     ],
     "brooding_love_4": [
         [
+            "any",
             "platonic_love",
             "brooding",
             "random_cat"
@@ -6235,6 +6239,7 @@
     ],
     "brooding_love_5": [
         [
+            "any",
             "platonic_like",
             "brooding",
             "random_cat"
@@ -6513,7 +6518,8 @@
     "unabashed_from_mate1": [
         [
             "Unabashed",
-            "from_mate"
+            "from_mate",
+            "any"
         ],
         [
             "Oh, hi there, darling!",
@@ -6538,6 +6544,7 @@
     ],
     "unabashed_dislike": [
         [
+            "any",
             "Unabashed",
             "Dislike"
         ],
@@ -6548,7 +6555,7 @@
         ]
     ],
     "unabashed_romantic_like": [
-        [
+        ["any",
             "Unabashed",
             "romantic_like"
         ],
@@ -6560,7 +6567,7 @@
         ]
     ],
     "Unabashed_jealous1": [
-        [
+        ["any",
             "Unabashed",
             "Jealousy"
         ],
@@ -6571,7 +6578,7 @@
         ]
     ],
     "unabashed_jealous2": [
-        [
+        ["any",
             "unabashed",
             "jealousy"
         ],
@@ -6582,7 +6589,7 @@
         ]
     ],
     "unabashed_from_mate": [
-        [
+        ["any",
             "Unabashed",
             "Romantic_Like",
             "From_mate"
@@ -6595,7 +6602,7 @@
         ]
     ],
     "unabashed_from_parent1": [
-        [
+        ["any",
             "Unabashed",
             "Dislike",
             "From_parent"
@@ -6607,7 +6614,7 @@
         ]
     ],
     "unabashed mentor1": [
-        [
+        ["apprentice",
             "unabashed",
             "from_mentor",
             "dislike"
