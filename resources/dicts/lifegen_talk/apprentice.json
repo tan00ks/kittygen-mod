@@ -15,7 +15,7 @@
             "they_clanborn",
             "they_clanfounder",
             "you_outsiderroots",
-            "you_halfclan",
+            "you_half-clan",
             "you_orphaned",
             "you_abandoned",
             "random_cat"
@@ -1364,7 +1364,7 @@
             "unlawful",
             "neurotic",
             "kitten",
-            "from_your_kit"
+            "from_kit"
         ],
         [
             "Ugh, y_c, quit embarrassing me! I'm not a little kit anymore!",

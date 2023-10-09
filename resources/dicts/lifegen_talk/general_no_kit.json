@@ -1424,12 +1424,12 @@
             "introspective",
             "you_outsiderroots",
             "you_formerlykittypet",
-            "you_formerloner",
-            "you_formerrogue",
+            "you_formerlyloner",
+            "you_formerlyrogue",
             "they_clanfounder",
             "they_clanborn",
             "they_half-Clan",
-            "they_originallyfromanotherclan",
+            "they_originallyanotherclan",
             "they_orphaned",
             "they_abandoned"
         ],
@@ -3562,7 +3562,7 @@
         [
             "assertive",
             "brooding",
-            "injured",
+            "they_injured",
             "they_ill",
             "any"
         ],
@@ -3577,7 +3577,6 @@
             "romantic_like",
             "assertive",
             "cool",
-            "injured",
             "they_ill",
             "they_injured",
             "any"
@@ -3607,7 +3606,6 @@
         [
             "assertive",
             "silly",
-            "injured",
             "they_ill",
             "they_injured",
             "any"
@@ -5229,7 +5227,7 @@
         [
             "kitten",
             "any",
-            "from_your_kit",
+            "from_kit",
             "they_pregnant",
             "sweet"
         ],
@@ -6398,6 +6396,367 @@
             "Okay. I'll let your friends know, but- it's not bad to cry and you shouldn't share your grief alone. No cat wants that. You need time, you need space. And that's okay.",
             "I am sorry for your loss. I know they meant so much to you. There's not a lot I can say, to offer comfort. Nor do I want to neglect your grief in favour of strength because that's not what you need right now.",
             "You don't need me to tell you that it will get better, or to have faith. So I will leave with this, don't shut yourself off, please... Talk to your clanmates, it's okay. Ask for help. Seek comfort and support. I'll leave you with your grief, goodbye, y_c."
+        ]
+    ],
+    "silly_leaffall_eerie": [
+        [
+            "Any",
+            "silly",
+            "leaffall"
+        ],
+        [
+            "This dim atmosphere with all the orangey-red trees is really eerie. But, like, in the festive way. I dunno what it is.",
+            "I can practically feel the Dark Forest cats on my back telling me to commit murder! Oooh!"
+        ]
+    ],
+    "silly_leaffall_vivala": [
+        [
+            "Any",
+            "silly",
+            "cool",
+            "assertive",
+            "unabashed",
+            "unlawful",
+            "leaffall",
+            "random_cat"
+        ],
+        [
+            "The crisp air this leaffall is putting me in the mood for revolution.",
+            "r_w and r_a are smart! What do you think of convincing them to help us overthrow l_n?",
+            "Ha! Of course I'm kidding, y_c! Leaf-fall is the season for relaxing.",
+            "Haha... we save revolutions for leafbare."
+        ]
+    ],
+    "silly_leaffall_domination": [
+        [
+            "Any",
+            "silly",
+            "leaffall"
+        ],
+        [
+            "[t_c sticks their nose in the sky, testing the air. The wind ruffles their coat and sunlight glistens from their pelt, only to be cyclically ripped away by cloud cover.]",
+            "Enjoy the last of this tolerable weather while you can, jeez...",
+            "But not because leafbare is approaching. My plan for world domination is fast approaching completion!",
+            "[t_c gets closer to you, whispering in your ear.]",
+            "It's okay. I'll spare you."
+        ]
+    ],
+    "silly_leaffall_warmth": [
+        [
+            "Any",
+            "silly",
+            "leaffall",
+            "romantic_love"
+        ],
+        [
+            "Woah... it's getting cold again.",
+            "Soon you're gonna need someone to lean against for warmth, huh, y_c?",
+            "Uh. It's. It's me. You can lean against me for warmth. If you want.",
+            "Especially right now because my pelt's all hot and I'm embarrassed and I really need to stop talking, don't I??"
+        ]
+    ],
+    "silly_leaffall_dropping": [
+        [
+            "Any",
+            "silly",
+            "leaffall"
+        ],
+        [
+            "The leaves! They're dropping like mice! We gotta scatter!",
+            "Oh, hi, y_c.",
+            "Did you hear me? We gotta run or we're next!"
+        ]
+    ],
+    "silly_leaffall_warmth1": [
+        [
+            "Any",
+            "silly",
+            "leaffall",
+            "platonic_love"
+        ],
+        [
+            "[You and t_c are sitting together at the edge of camp. You look to the sky, and a big red maple leaf falls on your face.]",
+            "Aww! Look, you're so cool that you're even attracting the leaves!",
+            "You should keep it... it matches your pelt. Ooh, and give it a name!"
+        ]
+    ],
+    "silly_mate_heroes": [
+        [
+            "Any",
+            "silly",
+            "from_mate",
+            "random_cat"
+        ],
+        [
+            "[You and t_c are sitting at the edge of camp together, lazily watching the day pass you by.]",
+            "Look over there, y_c. What do you think r_c is doing?",
+            "Obviously they're doing something with those sticks. But what are they building?",
+            "Maybe a basket? Or a gift for l_n...",
+            "Ooh! Or maybe it's some kind of dangerous contraption that they're going to use to take over the world, and we'll have to step up as unlikely heroes bonded by the power of love to stop r_cClan's tyrannical rule! I can imagine the nursery stories already!",
+            "[r_c gives t_c a look that seems to mean \"You know I can hear you, right?\" before turning back to what they were doing.]"
+        ]
+    ],
+    "silly_mate_fishdate": [
+        [
+            "Any",
+            "silly",
+            "from_mate"
+        ],
+        [
+            "y_c! Do you- do you, uh... do you want to maybe...",
+            "We could- uh- I was just thinking, maybe we could hang out together...",
+            "By the lake. And we could look at the fish together.",
+            "Aw... why am I still so nervous around you? You're too perfect! It's breaking me!",
+            "The only thing that could fix this is if we go fishing together!"
+        ]
+    ],
+    "unabashed_from_mate1": [
+        [
+            "Unabashed",
+            "from_mate"
+        ],
+        [
+            "Oh, hi there, darling!",
+            "You know, I was thinking... it would be quite amusing to have little babies running around, hm? Like, our babies...",
+            "I know you're about to be so ensnared by my charm, oh yeah...",
+            "Oh, come on, at least think about it?! It would be so adorable~!"
+        ]
+    ],
+    "unabashed_from_parent": [
+        [
+            "Unabashed",
+            "platonic_like",
+            "From_parent",
+            "apprentice"
+        ],
+        [
+            "Oh, come here, my dear little baby!",
+            "Who's my favorite little baby? You are!",
+            "Oh, come on! You're not ashamed of your parent, are you?",
+            "You may be an apprentice but it's never too late for some affection from your close ones."
+        ]
+    ],
+    "unabashed_dislike": [
+        [
+            "Unabashed",
+            "Dislike"
+        ],
+        [
+            "Oh, if it isn't our dear y_c!",
+            "Did you forget to groom your pelt today? You look like a furball!",
+            "Why are you so fussy, now? I'm just telling you the truth!"
+        ]
+    ],
+    "unabashed_romantic_like": [
+        [
+            "Unabashed",
+            "romantic_like"
+        ],
+        [
+            "Hey there, y_c! I was wondering how you get your pelt to shine like that. It looks nice!",
+            "Oh, don't be embarrassed. Everyone knows you've got the nicest fur in this clan.",
+            "[t_c laughs at your sheepishness a little.]",
+            "StarClan, you're so cute when you make that face."
+        ]
+    ],
+    "Unabashed_jealous1": [
+        [
+            "Unabashed",
+            "Jealousy"
+        ],
+        [
+            "If it isn't everyone's FAAAVORITE cat, y_c.",
+            "Absolutely GREAT to see you today. Prancing around like you're better than everyone else! Because OF COURSE you are. You're just SOOO great.",
+            "[t_c's face is twisted into a snarl, and they grumble angrily as they turn away from you.]"
+        ]
+    ],
+    "unabashed_jealous2": [
+        [
+            "unabashed",
+            "jealousy"
+        ],
+        [
+            "Ugh. Get out of my face, y_c.",
+            "Everyone else may like you, but I sure don't.",
+            "...You're not the darling y_c everyone thinks they know so well. You're annoying. And I hate you."
+        ]
+    ],
+    "unabashed_from_mate": [
+        [
+            "Unabashed",
+            "Romantic_Like",
+            "From_mate"
+        ],
+        [
+            "Oh, here you are, my sweetest m_c!",
+            "Aren't you tired? From running around my mind all the time?",
+            "Oh-, oh, wait! Listen to this one:",
+            "Did it hurt when you fell from StarClan? And- and-..."
+        ]
+    ],
+    "unabashed_from_parent1": [
+        [
+            "Unabashed",
+            "Dislike",
+            "From_parent"
+        ],
+        [
+            "m_c, what's been up with you lately?!",
+            "Sometimes I'm really ashamed to be associated with you.",
+            "Scram, you mousebrain. And you better improve."
+        ]
+    ],
+    "unabashed mentor1": [
+        [
+            "unabashed",
+            "from_mentor",
+            "dislike"
+        ],
+        [
+            "No, that hunter's crouch was horrible.",
+            "R_w, what-",
+            "[R_w whispers something in t_c's ear.]",
+            "Ahem, I mean, that- what now?- I mean, you could work a bit on that hunting position of yours.",
+            "Yes, r_w, I said it nicely!"
+        ]
+    ],
+    "unabashed_leaffall": [
+        [
+            "leaffall",
+            "warrior",
+            "deputy",
+            "apprentice",
+            "elder",
+            "Unabashed"
+        ],
+        [
+            "Hi there! The scenery of Leaffall is so pretty, isn't it? The colorful trees, leaves crunching under your paws...",
+            "Everyone loves it. But I'm sure I'm the only one around here who LOVES jumping around in the mud after rain.",
+            "You see, I'm not like the other cats..."
+        ]
+    ],
+    "silly_mate_fkill": [
+        [
+            "Any",
+            "silly",
+            "from_mate"
+        ],
+        [
+            "I love you, y_c!",
+            "I love you, I love you, I love you, I love you!",
+            "If you and mysteriously returning from camp with crazy amounts of fresh-kill after going for a brisk hunt alone and scaring the everliving StarClan out of d_n were hung over a cliff, and I could only choose one of you to save, uh...",
+            "Of course I'd choose you! But maybe we could do that together instead of giving it up entirely."
+        ]
+    ],
+    "silly_mate_catchfail": [
+        [
+            "Any",
+            "silly",
+            "from_mate"
+        ],
+        [
+            "y_c, I just wanna let you know that I'll love and support you through anything.",
+            "Even if you missed the mouse on that hunting patrol yesterday and landed flat on your face.",
+            "Hah... No, I'm never letting you forget that one, dear."
+        ]
+    ],
+    "silly_mate_bird": [
+        [
+            "Any",
+            "silly",
+            "from_mate"
+        ],
+        [
+            "[t_c is curled up in their nest and sniffling... you ask if they're doing alright.]",
+            "y_c...",
+            "[t_c looks up at you.]",
+            "y_c, would you still love me if I was a bird??"
+        ]
+    ],
+    "silly_mate_elderpebbs": [
+        [
+            "Any",
+            "silly",
+            "from_mate"
+        ],
+        [
+            "y_c, dear!",
+            "I was thinking... maybe we could spend some time by the river soon?",
+            "We could catch fish and compare them! And find shiny pebbles together!",
+            "My current pebbles need to get out and socialize more. They're starting to remind me of the elders."
+        ]
+    ],
+    "silly_mate_future": [
+        [
+            "Any",
+            "silly",
+            "from_mate"
+        ],
+        [
+            "I'm so happy that I get to spend the rest of my life with you, y_c.",
+            "You're funny, you're kind, you understand all my jokes, you don't make fun of me for not being like everyone else, you don't spread rumors about me or...",
+            "[t_c's voice trails off.]",
+            "...Okay, maybe my bar is too low, but that's a badger's den I'm not ready to explore yet. The point is, I love you!"
+        ]
+    ],
+    "silly_mate_pebbles": [
+        [
+            "Any",
+            "silly",
+            "you_brooding",
+            "you_neurotic",
+            "you_unlawful",
+            "from_mate"
+        ],
+        [
+            "y_c, dear! I brought you something. I, uh, thought you might like it...",
+            "It's some shiny pebbles. I found them near the river...",
+            "I just thought that maybe they would help you when you felt nervous or upset about stuff. I have some, too. I gave them names and personalities and leaders and Clans!",
+            "Ooh! Maybe your Clans and my Clans can go to war and kill each other! I hear it's good for getting your frustrations out!",
+            "[t_c's eyes shine playfully and innocently at this violent prospect.]"
+        ]
+    ],
+    "silly_mate_leafgift": [
+        [
+            "Any",
+            "silly",
+            "you_sweet",
+            "from_mate"
+        ],
+        [
+            "y_c, you always get to do all the cute stuff. It's not fair. It's my turn.",
+            "I, uh... I really... do you... are you...",
+            "Do you wanna... maybe...",
+            "Aw, I'm not good at words! I was gonna give you this cool leaf. I love leaves! They're cool and they're nice and they're pretty and they remind me of you because all of that stuff is just like you!"
+        ]
+    ],
+    "silly_mate_flower": [
+        [
+            "Any",
+            "silly",
+            "you_upstanding",
+            "you_stable",
+            "you_introspective",
+            "from_mate"
+        ],
+        [
+            "y_c... look what I brought you!",
+            "It's a flower. I mean, I think you knew that, but... it reminded me of you.",
+            "You know, like one of the ones that you hope you can witness forever!",
+            "Here. It can go here.",
+            "[y_c finds a spot on your pelt to place the flower and steps back to admire their handywork.]",
+            "Perfect. Hey, I told you it was just like you!"
+        ]
+    ],
+    "silly_mate_lesson": [
+        [
+            "Any",
+            "silly",
+            "from_mate"
+        ],
+        [
+            "I love that thing you do when you tell me not to do stupid stuff and then I ignore it and regret it.",
+            "I mean, one of my favorite things is not learning my lesson! And now you're telling me I get to do it with someone I love? Impossible! I must be in StarClan right now!"
         ]
     ]
 }
