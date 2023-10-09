@@ -9,6 +9,65 @@
             "Is something the matter?"
         ]
     ],
+    "brooding_mediator": [
+        [
+            "brooding",
+            "Any"
+        ],
+        [
+            "[You ask t_c why they chose to become a mediator, given their \u00e2\u20ac\u00a6 less than friendly personality.]",
+            "Hmph. Are you implying I don't know how to do my job?",
+            "Mediation isn't about being nice and making friends. It's about making cold, rational, completely impartial decisions with the most logical thinking possible.",
+            "You should be glad c_nClan has a mediator like me. One who isn't afraid to tell things like they are."
+        ]
+    ],
+    "brooding_mediatorapp": [
+        [
+            "brooding",
+            "Any"
+        ],
+        [
+            "Hm \u00e2\u20ac\u00a6",
+            "[For a mediator, t_c sure doesn't seem to talk much.]"
+        ]
+    ],
+    "brooding_mediator_2": [
+        [
+            "no_kit",
+            "Any"
+        ],
+        [
+            "Oh, y_c. l_n has been wanting to see you about your performance.",
+            "Is it good or bad \u00e2\u20ac\u00a6?",
+            "Sorry. Couldn't tell you. You'll have to go see for yourself."
+        ]
+    ],
+    "brooding_mediator_3": [
+        [
+            "no_kit",
+            "Any"
+        ],
+        [
+            "Oh, y_c. l_n has been wanting to see you about your performance.",
+            "Is it good or bad \u00e2\u20ac\u00a6?",
+            "Sorry. Couldn't tell you. You'll have to go see for yourself."
+        ]
+    ],
+    "brooding_mediator_4": [
+        [
+            "brooding",
+            "dislike",
+            "any"
+        ],
+        [
+            "y_c? You're here again?",
+            "No. I refuse. You always come here, always have some banal argument for me to mediate.",
+            "Have you ever considered that maybe you're the problem?",
+            "You wouldn't have so much work for me if you didn't start so many discussions and provocations. Most of the time you're not even in the right.",
+            "You're obnoxious, annoying, stupid and self-absorbed. There, that's the answer. Now, kindly leave me to go find something worth my time.",
+            "[t_c just refused to help you out. But they can't do that ... Can they?]"
+        ]
+    ],
     "media_11": [
         [
             "insult",

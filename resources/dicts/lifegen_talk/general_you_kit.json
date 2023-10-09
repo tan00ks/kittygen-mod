@@ -758,5 +758,50 @@
             "What do you need?",
             "[Even though they're your own parent, t_c clearly has no idea how to talk to you."
         ]
+    ],
+    "unabashed_general": [
+        [
+            "unabashed",
+            "kitten"
+        ],
+        [
+            "Hi there, little one! Have your parents taught you about how kittens are born yet?",
+            "No? Oh, you poor thing.",
+            "So, you see... When one cat loves another very much...",
+            "H-Hey, r_c what are you doing?! I'm just trying to educate the clan's kits!"
+        ]
+    ],
+    "unabashed_murder": [
+        [
+            "Unabashed",
+            "Murder"
+        ],
+        [
+            "How could you, you little, fox-hearted piece of dung?",
+            "I'll gouge your eyes out the first occasion I get!"
+        ]
+    ],
+    "unabashed_murder1": [
+        [
+            "Unabashed",
+            "Murder"
+        ],
+        [
+            "Stay away from me, you murderer! I don't want anything to do with you!"
+        ]
+    ],
+    "unabashed_you_ill": [
+        [
+            "Unabashed",
+            "you_ill",
+            "you_injured"
+        ],
+        [
+            "Hey, y_c!",
+            "...Wow. You look terrible.",
+            "Is there anything I can do to help...?",
+            "Even if it's just, I dunno, grabbing some moss for you.",
+            "...I'm worried about you, y_c."
+        ]
     ]
 }

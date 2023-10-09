@@ -189,6 +189,41 @@
             "They're gonna be a killer, though. I can already tell. See those little paws? This kit's got fight in 'em!"
         ]
     ],
+    "broodingapp_toqueenapp": [
+        [
+            "no_kit",
+            "brooding"
+        ],
+        [
+            "[You notice t_c playing with some kits, a rare smile on their face.]",
+            "[They seem to notice your gaze, pausing and accidentally stumbling over a kit.]",
+            "[Nodding, you look away. It's good to see them having fun every once in a while.]"
+        ]
+    ],
+    "broodingapp_toqueenapp_2": [
+        [
+            "no_kit",
+            "brooding"
+        ],
+        [
+            "[You notice t_c playing with some kits, a rare smile on their face.]",
+            "[They seem to notice your gaze, pausing and accidentally stumbling over a kit.]",
+            "[Nodding, you look away. It's good to see them having fun every once in a while.]"
+        ]
+    ],
+    "brooding_queen": [
+        [
+            "no_kit",
+            "brooding",
+            "platonic_love"
+        ],
+        [
+            "*Sigh*",
+            "y_c \u00e2\u20ac\u00a6 Do you think I'm not \u00e2\u20ac\u00a6 'nice' enough to be a queen?",
+            "Everyone tells me that queens are supposed to be all soft and loving \u00e2\u20ac\u00a6",
+            "I just like keeping them safe."
+        ]
+    ],
     "assertive_tonewborn3_2": [
         [
             "newborn",

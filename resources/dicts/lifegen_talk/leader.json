@@ -17,6 +17,79 @@
             "... Do you ever feel guilty?"
         ]
     ],
+    "broodingapp_toqueenapp": [
+        [
+            "queen's apprentice",
+            "queen",
+            "brooding",
+            "neutral",
+            "platonic_like"
+        ],
+        [
+            "Do you know how to defend yourself?",
+            "If something were to try to harm these kits, how would you protect them?",
+            "Hm \u00e2\u20ac\u00a6 I suppose that's a \u00e2\u20ac\u00a6 decent strategy. But your form is sloppy, and your technique needs work.",
+            "Come and find me sometime, and I'll show you."
+        ]
+    ],
+    "brooding_tomedapp": [
+        [
+            "medicine cat apprentice",
+            "medicine cat",
+            "brooding"
+        ],
+        [
+            "Have you heard anything from StarClan lately?",
+            "Hmph. Of course not. How typical.",
+            "Any longer and I'll start to believe our ancestors have given up on us."
+        ]
+    ],
+    "brooding_leader": [
+        [
+            "kit",
+            "newborn",
+            "brooding",
+            "neutral"
+        ],
+        [
+            "Hm? A kit? What are you doing?",
+            "Shouldn't you be in the nursery?",
+            "The leader's den is no place for one so young \u00e2\u20ac\u00a6"
+        ]
+    ],
+    "brooding_medapp": [
+        [
+            "apprentice",
+            "brooding",
+            "dislike",
+            "random_cat"
+        ],
+        [
+            "[After a lot of pestering from the kits, you agree to show off some of the skills m_n taught you, and host a little training session.]",
+            "[t_c pads by the nursery, pausing to watch your demonstration.]",
+            "You call that a hunter's crouch? Tch\u00e2\u20ac\u00a6",
+            "Your stance is all wrong- your tail is too high and your paws are too close together.",
+            "And not to mention that mangy pelt\u00e2\u20ac\u00a6 m_n has got some work to do, that's for sure.",
+            "[t_c flicks their tail as they leave the nursery, leaving you dumbfounded as r_k looks at you confusedly.]"
+        ]
+    ],
+    "brooding_deputy": [
+        [
+            "no_kit",
+            "brooding",
+            "neutral",
+            "you_silly",
+            "you_unlawful",
+            "you_cool"
+        ],
+        [
+            "y_c. We have something to discuss.",
+            "You've been avoiding patrols lately. Don't even try to deny it.",
+            "I know you don't like to take things seriously, but this is reality. We are warriors. Face it. Or don't.",
+            "But just know that your lack of initiative could cost your clanmates shelter, food, warmth and safety. Are you willing to risk it?",
+            "[t_c glowers at you, their expression unnervingly cold. StarClan, you forgot how scary they can be when they need to \u00e2\u20ac\u00a6]"
+        ]
+    ],
     "leader_4": [
         [
             "murder",

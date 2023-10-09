@@ -1125,9 +1125,8 @@
         [
             "Move. r_s needs treatment."
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_2": [
         [
             "kitten",
             "brooding",
@@ -1135,14 +1134,13 @@
         ],
         [
             "[t_c glances at you, their tail flicking in annoyance.]",
-    "The medicine den is no place for kits like you. Go on back to the nursery.",
-    "[They turn back to their herbs, shuffling through the stores. It stays quiet for a couple moments as you make no efforts to move.]",
-    "*Sigh* … Fine. I guess you can stay.",
-    "But absolutely no touching the herbs!"
+            "The medicine den is no place for kits like you. Go on back to the nursery.",
+            "[They turn back to their herbs, shuffling through the stores. It stays quiet for a couple moments as you make no efforts to move.]",
+            "*Sigh* \u00e2\u20ac\u00a6 Fine. I guess you can stay.",
+            "But absolutely no touching the herbs!"
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_3": [
         [
             "newborn",
             "kitten",
@@ -1157,26 +1155,23 @@
             "brooding"
         ],
         [
-            "Chervil, tansy …",
+            "Chervil, tansy \u00e2\u20ac\u00a6",
             "What is it, y_c? Are you hurt? Sick?",
             "No? Good. Then leave.",
             "The medicine den is far too busy for perfectly healthy cats to be taking up space."
         ]
-        ],
-    
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_4": [
         [
             "any",
             "brooding"
         ],
         [
             "[t_c sits in the medicine den with their eyes squeezed shut, seemingly searching for something in the darkness.]",
-            "StarClan, where are you …?"
+            "StarClan, where are you \u00e2\u20ac\u00a6?"
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_5": [
         [
             "kitten",
             "apprentice",
@@ -1192,18 +1187,17 @@
             "platonic_like"
         ],
         [
-            "You … want to know if there's anything you can do to help?",
-            "Hm. Well, if you're really that desperate, I … suppose you could bring us some fresh moss?",
+            "You \u00e2\u20ac\u00a6 want to know if there's anything you can do to help?",
+            "Hm. Well, if you're really that desperate, I \u00e2\u20ac\u00a6 suppose you could bring us some fresh moss?",
             "... Thank you. You're very kind."
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_6": [
         [
             "apprentice",
             "you_assertive",
             "you_silly",
-            "you_upstanding"
+            "you_upstanding",
             "you_unlawful",
             "brooding"
         ],
@@ -1211,9 +1205,8 @@
             "Do c_nClan a favor and try not to pull any stupid stunts out there today.",
             "The medicine den is crowded enough without apprentices injuring themselves for foolish reasons."
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_7": [
         [
             "kitten",
             "brooding",
@@ -1222,11 +1215,10 @@
             "dislike"
         ],
         [
-            "Pah. Scram, kit! You're messing up the herb stores …"
+            "Pah. Scram, kit! You're messing up the herb stores \u00e2\u20ac\u00a6"
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_8": [
         [
             "kitten",
             "brooding",
@@ -1235,12 +1227,11 @@
             "dislike"
         ],
         [
-            "The medicine den is no place for a kit …",
-    "Go back to the nursery, where you're safe."
+            "The medicine den is no place for a kit \u00e2\u20ac\u00a6",
+            "Go back to the nursery, where you're safe."
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_9": [
         [
             "kitten",
             "brooding",
@@ -1249,17 +1240,16 @@
         ],
         [
             "[You've heard stories about the mean, grumpy medicine cat apprentice of c_nClan, and decide to pay them a visit.]",
-            "Tansy, horsetail …",
+            "Tansy, horsetail \u00e2\u20ac\u00a6",
             "Hm? A kit?",
-            "You … want to know what I'm doing?",
-            "[You flinch, expecting the worst … but, to your surprise, t_c actually softens.]",
+            "You \u00e2\u20ac\u00a6 want to know what I'm doing?",
+            "[You flinch, expecting the worst \u00e2\u20ac\u00a6 but, to your surprise, t_c actually softens.]",
             "Heh. You're very curious. That's good. I wish I were more curious, at your age.",
             "Right now, I'm sorting herbs. Do you want to see?",
             "[t_c spends the rest of the afternoon patiently explaining the herbs and their properties to you. Maybe you have a future in the medicine den when you're older?]"
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_10": [
         [
             "Any",
             "you_injured",
@@ -1267,12 +1257,11 @@
         ],
         [
             "*Sigh* What did you do to yourself this time, y_c?",
-            "Hold still … Tell me where it hurts.",
-            "[For their brooding and stoic demeanor, t_c's touch is surprisingly gentle …]"
+            "Hold still \u00e2\u20ac\u00a6 Tell me where it hurts.",
+            "[For their brooding and stoic demeanor, t_c's touch is surprisingly gentle \u00e2\u20ac\u00a6]"
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_11": [
         [
             "Any",
             "you_injured",
@@ -1280,12 +1269,11 @@
         ],
         [
             "*Sigh* What did you do to yourself this time, y_c?",
-            "Hold still … Tell me where it hurts.",
-            "[For their brooding and stoic demeanor, t_c's touch is surprisingly gentle …]"
+            "Hold still \u00e2\u20ac\u00a6 Tell me where it hurts.",
+            "[For their brooding and stoic demeanor, t_c's touch is surprisingly gentle \u00e2\u20ac\u00a6]"
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_12": [
         [
             "Any",
             "from_your_apprentice",
@@ -1297,9 +1285,8 @@
             "y_c, I changed the moss in all the nests, and gathered some extra to hold water for our patients.",
             "[You praise t_c for their tenacity! They blush and look away, clearly trying to hide how thrilled they are by the compliment.]"
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_13": [
         [
             "Any",
             "from_your_apprentice",
@@ -1309,17 +1296,16 @@
         ],
         [
             "y_c, r_w just came in with a thorn in their paw. They're waiting for you now.",
-            "What? You want … me to treat them?",
+            "What? You want \u00e2\u20ac\u00a6 me to treat them?",
             "Like, all by myself? Are you sure?",
-            "Um … Okay. I'll try, I guess.",
+            "Um \u00e2\u20ac\u00a6 Okay. I'll try, I guess.",
             "[t_c successfully, if a little clumsily, removes the thorn from r_w's paw, even remembering to apply the right herbs to avoid infection after.]",
             "[r_w compliments them on their gentle touch.]",
-            "Heh … S'No problem … Just doing my job.",
+            "Heh \u00e2\u20ac\u00a6 S'No problem \u00e2\u20ac\u00a6 Just doing my job.",
             "[t_c looks at you, grinning from ear to ear.]"
         ]
-        ],
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_14": [
         [
             "Any",
             "from_your_apprentice",
@@ -1329,14 +1315,12 @@
         ],
         [
             "Hm? What's that, y_c?",
-            "You … want us to do a bonding exercise, to get to know each other better as mentor and apprentice?",
+            "You \u00e2\u20ac\u00a6 want us to do a bonding exercise, to get to know each other better as mentor and apprentice?",
             "Ha. Please.",
-            "[t_c stalks off before you can even finish explaining the exercise. Clearly, you'll need to find another way of getting through to them …]"
+            "[t_c stalks off before you can even finish explaining the exercise. Clearly, you'll need to find another way of getting through to them \u00e2\u20ac\u00a6]"
         ]
-        ],
-    
-    
-    "brooding_medapp": [
+    ],
+    "brooding_medapp_15": [
         [
             "Any",
             "from_your_apprentice",
@@ -1346,13 +1330,12 @@
         ],
         [
             "[You notice your apprentice is looking a little stressed, and ask them how they're feeling.]",
-            "Um … Are you serious?",
+            "Um \u00e2\u20ac\u00a6 Are you serious?",
             "Look, can we get one thing straight, y_c? I'm your apprentice, you're my mentor, that's it. That's all this has to be.",
             "We don't need to get into any of the 'feelings' stuff, because it really isn't necessary. Got it?",
-            "[They storm off, lashing their tail. If that isn't the most brutal little cat you've ever met in your life …]"
+            "[They storm off, lashing their tail. If that isn't the most brutal little cat you've ever met in your life \u00e2\u20ac\u00a6]"
         ]
-        ],
-    
+    ],
     "sweet_medapp_18": [
         [
             "deputy",
