@@ -248,7 +248,7 @@ class TalkScreen(Screens):
         
     def get_possible_text(self, cat):
         text = ""
-        texts_list = []
+        texts_list = {}
         you = game.clan.your_cat
 
         resource_dir = "resources/dicts/lifegen_talk/"
@@ -527,10 +527,6 @@ class TalkScreen(Screens):
                 if any(i in ["hate","romantic_like","platonic_like","jealousy","dislike","comfort","respect","trust"] for i in tags):
                     continue
             
-            if "talk_dead" in talk[0]:
-                dead_cat = str(Cat.all_cats.get(choice(game.clan.starclan_cats)).name)
-                text = [t1.replace("d_c", dead_cat) for t1 in talk[1]]
-            
             if "random_cat" in talk[0]:
                 random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
                 counter = 0
@@ -540,25 +536,46 @@ class TalkScreen(Screens):
                         continue
                     random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
                 text = [t1.replace("r_c", str(random_cat.name)) for t1 in talk[1]]
-                texts_list.append(text)
+                texts_list[talk_key] = text
                 continue
            
-            texts_list.append(talk[1])
+            texts_list[talk_key] = talk[1]
             
         if not texts_list:
             resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
-            texts_list.append(possible_texts['general'][1])
+            texts_list[possible_texts['general'][0]] = possible_texts['general'][1]
 
-        text = choice(texts_list)
-        new_text = self.get_adjusted_txt(text, cat)
-        while not new_text:
-            text = choice(texts_list)
+        max_retries = 30
+        counter = 0
+        if len(game.clan.talks) > 50:
+            game.clan.talks.clear()
+        while counter < max_retries:
+            text_chosen_key = choice(list(texts_list.keys()))
+            text = texts_list[text_chosen_key]
             new_text = self.get_adjusted_txt(text, cat)
+            
+            if text_chosen_key not in game.clan.talks and new_text:
+                game.clan.talks.append(text_chosen_key)
+                print(game.clan.talks)
+                return new_text
+
+            counter += 1
+
+        text_chosen_key = choice(list(texts_list.keys()))
+        text = texts_list[text_chosen_key]
+        new_text = self.get_adjusted_txt(text, cat)
+        counter = 0
+        while not new_text:
+            text_chosen_key = choice(list(texts_list.keys()))
+            text = texts_list[text_chosen_key]
+            new_text = self.get_adjusted_txt(text, cat)
+            counter +=1
+            if counter == 30:
+                break
         return new_text
-        
         #TODO: y_m, y_k, y_p, y_s
 
     def get_adjusted_txt(self, text, cat):

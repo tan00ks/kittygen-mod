@@ -132,6 +132,7 @@ class Clan():
         self.inheritance = {}
         self.murdered = False
         self.achievements = []
+        self.talks = []
         
         # Init Settings
         self.clan_settings = {}
@@ -468,6 +469,7 @@ class Clan():
             [str(i.temperament) for i in self.all_clans])
         clan_data["war"] = self.war
         clan_data['achievements'] = self.achievements
+        clan_data['talks'] = self.talks
 
         self.save_herbs(game.clan)
         self.save_disaster(game.clan)
@@ -787,6 +789,9 @@ class Clan():
         
         if "achievements" in clan_data:
             game.clan.achievements = clan_data["achievements"]
+        
+        if "talks" in clan_data:
+            game.clan.talks = clan_data["talks"]
 
         # Return Version Info. 
         return {
