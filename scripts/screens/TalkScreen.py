@@ -557,7 +557,7 @@ class TalkScreen(Screens):
         while not new_text:
             text = choice(texts_list)
             new_text = self.get_adjusted_txt(text, cat)
-        return text
+        return new_text
         
         #TODO: y_m, y_k, y_p, y_s
 

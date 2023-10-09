@@ -1170,7 +1170,9 @@
     ],
     "introspective_Med_5": [
         [
-            "any",
+            "warrior",
+            "deputy",
+            "leader",
             "introspective"
         ],
         [
@@ -1180,7 +1182,7 @@
             "... Huh? Oh, y_c. I didn't think I'd see you here today. Are you on a hunting patrol?",
             "Huh? What's this? It's marigold, I use it to help heal general wounds. It's a wonderfully helpful herb.",
             "And it looks beautiful too. I... almost hate having to grab it, because they're so beautiful to watch grow. But the clan needs them too.",
-            "Imagine how bad wounds can get without Marigold to help. You could lose a leg by infection at worst.",
+            "Imagine how bad wounds can get without marigold to help. You could lose a leg by infection at worst.",
             "So getting it is far more essential than my desire to watch it. Plus I'm not grabbing all of it, there will be enough for it to grow back",
             "... Anyways, you've got a hunt to get back to, and I need to get these back to the herb store, in case they're needed. You have a wonderful rest of your day, May StarClan light your path, y_c."
         ]

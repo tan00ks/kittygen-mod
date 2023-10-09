@@ -440,7 +440,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "Despite your best efforts, you're unable to find any marigold. You've forogtten what it looks like -- all of these plants look the same!",
+                "text": "Despite your best efforts, you're unable to find any marigold. You've forgotten what it looks like -- all of these plants look the same!",
                 "exp": 0,
                 "weight": 20
             }

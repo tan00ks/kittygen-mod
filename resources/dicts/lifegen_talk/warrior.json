@@ -1440,7 +1440,7 @@
         ],
         [
             "Hey, furbag. I brought you something!",
-            "[r_c lays a colorful feather at your paws.",
+            "[r_c lays a colorful feather at your paws.]",
             "I know this is your favorite color, and you miss exploring the territory. So I knew I just had to bring it to you.",
             "Yeah, yeah, don't get all soft on me, hehe. Wanna grab a meal together?"
         ]
@@ -2270,6 +2270,19 @@
         [
             "Hey there y_c! I currently have the energy of a kit whose been stuck inside the nursery for a moon, so I was wondering if you could maybe squeeze me into the dawn patrol?",
             "And maybe a few hunting patrols while your at it and...oh! A border patrol or two?"
+        ]
+    ],
+    "assertive_newleaf1": [
+        [
+            "Any",
+            "assertive",
+            "newleaf",
+            "brooding"
+        ],
+        [
+            "AH-CHOO!",
+            "What? Allergies? Please, y_c. I'm a fearsome warrior of c_nClan, I'm made of tougher stuff than thah ... AH ...",
+            "AH-CHOO!"
         ]
     ]
 }

@@ -379,7 +379,7 @@
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "It is r_c! They bound towards you, purring that they didn't know anyone else in c_nClan who trained in the Dark Forest! The two of you walk side by side, discussing training plans, hopes and dreams, and planning your future together as training mates.",
+                "text": "It is r_c! They bound towards you, purring that they didn't know anyone else in c_n who trained in the Dark Forest! The two of you walk side by side, discussing training plans, hopes and dreams, and planning your future together as training mates.",
                 "exp": 20,
                 "weight": 20
             },
