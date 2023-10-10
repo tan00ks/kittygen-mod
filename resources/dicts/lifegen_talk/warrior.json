@@ -2284,5 +2284,100 @@
             "What? Allergies? Please, y_c. I'm a fearsome warrior of c_nClan, I'm made of tougher stuff than thah ... AH ...",
             "AH-CHOO!"
         ]
+    ],
+    "brooding_newborn": [
+        [
+            "newborn",
+            "brooding"
+        ],
+        [
+            "[t_c sits at a distance, occasionally sneaking glances at you.]"
+        ]
+    ],
+    "cool_newborn": [
+        [
+            "newborn",
+            "cool",
+            "non-related"
+        ],
+        [
+            "[t_c nearly passes you by, before they notice and saunter closer.]",
+            "Well, hey there, little one! Made your grand entrance, I see?",
+            "[They prod you with a paw. You meow at them.]",
+            "So CUTE!"
+        ]
+    ],
+    "upstanding_newborn": [
+        [
+            "newborn",
+            "upstanding"
+        ],
+        [
+            "[You take a few wobbly steps towards t_c.]",
+            "Little y_c! Ready for your first patrol already?",
+            "[t_c chuckles to themself.]"
+        ]
+    ],
+    "introspective_newborn": [
+        [
+            "newborn",
+            "introspective"
+        ],
+        [
+            "[t_c looks at you, reaching out to prod at your tiny paws. You mew.]",
+            "It's fascinating... Cats start out so small..."
+        ]
+    ],
+    "neurotic_newborn": [
+        [
+            "neurotic",
+            "newborn"
+        ],
+        [
+            "You're too young to talk... aren't you?",
+            "Um... you can come back when you're older."
+        ]
+    ],
+    "silly_newborn": [
+        [
+            "silly",
+            "newborn"
+        ],
+        [
+            "[t_c hides their face in their paws. You tilt your head, confused.]",
+            "Peek-a-boo!",
+            "[They uncover their face, and you giggle.]"
+        ]
+    ],
+    "stable_newborn": [
+        [
+            "stable",
+            "sweet",
+            "newborn"
+        ],
+        [
+            "[t_c approaches, nuzzling your forehead. They laugh.]",
+            "You are just so sweet!"
+        ]
+    ],
+    "unabashed_newborn": [
+        [
+            "unabashed",
+            "newborn"
+        ],
+        [
+            "[t_c pokes you with a paw. You mew in response.]",
+            "[They poke you again.]"
+        ]
+    ],
+    "unlawful_newborn": [
+        [
+            "unlawful",
+            "newborn"
+        ],
+        [
+            "[t_c eyes you.]",
+            "Heh, so small."
+        ]
     ]
 }
