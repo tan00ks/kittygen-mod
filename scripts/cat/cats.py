@@ -2021,6 +2021,9 @@ class Cat():
             return False
         if self.status == "queen's apprentice" and potential_mentor.status != 'queen':
             return False
+        
+        if potential_mentor.moons < 0:
+            return False
 
         # If not an app, don't need a mentor
         if 'apprentice' not in self.status:
