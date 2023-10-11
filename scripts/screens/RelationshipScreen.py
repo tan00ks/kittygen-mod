@@ -473,6 +473,15 @@ class RelationshipScreen(Screens):
                 if search_text.lower() in str(cat.cat_to.name).lower():
                     search_cats.append(cat)
             self.filtered_cats = search_cats
+        
+        seen = set()
+        uniq = []
+        for x in self.filtered_cats:
+            if x not in seen:
+                uniq.append(x)
+                seen.add(x)
+        if len(seen) != len(uniq):
+            print("duplicates: " + seen)
 
     def update_cat_page(self):
         for ele in self.relation_list_elements:
