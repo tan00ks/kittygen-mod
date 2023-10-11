@@ -535,6 +535,7 @@ class Events:
         num_siblings = random.choice([0,1,2,3])
         siblings, sibling_text = self.create_siblings(num_siblings)
         birth_type = random.randint(1,6)
+        birth_type = 6
         if birth_type == 1:
             game.clan.your_cat.backstory = random.choice(["abandoned1", "abandoned2", "abandoned3", "abandoned4", "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5", "orphaned6"])
             return self.handle_birth_no_parents(siblings, sibling_text)
@@ -615,9 +616,9 @@ class Events:
         counter = 0
         while parent1 == parent2 or Cat.all_cats[parent1].age != Cat.all_cats[parent2].age:
             counter+=1
+            parent2 = self.pick_valid_parent()
             if counter > 30:
-                game.clan.your_cat.parent2 = None
-                return self.handle_birth_one_parent(siblings, sibling_text)
+                return self.handle_birth_no_parents(siblings, sibling_text)
         thought = "Is happy their kits are safe"
         blood_parent = create_new_cat(Cat, Relationship,
                                         status=random.choice(["loner", "kittypet"]),
