@@ -836,7 +836,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You go out hunting with your mentor",
+        "intro_text": "You go out hunting with your mentor.",
         "decline_text": "You decide not to go hunting so you practice your battle moves instead.",
         "chance_of_success": 40,
         "success_outcomes": [
@@ -874,7 +874,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You go out hunting with your mentor",
+        "intro_text": "You go out hunting with your mentor.",
         "decline_text": "You decide not to go hunting so you practice your battle moves instead.",
         "chance_of_success": 40,
         "success_outcomes": [
@@ -988,7 +988,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You decide to take some time to perfect you hunting technique",
+        "intro_text": "You decide to take some time to perfect your hunting technique.",
         "decline_text": "You decide that your battle skills need more work and practice on that instead.",
         "chance_of_success": 40,
         "success_outcomes": [
@@ -1026,7 +1026,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You decide to take some time to perfect you fighting techniques.",
+        "intro_text": "You decide to take some time to perfect your fighting techniques.",
         "decline_text": "You decide that your hunting techniques need more work and you practice that instead.",
         "chance_of_success": 40,
         "success_outcomes": [
