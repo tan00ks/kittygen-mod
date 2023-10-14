@@ -246,7 +246,7 @@
             "random_cat"
         ],
         [
-            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon you get magic powers!",
+            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon, you get magic powers!",
             "What? It's totally real, they wouldn't lie to me like that! I prommissseee."
         ]
     ],
@@ -786,7 +786,7 @@
         [
             "r_c just told me the funniest joke ever!",
             "It went like - heehee - how did the *snrk* - how did the - AHAHAHA!!!",
-            "[t_c can't even seem to get through their own joke without dissolving into a fit of giggles!"
+            "[t_c can't even seem to get through their own joke without dissolving into a fit of giggles!]"
         ]
     ],
     "introspective_kit": [
@@ -1981,7 +1981,7 @@
             "comfort"
         ],
         [
-            "[You spot t_c trembling in a one of the corners of the nursery.]",
+            "[You spot t_c trembling in one of the corners of the nursery.]",
             "r_k t-told me a really s-s-scary story about a big monster that c-comes and eats kits who are naughty.",
             "Eep! There it is now!",
             "[t_c hides behind your tail from the scary monster ... which is, in fact, just a pile of leaves.]"

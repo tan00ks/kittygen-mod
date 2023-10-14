@@ -377,7 +377,7 @@
         ],
         [
             "y_c? Do you have a moment to spare?",
-            "I heard you got into an argument with your mentor, the other day. They've told me that you trespassed into another clan's territory, but I wanted to hear what happened from your perspective.",
+            "I heard you got into an argument with your mentor the other day. They've told me that you trespassed into another clan's territory, but I wanted to hear what happened from your perspective.",
             "... Okay. Thank you for your time, y_c.",
             "[They trot off quickly, not allowing you another word. They must be busy!]"
         ]
@@ -417,7 +417,7 @@
             "I'm not going to chase you around camp. I'll be here for when you want my help.",
             "[t_c trots towards you.]",
             "Oh hi, y_c. Sorry about that. r_c's clearly upset about something, but refuses to tell me what...",
-            "Just need to let them come back to me. They will, I think they need space. Have you eaten today? We can share some freshkill while I'm here."
+            "Just need to let them come back to me. They will, but I think they need space. Have you eaten today? We can share some freshkill while I'm here."
         ]
     ],
     "introspective_mdtor_2": [
@@ -478,7 +478,7 @@
             "introspective"
         ],
         [
-            "[t_c is sat watching two of your clanmates argue with each other, with fascination]",
+            "[t_c is sat watching two of your clanmates argue with each other, with fascination.]",
             "[One of them calls the other a half-clan foxheart. Quite brutal. Why is t_c not saying anything?]",
             "[... A giant jaybird flies out of a tree just behind the arguing cats.]",
             "[t_c seems to come to awareness of what's going on around them, and they rush over to deal with the yelling cats.]"
