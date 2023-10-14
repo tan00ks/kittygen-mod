@@ -719,6 +719,12 @@ class Cat():
 
         elif self.status == 'medicine cat apprentice':
             pass
+        
+        elif self.status == 'mediator apprentice':
+            pass
+        
+        elif self.status == "queen's apprentice":
+            pass
 
         elif self.status == 'warrior':
             if old_status == 'leader':
