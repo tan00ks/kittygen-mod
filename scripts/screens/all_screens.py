@@ -37,7 +37,7 @@ from .LifeGenPatrolScreen import LifeGenPatrolScreen
 from .DFPatrolScreen import DFPatrolScreen
 from .DatePatrolScreen import DatePatrolScreen
 from .AffairScreen import AffairScreen
-
+from .CustomizeScreen import CustomizeScreen
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
 # ---------------------------------------------------------------------------- #
@@ -108,3 +108,4 @@ patrol_screen2 = LifeGenPatrolScreen('patrol screen')
 patrol_screen3 = DFPatrolScreen('patrol screen3')
 patrol_screen4 = DatePatrolScreen('patrol screen4')
 
+customize_screen = CustomizeScreen('customize screen')
