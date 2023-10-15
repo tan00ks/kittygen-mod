@@ -92,20 +92,148 @@ class CustomizeScreen(Screens):
                                    your_cat.ID,
                                    starting_height=0, manager=MANAGER)
         
+        column1_x = 300  # x-coordinate for column 1
+        column2_x = 700  # x-coordinate for column 2
+        column3_x = 1100  # x-coordinate for column 3
+        y_pos = [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200]
+        
+        pelts = list(Pelt.sprites_names.keys())
+        pelts.remove("Tortie")
+        pelts.remove("Calico")
+        self.elements['pelt dropdown'] = pygame_gui.elements.UIDropDownMenu(pelts, "SingleColour", scale(pygame.Rect((column1_x, y_pos[0]),(250,70))), manager=MANAGER)
+        self.elements['pelt color'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_colours, "WHITE", scale(pygame.Rect((column1_x, y_pos[1]),(250,70))), manager=MANAGER)
+        self.elements['eye color'] = pygame_gui.elements.UIDropDownMenu(Pelt.eye_colours, "BLUE", scale(pygame.Rect((column1_x, y_pos[2]),(250,70))), manager=MANAGER)
+        self.elements['eye color2'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.eye_colours, "None", scale(pygame.Rect((column1_x, y_pos[3]),(250,70))), manager=MANAGER)
+        self.elements['white patches'] = pygame_gui.elements.UIDropDownMenu(["None", "FULLWHITE"] + Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white, "None", scale(pygame.Rect((column1_x, y_pos[4]),(250,70))), manager=MANAGER)
+        self.elements['pelt length'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_length, "short", scale(pygame.Rect((column1_x, y_pos[5]), (250, 70))), manager=MANAGER)
+        
+        self.elements['paralyzed'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[0]), (250, 70))), manager=MANAGER)
+        self.elements['reverse'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[1]), (250, 70))), manager=MANAGER)
+        self.elements['scars'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.scars1 + Pelt.scars2 + Pelt.scars3, "None", scale(pygame.Rect((column2_x, y_pos[2]), (250, 70))), manager=MANAGER)
+        self.elements['vitiligo'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.vit, "None", scale(pygame.Rect((column2_x, y_pos[3]), (250, 70))), manager=MANAGER)
+        self.elements['points'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.point_markings, "None", scale(pygame.Rect((column2_x, y_pos[4]), (250, 70))), manager=MANAGER)
+        self.elements['tint'] = pygame_gui.elements.UIDropDownMenu(["pink", "gray", "red", "orange", "None"], "None", scale(pygame.Rect((column2_x, y_pos[5]), (250, 70))), manager=MANAGER)
+        
+        self.elements['skin'] = pygame_gui.elements.UIDropDownMenu(Pelt.skin_sprites, "BLACK", scale(pygame.Rect((column3_x, y_pos[0]), (250, 70))), manager=MANAGER)
+        self.elements['white_patches_tint'] = pygame_gui.elements.UIDropDownMenu(["None"] + ["none", "offwhite", "offwhite"], "None", scale(pygame.Rect((column3_x, y_pos[1]), (250, 70))), manager=MANAGER)
+        
+        self.elements['tortie'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column3_x, y_pos[2]), (250, 70))), manager=MANAGER)
+        self.elements['pattern'] = pygame_gui.elements.UIDropDownMenu(Pelt.tortiepatterns, "ONE", scale(pygame.Rect((column3_x, y_pos[3]), (250, 70))), manager=MANAGER)
+        self.elements['tortiebase'] = pygame_gui.elements.UIDropDownMenu(Pelt.tortiebases, "single", scale(pygame.Rect((column3_x, y_pos[4]), (250, 70))), manager=MANAGER)
+        self.elements['tortiecolor'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_colours, "GINGER", scale(pygame.Rect((column3_x, y_pos[5]), (250, 70))), manager=MANAGER)
+        self.elements['tortiepattern'] = pygame_gui.elements.UIDropDownMenu(pelts, "Bengal", scale(pygame.Rect((column3_x, y_pos[6]), (250, 70))), manager=MANAGER)
 
-        self.elements['pelt dropdown'] = pygame_gui.elements.UIDropDownMenu(Pelt.sprites_names.keys(), "SingleColour", scale(pygame.Rect((300,500),(200,100))), manager=MANAGER)
-        self.elements['pelt color'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_colours, "WHITE", scale(pygame.Rect((300,600),(200,100))), manager=MANAGER)
-
+        # tortie_pattern + cat.pelt.tortiecolour + cat_sprite
+        self.elements['pattern'].disable()
+        self.elements['tortiebase'].disable()
+        self.elements['tortiecolor'].disable()
+        self.elements['tortiepattern'].disable()
 
     def handle_event(self, event):
         if event.type == pygame_gui.UI_DROP_DOWN_MENU_CHANGED:
+            
             if event.ui_element == self.elements['pelt dropdown']:
                 self.name = event.text
                 self.update_sprite()
-            if event.ui_element == self.elements['pelt color']:
+            elif event.ui_element == self.elements['pelt color']:
                 self.colour = event.text
                 self.update_sprite()
+            elif event.ui_element == self.elements['eye color']:
+                self.eye_color = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['eye color2']:
+                if event.text == "None":
+                    self.eye_colour2 = None
+                else:
+                    self.eye_colour2 = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['white patches']:
+                if event.text == "None":
+                    self.white_patches = None
+                else:
+                    self.white_patches = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['pelt length']:
+                self.length = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['scars']:
+                if event.text == "None":
+                    self.scars = None
+                else:
+                    self.scars = [event.text]
+                self.update_sprite()
+            elif event.ui_element == self.elements['tortie']:
+                if event.text == "Yes":
+                    self.name = "Tortie"
+                    self.elements['pelt dropdown'].disable()
+                    self.elements['pattern'].enable()
+                    self.elements['tortiebase'].enable()
+                    self.elements['tortiecolor'].enable()
+                    self.elements['tortiepattern'].enable()
+                    
+                    self.pattern = "ONE"
+                    self.tortiepattern = "bengal"
+                    self.tortiebase = "single"
+                    self.tortiecolour = "GINGER"
+                else:
+                    self.name = "SingleColour"
+                    self.elements['pelt dropdown'].enable()
+                    self.elements['pattern'].disable()
+                    self.elements['tortiebase'].disable()
+                    self.elements['tortiecolor'].disable()
+                    self.elements['tortiepattern'].disable()
+                    self.pattern = None
+                    self.tortiebase = None
+                    self.tortiepattern = None
+                    self.tortiecolour = None
+                self.update_sprite()
                 
+            elif event.ui_element == self.elements['tortiecolor']:
+                self.tortiecolour = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['pattern']:
+                self.pattern = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['tortiepattern']:
+                self.tortiepattern = event.text.lower()
+                self.update_sprite()
+            elif event.ui_element == self.elements['tortiebase']:
+                self.tortiebase = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['vitiligo']:
+                if event.text == "None":
+                    self.vitiligo = None
+                else:
+                    self.vitiligo = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['points']:
+                if event.text == "None":
+                    self.points = None
+                else:
+                    self.points = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['paralyzed']:
+                self.paralyzed = (event.text == "Yes")
+                self.update_sprite()
+            elif event.ui_element == self.elements['tint']:
+                if event.text == "None":
+                    self.tint = None
+                else:
+                    self.tint = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['skin']:
+                self.skin = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['white_patches_tint']:
+                if event.text == "None":
+                    self.white_patches_tint = None
+                else:
+                    self.white_patches_tint = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['reverse']:
+                self.reverse = (event.text == "Yes")
+                self.update_sprite
+            
     def update_sprite(self):
         pelt2 = Pelt(
             name=self.name,
