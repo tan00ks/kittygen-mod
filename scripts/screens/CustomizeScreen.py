@@ -26,7 +26,7 @@ from scripts.game_structure.game_essentials import game, screen
 class CustomizeScreen(Screens):
     def __init__(self, name=None):
         super().__init__(name)
-        self.your_cat = None
+        self.custom_cat = None
         self.elements = {}
         self.name="SingleColour"
         self.length="short"
@@ -85,12 +85,12 @@ class CustomizeScreen(Screens):
             reverse=self.reverse,
             accessories=self.accessories
         )
-        self.your_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
-        self.your_cat.sprite = generate_sprite(self.your_cat)
+        self.custom_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
+        self.custom_cat.sprite = generate_sprite(self.custom_cat)
         self.elements["sprite"] = UISpriteButton(scale(pygame.Rect
                                          ((700,100), (200, 200))),
-                                   self.your_cat.sprite,
-                                   self.your_cat.ID,
+                                   self.custom_cat.sprite,
+                                   self.custom_cat.ID,
                                    starting_height=0, manager=MANAGER)
         
         column1_x = 200  # x-coordinate for column 1
@@ -243,16 +243,16 @@ class CustomizeScreen(Screens):
                 self.update_sprite()
             elif event.ui_element == self.elements['permanent conditions']:
                 chosen_condition = event.text
-                self.your_cat.get_permanent_condition(chosen_condition, True)
+                self.custom_cat.get_permanent_condition(chosen_condition, True)
                 # assign scars
                 if chosen_condition in ['lost a leg', 'born without a leg']:
-                    self.your_cat.pelt.scars.append('NOPAW')
+                    self.custom_cat.pelt.scars.append('NOPAW')
                 elif chosen_condition in ['lost their tail', 'born without a tail']:
-                    self.your_cat.pelt.scars.append("NOTAIL")
+                    self.custom_cat.pelt.scars.append("NOTAIL")
                 self.update_sprite()
         elif event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.elements['done']:
-                game.switches['custom_cat'] = self.your_cat
+                game.switches['custom_cat'] = self.custom_cat
                 self.change_screen("make clan screen")
             
     def update_sprite(self):
@@ -284,13 +284,13 @@ class CustomizeScreen(Screens):
             reverse=self.reverse,
             accessories=self.accessories
         )
-        self.your_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
-        self.your_cat.sprite = generate_sprite(self.your_cat)
+        self.custom_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
+        self.custom_cat.sprite = generate_sprite(self.custom_cat)
         self.elements['sprite'].kill()
         self.elements["sprite"] = UISpriteButton(scale(pygame.Rect
                                          ((700,100), (200, 200))),
-                                   self.your_cat.sprite,
-                                   self.your_cat.ID,
+                                   self.custom_cat.sprite,
+                                   self.custom_cat.ID,
                                    starting_height=0, manager=MANAGER)
         
 
