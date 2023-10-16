@@ -26,6 +26,7 @@ from scripts.game_structure.game_essentials import game, screen
 class CustomizeScreen(Screens):
     def __init__(self, name=None):
         super().__init__(name)
+        self.your_cat = None
         self.elements = {}
         self.name="SingleColour"
         self.length="short"
@@ -84,22 +85,25 @@ class CustomizeScreen(Screens):
             reverse=self.reverse,
             accessories=self.accessories
         )
-        your_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
-        your_cat.sprite = generate_sprite(your_cat)
+        self.your_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
+        self.your_cat.sprite = generate_sprite(self.your_cat)
         self.elements["sprite"] = UISpriteButton(scale(pygame.Rect
-                                         ((500,100), (200, 200))),
-                                   your_cat.sprite,
-                                   your_cat.ID,
+                                         ((700,100), (200, 200))),
+                                   self.your_cat.sprite,
+                                   self.your_cat.ID,
                                    starting_height=0, manager=MANAGER)
         
-        column1_x = 300  # x-coordinate for column 1
+        column1_x = 200  # x-coordinate for column 1
         column2_x = 700  # x-coordinate for column 2
-        column3_x = 1100  # x-coordinate for column 3
-        y_pos = [300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200]
+        column3_x = 1200  # x-coordinate for column 3
+        y_pos = [400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300]
         
         pelts = list(Pelt.sprites_names.keys())
         pelts.remove("Tortie")
         pelts.remove("Calico")
+        
+        permanent_conditions = ['born without a leg', 'weak leg', 'twisted leg', 'born without a tail', 'paralyzed', 'raspy lungs', 'wasting disease', 'blind', 'one bad eye', 'failing eyesight', 'partial hearing loss', 'deaf', 'constant joint pain', 'seizure prone', 'allergies', 'persistent headaches']
+        
         self.elements['pelt dropdown'] = pygame_gui.elements.UIDropDownMenu(pelts, "SingleColour", scale(pygame.Rect((column1_x, y_pos[0]),(250,70))), manager=MANAGER)
         self.elements['pelt color'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_colours, "WHITE", scale(pygame.Rect((column1_x, y_pos[1]),(250,70))), manager=MANAGER)
         self.elements['eye color'] = pygame_gui.elements.UIDropDownMenu(Pelt.eye_colours, "BLUE", scale(pygame.Rect((column1_x, y_pos[2]),(250,70))), manager=MANAGER)
@@ -123,15 +127,19 @@ class CustomizeScreen(Screens):
         self.elements['tortiecolor'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_colours, "GINGER", scale(pygame.Rect((column3_x, y_pos[5]), (250, 70))), manager=MANAGER)
         self.elements['tortiepattern'] = pygame_gui.elements.UIDropDownMenu(pelts, "Bengal", scale(pygame.Rect((column3_x, y_pos[6]), (250, 70))), manager=MANAGER)
 
+        self.elements['permanent conditions'] = pygame_gui.elements.UIDropDownMenu(["None"] + permanent_conditions, "None", scale(pygame.Rect((column3_x, y_pos[7]), (250, 70))), manager=MANAGER)
+        
         # tortie_pattern + cat.pelt.tortiecolour + cat_sprite
         self.elements['pattern'].disable()
         self.elements['tortiebase'].disable()
         self.elements['tortiecolor'].disable()
         self.elements['tortiepattern'].disable()
+        
+        self.elements['done'] = pygame_gui.elements.UIButton(scale(pygame.Rect((700, 1400),(100,50))), "Done", manager=MANAGER)
 
     def handle_event(self, event):
+        
         if event.type == pygame_gui.UI_DROP_DOWN_MENU_CHANGED:
-            
             if event.ui_element == self.elements['pelt dropdown']:
                 self.name = event.text
                 self.update_sprite()
@@ -232,7 +240,20 @@ class CustomizeScreen(Screens):
                 self.update_sprite()
             elif event.ui_element == self.elements['reverse']:
                 self.reverse = (event.text == "Yes")
-                self.update_sprite
+                self.update_sprite()
+            elif event.ui_element == self.elements['permanent conditions']:
+                chosen_condition = event.text
+                self.your_cat.get_permanent_condition(chosen_condition, True)
+                # assign scars
+                if chosen_condition in ['lost a leg', 'born without a leg']:
+                    self.your_cat.pelt.scars.append('NOPAW')
+                elif chosen_condition in ['lost their tail', 'born without a tail']:
+                    self.your_cat.pelt.scars.append("NOTAIL")
+                self.update_sprite()
+        elif event.type == pygame_gui.UI_BUTTON_START_PRESS:
+            if event.ui_element == self.elements['done']:
+                game.switches['custom_cat'] = self.your_cat
+                self.change_screen("make clan screen")
             
     def update_sprite(self):
         pelt2 = Pelt(
@@ -263,13 +284,13 @@ class CustomizeScreen(Screens):
             reverse=self.reverse,
             accessories=self.accessories
         )
-        your_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
-        your_cat.sprite = generate_sprite(your_cat)
+        self.your_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
+        self.your_cat.sprite = generate_sprite(self.your_cat)
         self.elements['sprite'].kill()
         self.elements["sprite"] = UISpriteButton(scale(pygame.Rect
-                                         ((500,100), (200, 200))),
-                                   your_cat.sprite,
-                                   your_cat.ID,
+                                         ((700,100), (200, 200))),
+                                   self.your_cat.sprite,
+                                   self.your_cat.ID,
                                    starting_height=0, manager=MANAGER)
         
 
