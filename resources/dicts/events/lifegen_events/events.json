@@ -14,21 +14,26 @@
         "r_k plays a game of mossball, but seems to pointedly exclude you.",
         "y_p comes back with a huge, colorful bird, and regales you with the tale of the chase! You listen in awe.",
         "You and y_s spend the whole day brainstorming about your full names together! You hope you'll be given matching ones.",
-        "y_s refuses to play with you so you complain to y_p, who forces them to apologize. Later, they prank you with thorns in your nest later as revenge.",
-        "You and y_s take a nap together after a long day of playing. You cuddle together into a warm pile of fluff.",
-        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!"
+        "y_s refuses to play with you so you complain to y_p, who forces them to apologize. Later, they prank you with thorns in your nest as revenge.",
+        "You and y_s take a nap together after a long day of playing. You cuddle together into a warm pile of fluff."
     ],
     "kitten assertive": [
-
+        "You watch the battle-scarred warriors coming back into camp from the border patrol, eyes wide. You hope you'll be just like them someday!",
+        "y_p scolds you for playing too roughly with your sibling y_s, and makes you apologize. You stick out your tongue at them for being such a tattle-tail.",
+        "You and r_k have a yowling competition, which stresses out y_p so much that they have to take a break and unload you onto the queens.",
+        "You're so filled with energy that you spend the entire afternoon chasing your own tail!",
+        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!"
     ],
     "kitten brooding": [
-
+        
     ],
     "kitten cool": [
 
     ],
     "kitten upstanding": [
-        "r_q lectures about the basics of the Warrior Code. You make it a point to memorize each rule, hoping to get a head start on your apprenticeship."
+        "r_q lectures about the basics of the Warrior Code. You make it a point to memorize each rule, hoping to get a head start on your apprenticeship.",
+        "The deputy visits the nursery to teach the kits about border safety, and you're thrilled to answer all their questions correctly. Maybe you'll be their deputy someday!",
+        
     ],
     "kitten introspective": [
 
@@ -37,7 +42,7 @@
 
     ],
     "kitten silly": [
-
+        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!"
     ],
     "kitten stable": [
 
@@ -49,7 +54,10 @@
 
     ],
     "kitten unlawful": [
-        "r_q lectures about the basics of the Warrior Code, but you don't pay attention. Rules are boring, you'd much rather be outside playing mossball!"
+        "r_q lectures about the basics of the Warrior Code, but you don't pay attention. Rules are boring, you'd much rather be outside playing mossball!",
+        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
+        "You poke your nose outside camp when none of the warriors are looking, and are amazed by the sights and smells of the vast territory."
+
     ],
     "kitten rare": [
         "One night, as you sneak out of the nursery, you look up to see brilliant streaks of white light traveling across the sky. You watch the meteor shower, your eyes wide with amazement and wonder."
