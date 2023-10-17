@@ -965,7 +965,7 @@ class MakeClanScreen(Screens):
                                                    object_id="#next_step_button", manager=MANAGER)
         self.elements['next_step'].disable()
         
-        self.elements['customize'] = pygame_gui.elements.UIButton(scale(pygame.Rect((400,100),(100,50))), "customize", object_id="#small_button", manager=MANAGER)
+        self.elements['customize'] = UIImageButton(scale(pygame.Rect((400,100),(60,60))), "", object_id="#events_cat_button", manager=MANAGER)
 
         # draw cats to choose from
         self.refresh_cat_images_and_info()
@@ -1128,7 +1128,7 @@ class MakeClanScreen(Screens):
             scale(pygame.Rect((column3_x, y_pos[5] - 40),(1200,-1))),
             object_id=get_text_box_theme("#text_box_22_horizleft"), manager=MANAGER
         )
-        self.elements['tint text'] = pygame_gui.elements.UITextBox(
+        self.elements['tint text2'] = pygame_gui.elements.UITextBox(
             'Patch pattern',
             scale(pygame.Rect((column3_x, y_pos[6] - 40),(1200,-1))),
             object_id=get_text_box_theme("#text_box_22_horizleft"), manager=MANAGER
