@@ -280,7 +280,7 @@ class FlirtScreen(Screens):
             "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful"],
             "neurotic": ["nervous", "insecure", "lonesome"],
             "silly": ["troublesome", "childish", "playful", "strange"],
-            "stable": ["loyal", "responsible", "wise", "faithful"],
+            "stable": ["loyal", "responsible", "wise", "faithful", "polite", "disciplined", "patient"],
             "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere"],
             "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant"],
             "unlawful": ["troublesome", "bloodthirsty", "sneaky", "rebellious"]
