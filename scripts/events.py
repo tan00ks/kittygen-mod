@@ -31,7 +31,7 @@ from scripts.events_module.outsider_events import OutsiderEvents
 from scripts.event_class import Single_Event
 from scripts.game_structure.game_essentials import game
 from scripts.cat_relations.relationship import Relationship
-from scripts.utility import get_alive_kits, get_med_cats, ceremony_text_adjust, \
+from scripts.utility import get_alive_kits, get_alive_apps, get_med_cats, ceremony_text_adjust, \
     get_current_season, adjust_list_text, ongoing_event_text_adjust, event_text_adjust, create_new_cat
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
@@ -673,10 +673,58 @@ class Events:
         game.cur_events_list.append(Single_Event(birth_txt))
         self.w_done = False
         game.clan.your_cat.age = "newborn"
+        
+    def get_living_cats(self):
+        living_cats = []
+        for the_cat in Cat.all_cats_list:
+            if not the_cat.dead and the_cat.outside:
+                living_cats.append(the_cat)
+        return living_cats
+        
+    def adjust_txt(self, text):
+        if "r_c" in text:
+            alive_cats = self.get_living_cats()
+            alive_cat = random.choice(alive_cats)
+            while alive_cat.ID == game.clan.your_cat.ID:
+                alive_cat = random.choice(alive_cat)
+            text = text.replace("r_k", str(alive_cat.name))
+        if "r_k" in text:
+            alive_kits = get_alive_kits(Cat)
+            if len(alive_kits) <= 1:
+                return ""
+            alive_kit = random.choice(alive_kits)
+            while alive_kit.ID == game.clan.your_cat.ID:
+                alive_kit = random.choice(alive_kit)
+            text = text.replace("r_k", str(alive_kit.name))
+        if "r_a" in text:
+            alive_apps = get_alive_apps(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_k", str(alive_app.name))
+        if "l_n" in text:
+            if game.clan.leader is None:
+                return ""
+            if game.clan.leader.dead or game.clan.leader.outside:
+                return ""
+            text = text.replace("l_n", str(game.clan.leader.name))
+        if "d_n" in text:
+            if game.clan.deputy is None:
+                return ""
+            if game.clan.deputy.dead or game.clan.deputy.outside:
+                return ""
+            text = text.replace("d_n", str(game.clan.deputy.name))
+        return text
             
     def generate_kit_events(self):
+        possible_kit_events = self.c_txt["kitten general"]
         for i in range(random.randint(0,2)):
-            kit_event = Single_Event(random.choice(self.c_txt["kitten"]))
+            kit_event = self.adjust_txt(random.choice(possible_kit_events))
+            while kit_event == "":
+                kit_event = self.adjust_txt(random.choice(possible_kit_events))
+            kit_event = Single_Event(kit_event)
             if kit_event not in game.cur_events_list:
                 game.cur_events_list.append(kit_event)
         if game.clan.your_cat.parent1:
