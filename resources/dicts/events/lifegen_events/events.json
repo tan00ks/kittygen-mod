@@ -36,10 +36,10 @@
         
     ],
     "kitten introspective": [
-
+        "You ask r_e about life after death. r_e tells you more about the warrior ancestors up in StarClan and how each star in the sky represents a cat who is watching over you."
     ],
     "kitten neurotic": [
-
+        "When you catch the gaze of l_n, you nervously duck your head back into the nursery."
     ],
     "kitten silly": [
         "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!"
@@ -57,10 +57,11 @@
         "r_q lectures about the basics of the Warrior Code, but you don't pay attention. Rules are boring, you'd much rather be outside playing mossball!",
         "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
         "You poke your nose outside camp when none of the warriors are looking, and are amazed by the sights and smells of the vast territory."
-
     ],
     "kitten rare": [
-        "One night, as you sneak out of the nursery, you look up to see brilliant streaks of white light traveling across the sky. You watch the meteor shower, your eyes wide with amazement and wonder."
+        "One night, as you sneak out of the nursery, you look up to see brilliant streaks of white light traveling across the sky. You watch the meteor shower, your eyes wide with amazement and wonder.",
+        "One night, starry cats visit you in a dream, stating that you are destined for greatness.",
+        "One night, some unknown cats visit you in a dream, their pelts dripping with an unknown substance. They tell you that you are destined for something great."
     ],
     "moon_2_one_parent": [
         "You feel the soft touch of parent1's fur as they curl around you. Their warm purr is comforting, making you feel safe. The familiar scent of your parent fills your senses, offering you a sense of belonging and home. The world may be wide and unknown, but here, buried in their fur, you know you are loved and protected.",
