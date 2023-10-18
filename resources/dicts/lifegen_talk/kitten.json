@@ -632,10 +632,11 @@
             "upstanding",
             "silly",
             "sibling",
-            "adopted_sibling"
+            "adopted_sibling",
+            "random_cat"
         ],
         [
-            "y_c, Mom says it's my turn with the moss-ball! You have to give it back!",
+            "y_c, y_p says it's my turn with the moss-ball! You have to give it back!",
             "Come onnnnn!",
             "Hmph. That's it, I'm gonna tell on you!"
         ]
@@ -664,6 +665,7 @@
         [
             "kitten",
             "assertive",
+            "brooding",
             "platonic_like",
             "sibling",
             "adopted_sibling"
@@ -674,6 +676,124 @@
             "y_c, if anyone ever gives you a hard time, you'll tell me, right?"
         ]
     ],
+    "assertivekit_sibling": [
+        [
+            "kitten",
+            "assertive",
+            "platonic_like",
+            "sibling",
+            "adopted_sibling"
+        ],
+        [
+            "I just talked to y_p, and we're allowed to play outside today!!!",
+            "C'mon, I'll race you to the elder's den!"
+        ]
+    ],
+    "assertivekit_sibling1": [
+        [
+            "kitten",
+            "assertive",
+            "unlawful",
+            "brooding",
+            "platonic_like",
+            "sibling",
+            "adopted_sibling"
+        ],
+        [
+            "Ughhh, y_p says we're not allowed to leave the nursery today!",
+            "It's so boring in here, aren't you tired of all our games?",
+            "Hey, I know! Why don't you go distract y_p, then I can sneak out and come back for you?",
+            "C'mon, it'll be easy! I promise you won't get in trouble.",
+            "Let's go!"
+        ]
+    ],
+    "assertivekit_sibling2": [
+        [
+            "Any",
+            "platonic_like",
+            "from_your_kit"
+        ],
+        [
+            "*Yaaawwn*",
+            "What? No, t_c, I'm not sleepy ...",
+            "I swear, I'm not ..",
+            "... Zzzz ...",
+            "[t_c falls asleep on their paws. The two of you cuddle up to take a nap together.]"
+        ]
+    ],
+    "assertivekit_sibling3": [
+        [
+            "assertive",
+            "unabashed",
+            "platonic_like",
+            "sibling",
+            "adopted_sibling",
+            "random_cat"
+        ],
+        [
+            "Raaahhh!",
+            "[t_c slams into you, nipping at your fur.]",
+            "[You get choked up and t_c immediately backs off.]",
+            "No! Wait! Please don't cry! It's okay!",
+            "I'll let you get me back! You can claw me! Look! You can claw me right here!",
+            "[It's too late. You let out an ear-splitting cry and y_p rushes across the nursery to scold t_c.]",
+            "[You stop crying as soon as t_c is put into time out. Sweet revenge!]"
+        ]
+    ],
+    
+    "assertivekit_sibling4": [
+        [
+            "assertive",
+            "unlawful",
+            "brooding",
+            "sibling",
+            "adopted_sibling",
+            "random_cat"
+        ],
+        [
+            "[y_p is chiding t_c after they try for the thousandth time to sneak out of camp.]",
+            "But, y_p! I didn't do it! It was all y_c's idea!",
+            "[y_p whirls on you as you seethe, plotting your revenge against your sibling.]"
+        ]
+    ],
+
+       "assertivekit_sibling5": [
+        [
+            "assertive",
+            "unlawful",
+            "brooding",
+            "sibling",
+            "adopted_sibling",
+            "random_cat"
+        ],
+        [
+            "y_c, wanna play leader and deputy?",
+            "You wanna be the leader this time ...?",
+            "Nope. Not happening. I'm older, so I get to be the leader.",
+            "Yes, I know I'm just a few minutes older, but still!"
+        ]
+    ],
+
+    "assertivekit_sibling7": [
+        [
+            "assertive",
+            "unlawful",
+            "brooding",
+            "sibling",
+            "adopted_sibling",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "I'm gonna catch you! Hahaha!",
+            "[While you and t_c are playing, you accidentally trip and destroy half of the nest, moss and feathers flying everywhere.]",
+            "...",
+            "... Okay, what are we gonna tell y_p when they get back?",
+            "[The two of you spend several minutes devising an elaborate story where a bird flew into the nursery and destroyed the nest.]",
+            "[y_p doesn't buy it at all, but it was still a nice experience working together with your sibling.]"
+        ]
+    ],
+    
     "assertivekit_26": [
         [
             "Any",
