@@ -665,6 +665,7 @@
         [
             "kitten",
             "assertive",
+            "brooding",
             "platonic_like",
             "sibling",
             "adopted_sibling"
@@ -792,7 +793,6 @@
             "[y_p doesn't buy it at all, but it was still a nice experience working together with your sibling.]"
         ]
     ],
-
     "assertivekit_26": [
         [
             "Any",
