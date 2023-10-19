@@ -285,6 +285,7 @@ class MakeClanScreen(Screens):
         not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 'LEFTBLIND', 'BRIGHTHEART',
                     'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
         c_size = 15
+        backstories = ['halfclan1', 'halfclan2', 'outsider_roots1', 'outsider_roots2', 'loner1', 'loner2', 'kittypet1', 'kittypet2', 'kittypet3', 'kittypet4', 'rogue1', 'rogue2', 'rogue3', 'rogue4', 'rogue5', 'rogue6', 'rogue7', 'rogue8', 'abandoned1', 'abandoned2', 'abandoned3', 'abandoned4', 'otherclan1', 'otherclan2', 'otherclan3', 'otherclan4', 'otherclan5', 'otherclan6', 'otherclan7', 'otherclan8', 'otherclan9', 'otherclan10', 'disgraced1', 'disgraced2', 'disgraced3', 'retired_leader', 'medicine_cat', 'ostracized_warrior', 'refugee1', 'refugee2', 'refugee3', 'refugee4', 'refugee5', 'tragedy_survivor1', 'tragedy_survivor2', 'tragedy_survivor3', 'tragedy_survivor4', 'tragedy_survivor5', 'tragedy_survivor6', 'wandering_healer1', 'wandering_healer2', 'guided1', 'guided2', 'guided3', 'guided4', 'orphaned1', 'orphaned2', 'orphaned3', 'orphaned4', 'orphaned5', 'orphaned6', 'outsider1', 'outsider2', 'outsider3', 'kittypet5', 'kittypet6', 'kittypet7', 'loner8', 'guided5', 'guided6', 'outsider4', 'outsider5', 'outsider6', 'orphaned7', 'wandering_healer3', 'halfclan4', 'halfclan5', 'halfclan6', 'halfclan7', 'halfclan8', 'halfclan9', 'halfclan10', 'outsider_roots3', 'outsider_roots4', 'outsider_roots5', 'outsider_roots6', 'outsider_roots7', 'outsider_roots8']
         if self.clan_size == "small":
             c_size = 10
         elif self.clan_size == 'large':
@@ -316,6 +317,10 @@ class MakeClanScreen(Screens):
                 game.choose_cats[a].moons = choice(range(120, 155))
             elif game.choose_cats[a].moons == 0:
                 game.choose_cats[a].moons = choice([1, 2, 3, 4, 5])
+            if random.randint(1,5) == 1:
+                game.choose_cats[a].backstory = choice(backstories)
+            else:
+                game.choose_cats[a].backstory = 'clanborn'
     
     def handle_choose_background_event(self, event):
         if event.ui_element == self.elements['previous_step']:

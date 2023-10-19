@@ -141,109 +141,110 @@
             "Can you try to grow up strong and healthy for them?"
         ]
     ],
-     "assertive_parent1":	[
-		"kitten",
-		"assertive",
-		"from_parent"
-	],
-	[
-         "Hey, y_c, play nice! Be careful with your playmates!",
-        "*Whisper* Even though, between you and me, we both know you could totally destroy them. Hehehe!"
-	]
+    "assertive_parent1": [
+        [
+            "kitten",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "Hey, y_c, play nice! Be careful with your playmates!",
+            "*Whisper* Even though, between you and me, we both know you could totally destroy them. Hehehe!"
+        ]
     ],
-
-    "assertive_parent2":	[
-		"kitten",
-		"assertive",
-		"silly",
-		"stable",
-		"sweet",
-		"unabashed",
-		"platonic_like",
-		"from_parent",
-	],
-	[
-        "Ready for a badger ride, y_c? Hurry up and climb on!",
-        "[You clamber onto t_c’s shoulders, laughing and squealing with glee.]",
-        "Rrragh, I’m the big scary badger! Hahaha!"
-	]
+    "assertive_parent2": [
+        [
+            "kitten",
+            "assertive",
+            "silly",
+            "stable",
+            "sweet",
+            "unabashed",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Ready for a badger ride, y_c? Hurry up and climb on!",
+            "[You clamber onto t_c's shoulders, laughing and squealing with glee.]",
+            "Rrragh, I'm the big scary badger! Hahaha!"
+        ]
     ],
-
-    "assertive_parent3":	[
-		"kitten",
-		"assertive",
-		"platonic_like",
-		"from_parent",
-		"silly",
-		"sweet",
-		"stable",
-		"unabashed"
-	],
-	[
-         "What’s that, y_c? You wanna play? Sure! You can be the leader, and I’ll be the rogue.",
-        "Ahem …",
-        "Stop right there, clan cat! Where do you think you’re going? I, leader of the rogues, will stop you! Muahahaha!",
-        "Wait, stop! What are you doing? AHHH!!!!",
-        "Too … powerful … bleeegh!",
-        "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
-	]
+    "assertive_parent3": [
+        [
+            "kitten",
+            "assertive",
+            "platonic_like",
+            "from_parent",
+            "silly",
+            "sweet",
+            "stable",
+            "unabashed"
+        ],
+        [
+            "What's that, y_c? You wanna play? Sure! You can be the leader, and I'll be the rogue.",
+            "Ahem ...",
+            "Stop right there, clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
+            "Wait, stop! What are you doing? AHHH!!!!",
+            "Too ... powerful ... bleeegh!",
+            "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
+        ]
     ],
-
     "assertive_parent4": [
-        "newborn",
-        "assertive",
-        "cool",
-        "platonic_like",
-        "from_parent"
+        [
+            "newborn",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "*Sigh* My perfect little y_c ...",
+            "You're gonna do great things someday, kiddo, I just know it."
+        ]
     ],
-    [
-		"*Sigh* My perfect little y_c …",
-		"You’re gonna do great things someday, kiddo, I just know it."
-	]
-    ],
-
     "assertive_parent5": [
-        "kitten",
-        "assertive",
-        "cool",
-        "platonic_like",
-        "from_parent"
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "y_c? What's going on?",
+            "Wait a second, I know that face. You're ready for your nap, aren't you?",
+            "Alright, c'mere little guy. Off to dreamland.",
+            "[You snuggle into t_c's fur and doze off, comforted by their scent.]"
+        ]
     ],
-    [
-	    "y_c? What's going on?",
-        "Wait a second, I know that face. You're ready for your nap, aren't you?",
-        "Alright, c'mere little guy. Off to dreamland.",
-        "[You snuggle into t_c's fur and doze off, comforted by their scent.]"
-	]
-    ],
-
     "assertive_parent6": [
-        "kitten",
-        "assertive",
-        "cool",
-        "platonic_like",
-        "from_parent"
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Alright, kiddo, time for your bath.",
+            "Nope, I don't wanna hear any 'ifs', 'ands', or 'buts' about it. Even the strongest of warriors have to keep their pelts shiny!",
+            "[t_c spends several minutes grooming your fur before you can wriggle away and get back to playing!"
+        ]
     ],
-    [
-	    "Alright, kiddo, time for your bath.",
-        "Nope, I don't wanna hear any 'ifs', 'ands', or 'buts' about it. Even the strongest of warriors have to keep their pelts shiny!",
-        "[t_c spends several minutes grooming your fur before you can wriggle away and get back to playing!"
-	]
-    ],
-
     "assertive_parent7": [
-        "kitten",
-        "assertive",
-        "cool",
-        "platonic_like",
-        "from_parent"
-    ],
-    [
-	    "Hm? You wanna play moss-ball?",
-        "I dunno, kiddo, I'm real busy today ...",
-        "Ahh, but how can I say no to that little face?",
-        "Alright, you drive a hard bargain. You have me for a game!"
-	]
+        [
+            "kitten",
+            "assertive",
+            "cool",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Hm? You wanna play moss-ball?",
+            "I dunno, kiddo, I'm real busy today ...",
+            "Ahh, but how can I say no to that little face?",
+            "Alright, you drive a hard bargain. You have me for a game!"
+        ]
     ],
     "you_newborn": [
         [
@@ -550,7 +551,7 @@
             "And you speak of this to anyone, I'll never play with you again. Got it?"
         ]
     ],
-     "brooding_parent": [
+    "brooding_parent": [
         [
             "kitten",
             "brooding",
@@ -567,8 +568,7 @@
             "You can just stay here with me until you're ready to make some new friends."
         ]
     ],
-
-     "brooding_parent1": [
+    "brooding_parent1": [
         [
             "kitten",
             "brooding",
@@ -593,8 +593,7 @@
             "Mange-face ... Hehehe!"
         ]
     ],
-
- "brooding_parent2": [
+    "brooding_parent2": [
         [
             "kitten",
             "brooding",
@@ -608,8 +607,6 @@
             "[You tell t_c all about the dream you had last night, and they listen patiently.]"
         ]
     ],
-
-
     "brooding_parent3": [
         [
             "kitten",
@@ -625,7 +622,6 @@
             "Isn't it pretty?"
         ]
     ],
-
     "brooding_parent4": [
         [
             "kitten",
@@ -642,8 +638,7 @@
             "[But, with you, they're always soft and gentle.]"
         ]
     ],
-
-      "brooding_parent5": [
+    "brooding_parent5": [
         [
             "kitten",
             "brooding",
@@ -658,8 +653,7 @@
             "[But, with you, they're always fun and gentle!]"
         ]
     ],
-
-       "brooding_parent6": [
+    "brooding_parent6": [
         [
             "kitten",
             "brooding",
@@ -672,7 +666,6 @@
             "Come back to the nursery, where it's safe."
         ]
     ],
-
     "brooding_parent7": [
         [
             "kitten",
@@ -688,7 +681,6 @@
             "But make sure you look out for each other, and don't stray too far!"
         ]
     ],
-    
     "they_grieving": [
         [
             "any",

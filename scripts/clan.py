@@ -210,7 +210,8 @@ class Clan():
         # give thoughts,actions and relationships to cats
         for cat_id in Cat.all_cats:
             Cat.all_cats.get(cat_id).init_all_relationships()
-            Cat.all_cats.get(cat_id).backstory = 'clan_founder'
+            if Cat.all_cats.get(cat_id).backstory is None:
+                Cat.all_cats.get(cat_id).backstory = 'clan_founder'
             if Cat.all_cats.get(cat_id).status == 'apprentice':
                 Cat.all_cats.get(cat_id).status_change('apprentice')
             elif Cat.all_cats.get(cat_id).status == "queen's apprentice":
