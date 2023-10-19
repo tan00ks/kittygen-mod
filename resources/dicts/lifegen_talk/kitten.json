@@ -676,7 +676,7 @@
             "y_c, if anyone ever gives you a hard time, you'll tell me, right?"
         ]
     ],
-    "assertivekit_sibling": [
+     "assertivekit_sibling": [
         [
             "kitten",
             "assertive",
@@ -711,7 +711,7 @@
         [
             "Any",
             "platonic_like",
-            "from_your_kit"
+            "from_kit"
         ],
         [
             "*Yaaawwn*",
@@ -757,7 +757,7 @@
         ]
     ],
 
-       "assertivekit_sibling5": [
+    "assertivekit_sibling5": [
         [
             "assertive",
             "unlawful",
@@ -793,7 +793,6 @@
             "[y_p doesn't buy it at all, but it was still a nice experience working together with your sibling.]"
         ]
     ],
-    
     "assertivekit_26": [
         [
             "Any",
@@ -887,9 +886,73 @@
             "random_cat"
         ],
         [
-            "y_c, r_c won't play with me! Will you go tell them that they have to?",
+            "y_c, r_k won't play with me! Will you go tell them that they have to?",
             "What? You won't? But that's not fairrrr!",
             "[t_c stalks across the nursery to go have a pout. But, as soon as one of the kits suggests a game of moss-ball, their troubles are suddenly forgotten.]"
+        ]
+    ],
+    "assertivekit_your": [
+        [
+            "Any",
+            "kitten",
+            "platonic_like",
+            "from_adopted_kit",
+            "from_kit"
+        ],
+        [
+            "[t_c wakes up from their nap with fur so spiky, they look like a little porcupine!]",
+            "[You laugh and spend the morning grooming their fur.]"
+        ]
+    ],
+     "assertivekit_your1": [
+        [
+            "Any",
+            "kitten",
+            "platonic_like",
+            "from_adopted_kit",
+            "from_kit",
+            "random_cat"
+        ],
+        [
+            "[You and y_m watch t_c slowly creep up on a beetle ...]",
+            "[With a fierce mew, they pounce on it!]",
+            "[You and y_m erupt into cheers, lifting your delighted little warrior into the air.]",
+            "I did it! I did it! Hahaha!"
+        ]
+    ],
+     "assertivekit_your2": [
+        [
+            "Any",
+            "kitten",
+            "platonic_like",
+            "from_adopted_kit",
+            "from_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c is throwing a tantrum. You decide to try out a trick that r_q taught you.]",
+            "Waaaahhhh!",
+            "['Hey, t_c, what color are your paws?']",
+            "Huh?",
+            "*Sniffle* Uhm ...",
+            "[t_c calms right down, studying their paws. Man, r_q must be magic or something ...]"
+        ]
+    ],
+     "assertivekit_your3": [
+        [
+            "Any",
+            "kitten",
+            "assertive",
+            "unlawful",
+            "platonic_like",
+            "from_adopted_kit",
+            "from_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c accidentally drops their moss-ball while playing.]",
+            "Fox-dung!",
+            "[r_q, horrified, rushes to correct them as you laugh at your kit's potty mouth!]"
         ]
     ],
     "assertivekit_31": [
