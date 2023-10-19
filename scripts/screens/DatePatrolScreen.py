@@ -76,8 +76,8 @@ class DatePatrolScreen(Screens):
     def handle_choose_cats_events(self, event):
         if 'cat_icon' in self.elements:
             if event.ui_element == self.elements['cat_icon']:
-                    self.change_screen("patrol screen2")
-                    self.elements['cat_icon'].disable()
+                self.change_screen("patrol screen2")
+                self.elements['cat_icon'].disable()
         if 'df_icon' in self.elements:
             if event.ui_element == self.elements['df_icon']:
                 self.change_screen("patrol screen3")
@@ -639,7 +639,7 @@ class DatePatrolScreen(Screens):
                 if not the_cat.dead and the_cat.in_camp and the_cat.ID not in game.patrolled and the_cat.status not in [
                     'newborn', 'kitten', 'apprentice', 'mediator apprentice', 'medicine cat apprentice', "queen's apprentice"
                 ] and not the_cat.outside and the_cat not in self.current_patrol and the_cat.is_potential_mate(game.clan.your_cat) and the_cat.moons < game.clan.your_cat.moons + 40 and the_cat.moons > game.clan.your_cat.moons - 40:
-                        self.able_cats.append(the_cat)
+                    self.able_cats.append(the_cat)
 
         if not self.able_cats:
             all_pages = []

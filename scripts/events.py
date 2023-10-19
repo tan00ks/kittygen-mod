@@ -83,7 +83,8 @@ class Events:
         game.just_died.clear()
         # 1 = reg patrol 2 = lifegen patrol 3 = df patrol 4 = date
         game.switches['patrolled'] = []
-
+        game.switches['window_open'] = False
+        
         if any(
                 str(cat.status) in {
                     'leader', 'deputy', 'warrior', 'medicine cat',
@@ -270,7 +271,8 @@ class Events:
                 elif game.clan.your_cat.status != 'elder' and game.clan.your_cat.moons != 119:
                     self.generate_events_adult()
                 elif game.clan.your_cat.moons == 119:
-                    RetireScreen('events screen')
+                    if not game.switches['window_open']:
+                        RetireScreen('events screen')
                 elif game.clan.your_cat.moons == 120 and game.clan.your_cat.status == 'elder':
                     self.generate_elder_ceremony()
                 elif game.clan.your_cat.status == 'elder':
@@ -280,10 +282,10 @@ class Events:
                 self.generate_df_events()
             
             if game.clan.your_cat.moons >= 12:
+                self.check_leader(self.checks)
                 self.check_gain_app(self.checks)
                 self.check_gain_mate(self.checks)
                 self.check_gain_kits(self.checks)
-                self.check_leader(self.checks)
                 self.generate_mate_events()
                 self.check_retire()
 
@@ -851,11 +853,11 @@ class Events:
     
     def check_leader(self, checks):
         if game.clan.leader:
-            if checks[3] != game.clan.leader.ID and game.clan.your_cat.status == 'leader':
+            if checks[3] != game.clan.leader.ID and game.clan.your_cat.status == 'leader' and not game.switches['window_open']:
                 DeputyScreen('events screen')
             
     def check_gain_kits(self, checks):
-        if len(game.clan.your_cat.inheritance.get_blood_kits()) > checks[2]:
+        if len(game.clan.your_cat.inheritance.get_blood_kits()) > checks[2] and not game.switches['window_open']:
             NameKitsWindow('events screen')
             # self.checks[2] = len(game.clan.your_cat.inheritance.get_blood_kits())
             # insert_kits = []

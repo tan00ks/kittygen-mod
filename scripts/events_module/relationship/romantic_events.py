@@ -451,7 +451,8 @@ class Romantic_Events():
                     game.switches['new_mate'] = cat_to
                 else:
                     game.switches['new_mate'] = cat_from
-                MateScreen("events screen")
+                if not game.switches['window_open']:
+                    MateScreen("events screen")
             else:
                 cat_from.set_mate(cat_to)
                 mate_string = Romantic_Events.prepare_relationship_string(mate_string, cat_from, cat_to)
