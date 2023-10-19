@@ -467,7 +467,8 @@ class DatePatrolScreen(Screens):
                                                       object_id="#start_patrol_button", manager=MANAGER)
         self.elements['patrol_start'].disable()
 
-        self.current_patrol.append(game.clan.your_cat)
+        if not game.clan.your_cat.dead and not game.clan.your_cat.outside:
+            self.current_patrol.append(game.clan.your_cat)
         self.update_cat_images_buttons()
         self.update_button()
 
