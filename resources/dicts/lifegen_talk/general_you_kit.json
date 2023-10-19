@@ -1119,5 +1119,26 @@
             "There's no place like c_n, because here we are wild and free! And nobody can disagree! Look at the stars, the way they shine! Starclan has given us bountiful time.",
             "And prey and rocks and leaves of gold- may Starclan continue to sing the songs of old. From once before and now onwards, as a clan we strive forward. We push on. And this is the c_nClan cats' song!"
         ]
+    ],
+    "insult_1": [
+        [
+            "kitten",
+            "insult",
+            "they_grieving"
+        ],
+        [
+            "[You feel too guilty to insult this cat.]"
+        ]     
+    ],
+    "insult_2": [
+        [
+            "kitten",
+            "insult",
+            "they_grieving"
+        ],
+        [
+            "[You approach, an insult on your tongue, but realize t_c is curled in a ball, soft sobs coming from them.]",
+            "[Maybe now is not a good time.]"
+        ]     
     ]
 }
