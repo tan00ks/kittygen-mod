@@ -26,7 +26,12 @@
         "y_p scolds you for playing too roughly with your sibling y_s, and makes you apologize. You stick out your tongue at them for being such a tattle-tail.",
         "You and r_k have a yowling competition, which stresses out y_p so much that they have to take a break and unload you onto the queens.",
         "You're so filled with energy that you spend the entire afternoon chasing your own tail!",
-        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!"
+        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
+        "You sneak into parts of camp where you're not supposed to be, your hunger for adventure already insatiable.",
+        "You roll your eyes when r_k cries over a small cut. You're so much stronger than they are.",
+        "You help y_s devise a plan to get back at a cat who was bullying them.",
+
+
     ],
     "kitten brooding": [
         "You find a quiet, shaded spot beneath an old oak tree and spend hours there, just observing the comings and goings of the clan.",
@@ -37,7 +42,11 @@
         "r_w tells you to smile more. It only deepens your scowl.",
         "You bury your face into y_p's fur, wishing the nursery weren't so bright all the time.",
         "You pick on r_k for being smaller and weaker than you are.",
-        "You daydream about being a cat in o_cClan. Maybe they would understand you better there."
+        "You daydream about being a cat in o_cClan. Maybe they would understand you better there.",
+        "You roll your eyes when r_k cries over a small cut. You're so much stronger than they are.",
+        "You help y_s devise a plan to get back at a cat who was bullying them.",
+
+
     ],
     "kitten cool": [
         "As r_e tells you a long and boring story, you restlessly paw at the grass, waiting for them to be done.",
@@ -48,7 +57,8 @@
         "You convince r_q to let you go out and play, without much effort. It seems you're especially good at using your words to get what you want.",
         "The o_cClan mediator visits you in the nursery, and you delight them with your jokes, successfully diffusing tensions between the two Clans.",
         "An argument breaks out between two of your denmates, but you lighten the mood by cracking a joke that makes everyone laugh.",
-        "Your denmates watch enviously as r_w brings you a special gift."
+        "Your denmates watch enviously as r_w brings you a special gift.",
+        "A lot of the kits in the nursery get picked on, but never you ... Must be your natural charm."
     ],
     "kitten upstanding": [
         "r_q lectures about the basics of the Warrior Code. You make it a point to memorize each rule, hoping to get a head start on your apprenticeship.",
@@ -65,19 +75,38 @@
         "You ask r_e about the Dark Forest. r_e tells you that it is a place where troublesome kits go.",
         "You spend an entire day watching the clouds slowly drift over camp.",
         "While your denmates run and play, you visit r_e in the elder's den, hoping to learn from their wisdom and experience.",
-        "You tear up at the sight of a squished bug. r_q remarks how sensitive you are.",
+        "You tear up at the sight of a squished bug. y_p remarks how sensitive you are.",
         "r_w jokes that you're an 'old soul' ... whatever that means.",
         "You have a whole conversation with d_n, stumping them with some of your questions.",
         "On a drizzly day, you ask y_p where the rain comes from. When they can't answer, you spend hours puzzling over the question yourself.",
         "You ask y_p about the meaning of life. They laugh and tell you you're too young to worry about things like that, and yet you can't seem to stop ...",
-        "You try to get r_k to ponder about the nature of your warrior ancestors with you, but they get bored and wander off to play something else."
+        "You try to get y_s to ponder about the nature of your warrior ancestors with you, but they get bored and wander off to do something else."
     ],
     "kitten neurotic": [
         "When you catch the gaze of l_n, you nervously duck your head back into the nursery.",
-        "You tell y_p that you don't want to become an apprentice. y_p reassures you that it won't be so bad."
+        "You tell y_p that you don't want to become an apprentice. y_p reassures you that it won't be so bad.",
+        "You're kept awake all night, terrified of the shadows on the nursery walls.",
+        "You watch r_k run and play, wondering why you can't be as carefree as they are.",
+        "You spend all day giggling at r_e's funny stories, happy for a break from the fast pace of nursery life.",
+        "r_c cheers you on as you step into a puddle for the first time, showing you there's nothing to be afraid of.",
+        "You shriek and jump at a bug crawling on you ... Only for it to turn out to be a piece of fuzz.",
+        "You're scared of leaving the nursery when it's raining, but seeing y_s run out and play in the water makes you feel braver, and you finally work up the courage to join them.",
+        "r_w asks if you've started thinking about what you'd like to be when you're older, and anxiety fills your heart, overwhelmed by the possibilities of the future.",
+        "A checkup trip to the medicine den leaves you terrified of all the strange sights and smells, and y_p has to bribe you with prey to even look in r_m's direction again."
+
     ],
     "kitten silly": [
-        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!"
+        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
+        "The o_cClan mediator visits you in the nursery, and you delight them with your jokes, successfully diffusing tensions between the two Clans.",
+        "An argument breaks out between two of your denmates, but you lighten the mood by cracking a joke that makes everyone laugh.",
+        "r_q tries to give you a lesson on Clan history, but you keep making funny faces and distracting your denmates until eventually the whole lesson has to be cancelled.",
+        "You roll your eyes as y_p lectures you on how you need to take things more seriously.",
+        "The thought of your impending apprenticeship fills your heart with dread. You mean you don't just get to stay a carefree kit forever?",
+        "You put off your bedtime as long as possible, hoping the fun of the day will never end!",
+        "You make r_c laugh over and over again with your silly antics.",
+        "You help y_s devise a plan to get back at a cat who was bullying them."
+
+        
     ],
     "kitten stable": [
 
@@ -87,15 +116,29 @@
         "When you notice r_k getting left out of a game, you immediately invite them to join.",
         "You listen to r_e tell a story, listening politely even though it is a bit boring.",
         "You try to help r_a with their chores, bringing them moss or twigs, even if it's not always needed. It's the thought that counts!",
-        "When r_k takes a tumble and gets a small scrape, you are the first to hurry over to the medicine den to get r_m."
+        "When r_k takes a tumble and gets a small scrape, you are the first to hurry over to the medicine den to get r_m.",
+        "You tear up at the sight of a squished bug. y_p remarks how sensitive you are."
+
     ],
     "kitten unabashed": [
-        "You play in the middle of the camp clearing, making the warriors have to step around you constantly to get around."
+        "You play in the middle of the camp clearing, making the warriors have to step around you constantly to get around.",
+        "You remark that r_c's nose looks bigger than usual today and are confused when they get mad at you.",
+        "When r_q demands to know who messed up one of the queen's nests, you fess up immediately, and they commend your honesty.",
+        "When r_k calls you a mean name, you take it in stride, proudly declaring it your new nickname.",
+        "You help y_s devise a plan to get back at a cat who was bullying them.",
+        "You can't control yourself and eat a piece of prey that y_p was saving for r_c. The guilt is crushing afterwards.",
+        "y_p grooms your fur after your third trip today, remarking how clumsy you are.",
+        "Curious, you venture into a thicket of brambles, and return to an exasperated r_q covered in thorns."
     ],
     "kitten unlawful": [
         "r_q lectures about the basics of the Warrior Code, but you don't pay attention. Rules are boring, you'd much rather be outside playing mossball!",
         "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
-        "You poke your nose outside camp when none of the warriors are looking, and are amazed by the sights and smells of the vast territory."
+        "You poke your nose outside camp when none of the warriors are looking, and are amazed by the sights and smells of the vast territory.",
+        "r_q tries to give you a lesson on Clan history, but you keep making funny faces and distracting your denmates until eventually the whole lesson has to be cancelled.",
+        "You roll your eyes as y_p lectures you on how you need to take things more seriously.",
+        "You teach y_s to say bad words, much to y_p's horror.",
+        "You fake an injury to purposefully get r_k into trouble, to get back at them for making fun of you earlier.",
+        "You sneak into parts of camp where you're not supposed to be, your hunger for adventure already insatiable."
     ],
 
 
