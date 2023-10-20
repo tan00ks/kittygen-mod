@@ -200,17 +200,48 @@
         "You're so excited for your upcoming apprentice ceremony that you jump up and down with excitement. parent1 and parent2 watch you with amusement.",
         "As your sixth moon approaches, parent1 and parent2 tell you about the approaching ceremony where you'll be assigned a mentor and begin your training. Their shared excitement mirrors your own, their comforting words easing any nerves. Their pride in you is palpable, their love evident, making the anticipation of your coming journey even more thrilling."
     ],
-    "apprentice": [],
-    "medicine cat apprentice": [],
-    "mediator apprentice": [],
-    "queen's apprentice": [],
-    "queen": [],
-    "warrior": [],
-    "medicine cat": [],
-    "mediator": [],
-    "deputy": [],
-    "leader": [],
-    "elder": [],
+    "apprentice": [
+        "Your training has kept both of you busy, but you y_s schedule some much-needed sibling time.",
+        "You watch m_n chat with the other warriors across camp, wishing the two of you were closer."
+    ],
+    "medicine cat apprentice": [
+        "y_s visits you in the medicine den and the two of you spend all day updating each other on the exciting new things you've learned!",
+        "y_s fakes an injury to spend more time with you in the medicine den.",
+        "You give y_s a tour of the den, giggling at how overwhelmed they seem at all the herbs.",
+        "Your training has kept both of you busy, but you y_s schedule some much-needed sibling time."
+       
+    ],
+    "mediator apprentice": [
+        "Your training has kept both of you busy, but you y_s schedule some much-needed sibling time."
+
+      
+    ],
+    "queen's apprentice": [
+        "Your training has kept both of you busy, but you y_s schedule some much-needed sibling time."
+
+       
+    ],
+    "queen": [
+       
+    ],
+    "warrior": [
+       
+    ],
+    "medicine cat": [
+        
+    ],
+    "mediator": [
+       
+    ],
+    "deputy": [
+       
+    ],
+    "leader": [
+       
+    ],
+    "elder": [
+       
+    ],
     "young_elder": [
         "You pay a visit to the medicine cat for a checkup. Your health is in great shape!",
         "One of your warrior friends comes to visit you, and you spend all day chatting about the most recent gossip around camp.",
