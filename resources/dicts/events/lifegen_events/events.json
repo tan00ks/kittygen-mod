@@ -2,7 +2,7 @@
     "kitten general": [
         "You roll a piece of moss into a ball and bat it around with your tiny paws.",
         "A bug skitters around the nursery, catching your eye. You pounce on it, and hold it up proudly so that the warriors can see your accomplishment.",
-        "As the camp settles down for the night, you curl up in your nest but can't seem to fall asleep! You want to continue to play, play, play.",        
+        "As the camp settles down for the night, you curl up in your nest but can't seem to fall asleep! You want to continue to play, play, play.",
         "You and r_k set up an ambush, crouching near the camp entrance in wait for your victim. As soon as the entrance rustles, both of you pounce, landing on a shocked r_w.",
         "r_k beckons you out of the nursery one morning to play a game of mossball. The game ends in your victory!",
         "r_k beckons you out of the nursery one morning to play a game of mossball. The game ends in your loss...",
@@ -20,16 +20,20 @@
         "While you're outside playing, an unexpected downpour begins. You let out a small growl of annoyance as your fur becomes drenched. Sensing your discomfort, l_n moves to stand over you, sheltering you from the worst of the rain until the skies clear.",
         "While exploring the camp, you stumble and hurt your paw. r_q rushes over, concerned, and gently licks your wound until you feel better."
     ],
-
     "kitten assertive": [
         "You watch the battle-scarred warriors coming back into camp from the border patrol, eyes wide. You hope you'll be just like them someday!",
         "y_p scolds you for playing too roughly with your sibling y_s, and makes you apologize. You stick out your tongue at them for being such a tattle-tail.",
         "You and r_k have a yowling competition, which stresses out y_p so much that they have to take a break and unload you onto the queens.",
         "You're so filled with energy that you spend the entire afternoon chasing your own tail!",
         "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
+        "While r_e is telling a story, you constantly interrupt them with questions, eager to learn every detail.",
+        "You demand r_w to show you a battle move. r_w reluctantly agrees, performing a basic swipe. Later, you copy them, practicing the move over and over again.",
+        "When r_a teases you, you state that one day you'll become a better warrior than them!",
+        "r_k takes your nest one night. You yowl and launch an attack on them, pretending they are an enemy warrior who is invading the territory."
+        ,"You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
         "You sneak into parts of camp where you're not supposed to be, your hunger for adventure already insatiable.",
         "You roll your eyes when r_k cries over a small cut. You're so much stronger than they are.",
-        "You help y_s devise a plan to get back at a cat who was bullying them.",
+        "You help y_s devise a plan to get back at a cat who was bullying them."
 
 
     ],
@@ -44,7 +48,7 @@
         "You pick on r_k for being smaller and weaker than you are.",
         "You daydream about being a cat in o_cClan. Maybe they would understand you better there.",
         "You roll your eyes when r_k cries over a small cut. You're so much stronger than they are.",
-        "You help y_s devise a plan to get back at a cat who was bullying them.",
+        "You help y_s devise a plan to get back at a cat who was bullying them."
 
 
     ],
@@ -68,6 +72,7 @@
         "You spend an afternoon carefully planning out the rest of your life. r_w will be your mentor, then you'll usurp d_n as deputy, and finally, you'll be leader of all of c_nClan. It's flawless.",
         "You throw a tantrum when r_k doesn't follow the rules of the game you're playing.",
         "You memorize all the birds that move in and out of camp, delighting the warriors when you can identify them correctly.",
+        "You demand that d_n give you a task or put you on a patrol, just like the warriors. They assign you to watch the nursery. You take this new responsibility seriously, standing guard with unwavering focus.",
         "You spend the day ordering around r_k, acting out a story you spent hours planning and getting upset when they try to deviate."
     ],
     "kitten introspective": [
@@ -96,21 +101,9 @@
 
     ],
     "kitten silly": [
-        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
-        "The o_cClan mediator visits you in the nursery, and you delight them with your jokes, successfully diffusing tensions between the two Clans.",
-        "An argument breaks out between two of your denmates, but you lighten the mood by cracking a joke that makes everyone laugh.",
-        "r_q tries to give you a lesson on Clan history, but you keep making funny faces and distracting your denmates until eventually the whole lesson has to be cancelled.",
-        "You roll your eyes as y_p lectures you on how you need to take things more seriously.",
-        "The thought of your impending apprenticeship fills your heart with dread. You mean you don't just get to stay a carefree kit forever?",
-        "You put off your bedtime as long as possible, hoping the fun of the day will never end!",
-        "You make r_c laugh over and over again with your silly antics.",
-        "You help y_s devise a plan to get back at a cat who was bullying them."
-
-        
+        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!"
     ],
-    "kitten stable": [
-
-    ],
+    "kitten stable": [],
     "kitten sweet": [
         "You bring r_m a flower that you found near the nursery. Perhaps it's an herb that will help them cure sick cats.",
         "When you notice r_k getting left out of a game, you immediately invite them to join.",
@@ -122,6 +115,9 @@
     ],
     "kitten unabashed": [
         "You play in the middle of the camp clearing, making the warriors have to step around you constantly to get around.",
+        "You pretend to collapse in front of the medicine den to get r_m's attention, pleased when they rush over to you in concern.",
+        "You see r_a practice a battle move near the apprentice den. You loudly critique their technique, ensuring the warriors can hear your 'expert' opinion."
+        ,"You play in the middle of the camp clearing, making the warriors have to step around you constantly to get around.",
         "You remark that r_c's nose looks bigger than usual today and are confused when they get mad at you.",
         "When r_q demands to know who messed up one of the queen's nests, you fess up immediately, and they commend your honesty.",
         "When r_k calls you a mean name, you take it in stride, proudly declaring it your new nickname.",
@@ -204,39 +200,17 @@
         "You're so excited for your upcoming apprentice ceremony that you jump up and down with excitement. parent1 and parent2 watch you with amusement.",
         "As your sixth moon approaches, parent1 and parent2 tell you about the approaching ceremony where you'll be assigned a mentor and begin your training. Their shared excitement mirrors your own, their comforting words easing any nerves. Their pride in you is palpable, their love evident, making the anticipation of your coming journey even more thrilling."
     ],
-    "apprentice": [
-       
-    ],
-    "medicine cat apprentice": [
-       
-    ],
-    "mediator apprentice": [
-      
-    ],
-    "queen's apprentice": [
-       
-    ],
-    "queen": [
-       
-    ],
-    "warrior": [
-       
-    ],
-    "medicine cat": [
-        
-    ],
-    "mediator": [
-       
-    ],
-    "deputy": [
-       
-    ],
-    "leader": [
-       
-    ],
-    "elder": [
-       
-    ],
+    "apprentice": [],
+    "medicine cat apprentice": [],
+    "mediator apprentice": [],
+    "queen's apprentice": [],
+    "queen": [],
+    "warrior": [],
+    "medicine cat": [],
+    "mediator": [],
+    "deputy": [],
+    "leader": [],
+    "elder": [],
     "young_elder": [
         "You pay a visit to the medicine cat for a checkup. Your health is in great shape!",
         "One of your warrior friends comes to visit you, and you spend all day chatting about the most recent gossip around camp.",
