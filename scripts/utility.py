@@ -78,6 +78,49 @@ def get_alive_apps(Cat):
 
     return alive_apps
 
+def get_alive_warriors(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  i.status == 'warrior' and not i.dead and not i.outside]
+
+    return alive_apps
+
+def get_alive_meds(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  (i.status == 'medicine cat' or i.status == 'medicine cat apprentice') and not i.dead and not i.outside]
+
+    return alive_apps
+
+def get_alive_mediators(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                   (i.status == 'mediator' or i.status == 'mediator apprentice') and not i.dead and not i.outside]
+
+    return alive_apps
+
+def get_alive_queens(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  (i.status == 'queen' or i.status == "queen's apprentice") and not i.dead and not i.outside]
+    return alive_apps
+
+def get_alive_elders(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  i.status == 'elder' and not i.dead and not i.outside]
+    return alive_apps
+
 def get_med_cats(Cat, working=True):
     """
     returns a list of all meds and med apps currently alive, in the clan, and able to work
@@ -96,6 +139,13 @@ def get_med_cats(Cat, working=True):
 
     return possible_med_cats
 
+def get_alive_cats(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  not i.dead and not i.outside]
+    return alive_apps
 
 def get_living_cat_count(Cat):
     """

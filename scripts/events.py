@@ -31,7 +31,7 @@ from scripts.events_module.outsider_events import OutsiderEvents
 from scripts.event_class import Single_Event
 from scripts.game_structure.game_essentials import game
 from scripts.cat_relations.relationship import Relationship
-from scripts.utility import get_alive_kits, get_alive_apps, get_med_cats, ceremony_text_adjust, \
+from scripts.utility import get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats, ceremony_text_adjust, \
     get_current_season, adjust_list_text, ongoing_event_text_adjust, event_text_adjust, create_new_cat
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
@@ -706,6 +706,62 @@ class Events:
             while alive_app.ID == game.clan.your_cat.ID:
                 alive_app = random.choice(alive_apps)
             text = text.replace("r_a", str(alive_app.name))
+        if "r_w" in text:
+            alive_apps = get_alive_warriors(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_w", str(alive_app.name))
+        if "r_m" in text:
+            alive_apps = get_alive_meds(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_m", str(alive_app.name))
+        if "r_d" in text:
+            alive_apps = get_alive_mediators(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_d", str(alive_app.name))
+        if "r_q" in text:
+            alive_apps = get_alive_queens(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_q", str(alive_app.name))
+        if "r_e" in text:
+            alive_apps = get_alive_elders(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_e", str(alive_app.name))
+        if "r_s" in text:
+            alive_apps = get_alive_cats(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_ill():
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_s", str(alive_app.name))
+        if "r_i" in text:
+            alive_apps = get_alive_cats(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_injured():
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_i", str(alive_app.name))
         if "l_n" in text:
             if game.clan.leader is None:
                 return ""
@@ -726,6 +782,10 @@ class Events:
             if game.clan.your_cat.get_parents() is None:
                 return ""
             text = text.replace("y_p", str(random.choice(game.clan.your_cat.get_parents()).name))
+        if "y_m" in text:
+            if game.clan.your_cat.mate is None:
+                return ""
+            text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
         return text
             
     def generate_kit_events(self):
