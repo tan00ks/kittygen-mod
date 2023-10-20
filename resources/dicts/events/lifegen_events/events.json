@@ -36,7 +36,8 @@
         "You shred a leaf into smaller and smaller pieces until it's reduced to nothing but specks of dust.",
         "r_w tells you to smile more. It only deepens your scowl.",
         "You bury your face into y_p's fur, wishing the nursery weren't so bright all the time.",
-        "You pick on r_k for being smaller and weaker than you are."
+        "You pick on r_k for being smaller and weaker than you are.",
+        "You daydream about being a cat in o_cClan. Maybe they would understand you better there."
     ],
     "kitten cool": [
         "As r_e tells you a long and boring story, you restlessly paw at the grass, waiting for them to be done.",
@@ -52,11 +53,24 @@
     "kitten upstanding": [
         "r_q lectures about the basics of the Warrior Code. You make it a point to memorize each rule, hoping to get a head start on your apprenticeship.",
         "The deputy visits the nursery to teach the kits about border safety, and you're thrilled to answer all their questions correctly. Maybe you'll be their deputy someday!",
-        "You peek into the leader's den, eyes wide with awe. You wish you were as big as important as l_n."
+        "You peek into the leader's den, eyes wide with awe. You wish you were as big as important as l_n is.",
+        "You beg r_a to help you get a head start on your apprenticeship, much to their annoyance.",
+        "You spend an afternoon carefully planning out the rest of your life. r_w will be your mentor, then you'll usurp d_n as deputy, and finally, you'll be leader of all of c_nClan. It's flawless.",
+        "You throw a tantrum when r_k doesn't follow the rules of the game you're playing.",
+        "You memorize all the birds that move in and out of camp, delighting the warriors when you can identify them correctly.",
+        "You spend the day ordering around r_k, acting out a story you spent hours planning and getting upset when they try to deviate."
     ],
     "kitten introspective": [
         "You ask r_e about life after death. r_e tells you more about the warrior ancestors up in StarClan and how each star in the sky represents an ancestor who is watching over you.",
-        "You ask r_e about the Dark Forest. r_e tells you that it is a place where troublesome kits go."
+        "You ask r_e about the Dark Forest. r_e tells you that it is a place where troublesome kits go.",
+        "You spend an entire day watching the clouds slowly drift over camp.",
+        "While your denmates run and play, you visit r_e in the elder's den, hoping to learn from their wisdom and experience.",
+        "You tear up at the sight of a squished bug. r_q remarks how sensitive you are.",
+        "r_w jokes that you're an 'old soul' ... whatever that means.",
+        "You have a whole conversation with d_n, stumping them with some of your questions.",
+        "On a drizzly day, you ask y_p where the rain comes from. When they can't answer, you spend hours puzzling over the question yourself.",
+        "You ask y_p about the meaning of life. They laugh and tell you you're too young to worry about things like that, and yet you can't seem to stop ...",
+        "You try to get r_k to ponder about the nature of your warrior ancestors with you, but they get bored and wander off to play something else."
     ],
     "kitten neurotic": [
         "When you catch the gaze of l_n, you nervously duck your head back into the nursery.",
