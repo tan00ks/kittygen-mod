@@ -689,7 +689,7 @@ class Events:
             alive_cat = random.choice(alive_cats)
             while alive_cat.ID == game.clan.your_cat.ID:
                 alive_cat = random.choice(alive_cat)
-            text = text.replace("r_k", str(alive_cat.name))
+            text = text.replace("r_d", str(alive_cat.name))
         if "r_k" in text:
             alive_kits = get_alive_kits(Cat)
             if len(alive_kits) <= 1:
@@ -705,7 +705,7 @@ class Events:
             alive_app = random.choice(alive_apps)
             while alive_app.ID == game.clan.your_cat.ID:
                 alive_app = random.choice(alive_apps)
-            text = text.replace("r_k", str(alive_app.name))
+            text = text.replace("r_a", str(alive_app.name))
         if "l_n" in text:
             if game.clan.leader is None:
                 return ""
@@ -718,6 +718,14 @@ class Events:
             if game.clan.deputy.dead or game.clan.deputy.outside:
                 return ""
             text = text.replace("d_n", str(game.clan.deputy.name))
+        if "y_s" in text:
+            if game.clan.your_cat.get_siblings() is None:
+                return ""
+            text = text.replace("y_s", str(random.choice(game.clan.your_cat.get_siblings()).name))
+        if "y_p" in text:
+            if game.clan.your_cat.get_parents() is None:
+                return ""
+            text = text.replace("y_p", str(random.choice(game.clan.your_cat.get_parents()).name))
         return text
             
     def generate_kit_events(self):
