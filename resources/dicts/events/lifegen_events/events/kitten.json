@@ -17,6 +17,7 @@
         "y_s refuses to play with you so you complain to y_p, who forces them to apologize. Later, they prank you with thorns in your nest as revenge.",
         "You and y_s take a nap together after a long day of playing. You cuddle together into a warm pile of fluff.",
         "y_p chides you unfairly for breaking the rules, but y_s steps in to defend you!",
+        "r_c trips over you on the way to the freshkill pile.",
         "While you're outside playing, an unexpected downpour begins. You let out a small growl of annoyance as your fur becomes drenched. Sensing your discomfort, l_n moves to stand over you, sheltering you from the worst of the rain until the skies clear.",
         "While exploring the camp, you stumble and hurt your paw. r_q rushes over, concerned, and gently licks your wound until you feel better."
     ],
@@ -33,7 +34,8 @@
         "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
         "You sneak into parts of camp where you're not supposed to be, your hunger for adventure already insatiable.",
         "You roll your eyes when r_k cries over a small cut. You're so much stronger than they are.",
-        "You help y_s devise a plan to get back at a cat who was bullying them."
+        "You help y_s devise a plan to get back at a cat who was bullying them.",
+        "You yell at r_c who had accidentally stepped on a bug that you were watching."
     ],
     "kitten brooding": [
         "You find a quiet, shaded spot beneath an old oak tree and spend hours there, just observing the comings and goings of the clan.",
@@ -96,7 +98,9 @@
         "A checkup trip to the medicine den leaves you terrified of all the strange sights and smells, and y_p has to bribe you with prey to even look in r_m's direction again."
     ],
     "kitten silly": [
-        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!"
+        "You and r_k imitate l_n and d_n, pretending to order around some warriors.",
+        "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
+        "You ask r_d if you can come along the next time they travel to o_cClan."
     ],
     "kitten stable": [],
     "kitten sweet": [
