@@ -343,6 +343,36 @@
             "sociability": [0, 8],
             "aggression": [0, 8],
             "stability": [8, 16]
+        },
+        "manipulative": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [8, 16]
+        },
+        "secretive": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [0, 8]
+        },
+        "rebellious": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [8, 16],
+            "stability": [0, 8]
+        },
+        "grumpy": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [8, 16],
+            "stability": [0, 8]
+        },
+        "passionate": {
+            "lawfulness": [8, 16],
+            "sociability": [8, 16],
+            "aggression": [0, 8],
+            "stability": [0, 8]
         }
     }
 }
