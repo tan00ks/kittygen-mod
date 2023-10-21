@@ -261,7 +261,7 @@ class Events:
                 if game.clan.your_cat.moons == 0:
                     self.generate_birth()
                 elif game.clan.your_cat.moons < 6:
-                    self.generate_kit_events() 
+                    self.generate_events() 
                 elif game.clan.your_cat.moons == 6:
                     self.generate_app_ceremony()
                 elif game.clan.your_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
@@ -679,7 +679,7 @@ class Events:
     def get_living_cats(self):
         living_cats = []
         for the_cat in Cat.all_cats_list:
-            if not the_cat.dead and the_cat.outside:
+            if not the_cat.dead and not the_cat.outside:
                 living_cats.append(the_cat)
         return living_cats
         
@@ -696,7 +696,7 @@ class Events:
                 return ""
             alive_kit = random.choice(alive_kits)
             while alive_kit.ID == game.clan.your_cat.ID:
-                alive_kit = random.choice(alive_kit)
+                alive_kit = random.choice(alive_kits)
             text = text.replace("r_k", str(alive_kit.name))
         if "r_a" in text:
             alive_apps = get_alive_apps(Cat)
@@ -775,28 +775,90 @@ class Events:
                 return ""
             text = text.replace("d_n", str(game.clan.deputy.name))
         if "y_s" in text:
-            if game.clan.your_cat.get_siblings() is None:
+            if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
                 return ""
-            text = text.replace("y_s", str(random.choice(game.clan.your_cat.get_siblings()).name))
+            text = text.replace("y_s", str(Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_siblings())).name))
         if "y_p" in text:
-            if game.clan.your_cat.get_parents() is None:
+            if len(game.clan.your_cat.inheritance.get_parents()) == 0:
                 return ""
-            text = text.replace("y_p", str(random.choice(game.clan.your_cat.get_parents()).name))
+            text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_parents())).name))
         if "y_m" in text:
             if game.clan.your_cat.mate is None:
                 return ""
             text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
         return text
+
+    def get_cluster(self, trait):
+        # Mapping traits to their respective clusters
+        trait_to_clusters = {
+            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "competitive", "rebellious", "impulsive", "noisy"],
+            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying"],
+            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming"],
+            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all"],
+            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer"],
+            "neurotic": ["nervous", "insecure", "lonesome", "quiet"],
+            "silly": ["troublesome", "childish", "playful", "careful", "strange", "noisy", "attention-seeker"],
+            "stable": ["loyal", "responsible", "wise", "faithful", "polite", "disciplined", "patient"],
+            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer"],
+            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy"],
+            "unlawful": ["troublesome", "bloodthirsty", "sneaky", "rebellious", "troublesome"]
+        }
+
+        clusters = [key for key, values in trait_to_clusters.items() if trait in values]
+
+        # Assign cluster and second_cluster based on the length of clusters list
+        cluster = clusters[0] if clusters else ""
+        second_cluster = clusters[1] if len(clusters) > 1 else ""
+
+        return cluster, second_cluster
+    
+    def generate_events(self):
+        resource_dir = "resources/dicts/events/lifegen_events/events/"
+        with open(f"{resource_dir}{game.clan.your_cat.status}.json",
+                  encoding="ascii") as read_file:
+            all_events = ujson.loads(read_file.read())
+        
+        possible_events = all_events[f"{game.clan.your_cat.status} general"]
+        cluster, second_cluster = self.get_cluster(game.clan.your_cat.personality.trait)
+
+        if cluster:
+            possible_events = possible_events + all_events[f"{game.clan.your_cat.status} {cluster}"]
+        if second_cluster:
+            possible_events = possible_events + all_events[f"{game.clan.your_cat.status} {second_cluster}"]
+
+        # Normal kit events
+        for i in range(random.randint(0,5)):
+            current_event = self.adjust_txt(random.choice(possible_events))
+            while current_event == "":
+                current_event = self.adjust_txt(random.choice(possible_events))
+            current_event = Single_Event(current_event)
+            if current_event not in game.cur_events_list:
+                game.cur_events_list.append(current_event)
             
     def generate_kit_events(self):
-        possible_kit_events = self.c_txt["kitten general"]
-        for i in range(random.randint(0,2)):
-            kit_event = self.adjust_txt(random.choice(possible_kit_events))
-            while kit_event == "":
-                kit_event = self.adjust_txt(random.choice(possible_kit_events))
-            kit_event = Single_Event(kit_event)
-            if kit_event not in game.cur_events_list:
-                game.cur_events_list.append(kit_event)
+        # resource_dir = "resources/dicts/events/lifegen_events/events"
+        # with open(f"{resource_dir}kitten.json",
+        #           encoding="ascii") as read_file:
+        #     kitten_events = ujson.loads(read_file.read())
+        
+        # cluster, second_cluster = self.cluster(game.clan.your_cat.personality.trait)
+
+        # possible_kit_events = kitten_events["kitten general"]
+        # if cluster:
+        #     possible_kit_events = possible_kit_events + kitten_events["kitten " + cluster]
+        # if second_cluster:
+        #     possible_kit_events = possible_kit_events + kitten_events["kitten " + second_cluster]
+
+        # # Normal kit events
+        # for i in range(random.randint(0,2)):
+        #     kit_event = self.adjust_txt(random.choice(possible_kit_events))
+        #     while kit_event == "":
+        #         kit_event = self.adjust_txt(random.choice(possible_kit_events))
+        #     kit_event = Single_Event(kit_event)
+        #     if kit_event not in game.cur_events_list:
+        #         game.cur_events_list.append(kit_event)
+
+        # Parent events for moons 1-5
         if game.clan.your_cat.parent1:
             moons_list = range(2, 6)
             parents_txt = {1: "one_parent", 2: "two_parents"}

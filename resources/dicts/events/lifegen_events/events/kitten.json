@@ -18,8 +18,17 @@
         "You and y_s take a nap together after a long day of playing. You cuddle together into a warm pile of fluff.",
         "y_p chides you unfairly for breaking the rules, but y_s steps in to defend you!",
         "r_c trips over you on the way to the freshkill pile.",
+        "r_a shows you a cool game called 'keep it up' which involves batting at a leaf to keep in in the air so it doesn't hit the ground.",
+        "A sudden downpour drenches the camp. You splash in the puddles it leaves behind. The queens aren't happy when you track mud back into the nursery.",
+        "A warrior brings you some honey to taste. It's absolutely delicious and you beg the warrior for more.",
+        "You attempt to climb a tree. Your small claws scrape against the bark, but you don't get very far before a warrior urges you back to the nursery.",
+        "You spend the day in the nursery, terrified of your newest discovery. You stare at the ground, eyes wide. Why does this happen? Why does your body do this? Where did your legs go? Why do they disappear whenever you sit down?",
+        "You pull and tug on y_p's ear, they don't stir from their slumber. It isn't until you yowl in their ear they snap back to reality. You both spend the morning chasing each other around camp.",
+        "y_p stares at you sternly, their paw firmly holding your tail keeping you in place. You don't want a lecture! Not now! It was an accident you swear, you would never, ever, ever pour honey into the warriors den as a prank! Not you!",
+        "You and y_p debate the weather for the next week. You both hope rain doesn't come soon, you shiver at the thought of the droplets clinging to your pelt.",
         "While you're outside playing, an unexpected downpour begins. You let out a small growl of annoyance as your fur becomes drenched. Sensing your discomfort, l_n moves to stand over you, sheltering you from the worst of the rain until the skies clear.",
-        "While exploring the camp, you stumble and hurt your paw. r_q rushes over, concerned, and gently licks your wound until you feel better."
+        "While exploring the camp, you stumble and hurt your paw. r_q rushes over, concerned, and gently licks your wound until you feel better.",
+        "You follow the warriors with your eyes as they leave for a patrol. You can't wait for your turn to explore beyond the camp."
     ],
     "kitten assertive": [
         "You watch the battle-scarred warriors coming back into camp from the border patrol, eyes wide. You hope you'll be just like them someday!",
@@ -100,7 +109,8 @@
     "kitten silly": [
         "You and r_k imitate l_n and d_n, pretending to order around some warriors.",
         "You and y_s hatch a plan to sneak out of camp, only for r_q to catch you and stop your plan before it even starts!",
-        "You ask r_d if you can come along the next time they travel to o_cClan."
+        "You ask r_d if you can come along the next time they travel to o_cClan.",
+        "You try to stay up all night just to see what happens. You end up falling asleep a little past moonhigh."
     ],
     "kitten stable": [],
     "kitten sweet": [
@@ -132,7 +142,8 @@
         "You roll your eyes as y_p lectures you on how you need to take things more seriously.",
         "You teach y_s to say bad words, much to y_p's horror.",
         "You fake an injury to purposefully get r_k into trouble, to get back at them for making fun of you earlier.",
-        "You sneak into parts of camp where you're not supposed to be, your hunger for adventure already insatiable."
+        "You sneak into parts of camp where you're not supposed to be, your hunger for adventure already insatiable.",
+        "You challenge r_w to a fight. The warrior is much weaker than you thought they were, and you stand on top of them triumphantly."
     ],
     "kitten rare": [
         "One night, as you sneak out of the nursery, you look up to see brilliant streaks of white light traveling across the sky. You watch the meteor shower, your eyes wide with amazement and wonder.",
