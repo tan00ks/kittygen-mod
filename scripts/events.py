@@ -31,7 +31,7 @@ from scripts.events_module.outsider_events import OutsiderEvents
 from scripts.event_class import Single_Event
 from scripts.game_structure.game_essentials import game
 from scripts.cat_relations.relationship import Relationship
-from scripts.utility import get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats, ceremony_text_adjust, \
+from scripts.utility import get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats, ceremony_text_adjust, \
     get_current_season, adjust_list_text, ongoing_event_text_adjust, event_text_adjust, create_new_cat
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
@@ -265,7 +265,7 @@ class Events:
                 elif game.clan.your_cat.moons == 6:
                     self.generate_app_ceremony()
                 elif game.clan.your_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
-                    self.generate_app_events()
+                    self.generate_events()
                 elif game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator', "queen"] and not game.clan.your_cat.w_done:
                     self.generate_ceremony()
                 elif game.clan.your_cat.status != 'elder' and game.clan.your_cat.moons != 119:
@@ -786,31 +786,11 @@ class Events:
             if game.clan.your_cat.mate is None:
                 return ""
             text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
+        if "m_n" in text:
+            if game.clan.your_cat.mentor is None:
+                return ""
+            text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
         return text
-
-    def get_cluster(self, trait):
-        # Mapping traits to their respective clusters
-        trait_to_clusters = {
-            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "competitive", "rebellious", "impulsive", "noisy"],
-            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying", "secretive"],
-            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming", "manipulative"],
-            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all"],
-            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer"],
-            "neurotic": ["nervous", "insecure", "lonesome", "quiet", "secretive"],
-            "silly": ["troublesome", "childish", "playful", "careful", "strange", "noisy", "attention-seeker"],
-            "stable": ["loyal", "responsible", "wise", "faithful", "polite", "disciplined", "patient"],
-            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer"],
-            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy"],
-            "unlawful": ["troublesome", "bloodthirsty", "sneaky", "rebellious", "troublesome", "manipulative"]
-        }
-
-        clusters = [key for key, values in trait_to_clusters.items() if trait in values]
-
-        # Assign cluster and second_cluster based on the length of clusters list
-        cluster = clusters[0] if clusters else ""
-        second_cluster = clusters[1] if len(clusters) > 1 else ""
-
-        return cluster, second_cluster
     
     def generate_events(self):
         resource_dir = "resources/dicts/events/lifegen_events/events/"
@@ -819,7 +799,7 @@ class Events:
             all_events = ujson.loads(read_file.read())
         
         possible_events = all_events[f"{game.clan.your_cat.status} general"]
-        cluster, second_cluster = self.get_cluster(game.clan.your_cat.personality.trait)
+        cluster, second_cluster = get_cluster(game.clan.your_cat.personality.trait)
 
         if cluster:
             possible_events = possible_events + all_events[f"{game.clan.your_cat.status} {cluster}"]
@@ -836,28 +816,6 @@ class Events:
                 game.cur_events_list.append(current_event)
             
     def generate_kit_events(self):
-        # resource_dir = "resources/dicts/events/lifegen_events/events"
-        # with open(f"{resource_dir}kitten.json",
-        #           encoding="ascii") as read_file:
-        #     kitten_events = ujson.loads(read_file.read())
-        
-        # cluster, second_cluster = self.cluster(game.clan.your_cat.personality.trait)
-
-        # possible_kit_events = kitten_events["kitten general"]
-        # if cluster:
-        #     possible_kit_events = possible_kit_events + kitten_events["kitten " + cluster]
-        # if second_cluster:
-        #     possible_kit_events = possible_kit_events + kitten_events["kitten " + second_cluster]
-
-        # # Normal kit events
-        # for i in range(random.randint(0,2)):
-        #     kit_event = self.adjust_txt(random.choice(possible_kit_events))
-        #     while kit_event == "":
-        #         kit_event = self.adjust_txt(random.choice(possible_kit_events))
-        #     kit_event = Single_Event(kit_event)
-        #     if kit_event not in game.cur_events_list:
-        #         game.cur_events_list.append(kit_event)
-
         # Parent events for moons 1-5
         if game.clan.your_cat.parent1:
             moons_list = range(2, 6)

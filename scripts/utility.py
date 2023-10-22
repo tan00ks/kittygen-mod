@@ -761,6 +761,29 @@ def change_relationship_values(cats_to: list,
             if log and isinstance(log, str):
                 rel.log.append(log)
 
+def get_cluster(trait):
+        # Mapping traits to their respective clusters
+        trait_to_clusters = {
+            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "vengeful", "competitive", "smug", "impulsive", "noisy"],
+            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying", "secretive"],
+            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming", "manipulative", "leader-like", "passionate"],
+            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all", "leader-like", "smug"],
+            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer"],
+            "neurotic": ["nervous", "insecure", "lonesome", "quiet", "secretive", "careful", "meek"],
+            "silly": ["troublesome", "childish", "playful", "strange", "noisy", "attention-seeker", "rebellious"],
+            "stable": ["loyal", "responsible", "wise", "faithful", "polite", "disciplined", "patient", "passionate"],
+            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer"],
+            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy", "honest"],
+            "unlawful": ["bloodthirsty", "sneaky", "rebellious", "manipulative", "obsessive"]
+        }
+        clusters = [key for key, values in trait_to_clusters.items() if trait in values]
+
+        # Assign cluster and second_cluster based on the length of clusters list
+        cluster = clusters[0] if clusters else ""
+        second_cluster = clusters[1] if len(clusters) > 1 else ""
+
+        return cluster, second_cluster
+
 
 # ---------------------------------------------------------------------------- #
 #                               Text Adjust                                    #

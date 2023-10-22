@@ -233,6 +233,18 @@
             "sociability": [0, 16],
             "aggression": [6, 10],
             "stability": [10, 16]
+        },
+        "meek": {
+            "lawfulness": [10, 16],
+            "sociability": [0, 8],
+            "aggression": [0, 4],
+            "stability": [10, 16]
+        },
+        "obsessive": {
+            "lawfulness": [0, 4],
+            "sociability": [0, 8],
+            "aggression": [6, 10],
+            "stability": [0, 4]
         }
     },
     "kit_traits": {
@@ -373,6 +385,24 @@
             "sociability": [8, 16],
             "aggression": [0, 8],
             "stability": [0, 8]
+        },
+        "honest": {
+            "lawfulness": [8, 16],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [8, 16]
+        },
+        "leader-like": {
+            "lawfulness": [8, 16],
+            "sociability": [8, 16],
+            "aggression": [0, 8],
+            "stability": [8, 16]
+        },
+        "smug": {
+            "lawfulness": [0, 8],
+            "sociability": [0, 8],
+            "aggression": [0, 8],
+            "stability": [8, 16]
         }
     }
 }
