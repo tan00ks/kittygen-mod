@@ -411,6 +411,83 @@
             "Rrragh, I'm the big scary badger! Hahaha!"
         ]
     ],
+    "cool_you_kit": [
+        [
+            "newborn",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "Heh. Always nice to see a new little addition to the Clan."
+        ]
+    ],
+    "cool_you_kit_1": [
+        [
+            "newborn",
+            "cool",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "Ah, StarClan, look at those little ears. So stinkin' adorable.",
+            "y_p should be proud."
+        ]
+    ],
+    "cool_you_kit_2": [
+        [
+            "newborn",
+            "cool",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "What a cute little guy!",
+            "Is it too late for me to steal them away from y_p?"
+        ]
+    ],
+    "cool_you_kit_3": [
+        [
+            "kitten",
+            "cool",
+            "unlawful",
+            "assertive",
+            "unabashed",
+            "random_cat"
+        ],
+        [
+            "Hey, y_c, I'll give you a badger ride if you go up to r_w and call them a huge piece of fox dung.",
+            "Yep, 'huge piece of fox-dung.' Sound it out. Perfect! Now, go!",
+            "[You do as you're told, repeating the words to r_w as t_c dies of laughter on the other end of camp.]"
+        ]
+    ],
+    "cool_you_kit_4": [
+        [
+            "kitten",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "Hey, y_c. Watch this.",
+            "[t_c places their paw over a small pebble and blows on it. When they take their paw off, it's gone!]",
+            "[Amazed, you beg t_c to reveal their secrets.]",
+            "Just a little slight of paw. Heh."
+        ]
+    ],
+    "cool_you_kit_5": [
+        [
+            "kitten",
+            "cool",
+            "unlawful",
+            "you_upstanding",
+            "you_stable",
+            "you_assertive"
+        ],
+        [
+            "Hm? You ... want me to give your tips on your hunting crouch?",
+            "Tch, you're too young for all that. Try not to take life so seriously. You'll have plenty of time to worry about hunting when you're an apprentice.",
+            "Until then, just try to enjoy your kithood."
+        ]
+    ],
     "assertive_parent3_2": [
         [
             "kitten",

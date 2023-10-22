@@ -8,6 +8,21 @@
             "Your paws... they reek of blood."
         ]
     ],
+    "unabashed elder1": [
+        [
+            "unabashed",
+            "elder",
+            "no_kit"
+        ],
+        [
+            "Have you noticed how annoyingly 'cool' the young cats have to be today?",
+            "Like, r_a is always out to impress everyone and act like they're better than others.",
+            "What happened to being unique? Showing yourself instead of hiding beneath a facade?",
+            "Honestly, r_a looked dumb showing off that kick. Would never be suited for battle.",
+            "[t_c dissolves into laughter.]",
+            "No, I think r_a's just darling when they're not busy being 'cool'."
+        ]
+    ],
     "elder_1": [
         [
             "murder",

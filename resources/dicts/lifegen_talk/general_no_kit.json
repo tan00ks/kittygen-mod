@@ -2107,7 +2107,7 @@
             "I haven't seen my reflection in a while... and I just wanna say... I look GOOD!"
         ]
     ],
-    "cool_2": [
+    "cool_2_1": [
         [
             "Any",
             "cool",
@@ -2122,7 +2122,7 @@
             "I guess we won't know."
         ]
     ],
-    "cool_3": [
+    "cool_3_1": [
         [
             "Any",
             "cool",
@@ -2135,7 +2135,7 @@
             "Horrible, right? I'll never understand them."
         ]
     ],
-    "cool_4": [
+    "cool_4_1": [
         [
             "Any",
             "cool"
@@ -6873,6 +6873,68 @@
             "Do you like it? I can make you some accessories, too. You'd look a lot less blunt and boring."
         ]
     ],
+    "cool_1_1": [
+        [
+            "Any",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "Well, well, if it isn't y_c. What can I do ya for, fuzzface?",
+            "What? Don't like my nicknames? Heh, I swear it's a term of endearment.",
+            "Ah, duty calls. I gotta run. Always good to see you, though.",
+            "I'll catch you later, 'kay?"
+        ]
+    ],
+    "cool_2": [
+        [
+            "Any",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "y_c. Just the cat I wanted to see. How are ya?",
+            "[t_c flashes a smile so dazzlingly bright, it's almost hypnotizing.]"
+        ]
+    ],
+    "cool_2_1_1": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[You go to talk to t_c, but they're already surrounded by a posse of friends and admirers.]",
+            "[It seems their attention is something in high demand ...]"
+        ]
+    ],
+    "cool_3": [
+        [
+            "no_kit",
+            "cool",
+            "random_cat"
+        ],
+        [
+            "Hey, y_c, my buddy, my man ...",
+            "Get this, r_m just asked me to go get some more moss for the medicine den.",
+            "There's this real nice place I like to go out near the edge of the territory, near this beautiful babbling brook ...",
+            "I was just about to leave, but then I figured, 'Hey, you know who deserves a little break today? y_c. They just work so hard.'",
+            "So, how 'bout it, friend? It's right on the o_cClan border, these huge swaths of moss, you can't miss it.",
+            "... You'll go? Perfect! Have fun on your walk, and try to enjoy yourself! You deserve it!",
+            "[t_c leaves you to go take a nap across camp. Did ... Did they just talk you into doing their chores for them?]"
+        ]
+    ],
+    "cool_4": [
+        [
+            "no_kit",
+            "cool",
+            "trust"
+        ],
+        [
+            "Tch, apparently yet another cat has a crush on me ...",
+            "It could be just a rumor, of course, but still.",
+            "Being a heartbreaker surprisingly isn't as fun as you'd think."
+        ]
+    ],
     "unabashed_general3": [
         [
             "Unabashed",
@@ -6895,6 +6957,21 @@
             "Hey y_c! You're looking great today!",
             "I was wondering if you wanted to gather flowers later! I want to decorate my nest and make it all pretty.",
             "Maybe we can find something nice for your nest, too!"
+        ]
+    ],
+    "cool_love": [
+        [
+            "Any",
+            "cool",
+	"platonic_love",
+	"random_cat"
+        ],
+        [
+            "[t_c catches you eyeing a juicy mouse r_w brought in from across camp.]",
+	"Do you want that mouse, y_c?",
+	"Wait right here.",
+	"[t_c crosses camp to go smooth-talk r_w. After a short conversation, they return to you, mouse dangling from their jaws.]",
+	"Your meal is served. Hehehe!"
         ]
     ]
 }

@@ -1389,5 +1389,31 @@
             "Conflict is a natural part of life! And if another clan or some mouse-brained rogues want to take what's rightfully ours, then it's our job to teach them a lesson. Remember that next time we run into trouble.",
             "I don't know a single self-respecting warrior who'd follow a leader that runs rather than fights."
         ]
+    ],
+    "unabashed_leader2": [
+        [
+            "unabashed",
+            "no_kit",
+            "dislike"
+        ],
+        [
+            "You need to clean up your act, y_c. You've been severely underperforming- don't think I haven't noticed.",
+            "Everyone has to do their part, and that includes you, so don't make others pick up your slack."
+        ]
+    ],
+    "unabashed_leader1": [
+        [
+            "unabashed",
+            "any",
+            "platonic_like"
+        ],
+        [
+            "You know, it's kind of weird to think that I could probably get c_nClan to do just about anything.",
+            "Well, I guess not ANYTHING, but a whole lot of crazy stuff.",
+            "Heck, I could even just declare that no one's allowed to be mean to you!",
+            "[t_c starts laughing in an almost scary manner.]",
+            "...What do you mean that's corruption? I'd be nice about it! Probably.",
+            "...Nah, you're right. The Clan should probably be glad d_n is there to stop me."
+        ]
     ]
 }

@@ -366,5 +366,47 @@
             "Meow, me mow.",
             "(They shake their head at you disapprovingly. They have so much to learn...)"
         ]
+    ],
+    "unabashed_newborn": [
+        [
+            "newborn",
+            "Impulsive",
+            "noisy",
+            "kit",
+            "newborn"
+        ],
+        [
+            "Mew! Meoow! Mrrrrow!",
+            "[They paw at you playfully.]"
+        ]
+    ],
+    "unabashed_newborn1": [
+        [
+            "unabashed",
+            "kitten or newborn"
+        ],
+        [
+            "[You spot t_c crawling around in circles when they suddenly bite r_c's leg.]"
+        ]
+    ],
+    "cool_newborn_1": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[t_c mewls in response to you saying their name.]",
+            "[It appears as if they're already trying to puff out the fur of their chest.]"
+        ]
+    ],
+    "cool_newborn_2": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[t_c wobbles their little paws out in front of themself, mewling loudly]",
+            "[Fresh to the world, it seems like they're already trying to find steady ground to explore.]"
+        ]
     ]
 }

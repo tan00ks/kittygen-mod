@@ -2626,6 +2626,20 @@
             "I wish I was you..."
         ]
     ],
+    "unabashed kit3": [
+        [
+            "unabashed",
+            "kit"
+        ],
+        [
+            "[You notice t_c standing on a large rock.]",
+            "Hi y_c! I'm taller than you!",
+            "What did you say???",
+            "I can't hear you from up here!",
+            "I'm up here because it's easier to throw rocks at cats when you're tall! You're so silly.",
+            "Careful, get out of the way! Otherwise I can't promise I won't hit you!"
+        ]
+    ],
     "brooding_kitten_like": [
         [
             "kitten",
@@ -2636,6 +2650,43 @@
         [
             "Hey, y_c, do you remember that time when I tripped r_k and they fell in that mud puddle?",
             "That was so funny, wasn't it? I bet I could do it again. Wanna help?"
+        ]
+    ],
+    "unabashed_kit": [
+        [
+            "noisy",
+            "any"
+        ],
+        [
+            "y_c! y_c! I've been looking for you everywhere!",
+            "Look at what I found! It's so cool, right?! Looks like a finch's feather, not to flex...",
+            "Wanna play with it?! Look, it flies around so well! Catch it, catch it!"
+        ]
+    ],
+    "cool_kit_2": [
+        [
+            "no_kit",
+            "cool"
+        ],
+        [
+            "Can you take me out onto the territory? Please, please, please? I promise it'll only be for a quick look!",
+            "[t_c flashes their huge, charming little eyes at you, and for a second, you feel compelled to take them out for a while ...]",
+            "[... Nope. Not gonna happen. You tell t_c to find something in the nursery to do.]",
+            "Aw, come on! That usually works!"
+        ]
+    ],
+    "cool_kit_2_1": [
+        [
+            "Any",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "[Everyone sure seems to pay t_c a lot of attention ...]",
+            "[Cats are constantly visiting them in the nursery, showering them with gifts and praise.]",
+            "[But when they catch you eyeing them, they cross the nursery and cuddle up against you with a purr.]",
+            "Hi, y_c!",
+            "[Suddenly, you see why they're so popular.]"
         ]
     ]
 }

@@ -8,6 +8,30 @@
             "Your courage is commendable, but your manners could use some work."
         ]
     ],
+    "unabashed_deputy": [
+        [
+            "unabashed",
+            "warrior",
+            "platonic_like"
+        ],
+        [
+            "y_c! Just the cat I wanted to see.",
+            "What? I've been looking for you for a very serious reason! And that reason is... I want to hang out!",
+            "Listen, I don't get much time off, okay? You should be happy I wanna spend it with you."
+        ]
+    ],
+    "deputy_unabashed": [
+        [
+            "Unabashed",
+            "apprentice"
+        ],
+        [
+            "Hey, I was looking for you all around the camp!",
+            "I need you to clean out the dirt-place, yeah? It's gotten quite stinky 'round there.",
+            "Uh-uh! No buts. We can't just have dung lying around the camp like that, and I think that you are the one for the job!",
+            "Just do it, it's not that serious! You won't die from cleaning some... Hey! Where are you going? I'm not done talking to you!"
+        ]
+    ],
     "broodingapp_toqueenapp": [
         [
             "queen's apprentice",
@@ -1542,6 +1566,18 @@
             "Recently I've been thinking about the best way to talk to r_c.",
             "We'll say hi to each other now and then, but I can never say anything to get the conversation going.",
             "Hmm... Maybe I'll ask 'em to try climbing the big oak with me!"
+        ]
+    ],
+    "unabashed_deputy2": [
+        [
+            "unabashed",
+            "deputy"
+        ],
+        [
+            "Do you think I could fit a pinecone in my mouth?",
+            "No?",
+            "...",
+            "... Do you think r_w could?"
         ]
     ]
 }

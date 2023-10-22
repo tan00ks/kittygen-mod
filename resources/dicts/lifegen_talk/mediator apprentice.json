@@ -9,6 +9,20 @@
             "Is something the matter?"
         ]
     ],
+    "unabashed mediator apprentice1": [
+        [
+            "unabashed",
+            "mediator Apprentice"
+        ],
+        [
+            "Oh, hi.",
+            "You know, that argument you had today with r_w was stupid.",
+            "You were both entitled. And you didn't end it, which doesn't make you better than them.",
+            "Then I had to step in, which was unnecessary, because it was stupid.",
+            "You were spitting words at each other for nothing. It was uncalled for.",
+            "And I'm not afraid to tell you so."
+        ]
+    ],
     "assertivemediator_comfort": [
         [
             "assertive",

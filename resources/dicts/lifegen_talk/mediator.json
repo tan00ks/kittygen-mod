@@ -9,6 +9,19 @@
             "Is something the matter?"
         ]
     ],
+    "unabashed_mediator": [
+        [
+            "warrior",
+            "unabashed",
+            "no_kit"
+        ],
+        [
+            "Have you heard that r_w's into l_n?!",
+            "I know, right?! I mean, they don't fit together at all!",
+            "I think that they're just trying to get on with the leader for extra attention, you know?",
+            "...Are you into anyone, y_c? I swear, I won't tell anyone!"
+        ]
+    ],
     "brooding_mediator": [
         [
             "brooding",
