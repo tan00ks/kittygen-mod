@@ -21,6 +21,18 @@
             "[You feel too guilty to insult this cat.]"
         ]
     ],
+    "unabashed_they_ill": [
+        [
+            "any",
+            "unabashed",
+            "they_ill"
+        ],
+        [
+            "Blegh. This sucks.",
+            "...This REALLY sucks. I hate this.",
+            "[t_c keeps muttering to themself about how unhappy they are about being sick.]"
+        ]
+    ],
     "insult_2": [
         [
             "Any",
@@ -6767,6 +6779,122 @@
         [
             "I love that thing you do when you tell me not to do stupid stuff and then I ignore it and regret it.",
             "I mean, one of my favorite things is not learning my lesson! And now you're telling me I get to do it with someone I love? Impossible! I must be in StarClan right now!"
+        ]
+    ],
+    "unabashed_dislike1": [
+        [
+            "unabashed",
+            "dislike"
+        ],
+        [
+            "I don't like you and I don't want to talk to you."
+        ]
+    ],
+    "unabashed_jealous3": [
+        [
+            "unabashed",
+            "dislike",
+            "jealousy"
+        ],
+        [
+            "I hope you don't think you're better than me. Because you're not. Even if people seem to think so.",
+            "Even if you never have to work for a thing in your life, I'm always going to be working to best you. Because I deserve good things just as much as you.",
+            "Watch your back, because I'm always coming up right behind you."
+        ]
+    ],
+    "unabashed_platonic_love": [
+        [
+            "any",
+            "unabashed",
+            "platonic_love",
+            "nonrelated"
+        ],
+        [
+            "Hey! If it isn't my best friend y_c!",
+            "Come on, I was just about to pick up a snack! Let's eat together!"
+        ]
+    ],
+    "unabashed_neutral": [
+        [
+            "any",
+            "unabashed",
+            "neutral"
+        ],
+        [
+            "Uh... hi?",
+            "Do I know you?"
+        ]
+    ],
+    "unabashed_leafbare": [
+        [
+            "leafbare",
+            "unabashed",
+            "any"
+        ],
+        [
+            "Brrr... Leaf-bare has to be the worst season ever. It's so cold, I think my paws are gonna freeze off."
+        ]
+    ],
+    "unabashed_from_parent2": [
+        [
+            "unabashed",
+            "from_parent",
+            "no_kit"
+        ],
+        [
+            "There you are! How's my baby doing?",
+            "What? I just wanted to talk to you. I barely get to see you anymore now that you're out of the nursery!",
+            "I won't lie though, I'm pretty glad I don't need to take care of you all day now. You were so exhausting as a kit! I mean, remember the time you kept trying to run out of the camp? I had to hold you by the scruff most of the day!",
+            "You don't?"
+        ]
+    ],
+    "unabashed_general1": [
+        [
+            "any",
+            "Unabashed",
+            "you_daring"
+        ],
+        [
+            "Ayo, who do we have here, y_c!",
+            "I bet that you won't get up on the clan Rock and say 'I, y_c, am a mousebrain'!",
+            "Oh, you will? Yeah? Go ahead, I'm watching!",
+            "[t_c bursts out laughing.]"
+        ]
+    ],
+    "unabashed_general2": [
+        [
+            "any",
+            "Unabashed",
+            "childish"
+        ],
+        [
+            "... Oh, hi y_c!",
+            "No, silly! The feather isn't stuck to my fur, it's... a means of decor!",
+            "Do you like it? I can make you some accessories, too. You'd look a lot less blunt and boring."
+        ]
+    ],
+    "unabashed_general3": [
+        [
+            "Unabashed",
+            "no_kit"
+        ],
+        [
+            "Have you heard what people are saying about r_w and d_n?",
+            "They say that r_w is trying to replace d_n by any means possible...",
+            "I wonder if it's true?",
+            "[You tell t_c that they shouldn't buy into petty gossip.]",
+            "Oh, come on! Even if it isn't true, it's always fun to talk about."
+        ]
+    ],
+    "unabashed_general4": [
+        [
+            "unabashed",
+            "any"
+        ],
+        [
+            "Hey y_c! You're looking great today!",
+            "I was wondering if you wanted to gather flowers later! I want to decorate my nest and make it all pretty.",
+            "Maybe we can find something nice for your nest, too!"
         ]
     ]
 }

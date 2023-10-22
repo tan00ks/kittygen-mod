@@ -17,6 +17,18 @@
             "... Do you ever feel guilty?"
         ]
     ],
+    "leader_unabashed": [
+        [
+            "no_kit",
+            "Unabashed",
+            "no_kit"
+        ],
+        [
+            "Hey there, y_c. I've heard someone from o_cClan say they've seen you around the borders lately at the last gathering.",
+            "Like, what were you thinking? o_cClan cats could have...",
+            "Actually, that cat was kinda pretty. If you don't mind, go to the border some more so they can talk to me again?"
+        ]
+    ],
     "broodingapp_toqueenapp": [
         [
             "queen's apprentice",

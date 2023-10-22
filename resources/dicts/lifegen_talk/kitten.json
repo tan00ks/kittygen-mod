@@ -17,6 +17,19 @@
             "We're the best patrol ever! Let's play again tomorrow, okay?"
         ]
     ],
+    "unabashed_leaffall1": [
+        [
+            "leaffall",
+            "any",
+            "unabashed"
+        ],
+        [
+            "Yay! Leaffall!",
+            "Leaffall is the best time of year because the trees give you leaves to play with all season!",
+            "Except evergreens. Evergreens suck.",
+            "Thank you, all trees except evergreens!"
+        ]
+    ],
     "kit_insult_1": [
         [
             "any",
