@@ -1,5 +1,6 @@
-{   "deputy old": [
-    "You have to sit through another meeting between you, the medicine cat, the mediator, and the leader. It's very boring, but you manage not to fall asleep during it, thankfully.",
+{
+    "deputy old": [
+        "You have to sit through another meeting between you, the medicine cat, the mediator, and the leader. It's very boring, but you manage not to fall asleep during it, thankfully.",
         "As part of your daily routine, you organize and lead the dawn patrol, taking a moment to breathe in the crisp morning air.",
         "During the day, you take a quiet moment to survey the Clan's territory from the vantage point of a tall oak.",
         "You lead a hunting party into the territory, your keen senses tuned into every rustle and movement around you.",
@@ -39,7 +40,7 @@
         "You're chosen to lead a challenging mission to reclaim a part of your territory from a rival Clan. Your strategic planning leads to a successful reclamation with minimal conflict.",
         "You organize a Clan-wide search when an elder goes missing. Your effective leadership results in the safe return of the elder.",
         "An apprentice shows consistent bravery and dedication. You propose to the Clan leader that they're ready for their warrior ceremony, reflecting your role in recognizing the achievements of others."
-],
+    ],
     "deputy general": [],
     "deputy assertive": [],
     "deputy brooding": [],

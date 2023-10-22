@@ -269,14 +269,14 @@ class Events:
                 elif game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator', "queen"] and not game.clan.your_cat.w_done:
                     self.generate_ceremony()
                 elif game.clan.your_cat.status != 'elder' and game.clan.your_cat.moons != 119:
-                    self.generate_events_adult()
+                    self.generate_events()
                 elif game.clan.your_cat.moons == 119:
                     if not game.switches['window_open']:
                         RetireScreen('events screen')
                 elif game.clan.your_cat.moons == 120 and game.clan.your_cat.status == 'elder':
                     self.generate_elder_ceremony()
                 elif game.clan.your_cat.status == 'elder':
-                    self.generate_elder_events()
+                    self.generate_events()
             
             if game.clan.your_cat.joined_df:
                 self.generate_df_events()
@@ -689,7 +689,7 @@ class Events:
             alive_cat = random.choice(alive_cats)
             while alive_cat.ID == game.clan.your_cat.ID:
                 alive_cat = random.choice(alive_cat)
-            text = text.replace("r_d", str(alive_cat.name))
+            text = text.replace("r_c", str(alive_cat.name))
         if "r_k" in text:
             alive_kits = get_alive_kits(Cat)
             if len(alive_kits) <= 1:
@@ -797,8 +797,17 @@ class Events:
         with open(f"{resource_dir}{game.clan.your_cat.status}.json",
                   encoding="ascii") as read_file:
             all_events = ujson.loads(read_file.read())
-        
-        possible_events = all_events[f"{game.clan.your_cat.status} general"]
+
+        status = game.clan.your_cat.status
+        if game.clan.your_cat.status == 'elder' and game.clan.your_cat.moons < 100:
+            status = "young elder"
+
+        possible_events = all_events[f"{status} general"]
+
+        # Add old events
+        if f"{status} old" in all_events:
+            possible_events = possible_events + all_events[f"{status} old"]
+
         cluster, second_cluster = get_cluster(game.clan.your_cat.personality.trait)
 
         if cluster:
@@ -806,7 +815,6 @@ class Events:
         if second_cluster:
             possible_events = possible_events + all_events[f"{game.clan.your_cat.status} {second_cluster}"]
 
-        # Normal kit events
         for i in range(random.randint(0,5)):
             current_event = self.adjust_txt(random.choice(possible_events))
             while current_event == "":
@@ -850,17 +858,6 @@ class Events:
         if game.clan.your_cat.mentor:
             ceremony_txt = ceremony_txt.replace('m_n', str(Cat.all_cats[game.clan.your_cat.mentor].name))
         game.cur_events_list.append(Single_Event(ceremony_txt))
-        
-    def generate_app_events(self):
-        for i in range(random.randint(0,5)):
-            e_txt = random.choice(self.c_txt[game.clan.your_cat.status])
-            if not game.clan.your_cat.mentor:
-                while "mentor" in e_txt or "mentor1" in e_txt:
-                    e_txt = random.choice(self.c_txt[game.clan.your_cat.status])
-            else:
-                e_txt = e_txt.replace('mentor1', str(Cat.all_cats[game.clan.your_cat.mentor].name))
-            if Single_Event(e_txt) not in game.cur_events_list:
-                game.cur_events_list.append(Single_Event(e_txt))
                 
     def generate_ceremony(self):
         if game.clan.your_cat.former_mentor:
@@ -888,12 +885,6 @@ class Events:
         game.cur_events_list.insert(0, Single_Event(ceremony_txt))
         game.clan.your_cat.w_done = True
         
-    def generate_events_adult(self):
-        for i in range(random.randint(0,5)):
-            evt = Single_Event(random.choice(self.c_txt[game.clan.your_cat.status]))
-            if evt not in game.cur_events_list:
-                game.cur_events_list.append(evt)
-        
     def generate_elder_ceremony(self):
         ceremony_txt = random.choice(self.b_txt['elder_ceremony'])
         ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
@@ -901,17 +892,6 @@ class Events:
         ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
         game.cur_events_list.append(Single_Event(ceremony_txt))
     
-    def generate_elder_events(self):
-        if game.clan.your_cat.moons < 100:
-            evt = Single_Event(random.choice(self.c_txt["young_elder"]))
-            if evt not in game.cur_events_list:
-                game.cur_events_list.append(evt)
-        else:
-            for i in range(random.randint(0,5)):
-                evt = Single_Event(random.choice(self.c_txt["elder"]))
-                if evt not in game.cur_events_list:
-                    game.cur_events_list.append(evt)
-        
     
     def check_gain_app(self, checks):
         if len(game.clan.your_cat.apprentice) == checks[0] + 1:
