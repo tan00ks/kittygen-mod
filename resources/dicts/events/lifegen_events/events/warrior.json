@@ -108,7 +108,10 @@
         "You stand your ground against a menacing fox. Your victorious yowl resonates through the forest, a testament to your bravery.",
         "You reminisce about past adventures with your former mentor. Their fond gaze and shared laughter warm your heart."
     ],
-    "warrior general": [],
+    "warrior general": [
+        "In a moment of downtime, you take the time to impress the kits with your finest hunting crouch.",
+        "You notice r_a pouting, seemingly gathering mouse bile for tick duty. You walk over to them to offer your help, and they happily accept. Though most apprentices see this task as annoying, it brings you memories and nostalgia of your past."
+    ],
     "warrior assertive": [],
     "warrior brooding": [],
     "warrior cool": [],

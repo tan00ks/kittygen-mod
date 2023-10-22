@@ -44,7 +44,9 @@
         "You use a poultice of herbs to soothe an elder's joint pain. Your continued dedication to all Clan members' comfort and well-being does not go unnoticed.",
         "You communicate with the medicine cat of a neighboring Clan, sharing knowledge and offering support. This collaboration not only helps your own Clan but also strengthens inter-Clan relations."
     ],
-    "medicine cat general": [],
+    "medicine cat general": [
+        "You find a kit in your den stealing your herbs! They admit that r_k dared them to do it when you sit them down for a talk. You spend the rest of the day chewing out the two kits."
+    ],
     "medicine cat assertive": [],
     "medicine cat brooding": [],
     "medicine cat cool": [],

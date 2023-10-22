@@ -64,7 +64,11 @@
         "You mediate a quarrel about the best place to store fresh-kill. The debate turns into a fun experiment, with everyone trying out different spots around the camp.",
         "An apprentice is upset they're not getting enough battle training. You suggest a mock battle tournament for all apprentices. It's a hit, making everyone forget about the original dispute."
     ],
-    "mediator general": [],
+    "mediator general": [
+        "You're called to settle an argument between two cats, only to find out they're arguing over what piece of prey is the best, and getting far too heated about it.",
+        "A queen in the nursery calls you over, thanking you for settling an argument between the kits earlier. Apparently they see you as a hero now.",
+        "You recall a memory with one of your mediator friends from o_cClan, and are suddenly thankful that you'll never have to meet them in battle."
+    ],
     "mediator assertive": [],
     "mediator brooding": [],
     "mediator cool": [],

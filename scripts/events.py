@@ -790,6 +790,11 @@ class Events:
             if game.clan.your_cat.mentor is None:
                 return ""
             text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
+        if "o_c" in text:
+            other_clan = choice(game.clan.all_clans)
+            if not other_clan:
+                return ""
+            text = text.replace("o_c", str(other_clan.name))
         return text
     
     def generate_events(self):

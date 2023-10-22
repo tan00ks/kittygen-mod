@@ -91,7 +91,12 @@
         "You take the final bite of the last piece of fresh-kill in the pile. Guilt mixes with the taste of mouse in your mouth.",
         "You spend a day in the medicine cat's den. It's an eye-opening glimpse into a different path."
     ],
-    "apprentice general": [],
+    "apprentice general": [
+        "You goof around a little too much with r_a, and m_n catches you two goofing off. You two get assigned to tick duty, much to your dismay.",
+        "You and y_s decide to have a hunting contest, trying to see who can catch the most prey in the smallest amount of time.",
+        "You drop into a den to visit your y_p. They're delighted by your presence, and you share a robin while you tell them about your day.",
+        "y_s swears they can catch more prey than you. It isn't clear who won after you spend the entire day hunting, but your mentors are satisfied with your contribution to the Clan."
+    ],
     "apprentice assertive": [],
     "apprentice brooding": [],
     "apprentice cool": [],
