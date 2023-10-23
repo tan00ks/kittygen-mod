@@ -5423,6 +5423,7 @@
     ],
     "Abandoned_insult": [
         [
+            "any",
             "insult",
             "you_abandoned",
             "hate"
@@ -6460,7 +6461,7 @@
             "Any",
             "silly",
             "leaffall",
-            "romantic_love"
+            "romantic_like"
         ],
         [
             "Woah... it's getting cold again.",
@@ -6783,6 +6784,7 @@
     ],
     "unabashed_dislike1": [
         [
+            "any",
             "unabashed",
             "dislike"
         ],
@@ -6792,6 +6794,7 @@
     ],
     "unabashed_jealous3": [
         [
+            "any",
             "unabashed",
             "dislike",
             "jealousy"
@@ -6807,7 +6810,7 @@
             "any",
             "unabashed",
             "platonic_love",
-            "nonrelated"
+            "non-related"
         ],
         [
             "Hey! If it isn't my best friend y_c!",
@@ -7097,7 +7100,7 @@
             "Any",
             "you_injured",
             "you_ill",
-            "random medicine cat",
+            "random_cat",
             "stable"
         ],
         [
@@ -7335,5 +7338,268 @@
             "[t_c lets out a long-suffering sigh at the sight of you.]",
             "Leave me be. I think I know well enough not to talk to murderers."
         ]
-    ]
+    ],
+    "genparent_toapp": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "from_parent",
+            "adopted_parent"
+        ],
+        [
+            "Hey, kit, could you grab me the –",
+            "-paw, I mean. y_c, not kit. Still getting used to that.",
+            "But, ah, you'll always be my baby to me."
+        ]
+        ],
+    
+    "genparent_toapp1": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "from_parent"
+        ],
+        [
+            "Hey, look out for y_s in the apprentice's den, alright?",
+            "I'm a little worried about them …"
+        ]
+        ],
+    
+    "genparent_toapp2": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "from_parent"
+        ],
+        [
+            "Hey, look out for y_s in the apprentice's den, alright?",
+            "The two of you are family, you need to stay together."
+        ]
+        ],
+    
+    "genparent_toadult1": [
+        [
+            "no_kit",
+            "from_parent"
+        ],
+        [
+            "Hey, y_c … Is everything alright?",
+            "I can tell you've had a hard day. Come here, you can tell me all about it.",
+            "[t_c pulls you close and wraps their tail around you, like they did when you were in the nursery.]",
+            "[Their soft purr reminds you that, even at your age, it's okay to still need your parent sometimes.]"
+        ]
+        ],
+    
+    "genparent_toadult": [
+        [
+            "no_kit",
+            "from_parent",
+            "adopted_parent"
+        ],
+        [
+            "Here, y_c. I saved this fish for you.",
+            "What? You don't like fish anymore?",
+            "It used to be your favorite when you were a kit …",
+            "Heh. Look at you, growing up on me."
+        ]
+        ],
+    
+    "sibling_assertive": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "assertive",
+            "silly",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "y_c, look up there!",
+            "[You look up to see a small bug fluttering around camp. It lands on your tail and t_c laughs delightedly.]",
+            "Whoa … Think we should keep him as a pet?",
+            "He can be like our new little brother.",
+            "We'll feed him, take care of him … He can sleep in my nest to stay warm at night.",
+            "[You dispute that the bug should sleep in your nest since he landed on you.]",
+            "How about we alternate every other day?",
+            "[The two of you playfully bicker about the details of your custody over the bug. You laugh so hard your tail trembles, and the bug flies away, never to be seen again.]",
+            "Haha! See what you did! You're not fit to raise him!"
+        ]
+        ],
+    
+    "sibling_brooding": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "brooding",
+            "upstanding",
+            "platonic_like"
+        ],
+        [
+            "Shove off. I'm busy.",
+            "[You shove your nose into t_c's face, blinking at them with your best cutesy eyes until they can't help but break.]",
+            "Psh, alright, alright … I'll come eat with you.",
+            "But only for a few minutes!"
+        ]
+        ],
+    
+    "sibling_gen": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "platonic_like"
+        ],
+        [
+            "Is it just me, or has y_p been looking a little lonely lately?",
+            "We should go check on them."
+        ]
+        ],
+    
+    "sibling_gen1": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "platonic_like",
+            "cool",
+            "assertive",
+            "brooding",
+            "unlawful",
+            "unabashed",
+            "upstanding"
+        ],
+        [
+            "Oh, sorry, were you saving this shrew?",
+            "[t_c licks the entire shrew from top to bottom then shoots you a dirt-eating grin.]",
+            "Whoops. Guess it's mine now. Hehehe.",
+            "[Leave it to your sibling to know just how to get on your nerves …]"
+        ]
+        ],
+    
+    "sibling_gen2": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "platonic_like",
+            "cool",
+            "assertive",
+            "brooding",
+            "unlawful",
+            "unabashed",
+            "upstanding"
+        ],
+        [
+            "Hey, mouse-brain. Just so you know. You see that hare over there, on the freshkill pile? That is MY HARE. I'm saving it.",
+            "If I come back, and it's gone, you'll never know peace again. I am so serious.",
+            "[t_c shoots you what you assume is supposed to be an intimidating glare as they stalk away.]",
+            "[Yeah … You're totally eating that hare later.]"
+        ]
+        ],
+    
+    "sibling_gen3": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "platonic_like"
+        ],
+        [
+            "Hey, remember when we were young, and y_p used to do that thing when we were kits where they'd parade us around the nursery on the 'border patrol'?",
+            "Or remember when y_p caught us trying to sneak out of the nursery? StarClan, I've never seen you so mad!",
+            "[You and t_c have a long conversation reminiscing on memories of your kithood together, making each other laugh louder and louder with stories of old.]"
+        ]
+        ],
+    
+    "sibling_gen4": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "platonic_like"
+        ],
+        [
+            "What was that special thing that y_p used to do with mice when we were kits? I'm having such a hard time remembering …",
+            "Oh, StarClan, I just remembered! They used to cut them up before giving to us!",
+            "Haha, it was a little gross … But, sweet, too.",
+            "Is it weird that I kind of miss it?"
+        ]
+        ],
+    
+    "sibling_gen5": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "platonic_like"
+        ],
+        [
+            "What was that special thing that y_p used to do with mice when we were kits? I'm having such a hard time remembering …",
+            "Oh, StarClan, I just remembered! They used to cut them up before giving to us!",
+            "Haha, it was a little gross … But, sweet, too.",
+            "Is it weird that I kind of miss it?"
+        ]
+        ],
+    
+    "sibling_gen6": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "assertive",
+            "cool",
+            "unabashed",
+            "unlawful",
+            "random_cat"
+        ],
+        [
+            "[t_c is talking with r_c across camp.]",
+            "Haha, yeah, and then … Ohh, here's the cat of the hour, y_c! What's up? Me and r_c were just talking about embarrassing moments.",
+            "Oh, SPEAKING of embarrassing, t_c, you gotta get a load of this story …",
+            "[t_c then proceeds to regale r_c with the most embarrassing possible stories from your kithood as possible.]",
+            "[Clearly, your Clanmate sees you in a new light now, and t_c shoots you a smarmy grin. Not to worry … You'll get them back later.]"
+        ]
+        ],
+    
+    "sibling_gen7": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling"
+        ],
+        [
+            "[t_c is talking with y_p across camp.]",
+            "[Always nice to see the family getting along."
+        ]
+        ],
+    
+    "sibling_gen8": [
+        [
+            "no_kit",
+            "sibling",
+            "adopted_sibling",
+            "platonic_like",
+            "cool",
+            "assertive",
+            "brooding",
+            "unlawful",
+            "unabashed",
+            "upstanding",
+            "silly"
+        ],
+        [
+            "[t_c intentionally waves their tail right in front of your face as you're trying to focus.]",
+            "What? I'm not touching you! Hahaha!",
+            "[You swat at t_c's tail and the two of you give chase around camp, breathless with laughter.]"
+        ]
+        ]
+    
 }

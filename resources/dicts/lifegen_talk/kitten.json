@@ -723,8 +723,7 @@
     "assertivekit_sibling2": [
         [
             "Any",
-            "platonic_like",
-            "from_kit"
+            "platonic_like"
         ],
         [
             "*Yaaawwn*",
@@ -736,6 +735,7 @@
     ],
     "assertivekit_sibling3": [
         [
+            "any",
             "assertive",
             "unabashed",
             "platonic_like",
@@ -755,6 +755,7 @@
     ],
     "assertivekit_sibling4": [
         [
+            "any",
             "assertive",
             "unlawful",
             "brooding",
@@ -770,6 +771,7 @@
     ],
     "assertivekit_sibling5": [
         [
+            "any",
             "assertive",
             "unlawful",
             "brooding",
@@ -786,6 +788,7 @@
     ],
     "assertivekit_sibling7": [
         [
+            "any",
             "assertive",
             "unlawful",
             "brooding",
@@ -2629,7 +2632,7 @@
     "unabashed kit3": [
         [
             "unabashed",
-            "kit"
+            "any"
         ],
         [
             "[You notice t_c standing on a large rock.]",
@@ -2654,7 +2657,7 @@
     ],
     "unabashed_kit": [
         [
-            "noisy",
+            "unabashed",
             "any"
         ],
         [
@@ -2741,8 +2744,9 @@
     ],
     "upstanding_kit4": [
         [
+            "any",
             "upstanding",
-            "from_your_kit",
+            "from_kit",
             "platonic_like",
             "random_cat"
         ],
