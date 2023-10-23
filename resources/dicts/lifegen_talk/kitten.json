@@ -2688,5 +2688,123 @@
             "Hi, y_c!",
             "[Suddenly, you see why they're so popular.]"
         ]
+    ],
+    "upstanding_kit": [
+        [
+            "upstanding",
+            "kitten"
+        ],
+        [
+            "I decided that I'm going to be the greatest c_nClan cat ever!",
+            "I'm going to work SUPER hard and not break ANY of the rules, and- and!",
+            "[t_c is literally bouncing around with excitement as they talk about their plans]"
+        ]
+    ],
+    "upstanding_kit1": [
+        [
+            "upstanding",
+            "queen",
+            "queen's apprentice",
+            "random_cat"
+        ],
+        [
+            "y_c! You'll never believe what r_k tried to do!",
+            "I caught them trying to sneak out of camp! Can you believe that? They were breaking the rules on purpose!",
+            "Why would they even do that? Don't they want to be a good c_nClan cat? It doesn't make any sense.",
+            "Anyway, that's all! I'm going to go back to playing now. If anyone else isn't following the rules, I'll come back and tell you!"
+        ]
+    ],
+    "upstanding_kit2": [
+        [
+            "upstanding",
+            "queen",
+            "queen's apprentice",
+            "random_cat"
+        ],
+        [
+            "y_c! y_c! r_k is getting into trouble again!"
+        ]
+    ],
+    "upstanding_kit3": [
+        [
+            "upstanding",
+            "queen",
+            "queen's apprentice",
+            "random_cat"
+        ],
+        [
+            "y_c!",
+            "[As you step out of the nursery, you find yourself face-to-face with a very annoyed t_c.]",
+            "y_c, r_k keeps cheating at play hide-and-seek. They won't stop peeking while we're trying to hide, so they already know where to find us! It's not fair!",
+            "Can you tell them to stop? I don't know if I want to keep playing with someone who won't follow the rules of the game."
+        ]
+    ],
+    "upstanding_kit4": [
+        [
+            "upstanding",
+            "from_your_kit",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "[t_c is stumbling after r_m, holding a couple of herbs in their mouth. As you catch their eye, they perk up and call out to you.]",
+            "y_c, look! I'm helping r_m! Are you watching?",
+            "I'm carrying TWO whole herbs all by myself, see? r_m said that I'm the best helper they ever had and that I'm going to be a great apprentice!",
+            "Does this mean that I can be apprenticed early? Could you ask l_n?",
+            "[Before you have a chance to respond, t_c turns, noticing that r_m was waiting by the entrance to the medicine den.]",
+            "I gotta go catch up! I'll tell you all about this later, okay? Bye!",
+            "[t_c bounds after r_m, ducking under their legs and diving into the den.]"
+        ]
+    ],
+    "upstanding_kit5": [
+        [
+            "upstanding",
+            "queen",
+            "queen's apprentice"
+        ],
+        [
+            "[Since sunhigh, you have been trying to convince t_c to take a nap, going back and forth with the kit who refused to lie down.]",
+            "But I can't take a nap! I need to become the best warrior in c_nClan, and warriors don't take naps!",
+            "Besides, I... I can help you and stuff! Warriors... *yawn* warriors help cats all the time! So why can't I...",
+            "[t_c's sentence is cut off by a yawn as they slump down into their nest.]",
+            "Zzz..."
+        ]
+    ],
+    "upstanding_kit6": [
+        [
+            "upstanding",
+            "they_grieving",
+            "no_kit",
+            "comfort"
+        ],
+        [
+            "[You hear a trembling mew, a small paw tugging at your fur. You turn and find yourself staring down into t_c's tear-filled eyes.]",
+            "y_c? H-how can I be the best c_nClan cat without d_c? W-what do I do?"
+        ]
+    ],
+    "upstanding_kit7": [
+        [
+            "upstanding",
+            "you_injured",
+            "no_kit",
+            "platonic_like"
+        ],
+        [
+            "[As you lie in your nest, you notice t_c marching back and forth near the entrance of the den. They have a determined look on their face, taking large steps that almost cause them to stumble.]",
+            "[Both curious and amused, you ask them what they are doing.]",
+            "Oh, I'm guarding you! I'm practicing so that I can become the most fearsome warrior in all of c_nClan! No cat is going to bother you with me around.",
+            "I'll be such a good warrior too, cats won't ever get hurt like you are!"
+        ]
+    ],
+    "upstanding_kit8": [
+        [
+            "upstanding",
+            "insult",
+            "kitten",
+            "random_cat"
+        ],
+        [
+            "H-hey! You can't just say something like that! r_q!"
+        ]
     ]
 }

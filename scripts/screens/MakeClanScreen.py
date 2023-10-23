@@ -107,10 +107,6 @@ class MakeClanScreen(Screens):
         self.skin="BLACK"
         self.white_patches_tint="none"
         self.kitten_sprite=None
-        self.adol_sprite=None
-        self.adult_sprite=None
-        self.senior_sprite=None
-        self.para_adult_sprite=None
         self.reverse=False
         self.accessories=[]
 
@@ -993,16 +989,11 @@ class MakeClanScreen(Screens):
             points=self.points,
             accessory=self.accessory,
             paralyzed=self.paralyzed,
-            opacity=self.opacity,
             scars=self.scars,
             tint=self.tint,
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
-            adol_sprite=self.adol_sprite,
-            adult_sprite=self.adult_sprite,
-            senior_sprite=self.senior_sprite,
-            para_adult_sprite=self.para_adult_sprite,
             reverse=self.reverse,
             accessories=self.accessories
         )
@@ -1300,16 +1291,11 @@ class MakeClanScreen(Screens):
             points=self.points,
             accessory=self.accessory,
             paralyzed=self.paralyzed,
-            opacity=self.opacity,
             scars=self.scars,
             tint=self.tint,
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
-            adol_sprite=self.adol_sprite,
-            adult_sprite=self.adult_sprite,
-            senior_sprite=self.senior_sprite,
-            para_adult_sprite=self.para_adult_sprite,
             reverse=self.reverse,
             accessories=self.accessories
         )

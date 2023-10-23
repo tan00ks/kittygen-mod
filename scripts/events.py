@@ -791,7 +791,7 @@ class Events:
                 return ""
             text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
         if "o_c" in text:
-            other_clan = choice(game.clan.all_clans)
+            other_clan = random.choice(game.clan.all_clans)
             if not other_clan:
                 return ""
             text = text.replace("o_c", str(other_clan.name))
