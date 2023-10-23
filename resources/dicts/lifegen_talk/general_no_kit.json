@@ -2056,7 +2056,10 @@
         [
             "any",
             "introspective",
-            "trust"
+            "trust",
+            "newleaf",
+            "greenleaf",
+            "leaffall"
         ],
         [
             "Hm, Good morning, y_c.",
