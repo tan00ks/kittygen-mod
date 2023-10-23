@@ -109,6 +109,7 @@ class MakeClanScreen(Screens):
         self.kitten_sprite=None
         self.reverse=False
         self.accessories=[]
+        self.sprite_num = 0
 
         # Buttons that appear on every screen.
         self.menu_warning = pygame_gui.elements.UITextBox(
