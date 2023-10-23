@@ -71,7 +71,6 @@
             "Without you, I don't know what I'd do."
         ]
     ],
-   
     "assertive_leafbare1": [
         [
             "Any",
@@ -6166,7 +6165,8 @@
         ]
     ],
     "brooding_love_2": [
-        ["any",
+        [
+            "any",
             "platonic_love",
             "brooding",
             "random_cat"
@@ -6530,7 +6530,8 @@
         ]
     ],
     "unabashed_romantic_like": [
-        ["any",
+        [
+            "any",
             "Unabashed",
             "romantic_like"
         ],
@@ -6542,7 +6543,8 @@
         ]
     ],
     "Unabashed_jealous1": [
-        ["any",
+        [
+            "any",
             "Unabashed",
             "Jealousy"
         ],
@@ -6553,7 +6555,8 @@
         ]
     ],
     "unabashed_jealous2": [
-        ["any",
+        [
+            "any",
             "unabashed",
             "jealousy"
         ],
@@ -6564,32 +6567,35 @@
         ]
     ],
     "unabashed_from_mate": [
-        ["any",
+        [
+            "any",
             "Unabashed",
             "Romantic_Like",
             "From_mate"
         ],
         [
-            "Oh, here you are, my sweetest m_c!",
+            "Oh, here you are, my sweetest y_c!",
             "Aren't you tired? From running around my mind all the time?",
             "Oh-, oh, wait! Listen to this one:",
             "Did it hurt when you fell from StarClan? And- and-..."
         ]
     ],
     "unabashed_from_parent1": [
-        ["any",
+        [
+            "any",
             "Unabashed",
             "Dislike",
             "From_parent"
         ],
         [
-            "m_c, what's been up with you lately?!",
+            "y_c, what's been up with you lately?!",
             "Sometimes I'm really ashamed to be associated with you.",
             "Scram, you mousebrain. And you better improve."
         ]
     ],
     "unabashed mentor1": [
-        ["apprentice",
+        [
+            "apprentice",
             "unabashed",
             "from_mentor",
             "dislike"
@@ -6626,8 +6632,8 @@
         [
             "I love you, y_c!",
             "I love you, I love you, I love you, I love you!",
-            "If you and mysteriously returning from camp with crazy amounts of fresh-kill after going for a brisk hunt alone and scaring the everliving StarClan out of d_n were hung over a cliff, and I could only choose one of you to save, uh...",
-            "Of course I'd choose you! But maybe we could do that together instead of giving it up entirely."
+            "If you d_n were hung over a cliff and I could only choose one of you to save, uh...",
+            "Of course I'd choose you! But lets hope that never happens..."
         ]
     ],
     "silly_mate_catchfail": [

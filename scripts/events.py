@@ -529,7 +529,7 @@ class Events:
     def pick_valid_parent(self):
         parent = random.choice(Cat.all_cats_list).ID
         counter = 0
-        while parent == game.clan.your_cat.ID or Cat.all_cats[parent].moons < 14 or Cat.all_cats[parent].moons > 100 or Cat.all_cats[parent].dead:
+        while parent == game.clan.your_cat.ID or Cat.all_cats[parent].moons < 14 or Cat.all_cats[parent].moons > 100 or Cat.all_cats[parent].dead or Cat.all_cats[parent].outside or "apprentice" in Cat.all_cats[parent].status:
             parent = random.choice(Cat.all_cats_list).ID
             counter+=1
             if counter == 30:
@@ -574,6 +574,7 @@ class Events:
         num_siblings = random.choice([0,1,2,3])
         siblings, sibling_text = self.create_siblings(num_siblings)
         birth_type = random.randint(1,6)
+        birth_type = 6
         if birth_type == 1:
             game.clan.your_cat.backstory = random.choice(["abandoned1", "abandoned2", "abandoned3", "abandoned4", "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5", "orphaned6"])
             return self.handle_birth_no_parents(siblings, sibling_text)
@@ -650,6 +651,13 @@ class Events:
         return self.set_birth_text("birth_two_parents", replacements)
 
     def handle_birth_adoptive_parents(self, siblings, sibling_text):
+        parent1, parent2 = self.pick_valid_parent(), self.pick_valid_parent()
+        counter = 0
+        while parent1 == parent2 or Cat.all_cats[parent1].age != Cat.all_cats[parent2].age:
+            counter+=1
+            parent2 = self.pick_valid_parent()
+            if counter > 30:
+                return self.handle_birth_no_parents(siblings, sibling_text)
         thought = "Is happy their kits are safe"
         blood_parent = create_new_cat(Cat, Relationship,
                                         status=random.choice(["loner", "kittypet"]),
@@ -658,9 +666,6 @@ class Events:
                                         age=random.randint(15,120))[0]
         blood_parent.outside = True
         game.clan.add_to_unknown(blood_parent)
-        parent1, parent2 = self.pick_valid_parent(), self.pick_valid_parent()
-        while parent2 == parent1:
-            parent2 = self.pick_valid_parent()
         Cat.all_cats[parent1].set_mate(Cat.all_cats[parent2])
         Cat.all_cats[parent2].set_mate(Cat.all_cats[parent1])
         game.clan.your_cat.adoptive_parents.extend([parent1,parent2])
