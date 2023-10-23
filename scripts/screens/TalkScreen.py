@@ -13,7 +13,7 @@ from scripts.utility import event_text_adjust, scale, ACC_DISPLAY, process_text,
 
 from .Screens import Screens
 
-from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit, get_cluster
+from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats
 from scripts.cat.cats import Cat, BACKSTORIES
 from scripts.cat.pelts import Pelt
 from scripts.game_structure import image_cache
