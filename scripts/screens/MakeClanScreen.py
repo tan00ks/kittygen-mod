@@ -1088,13 +1088,20 @@ class MakeClanScreen(Screens):
             scale(pygame.Rect((column2_x, y_pos[5] - 40),(1200,-1))),
             object_id=get_text_box_theme("#text_box_22_horizleft"), manager=MANAGER
         )
+
+        self.elements['pose text'] = pygame_gui.elements.UITextBox(
+            'Pose',
+            scale(pygame.Rect((column2_x, y_pos[6] - 40),(1200,-1))),
+            object_id=get_text_box_theme("#text_box_22_horizleft"), manager=MANAGER
+        )
         self.elements['paralyzed'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[0]), (250, 70))), manager=MANAGER)
         self.elements['reverse'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[1]), (250, 70))), manager=MANAGER)
         self.elements['scars'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.scars1 + Pelt.scars2 + Pelt.scars3, "None", scale(pygame.Rect((column2_x, y_pos[2]), (250, 70))), manager=MANAGER)
         self.elements['vitiligo'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.vit, "None", scale(pygame.Rect((column2_x, y_pos[3]), (250, 70))), manager=MANAGER)
         self.elements['points'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.point_markings, "None", scale(pygame.Rect((column2_x, y_pos[4]), (250, 70))), manager=MANAGER)
         self.elements['tint'] = pygame_gui.elements.UIDropDownMenu(["pink", "gray", "red", "orange", "None"], "None", scale(pygame.Rect((column2_x, y_pos[5]), (250, 70))), manager=MANAGER)
-        
+        self.elements['pose'] = pygame_gui.elements.UIDropDownMenu(["0", "1", "2"], "0", scale(pygame.Rect((column2_x, y_pos[6]), (250, 70))), manager=MANAGER)
+
         self.elements['skin text'] = pygame_gui.elements.UITextBox(
             'Skin',
             scale(pygame.Rect((column3_x, y_pos[0] - 40),(1200,-1))),
@@ -1244,6 +1251,9 @@ class MakeClanScreen(Screens):
                     self.tint = None
                 else:
                     self.tint = event.text
+                self.update_sprite()
+            elif event.ui_element == self.elements['pose']:
+                self.sprite_num = int(event.text)
                 self.update_sprite()
             elif event.ui_element == self.elements['skin']:
                 self.skin = event.text
