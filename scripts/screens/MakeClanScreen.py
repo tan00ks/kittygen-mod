@@ -106,10 +106,9 @@ class MakeClanScreen(Screens):
         self.tint="none"
         self.skin="BLACK"
         self.white_patches_tint="none"
-        self.kitten_sprite=None
+        self.kitten_sprite=0
         self.reverse=False
         self.accessories=[]
-        self.sprite_num = 0
 
         # Buttons that appear on every screen.
         self.menu_warning = pygame_gui.elements.UITextBox(
@@ -1253,7 +1252,7 @@ class MakeClanScreen(Screens):
                     self.tint = event.text
                 self.update_sprite()
             elif event.ui_element == self.elements['pose']:
-                self.sprite_num = int(event.text)
+                self.kitten_sprite = int(event.text)
                 self.update_sprite()
             elif event.ui_element == self.elements['skin']:
                 self.skin = event.text
