@@ -1,3 +1,11 @@
+<strong>v0.6.3: </strong>
+- Many new dialogue options!
+- Dialogue does not repeat as often
+- Choose clan size
+- Randomize backstory
+- Added new traits
+- Added new moon events
+
 <strong>v0.6.2: </strong>
 - Many new dialogue options!
 - Added murder text
