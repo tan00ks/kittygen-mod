@@ -648,6 +648,13 @@ class TalkScreen(Screens):
             text = [t1.replace("d_c", dead_cat) for t1 in text]
         return text
 
+    def get_living_cats(self):
+        living_cats = []
+        for the_cat in Cat.all_cats_list:
+            if not the_cat.dead and not the_cat.outside:
+                living_cats.append(the_cat)
+        return living_cats
+        
     def adjust_txt(self, text):
         if "r_c" in text:
             alive_cats = self.get_living_cats()
