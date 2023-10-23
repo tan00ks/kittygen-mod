@@ -2228,6 +2228,62 @@
             "No, that couldn't possibly be it."
         ]
     ],
+
+        "neurotic_5": [
+        [
+            "no_kit",
+            "neurotic",
+            "brooding",
+            "introspective",
+            "platonic_love"
+        ],
+        [
+            "Sometimes, I wonder if I’d be happier just living out on my own, as a loner.",
+            "Away from all the pressures and hierarchies of clan life, just free to wander and live my life."
+            "But then, if I were a loner, I wouldn’t have you, would I?",
+            "No … No, that just wouldn’t do."
+        ]
+    ],
+
+        "neurotic_mate": [
+        [
+            "Any",
+            "from_mate",
+            "neurotic"
+        ],
+        [
+            "...",
+            "Oh, hey, y_c.",
+            "Hm? Oh, yeah, everything’s okay. Why do you ask?",
+            "... You can tell something is wrong?",
+            "*Sigh* I don’t know. I guess I’ve just been thinking lately ...",
+            "For so much of my life, I’ve felt like I’ve been on my own. Now you’re here, and, well, I guess I’ve just been wondering what you see in me.",
+            "You’re just so pretty and talented and cool and I’m just, well, plain ol’ me!",
+            "I just don’t know what I did to deserve you ...",
+            "[You assure t_c that you cherish them and no one could ever take their place in your life]",
+            "... Thanks, y_c. That makes me feel a lot better."
+        ]
+    ],
+
+    
+        "neurotic_mate1": [
+        [
+            "Any",
+            "from_mate",
+            "neurotic"
+        ],
+        [
+            "Hey, y_c! Wanna share tongues?",
+            "[You and t_c cuddle up together, pelts brushing, soaking in the warmth of the sun together. Their fur is soft; you bury yourself in it.",
+            "[Suddenly, they stop grooming you, as if they made a sudden realization.]",
+            "...",
+            "What’s that? You want to know if something’s wrong?",
+            "Heh. No, no, it’s just ...",
+            "I never thought anything like this would happen to me.",
+            "I’m really glad you’re here, y_c.",
+            "Thank you for being with me."
+        ]
+    ],
     "silly_1": [
         [
             "Any",
@@ -2262,6 +2318,64 @@
             "It hasn't spotted me yet, hehe."
         ]
     ],
+
+      "silly_5": [
+        [
+            "Any",
+            "silly"
+        ],
+        [
+            "Hey, y_c! Get a load of this one!",
+            "What happens when a tree falls into the mud?",
+            "It leafs an impression! Hahaha!",
+            "... Hey, where are you going?"
+        ]
+    ],
+
+    
+    "silly_6": [
+        [
+            "Any",
+            "silly"
+        ],
+        [
+            "Hey, y_c! Could you roll that moss-ball back over here?",
+            "Why am I playing moss-ball, you ask? Uhm, because it’s awesome! That’s why!",
+            "Wha – No, it’s not just for kits! It’s beneficial for all warriors to hone their agility skills.",
+            "Maybe we could play a game sometime?"
+        ]
+    ],
+
+        "silly_7": [
+        [
+            "Any",
+            "silly",
+            "unabashed"
+        ],
+        [
+            "Hey, y_c! Wanna see this battle move I just learned? I’ve totally got it mastered!",
+            "[t_c attempts the move, trips over their own paws, lands unceremoniously on the ground.]",
+            "Uh … hehe.",
+            "I could’ve sworn I had it down!"
+        ]
+    ],
+       "rumor": [
+        [
+            "Any",
+            "silly",
+            "cool",
+            "unlawful",
+            "unabashed",
+            "random_cat"
+        ],
+        [
+            "Psst, y_c. I heard a rumor that r_w totally has a crush on r_w. Isn’t that crazy?",
+            "… Where’d I get the rumor from?",
+            "Uh, well, you see, ah …",
+            "Hmph. You’re no fun at all."
+        ]
+    ],
+    
     "stable_1": [
         [
             "Any",
