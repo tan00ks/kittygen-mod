@@ -2213,6 +2213,21 @@
             "Oh you think so? I guess that's a little reassuring."
         ]
     ],
+
+    "neurotic_4": [
+        [
+            "Any",
+            "neurotic",
+            "random_cat"
+        ],
+        [
+            "d_n assigned me on a solo patrol for tomorrow ...",
+            "I don't know what they're thinking. Is it some sort of test? Or, are they trying to get me killed?",
+            "[You ask t_c if maybe d_n just genuinely thought they were the most qualified cat for the job?]",
+            "Hm ...",
+            "No, that couldn't possibly be it."
+        ]
+    ],
     "silly_1": [
         [
             "Any",
@@ -4466,6 +4481,61 @@
             "Uh ... Okay. Goodbye, then."
         ]
     ],
+
+     "brooding_mate": [
+        [
+            "brooding",
+            "from_mate"
+        ],
+        [
+            "Hey, you. How's your day been?",
+            "[t_c presses into your pelt with a purr.]",
+            "I wanna hear all about it."
+        ]
+    ],
+
+      "brooding_mate1": [
+        [
+            "brooding",
+            "from_mate"
+        ],
+        [
+            "Hello there, my jubilant flower.",
+            "[You burst into laughter and ask t_c what that was all about.]",
+            "Heh, it's a pet name. I'm trying to be more affectionate ... Clearly, I could use some work on it, though.",
+            "[You lick t_c's ear, purring that you wouldn't have it any other way.]"
+        ]
+    ],
+
+     "brooding_mate2": [
+        [
+            "brooding",
+            "from_mate"
+        ],
+        [
+            "Prrr ...",
+            "[t_c walks up to you you and leans all their weight against your side.]"
+        ]
+    ],
+
+     "brooding_love111": [
+        [
+            "no_kit",
+            "brooding",
+            "assertive",
+            "cool",
+            "silly",
+            "upstanding",
+            "platonic_love",
+            "unabashed",
+            "unlawful"
+        ],
+        [
+            "[You try to sneak up on t_c, but they trip you with their tail before you can even get close.]",
+            "I can tell it's you by just the sound of your pawsteps, dummy! Hahaha!"
+        ]
+    ],
+    
     "broodingapp_toqueenapp11": [
         [
             "queen's apprentice",
