@@ -2509,5 +2509,92 @@
             "They were lucky they weren't spotted this time, but I don't want to see this happen again. I expected better out of them, and out of you as well.",
             "If you aren't able to teach your apprentice how to respect clan boundaries, then I may need to have a word with l_n about this. Try not to let this happen again."
         ]
+    ],
+      "bloodthirsty_pos": [
+        [
+            "Any",
+            "platonic_love",
+            "fierce",
+            "bloodthirsty",
+            "competitive"
+        ],
+        [
+            "Hey, y_c. You want to see this scar I got? It’s new.",
+            "It happened during a training session. I was practicing my battle moves, and I guess I got carried away ...",
+            "Everyone tells me I take things too far. In reality, I don’t think I take things far enough.".
+            "I’m going to be the strongest warrior this clan has ever seen. Stronger than the strongest. I just have to figure out what I’m really capable of ..."
+        ]
+    ],
+
+    "bloodthirsty_pos1": [
+        [
+            "apprentice",
+            "warrior",
+            "platonic_like",
+            "brooding",
+            "competitive"
+        ],
+        [
+            "Hey, y_c. Wanna spar?",
+            "What’s that? You’re exhausted from yesterday’s training?",
+            "… Hmph. Fine. Have it your way."
+        ]
+    ],
+
+    "bloodthirsty_rom": [
+        [
+            "apprentice",
+            "warrior",
+            "romantic_like",
+            "brooding"
+        ],
+        [
+            "Hey. I saw you practicing your fighting techniques earlier.",
+            "They looked pretty good, but they could be better.",
+            "Your form is sloppy, unpracticed. It needs work. If you wanted, maybe I could ... show you sometime?",
+            "[If you didn’t know any better, you’d think that t_c was blushing.]"
+        ]
+    ],
+
+    "bloodthirsty_love": [
+        [
+            "Any",
+            "platonic_like",
+            "bloodthirsty"
+        ],
+        [
+            "Hey. I know this is your favorite prey, so I caught it for you. I hope you like it.",
+            "Don’t mind the gore. I might’ve gotten a little carried away when bringing it down, but at least the good bits are mostly intact."
+        ]
+    ],
+
+    
+    "bloodthirsty_kit": [
+        [
+            "Any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "bloodthirsty",
+            "fierce"
+        ],
+        [
+            "Hmph. You think my battle moves are too violent? Come on, y_c.",
+            "Violence is what makes the clans what they are! Without it, we’d be no better than kittypets!",
+            "Don’t tell me you’re afraid of your own kit!"
+        ]
+    ],
+
+     "bloodthirsty_kit1": [
+        [
+            "Any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "bloodthirsty"
+        ],
+        [
+            "Ugh, what do you want?",
+            "Would you please stop hovering over me? I’m not in the nursery anymore. I’m my own cat, and I can catch my prey however I like.",
+            "Even if it does involve beheading."
+        ]
     ]
 }
