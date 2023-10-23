@@ -802,6 +802,8 @@ class Events:
             if not other_clan:
                 return ""
             text = text.replace("o_c", str(other_clan.name))
+        if "c_n" in text:
+            text = text.replace("c_n", str(game.clan.name))
         return text
     
     def generate_events(self):
