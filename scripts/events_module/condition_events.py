@@ -254,7 +254,7 @@ class Condition_Events():
 
                             if possible_scar or possible_death:
                                 History.add_possible_history(cat, injury_event.injury, scar_text=possible_scar, 
-                                                             death_text=possible_death)
+                                                             death_text=possible_death, other_cat=other_cat)
                             
                         cat.get_injured(injury_event.injury)
 
@@ -791,7 +791,7 @@ class Condition_Events():
                         # Don't add this to the condition event list: instead make it it's own event, a ceremony. 
                         game.cur_events_list.append(
                                 Single_Event(event, "ceremony", retire_involved))
-                    elif game.clan.age % 5 == 0:
+                    elif game.clan.age % 5 == 0 and not game.switches['window_open']:
                         RetireScreen('events screen')
                             
     @staticmethod

@@ -37,7 +37,6 @@ from .LifeGenPatrolScreen import LifeGenPatrolScreen
 from .DFPatrolScreen import DFPatrolScreen
 from .DatePatrolScreen import DatePatrolScreen
 from .AffairScreen import AffairScreen
-
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
 # ---------------------------------------------------------------------------- #

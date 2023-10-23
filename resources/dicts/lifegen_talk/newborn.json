@@ -119,8 +119,8 @@
             "introspective"
         ],
         [
-            "[You're sat grooming yourself in the clearing]",
-            "[A little newborn stumbles into you]",
+            "[You're sat grooming yourself in the clearing.]",
+            "[A little newborn stumbles into you.]",
             "Squeak! Meow!",
             "[They turn around and stumble away. You're too surprised to grab them before they crawl back to the nursery. Seems at the minimum that they have a good sense of direction?]"
         ]
@@ -357,14 +357,80 @@
     "stable_newborn_11": [
         [
             "Any",
-            "medicine cat",
-            "faithful",
-            "strict",
             "stable"
         ],
         [
             "Meow, me mow.",
             "(They shake their head at you disapprovingly. They have so much to learn...)"
+        ]
+    ],
+    "unabashed_newborn": [
+        [
+            "newborn",
+            "unabashed"
+        ],
+        [
+            "Mew! Meoow! Mrrrrow!",
+            "[They paw at you playfully.]"
+        ]
+    ],
+    "unabashed_newborn1": [
+        [
+            "unabashed",
+            "newborn"
+        ],
+        [
+            "[You spot t_c crawling around in circles when they suddenly bite r_c's leg.]"
+        ]
+    ],
+    "cool_newborn_1": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[t_c mewls in response to you saying their name.]",
+            "[It appears as if they're already trying to puff out the fur of their chest.]"
+        ]
+    ],
+    "cool_newborn_2": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[t_c wobbles their little paws out in front of themself, mewling loudly]",
+            "[Fresh to the world, it seems like they're already trying to find steady ground to explore.]"
+        ]
+    ],
+    "upstanding_newborn": [
+        [
+            "upstanding",
+            "queen's apprentice",
+            "queen"
+        ],
+        [
+            "MEEEEW!",
+            "[As you turn to comfort t_c, you spot a few kits trying to sneak out of the nursery!]"
+        ]
+    ],
+    "upstanding_newborn1": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "MROW!",
+            "[t_c mewls angrily as they're shoved out of their nest.]"
+        ]
+    ],
+    "upstanding_newborn2": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "[t_c is hard at work, kneading their nest with itty-bitty paws.]"
         ]
     ]
 }

@@ -18,7 +18,7 @@ from scripts.conditions import Illness, Injury, PermanentCondition, get_amount_c
 import bisect
 
 from scripts.utility import get_med_cats, get_personality_compatibility, event_text_adjust, update_sprite, \
-    leader_ceremony_text_adjust
+    leader_ceremony_text_adjust, get_cluster
 from scripts.game_structure.game_essentials import game, screen
 from scripts.cat_relations.relationship import Relationship
 from scripts.game_structure import image_cache
@@ -413,8 +413,12 @@ class Cat():
 
         May return some additional text to add to the death event.
         """
-        self.injuries.clear()
-        self.illnesses.clear()
+        if self.status == 'leader' and 'pregnant' in self.injuries and game.clan.leader_lives > 0:
+            self.illnesses.clear()
+            self.injuries = { key : value for (key, value) in self.injuries.items() if key == 'pregnant'}
+        else:
+            self.injuries.clear()
+            self.illnesses.clear()
         
         # Deal with leader death
         text = ""
@@ -719,6 +723,12 @@ class Cat():
 
         elif self.status == 'medicine cat apprentice':
             pass
+        
+        elif self.status == 'mediator apprentice':
+            pass
+        
+        elif self.status == "queen's apprentice":
+            pass
 
         elif self.status == 'warrior':
             if old_status == 'leader':
@@ -848,30 +858,6 @@ class Cat():
                 colour2 = 'green-yellow'
             colour = colour + ' and ' + colour2
         return colour
-
-    def get_cluster(self, trait):
-        # Mapping traits to their respective clusters
-        trait_to_clusters = {
-            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "competitive", "rebellious", "impulsive", "noisy"],
-            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying"],
-            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming"],
-            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all"],
-            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer"],
-            "neurotic": ["nervous", "insecure", "lonesome", "quiet"],
-            "silly": ["troublesome", "childish", "playful", "careful", "strange", "noisy", "attention-seeker"],
-            "stable": ["loyal", "responsible", "wise", "faithful"],
-            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer"],
-            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy"],
-            "unlawful": ["troublesome", "bloodthirsty", "sneaky", "rebellious", "troublesome"]
-        }
-
-        clusters = [key for key, values in trait_to_clusters.items() if trait in values]
-
-        # Assign cluster and second_cluster based on the length of clusters list
-        cluster = clusters[0] if clusters else ""
-        second_cluster = clusters[1] if len(clusters) > 1 else ""
-
-        return cluster, second_cluster
 
     def convert_history(self, died_by, scar_events):
         """
@@ -1136,14 +1122,14 @@ class Cat():
         used_lives = []
         used_virtues = []
         trait = self.personality.trait
-        cluster, second_cluster = self.get_cluster(trait)
+        cluster, second_cluster = get_cluster(trait)
         
         for giver in life_givers:
             giver_cat = self.fetch_cat(giver)
             if not giver_cat:
                 continue
             trait = giver_cat.personality.trait
-            cluster2, second_cluster2 = self.get_cluster(trait)
+            cluster2, second_cluster2 = get_cluster(trait)
             life_list = []
             if game.clan.your_cat.ID == self.ID:
                 victim_in_lifegiver = False

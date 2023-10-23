@@ -582,11 +582,11 @@ class DFPatrolScreen(Screens):
         """Proceeds the patrol - to be run in the seperate thread. """
         
         if user_input in ["nopro", "notproceed"]:
-            self.display_text, self.results_text = self.patrol_obj.proceed_patrol("decline")
+            self.display_text, self.results_text, self.outcome_art = self.patrol_obj.proceed_patrol("decline")
         elif user_input in ["antag", "antagonize"]:
-            self.display_text, self.results_text = self.patrol_obj.proceed_patrol("antag")
+            self.display_text, self.results_text, self.outcome_art = self.patrol_obj.proceed_patrol("antag")
         else:
-            self.display_text, self.results_text = self.patrol_obj.proceed_patrol("proceed")
+            self.display_text, self.results_text, self.outcome_art = self.patrol_obj.proceed_patrol("proceed")
 
     def open_patrol_complete_screen(self):
         """Deals with the next stage of the patrol, including antagonize, proceed, and do not proceed.
@@ -628,10 +628,10 @@ class DFPatrolScreen(Screens):
             game.switches['patrolled'] = []
         if not the_cat.dead and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working():
             if "3" not in game.switches['patrolled']:
-                self.able_cats.append(game.clan.your_cat)
-        for c in Cat.all_cats_list:
-            if not c.dead and c.in_camp and c.ID != game.clan.your_cat.ID and c.ID not in game.patrolled and not c.outside and c not in self.current_patrol and not c.not_working():
-                self.able_cats.append(c)
+                self.current_patrol.append(game.clan.your_cat)
+                for c in Cat.all_cats_list:
+                    if c.moons >= 6 and not c.dead and c.in_camp and c.ID != game.clan.your_cat.ID and c.ID not in game.patrolled and not c.outside and c not in self.current_patrol and not c.not_working():
+                        self.able_cats.append(c)
                 
         if not self.able_cats:
             all_pages = []

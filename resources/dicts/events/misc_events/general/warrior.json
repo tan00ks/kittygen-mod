@@ -411,7 +411,8 @@
             "comfort",
             "trust",
             "neg_jealousy",
-            "neg_dislike"
+            "neg_dislike",
+            "other_cat_mate"
         ],
         "event_text": "m_c and r_c take a late night patrol out of camp to watch the sun rise. m_c comes back flustered, and with a new accessory -- a gift from r_c!",
         "accessories": ["PLANT", "FLOWER", "PLANT2", "FRUIT"]
@@ -429,7 +430,8 @@
             "comfort",
             "trust",
             "neg_jealousy",
-            "neg_dislike"
+            "neg_dislike",
+            "other_cat_mate"
         ],
         "event_text": "m_c and r_c take an early evening patrol out of camp to watch the moon rise. m_c comes back flustered, and with a new accessory -- a gift from r_c!",
         "accessories": ["PLANT", "FLOWER", "PLANT2", "FRUIT"]

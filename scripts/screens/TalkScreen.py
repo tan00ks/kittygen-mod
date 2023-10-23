@@ -13,7 +13,7 @@ from scripts.utility import event_text_adjust, scale, ACC_DISPLAY, process_text,
 
 from .Screens import Screens
 
-from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit
+from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats
 from scripts.cat.cats import Cat, BACKSTORIES
 from scripts.cat.pelts import Pelt
 from scripts.game_structure import image_cache
@@ -188,30 +188,6 @@ class TalkScreen(Screens):
                     self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
         return
     
-    def get_cluster(self, trait):
-        # Mapping traits to their respective clusters
-        trait_to_clusters = {
-            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "competitive", "rebellious", "impulsive", "noisy"],
-            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying"],
-            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming"],
-            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all"],
-            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer"],
-            "neurotic": ["nervous", "insecure", "lonesome", "quiet"],
-            "silly": ["troublesome", "childish", "playful", "careful", "strange", "noisy", "attention-seeker"],
-            "stable": ["loyal", "responsible", "wise", "faithful"],
-            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer"],
-            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy"],
-            "unlawful": ["troublesome", "bloodthirsty", "sneaky", "rebellious", "troublesome"]
-        }
-
-        clusters = [key for key, values in trait_to_clusters.items() if trait in values]
-
-        # Assign cluster and second_cluster based on the length of clusters list
-        cluster = clusters[0] if clusters else ""
-        second_cluster = clusters[1] if len(clusters) > 1 else ""
-
-        return cluster, second_cluster
-    
     def get_cluster_list(self):
         return ["assertive", "brooding", "cool", "upstanding", "introspective", "neurotic", "silly", "stable", "sweet", "unabashed", "unlawful"]
     
@@ -266,8 +242,8 @@ class TalkScreen(Screens):
                 possible_texts3 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts3)
         
-        cluster1, cluster2 = self.get_cluster(cat.personality.trait)
-        cluster3, cluster4 = self.get_cluster(you.personality.trait)
+        cluster1, cluster2 = get_cluster(cat.personality.trait)
+        cluster3, cluster4 = get_cluster(you.personality.trait)
         
         their_trait_list = ['troublesome', 'fierce', 'bold', 'daring', 'confident', 'adventurous', 'arrogant', 'competitive', 'rebellious', 'bloodthirsty', 'cold', 'strict', 'vengeful', 'grumpy', 'charismatic', 'sneaky', 'cunning', 'arrogant', 'righteous', 'ambitious', 'strict', 'competitive', 'responsible', 'lonesome', 'righteous', 'calm', 'gloomy', 'wise', 'thoughtful', 'nervous', 'insecure', 'lonesome', 'troublesome', 'childish', 'playful', 'strange', 'loyal', 'responsible', 'wise', 'faithful', 'compassionate', 'faithful', 'loving', 'oblivious', 'sincere', 'childish', 'confident', 'bold', 'shameless', 'strange', 'oblivious', 'flamboyant', 'troublesome', 'bloodthirsty', 'sneaky', 'rebellious']
         you_trait_list = ['you_troublesome', 'you_fierce', 'you_bold', 'you_daring', 'you_confident', 'you_adventurous', 'you_arrogant', 'you_competitive', 'you_rebellious', 'you_bloodthirsty', 'you_cold', 'you_strict', 'you_vengeful', 'you_grumpy', 'you_charismatic', 'you_sneaky', 'you_cunning', 'you_arrogant', 'you_righteous', 'you_ambitious', 'you_strict', 'you_competitive', 'you_responsible', 'you_lonesome', 'you_righteous', 'you_calm', 'you_gloomy', 'you_wise', 'you_thoughtful', 'you_nervous', 'you_insecure', 'you_lonesome', 'you_troublesome', 'you_childish', 'you_playful', 'you_strange', 'you_loyal', 'you_responsible', 'you_wise', 'you_faithful', 'you_compassionate', 'you_faithful', 'you_loving', 'you_oblivious', 'you_sincere', 'you_childish', 'you_confident', 'you_bold', 'you_shameless', 'you_strange', 'you_oblivious', 'you_flamboyant', 'you_troublesome', 'you_bloodthirsty', 'you_sneaky', 'you_rebellious']
@@ -392,10 +368,13 @@ class TalkScreen(Screens):
                 ill_injured = False
 
                 if you.is_ill() and "you_ill" in tags and "grief stricken" not in you.illnesses:
-                    ill_injured = True
+                    for illness in you.illnesses:
+                        if you.illnesses[illness]['severity'] != 'minor':
+                            ill_injured = True
                 if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries:
-                    ill_injured = True
-                
+                    for injury in you.injuries:
+                        if you.injuries[injury]['severity'] != 'minor':
+                            ill_injured = True                
                 if not ill_injured:
                     continue 
             
@@ -403,9 +382,13 @@ class TalkScreen(Screens):
                 ill_injured = False
                 
                 if cat.is_ill() and "they_ill" in tags and "grief stricken" not in cat.illnesses:
-                    ill_injured = True
+                    for illness in cat.illnesses:
+                        if cat.illnesses[illness]['severity'] != 'minor':
+                            ill_injured = True
                 if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries:
-                    ill_injured = True
+                    for injury in cat.injuries:
+                        if cat.injuries[injury]['severity'] != 'minor':
+                            ill_injured = True    
 
                 if not ill_injured:
                     continue 
@@ -634,22 +617,14 @@ class TalkScreen(Screens):
         text = [t1.replace("c_n", game.clan.name) for t1 in text]
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
         text = [t1.replace("t_c", str(cat.name)) for t1 in text]
-         
-        other_clan = choice(game.clan.all_clans)
-        if other_clan:
-            text = [t1.replace("o_c", str(other_clan.name)) for t1 in text]
-        if game.clan.leader:
-            lead = game.clan.leader.name
-            text = [t1.replace("l_n", str(lead)) for t1 in text]
-        if game.clan.deputy:
-            dep = game.clan.deputy.name
-            text = [t1.replace("d_n", str(dep)) for t1 in text]
+        for i in range(len(text)):
+            text[i] = self.adjust_txt(text[i])
+            if text[i] == "":
+                return ""
         if cat.mentor:
             mentor = Cat.all_cats.get(cat.mentor).name
             text = [t1.replace("tm_n", str(mentor)) for t1 in text]
-        if you.mentor:
-            mentor = Cat.all_cats.get(you.mentor).name
-            text = [t1.replace("m_n", str(mentor)) for t1 in text]
+
         if "grief stricken" in cat.illnesses:
             try:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
@@ -671,4 +646,124 @@ class TalkScreen(Screens):
         if d_c_found:
             dead_cat = str(Cat.all_cats.get(game.clan.starclan_cats[-1]).name)
             text = [t1.replace("d_c", dead_cat) for t1 in text]
+        return text
+
+    def adjust_txt(self, text):
+        if "r_c" in text:
+            alive_cats = self.get_living_cats()
+            alive_cat = choice(alive_cats)
+            while alive_cat.ID == game.clan.your_cat.ID:
+                alive_cat = choice(alive_cat)
+            text = text.replace("r_c", str(alive_cat.name))
+        if "r_k" in text:
+            alive_kits = get_alive_kits(Cat)
+            if len(alive_kits) <= 1:
+                return ""
+            alive_kit = choice(alive_kits)
+            while alive_kit.ID == game.clan.your_cat.ID:
+                alive_kit = choice(alive_kits)
+            text = text.replace("r_k", str(alive_kit.name))
+        if "r_a" in text:
+            alive_apps = get_alive_apps(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = choice(alive_apps)
+            text = text.replace("r_a", str(alive_app.name))
+        if "r_w" in text:
+            alive_apps = get_alive_warriors(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = choice(alive_apps)
+            text = text.replace("r_w", str(alive_app.name))
+        if "r_m" in text:
+            alive_apps = get_alive_meds(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = choice(alive_apps)
+            text = text.replace("r_m", str(alive_app.name))
+        if "r_d" in text:
+            alive_apps = get_alive_mediators(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = choice(alive_apps)
+            text = text.replace("r_d", str(alive_app.name))
+        if "r_q" in text:
+            alive_apps = get_alive_queens(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = choice(alive_apps)
+            text = text.replace("r_q", str(alive_app.name))
+        if "r_e" in text:
+            alive_apps = get_alive_elders(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID:
+                alive_app = choice(alive_apps)
+            text = text.replace("r_e", str(alive_app.name))
+        if "r_s" in text:
+            alive_apps = get_alive_cats(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_ill():
+                alive_app = choice(alive_apps)
+            text = text.replace("r_s", str(alive_app.name))
+        if "r_i" in text:
+            alive_apps = get_alive_cats(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_injured():
+                alive_app = choice(alive_apps)
+            text = text.replace("r_i", str(alive_app.name))
+        if "l_n" in text:
+            if game.clan.leader is None:
+                return ""
+            if game.clan.leader.dead or game.clan.leader.outside:
+                return ""
+            text = text.replace("l_n", str(game.clan.leader.name))
+        if "d_n" in text:
+            if game.clan.deputy is None:
+                return ""
+            if game.clan.deputy.dead or game.clan.deputy.outside:
+                return ""
+            text = text.replace("d_n", str(game.clan.deputy.name))
+        if "y_s" in text:
+            if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
+                return ""
+            sibling = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_siblings()))
+            if sibling.outside or sibling.dead:
+                return ""
+            text = text.replace("y_s", str(sibling.name))
+        if "y_p" in text:
+            if len(game.clan.your_cat.inheritance.get_parents()) == 0:
+                return ""
+            parent = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_parents()))
+            if parent.outside or parent.dead:
+                return ""
+            text = text.replace("y_p", str(parent.name))
+        if "y_m" in text:
+            if game.clan.your_cat.mate is None:
+                return ""
+            text = text.replace("y_p", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
+        if "m_n" in text:
+            if game.clan.your_cat.mentor is None:
+                return ""
+            text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
+        if "o_c" in text:
+            other_clan = choice(game.clan.all_clans)
+            if not other_clan:
+                return ""
+            text = text.replace("o_c", str(other_clan.name))
         return text

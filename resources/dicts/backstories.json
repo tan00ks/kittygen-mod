@@ -14,12 +14,17 @@
 
         "kittypet1": "This cat joined the Clan by choice after living life with Twolegs as a kittypet.",
         "kittypet2": "This cat used to live on something called a 'boat' with Twolegs, but decided to join the Clan.",
-        "kittypet3": "This cat used be a kittypet. {PRONOUN/m_c/subject/CAP} got lost after wandering away, and when {PRONOUN/m_c/subject} returned home, {PRONOUN/m_c/subject} found {PRONOUN/m_c/poss} Twolegs were gone. {PRONOUN/m_c/subject/CAP} eventually found {PRONOUN/m_c/poss} way to the Clan.",
+        "kittypet3": "This cat used to be a kittypet. {PRONOUN/m_c/subject/CAP} got lost after wandering away, and when {PRONOUN/m_c/subject} returned home, {PRONOUN/m_c/subject} found {PRONOUN/m_c/poss} Twolegs were gone. {PRONOUN/m_c/subject/CAP} eventually found {PRONOUN/m_c/poss} way to the Clan.",
         "kittypet4": "This cat used to be a kittypet. One day, {PRONOUN/m_c/subject} got sick, and {PRONOUN/m_c/poss} Twolegs brought {PRONOUN/m_c/object} into the belly of a monster. The Twolegs then left {PRONOUN/m_c/object} to fend for {PRONOUN/m_c/self}.",
 
         "rogue1": "This cat joined the Clan by choice after living life as a rogue.",
         "rogue2": "This cat used to live in a Twolegplace, scrounging for what {PRONOUN/m_c/subject} could find. {PRONOUN/m_c/subject/CAP} thought the Clan might offer {PRONOUN/m_c/object} more security.",
         "rogue3": "This cat used to live alone in {PRONOUN/m_c/poss} own territory, but was chased out by something and eventually found the Clan.",
+        "rogue4": "This cat was sent by the leader of a group of rogues to gather secrets and intel on the Clan.",
+        "rogue5": "This cat was originally a member of a group of rogues, but defected after being mistreated by the leader.",
+        "rogue6": "This cat was captured by a group of Clan cats on patrol, and decided to join the Clan in return for their life being spared.",
+        "rogue7":  "This cat woke up with no memory of their old life, and has lived with the Clan since.",
+        "rogue8": "This cat was formerly a rogue, joining the Clan after being enticed by the thought of more prey.",
 
         "abandoned1": "This cat was found by the Clan as a kit and has been living with them ever since.",
         "abandoned2": "This cat was born outside of the Clan, but was brought to the Clan as a kit and has lived here ever since.",
@@ -30,7 +35,12 @@
         "otherclan2": "This cat was unhappy in {PRONOUN/m_c/poss} old Clan and decided to come here instead.",
         "otherclan3": "This cat's Clan stayed with the Clan after a disaster struck {PRONOUN/m_c/poss} old one, and decided to stay after the rest of {PRONOUN/m_c/poss} Clan returned home.",
         "otherclan4": "This cat grew up in another Clan, but chose to leave that life and join the Clan {PRONOUN/m_c/subject} now {VERB/m_c/live/lives} in.",
-
+        "otherclan5": "This cat never really fit in with their original Clan, always feeling out of place. They found solace and purpose in this new Clan.",
+        "otherclan6": "The rules and rigidity of their previous Clan stifled this cat. They sought a place where they could truly be themselves.",
+        "otherclan7": "This cat decided to leave their own Clan for completely normal, innocent reasons... totally not because they have a crush on someone in the Clan, or anything.",
+        "otherclan8": "This cat was sent by the leader of o_cClan to gather secrets and intel on the Clan.",
+        "otherclan9": "This cat was stolen from a rival Clan due to underpopulation.",
+        "otherclan10": "This cat was originally a member of o_cClan, but left because they couldn't stand the tragic loss of a loved one.",
 
         "disgraced1": "This cat was cast out of {PRONOUN/m_c/poss} old Clan for some transgression that {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} not keen on talking about.",
         "disgraced2": "This cat was exiled from {PRONOUN/m_c/poss} old Clan for something {PRONOUN/m_c/subject} didn't do and came here to seek safety.",
@@ -50,6 +60,9 @@
         "tragedy_survivor2": "This cat used to be part of a rogue group, but joined the Clan after something terrible happened to it.",
         "tragedy_survivor3": "This cat used to be a kittypet, but joined the Clan after something terrible happened to {PRONOUN/m_c/poss} Twolegs.",
         "tragedy_survivor4": "This cat used to be a loner, but joined the Clan after something terrible made {PRONOUN/m_c/object} leave {PRONOUN/m_c/poss} old home behind.",
+        "tragedy_survivor5": "This cat was saved by the Clan and they joined as a way to repay their life debt.",
+        "tragedy_survivor6": "This cat refuses to tell the Clan why they left their past home.",
+
 
         "wandering_healer1": "This cat used to wander, helping those where {PRONOUN/m_c/subject} could, and eventually found the Clan.",
         "wandering_healer2": "This cat used to live in a specific spot, offering help to all who wandered by, but eventually found {PRONOUN/m_c/poss} way to the Clan.",
@@ -68,7 +81,47 @@
 
         "outsider1": "This cat was born outside of a Clan.",
         "outsider2": "This cat was born outside of a Clan, but at {PRONOUN/m_c/poss} birth one parent was a member of a Clan.",
-        "outsider3": "This cat was born outside of a Clan, while {PRONOUN/m_c/poss} parent was lost."
+        "outsider3": "This cat was born outside of a Clan, while {PRONOUN/m_c/poss} parent was lost.",
+
+        "kittypet5": "This cat was originally a kittypet, but left home with big dreams of becoming a legendary warrior!",
+        "kittypet6": "This cat was born as a kittypet, but abandonment led them to joining the Clan.",
+        "kittypet7": "This cat always longed for a life beyond the fence. One day, they finally gathered their courage and joined the Clan, where they currently reside.",
+
+        "loner3": "This cat didn't get to see their mother alive, and was found by a the Clan patrol.",
+
+        "guided5": "This cat used to live outside the clan, but came here after a deceased loved one told them that they must follow their heart to find their true home.",
+        "guided6": "This cat is a descendant of a long-since disbanded clan. Following the wishes of a ghostly cat with a pelt full of stars, they joined the Clan to continue the legacy.",
+
+        "outsider4": "This cat joined the Clan after their need to wander died out.",
+        "outsider5": "This cat joined the Clan in hopes of a new adventure.",
+        "outsider6": "This cat visited the Clan almost every single day despite living outside the clan. They finally decided to join one day, since they already spent so much time at the clan.",
+
+        "orphaned7": "This cat was found stashed high up in a tree with claw marks marking the base. No parents were found nearby, however there were fox paw prints not too far away.",
+
+        "wandering_healer3": "This cat joined the clan to hone in on their healing skills",
+
+        "halfclan4": "One of this cat's parents is a mediator in another Clan, and they visit regularly.",
+        "halfclan5": "One of this cat's parents is the leader of another Clan, but they've never met them.",
+        "halfclan6": "One of this cat's parents is the deputy of another Clan, but they've never met them",
+        "halfclan7": "One of this cat's parents is the medicine cat of another Clan, but they've never met them.",
+        "halfclan8": "One of this cat's parents is the medicine cat of another Clan, and they visit regularly.",
+        "halfclan9": "One of this cat's parents is the leader of another Clan, and they visit regularly.",
+        "halfclan10": "One of this cat's parents is the leader of another Clan, and they visit regularly.",
+
+        "outsider_roots3": "This cat was born into the Clan, but one of their parents is a loner who they've never met.",
+        "outsider_roots4": "This cat was born into the Clan, but one of their parents is a loner, who visits them regularly at the border.",
+        "outsider_roots5": "This cat was born into the Clan, but one of their parents is a kittypet who they've never met.",
+        "outsider_roots6": "This cat was born into the Clan, but one of their parents is a kittypet, who visits them regularly at the border.",
+        "outsider_roots7": "This cat was born into the Clan, but one of their parents is a rogue who they've never met.",
+        "outsider_roots8": "This cat was born into the Clan, but one of their parents is a rogue who visits them regularly at the border.",
+
+        "clan_founder1": "This cat was originally a kittypet, but was recruited to help found the Clan.",
+        "clan_founder2": "This cat was originally a loner, but was recruited to help found the Clan.",
+        "clan_founder3": "This cat was originally a rogue, but was recruited to help found the Clan.",
+        "clan_founder4": "This cat was a member of the original Clan, but they lost their territory to a disaster. Now, they've come to help rebuild.",
+        "clan_founder5": "This cat was originally a member of another Clan, but decided to leave to help create a Clan of their own where they could have more influence.",
+        "clan_founder6": "This cat was exiled from their original Clan for breaking the Warrior Code, and decided to help found the Clan for a shot at redemption.",
+        "clan_founder7": "This cat received a prophecy about founding a new Clan to bring balance to the territories, and joined the Clan's efforts."
   },
 
   "backstory_display": {
@@ -87,40 +140,40 @@
 
   "backstory_categories": {
     "clan_founder_backstories": [
-      "clan_founder"
+      "clan_founder", "clan_founder1", "clan_founder2", "clan_founder3", "clan_founder4", "clan_founder5", "clan_founder6", "clan_founder7"
     ],
     "clanborn_backstories": [
       "clanborn"
     ],
     "outsider_roots_backstories": [
-      "outsider_roots1", "outsider_roots2"
+      "outsider_roots1", "outsider_roots2", "outsider_roots3", "outsider_roots4", "outsider_roots5", "outsider_roots6", "outsider_roots7", "outsider_roots8", "tragedy_survivor5", "tragedy_survivor6", "guided5", "guided6"
     ],
     "half_clan_backstories": [
-      "halfclan1", "halfclan2"
+      "halfclan1", "halfclan2", "halfclan3", "halfclan4", "halfclan5", "halfclan6", "halfclan7", "halfclan8", "halfclan9", "halfclan10"
     ],
     "loner_backstories": [
-      "loner1", "loner2", "refugee2", "tragedy_survivor4", "guided3", "refugee5", "wandering_healer2"
+      "loner1", "loner2", "loner3", "refugee2", "tragedy_survivor4", "guided3", "refugee5", "wandering_healer2"
     ],
     "rogue_backstories": [
-      "rogue1", "rogue2", "rogue3", "refugee4", "tragedy_survivor2", "guided2", "refugee5", "wandering_healer1"
+      "rogue1", "rogue2", "rogue3", "rogue4", "rogue5", "rogue6", "rogue7", "rogue8", "refugee4", "tragedy_survivor2", "guided2", "refugee5", "wandering_healer1"
     ],
     "kittypet_backstories": [
-      "kittypet1", "kittypet2", "kittypet3", "kittypet4", "refugee3", "tragedy_survivor3", "guided1"
+      "kittypet1", "kittypet2", "kittypet3", "kittypet4", "kittypet5", "kittypet6", "kittypet7", "refugee3", "tragedy_survivor3", "guided1"
     ],
     "former_clancat_backstories": [
-      "otherclan1", "otherclan2", "otherclan3", "ostracized_warrior", "disgraced1", "disgraced2", "disgraced3", "retired_leader", "refugee1", "tragedy_survivor1", "medicine_cat", "guided4", "refugee5"
+      "otherclan1", "otherclan2", "otherclan3", "otherclan4", "otherclan5", "otherclan6", "otherclan7", "otherclan8", "otherclan9", "otherclan10", "ostracized_warrior", "disgraced1", "disgraced2", "disgraced3", "retired_leader", "refugee1", "tragedy_survivor1", "medicine_cat", "guided4", "refugee5"
     ],
     "healer_backstories": [
-      "medicine_cat", "wandering_healer1", "wandering_healer2"
+      "medicine_cat", "wandering_healer1", "wandering_healer2", "wandering_healer3"
     ],
     "orphaned_backstories": [
-      "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5", "orphaned6"
+      "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5", "orphaned6", "orphaned7"
     ],
     "abandoned_backstories": [
       "abandoned1", "abandoned2", "abandoned3", "abandoned4"
     ],
     "outsider_backstories": [
-      "outsider1", "outsider2", "outsider3"
+      "outsider1", "outsider2", "outsider3", "outsider4", "outsider5", "outsider6"
     ]
   },
 

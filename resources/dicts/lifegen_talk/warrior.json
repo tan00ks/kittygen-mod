@@ -8,6 +8,30 @@
             "..."
         ]
     ],
+    "cool_1": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "Is that y_c I see? Do anything fun today? r_c and I just got back from hunting! You should have been there! ",
+            "There was this huge bird. It certainly could feed half the clan, how fat it is!",
+            "Hmm? Oh, yes. Of course I caught it. Here, we can share with the rest of the clan.",
+            "[As t_c grins confidently, you have no doubt they managed such an accomplishment so easily.]"
+        ]
+    ],
+    "unabashed_warrior": [
+        [
+            "unabashed",
+            "you_kit",
+            "warrior",
+            "apprentice"
+        ],
+        [
+            "Hey, y_c! How are you doing?",
+            "You know, I'm going out on a hunting patrol, and I've seen some pretty birds roaming around... I might get a few feathers, just for you!"
+        ]
+    ],
     "introspective_comf_2": [
         [
             "any",
@@ -742,35 +766,6 @@
             "[Still, you sit with them through the night, hoping to stabilize them through whatever storm they might be weathering right now.]"
         ]
     ],
-    "assertive_comfort": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "unlawful",
-            "silly",
-            "stable",
-            "brooding",
-            "neurotic",
-            "comfort",
-            "trust",
-            "romantic_like",
-            "platonic_like",
-            "from_mate"
-        ],
-        [
-            "[t_c shakes you from your sleep in the night.]",
-            "Psst ... y_c?",
-            "Sorry to wake you ... this will sound really embarrassing, but I, uh ... had a nightmare. Heh.",
-            "Can I ... stay with you?",
-            "[You and t_c curl up together in your nest. Their pelt is warm, but their body is still trembling a little.]",
-            "... Can I tell you about my nightmare?",
-            "In my nightmare, you were drowning. You were screaming for help, and I kept trying to swim out to save you, but you just kept getting further and further away.",
-            "Imagine that. I've faced rogues and dogs and foxes and monsters, but out of everything, the thing that scares me the most is ...",
-            "... Losing you.",
-            "[You both eventually drift off to sleep, and it takes a long time for anyone to rouse you in the morning.]"
-        ]
-    ],
     "assertive_respect": [
         [
             "no_kit",
@@ -972,7 +967,10 @@
             "half sibling",
             "from_parent",
             "adopted_parent",
-            "platonic_like"
+            "platonic_like",
+            "greenleaf",
+            "newleaf",
+            "leaffall"
         ],
         [
             "y_c, how about a family hunting session sometime?",
@@ -1152,7 +1150,7 @@
             "random_cat"
         ],
         [
-            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon you get magic powers!",
+            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon, you get magic powers!",
             "What? It's totally real, they wouldn't lie to me like that! I prommissseee."
         ]
     ],
@@ -1766,7 +1764,7 @@
             "unlawful"
         ],
         [
-            "Heads up, y_c! Moss in the elder's den needs changing!",
+            "Heads up, y_c! Moss in the elders' denneeds changing!",
             "Guess being a warrior's not always fighting battles and scaring off kittypets, huh?",
             "But there's still plenty of that, too, if you're lucky. Hehehe."
         ]
@@ -2378,6 +2376,193 @@
         [
             "[t_c eyes you.]",
             "Heh, so small."
+        ]
+    ],
+    "upstanding_warrior4": [
+        [
+            "upstanding",
+            "medicine cat",
+            "medicine cat apprentice"
+        ],
+        [
+            "Hey there! I heard that you were going to go on a herb gathering patrol soon and wondered if you needed any extra paws. I could use a bit of time out of camp.",
+            "Besides, I'm totally the right cat for the job. I could help carry so many herbs, and you would be able to help so many more cats. It's a win-win situation! You should definitely consider it.",
+            "Please?"
+        ]
+    ],
+    "upstanding_warrior5": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "[You spot t_c lounging about in their nest, fast asleep. Aren't they always up at this time? Did they fall asleep by mistake?]",
+            "[As you approach, they slowly begin to stir in their nest]",
+            "Zzz... huh? Wha? y_c? What *yawn* what time is... oh Starclan the patrols! I'm going to be late!"
+        ]
+    ],
+    "upstanding_warrior6": [
+        [
+            "upstanding",
+            "Any",
+            "random_cat"
+        ],
+        [
+            "Listen, I'm not the type of cat who likes to rake up old bones, but r_w totally cheated on their warrior assessment!"
+        ]
+    ],
+    "upstanding_warrior7": [
+        [
+            "upstanding",
+            "Any",
+            "Beach",
+            "Wetlands",
+            "random_cat"
+        ],
+        [
+            "I heard d_n say that the fresh-kill pile was looking a little low today, and that got me thinking...",
+            "What if I just went out and caught a whole bunch of fish? What if I catch enough fish to feed the entire clan? What if I catch enough fish to feed TWO clans?",
+            "I should get started right away! Don't worry though, I'll be back at... um... some point!",
+            "Now, I got some fish to catch!"
+        ]
+    ],
+    "upstanding_warrior8": [
+        [
+            "upstanding",
+            "no_kit",
+            "platonic_like"
+        ],
+        [
+            "y_c, can I ask you something?",
+            "... do you think I'm doing enough for c_nClan?",
+            "It might be a silly question, I know. I'm practically always on patrols, or helping the apprentices patch up dens, or whatever, but does that all really matter if you feel like you aren't making a difference?",
+            "All I've ever wanted was to help my clan and be someone other cats can look up to. I want to be able to inspire someone to work even harder, just like I was. But sometimes, it just feels like I'm getting nowhere, like I'm barely making a difference.",
+            "My whole life, I have been trying to live up to my clanmates' expectations, maybe even more than that! But now, it's starting to feel like the paw steps that I'm trying to fill are too big.",
+            "I appreciate you for being patient while I work through all of this. Just know that I'm trying okay? I promise I'm doing my best."
+        ]
+    ],
+    "upstanding_warrior9": [
+        [
+            "upstanding",
+            "platonic_like",
+            "romantic_like",
+            "warrior"
+        ],
+        [
+            "y_c! y_c! Are you busy right now?",
+            "No? That's great! What do you think about going out on a patrol with me?",
+            "Well yeah, another one! I heard d_n say that they were a bit short on paws, and I thought I could help! And you were the first cat I thought to ask! And...",
+            "[t_c paused, scuffling their paws on the ground as they avoided your eyes.]",
+            "I dunno... you're just cool to hang out with n' stuff."
+        ]
+    ],
+    "upstanding_warrior10": [
+        [
+            "upstanding",
+            "no_kit",
+            "Beach"
+        ],
+        [
+            "[t_c is standing next to a pile of large stones, glaring up at the sky.]",
+            "Stupid sea birds, thinking they can steal all of our... oh, y_c. Quick, do you see those seagulls over there? The ones sitting up in that tree?",
+            "Well, for the last few days, those seagulls have been stealing prey right out from under our noses! Fish? Gone! Land prey? Snatched! I'm getting sick and tired of it, and I'm sure everyone else in the clan is as well.",
+            "So, naturally, I came up with the super great idea of building a little ledge that we can sit the fresh-kill pile under! That way, the seagulls won't be able to get any!",
+            "It is taking a while though, getting all of these stones up from the beach took me from dawn to sunhigh... do you think you would be able to help out? Two sets of paws are much faster than one after all!"
+        ]
+    ],
+    "upstanding_warrior11": [
+        [
+            "upstanding",
+            "warrior",
+            "neutral",
+            "dislike"
+        ],
+        [
+            "y_c, has y_a been out in the territory by themself recently?",
+            "Why do I ask? Well, it just so happens that I was out in the territory earlier, and I spotted your apprentice crossing right over the o_cClan border. They seemed to be trying to catch some prey that had crossed over from our territory.",
+            "They were lucky they weren't spotted this time, but I don't want to see this happen again. I expected better out of them, and out of you as well.",
+            "If you aren't able to teach your apprentice how to respect clan boundaries, then I may need to have a word with l_n about this. Try not to let this happen again."
+        ]
+    ],
+    "bloodthirsty_pos": [
+        [
+            "Any",
+            "platonic_love",
+            "fierce",
+            "bloodthirsty",
+            "competitive"
+        ],
+        [
+            "Hey, y_c. You want to see this scar I got? It's new.",
+            "It happened during a training session. I was practicing my battle moves, and I guess I got carried away ...",
+            "Everyone tells me I take things too far. In reality, I don't think I take things far enough.",
+            "I'm going to be the strongest warrior this clan has ever seen. Stronger than the strongest. I just have to figure out what I'm really capable of ..."
+        ]
+    ],
+    "bloodthirsty_pos1": [
+        [
+            "apprentice",
+            "warrior",
+            "platonic_like",
+            "brooding",
+            "competitive"
+        ],
+        [
+            "Hey, y_c. Wanna spar?",
+            "What's that? You're exhausted from yesterday's training?",
+            "... Hmph. Fine. Have it your way."
+        ]
+    ],
+    "bloodthirsty_rom": [
+        [
+            "apprentice",
+            "warrior",
+            "romantic_like",
+            "brooding"
+        ],
+        [
+            "Hey. I saw you practicing your fighting techniques earlier.",
+            "They looked pretty good, but they could be better.",
+            "Your form is sloppy, unpracticed. It needs work. If you wanted, maybe I could ... show you sometime?",
+            "[If you didn't know any better, you'd think that t_c was blushing.]"
+        ]
+    ],
+    "bloodthirsty_love": [
+        [
+            "Any",
+            "platonic_like",
+            "bloodthirsty"
+        ],
+        [
+            "Hey. I know this is your favorite prey, so I caught it for you. I hope you like it.",
+            "Don't mind the gore. I might've gotten a little carried away when bringing it down, but at least the good bits are mostly intact."
+        ]
+    ],
+    "bloodthirsty_kit": [
+        [
+            "Any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "bloodthirsty",
+            "fierce"
+        ],
+        [
+            "Hmph. You think my battle moves are too violent? Come on, y_c.",
+            "Violence is what makes the clans what they are! Without it, we'd be no better than kittypets!",
+            "Don't tell me you're afraid of your own kit!"
+        ]
+    ],
+    "bloodthirsty_kit1": [
+        [
+            "Any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "bloodthirsty"
+        ],
+        [
+            "Ugh, what do you want?",
+            "Would you please stop hovering over me? I'm not in the nursery anymore. I'm my own cat, and I can catch my prey however I like.",
+            "Even if it does involve beheading."
         ]
     ]
 }

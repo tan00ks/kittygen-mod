@@ -13,7 +13,7 @@ from scripts.utility import event_text_adjust, scale, ACC_DISPLAY, process_text,
 
 from .Screens import Screens
 
-from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit
+from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit, get_cluster
 from scripts.cat.cats import Cat, BACKSTORIES
 from scripts.cat.pelts import Pelt
 from scripts.game_structure import image_cache
@@ -190,7 +190,7 @@ class FlirtScreen(Screens):
     
     def get_possible_text(self, cat):
         trait = cat.personality.trait
-        cluster, second_cluster = self.get_cluster(trait)
+        cluster, second_cluster = get_cluster(trait)
         success = self.is_flirt_success(cat)
         text = ""
         resource_dir = "resources/dicts/lifegen_talk/"
@@ -270,29 +270,7 @@ class FlirtScreen(Screens):
         text = [t1.replace("r_c", str(Cat.all_cats[choice(game.clan.clan_cats)].name)) for t1 in text]
         return text
     
-    def get_cluster(self, trait):
-        # Mapping traits to their respective clusters
-        trait_to_clusters = {
-            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "competitive", "rebellious"],
-            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy"],
-            "cool": ["charismatic", "sneaky", "cunning", "arrogant"],
-            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible"],
-            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful"],
-            "neurotic": ["nervous", "insecure", "lonesome"],
-            "silly": ["troublesome", "childish", "playful", "strange"],
-            "stable": ["loyal", "responsible", "wise", "faithful"],
-            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere"],
-            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant"],
-            "unlawful": ["troublesome", "bloodthirsty", "sneaky", "rebellious"]
-        }
-
-        clusters = [key for key, values in trait_to_clusters.items() if trait in values]
-
-        # Assign cluster and second_cluster based on the length of clusters list
-        cluster = clusters[0] if clusters else ""
-        second_cluster = clusters[1] if len(clusters) > 1 else ""
-
-        return cluster, second_cluster
+    
         
     def is_flirt_success(self, cat):
         cat_relationships = cat.relationships.get(game.clan.your_cat.ID)

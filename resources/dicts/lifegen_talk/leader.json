@@ -17,6 +17,18 @@
             "... Do you ever feel guilty?"
         ]
     ],
+    "leader_unabashed": [
+        [
+            "no_kit",
+            "Unabashed",
+            "no_kit"
+        ],
+        [
+            "Hey there, y_c. I've heard someone from o_cClan say they've seen you around the borders lately at the last gathering.",
+            "Like, what were you thinking? o_cClan cats could have...",
+            "Actually, that cat was kinda pretty. If you don't mind, go to the border some more so they can talk to me again?"
+        ]
+    ],
     "broodingapp_toqueenapp": [
         [
             "queen's apprentice",
@@ -1025,7 +1037,7 @@
             "unlawful"
         ],
         [
-            "Heads up, y_c! Moss in the elder's den needs changing!",
+            "Heads up, y_c! Moss in the elders' denneeds changing!",
             "Guess being a warrior's not always fighting battles and scaring off kittypets, huh?",
             "But there's still plenty of that, too, if you're lucky. Hehehe."
         ]
@@ -1104,35 +1116,6 @@
             "[t_c swishes their tail nervously.]"
         ]
     ],
-    "assertive_comfort": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "unlawful",
-            "silly",
-            "stable",
-            "brooding",
-            "neurotic",
-            "comfort",
-            "trust",
-            "romantic_like",
-            "platonic_like",
-            "from_mate"
-        ],
-        [
-            "[t_c shakes you from your sleep in the night.]",
-            "Psst ... y_c?",
-            "Sorry to wake you ... this will sound really embarrassing, but I, uh ... had a nightmare. Heh.",
-            "Can I ... stay with you?",
-            "[You and t_c curl up together in your nest. Their pelt is warm, but their body is still trembling a little.]",
-            "... Can I tell you about my nightmare?",
-            "In my nightmare, you were drowning. You were screaming for help, and I kept trying to swim out to save you, but you just kept getting further and further away.",
-            "Imagine that. I've faced rogues and dogs and foxes and monsters, but out of everything, the thing that scares me the most is ...",
-            "... Losing you.",
-            "[You both eventually drift off to sleep, and it takes a long time for anyone to rouse you in the morning.]"
-        ]
-    ],
     "introspective_lead": [
         [
             "any",
@@ -1153,7 +1136,7 @@
         [
             "... Good morning, y_c.",
             "Yes, yes. I'm fine. I've just... been thinking.",
-            "Is starclan and the dark forest all that's out there? Is there something beyond that? Maybe beyond our own perceptions.",
+            "Is StarClan and the Dark Forest all that's out there? Is there something beyond that? Maybe beyond our own perceptions.",
             "Maybe all of our actions are being controlled by a being even stronger than starclan, using some sort of magic to view us to see what we're up to.",
             "Maybe they'd get bored of us, or think I'm not good enough to be leader, and force you to kill me to take my place.",
             "... Yes, t_c. You've been up too long. You need to go to bed.",
@@ -1170,7 +1153,7 @@
             "Yes. I'm perfectly okay. Just sitting and watching...",
             "[They gesture over to a lake, where the moon echoes in the water.]",
             "The moon is an interesting force. It's bright and lights the way, so we can see our paws when the individual lights cannot show us.",
-            "I wonder if it's the whole of starclan, concentrated. StarClan's eyes. Or maybe it's our ancestors' love for us. The moon's always there for us, it's... everlasting.",
+            "I wonder if it's the whole of StarClan, concentrated. StarClan's eyes. Or maybe it's our ancestors' love for us. The moon's always there for us, it's... everlasting.",
             "... that's a nice thought. That we're not doing everything for nothing. Those before us think about us just as much as we think about them. It guides us like I try to do for our clan.",
             "... Yes, of course. I'll speak to you tomorrow, y_c. May the moon follow you back to camp."
         ]
@@ -1376,6 +1359,113 @@
             "If you want my advice, y_c, you should never be afraid of conflict.",
             "Conflict is a natural part of life! And if another clan or some mouse-brained rogues want to take what's rightfully ours, then it's our job to teach them a lesson. Remember that next time we run into trouble.",
             "I don't know a single self-respecting warrior who'd follow a leader that runs rather than fights."
+        ]
+    ],
+    "unabashed_leader2": [
+        [
+            "unabashed",
+            "no_kit",
+            "dislike"
+        ],
+        [
+            "You need to clean up your act, y_c. You've been severely underperforming- don't think I haven't noticed.",
+            "Everyone has to do their part, and that includes you, so don't make others pick up your slack."
+        ]
+    ],
+    "unabashed_leader1": [
+        [
+            "unabashed",
+            "any",
+            "platonic_like"
+        ],
+        [
+            "You know, it's kind of weird to think that I could probably get c_nClan to do just about anything.",
+            "Well, I guess not ANYTHING, but a whole lot of crazy stuff.",
+            "Heck, I could even just declare that no one's allowed to be mean to you!",
+            "[t_c starts laughing in an almost scary manner.]",
+            "...What do you mean that's corruption? I'd be nice about it! Probably.",
+            "...Nah, you're right. The Clan should probably be glad d_n is there to stop me."
+        ]
+    ],
+    "bloodthirsty_pos": [
+        [
+            "Any",
+            "platonic_love",
+            "fierce",
+            "bloodthirsty",
+            "competitive"
+        ],
+        [
+            "Hey, y_c. You want to see this scar I got? It's new.",
+            "It happened during a training session. I was practicing my battle moves, and I guess I got carried away ...",
+            "Everyone tells me I take things too far. In reality, I don't think I take things far enough.",
+            "I'm going to be the strongest warrior this clan has ever seen. Stronger than the strongest. I just have to figure out what I'm really capable of ..."
+        ]
+    ],
+    "bloodthirsty_pos1": [
+        [
+            "apprentice",
+            "warrior",
+            "platonic_like",
+            "brooding",
+            "competitive"
+        ],
+        [
+            "Hey, y_c. Wanna spar?",
+            "What's that? You're exhausted from yesterday's training?",
+            "... Hmph. Fine. Have it your way."
+        ]
+    ],
+    "bloodthirsty_rom": [
+        [
+            "apprentice",
+            "warrior",
+            "romantic_like",
+            "brooding"
+        ],
+        [
+            "Hey. I saw you practicing your fighting techniques earlier.",
+            "They looked pretty good, but they could be better.",
+            "Your form is sloppy, unpracticed. It needs work. If you wanted, maybe I could ... show you sometime?",
+            "[If you didn't know any better, you'd think that t_c was blushing.]"
+        ]
+    ],
+    "bloodthirsty_love": [
+        [
+            "Any",
+            "platonic_like",
+            "bloodthirsty"
+        ],
+        [
+            "Hey. I know this is your favorite prey, so I caught it for you. I hope you like it.",
+            "Don't mind the gore. I might've gotten a little carried away when bringing it down, but at least the good bits are mostly intact."
+        ]
+    ],
+    "bloodthirsty_kit": [
+        [
+            "Any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "bloodthirsty",
+            "fierce"
+        ],
+        [
+            "Hmph. You think my battle moves are too violent? Come on, y_c.",
+            "Violence is what makes the clans what they are! Without it, we'd be no better than kittypets!",
+            "Don't tell me you're afraid of your own kit!"
+        ]
+    ],
+    "bloodthirsty_kit1": [
+        [
+            "Any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "bloodthirsty"
+        ],
+        [
+            "Ugh, what do you want?",
+            "Would you please stop hovering over me? I'm not in the nursery anymore. I'm my own cat, and I can catch my prey however I like.",
+            "Even if it does involve beheading."
         ]
     ]
 }

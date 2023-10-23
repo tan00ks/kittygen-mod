@@ -111,9 +111,9 @@ class Patrol():
         
         if path == "decline":
             if self.patrol_event:
-                return self.process_text(self.patrol_event.decline_text, None), ""
+                return self.process_text(self.patrol_event.decline_text, None), "", None
             else:
-                return "Error - no event chosen", ""
+                return "Error - no event chosen", "", None
         
         return self.determine_outcome(antagonize=(path == "antag"))
         
@@ -353,7 +353,7 @@ class Patrol():
             elif clan_hostile:
                 possible_patrols.extend(self.generate_patrol_events(self.OTHER_CLAN_HOSTILE))
 
-        if game.current_screen == 'patrol screen2' or game.current_screen =='patrol screen4':
+        if game.current_screen == 'patrol screen2' or game.current_screen =='patrol screen3' or game.current_screen =='patrol screen4':
             final_patrols, final_romance_patrols = self.get_filtered_patrols(possible_patrols, biome, current_season,
                                                                             patrol_type)
 

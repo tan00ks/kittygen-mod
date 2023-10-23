@@ -8,6 +8,17 @@
             "Such a sharp tongue you have. Little kit, know that some words have the power to hurt as much as a sharp claw."
         ]
     ],
+    "unabashed_medicine_cat1": [
+        [
+            "unabashed",
+            "no_kit"
+        ],
+        [
+            "Yeah, I gave r_w nasty herbs on purpose.",
+            "What? They deserved it! They've really been getting on my nerves lately. And it's not like they'll ever know...",
+            "Come on! Don't be such a buzz-kill. It was fun. Maybe I'll even invite you to come see their face next time.. It was hilarious!"
+        ]
+    ],
     "assertive_mentor8": [
         [
             "medicine cat apprentice",
@@ -308,7 +319,7 @@
             "random_cat"
         ],
         [
-            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon you get magic powers!",
+            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon, you get magic powers!",
             "What? It's totally real, they wouldn't lie to me like that! I prommissseee."
         ]
     ],
@@ -726,54 +737,6 @@
             "[Still, you sit with them through the night, hoping to stabilize them through whatever storm they might be weathering right now.]"
         ]
     ],
-    "assertive_comfort": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "unlawful",
-            "silly",
-            "stable",
-            "brooding",
-            "neurotic",
-            "comfort",
-            "trust",
-            "romantic_like",
-            "platonic_like",
-            "from_mate"
-        ],
-        [
-            "[t_c shakes you from your sleep in the night.]",
-            "Psst ... y_c?",
-            "Sorry to wake you ... this will sound really embarrassing, but I, uh ... had a nightmare. Heh.",
-            "Can I ... stay with you?",
-            "[You and t_c curl up together in your nest. Their pelt is warm, but their body is still trembling a little.]",
-            "... Can I tell you about my nightmare?",
-            "In my nightmare, you were drowning. You were screaming for help, and I kept trying to swim out to save you, but you just kept getting further and further away.",
-            "Imagine that. I've faced rogues and dogs and foxes and monsters, but out of everything, the thing that scares me the most is ...",
-            "... Losing you.",
-            "[You both eventually drift off to sleep, and it takes a long time for anyone to rouse you in the morning.]"
-        ]
-    ],
-    "assertive_comfort_2": [
-        [
-            "Any",
-            "assertive",
-            "neurotic",
-            "comfort",
-            "trust",
-            "romantic_like",
-            "platonic_like",
-            "from_mate"
-        ],
-        [
-            "Hey, y_c? Have you ever thought about, uh ...",
-            "What if something happens to you? Or something happens to me? Or something happens to the clan, and we're both demolished in a fiery pit of nothingness!",
-            "Phew ... sorry, I know I'm not usually so grim. But I guess I'm just really worried.",
-            "What if something goes wrong, and I'm not there to protect you?",
-            "I won't let that happen ... I just won't!"
-        ]
-    ],
     "assertive_rom4": [
         [
             "Any",
@@ -1142,7 +1105,8 @@
     ],
     "introspective_Med_3": [
         [
-            "any",
+            "warrior",
+            "apprentice",
             "introspective"
         ],
         [
@@ -1183,8 +1147,8 @@
             "Huh? What's this? It's marigold, I use it to help heal general wounds. It's a wonderfully helpful herb.",
             "And it looks beautiful too. I... almost hate having to grab it, because they're so beautiful to watch grow. But the clan needs them too.",
             "Imagine how bad wounds can get without marigold to help. You could lose a leg by infection at worst.",
-            "So getting it is far more essential than my desire to watch it. Plus I'm not grabbing all of it, there will be enough for it to grow back",
-            "... Anyways, you've got a hunt to get back to, and I need to get these back to the herb store, in case they're needed. You have a wonderful rest of your day, May StarClan light your path, y_c."
+            "So getting it is far more essential than my desire to watch it. Plus I'm not grabbing all of it, there will be enough for it to grow back.",
+            "... Anyways, you've got a hunt to get back to, and I need to get these back to the herb store, in case they're needed. You have a wonderful rest of your day, may StarClan light your path, y_c."
         ]
     ],
     "assertivemedcat_queen2": [
@@ -1317,7 +1281,7 @@
             "unlawful"
         ],
         [
-            "Heads up, y_c! Moss in the elder's den needs changing!",
+            "Heads up, y_c! Moss in the elders' denneeds changing!",
             "Guess being a warrior's not always fighting battles and scaring off kittypets, huh?",
             "But there's still plenty of that, too, if you're lucky. Hehehe."
         ]
@@ -1442,7 +1406,7 @@
         ],
         [
             "[You walk into the medicine den for something or other and find t_c carefully applying some kind of chewed herb to a fresh wound on r_c's pelt. When t_c notices you, they give you a friendly greeting.]",
-            "Oh, y_c, hello! I'll get you in a second, I'm treating a rat bite right now.",
+            "Oh, y_c, hello! I'll get to you in a second, I'm treating a rat bite right now.",
             "[After the herb is successfully applied, t_c calls you over, but asks r_c to stay for a bit longer to monitor the wound.]",
             "[You inform t_c of your ailments and the three of you converse while t_c finds herbs for you.]",
             "So, the herb I applied to r_c's pelt is burdock root, right? It's commonly applied to rat bites and burns because of its soothing and numbing properties. Well, we got curious about something.",

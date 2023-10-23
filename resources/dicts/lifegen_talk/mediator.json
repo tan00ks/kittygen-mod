@@ -9,6 +9,19 @@
             "Is something the matter?"
         ]
     ],
+    "unabashed_mediator": [
+        [
+            "warrior",
+            "unabashed",
+            "no_kit"
+        ],
+        [
+            "Have you heard that r_w's into l_n?!",
+            "I know, right?! I mean, they don't fit together at all!",
+            "I think that they're just trying to get on with the leader for extra attention, you know?",
+            "...Are you into anyone, y_c? I swear, I won't tell anyone!"
+        ]
+    ],
     "brooding_mediator": [
         [
             "brooding",
@@ -124,7 +137,7 @@
             "random_cat"
         ],
         [
-            "I noticed you helping r_c and r_c resolve their dispute the other day, and it really wasn't bad! You've come a long way. But, one thing I did notice was that you were a little too ... nice?",
+            "I noticed you helping the warriors resolve their dispute the other day, and it really wasn't bad! You've come a long way. But, one thing I did notice was that you were a little too ... nice?",
             "Not that you shouldn't be kind when trying to help your clanmates. That's not what I mean. But you shouldn't be too afraid to say what you really mean, either.",
             "We're mediators. It's our job to be honest with our clanmates! Not protect their feelings.",
             "Sometimes cats will be unhappy with us, and that's just fine, so long as the peace is protected. You can't let anyone's opinion of you stop you from doing what's best.",
@@ -377,7 +390,7 @@
         ],
         [
             "y_c? Do you have a moment to spare?",
-            "I heard you got into an argument with your mentor, the other day. They've told me that you trespassed into another clan's territory, but I wanted to hear what happened from your perspective.",
+            "I heard you got into an argument with your mentor the other day. They've told me that you trespassed into another clan's territory, but I wanted to hear what happened from your perspective.",
             "... Okay. Thank you for your time, y_c.",
             "[They trot off quickly, not allowing you another word. They must be busy!]"
         ]
@@ -417,7 +430,7 @@
             "I'm not going to chase you around camp. I'll be here for when you want my help.",
             "[t_c trots towards you.]",
             "Oh hi, y_c. Sorry about that. r_c's clearly upset about something, but refuses to tell me what...",
-            "Just need to let them come back to me. They will, I think they need space. Have you eaten today? We can share some freshkill while I'm here."
+            "Just need to let them come back to me. They will, but I think they need space. Have you eaten today? We can share some freshkill while I'm here."
         ]
     ],
     "introspective_mdtor_2": [
@@ -478,7 +491,7 @@
             "introspective"
         ],
         [
-            "[t_c is sat watching two of your clanmates argue with each other, with fascination]",
+            "[t_c is sat watching two of your clanmates argue with each other, with fascination.]",
             "[One of them calls the other a half-clan foxheart. Quite brutal. Why is t_c not saying anything?]",
             "[... A giant jaybird flies out of a tree just behind the arguing cats.]",
             "[t_c seems to come to awareness of what's going on around them, and they rush over to deal with the yelling cats.]"
@@ -953,54 +966,6 @@
             "[Still, you sit with them through the night, hoping to stabilize them through whatever storm they might be weathering right now.]"
         ]
     ],
-    "assertive_comfort": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "unlawful",
-            "silly",
-            "stable",
-            "brooding",
-            "neurotic",
-            "comfort",
-            "trust",
-            "romantic_like",
-            "platonic_like",
-            "from_mate"
-        ],
-        [
-            "[t_c shakes you from your sleep in the night.]",
-            "Psst ... y_c?",
-            "Sorry to wake you ... this will sound really embarrassing, but I, uh ... had a nightmare. Heh.",
-            "Can I ... stay with you?",
-            "[You and t_c curl up together in your nest. Their pelt is warm, but their body is still trembling a little.]",
-            "... Can I tell you about my nightmare?",
-            "In my nightmare, you were drowning. You were screaming for help, and I kept trying to swim out to save you, but you just kept getting further and further away.",
-            "Imagine that. I've faced rogues and dogs and foxes and monsters, but out of everything, the thing that scares me the most is ...",
-            "... Losing you.",
-            "[You both eventually drift off to sleep, and it takes a long time for anyone to rouse you in the morning.]"
-        ]
-    ],
-    "assertive_comfort_2": [
-        [
-            "Any",
-            "assertive",
-            "neurotic",
-            "comfort",
-            "trust",
-            "romantic_like",
-            "platonic_like",
-            "from_mate"
-        ],
-        [
-            "Hey, y_c? Have you ever thought about, uh ...",
-            "What if something happens to you? Or something happens to me? Or something happens to the clan, and we're both demolished in a fiery pit of nothingness!",
-            "Phew ... sorry, I know I'm not usually so grim. But I guess I'm just really worried.",
-            "What if something goes wrong, and I'm not there to protect you?",
-            "I won't let that happen ... I just won't!"
-        ]
-    ],
     "assertive_rom4": [
         [
             "Any",
@@ -1098,7 +1063,7 @@
         ],
         [
             "Happy to report things are mostly peaceful around camp!",
-            "r_c and r_c got into a little scuffle over some prey earlier, but I managed to get everything sorted out no problem.",
+            "The warriors got into a little scuffle over some prey earlier, but I managed to get everything sorted out no problem.",
             "As far as I can tell, you have nothing to worry about!"
         ]
     ]

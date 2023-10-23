@@ -17,6 +17,20 @@
             "For I know, I've played a part in shaping the Clan's future, one kit at a time."
         ]
     ],
+    "unabashed_queen": [
+        [
+            "unabashed",
+            "no_kit"
+        ],
+        [
+            "Oh hello, y_c! Are you checking in on the kits today?",
+            "They're really so lovely. I know the others will tell you kits are annoying but it's worth it!",
+            "Oh, you should have seen r_a as a kit. They were so cute! One time, they-",
+            "[r_a passes by the nursery at this time, and drops a mouthful of moss onto the floor as they rush in.]",
+            "Oh hello, r_a! I was just telling y_c about what you were like as a kit.",
+            "What do you mean, 'don't'? There's no need to be embarrassed, I think it was adorable!"
+        ]
+    ],
     "queen_2": [
         [
             "kitten",
@@ -381,7 +395,7 @@
             "random_cat"
         ],
         [
-            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon you get magic powers!",
+            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon, you get magic powers!",
             "What? It's totally real, they wouldn't lie to me like that! I prommissseee."
         ]
     ],
@@ -874,7 +888,7 @@
             "Is it really true that you're allowed to just ... travel between the clans as you please?",
             "Whoa! That's so cool!!! I've always wanted to explore the other territories, but I've never been allowed.",
             "Is it true that o_c cats can swim like fish? Or that their territory is full of snakes?",
-            "[You and r_c have a long conversation about the other clans. With each detail you share, their eyes grow bigger and bigger.]"
+            "[You and t_c have a long conversation about the other clans. With each detail you share, their eyes grow bigger and bigger.]"
         ]
     ],
     "assertive_medapp": [
@@ -1066,35 +1080,6 @@
             "I just feel like such a failure. A liability. I can't help the way I am, but what if everyone's better off without me?",
             "[You offer t_c words of reassurance, but they seem troubled beyond comforting.]",
             "[Still, you sit with them through the night, hoping to stabilize them through whatever storm they might be weathering right now.]"
-        ]
-    ],
-    "assertive_comfort": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "unlawful",
-            "silly",
-            "stable",
-            "brooding",
-            "neurotic",
-            "comfort",
-            "trust",
-            "romantic_like",
-            "platonic_like",
-            "from_mate"
-        ],
-        [
-            "[t_c shakes you from your sleep in the night.]",
-            "Psst ... y_c?",
-            "Sorry to wake you ... this will sound really embarrassing, but I, uh ... had a nightmare. Heh.",
-            "Can I ... stay with you?",
-            "[You and t_c curl up together in your nest. Their pelt is warm, but their body is still trembling a little.]",
-            "... Can I tell you about my nightmare?",
-            "In my nightmare, you were drowning. You were screaming for help, and I kept trying to swim out to save you, but you just kept getting further and further away.",
-            "Imagine that. I've faced rogues and dogs and foxes and monsters, but out of everything, the thing that scares me the most is ...",
-            "... Losing you.",
-            "[You both eventually drift off to sleep, and it takes a long time for anyone to rouse you in the morning.]"
         ]
     ],
     "assertive_comfort_2": [

@@ -17,6 +17,19 @@
             "We're the best patrol ever! Let's play again tomorrow, okay?"
         ]
     ],
+    "unabashed_leaffall1": [
+        [
+            "leaffall",
+            "any",
+            "unabashed"
+        ],
+        [
+            "Yay! Leaffall!",
+            "Leaffall is the best time of year because the trees give you leaves to play with all season!",
+            "Except evergreens. Evergreens suck.",
+            "Thank you, all trees except evergreens!"
+        ]
+    ],
     "kit_insult_1": [
         [
             "any",
@@ -134,7 +147,10 @@
             "silly",
             "cool",
             "sweet",
-            "unabashed"
+            "unabashed",
+            "newleaf",
+            "greenleaf",
+            "leaffall"
         ],
         [
             "y_c, we should go swimming! I heard some other cats do it all the time!",
@@ -246,7 +262,7 @@
             "random_cat"
         ],
         [
-            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon you get magic powers!",
+            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon, you get magic powers!",
             "What? It's totally real, they wouldn't lie to me like that! I prommissseee."
         ]
     ],
@@ -632,10 +648,11 @@
             "upstanding",
             "silly",
             "sibling",
-            "adopted_sibling"
+            "adopted_sibling",
+            "random_cat"
         ],
         [
-            "y_c, Mom says it's my turn with the moss-ball! You have to give it back!",
+            "y_c, y_p says it's my turn with the moss-ball! You have to give it back!",
             "Come onnnnn!",
             "Hmph. That's it, I'm gonna tell on you!"
         ]
@@ -664,6 +681,7 @@
         [
             "kitten",
             "assertive",
+            "brooding",
             "platonic_like",
             "sibling",
             "adopted_sibling"
@@ -672,6 +690,123 @@
             "Hey!!! Was someone picking on you?",
             "Hmph. No one gets to tease my sibling except for me!",
             "y_c, if anyone ever gives you a hard time, you'll tell me, right?"
+        ]
+    ],
+    "assertivekit_sibling": [
+        [
+            "kitten",
+            "assertive",
+            "platonic_like",
+            "sibling",
+            "adopted_sibling"
+        ],
+        [
+            "I just talked to y_p, and we're allowed to play outside today!!!",
+            "C'mon, I'll race you to the elder's den!"
+        ]
+    ],
+    "assertivekit_sibling1": [
+        [
+            "kitten",
+            "assertive",
+            "unlawful",
+            "brooding",
+            "platonic_like",
+            "sibling",
+            "adopted_sibling"
+        ],
+        [
+            "Ughhh, y_p says we're not allowed to leave the nursery today!",
+            "It's so boring in here, aren't you tired of all our games?",
+            "Hey, I know! Why don't you go distract y_p, then I can sneak out and come back for you?",
+            "C'mon, it'll be easy! I promise you won't get in trouble.",
+            "Let's go!"
+        ]
+    ],
+    "assertivekit_sibling2": [
+        [
+            "Any",
+            "platonic_like"
+        ],
+        [
+            "*Yaaawwn*",
+            "What? No, t_c, I'm not sleepy ...",
+            "I swear, I'm not ..",
+            "... Zzzz ...",
+            "[t_c falls asleep on their paws. The two of you cuddle up to take a nap together.]"
+        ]
+    ],
+    "assertivekit_sibling3": [
+        [
+            "any",
+            "assertive",
+            "unabashed",
+            "platonic_like",
+            "sibling",
+            "adopted_sibling",
+            "random_cat"
+        ],
+        [
+            "Raaahhh!",
+            "[t_c slams into you, nipping at your fur.]",
+            "[You get choked up and t_c immediately backs off.]",
+            "No! Wait! Please don't cry! It's okay!",
+            "I'll let you get me back! You can claw me! Look! You can claw me right here!",
+            "[It's too late. You let out an ear-splitting cry and y_p rushes across the nursery to scold t_c.]",
+            "[You stop crying as soon as t_c is put into time out. Sweet revenge!]"
+        ]
+    ],
+    "assertivekit_sibling4": [
+        [
+            "any",
+            "assertive",
+            "unlawful",
+            "brooding",
+            "sibling",
+            "adopted_sibling",
+            "random_cat"
+        ],
+        [
+            "[y_p is chiding t_c after they try for the thousandth time to sneak out of camp.]",
+            "But, y_p! I didn't do it! It was all y_c's idea!",
+            "[y_p whirls on you as you seethe, plotting your revenge against your sibling.]"
+        ]
+    ],
+    "assertivekit_sibling5": [
+        [
+            "any",
+            "assertive",
+            "unlawful",
+            "brooding",
+            "sibling",
+            "adopted_sibling",
+            "random_cat"
+        ],
+        [
+            "y_c, wanna play leader and deputy?",
+            "You wanna be the leader this time ...?",
+            "Nope. Not happening. I'm older, so I get to be the leader.",
+            "Yes, I know I'm just a few minutes older, but still!"
+        ]
+    ],
+    "assertivekit_sibling7": [
+        [
+            "any",
+            "assertive",
+            "unlawful",
+            "brooding",
+            "sibling",
+            "adopted_sibling",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "I'm gonna catch you! Hahaha!",
+            "[While you and t_c are playing, you accidentally trip and destroy half of the nest, moss and feathers flying everywhere.]",
+            "...",
+            "... Okay, what are we gonna tell y_p when they get back?",
+            "[The two of you spend several minutes devising an elaborate story where a bird flew into the nursery and destroyed the nest.]",
+            "[y_p doesn't buy it at all, but it was still a nice experience working together with your sibling.]"
         ]
     ],
     "assertivekit_26": [
@@ -767,9 +902,73 @@
             "random_cat"
         ],
         [
-            "y_c, r_c won't play with me! Will you go tell them that they have to?",
+            "y_c, r_k won't play with me! Will you go tell them that they have to?",
             "What? You won't? But that's not fairrrr!",
             "[t_c stalks across the nursery to go have a pout. But, as soon as one of the kits suggests a game of moss-ball, their troubles are suddenly forgotten.]"
+        ]
+    ],
+    "assertivekit_your": [
+        [
+            "Any",
+            "kitten",
+            "platonic_like",
+            "from_adopted_kit",
+            "from_kit"
+        ],
+        [
+            "[t_c wakes up from their nap with fur so spiky, they look like a little porcupine!]",
+            "[You laugh and spend the morning grooming their fur.]"
+        ]
+    ],
+    "assertivekit_your1": [
+        [
+            "Any",
+            "kitten",
+            "platonic_like",
+            "from_adopted_kit",
+            "from_kit",
+            "random_cat"
+        ],
+        [
+            "[You and y_m watch t_c slowly creep up on a beetle ...]",
+            "[With a fierce mew, they pounce on it!]",
+            "[You and y_m erupt into cheers, lifting your delighted little warrior into the air.]",
+            "I did it! I did it! Hahaha!"
+        ]
+    ],
+    "assertivekit_your2": [
+        [
+            "Any",
+            "kitten",
+            "platonic_like",
+            "from_adopted_kit",
+            "from_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c is throwing a tantrum. You decide to try out a trick that r_q taught you.]",
+            "Waaaahhhh!",
+            "['Hey, t_c, what color are your paws?']",
+            "Huh?",
+            "*Sniffle* Uhm ...",
+            "[t_c calms right down, studying their paws. Man, r_q must be magic or something ...]"
+        ]
+    ],
+    "assertivekit_your3": [
+        [
+            "Any",
+            "kitten",
+            "assertive",
+            "unlawful",
+            "platonic_like",
+            "from_adopted_kit",
+            "from_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c accidentally drops their moss-ball while playing.]",
+            "Fox-dung!",
+            "[r_q, horrified, rushes to correct them as you laugh at your kit's potty mouth!]"
         ]
     ],
     "assertivekit_31": [
@@ -786,7 +985,7 @@
         [
             "r_c just told me the funniest joke ever!",
             "It went like - heehee - how did the *snrk* - how did the - AHAHAHA!!!",
-            "[t_c can't even seem to get through their own joke without dissolving into a fit of giggles!"
+            "[t_c can't even seem to get through their own joke without dissolving into a fit of giggles!]"
         ]
     ],
     "introspective_kit": [
@@ -1981,7 +2180,7 @@
             "comfort"
         ],
         [
-            "[You spot t_c trembling in a one of the corners of the nursery.]",
+            "[You spot t_c trembling in one of the corners of the nursery.]",
             "r_k t-told me a really s-s-scary story about a big monster that c-comes and eats kits who are naughty.",
             "Eep! There it is now!",
             "[t_c hides behind your tail from the scary monster ... which is, in fact, just a pile of leaves.]"
@@ -2433,6 +2632,20 @@
             "I wish I was you..."
         ]
     ],
+    "unabashed kit3": [
+        [
+            "unabashed",
+            "any"
+        ],
+        [
+            "[You notice t_c standing on a large rock.]",
+            "Hi y_c! I'm taller than you!",
+            "What did you say???",
+            "I can't hear you from up here!",
+            "I'm up here because it's easier to throw rocks at cats when you're tall! You're so silly.",
+            "Careful, get out of the way! Otherwise I can't promise I won't hit you!"
+        ]
+    ],
     "brooding_kitten_like": [
         [
             "kitten",
@@ -2443,6 +2656,162 @@
         [
             "Hey, y_c, do you remember that time when I tripped r_k and they fell in that mud puddle?",
             "That was so funny, wasn't it? I bet I could do it again. Wanna help?"
+        ]
+    ],
+    "unabashed_kit": [
+        [
+            "unabashed",
+            "any"
+        ],
+        [
+            "y_c! y_c! I've been looking for you everywhere!",
+            "Look at what I found! It's so cool, right?! Looks like a finch's feather, not to flex...",
+            "Wanna play with it?! Look, it flies around so well! Catch it, catch it!"
+        ]
+    ],
+    "cool_kit_2": [
+        [
+            "no_kit",
+            "cool"
+        ],
+        [
+            "Can you take me out onto the territory? Please, please, please? I promise it'll only be for a quick look!",
+            "[t_c flashes their huge, charming little eyes at you, and for a second, you feel compelled to take them out for a while ...]",
+            "[... Nope. Not gonna happen. You tell t_c to find something in the nursery to do.]",
+            "Aw, come on! That usually works!"
+        ]
+    ],
+    "cool_kit_2_1": [
+        [
+            "Any",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "[Everyone sure seems to pay t_c a lot of attention ...]",
+            "[Cats are constantly visiting them in the nursery, showering them with gifts and praise.]",
+            "[But when they catch you eyeing them, they cross the nursery and cuddle up against you with a purr.]",
+            "Hi, y_c!",
+            "[Suddenly, you see why they're so popular.]"
+        ]
+    ],
+    "upstanding_kit": [
+        [
+            "upstanding",
+            "kitten"
+        ],
+        [
+            "I decided that I'm going to be the greatest c_nClan cat ever!",
+            "I'm going to work SUPER hard and not break ANY of the rules, and- and!",
+            "[t_c is literally bouncing around with excitement as they talk about their plans]"
+        ]
+    ],
+    "upstanding_kit1": [
+        [
+            "upstanding",
+            "queen",
+            "queen's apprentice",
+            "random_cat"
+        ],
+        [
+            "y_c! You'll never believe what r_k tried to do!",
+            "I caught them trying to sneak out of camp! Can you believe that? They were breaking the rules on purpose!",
+            "Why would they even do that? Don't they want to be a good c_nClan cat? It doesn't make any sense.",
+            "Anyway, that's all! I'm going to go back to playing now. If anyone else isn't following the rules, I'll come back and tell you!"
+        ]
+    ],
+    "upstanding_kit2": [
+        [
+            "upstanding",
+            "queen",
+            "queen's apprentice",
+            "random_cat"
+        ],
+        [
+            "y_c! y_c! r_k is getting into trouble again!"
+        ]
+    ],
+    "upstanding_kit3": [
+        [
+            "upstanding",
+            "queen",
+            "queen's apprentice",
+            "random_cat"
+        ],
+        [
+            "y_c!",
+            "[As you step out of the nursery, you find yourself face-to-face with a very annoyed t_c.]",
+            "y_c, r_k keeps cheating at play hide-and-seek. They won't stop peeking while we're trying to hide, so they already know where to find us! It's not fair!",
+            "Can you tell them to stop? I don't know if I want to keep playing with someone who won't follow the rules of the game."
+        ]
+    ],
+    "upstanding_kit4": [
+        [
+            "any",
+            "upstanding",
+            "from_kit",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "[t_c is stumbling after r_m, holding a couple of herbs in their mouth. As you catch their eye, they perk up and call out to you.]",
+            "y_c, look! I'm helping r_m! Are you watching?",
+            "I'm carrying TWO whole herbs all by myself, see? r_m said that I'm the best helper they ever had and that I'm going to be a great apprentice!",
+            "Does this mean that I can be apprenticed early? Could you ask l_n?",
+            "[Before you have a chance to respond, t_c turns, noticing that r_m was waiting by the entrance to the medicine den.]",
+            "I gotta go catch up! I'll tell you all about this later, okay? Bye!",
+            "[t_c bounds after r_m, ducking under their legs and diving into the den.]"
+        ]
+    ],
+    "upstanding_kit5": [
+        [
+            "upstanding",
+            "queen",
+            "queen's apprentice"
+        ],
+        [
+            "[Since sunhigh, you have been trying to convince t_c to take a nap, going back and forth with the kit who refused to lie down.]",
+            "But I can't take a nap! I need to become the best warrior in c_nClan, and warriors don't take naps!",
+            "Besides, I... I can help you and stuff! Warriors... *yawn* warriors help cats all the time! So why can't I...",
+            "[t_c's sentence is cut off by a yawn as they slump down into their nest.]",
+            "Zzz..."
+        ]
+    ],
+    "upstanding_kit6": [
+        [
+            "upstanding",
+            "they_grieving",
+            "no_kit",
+            "comfort"
+        ],
+        [
+            "[You hear a trembling mew, a small paw tugging at your fur. You turn and find yourself staring down into t_c's tear-filled eyes.]",
+            "y_c? H-how can I be the best c_nClan cat without d_c? W-what do I do?"
+        ]
+    ],
+    "upstanding_kit7": [
+        [
+            "upstanding",
+            "you_injured",
+            "no_kit",
+            "platonic_like"
+        ],
+        [
+            "[As you lie in your nest, you notice t_c marching back and forth near the entrance of the den. They have a determined look on their face, taking large steps that almost cause them to stumble.]",
+            "[Both curious and amused, you ask them what they are doing.]",
+            "Oh, I'm guarding you! I'm practicing so that I can become the most fearsome warrior in all of c_nClan! No cat is going to bother you with me around.",
+            "I'll be such a good warrior too, cats won't ever get hurt like you are!"
+        ]
+    ],
+    "upstanding_kit8": [
+        [
+            "upstanding",
+            "insult",
+            "kitten",
+            "random_cat"
+        ],
+        [
+            "H-hey! You can't just say something like that! r_q!"
         ]
     ]
 }

@@ -69,6 +69,57 @@ def get_alive_kits(Cat):
 
     return alive_kits
 
+def get_alive_apps(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  i.status == 'apprentice' and not i.dead and not i.outside]
+
+    return alive_apps
+
+def get_alive_warriors(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  i.status == 'warrior' and not i.dead and not i.outside]
+
+    return alive_apps
+
+def get_alive_meds(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  (i.status == 'medicine cat' or i.status == 'medicine cat apprentice') and not i.dead and not i.outside]
+
+    return alive_apps
+
+def get_alive_mediators(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                   (i.status == 'mediator' or i.status == 'mediator apprentice') and not i.dead and not i.outside]
+
+    return alive_apps
+
+def get_alive_queens(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  (i.status == 'queen' or i.status == "queen's apprentice") and not i.dead and not i.outside]
+    return alive_apps
+
+def get_alive_elders(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  i.status == 'elder' and not i.dead and not i.outside]
+    return alive_apps
 
 def get_med_cats(Cat, working=True):
     """
@@ -88,6 +139,13 @@ def get_med_cats(Cat, working=True):
 
     return possible_med_cats
 
+def get_alive_cats(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  not i.dead and not i.outside]
+    return alive_apps
 
 def get_living_cat_count(Cat):
     """
@@ -266,8 +324,8 @@ def create_new_cat(Cat,
         if status == "newborn":
             age = 0
         elif litter or kit:
-            age = randint(0, 5)
-        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice') and not litter:
+            age = randint(1, 5)
+        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice'):
             age = randint(6, 11)
         elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice') and litter:
             age = randint(20, 30)
@@ -703,6 +761,29 @@ def change_relationship_values(cats_to: list,
             if log and isinstance(log, str):
                 rel.log.append(log)
 
+def get_cluster(trait):
+        # Mapping traits to their respective clusters
+        trait_to_clusters = {
+            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "vengeful", "competitive", "smug", "impulsive", "noisy"],
+            "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying", "secretive"],
+            "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming", "manipulative", "leader-like", "passionate"],
+            "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all", "leader-like", "smug"],
+            "introspective": ["lonesome", "righteous", "calm", "gloomy", "wise", "thoughtful", "quiet", "daydreamer"],
+            "neurotic": ["nervous", "insecure", "lonesome", "quiet", "secretive", "careful", "meek"],
+            "silly": ["troublesome", "childish", "playful", "strange", "noisy", "attention-seeker", "rebellious"],
+            "stable": ["loyal", "responsible", "wise", "faithful", "polite", "disciplined", "patient", "passionate"],
+            "sweet": ["compassionate", "faithful", "loving", "oblivious", "sincere", "sweet", "polite", "daydreamer"],
+            "unabashed": ["childish", "confident", "bold", "shameless", "strange", "oblivious", "flamboyant", "impulsive", "noisy", "honest"],
+            "unlawful": ["bloodthirsty", "sneaky", "rebellious", "manipulative", "obsessive"]
+        }
+        clusters = [key for key, values in trait_to_clusters.items() if trait in values]
+
+        # Assign cluster and second_cluster based on the length of clusters list
+        cluster = clusters[0] if clusters else ""
+        second_cluster = clusters[1] if len(clusters) > 1 else ""
+
+        return cluster, second_cluster
+
 
 # ---------------------------------------------------------------------------- #
 #                               Text Adjust                                    #
@@ -754,8 +835,7 @@ def process_text(text, cat_dict, raise_exception=False):
     adjust_text = re.sub(r"\{(.*?)\}", lambda x: pronoun_repl(x, cat_dict, raise_exception),
                                                               text)
 
-    name_patterns = [re.escape(l) for l in cat_dict]
-
+    name_patterns = [r'(?<!\{)' + re.escape(l) + r'(?!\})' for l in cat_dict]
     adjust_text = re.sub("|".join(name_patterns), lambda x: name_repl(x, cat_dict), adjust_text)
     return adjust_text
 
@@ -908,9 +988,24 @@ def history_text_adjust(text,
     if "c_n" in text:
         text = text.replace("c_n", clan.name)
     if "r_c" in text and other_cat_rc:
-        text = text.replace("r_c", str(other_cat_rc.name))
+        text = selective_replace(text, "r_c", str(other_cat_rc.name))
     return text
 
+def selective_replace(text, pattern, replacement):
+    i = 0
+    while i < len(text):
+        index = text.find(pattern, i)
+        if index == -1:
+            break
+        start_brace = text.rfind('{', 0, index)
+        end_brace = text.find('}', index)
+        if start_brace != -1 and end_brace != -1 and start_brace < index < end_brace:
+            i = index + len(pattern)
+        else:
+            text = text[:index] + replacement + text[index + len(pattern):]
+            i = index + len(replacement)
+
+    return text
 
 def ongoing_event_text_adjust(Cat, text, clan=None, other_clan_name=None):
     """
@@ -1240,7 +1335,6 @@ def generate_sprite(cat, life_state=None, scars_hidden=False, acc_hidden=False, 
                 tortie_pattern + cat.pelt.tortiecolour + cat_sprite].copy()
             patches.blit(sprites.sprites["tortiemask" + cat.pelt.pattern + cat_sprite], (0, 0),
                          special_flags=pygame.BLEND_RGBA_MULT)
-
             # Add patches onto cat.
             new_sprite.blit(patches, (0, 0))
 

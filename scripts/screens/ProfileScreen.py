@@ -713,8 +713,12 @@ class ProfileScreen(Screens):
                     self.profile_elements["insult"].disable()
                 else:
                     self.profile_elements["insult"].enable()
-            
-            if (self.the_cat.ID not in game.clan.your_cat.get_relatives() and self.the_cat.moons >= 12 and self.the_cat.moons < game.clan.your_cat.moons + 40 and self.the_cat.moons > game.clan.your_cat.moons - 40 and game.clan.your_cat.moons >= 12) or self.the_cat.ID in game.clan.your_cat.mate:
+            is_former_mentor = (self.the_cat.ID in game.clan.your_cat.former_apprentices or game.clan.your_cat.ID in self.the_cat.former_apprentices)
+            no_flirt = False
+            if is_former_mentor:
+                if not game.clan.clan_settings['romantic with former mentor']:
+                    no_flirt = True 
+            if (self.the_cat.ID not in game.clan.your_cat.get_relatives() and not no_flirt and self.the_cat.moons >= 12 and self.the_cat.moons < game.clan.your_cat.moons + 40 and self.the_cat.moons > game.clan.your_cat.moons - 40 and game.clan.your_cat.moons >= 12) or self.the_cat.ID in game.clan.your_cat.mate:
                 if not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice']:
                     self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
                         (646, 220), (68, 68))),
