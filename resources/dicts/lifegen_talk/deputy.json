@@ -1294,13 +1294,15 @@
     ],
     "introspective_dep_2": [
         [
-            "any",
-            "introspective"
+            "no_kit",
+            "introspective",
+            "trust",
+            "comfort"
         ],
         [
             "...",
             "[t_c is staring off into space, eyes placed on the leader's den.]",
-            "... hi, y_c. Is there something you need from me?",
+            "... Hi, y_c. Is there something you need from me?",
             "Yes. I'm fine. I'm just thinking...",
             "Part of being a deputy means preparing to potentially become leader. I don't know whether that will ever happen, and I'm not wishing for anything to happen!",
             "I just... I don't think I'm ready for that kind of responsibility. I'm not sure that I'll ever be ready for that.",
@@ -1337,7 +1339,7 @@
     ],
     "introspective_dep_5": [
         [
-            "any",
+            "no_kit",
             "introspective"
         ],
         [
@@ -1348,6 +1350,44 @@
             "Anyways, talking about patrols, I've got to sort out the next set. I'll speak to you later."
         ]
     ],
+
+    "brooding_dep": [
+        [
+            "any",
+            "brooding"
+        ],
+        [
+            "...",
+            "[t_c examines the camp with a stoic glare from the leader's den.]"
+        ]
+    ],
+
+      "brooding_dep_1": [
+        [
+            "kitten",
+            "brooding",
+            "neutral"
+        ],
+        [
+            "Uhm. Hello. What are you doing here?",
+            "The leader's den is no place for a kit ..."
+        ]
+    ],
+
+      "brooding_dep2": [
+        [
+            "apprentice",
+            "warrior",
+            "brooding",
+            "neutral"
+        ],
+        [
+            "What do you need? I'm very busy today.",
+            "You want to be placed on the border patrol ...?",
+            "Hm ... I'll see what I can do."
+        ]
+    ],
+    
     "assertive_dislike1": [
         [
             "Any",
