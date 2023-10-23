@@ -357,9 +357,6 @@
     "stable_newborn_11": [
         [
             "Any",
-            "medicine cat",
-            "faithful",
-            "strict",
             "stable"
         ],
         [
@@ -370,10 +367,7 @@
     "unabashed_newborn": [
         [
             "newborn",
-            "Impulsive",
-            "noisy",
-            "kit",
-            "newborn"
+            "unabashed"
         ],
         [
             "Mew! Meoow! Mrrrrow!",
@@ -383,7 +377,7 @@
     "unabashed_newborn1": [
         [
             "unabashed",
-            "kitten or newborn"
+            "newborn"
         ],
         [
             "[You spot t_c crawling around in circles when they suddenly bite r_c's leg.]"
