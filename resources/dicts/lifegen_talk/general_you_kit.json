@@ -202,6 +202,18 @@
             "You're gonna do great things someday, kiddo, I just know it."
         ]
     ],
+
+    "assertive_parent41": [
+        [
+            "newborn",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "*Gasp* Oh, look, t_m! y_c has your nose!",
+            "Heh ... Our perfect little family."
+        ]
+    ],
     "assertive_parent5": [
         [
             "kitten",
