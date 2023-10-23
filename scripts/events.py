@@ -412,9 +412,9 @@ class Events:
                     achievements.add("3")
                 if num_victims >= 50:
                     achievements.add("4")
-            else:
-                if you.moons >= 120:
-                    achievements.add("25")
+        else:
+            if you.moons >= 120:
+                achievements.add("25")
             
 
         for cat in clan_cats:
