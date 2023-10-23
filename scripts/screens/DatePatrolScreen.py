@@ -585,11 +585,11 @@ class DatePatrolScreen(Screens):
         """Proceeds the patrol - to be run in the seperate thread. """
         
         if user_input in ["nopro", "notproceed"]:
-            self.display_text, self.results_text = self.patrol_obj.proceed_patrol("decline")
+            self.display_text, self.results_text, self.outcome_art = self.patrol_obj.proceed_patrol("decline")
         elif user_input in ["antag", "antagonize"]:
-            self.display_text, self.results_text = self.patrol_obj.proceed_patrol("antag")
+            self.display_text, self.results_text, self.outcome_art = self.patrol_obj.proceed_patrol("antag")
         else:
-            self.display_text, self.results_text = self.patrol_obj.proceed_patrol("proceed")
+            self.display_text, self.results_text, self.outcome_art = self.patrol_obj.proceed_patrol("proceed")
 
     def open_patrol_complete_screen(self):
         """Deals with the next stage of the patrol, including antagonize, proceed, and do not proceed.

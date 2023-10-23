@@ -639,6 +639,7 @@ class Events:
                 i.parent1 = blood_parent.ID
                 i.create_inheritance_new_cat()
                 i.init_all_relationships()
+                i.backstory = game.clan.your_cat.backstory
                 game.clan.your_cat.create_inheritance_new_cat()
                 game.clan.your_cat.init_all_relationships()
                 if parent1:
@@ -777,11 +778,17 @@ class Events:
         if "y_s" in text:
             if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
                 return ""
-            text = text.replace("y_s", str(Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_siblings())).name))
+            sibling = Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_siblings()))
+            if sibling.outside or sibling.dead:
+                return ""
+            text = text.replace("y_s", str(sibling.name))
         if "y_p" in text:
             if len(game.clan.your_cat.inheritance.get_parents()) == 0:
                 return ""
-            text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_parents())).name))
+            parent = Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_parents()))
+            if parent.outside or parent.dead:
+                return ""
+            text = text.replace("y_p", str(parent.name))
         if "y_m" in text:
             if game.clan.your_cat.mate is None:
                 return ""
