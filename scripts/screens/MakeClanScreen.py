@@ -1285,6 +1285,7 @@ class MakeClanScreen(Screens):
                 new_cat = Cat(moons = 1)
                 new_cat.pelt = self.custom_cat.pelt
                 new_cat.gender = self.sex
+                new_cat.genderalign = self.sex
                 self.your_cat = new_cat
                 self.selected_cat = None
                 self.open_name_cat()

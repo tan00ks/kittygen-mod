@@ -511,7 +511,7 @@ class Events:
         elif you.outside:
             achievements.add('22')
         
-        if len(clan_cats) == 1 and not you.dead:
+        if len(clan_cats) == 1 and not you.dead and not you.outside:
             achievements.add('23')
         if len(clan_cats) >= 100:
             achievements.add('24')
@@ -727,7 +727,7 @@ class Events:
             alive_cats = self.get_living_cats()
             alive_cat = random.choice(alive_cats)
             while alive_cat.ID == game.clan.your_cat.ID:
-                alive_cat = random.choice(alive_cat)
+                alive_cat = random.choice(alive_cats)
             text = text.replace("r_c", str(alive_cat.name))
         if "r_k" in text:
             alive_kits = get_alive_kits(Cat)
@@ -834,6 +834,7 @@ class Events:
         if "m_n" in text:
             if game.clan.your_cat.mentor is None:
                 return ""
+            text = text.replace("mentor1", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
             text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
         if "o_c" in text:
             other_clan = random.choice(game.clan.all_clans)
