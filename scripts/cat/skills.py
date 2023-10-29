@@ -217,7 +217,7 @@ class SkillPath(Enum):
         "masterful matchmaker"
     )
     THINKER = (
-        "oddly insightful",
+        "oddly resourceful",
         "out-of-the-box thinker",
         "paradox enthusiast",
         "philosopher"

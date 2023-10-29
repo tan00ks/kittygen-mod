@@ -84,6 +84,7 @@ class MakeClanScreen(Screens):
         self.med_cat = None
         self.members = []
         self.clan_size = "medium"
+        self.clan_age = "established"
         
         self.custom_cat = None
         self.elements = {}
@@ -182,6 +183,12 @@ class MakeClanScreen(Screens):
             self.elements['large'].disable()
             self.elements['medium'].enable()
             self.clan_size = "large"
+        elif event.ui_element == self.elements["established"]:
+            self.elements['new'].disable()
+            self.clan_age = "established"
+        elif event.ui_element == self.elements["new"]:
+            self.elements['established'].disable()
+            self.clan_age = "new"
     
     def handle_name_clan_key(self, event):
         if event.key == pygame.K_ESCAPE:
@@ -869,6 +876,10 @@ class MakeClanScreen(Screens):
         self.elements["medium"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,100), (200, 70))), "Medium", object_id="#small_button", manager=MANAGER)
         self.elements["large"] = pygame_gui.elements.UIButton(scale(pygame.Rect((1100,100), (200, 70))), "Large", object_id="#small_button", manager=MANAGER)
         self.elements["medium"].disable()
+
+        self.elements["established"] = pygame_gui.elements.UIButton(scale(pygame.Rect((600,200), (200, 70))), "Established", object_id="#small_button", manager=MANAGER)
+        self.elements["new"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,200), (200, 70))), "New", object_id="#small_button", manager=MANAGER)
+        self.elements["established"].disable()
 
     def clan_name_header(self):
         self.elements["name_backdrop"] = pygame_gui.elements.UIImage(scale(pygame.Rect((584, 200), (432, 100))),

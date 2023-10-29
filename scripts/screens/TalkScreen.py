@@ -395,7 +395,7 @@ class TalkScreen(Screens):
             
             # Relationships
             # Family tags:
-            if any(i in ["half sibling", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
+            if any(i in ["half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
                 
                 fam = False
                 if "from_mentor" in tags:
@@ -423,7 +423,9 @@ class TalkScreen(Screens):
                 if "from_adopted_kit" in tags:
                     if cat.ID in you.inheritance.get_not_blood_kits():
                         fam = True
-
+                if "littermate" in tags:
+                    if cat.ID in you.inheritance.get_siblings() and cat.moons == you.moons:
+                        fam = True
                 if "sibling" in tags:
                     if cat.ID in you.inheritance.get_siblings():
                         fam = True
@@ -618,7 +620,7 @@ class TalkScreen(Screens):
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
         text = [t1.replace("t_c", str(cat.name)) for t1 in text]
         for i in range(len(text)):
-            text[i] = self.adjust_txt(text[i])
+            text[i] = self.adjust_txt(text[i], cat)
             if text[i] == "":
                 return ""
         if cat.mentor:
@@ -655,7 +657,7 @@ class TalkScreen(Screens):
                 living_cats.append(the_cat)
         return living_cats
         
-    def adjust_txt(self, text):
+    def adjust_txt(self, text, cat):
         if "r_c" in text:
             alive_cats = self.get_living_cats()
             alive_cat = choice(alive_cats)
@@ -764,6 +766,10 @@ class TalkScreen(Screens):
             if game.clan.your_cat.mate is None:
                 return ""
             text = text.replace("y_p", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
+        if "t_mn" in text:
+            if cat.mentor is None:
+                return ""
+            text = text.replace("tm_n", str(Cat.fetch_cat(cat.mentor).name))
         if "m_n" in text:
             if game.clan.your_cat.mentor is None:
                 return ""
@@ -773,4 +779,9 @@ class TalkScreen(Screens):
             if not other_clan:
                 return ""
             text = text.replace("o_c", str(other_clan.name))
+        # if "n_r1" in text:
+        #     nr1 = choice(Cat.all_cats_list)
+        # if "n_r2" in text:
+        #     nr2 = choice(Cat.all_cats_list)
+
         return text

@@ -3252,7 +3252,7 @@
         [
             "[t_c looks up at you as you approach. It seems like they've been crying.]",
             "Hey, y_c. I've... I've just been thinking. About d_c.",
-            "You know, d_c was something else. They knew how to light up a room, didn't they?"
+            "You know, d_c was something else. They knew how to light up a den, didn't they?"
         ]
     ],
     "cool_grieving3": [
@@ -7481,7 +7481,8 @@
         [
             "Any",
             "Introspective",
-            "lonesome"
+            "lonesome",
+            "murder"
         ],
         [
             "[t_c's fur spikes up as you approach them, and they quickly rush away, clearly afraid of your presence.]"
@@ -7492,7 +7493,8 @@
             "Any",
             "Introspective",
             "calm",
-            "gloomy"
+            "gloomy",
+            "murder"
         ],
         [
             "[As you approach t_c, they stare at you with tired and embittered eyes.]",
@@ -7504,7 +7506,8 @@
         [
             "Any",
             "Introspective",
-            "wise"
+            "wise",
+            "murder"
         ],
         [
             "[t_c lets out a long-suffering sigh at the sight of you.]",

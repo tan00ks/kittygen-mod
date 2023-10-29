@@ -531,7 +531,7 @@ class Events:
     def pick_valid_parent(self):
         parent = random.choice(Cat.all_cats_list).ID
         counter = 0
-        while parent == game.clan.your_cat.ID or Cat.all_cats[parent].moons < 14 or Cat.all_cats[parent].moons > 100 or Cat.all_cats[parent].dead or Cat.all_cats[parent].outside or "apprentice" in Cat.all_cats[parent].status:
+        while parent == game.clan.your_cat.ID or Cat.all_cats[parent].moons < 14 or Cat.all_cats[parent].moons > 100 or Cat.all_cats[parent].dead or Cat.all_cats[parent].outside or Cat.all_cats[parent].exiled or "apprentice" in Cat.all_cats[parent].status:
             parent = random.choice(Cat.all_cats_list).ID
             counter+=1
             if counter == 30:
@@ -955,7 +955,8 @@ class Events:
                     encoding="ascii") as read_file:
                 self.d_txt = ujson.loads(read_file.read())
             ceremony_txt = random.choice(self.d_txt['gain_app ' + game.clan.your_cat.status])
-            ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+            if game.clan.leader:
+                ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
             ceremony_txt = ceremony_txt.replace('app1', str(Cat.all_cats[game.clan.your_cat.apprentice[-1]].name))
             game.cur_events_list.insert(0, Single_Event(ceremony_txt))
 
