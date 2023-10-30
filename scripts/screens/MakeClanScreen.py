@@ -184,10 +184,12 @@ class MakeClanScreen(Screens):
             self.elements['medium'].enable()
             self.clan_size = "large"
         elif event.ui_element == self.elements["established"]:
-            self.elements['new'].disable()
+            self.elements['established'].disable()
+            self.elements['new'].enable()
             self.clan_age = "established"
         elif event.ui_element == self.elements["new"]:
-            self.elements['established'].disable()
+            self.elements['established'].enable()
+            self.elements['new'].disable()
             self.clan_age = "new"
     
     def handle_name_clan_key(self, event):
@@ -289,7 +291,10 @@ class MakeClanScreen(Screens):
         not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 'LEFTBLIND', 'BRIGHTHEART',
                     'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
         c_size = 15
-        backstories = ['halfclan1', 'halfclan2', 'outsider_roots1', 'outsider_roots2', 'loner1', 'loner2', 'kittypet1', 'kittypet2', 'kittypet3', 'kittypet4', 'rogue1', 'rogue2', 'rogue3', 'rogue4', 'rogue5', 'rogue6', 'rogue7', 'rogue8', 'abandoned1', 'abandoned2', 'abandoned3', 'abandoned4', 'otherclan1', 'otherclan2', 'otherclan3', 'otherclan4', 'otherclan5', 'otherclan6', 'otherclan7', 'otherclan8', 'otherclan9', 'otherclan10', 'disgraced1', 'disgraced2', 'disgraced3', 'refugee1', 'refugee2', 'refugee3', 'refugee4', 'refugee5', 'tragedy_survivor1', 'tragedy_survivor2', 'tragedy_survivor3', 'tragedy_survivor4', 'tragedy_survivor5', 'tragedy_survivor6', 'guided1', 'guided2', 'guided3', 'guided4', 'orphaned1', 'orphaned2', 'orphaned3', 'orphaned4', 'orphaned5', 'orphaned6', 'outsider1', 'outsider2', 'outsider3', 'kittypet5', 'kittypet6', 'kittypet7', 'loner8', 'guided5', 'guided6', 'outsider4', 'outsider5', 'outsider6', 'orphaned7', 'halfclan4', 'halfclan5', 'halfclan6', 'halfclan7', 'halfclan8', 'halfclan9', 'halfclan10', 'outsider_roots3', 'outsider_roots4', 'outsider_roots5', 'outsider_roots6', 'outsider_roots7', 'outsider_roots8']
+        backstories = ["clan_founder", "clan_founder1", "clan_founder2", "clan_founder3", "clan_founder4", "clan_founder5", "clan_founder6", "clan_founder7"]
+        if self.clan_age == "established":
+            backstories = ['halfclan1', 'halfclan2', 'outsider_roots1', 'outsider_roots2', 'loner1', 'loner2', 'kittypet1', 'kittypet2', 'kittypet3', 'kittypet4', 'rogue1', 'rogue2', 'rogue3', 'rogue4', 'rogue5', 'rogue6', 'rogue7', 'rogue8', 'abandoned1', 'abandoned2', 'abandoned3', 'abandoned4', 'otherclan1', 'otherclan2', 'otherclan3', 'otherclan4', 'otherclan5', 'otherclan6', 'otherclan7', 'otherclan8', 'otherclan9', 'otherclan10', 'disgraced1', 'disgraced2', 'disgraced3', 'refugee1', 'refugee2', 'refugee3', 'refugee4', 'refugee5', 'tragedy_survivor1', 'tragedy_survivor2', 'tragedy_survivor3', 'tragedy_survivor4', 'tragedy_survivor5', 'tragedy_survivor6', 'guided1', 'guided2', 'guided3', 'guided4', 'orphaned1', 'orphaned2', 'orphaned3', 'orphaned4', 'orphaned5', 'orphaned6', 'outsider1', 'outsider2', 'outsider3', 'kittypet5', 'kittypet6', 'kittypet7', 'loner8', 'guided5', 'guided6', 'outsider4', 'outsider5', 'outsider6', 'orphaned7', 'halfclan4', 'halfclan5', 'halfclan6', 'halfclan7', 'halfclan8', 'halfclan9', 'halfclan10', 'outsider_roots3', 'outsider_roots4', 'outsider_roots5', 'outsider_roots6', 'outsider_roots7', 'outsider_roots8']
+
         if self.clan_size == "small":
             c_size = 10
         elif self.clan_size == 'large':
@@ -321,10 +326,17 @@ class MakeClanScreen(Screens):
                 game.choose_cats[a].moons = choice(range(120, 155))
             elif game.choose_cats[a].moons == 0:
                 game.choose_cats[a].moons = choice([1, 2, 3, 4, 5])
-            if random.randint(1,5) == 1 and game.choose_cats[a].status not in ['newborn', 'kitten']:
-                game.choose_cats[a].backstory = choice(backstories)
+
+            if self.clan_age == "old":
+                if rgame.choose_cats[a].status not in ['newborn', 'kitten']:
+                    game.choose_cats[a].backstory = choice(backstories)
+                else:
+                    game.choose_cats[a].backstory = 'clanborn'
             else:
-                game.choose_cats[a].backstory = 'clanborn'
+                if random.randint(1,5) == 1 and game.choose_cats[a].status not in ['newborn', 'kitten']:
+                    game.choose_cats[a].backstory = choice(backstories)
+                else:
+                    game.choose_cats[a].backstory = 'clanborn'
     
     def handle_choose_background_event(self, event):
         if event.ui_element == self.elements['previous_step']:
@@ -870,6 +882,17 @@ class MakeClanScreen(Screens):
             self.elements["clan_size"] = pygame_gui.elements.UITextBox("Clan Size: ",
                                                               scale(pygame.Rect((400, 110), (200, 50))),
                                                               object_id="#text_box_30_horizcenter",
+                                                              manager=MANAGER)
+
+        if game.settings['dark mode']:
+            self.elements["clan_age"] = pygame_gui.elements.UITextBox("Clan Age: ",
+                                                              scale(pygame.Rect((400, 205), (200, 50))),
+                                                              object_id="#text_box_30_horizcenter_light",
+                                                              manager=MANAGER)
+        else:
+            self.elements["clan_age"] = pygame_gui.elements.UITextBox("Clan Age: ",
+                                                              scale(pygame.Rect((400, 210), (200, 50))),
+                                                              object_id="#text_box_30_horizcenter",
                                                               manager=MANAGER)  
         
         self.elements["small"] = pygame_gui.elements.UIButton(scale(pygame.Rect((600,100), (200, 70))), "Small", object_id="#small_button", manager=MANAGER)
@@ -877,7 +900,7 @@ class MakeClanScreen(Screens):
         self.elements["large"] = pygame_gui.elements.UIButton(scale(pygame.Rect((1100,100), (200, 70))), "Large", object_id="#small_button", manager=MANAGER)
         self.elements["medium"].disable()
 
-        self.elements["established"] = pygame_gui.elements.UIButton(scale(pygame.Rect((600,200), (200, 70))), "Established", object_id="#small_button", manager=MANAGER)
+        self.elements["established"] = pygame_gui.elements.UIButton(scale(pygame.Rect((600,200), (200, 70))), "Old", object_id="#small_button", manager=MANAGER)
         self.elements["new"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,200), (200, 70))), "New", object_id="#small_button", manager=MANAGER)
         self.elements["established"].disable()
 
