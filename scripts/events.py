@@ -1189,6 +1189,32 @@ class Events:
                         f"become the Clan's newest mediator. ", "ceremony",
                         cat.ID))
                 cat.status_change("mediator")
+        if game.clan.clan_settings['become_med']:
+            # Note: These chances are large since it triggers every moon.
+            # Checking every moon has the effect giving older cats more chances to become a mediator
+            _ = game.config["roles"]["become_med_chances"]
+            if cat.status in _ and \
+                    not int(random.random() * _[cat.status]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        f"{cat.name} had chosen to use their skills and experience to heal "
+                        f"and commune with StarClan. A meeting is called, and they "
+                        f"become the Clan's newest medicine cat. ", "ceremony",
+                        cat.ID))
+                cat.status_change("medicine cat")
+        if game.clan.clan_settings['become_queen']:
+            # Note: These chances are large since it triggers every moon.
+            # Checking every moon has the effect giving older cats more chances to become a mediator
+            _ = game.config["roles"]["become_queen_chances"]
+            if cat.status in _ and \
+                    not int(random.random() * _[cat.status]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        f"{cat.name} had chosen to use their skills and experience to help nuture the "
+                        f"Clan's young. A meeting is called, and they "
+                        f"become the Clan's newest queen. ", "ceremony",
+                        cat.ID))
+                cat.status_change("queen")
 
     def get_moon_freshkill(self):
         """Adding auto freshkill for the current moon."""

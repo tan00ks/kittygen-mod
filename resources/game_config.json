@@ -280,6 +280,14 @@
 		"become_mediator_chances": {
 			"warrior": 5000,
 			"elder": 400
+		},
+		"become_med_chances": {
+			"warrior": 5000,
+			"elder": 400
+		},
+		"become_queen_chances": {
+			"warrior": 5000,
+			"elder": 400
 		}
 	},
 	"lost_cat": {
