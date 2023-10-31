@@ -164,8 +164,17 @@
         "Clanmates question your old war stories, wondering what truths they may have overlooked.",
         "The medicine cat appears more often in your den, ostensibly for health checks, but the tension is palpable.",
         "The queens hastily steer their kits away from your reach, afraid of what you might do.",
-        "You wish you can turn back time.",
         "You notice your name whispered around the fresh-kill pile, your actions the subject of hushed and anxious conversations.",
         "At gatherings, other Clans regard you warily, the grim knowledge about you having spread."
+    ],
+    "general": [
+        "You wander around camp aimlessly.",
+        "You wish you can turn back time.",
+        "Your paws always feel like they are stained with blood.",
+        "The cats that you thought were your friends look at you with hatred.",
+        "Warriors chase you away from the freshkill pile when you are hungry.",
+        "You sit and reflect.",
+        "You wonder if enough time will pass that everyone will forget and things will go back to normal again.",
+        "You go back to your den one night to find your nest ripped to shreds."
     ]
 }
