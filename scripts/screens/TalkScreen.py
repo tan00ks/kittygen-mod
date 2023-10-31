@@ -371,7 +371,7 @@ class TalkScreen(Screens):
                     for illness in you.illnesses:
                         if you.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
-                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries:
+                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries and "recovering from birth" not in you.injuries:
                     for injury in you.injuries:
                         if you.injuries[injury]['severity'] != 'minor':
                             ill_injured = True                
@@ -385,7 +385,7 @@ class TalkScreen(Screens):
                     for illness in cat.illnesses:
                         if cat.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
-                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries:
+                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries and "recovering from birth" not in cat.injuries:
                     for injury in cat.injuries:
                         if cat.injuries[injury]['severity'] != 'minor':
                             ill_injured = True    
