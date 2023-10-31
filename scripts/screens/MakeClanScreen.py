@@ -331,7 +331,7 @@ class MakeClanScreen(Screens):
                 game.choose_cats[a].moons = choice([1, 2, 3, 4, 5])
 
             if self.clan_age == "old":
-                if rgame.choose_cats[a].status not in ['newborn', 'kitten']:
+                if game.choose_cats[a].status not in ['newborn', 'kitten']:
                     game.choose_cats[a].backstory = choice(backstories)
                 else:
                     game.choose_cats[a].backstory = 'clanborn'
