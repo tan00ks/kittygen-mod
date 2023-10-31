@@ -1,3 +1,11 @@
+<strong>v0.6.4: </strong>
+- Choose Clan age
+- Customize your cat
+- Warriors are now able to choose to become a medicine cat/queen
+- Affairs result in pregnancy
+- Add some new text
+- Fix bugs
+
 <strong>v0.6.3: </strong>
 - Many new dialogue options!
 - Dialogue does not repeat as often
