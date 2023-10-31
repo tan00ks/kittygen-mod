@@ -10,7 +10,18 @@
         "You notice some kits bullying a littermate. Intervening, you impart lessons on respect, compassion, and Clan unity, shaping the future warriors' values.",
         "A kit falls ill with greencough. You segregate the sick kit, ensuring the others stay warm and comforted, while also assisting the medicine cat with treatments."
     ],
-    "queen general": [],
+    "queen general": [
+        "You go over each of the different roles in the Clan for r_k so they can choose the right path for them.",
+        "r_k is struggling to understand a story that r_w told, so you patiently sit down and recount the tale for them in a way they understand.",
+        "During Gatherings, some cats approach you, asking for advice on parenting.",
+        "You gently scold an expecting parent who is overworking themselves.",
+        "You teach the kits a game that can be played in the nursery when outside becomes too chilly.",
+        "Seeing r_e's fondness for a particular story, you organize the kits to reenact it. r_e is estatic at the show they put on.",
+        "You ask r_m if they have time to give the kits a lecture on what herbs to stay away from.",
+        "You ask r_k to place their paw in a patch of wet mud. When the mud dries, they'll have a way to see how much they have grown over the moons by comparing the size of pawprints.",
+        "You play the quiet game with r_k.",
+        "You ask d_n to give a lecture to the kits about the different types of patrols."
+    ],
     "queen assertive": [],
     "queen brooding": [],
     "queen cool": [],
