@@ -774,13 +774,12 @@
     ],
     "assertivekit_sibling5": [
         [
-            "any",
+            "kitten",
             "assertive",
             "unlawful",
             "brooding",
-            "sibling",
-            "adopted_sibling",
-            "random_cat"
+            "random_cat",
+            "littermates"
         ],
         [
             "y_c, wanna play leader and deputy?",
@@ -2369,7 +2368,8 @@
         ],
         [
             "Welcome to warrior training, y_c. First thing's first, let's fix that posture. Head up! Tail straight! Chin- lift that chin. Great!",
-            "Now, show me your happy face. Good! Now your sad face. Eggcellent! Now, show me angry! No! More anger, bare those teeth. Think of me as a scary warrior who's about to attack your clanmates, you wouldn't want that, would you? YES! Perfect, pull those ears back a little more, and- wow, you actually look pretty scary.",
+            "Now, show me your happy face. Good! Now your sad face. Eggcellent! Now, show me angry! No! More anger, bare those teeth.",
+            "Think of me as a scary warrior who's about to attack your clanmates, you wouldn't want that, would you? YES! Perfect, pull those ears back a little more, and- wow, you actually look pretty scary.",
             "Second task, as a warrior you must always know how to defend yourself- HEY! Did you just swipe at me- don't knock me over, I didn't say fight yet!"
         ]
     ],

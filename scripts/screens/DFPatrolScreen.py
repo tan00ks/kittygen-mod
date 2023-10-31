@@ -66,12 +66,6 @@ class DFPatrolScreen(Screens):
 
             self.menu_button_pressed(event)
 
-        elif event.type == pygame.KEYDOWN and game.clan.clan_settings['keybinds']:
-            if event.key == pygame.K_LEFT:
-                self.change_screen("starclan screen")
-            elif event.key == pygame.K_RIGHT:
-                self.change_screen('list screen')
-
     def handle_choose_cats_events(self, event):
         if 'cat_icon' in self.elements:
             if event.ui_element == self.elements['df_icon']:
