@@ -18,6 +18,15 @@
             "For I know, I've played a part in shaping the Clan's future, one kit at a time."
         ]
     ],
+    "dep_132": [
+        [
+            "newborn",
+            "insult"
+        ],
+        [
+            "Wha.. What was that?"
+        ]
+    ],
     "assertivewarriorapp_comfort": [
         [
             "no_kit",

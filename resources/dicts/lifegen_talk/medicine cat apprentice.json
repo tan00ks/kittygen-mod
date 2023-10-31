@@ -7,6 +7,15 @@
             "There's too much to do right now. Let's talk later."
         ]
     ],
+    "dep_132": [
+        [
+            "newborn",
+            "insult"
+        ],
+        [
+            "Wha.. What was that?"
+        ]
+    ],
     "assertivemed_comfort": [
         [
             "platonic_love",
