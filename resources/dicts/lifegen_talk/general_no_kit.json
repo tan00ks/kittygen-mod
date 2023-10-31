@@ -6006,7 +6006,7 @@
             "unlawful"
         ],
         [
-            "Watch yourself, r_c."
+            "Watch yourself, y_c."
         ]
     ],
     "unabashed_insult_1": [
@@ -7944,6 +7944,115 @@
             "[You assure t_c that you'll always be their parent and love them no matter what.]",
             "Heh ... Thanks. That makes me feel better.",
             "[They scamper off, but you can't help wondering why they asked.]"
+        ]
+    ],
+    "insult_11": [
+        [
+            "insult",
+            "any",
+            "cool",
+            "silly"
+        ],
+        [
+            "Your meow is worse than your bite."
+        ]
+    ],
+    "insult_12": [
+        [
+            "insult",
+            "any",
+            "sweet",
+            "stable"
+        ],
+        [
+            "Your ancestors would be ashamed."
+        ]
+    ],
+    "insult_13": [
+        [
+            "insult",
+            "any",
+            "unabashed",
+            "assertive",
+            "cool"
+        ],
+        [
+            "Maybe one day you'll be worth something to your Clan."
+        ]
+    ],
+    "insult_14": [
+        [
+            "insult",
+            "any",
+            "unlawful"
+        ],
+        [
+            "Keep talking and you'll find out how sharp my claws really are."
+        ]
+    ],
+    "insult_15": [
+        [
+            "insult",
+            "any",
+            "cool",
+            "upstanding",
+            "unabashed"
+        ],
+        [
+            "Keep yowling. Maybe one day you'll actually sound intimidating."
+        ]
+    ],
+    "insult_16": [
+        [
+            "insult",
+            "any",
+            "sweet",
+            "stable",
+            "introspective"
+        ],
+        [
+            "May StarClan light your path, even if we don't see eye to eye."
+        ]
+    ],
+    "insult_17": [
+        [
+            "insult",
+            "any",
+            "sweet"
+        ],
+        [
+            "Oh, y_c. I believe every cat has good in them, even you."
+        ]
+    ],
+    "insult_18": [
+        [
+            "insult",
+            "any",
+            "sweet"
+        ],
+        [
+            "[t_c smiles at your words. The smile doesn't reach their eyes.]",
+            "May your nights be filled with the sweetest dreams and the warmest nests."
+        ]
+    ],
+    "insult_19": [
+        [
+            "insult",
+            "stable",
+            "introspective"
+        ],
+        [
+            "Remember, the same moon shines down on all of us..."
+        ]
+    ],
+    "insult_20": [
+        [
+            "insult",
+            "any",
+            "unlawful"
+        ],
+        [
+            "Your words mean nothing. Just like you."
         ]
     ]
 }

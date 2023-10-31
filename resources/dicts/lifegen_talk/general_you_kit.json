@@ -1015,6 +1015,15 @@
             "That's not very nice of you to say..."
         ]
     ],
+    "insult1": [
+        [
+            "insult",
+            "any"
+        ],
+        [
+            "Hey! Where'd you learn those words from?"
+        ]
+    ],
     "sweet_insult_3": [
         [
             "any",
