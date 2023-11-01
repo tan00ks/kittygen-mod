@@ -330,7 +330,7 @@ class MakeClanScreen(Screens):
             elif game.choose_cats[a].moons == 0:
                 game.choose_cats[a].moons = choice([1, 2, 3, 4, 5])
 
-            if self.clan_age == "old":
+            if self.clan_age == "new":
                 if game.choose_cats[a].status not in ['newborn', 'kitten']:
                     game.choose_cats[a].backstory = choice(backstories)
                 else:
