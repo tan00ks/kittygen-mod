@@ -42,7 +42,23 @@
       "r_c has been impatient for the end of m_c's pregnancy, and when {PRONOUN/r_c/subject} {VERB/r_c/hear/hears} m_c has gone into labor, {PRONOUN/r_c/subject} {VERB/r_c/drop/drops} what {PRONOUN/r_c/subject}{VERB/r_c/'re/'s} doing and {VERB/r_c/sprint/sprints} for the nursery, where m_c is bringing a {insert} into the world.",
       "m_c is so, so grateful that {PRONOUN/m_c/poss} adorable {insert} is here - both thrilled to meet them, and thrilled that r_c can take a turn parenting while m_c finally takes a little break from the stuffy air of the nursery.",
       "m_c and r_c were so busy worrying about and looking forward to the birth that it's only now that they look at their {insert}, and wonder what to name them.",
-      "Purring with r_c against {PRONOUN/m_c/poss} back, m_c feels like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} going to explode with love, looking at {PRONOUN/m_c/poss} tiny new {insert}."
+      "Purring with r_c against {PRONOUN/m_c/poss} back, m_c feels like {PRONOUN/m_c/subject}{VERB/m_c/'re/'s} going to explode with love, looking at {PRONOUN/m_c/poss} tiny new {insert}.",
+      "m_c is exhausted, but elated as they look over their {insert}. They're eagar to share their parenting duties with r_c, who has crawled into the nursery to join them, their purrs resonating through the den.",
+      "By the end of the day, m_c is nursing a healthy {insert}, with r_c lying protectively around them, their tail curled around their new members of the family.",
+      "m_c smiles at the first cries of their {insert}, gently licking their soft, downy fur. Meanwhile, r_c parades around camp, proudly boasting about how adorable they are to any cat who would listen."
+    ],
+    "two_parents Newleaf": [
+      "The newleaf brings not just warm weather and abundent prey; it brings new life as well. m_c and r_c purr as they welcome their {insert} into the world."
+    ],
+    "two_parents Greenleaf": [
+      "As a storm rages outside, the Clan's newest members arrive in the safety of the den. m_c's has given birth to a {insert} to the rhythm of thunder, with r_c's steady presence a calming force for their mate admist the storm."
+    ],
+    "two_parents Leaf-fall": [
+      "During a crisp leaf-fall morning, the Clan awakens not just to the frost-kissed ground but to the news of m_c's birth to a {insert}. r_c, unable to contain their joy, bounds around the camp, their whiskers frosted, sharing the arrival of their kits."
+    ],
+    "two_parents Leaf-bare": [
+      "m_c has ignored the whispers about the dangers of having kits in the middle of leaf-bare. Curled protectively around their {insert} with r_c by their side, they know it was worth it.",
+      "The first snow of leaf-bare falls gently outside as m_c gives birth to a {insert}. r_c makes themselves busy, bringing any feathers and moss they can find back to the nursery to ensure their kits and their mate are warm and comfortable."
     ],
     "dead_mate": [
       "m_c looks at {PRONOUN/m_c/poss} {insert}, choking on both a purr and a wail. How are {PRONOUN/m_c/subject} supposed to do this without r_c?",

@@ -349,7 +349,7 @@ class Pregnancy_Events():
             event_list.append(adding_text)
         elif other_cat.ID in cat.mate and not other_cat.dead and not other_cat.outside:
             involved_cats.append(other_cat.ID)
-            event_list.append(choice(events["birth"]["two_parents"]))
+            event_list.append(choice(events["birth"]["two_parents"] + events["birth"][f"two_parents {game.clan.seasons[game.clan.age % 12]}"]))
         elif other_cat.ID in cat.mate and other_cat.dead or other_cat.outside:
             involved_cats.append(other_cat.ID)
             event_list.append(choice(events["birth"]["dead_mate"]))
