@@ -51,6 +51,7 @@ class DFPatrolScreen(Screens):
         self.results_text = ""
         self.start_patrol_thread = None
         self.proceed_patrol_thread = None
+        self.dbclock = pygame.time.Clock()
 
     def handle_event(self, event):
         if game.switches["window_open"]:
@@ -58,7 +59,10 @@ class DFPatrolScreen(Screens):
         
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if self.patrol_stage == "choose_cats":
-                self.handle_choose_cats_events(event)
+                if self.dbclock.tick() < 500:
+                    self.handle_choose_cats_events(event, doubleclick=True)
+                else:
+                    self.handle_choose_cats_events(event, doubleclick=False)
             elif self.patrol_stage == 'patrol_events':
                 self.handle_patrol_events_event(event)
             elif self.patrol_stage == 'patrol_complete':
@@ -66,7 +70,7 @@ class DFPatrolScreen(Screens):
 
             self.menu_button_pressed(event)
 
-    def handle_choose_cats_events(self, event):
+    def handle_choose_cats_events(self, event, doubleclick=False):
         if 'cat_icon' in self.elements:
             if event.ui_element == self.elements['df_icon']:
                     self.change_screen("patrol screen2")
@@ -85,7 +89,13 @@ class DFPatrolScreen(Screens):
             self.selected_cat = choice(self.able_cats)
             self.update_selected_cat()
             self.update_button()
-        
+        elif event.ui_element in self.cat_buttons.values() and doubleclick:
+            if self.selected_cat in self.current_patrol:
+                self.current_patrol.remove(self.selected_cat)
+            else:
+                self.current_patrol.append(self.selected_cat)
+            self.update_cat_images_buttons()
+            self.update_button()
         # Check is a cat is clicked
         elif event.ui_element in self.cat_buttons.values():
             self.selected_cat = event.ui_element.return_cat_object()

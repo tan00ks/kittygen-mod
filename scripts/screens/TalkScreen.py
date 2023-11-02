@@ -739,13 +739,13 @@ class TalkScreen(Screens):
         if "l_n" in text:
             if game.clan.leader is None:
                 return ""
-            if game.clan.leader.dead or game.clan.leader.outside:
+            if game.clan.leader.dead or game.clan.leader.outside or game.clan.leader.ID == game.clan.your_cat.ID or game.clan.leader.ID == cat.ID:
                 return ""
             text = text.replace("l_n", str(game.clan.leader.name))
         if "d_n" in text:
             if game.clan.deputy is None:
                 return ""
-            if game.clan.deputy.dead or game.clan.deputy.outside:
+            if game.clan.deputy.dead or game.clan.deputy.outside or game.clan.deputy.ID == game.clan.your_cat.ID or game.clan.deputy.ID == cat.ID:
                 return ""
             text = text.replace("d_n", str(game.clan.deputy.name))
         if "y_s" in text:

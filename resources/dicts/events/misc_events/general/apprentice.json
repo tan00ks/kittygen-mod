@@ -926,7 +926,7 @@
             "Leaf-fall",
             "Leaf-bare"
         ],
-        "event_text": "m_c leaps up at a flying bug {PRONOUN/m_c/subject} found around camp, and catches it with grace! {PRONOUN/m_c/subject/CAP} {VERB/m_c/wear/wears} the acc_display proudly.",
+        "event_text": "m_c leaps up at a flying bug {PRONOUN/m_c/subject} found around camp, and catches it with grace! {PRONOUN/m_c/subject/CAP} {VERB/m_c/wear/wears} the acc_singular proudly.",
         "accessories": ["DEADINSECT"]
     },
     {

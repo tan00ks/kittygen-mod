@@ -204,13 +204,6 @@ class Events:
                          f"for longer and have a higher chance of dying. "
                 game.cur_events_list.insert(0, Single_Event(string, "health"))
                 
-        new_list = []
-        other_list = []
-        for i in game.cur_events_list:
-            if str(game.clan.your_cat.name) in i.text:
-                new_list.append(i)
-            else:
-                other_list.append(i)
         
         # Clear the list of cats that died this moon.
         game.just_died.clear()
@@ -235,6 +228,14 @@ class Events:
             if not has_med:
                 string = f"{game.clan.name}Clan has no medicine cat!"
                 game.cur_events_list.insert(0, Single_Event(string, "health"))
+        
+        new_list = []
+        other_list = []
+        for i in game.cur_events_list:
+            if str(game.clan.your_cat.name) in i.text:
+                new_list.append(i)
+            else:
+                other_list.append(i)
         
         game.cur_events_list = new_list
         game.other_events_list = other_list
