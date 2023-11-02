@@ -21,6 +21,7 @@ from scripts.game_structure.game_essentials import game, screen, screen_x, scree
 from scripts.game_structure.windows import RelationshipLog
 from scripts.game_structure.propagating_thread import PropagatingThread
 from scripts.events_module.relationship.romantic_events import Romantic_Events
+from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
 
 class AffairScreen(Screens):
     selected_cat = None
@@ -192,8 +193,14 @@ class AffairScreen(Screens):
         success = self.is_success()
         
         if success:
+            affair_cat.relationships.get(game.clan.your_cat.ID).dislike -= randint(10,30)
+            affair_cat.relationships.get(game.clan.your_cat.ID).comfortable += randint(10,30)
+            affair_cat.relationships.get(game.clan.your_cat.ID).romantic_love += randint(10,30)
+            game.clan.your_cat.relationships.get(affair_cat.ID).romantic_love += randint(10,30)
             ceremony_txt = self.adjust_txt(choice(self.mu_txt['success']), affair_cat)
             game.cur_events_list.insert(0, Single_Event(ceremony_txt))
+            if randint(1,20) == 1:
+                Pregnancy_Events.handle_zero_moon_pregnant(game.clan.your_cat, affair_cat, game.clan)
         else:
             ceremony_txt = self.adjust_txt(choice(self.mu_txt['fail']), affair_cat)
             game.cur_events_list.insert(0, Single_Event(ceremony_txt))
@@ -201,13 +208,17 @@ class AffairScreen(Screens):
                 ceremony_txt = self.adjust_txt(choice(self.mu_txt['fail breakup']), affair_cat)
                 for i in game.clan.your_cat.mate:
                     Cat.fetch_cat(i).unset_mate(game.clan.your_cat)
+                    Cat.fetch_cat(i).relationships.get(game.clan.your_cat.ID).dislike += randint(10,30)
+                    Cat.fetch_cat(i).relationships.get(game.clan.your_cat.ID).comfortable -= randint(10,30)
+                    Cat.fetch_cat(i).relationships.get(game.clan.your_cat.ID).romantic_love -= randint(10,30)
                 game.cur_events_list.insert(1, Single_Event(ceremony_txt))
             else:
                 ceremony_txt = self.adjust_txt(choice(self.mu_txt['fail none']), affair_cat)
                 game.cur_events_list.insert(1, Single_Event(ceremony_txt))
                 for i in game.clan.your_cat.mate:
-                    m = Cat.fetch_cat(i)
-                    m.relationships.get(game.clan.your_cat.ID).romantic_love -= 10
+                    Cat.fetch_cat(i).relationships.get(game.clan.your_cat.ID).dislike += randint(10,30)
+                    Cat.fetch_cat(i).relationships.get(game.clan.your_cat.ID).comfortable -= randint(10,30)
+                    Cat.fetch_cat(i).relationships.get(game.clan.your_cat.ID).romantic_love -= randint(10,30)
         self.exit_screen()
         game.switches['cur_screen'] = "events screen"
     

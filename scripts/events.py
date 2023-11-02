@@ -254,7 +254,9 @@ class Events:
         if not game.clan.your_cat.dead and game.clan.your_cat.status != 'exiled':
             if game.clan.your_cat.revealed != 0 and game.clan.age - 3 <= game.clan.your_cat.revealed and game.clan.your_cat.moons != 0 and game.clan.your_cat.moons != 6 and not (game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator'] and not game.clan.your_cat.w_done) and not game.clan.your_cat.moons == 120:
                 for i in range(random.randint(0,2)):
-                    d_e = Single_Event(random.choice(self.e_txt[game.clan.your_cat.status]))
+                    distrust_events = self.e_txt[game.clan.your_cat.status]
+                    distrust_events = distrust_events + self.e_txt['general']
+                    d_e = Single_Event(random.choice(distrust_events))
                     if d_e not in game.cur_events_list:
                         game.cur_events_list.append(d_e)
             else:
@@ -511,7 +513,7 @@ class Events:
         elif you.outside:
             achievements.add('22')
         
-        if len(clan_cats) == 1 and not you.dead:
+        if len(clan_cats) == 1 and not you.dead and not you.outside:
             achievements.add('23')
         if len(clan_cats) >= 100:
             achievements.add('24')
@@ -531,7 +533,7 @@ class Events:
     def pick_valid_parent(self):
         parent = random.choice(Cat.all_cats_list).ID
         counter = 0
-        while parent == game.clan.your_cat.ID or Cat.all_cats[parent].moons < 14 or Cat.all_cats[parent].moons > 100 or Cat.all_cats[parent].dead or Cat.all_cats[parent].outside or "apprentice" in Cat.all_cats[parent].status:
+        while parent == game.clan.your_cat.ID or Cat.all_cats[parent].moons < 14 or Cat.all_cats[parent].moons > 100 or Cat.all_cats[parent].dead or Cat.all_cats[parent].outside or Cat.all_cats[parent].exiled or "apprentice" in Cat.all_cats[parent].status:
             parent = random.choice(Cat.all_cats_list).ID
             counter+=1
             if counter == 30:
@@ -575,12 +577,11 @@ class Events:
     def get_birth_txt(self):
         num_siblings = random.choice([0,1,2,3])
         siblings, sibling_text = self.create_siblings(num_siblings)
-        birth_type = random.randint(1,6)
-        birth_type = 6
+        birth_type = random.randint(1,7)
         if birth_type == 1:
             game.clan.your_cat.backstory = random.choice(["abandoned1", "abandoned2", "abandoned3", "abandoned4", "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5", "orphaned6"])
             return self.handle_birth_no_parents(siblings, sibling_text)
-        elif birth_type in [2, 3, 4]:
+        elif birth_type in [2, 3, 4, 5]:
             if birth_type == 2:
                 game.clan.your_cat.backstory = random.choice(["halfclan1", "clanborn", "outsider_roots1"])
             else:
@@ -728,7 +729,7 @@ class Events:
             alive_cats = self.get_living_cats()
             alive_cat = random.choice(alive_cats)
             while alive_cat.ID == game.clan.your_cat.ID:
-                alive_cat = random.choice(alive_cat)
+                alive_cat = random.choice(alive_cats)
             text = text.replace("r_c", str(alive_cat.name))
         if "r_k" in text:
             alive_kits = get_alive_kits(Cat)
@@ -832,9 +833,10 @@ class Events:
             if game.clan.your_cat.mate is None:
                 return ""
             text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
-        if "m_n" in text:
+        if "m_n" in text or "mentor1" in text:
             if game.clan.your_cat.mentor is None:
                 return ""
+            text = text.replace("mentor1", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
             text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
         if "o_c" in text:
             other_clan = random.choice(game.clan.all_clans)
@@ -955,7 +957,8 @@ class Events:
                     encoding="ascii") as read_file:
                 self.d_txt = ujson.loads(read_file.read())
             ceremony_txt = random.choice(self.d_txt['gain_app ' + game.clan.your_cat.status])
-            ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+            if game.clan.leader:
+                ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
             ceremony_txt = ceremony_txt.replace('app1', str(Cat.all_cats[game.clan.your_cat.apprentice[-1]].name))
             game.cur_events_list.insert(0, Single_Event(ceremony_txt))
 
@@ -1188,6 +1191,32 @@ class Events:
                         f"become the Clan's newest mediator. ", "ceremony",
                         cat.ID))
                 cat.status_change("mediator")
+        if game.clan.clan_settings['become_med']:
+            # Note: These chances are large since it triggers every moon.
+            # Checking every moon has the effect giving older cats more chances to become a mediator
+            _ = game.config["roles"]["become_med_chances"]
+            if cat.status in _ and \
+                    not int(random.random() * _[cat.status]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        f"{cat.name} had chosen to use their skills and experience to heal "
+                        f"and commune with StarClan. A meeting is called, and they "
+                        f"become the Clan's newest medicine cat. ", "ceremony",
+                        cat.ID))
+                cat.status_change("medicine cat")
+        if game.clan.clan_settings['become_queen']:
+            # Note: These chances are large since it triggers every moon.
+            # Checking every moon has the effect giving older cats more chances to become a mediator
+            _ = game.config["roles"]["become_queen_chances"]
+            if cat.status in _ and \
+                    not int(random.random() * _[cat.status]):
+                game.cur_events_list.append(
+                    Single_Event(
+                        f"{cat.name} had chosen to use their skills and experience to help nuture the "
+                        f"Clan's young. A meeting is called, and they "
+                        f"become the Clan's newest queen. ", "ceremony",
+                        cat.ID))
+                cat.status_change("queen")
 
     def get_moon_freshkill(self):
         """Adding auto freshkill for the current moon."""

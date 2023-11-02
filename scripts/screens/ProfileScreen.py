@@ -1309,6 +1309,11 @@ class ProfileScreen(Screens):
                     beginning['moon']) + " at the age of " + str(beginning['age']) + " Moons."
 
         text = process_text(text, cat_dict)
+        if "o_c" in text:
+            other_clan = "a different Clan"
+            if game.clan.all_clans:
+                other_clan = str(choice(game.clan.all_clans).name)
+            text = text.replace("o_c", other_clan)
         return text
 
     def get_scar_text(self):
@@ -1643,7 +1648,8 @@ class ProfileScreen(Screens):
                     if not moons:
                         name_list.append(name)
                     else:
-                        name_list.append(name + f" (Moon {', '.join(victim_names[name])})")
+                        name_list.append(name + f" (Moon {str(victim_names[name])})")
+                        
 
                 if len(name_list) == 1:
                     victim_text = f"{self.the_cat.name} murdered {name_list[0]}."

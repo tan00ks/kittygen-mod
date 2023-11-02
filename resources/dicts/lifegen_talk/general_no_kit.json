@@ -2162,6 +2162,17 @@
             "Maybe there's even some Clans on the sun! Or the moon!"
         ]
     ],
+    "cool_5_1": [
+        [
+            "Any",
+            "cool",
+            "unabashed"
+        ],
+        [
+            "[You prod a sleeping t_c with the side of your paw. They swat you away.]",
+            "Mmf ... Just a little longer ..."
+        ]
+    ],
     "brooding_1": [
         [
             "Any",
@@ -3252,7 +3263,7 @@
         [
             "[t_c looks up at you as you approach. It seems like they've been crying.]",
             "Hey, y_c. I've... I've just been thinking. About d_c.",
-            "You know, d_c was something else. They knew how to light up a room, didn't they?"
+            "You know, d_c was something else. They knew how to light up a den, didn't they?"
         ]
     ],
     "cool_grieving3": [
@@ -6006,7 +6017,7 @@
             "unlawful"
         ],
         [
-            "Watch yourself, r_c."
+            "Watch yourself, y_c."
         ]
     ],
     "unabashed_insult_1": [
@@ -6538,7 +6549,7 @@
             "they_grieving"
         ],
         [
-            "Oh, it's- it's just you, y_c. How are you? I'm guessing you knew how to find me. You've always been god at reading others. You're so in sync with those around you. I envy it honestly...",
+            "Oh, it's- it's just you, y_c. How are you? I'm guessing you knew how to find me. You've always been good at reading others. You're so in sync with those around you. I envy it honestly...",
             "I miss them... so, so much. They were always there for me, they for as long as I can remember were always by my side. And now- can I be selfish for a moment?",
             "They always knew what to do. What was the right thing to do, they did so much good. Even though they made mistakes. This grief, it's horrible. I don't know what to do or where to go next. Though I think that it's normal to feel that way.",
             "I know it's okay to cry, but I guess I just feel shame- it's weird like I can't think straight, I feel angry, sad and... lost...",
@@ -7481,7 +7492,8 @@
         [
             "Any",
             "Introspective",
-            "lonesome"
+            "lonesome",
+            "murder"
         ],
         [
             "[t_c's fur spikes up as you approach them, and they quickly rush away, clearly afraid of your presence.]"
@@ -7492,7 +7504,8 @@
             "Any",
             "Introspective",
             "calm",
-            "gloomy"
+            "gloomy",
+            "murder"
         ],
         [
             "[As you approach t_c, they stare at you with tired and embittered eyes.]",
@@ -7504,7 +7517,8 @@
         [
             "Any",
             "Introspective",
-            "wise"
+            "wise",
+            "murder"
         ],
         [
             "[t_c lets out a long-suffering sigh at the sight of you.]",
@@ -7941,6 +7955,115 @@
             "[You assure t_c that you'll always be their parent and love them no matter what.]",
             "Heh ... Thanks. That makes me feel better.",
             "[They scamper off, but you can't help wondering why they asked.]"
+        ]
+    ],
+    "insult_11": [
+        [
+            "insult",
+            "any",
+            "cool",
+            "silly"
+        ],
+        [
+            "Your meow is worse than your bite."
+        ]
+    ],
+    "insult_12": [
+        [
+            "insult",
+            "any",
+            "sweet",
+            "stable"
+        ],
+        [
+            "Your ancestors would be ashamed."
+        ]
+    ],
+    "insult_13": [
+        [
+            "insult",
+            "any",
+            "unabashed",
+            "assertive",
+            "cool"
+        ],
+        [
+            "Maybe one day you'll be worth something to your Clan."
+        ]
+    ],
+    "insult_14": [
+        [
+            "insult",
+            "any",
+            "unlawful"
+        ],
+        [
+            "Keep talking and you'll find out how sharp my claws really are."
+        ]
+    ],
+    "insult_15": [
+        [
+            "insult",
+            "any",
+            "cool",
+            "upstanding",
+            "unabashed"
+        ],
+        [
+            "Keep yowling. Maybe one day you'll actually sound intimidating."
+        ]
+    ],
+    "insult_16": [
+        [
+            "insult",
+            "any",
+            "sweet",
+            "stable",
+            "introspective"
+        ],
+        [
+            "May StarClan light your path, even if we don't see eye to eye."
+        ]
+    ],
+    "insult_17": [
+        [
+            "insult",
+            "any",
+            "sweet"
+        ],
+        [
+            "Oh, y_c. I believe every cat has good in them, even you."
+        ]
+    ],
+    "insult_18": [
+        [
+            "insult",
+            "any",
+            "sweet"
+        ],
+        [
+            "[t_c smiles at your words. The smile doesn't reach their eyes.]",
+            "May your nights be filled with the sweetest dreams and the warmest nests."
+        ]
+    ],
+    "insult_19": [
+        [
+            "insult",
+            "stable",
+            "introspective"
+        ],
+        [
+            "Remember, the same moon shines down on all of us..."
+        ]
+    ],
+    "insult_20": [
+        [
+            "insult",
+            "any",
+            "unlawful"
+        ],
+        [
+            "Your words mean nothing. Just like you."
         ]
     ]
 }

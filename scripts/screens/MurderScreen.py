@@ -809,7 +809,7 @@ class MurderScreen(Screens):
             self.previous_page_button.enable()
             self.next_page_button.enable()
         display_cats = []
-        if valid_mentors:
+        if valid_mentors and len(valid_mentors) > self.current_page - 1:
             display_cats = valid_mentors[self.current_page - 1]
 
         # Kill all the currently displayed cats.

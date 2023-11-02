@@ -628,6 +628,52 @@
 			}
         }
     },
+    "#achivements_button":
+    {
+        "prototype": "#image_button",
+		"images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/achivements.png"
+            },
+			"hovered_image":
+            {
+                "path": "resources/images/buttons/achievements_hover.png"
+            },
+			"selected_image":
+            {
+                "path": "resources/images/buttons/achievements_hover.png"
+            },
+            "disabled_image":
+            {
+				"path": "resources/images/buttons/achievements_hover.png"
+			}
+        }
+    },
+    "#customize_button":
+    {
+        "prototype": "#image_button",
+		"images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/customize.png"
+            },
+			"hovered_image":
+            {
+                "path": "resources/images/buttons/customize_hover.png"
+            },
+			"selected_image":
+            {
+                "path": "resources/images/buttons/customize_hover.png"
+            },
+            "disabled_image":
+            {
+				"path": "resources/images/buttons/customize_hover.png"
+			}
+        }
+    },
     "#stats_button":
     {
         "prototype": "#image_button",

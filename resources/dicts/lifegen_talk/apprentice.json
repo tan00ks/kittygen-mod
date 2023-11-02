@@ -1098,7 +1098,7 @@
         [
             "Ugh, I can't believe my mentor gave me tick duty again.",
             "This is so unfair! I'm supposed to be doing cool stuff, like hunting and fighting in battles! Not eating mousebile and cleaning old fleabags!",
-            "Um ... please don't tell tm_n I said that, though. Hehe."
+            "Um ... please don't tell t_mn I said that, though. Hehe."
         ]
     ],
     "assertive_apprentice3": [
@@ -2577,7 +2577,8 @@
             "Oh, the other apprentices are calling for me, damn- I was hoping to have more of a break. But, oh well, that's what's asked of me. That's just the way it is.",
             "[r_a stands off the side gathered with the other apprentices, they call out once more, their fur spiking with irritation as they grow impatient.]",
             "AH! Oh! Yes, yes! I'm coming, I'm coming!",
-            "[t_c bounce to their paws and begin to run in the direction of the other apprentices who twitch their whiskers, their tail fur bristling. The young group meets your gaze and blinks before nodding, some smiling others scowling. t_c runs out and skids to an abrupt stop, the dirt kicking up from under their paws, t_c turns back to you a warm smile on their snout.]",
+            "[t_c bounce to their paws and begin to run in the direction of the other apprentices who twitch their whiskers, their tail fur bristling. The young group meets your gaze and blinks before nodding, some smiling others scowling.]",
+            "[t_c runs out and skids to an abrupt stop, the dirt kicking up from under their paws, t_c turns back to you a warm smile on their snout.]",
             "See you later y_c! Byyyeeee!"
         ]
     ],
@@ -2610,7 +2611,8 @@
             "stable"
         ],
         [
-            "[t_c sits comfortably in the clearing, the other apprentices and bundles of kits sit by the side, all listening eagerly to their stories. Stories from the patrol earlier that morning, stories of what they did right and wrong. They finish off the enchanting tale with a moral lesson, while the apprentices roll their eyes, the kits smile in wonder.]"
+            "[t_c sits comfortably in the clearing, the other apprentices and bundles of kits sit by the side, all listening eagerly to their stories. Stories from the patrol earlier that morning, stories of what they did right and wrong.]",
+            "[They finish off the enchanting tale with a moral lesson, while the apprentices roll their eyes, the kits smile in wonder.]"
         ]
     ],
     "stable_apprentice_5": [

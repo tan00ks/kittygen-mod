@@ -371,7 +371,7 @@ class TalkScreen(Screens):
                     for illness in you.illnesses:
                         if you.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
-                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries:
+                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries and "recovering from birth" not in you.injuries:
                     for injury in you.injuries:
                         if you.injuries[injury]['severity'] != 'minor':
                             ill_injured = True                
@@ -385,7 +385,7 @@ class TalkScreen(Screens):
                     for illness in cat.illnesses:
                         if cat.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
-                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries:
+                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries and "recovering from birth" not in cat.injuries:
                     for injury in cat.injuries:
                         if cat.injuries[injury]['severity'] != 'minor':
                             ill_injured = True    
@@ -395,7 +395,7 @@ class TalkScreen(Screens):
             
             # Relationships
             # Family tags:
-            if any(i in ["half sibling", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
+            if any(i in ["half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
                 
                 fam = False
                 if "from_mentor" in tags:
@@ -423,7 +423,9 @@ class TalkScreen(Screens):
                 if "from_adopted_kit" in tags:
                     if cat.ID in you.inheritance.get_not_blood_kits():
                         fam = True
-
+                if "littermate" in tags:
+                    if cat.ID in you.inheritance.get_siblings() and cat.moons == you.moons:
+                        fam = True
                 if "sibling" in tags:
                     if cat.ID in you.inheritance.get_siblings():
                         fam = True
@@ -523,13 +525,13 @@ class TalkScreen(Screens):
                 continue
            
             texts_list[talk_key] = talk[1]
-            
+        
         if not texts_list:
             resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
-            texts_list[possible_texts['general'][0]] = possible_texts['general'][1]
+            texts_list['general'] = possible_texts['general'][1]
 
         max_retries = 30
         counter = 0
@@ -618,7 +620,7 @@ class TalkScreen(Screens):
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
         text = [t1.replace("t_c", str(cat.name)) for t1 in text]
         for i in range(len(text)):
-            text[i] = self.adjust_txt(text[i])
+            text[i] = self.adjust_txt(text[i], cat)
             if text[i] == "":
                 return ""
         if cat.mentor:
@@ -648,7 +650,14 @@ class TalkScreen(Screens):
             text = [t1.replace("d_c", dead_cat) for t1 in text]
         return text
 
-    def adjust_txt(self, text):
+    def get_living_cats(self):
+        living_cats = []
+        for the_cat in Cat.all_cats_list:
+            if not the_cat.dead and not the_cat.outside:
+                living_cats.append(the_cat)
+        return living_cats
+        
+    def adjust_txt(self, text, cat):
         if "r_c" in text:
             alive_cats = self.get_living_cats()
             alive_cat = choice(alive_cats)
@@ -756,7 +765,11 @@ class TalkScreen(Screens):
         if "y_m" in text:
             if game.clan.your_cat.mate is None:
                 return ""
-            text = text.replace("y_p", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
+            text = text.replace("y_m", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
+        if "t_mn" in text:
+            if cat.mentor is None:
+                return ""
+            text = text.replace("tm_n", str(Cat.fetch_cat(cat.mentor).name))
         if "m_n" in text:
             if game.clan.your_cat.mentor is None:
                 return ""
@@ -766,4 +779,9 @@ class TalkScreen(Screens):
             if not other_clan:
                 return ""
             text = text.replace("o_c", str(other_clan.name))
+        # if "n_r1" in text:
+        #     nr1 = choice(Cat.all_cats_list)
+        # if "n_r2" in text:
+        #     nr2 = choice(Cat.all_cats_list)
+
         return text

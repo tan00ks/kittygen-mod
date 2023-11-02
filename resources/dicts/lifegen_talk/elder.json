@@ -8,6 +8,15 @@
             "Your paws... they reek of blood."
         ]
     ],
+    "dep_132": [
+        [
+            "any",
+            "insult"
+        ],
+        [
+            "Wha.. What was that?"
+        ]
+    ],
     "unabashed elder1": [
         [
             "unabashed",

@@ -599,6 +599,29 @@
 			}
         }
     },
+    "#customize_button":
+    {
+        "prototype": "#image_button",
+		"images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/customize.png"
+            },
+			"hovered_image":
+            {
+                "path": "resources/images/buttons/customize_hover.png"
+            },
+			"selected_image":
+            {
+                "path": "resources/images/buttons/customize_hover.png"
+            },
+            "disabled_image":
+            {
+				"path": "resources/images/buttons/customize_hover.png"
+			}
+        }
+    },
     "#allegiances_button":
     {
         "prototype": "#image_button",

@@ -17,6 +17,15 @@
             "For I know, I've played a part in shaping the Clan's future, one kit at a time."
         ]
     ],
+    "dep_132": [
+        [
+            "newborn",
+            "insult"
+        ],
+        [
+            "Wha.. What was that?"
+        ]
+    ],
     "unabashed_queen": [
         [
             "unabashed",
@@ -463,7 +472,7 @@
             "But sometimes I feel talking to them can be a little... much. You know? It's very formal. Sometimes you may just want to talk to some with less... procedures?",
             "I know I'm a queen, but I do love and care for everyone in this clan, not just the kits.",
             "Listen, if you need an ear, or some advice, or even just a shoulder to cry on, let me know. We can even go out of camp to talk, if you'd prefer privacy.",
-            "Just... don't suffer in silence, y_c. Some Cats are really thinking of you, and love you a whole lot."
+            "Just... don't suffer in silence, y_c. Some cats are really thinking of you, and love you a whole lot."
         ]
     ],
     "introspective_queen_4": [

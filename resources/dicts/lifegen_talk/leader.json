@@ -8,6 +8,15 @@
             "Such strong words from such a small cat! But remember, young one, respect is the cornerstone of our Clan."
         ]
     ],
+    "dep_132": [
+        [
+            "newborn",
+            "insult"
+        ],
+        [
+            "Wha.. What was that?"
+        ]
+    ],
     "leader_4d": [
         [
             "murder",
@@ -1037,7 +1046,7 @@
             "unlawful"
         ],
         [
-            "Heads up, y_c! Moss in the elders' denneeds changing!",
+            "Heads up, y_c! Moss in the elders' den needs changing!",
             "Guess being a warrior's not always fighting battles and scaring off kittypets, huh?",
             "But there's still plenty of that, too, if you're lucky. Hehehe."
         ]

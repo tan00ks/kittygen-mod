@@ -8,6 +8,15 @@
             "Such a sharp tongue you have. Little kit, know that some words have the power to hurt as much as a sharp claw."
         ]
     ],
+    "dep_132": [
+        [
+            "newborn",
+            "insult"
+        ],
+        [
+            "Wha.. What was that?"
+        ]
+    ],
     "unabashed_medicine_cat1": [
         [
             "unabashed",
@@ -582,7 +591,7 @@
             "Eeek! The half-moon meeting is coming up! Aren't you excited?",
             "Is it just me, or is it high time the o_cClan apprentice earns their full name? I hope their name ends in -cloud ... that would really suit them.",
             "And the o_cClan medicine cat has been totally eyeing you at every gathering ... C'mon, don't tell me you haven't noticed!",
-            "Though, I suppose whatever she feels is between her and StarClan, teehee!"
+            "Though, I suppose whatever they feel is between them and StarClan, teehee!"
         ]
     ],
     "assertive_elder_13": [
@@ -1213,7 +1222,7 @@
         ],
         [
             "How goes it, y_c? Ready for another herb lesson?",
-            "These spiky leaves over here are raspberry leaves. They help ease a queen's pain while she's kitting.",
+            "These spiky leaves over here are raspberry leaves. They help ease a queen's pain while they're kitting.",
             "And, trust me, when you're bringing a new life into the world, you'll need all the help you can get! Hehehe!",
             "Come back when you're ready for your next training session!"
         ]
@@ -1281,7 +1290,7 @@
             "unlawful"
         ],
         [
-            "Heads up, y_c! Moss in the elders' denneeds changing!",
+            "Heads up, y_c! Moss in the elders' den needs changing!",
             "Guess being a warrior's not always fighting battles and scaring off kittypets, huh?",
             "But there's still plenty of that, too, if you're lucky. Hehehe."
         ]
@@ -1806,7 +1815,7 @@
             "sweet"
         ],
         [
-            "[You go to approach y_c, but you find they're surrounded by kits.]",
+            "[You go to approach t_c, but you find they're surrounded by kits.]",
             "... And that, r_k, is what yarrow does!",
             "[This is too cute to interrupt. You sit by the entrance of the den, waiting for them to finish before talking to them.]"
         ]
