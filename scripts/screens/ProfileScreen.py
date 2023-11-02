@@ -1312,7 +1312,7 @@ class ProfileScreen(Screens):
         if "o_c" in text:
             other_clan = "a different Clan"
             if game.clan.all_clans:
-                other_clan = str(random.choice(game.clan.all_clans).name)
+                other_clan = str(choice(game.clan.all_clans).name)
             text = text.replace("o_c", other_clan)
         return text
 
