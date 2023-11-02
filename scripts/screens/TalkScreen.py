@@ -525,13 +525,13 @@ class TalkScreen(Screens):
                 continue
            
             texts_list[talk_key] = talk[1]
-            
+        
         if not texts_list:
             resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
-            texts_list[possible_texts['general'][0]] = possible_texts['general'][1]
+            texts_list['general'] = possible_texts['general'][1]
 
         max_retries = 30
         counter = 0
@@ -765,7 +765,7 @@ class TalkScreen(Screens):
         if "y_m" in text:
             if game.clan.your_cat.mate is None:
                 return ""
-            text = text.replace("y_p", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
+            text = text.replace("y_m", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
         if "t_mn" in text:
             if cat.mentor is None:
                 return ""

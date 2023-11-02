@@ -577,11 +577,11 @@ class Events:
     def get_birth_txt(self):
         num_siblings = random.choice([0,1,2,3])
         siblings, sibling_text = self.create_siblings(num_siblings)
-        birth_type = random.randint(1,6)
+        birth_type = random.randint(1,7)
         if birth_type == 1:
             game.clan.your_cat.backstory = random.choice(["abandoned1", "abandoned2", "abandoned3", "abandoned4", "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5", "orphaned6"])
             return self.handle_birth_no_parents(siblings, sibling_text)
-        elif birth_type in [2, 3, 4]:
+        elif birth_type in [2, 3, 4, 5]:
             if birth_type == 2:
                 game.clan.your_cat.backstory = random.choice(["halfclan1", "clanborn", "outsider_roots1"])
             else:
@@ -833,7 +833,7 @@ class Events:
             if game.clan.your_cat.mate is None:
                 return ""
             text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
-        if "m_n" in text:
+        if "m_n" in text or "mentor1" in text:
             if game.clan.your_cat.mentor is None:
                 return ""
             text = text.replace("mentor1", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))

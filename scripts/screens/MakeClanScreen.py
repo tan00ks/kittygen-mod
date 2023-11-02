@@ -1356,6 +1356,7 @@ class MakeClanScreen(Screens):
                 self.your_cat = new_cat
                 if self.permanent_condition is not None:
                     self.your_cat.get_permanent_condition(self.permanent_condition)
+                    self.your_cat.permanent_condition[self.permanent_condition]["moons_until"] = -1
                 self.your_cat.accessory = self.accessory
                 self.selected_cat = None
                 self.open_name_cat()

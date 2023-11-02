@@ -1309,6 +1309,11 @@ class ProfileScreen(Screens):
                     beginning['moon']) + " at the age of " + str(beginning['age']) + " Moons."
 
         text = process_text(text, cat_dict)
+        if "o_c" in text:
+            other_clan = "a different Clan"
+            if game.clan.all_clans:
+                other_clan = str(random.choice(game.clan.all_clans).name)
+            text = text.replace("o_c", other_clan)
         return text
 
     def get_scar_text(self):
