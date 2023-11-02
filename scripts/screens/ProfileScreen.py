@@ -1965,7 +1965,7 @@ class ProfileScreen(Screens):
                 tool_tip_text='Choose to murder one of your clanmates',
                 starting_height=2, manager=MANAGER
             )
-            if game.clan.murdered:
+            if game.clan.murdered or game.clan.your_cat.moons == 0:
                 self.murder_cat_button.disable()
             if game.clan.your_cat.joined_df:
                 self.exit_df_button = UIImageButton(
@@ -1983,6 +1983,8 @@ class ProfileScreen(Screens):
                 tool_tip_text='Join the Dark Forest',
                 starting_height=2, manager=MANAGER
             )
+            if game.clan.your_cat.moons < 6:
+                self.join_df_button.disable()
             self.affair_button = UIImageButton(
                 scale(pygame.Rect((1156, 1188), (344, 72))),
                 "",
