@@ -315,7 +315,7 @@ class LifeGenPatrolScreen(Screens):
                         self.patrol_type = 'general'
 
                 if self.patrol_type == 'general':
-                    text = 'random patrol type'
+                    text = 'lifegen patrol'
                 elif self.patrol_type == 'training':
                     text = 'training'
                 elif self.patrol_type == 'border':

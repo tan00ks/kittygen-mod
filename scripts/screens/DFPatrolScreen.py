@@ -279,7 +279,7 @@ class DFPatrolScreen(Screens):
                         self.patrol_type = 'general'
 
                 if self.patrol_type == 'general':
-                    text = 'random patrol type'
+                    text = 'dark forest patrol'
                 elif self.patrol_type == 'training':
                     text = 'training'
                 elif self.patrol_type == 'border':
