@@ -2247,11 +2247,12 @@
     "neurotic_kit__20": [
         [
             "any",
-            "neurotic"
+            "neurotic",
+            "introspective"
         ],
         [
             "Mm..",
-            "[Seems like all they want to do is watch the rain, as if something was going to come out of it and attack them.]",
+            "[Seems like all t_c wants to do is watch the rain outside the den.]",
             "[You sit down beside them silently, they seem to appreciate that.]"
         ]
     ],
