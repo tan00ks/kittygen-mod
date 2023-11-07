@@ -647,9 +647,7 @@ class DatePatrolScreen(Screens):
             game.switches['patrolled'] = []
         if not you.dead and "4" not in game.switches['patrolled'] and not you.outside and not you.not_working():
             for the_cat in Cat.all_cats_list:
-                if not the_cat.dead and the_cat.in_camp and the_cat.ID not in game.patrolled and the_cat.status not in [
-                    'newborn', 'kitten', 'apprentice', 'mediator apprentice', 'medicine cat apprentice', "queen's apprentice"
-                ] and not the_cat.outside and the_cat not in self.current_patrol and the_cat.is_potential_mate(game.clan.your_cat) and the_cat.moons < game.clan.your_cat.moons + 40 and the_cat.moons > game.clan.your_cat.moons - 40:
+                if the_cat.in_camp and the_cat.ID not in game.patrolled and the_cat not in self.current_patrol and the_cat.is_dateable(game.clan.your_cat):
                     self.able_cats.append(the_cat)
 
         if not self.able_cats:

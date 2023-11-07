@@ -6391,12 +6391,10 @@
         [
             "[You're chatting with r_c when t_c races up to you, huge grin on their face.]",
             "y_c, where have you been? I've been waiting for ages to tell you what happened to me today - oh.",
-            "[As soon as t_c sees r_c, it's like a switch flips. Suddenly the light wicks from their eyes and they're back to their usual brooding stare.]",
-            "[When r_c leaves, you ask t_c what their problem is.]",
-            "What? I don't have a problem with r_c.",
-            "[You ask t_c why they suddenly went so quiet.]",
-            "Psh. That's just how I act around everyone who isn't you.",
-            "Now, c'mon. I still have to tell you about what happened today."
+            "[As soon as t_c sees r_c, they stop talking and hand total control of the conversation over to r_c.]",
+            "[The most they contribute to the conversation are a few polite nods and grunts.]",
+            "[As soon as r_c leaves, the light wicks back into t_c's eyes and a huge smile takes back over their face.]",
+            "[It seems like knowing this version of them is a privilege that isn't reserved for all your clanmates.]"
         ]
     ],
     "brooding_love_3": [
@@ -7550,7 +7548,8 @@
         ],
         [
             "Hey, look out for y_s in the apprentice's den, alright?",
-            "I'm a little worried about them ..."
+            "The two of you are family. That's important. No one can ever take that from you.",
+            "Now that you're older, it's more vital now than ever that the two of you support each other."
         ]
     ],
     "genparent_toapp2": [
