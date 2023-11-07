@@ -779,6 +779,10 @@ class TalkScreen(Screens):
             if not other_clan:
                 return ""
             text = text.replace("o_c", str(other_clan.name))
+        if "t_m" in text:
+            if cat.mate is None:
+                return ""
+            text = text.replace("t_m", str(Cat.fetch_cat(choice(cat.mate)).name))
         # if "n_r1" in text:
         #     nr1 = choice(Cat.all_cats_list)
         # if "n_r2" in text:

@@ -4,7 +4,7 @@ import pygame_gui
 import random
 from .Screens import Screens
 
-from scripts.utility import get_text_box_theme, scale, generate_sprite
+from scripts.utility import get_text_box_theme, scale, generate_sprite, scale_dimentions
 from scripts.clan import Clan
 from scripts.cat.cats import create_example_cats, Cat
 from scripts.cat.pelts import Pelt
@@ -115,14 +115,17 @@ class MakeClanScreen(Screens):
         self.accessory = None
         self.permanent_condition = None
 
+        self.page = 1
+
         # Buttons that appear on every screen.
-        self.menu_warning = pygame_gui.elements.UITextBox(
-            'Note: going back to main menu resets the generated cats.',
-            scale(pygame.Rect((50, 50), (1200, -1))),
-            object_id=get_text_box_theme("#text_box_22_horizleft"), manager=MANAGER
-        )
-        self.main_menu = UIImageButton(scale(pygame.Rect((50, 100), (306, 60))), "", object_id="#main_menu_button"
-                                       , manager=MANAGER)
+        if self.sub_screen != "customize cat":
+            self.menu_warning = pygame_gui.elements.UITextBox(
+                'Note: going back to main menu resets the generated cats.',
+                scale(pygame.Rect((50, 50), (1200, -1))),
+                object_id=get_text_box_theme("#text_box_22_horizleft"), manager=MANAGER
+            )
+            self.main_menu = UIImageButton(scale(pygame.Rect((50, 100), (306, 60))), "", object_id="#main_menu_button"
+                                        , manager=MANAGER)
         create_example_cats()
         self.open_name_clan()
 
@@ -1008,6 +1011,7 @@ class MakeClanScreen(Screens):
     def open_customize_cat(self):
         self.clear_all_page()
         self.sub_screen = "customize cat"
+        self.page = 1
         pelt2 = Pelt(
             name=self.pname,
             length=self.length,
@@ -1031,11 +1035,16 @@ class MakeClanScreen(Screens):
             reverse=self.reverse,
             accessories=self.accessories
         )
+        self.elements['sprite background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((550, 100), (1064/1.5, 788/1.5))),
+                                                         pygame.transform.scale(
+                                                             image_cache.load_image(
+                                                                 "resources/images/choosing_cat1_frame_mate.png").convert_alpha(),
+                                                             (1064/1.5, 788/1.5)))
         self.custom_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
         self.custom_cat.sprite = generate_sprite(self.custom_cat)
         self.elements["sprite"] = UISpriteButton(scale(pygame.Rect
-                                         ((700,100), (200, 200))),
-                                   self.custom_cat.sprite,
+                                         ((630,190), (300, 300))),
+                                   pygame.transform.scale(self.custom_cat.sprite, scale_dimentions((700, 700))),
                                    self.custom_cat.ID,
                                    starting_height=0, manager=MANAGER)
         
@@ -1054,8 +1063,16 @@ class MakeClanScreen(Screens):
         pelts_tortie.remove("SingleColour")
         pelts_tortie.remove("TwoColour")
         pelts_tortie.append("Single")
-        
+
         permanent_conditions = ['born without a leg', 'weak leg', 'twisted leg', 'born without a tail', 'paralyzed', 'raspy lungs', 'wasting disease', 'blind', 'one bad eye', 'failing eyesight', 'partial hearing loss', 'deaf', 'constant joint pain', 'seizure prone', 'allergies', 'persistent headaches']
+
+        # page one:
+        # page two: sex, accessory, personality, pose, condition, preview adult pose, paralyzed, trait
+
+        # preview adult appearance checkmark, adult pose = "random", 1, 2, 3, elder pose = "random"
+
+        # if self.page == 1:
+        
         self.elements['pelt text'] = pygame_gui.elements.UITextBox(
             'Pelt type',
             scale(pygame.Rect((column1_x - x_align, y_pos[0] ),(1200,-1))),
@@ -1086,30 +1103,14 @@ class MakeClanScreen(Screens):
             scale(pygame.Rect((column1_x - x_align, y_pos[5] ),(1200,-1))),
             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
         )
-        self.elements['sex text'] = pygame_gui.elements.UITextBox(
-            'Sex',
-            scale(pygame.Rect((column1_x- x_align, y_pos[6] ),(1200,-1))),
-            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
-        )
-        self.elements['accessory text'] = pygame_gui.elements.UITextBox(
-            'Accessory',
-            scale(pygame.Rect((column1_x- x_align, y_pos[7] ),(1200,-1))),
-            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
-        )
         self.elements['pelt dropdown'] = pygame_gui.elements.UIDropDownMenu(pelts, "SingleColour", scale(pygame.Rect((column1_x, y_pos[0]),(250,70))), manager=MANAGER)
         self.elements['pelt color'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_colours, "WHITE", scale(pygame.Rect((column1_x, y_pos[1]),(250,70))), manager=MANAGER)
         self.elements['eye color'] = pygame_gui.elements.UIDropDownMenu(Pelt.eye_colours, "BLUE", scale(pygame.Rect((column1_x, y_pos[2]),(250,70))), manager=MANAGER)
         self.elements['eye color2'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.eye_colours, "None", scale(pygame.Rect((column1_x, y_pos[3]),(250,70))), manager=MANAGER)
         self.elements['white patches'] = pygame_gui.elements.UIDropDownMenu(["None", "FULLWHITE"] + Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white, "None", scale(pygame.Rect((column1_x, y_pos[4]),(250,70))), manager=MANAGER)
         self.elements['pelt length'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_length, "short", scale(pygame.Rect((column1_x, y_pos[5]), (250, 70))), manager=MANAGER)
-        self.elements['sex'] = pygame_gui.elements.UIDropDownMenu(['male', 'female'], "male", scale(pygame.Rect((column1_x, y_pos[6]), (250, 70))), manager=MANAGER)
-        self.elements['accessory'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.plant_accessories + Pelt.wild_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.plant2_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories, "None", scale(pygame.Rect((column1_x, y_pos[7]), (250, 70))), manager=MANAGER)
 
-        self.elements['para text'] = pygame_gui.elements.UITextBox(
-            'Paralyzed',
-            scale(pygame.Rect((column2_x - x_align2, y_pos[0] ),(1200,-1))),
-            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
-        )
+
         self.elements['reverse text'] = pygame_gui.elements.UITextBox(
             'Reverse',
             scale(pygame.Rect((column2_x - x_align2, y_pos[1] ),(1200,-1))),
@@ -1135,29 +1136,16 @@ class MakeClanScreen(Screens):
             scale(pygame.Rect((column2_x - x_align2, y_pos[5] ),(1200,-1))),
             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
         )
-        self.elements['pose text'] = pygame_gui.elements.UITextBox(
-            'Pose',
-            scale(pygame.Rect((column2_x - x_align2, y_pos[6] ),(1200,-1))),
-            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
-        )
-        self.elements['personality text'] = pygame_gui.elements.UITextBox(
-            'Personality',
-            scale(pygame.Rect((column2_x - x_align2, y_pos[7] ),(1200,-1))),
-            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
-        )
-        self.elements['paralyzed'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[0]), (250, 70))), manager=MANAGER)
         self.elements['reverse'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[1]), (250, 70))), manager=MANAGER)
         self.elements['scars'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.scars1 + Pelt.scars2 + Pelt.scars3, "None", scale(pygame.Rect((column2_x, y_pos[2]), (250, 70))), manager=MANAGER)
         self.elements['vitiligo'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.vit, "None", scale(pygame.Rect((column2_x, y_pos[3]), (250, 70))), manager=MANAGER)
         self.elements['points'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.point_markings, "None", scale(pygame.Rect((column2_x, y_pos[4]), (250, 70))), manager=MANAGER)
         self.elements['tint'] = pygame_gui.elements.UIDropDownMenu(["pink", "gray", "red", "orange", "None"], "None", scale(pygame.Rect((column2_x, y_pos[5]), (250, 70))), manager=MANAGER)
-        self.elements['pose'] = pygame_gui.elements.UIDropDownMenu(["0", "1", "2"], "0", scale(pygame.Rect((column2_x, y_pos[6]), (250, 70))), manager=MANAGER)
-        self.elements['personality'] = pygame_gui.elements.UIDropDownMenu(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'], "troublesome", scale(pygame.Rect((column2_x, y_pos[7]), (250, 70))), manager=MANAGER)
-
+        
         self.elements['skin text'] = pygame_gui.elements.UITextBox(
-            'Skin',
-            scale(pygame.Rect((column3_x - x_align2, y_pos[0] ),(1200,-1))),
-            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+        'Skin',
+        scale(pygame.Rect((column3_x - x_align2, y_pos[0] ),(1200,-1))),
+        object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
         )
         self.elements['white patch tint text'] = pygame_gui.elements.UITextBox(
             'Patches tint',
@@ -1189,12 +1177,6 @@ class MakeClanScreen(Screens):
             scale(pygame.Rect((column3_x - x_align2, y_pos[6] ),(1200,-1))),
             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
         )
-
-        self.elements['permanent condition text'] = pygame_gui.elements.UITextBox(
-            'Condition',
-            scale(pygame.Rect((column3_x - x_align2, y_pos[7] ),(1200,-1))),
-            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
-        )
         self.elements['skin'] = pygame_gui.elements.UIDropDownMenu(Pelt.skin_sprites, "BLACK", scale(pygame.Rect((column3_x, y_pos[0]), (250, 70))), manager=MANAGER)
         self.elements['white_patches_tint'] = pygame_gui.elements.UIDropDownMenu(["None"] + ["offwhite"], "None", scale(pygame.Rect((column3_x, y_pos[1]), (250, 70))), manager=MANAGER)
         
@@ -1204,12 +1186,55 @@ class MakeClanScreen(Screens):
         self.elements['tortiecolor'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_colours, "GINGER", scale(pygame.Rect((column3_x, y_pos[5]), (250, 70))), manager=MANAGER)
         self.elements['tortiepattern'] = pygame_gui.elements.UIDropDownMenu(pelts_tortie, "Bengal", scale(pygame.Rect((column3_x, y_pos[6]), (250, 70))), manager=MANAGER)
 
-        self.elements['permanent conditions'] = pygame_gui.elements.UIDropDownMenu(["None"] + permanent_conditions, "None", scale(pygame.Rect((column3_x, y_pos[7]), (250, 70))), manager=MANAGER)
-        
         self.elements['pattern'].disable()
         self.elements['tortiebase'].disable()
         self.elements['tortiecolor'].disable()
         self.elements['tortiepattern'].disable()
+
+    # elif self.page == 2:
+        self.elements['sex text'] = pygame_gui.elements.UITextBox(
+            'Sex',
+            scale(pygame.Rect((column1_x- x_align, y_pos[6] ),(1200,-1))),
+            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+        )
+        self.elements['accessory text'] = pygame_gui.elements.UITextBox(
+            'Accessory',
+            scale(pygame.Rect((column1_x- x_align, y_pos[7] ),(1200,-1))),
+            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+        )
+        self.elements['sex'] = pygame_gui.elements.UIDropDownMenu(['male', 'female'], "male", scale(pygame.Rect((column1_x, y_pos[6]), (250, 70))), manager=MANAGER)
+        self.elements['accessory'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.plant_accessories + Pelt.wild_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.plant2_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories, "None", scale(pygame.Rect((column1_x, y_pos[7]), (250, 70))), manager=MANAGER)
+
+        self.elements['para text'] = pygame_gui.elements.UITextBox(
+            'Paralyzed',
+            scale(pygame.Rect((column2_x - x_align2, y_pos[0] ),(1200,-1))),
+            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+        )
+    
+        self.elements['pose text'] = pygame_gui.elements.UITextBox(
+            'Pose',
+            scale(pygame.Rect((column2_x - x_align2, y_pos[6] ),(1200,-1))),
+            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+        )
+        self.elements['personality text'] = pygame_gui.elements.UITextBox(
+            'Personality',
+            scale(pygame.Rect((column2_x - x_align2, y_pos[7] ),(1200,-1))),
+            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+        )
+        self.elements['paralyzed'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[0]), (250, 70))), manager=MANAGER)
+        self.elements['pose'] = pygame_gui.elements.UIDropDownMenu(["0", "1", "2"], "0", scale(pygame.Rect((column2_x, y_pos[6]), (250, 70))), manager=MANAGER)
+        self.elements['personality'] = pygame_gui.elements.UIDropDownMenu(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'], "troublesome", scale(pygame.Rect((column2_x, y_pos[7]), (250, 70))), manager=MANAGER)
+
+    
+        self.elements['permanent condition text'] = pygame_gui.elements.UITextBox(
+            'Condition',
+            scale(pygame.Rect((column3_x - x_align2, y_pos[7] ),(1200,-1))),
+            object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+        )
+    
+
+        self.elements['permanent conditions'] = pygame_gui.elements.UIDropDownMenu(["None"] + permanent_conditions, "None", scale(pygame.Rect((column3_x, y_pos[7]), (250, 70))), manager=MANAGER)
+        
         
         self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1200), (294, 60))), "",
                                                        object_id="#previous_step_button", manager=MANAGER)
@@ -1348,20 +1373,24 @@ class MakeClanScreen(Screens):
             if event.ui_element == self.main_menu:
                 self.change_screen('start screen')
             elif event.ui_element == self.elements['next_step']:
-                new_cat = Cat(moons = 1)
-                new_cat.pelt = self.custom_cat.pelt
-                new_cat.gender = self.sex
-                new_cat.genderalign = self.sex
-                new_cat.personality.trait = self.personality
-                self.your_cat = new_cat
-                if self.permanent_condition is not None:
-                    self.your_cat.get_permanent_condition(self.permanent_condition)
-                    self.your_cat.permanent_condition[self.permanent_condition]["moons_until"] = -1
-                self.your_cat.accessory = self.accessory
-                self.selected_cat = None
-                self.open_name_cat()
+                if self.page == 1:
+                    self.page = 2
+                # new_cat = Cat(moons = 1)
+                # new_cat.pelt = self.custom_cat.pelt
+                # new_cat.gender = self.sex
+                # new_cat.genderalign = self.sex
+                # new_cat.personality.trait = self.personality
+                # self.your_cat = new_cat
+                # if self.permanent_condition is not None:
+                #     self.your_cat.get_permanent_condition(self.permanent_condition)
+                #     self.your_cat.permanent_condition[self.permanent_condition]["moons_until"] = -1
+                # self.your_cat.accessory = self.accessory
+                # self.selected_cat = None
+                # self.open_name_cat()
             elif event.ui_element == self.elements['previous_step']:
-                self.open_choose_leader()
+                if self.page == 2:
+                    self.page = 1
+                # self.open_choose_leader()
 
     def update_sprite(self):
         pelt2 = Pelt(
