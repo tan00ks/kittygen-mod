@@ -1253,6 +1253,13 @@ class ProfileScreen(Screens):
             output = '\n\n'.join(life_history)
         return output
 
+    def get_living_cats(self):
+        living_cats = []
+        for the_cat in Cat.all_cats_list:
+            if not the_cat.dead and not the_cat.outside:
+                living_cats.append(the_cat)
+        return living_cats
+
     def get_backstory_text(self):
         """
         returns the backstory blurb
@@ -1287,6 +1294,13 @@ class ProfileScreen(Screens):
             if game.clan.all_clans:
                 other_clan = str(choice(game.clan.all_clans).name)
             text = text.replace("o_c", other_clan)
+        if "c_n" in text:
+            text = text.replace("c_n", str(game.clan.name))
+        if "r_c" in text:
+            random_cat = choice(self.get_living_cats())
+            while random_cat.status in ['newborn', 'kitten']:
+                random_cat = choice(self.get_living_cats())
+            text = text.replace("r_c", (random_cat.name))
         return text
 
     def get_scar_text(self):
