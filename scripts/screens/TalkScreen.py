@@ -560,72 +560,18 @@ class TalkScreen(Screens):
             if counter == 30:
                 break
         return new_text
-        #TODO: y_m, y_k, y_p, y_s
 
     def get_adjusted_txt(self, text, cat):
         you = game.clan.your_cat
-        if any(abbrev in t for abbrev in ["r_k", "r_a", "r_w", "r_m", "r_d", "r_q", "r_e", "r_s", "r_i"] for t in text):
-            living_meds = []
-            living_mediators = []
-            living_warriors = []
-            living_apprentices = []
-            living_queens = []
-            living_kits = []
-            living_elders = []
-            sick_cats = []
-            injured_cats = []
-            
-            for c in Cat.all_cats.values():
-                if not c.dead and not c.outside and c.ID != you.ID and c.ID != cat.ID:
-                    if len(c.illnesses) > 0:
-                        sick_cats.append(c)
-                    if len(c.injuries) > 0:
-                        injured_cats.append(c)
-                    if c.status == "medicine cat":
-                        living_meds.append(c)
-                    elif c.status == "warrior":
-                        living_warriors.append(c)
-                    elif c.status == "mediator":
-                        living_mediators.append(c)
-                    elif c.status == 'queen':
-                        living_queens.append(c)
-                    elif c.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"]:
-                        living_apprentices.append(c)
-                    elif c.status in ["kitten", "newborn"]:
-                        living_kits.append(c)
-                    elif c.status == "elder":
-                        living_elders.append(c)
-
-            replace_mappings = {
-                "r_k": living_kits,
-                "r_a": living_apprentices,
-                "r_w": living_warriors,
-                "r_m": living_meds,
-                "r_d": living_mediators,
-                "r_q": living_queens,
-                "r_e": living_elders,
-                "r_s": sick_cats,
-                "r_i": injured_cats
-            }
-            
-            for abbrev, replace_list in replace_mappings.items():
-                for idx, t in enumerate(text):
-                    if abbrev in t:
-                        if not replace_list:
-                            return ""
-                        text[idx] = t.replace(abbrev, str(choice(replace_list).name))
-                        
-
+       
         text = [t1.replace("c_n", game.clan.name) for t1 in text]
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
         text = [t1.replace("t_c", str(cat.name)) for t1 in text]
+        
         for i in range(len(text)):
             text[i] = self.adjust_txt(text[i], cat)
             if text[i] == "":
                 return ""
-        if cat.mentor:
-            mentor = Cat.all_cats.get(cat.mentor).name
-            text = [t1.replace("tm_n", str(mentor)) for t1 in text]
 
         if "grief stricken" in cat.illnesses:
             try:
