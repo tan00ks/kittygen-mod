@@ -726,11 +726,13 @@
     "assertivekit_sibling2": [
         [
             "Any",
-            "platonic_like"
+            "platonic_like",
+            "from_your_kit",
+            "from_adopted_kit"
         ],
         [
             "*Yaaawwn*",
-            "What? No, t_c, I'm not sleepy ...",
+            "What? No, y_c, I'm not sleepy ...",
             "I swear, I'm not ..",
             "... Zzzz ...",
             "[t_c falls asleep on their paws. The two of you cuddle up to take a nap together.]"
