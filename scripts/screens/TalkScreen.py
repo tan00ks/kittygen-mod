@@ -1,5 +1,5 @@
 import os
-from random import choice, randint
+from random import choice, randint, choices
 
 import pygame
 
@@ -525,37 +525,44 @@ class TalkScreen(Screens):
                 if any(i in ["hate","romantic_like","platonic_like","jealousy","dislike","comfort","respect","trust"] for i in tags):
                     continue
 
-            texts_list[talk_key] = talk[1]
+            texts_list[talk_key] = talk
         
         if not texts_list:
             resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
-            texts_list['general'] = possible_texts['general'][1]
+            texts_list['general'] = possible_texts['general']
 
         max_retries = 30
         counter = 0
         if len(game.clan.talks) > 50:
             game.clan.talks.clear()
+        
+        weights = []
+        for item in texts_list.values():
+            tags = item[0]
+            weights.append(len(tags))
+
         while counter < max_retries:
-            text_chosen_key = choice(list(texts_list.keys()))
-            text = texts_list[text_chosen_key]
+            # Select a key randomly, weighted by the number of tags
+            text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+            text = texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
-            
+
             if text_chosen_key not in game.clan.talks and new_text:
                 game.clan.talks.append(text_chosen_key)
                 return new_text
 
             counter += 1
 
-        text_chosen_key = choice(list(texts_list.keys()))
-        text = texts_list[text_chosen_key]
+        text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+        text = texts_list[text_chosen_key][1]
         new_text = self.get_adjusted_txt(text, cat)
         counter = 0
         while not new_text:
-            text_chosen_key = choice(list(texts_list.keys()))
-            text = texts_list[text_chosen_key]
+            text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+            text = texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
             counter +=1
             if counter == 30:
@@ -609,7 +616,9 @@ class TalkScreen(Screens):
         
     def adjust_txt(self, text, cat):
         try:
-            if "your_crush" in text and len(game.clan.your_cat.mate) == 0 and not game.clan.your_cat.no_mates:
+            if "your_crush" in text:
+                if len(game.clan.your_cat.mate) > 0 or game.clan.your_cat.no_mates:
+                    return ""
                 crush = None
                 for c in self.get_living_cats():
                     relations = game.clan.your_cat.relationships.get(c.ID)
@@ -622,7 +631,9 @@ class TalkScreen(Screens):
                     text = text.replace("your_crush", str(crush.name))
                 else:
                     return ""
-            if "their_crush" in text and len(cat.mate) == 0 and not cat.no_mates:
+            if "their_crush" in text:
+                if len(cat.mate) > 0 or cat.no_mates:
+                    return ""
                 crush = None
                 for c in self.get_living_cats():
                     relations = cat.relationships.get(c.ID)

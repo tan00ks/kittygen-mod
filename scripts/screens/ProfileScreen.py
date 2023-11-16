@@ -1302,10 +1302,10 @@ class ProfileScreen(Screens):
         if "c_n" in text:
             text = text.replace("c_n", str(game.clan.name))
         if "r_c" in text:
-            random_cat = choice(self.get_living_cats())
-            while random_cat.status in ['newborn', 'kitten']:
-                random_cat = choice(self.get_living_cats())
-            text = text.replace("r_c", (random_cat.name))
+            # random_cat = choice(self.get_living_cats())
+            # while random_cat.status in ['newborn', 'kitten']:
+            #     random_cat = choice(self.get_living_cats())
+            text = text.replace("r_c", "one of their clanmates")
         return text
 
     def get_scar_text(self):

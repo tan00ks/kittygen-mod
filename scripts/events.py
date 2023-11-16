@@ -823,6 +823,13 @@ class Events:
             if sibling.outside or sibling.dead:
                 return ""
             text = text.replace("y_s", str(sibling.name))
+        if "y_l" in text:
+            if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
+                return ""
+            sibling = Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_siblings()))
+            if sibling.outside or sibling.dead or sibling.moons != game.clan.your_cat.moons:
+                return ""
+            text = text.replace("y_l", str(sibling.name))
         if "y_p" in text:
             if len(game.clan.your_cat.inheritance.get_parents()) == 0:
                 return ""
