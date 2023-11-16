@@ -228,7 +228,7 @@ class TalkScreen(Screens):
         you = game.clan.your_cat
 
         resource_dir = "resources/dicts/lifegen_talk/"
-        possible_texts = None
+        possible_texts = {}
         with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
             
@@ -524,19 +524,7 @@ class TalkScreen(Screens):
             else:
                 if any(i in ["hate","romantic_like","platonic_like","jealousy","dislike","comfort","respect","trust"] for i in tags):
                     continue
-            
-            if "random_cat" in talk[0]:
-                random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
-                counter = 0
-                while random_cat.outside or random_cat.dead or random_cat.ID == you.ID or random_cat.ID == cat.ID:
-                    counter+=1
-                    if counter == 15:
-                        continue
-                    random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
-                text = [t1.replace("r_c", str(random_cat.name)) for t1 in talk[1]]
-                texts_list[talk_key] = text
-                continue
-           
+
             texts_list[talk_key] = talk[1]
         
         if not texts_list:
@@ -571,7 +559,10 @@ class TalkScreen(Screens):
             new_text = self.get_adjusted_txt(text, cat)
             counter +=1
             if counter == 30:
-                break
+                possible_texts = None
+                with open(f"{resource_dir}general.json", 'r') as read_file:
+                    possible_texts = ujson.loads(read_file.read())
+                return possible_texts['general'][1]
         return new_text
 
     def get_adjusted_txt(self, text, cat):
@@ -618,6 +609,32 @@ class TalkScreen(Screens):
         
     def adjust_txt(self, text, cat):
         try:
+            if "your_crush" in text and len(game.clan.your_cat.mate) == 0 and not game.clan.your_cat.no_mates:
+                crush = None
+                for c in self.get_living_cats():
+                    relations = game.clan.your_cat.relationships.get(c.ID)
+                    if not relations:
+                        continue
+                    if relations.romantic_love > 10:
+                        crush = c
+                        break
+                if crush:
+                    text = text.replace("your_crush", str(crush.name))
+                else:
+                    return ""
+            if "their_crush" in text and len(cat.mate) == 0 and not cat.no_mates:
+                crush = None
+                for c in self.get_living_cats():
+                    relations = cat.relationships.get(c.ID)
+                    if not relations:
+                        continue
+                    if relations.romantic_love > 10:
+                        crush = c
+                        break
+                if crush:
+                    text = text.replace("their_crush", str(crush.name))
+                else:
+                    return ""
             if "r_c" in text:
                 alive_cats = self.get_living_cats()
                 alive_cat = choice(alive_cats)
@@ -805,30 +822,9 @@ class TalkScreen(Screens):
                         return ""
                 text = text.replace("n_r1", str(random_cat1.name))
                 text = text.replace("n_r2", str(random_cat2.name))
-            if "your_crush" in text:
-                crush = None
-                for c in self.get_living_cats():
-                    relations = game.clan.your_cat.relationships.get(c)
-                    if relations.romantic_love > 10:
-                        crush = c
-                        break
-                if crush:
-                    text = text.replace("your_crush", str(crush.name))
-                else:
-                    return ""
-            if "their_crush" in text:
-                crush = None
-                for c in self.get_living_cats():
-                    relations = cat.relationships.get(c)
-                    if relations.romantic_love > 10:
-                        crush = c
-                        break
-                if crush:
-                    text = text.replace("their_crush", str(crush.name))
-                else:
-                    return ""
              
-        except:
+        except Exception as e:
+            print(e)
             print("ERROR: could not replace abbrv.")
             return text
 
