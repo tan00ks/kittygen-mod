@@ -3043,5 +3043,133 @@
             "Would you please stop hovering over me? I'm not in the nursery anymore. I'm my own cat, and I can catch my prey however I like.",
             "Even if it does involve beheading."
         ]
+    ],
+    "neurotic_app": [
+        [
+            "Any",
+            "neurotic",
+            "random_cat"
+        ],
+        [
+            "[t_c comes in from the hunting patrol, staring at their paws self-consciously as the rest of the patrol adds their catches to the freshkill pile.]",
+            "[tm_n gently reassures them that they tried their best, but t_c just glances away, clearly upset.]",
+            "How am I ever gonna be a real warrior if I can't even catch my own prey ...?"
+        ]
+    ],
+    "neurotic_app1": [
+        [
+            "apprentice",
+            "neurotic"
+        ],
+        [
+            "It seems like we have training together today ...",
+            "Promise to go easy, alright? There's a lot of stuff I still don't have down."
+        ]
+    ],
+    "neurotic_app2": [
+        [
+            "no_kit",
+            "neurotic",
+            "random_cat",
+            "trust"
+        ],
+        [
+            "[t_c watches tm_n apprehensively from across camp.]",
+            "Do you think tm_n even likes me?",
+            "It seems like, every new skill they try and teach me, I always seem to mess it up somehow ...",
+            "I just hope I'm not making them look like a bad mentor."
+        ]
+    ],
+    "neurotic_app3": [
+        [
+            "apprentice",
+            "warrior",
+            "deputy",
+            "leader",
+            "neurotic",
+            "random_cat",
+            "trust"
+        ],
+        [
+            "[You decide to take some time out of your day to give t_c a little extra help on their battle training.]",
+            "[You trip on your paws, giving t_c the perfect opportunity to pin you down, but they just freeze, staring at you.]",
+            "[After the session is over, you ask why they didn't take the shot.]",
+            "Ah ... I don't know!",
+            "I wanted to, I really did, but in the heat of the moment, I get so nervous, and sometimes my body just won't listen!"
+        ]
+    ],
+    "upstanding_apprentice11": [
+        [
+            "upstanding",
+            "apprentice"
+        ],
+        [
+            "Guess who's going to absolutely ace their warrior assessment?",
+            "I am! I got this in the bag!"
+        ]
+    ],
+    "upstanding_apprentice12": [
+        [
+            "upstanding",
+            "mediator",
+            "mediator apprentice",
+            "random_cat"
+        ],
+        [
+            "[You're just about to bite into a tasty-looking mouse when you see t_c stomping towards you, their pelt ruffled and their tail flicking irritably. What happened this time?]",
+            "y_c. I need you to tell r_a that they can't just leave me alone to clean out the entire elders den because they 'needed to fetch more moss.' They were in the medicine den until sunhigh!",
+            "[You haul yourself to your paws and stare longingly at your mouse as t_c drags you to the opposite side of the clearing.]"
+        ]
+    ],
+    "upstanding_apprentice13": [
+        [
+            "upstanding",
+            "from_your_apprentice",
+            "warrior"
+        ],
+        [
+            "y_c! Do you think that you could give me a few extra training lessons? I've almost perfected that battle move you showed me earlier, and I want to learn more!",
+            "What do you mean I don't need extra sessions? I need to stay ahead in my training! What happens if I fall behind and r_a gets their warrior name before me? They would never let me hear the end of it!",
+            "Just a couple? Please please pleeeeease?"
+        ]
+    ],
+    "upstanding_apprentice14": [
+        [
+            "upstanding",
+            "deputy",
+            "platonic_like"
+        ],
+        [
+            "Hey y_c, you were an apprentice once, how'd you manage to become a deputy?",
+            "I need some advice so I can be where you are one day, maybe even more! I'll be the best deputy that c_nClan—no, all the clans will ever know! There will be stories and legends passed down through generations about me and all of the amazing things I have done! I have it all thought out.",
+            "...Of course, I would never want anything to happen to you, but it's good to have a plan, right?"
+        ]
+    ],
+    "upstanding_apprentice15": [
+        [
+            "upstanding",
+            "leader",
+            "platonic_like"
+        ],
+        [
+            "Hey y_c, you were an apprentice once, how'd you manage to become a leader?",
+            "I need some advice so I can be where you are one day, maybe even more! I'll be the best leader that c_nClan—no, all the clans will ever know! There will be stories and legends passed down through generations about me and all of the amazing things I have done! I have it all thought out.",
+            "...Of course, I would never want anything to happen to you, but it's good to have a plan, right?"
+        ]
+    ],
+    "upstanding_apprentice16": [
+        [
+            "upstanding",
+            "medicine cat",
+            "medicine cat apprentice",
+            "leafbare"
+        ],
+        [
+            "Hello? Is anyone in here?",
+            "[t_c is almost unrecognizable as they awkwardly shuffle into the medicine den. Their fur is spiky and tangled and covered entirely in snow.]",
+            "y_c, Just the cat I was hoping to find! So, funny story actually, it turns out that it's a LOT colder out in the snow when the sun isn't up. Crazy right? Who would have imagined? Heh...",
+            "All I wanted to do was to catch a bit of prey before the dawn patrol went out. That way, they could have a little bit of something before they left. I clearly underestimated how much snow, and how little prey there would be.",
+            "I was wondering if you have a herb or remedy that could warm me up a little? Maybe even just some dry moss? Right now, I feel like my paws are frozen solid."
+        ]
     ]
 }

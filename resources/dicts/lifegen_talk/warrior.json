@@ -2574,5 +2574,34 @@
             "Would you please stop hovering over me? I'm not in the nursery anymore. I'm my own cat, and I can catch my prey however I like.",
             "Even if it does involve beheading."
         ]
+    ],
+    "upstanding_warrior12": [
+        [
+            "upstanding",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen"
+        ],
+        [
+            "I don't know about you y_c, but I definitely have my sight set on becoming deputy.",
+            "Of course, I would hate for something to happen to l_n or d_n but...",
+            "My hard work has to pay off somehow doesn't it?"
+        ]
+    ],
+    "upstanding_warrior13": [
+        [
+            "upstanding",
+            "medicine cat",
+            "medicine cat apprentice",
+            "leafbare"
+        ],
+        [
+            "Hello? Is anyone in here?",
+            "[t_c is almost unrecognizable as they awkwardly shuffle into the medicine den. Their fur is spiky and tangled and covered entirely in snow.]",
+            "y_c, Just the cat I was hoping to find! So, funny story actually, it turns out that it's a LOT colder out in the snow when the sun isn't up. Crazy right? Who would have imagined? Heh...",
+            "All I wanted to do was to catch a bit of prey before the dawn patrol went out. That way, they could have a little bit of something before they left. I clearly underestimated how much snow, and how little prey there would be.",
+            "I was wondering if you have a herb or remedy that could warm me up a little? Maybe even just some dry moss? Right now, I feel like my paws are frozen solid."
+        ]
     ]
 }

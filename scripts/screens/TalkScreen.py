@@ -241,6 +241,11 @@ class TalkScreen(Screens):
             with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
                 possible_texts3 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts3)
+
+        if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn']:
+            with open(f"{resource_dir}crush.json", 'r') as read_file:
+                possible_texts3 = ujson.loads(read_file.read())
+                possible_texts.update(possible_texts3)
         
         cluster1, cluster2 = get_cluster(cat.personality.trait)
         cluster3, cluster4 = get_cluster(you.personality.trait)
@@ -282,6 +287,9 @@ class TalkScreen(Screens):
             if "insult" in tags:
                 continue
 
+            if you.moons == 0 and "newborn" not in tags:
+                continue
+
             # Status tags
             if you.status not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags and "newborn" not in tags:
                 continue
@@ -290,6 +298,11 @@ class TalkScreen(Screens):
             elif "no_kit" in tags and you.status in ['kitten', 'newborn']:
                 continue
             elif "newborn" in tags and you.moons != 0:
+                continue
+
+            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+                continue
+            if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
             
             if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
@@ -374,7 +387,7 @@ class TalkScreen(Screens):
                 if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries and "recovering from birth" not in you.injuries:
                     for injury in you.injuries:
                         if you.injuries[injury]['severity'] != 'minor':
-                            ill_injured = True                
+                            ill_injured = True            
                 if not ill_injured:
                     continue 
             
@@ -388,14 +401,14 @@ class TalkScreen(Screens):
                 if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries and "recovering from birth" not in cat.injuries:
                     for injury in cat.injuries:
                         if cat.injuries[injury]['severity'] != 'minor':
-                            ill_injured = True    
+                            ill_injured = True
 
                 if not ill_injured:
                     continue 
             
             # Relationships
             # Family tags:
-            if any(i in ["half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
+            if any(i in ["half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
                 
                 fam = False
                 if "from_mentor" in tags:
@@ -417,7 +430,7 @@ class TalkScreen(Screens):
                 if "adopted_parent" in tags:
                     if cat.ID in you.inheritance.get_no_blood_parents():
                         fam = True
-                if "from_kit" in tags:
+                if "from_kit" in tags or "from_your_kit" in tags:
                     if cat.ID in you.inheritance.get_blood_kits():
                         fam = True
                 if "from_adopted_kit" in tags:
@@ -767,15 +780,15 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("o_c", str(other_clan.name))
             if "t_m" in text:
-                if cat.mate is None:
+                if cat.mate is None or len(cat.mate) == 0:
                     return ""
                 text = text.replace("t_m", str(Cat.fetch_cat(choice(cat.mate)).name))
             if "t_k" in text:
-                if cat.inheritance.get_kits() is None:
+                if cat.inheritance.get_kits() is None or len(cat.inheritance.get_kits()) == 0:
                     return ""
                 text = text.replace("t_k", str(choice(cat.inheritance.get_kits()).name))
             if "y_k" in text:
-                if game.clan.your_cat.inheritance.get_kits() is None:
+                if game.clan.your_cat.inheritance.get_kits() is None or len(game.clan.your_cat.inheritance.get_kits()) == 0:
                     return ""
                 text = text.replace("y_k", str(choice(game.clan.your_cat.inheritance.get_kits()).name))
             if "n_r1" in text:
