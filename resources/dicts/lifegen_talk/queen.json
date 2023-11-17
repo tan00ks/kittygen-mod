@@ -1307,5 +1307,25 @@
             "But you'll find your place in c_nClan, don't you worry.",
             "And I'll always be here if you ever need a playmate."
         ]
+    ],
+    "newborn_unabashed": [
+        [
+            "unabashed",
+            "silly",
+            "newborn"
+        ],
+        [
+            "[t_c prods you with a paw, leaning forward to examine you.]",
+            "Hmm... Is it me or is this kit's head abnormally big?"
+        ]
+    ],
+    "cool_newborn": [
+        [
+            "newborn"
+        ],
+        [
+            "Little y_c. I wonder what type of cat you'll become one day."
+        ]
     ]
+    
 }

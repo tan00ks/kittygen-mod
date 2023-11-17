@@ -150,7 +150,7 @@
     "apprentice_confront_yourcrush": [
         [
             "no_kit",
-            "they_apprentice",
+            "they_app",
             "assertive",
             "cool",
             "unabashed"
@@ -373,7 +373,7 @@
     ],
     "yourcrush_apprentice": [
         [
-            "they_apprentice",
+            "they_app",
             "unabashed",
             "assertive",
             "cool"
