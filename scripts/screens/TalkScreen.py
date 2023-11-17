@@ -833,6 +833,9 @@ class TalkScreen(Screens):
                         return ""
                 text = text.replace("n_r1", str(random_cat1.name))
                 text = text.replace("n_r2", str(random_cat2.name))
+            if "_" in text:
+                print(f"_ found in {text}")
+                return ""
              
         except Exception as e:
             print(e)
