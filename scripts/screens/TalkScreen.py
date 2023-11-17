@@ -497,7 +497,10 @@ class TalkScreen(Screens):
             if "war" in tags:
                 if game.clan.war.get("at_war", False):
                     continue
-        
+                    
+            if "non-mates" in tags:
+                if you.ID in cat.mate:
+                    continue
             
             # Relationship conditions
             if you.ID in cat.relationships:
