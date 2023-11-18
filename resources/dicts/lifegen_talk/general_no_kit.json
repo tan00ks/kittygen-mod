@@ -66,6 +66,7 @@
             "assertive",
             "unabashed",
             "romantic_like",
+            "
             "random_cat"
         ],
         [
@@ -5155,7 +5156,8 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "Hey, y_c. I was out collecting moss today, and I saved some for you. I know you like to use it to line your nest.",
@@ -5180,7 +5182,8 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "[You decide to strike up a conversation with t_c by telling them about a particularly pretty flower grove you saw today.]",
@@ -5195,7 +5198,8 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "I saw this pretty flower out on the edge of the territory. It reminded me of you.",
@@ -5209,7 +5213,8 @@
         [
             "upstanding",
             "no_kit",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "Oh, y_c!! I've been meaning to ask you- would you like to go on a patrol with me?",
@@ -5248,7 +5253,8 @@
             "medicine cat apprentice",
             "mediator apprentice",
             "queen's apprentice",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "I can't rest now, I've gotta train! You know that, y_c?",
@@ -6315,7 +6321,8 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "I saw this pretty flower out on the edge of the territory. It reminded me of you.",
@@ -8317,7 +8324,8 @@
             "Any",
             "neurotic",
             "romantic_like",
-            "random_cat"
+            "random_cat",
+            "non-mates"
         ],
         [
             "Oh, y_c, it's you!",
@@ -8363,7 +8371,8 @@
     "neurotic_romlike3": [
         [
             "Any",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "[t_c seems to be avoiding you lately.]",
@@ -8381,7 +8390,8 @@
     "neurotic_romlike4": [
         [
             "Any",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "y_c, what do you do if you like someone you know you don't stand a chance with?",
