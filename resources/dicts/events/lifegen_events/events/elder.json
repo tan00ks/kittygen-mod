@@ -52,7 +52,14 @@
         "During a Clan meeting, you doze off and start snoring loudly, causing the younger cats to giggle and the leader to pause their speech.",
         "You attempt to jump onto a ledge, forgetting it's a bit higher than it used to be. Your surprised yowl when you land back on the ground causes laughter to echo through the camp."
     ],
-    "elder general": [],
+    "elder general": [
+        "You find kits frolicking in your favorite spot to nap, but you don't have the heart to scare them off. Instead, you watch them play fondly until they're eventually called back by the queens.",
+"You spend the day taking a very productive nap in the sun.",
+"You take a moment to think about how much the clan has changed.",
+"You find yourself longing for the time when your biggest worries were catching butterflies and trying to figure out which nest in the nursery had the softest moss.",
+"You attract a small crowd as you tell a thrilling story, leading your audience through many unexpected twists and turns.",
+"You accidentally cause an apprentice to get side-tracked by telling them tales from your own apprentice days."
+    ],
     "elder assertive": [],
     "elder brooding": [],
     "elder cool": [],
