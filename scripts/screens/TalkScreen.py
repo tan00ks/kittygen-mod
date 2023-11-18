@@ -427,7 +427,7 @@ class TalkScreen(Screens):
                     if you.parent2:
                         if you.parent2 == cat.ID:
                             fam = True
-                if "adopted_parent" in tags or "from adopted_parent":
+                if "adopted_parent" in tags or "from adopted_parent" in tags:
                     if cat.ID in you.inheritance.get_no_blood_parents():
                         fam = True
                 if "from_kit" in tags or "from_your_kit" in tags:
@@ -624,6 +624,8 @@ class TalkScreen(Screens):
                     return ""
                 crush = None
                 for c in self.get_living_cats():
+                    if c.ID == game.clan.your_cat.ID or c.ID == cat.ID:
+                        continue
                     relations = game.clan.your_cat.relationships.get(c.ID)
                     if not relations:
                         continue
@@ -639,6 +641,8 @@ class TalkScreen(Screens):
                     return ""
                 crush = None
                 for c in self.get_living_cats():
+                    if c.ID == game.clan.your_cat.ID or c.ID == cat.ID:
+                        continue
                     relations = cat.relationships.get(c.ID)
                     if not relations:
                         continue
@@ -779,14 +783,14 @@ class TalkScreen(Screens):
                 if len(game.clan.your_cat.inheritance.get_parents()) == 0:
                     return ""
                 parent = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_parents()))
-                if parent.outside or parent.dead:
+                if parent.outside or parent.dead or parent.ID==cat.ID:
                     return ""
                 text = text.replace("y_p", str(parent.name))
             if "t_p" in text:
                 if len(cat.inheritance.get_parents()) == 0:
                     return ""
                 parent = Cat.fetch_cat(choice(cat.get_parents()))
-                if parent.outside or parent.dead:
+                if parent.outside or parent.dead or parent.ID==game.clan.your_cat.ID:
                     return ""
                 text = text.replace("t_p", str(parent.name))
             if "y_m" in text:
