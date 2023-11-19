@@ -37,6 +37,8 @@ from .LifeGenPatrolScreen import LifeGenPatrolScreen
 from .DFPatrolScreen import DFPatrolScreen
 from .DatePatrolScreen import DatePatrolScreen
 from .AffairScreen import AffairScreen
+from .ClearingScreen import ClearingScreen
+
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
 # ---------------------------------------------------------------------------- #
@@ -74,6 +76,7 @@ catlist_screen = ListScreen('list screen')
 starclan_screen = StarClanScreen('starclan screen')
 df_screen = DFScreen('dark forest screen')
 med_den_screen = MedDenScreen('med den screen')
+freshkill_pile_screen = ClearingScreen('clearing screen')
 events_screen = EventsScreen('events screen')
 settings_screen = SettingsScreen('settings screen')
 clan_settings_screen = ClanSettingsScreen('clan settings screen')
