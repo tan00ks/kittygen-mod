@@ -819,13 +819,13 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("t_m", str(Cat.fetch_cat(choice(cat.mate)).name))
             if "t_k" in text:
-                if cat.inheritance.get_kits() is None or len(cat.inheritance.get_kits()) == 0:
+                if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
-                text = text.replace("t_k", str(choice(cat.inheritance.get_kits()).name))
+                text = text.replace("t_k", str(choice(cat.inheritance.get_children()).name))
             if "y_k" in text:
-                if game.clan.your_cat.inheritance.get_kits() is None or len(game.clan.your_cat.inheritance.get_kits()) == 0:
+                if game.clan.your_cat.inheritance.get_children() is None or len(game.clan.your_cat.inheritance.get_children()) == 0:
                     return ""
-                text = text.replace("y_k", str(choice(game.clan.your_cat.inheritance.get_kits()).name))
+                text = text.replace("y_k", str(choice(game.clan.your_cat.inheritance.get_children()).name))
             if "n_r1" in text:
                 if "n_r2" not in text:
                     return ""
