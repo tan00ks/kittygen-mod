@@ -794,7 +794,7 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("t_p", str(parent.name))
             if "y_m" in text:
-                if game.clan.your_cat.mate is None or len(game.clan.your_cat.mate) == 0:
+                if game.clan.your_cat.mate is None or len(game.clan.your_cat.mate) == 0 or cat.ID in game.clan.your_cat.mate:
                     return ""
                 text = text.replace("y_m", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
             if "t_mn" in text:
@@ -815,7 +815,7 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("o_c", str(other_clan.name))
             if "t_m" in text:
-                if cat.mate is None or len(cat.mate) == 0:
+                if cat.mate is None or len(cat.mate) == 0 or cat.ID in game.clan.your_cat.mate:
                     return ""
                 text = text.replace("t_m", str(Cat.fetch_cat(choice(cat.mate)).name))
             if "t_k" in text:
