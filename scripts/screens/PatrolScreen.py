@@ -103,7 +103,6 @@ class PatrolScreen(Screens):
         # Check is a cat is clicked
         elif event.ui_element in self.cat_buttons.values() and doubleclick:
             self.selected_cat = event.ui_element.return_cat_object()
-            
             if self.selected_cat.ID == self.cat_id:
                 if self.selected_cat in self.current_patrol:
                     self.current_patrol.remove(self.selected_cat)

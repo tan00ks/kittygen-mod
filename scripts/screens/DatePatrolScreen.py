@@ -53,6 +53,7 @@ class DatePatrolScreen(Screens):
         self.start_patrol_thread = None
         self.proceed_patrol_thread = None
         self.dbclock = pygame.time.Clock()
+        self.cat_id = None
 
     def handle_event(self, event):
         if game.switches["window_open"]:
@@ -99,14 +100,22 @@ class DatePatrolScreen(Screens):
         
         # Check is a cat is clicked
         elif event.ui_element in self.cat_buttons.values() and doubleclick:
-            if self.selected_cat in self.current_patrol:
-                self.current_patrol.remove(self.selected_cat)
+            self.selected_cat = event.ui_element.return_cat_object()
+            if self.selected_cat.ID == self.cat_id:
+                if self.selected_cat in self.current_patrol:
+                    self.current_patrol.remove(self.selected_cat)
+                else:
+                    self.current_patrol.append(self.selected_cat)
+                self.update_cat_images_buttons()
+                self.update_button()
             else:
-                self.current_patrol.append(self.selected_cat)
-            self.update_cat_images_buttons()
-            self.update_button()
+                self.selected_cat = event.ui_element.return_cat_object()
+                self.cat_id = self.selected_cat.ID
+                self.update_selected_cat()
+                self.update_button()
         elif event.ui_element in self.cat_buttons.values():
             self.selected_cat = event.ui_element.return_cat_object()
+            self.cat_id = self.selected_cat.ID
             self.update_selected_cat()
             self.update_button()
         elif event.ui_element == self.elements["add_remove_cat"]:
