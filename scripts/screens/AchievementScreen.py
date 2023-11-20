@@ -104,7 +104,7 @@ class AchievementScreen(Screens):
         if len(you.former_apprentices) >= 5:
             achievements.add("9")
         
-        if you.inheritance.get_kits():
+        if you.inheritance.get_children():
             achievements.add("10")
         for i in you.relationships.keys():
             if you.relationships.get(i).dislike >= 60:

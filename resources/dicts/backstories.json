@@ -94,10 +94,20 @@
     "clan_founder1": "This cat was originally a kittypet, but was recruited to help found the Clan.",
     "clan_founder2": "This cat was originally a loner, but was recruited to help found the Clan.",
     "clan_founder3": "This cat was originally a rogue, but was recruited to help found the Clan.",
-    "clan_founder4": "This cat was a member of the original Clan, but they lost their territory to a disaster. Now, they've come to help rebuild.",
+    "clan_founder4": "This cat belonged to the original c_nClan, but they lost their territory to a disaster. Now, they've come to help rebuild.",
     "clan_founder5": "This cat was originally a member of another Clan, but decided to leave to help create a Clan of their own where they could have more influence.",
     "clan_founder6": "This cat was exiled from their original Clan for breaking the Warrior Code, and decided to help found the Clan for a shot at redemption.",
-    "clan_founder7": "This cat received a prophecy about founding a new Clan to bring balance to the territories, and joined the Clan's efforts."
+    "clan_founder7": "This cat received a prophecy about founding a new Clan to bring balance to the territories, and joined the Clan's efforts.",
+    "clan_founder8": "This cat left o_cClan due to religious differences, and decided to help found c_nClan in hopes it would align more with their practices.",
+    "clan_founder9": "This cat was originally reluctant to help found c_nClan, but decided to join after r_c convinced them.",
+    "clan_founder10": "This cat followed r_c into the Clan.",
+    "clan_founder11": "This cat was sent by the leader of o_cClan to gather secrets and intel on the newly formed Clan.",
+    "clan_founder12": "This cat was sent by the leader of a rogue group to gather secrets and intel on the newly formed Clan.",
+    "clan_founder13": "This cat belonged to the original c_nClan, whose territory was taken over by o_cClan. Now, they've come to rebuild.",
+    "clan_founder14": "This cat belonged to the original c_nClan, whose territory was lost in a war against rogues. Now, they've come to rebuild.",
+    "clan_founder15": "This cat belonged to the original c_nClan, whose territory is now a twolegplace. Now, they've come to rebuild.",
+    "clan_founder16": "This cat received a prophecy that the creation of c_nClan would lead to the downfall of the territories, and came to stop it from happening.",
+    "clan_founder17": "This cat came to fulfill their destiny of helping to found c_nClan after receiving a prophecy from StarClan."
   },
   "backstory_display": {
     "clan_founder_backstories": "Clan founder",
@@ -121,7 +131,17 @@
       "clan_founder4",
       "clan_founder5",
       "clan_founder6",
-      "clan_founder7"
+      "clan_founder7",
+      "clan_founder8",
+      "clan_founder9",
+      "clan_founder10",
+      "clan_founder11",
+      "clan_founder12",
+      "clan_founder13",
+      "clan_founder14",
+      "clan_founder15",
+      "clan_founder16",
+      "clan_founder17"
     ],
     "clanborn_backstories": [
       "clanborn"

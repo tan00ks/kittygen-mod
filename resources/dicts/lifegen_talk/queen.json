@@ -455,7 +455,7 @@
             "Hm. I've been thinking about the role I've chosen, being a queen.",
             "The role of a permanent queen is fairly recent, clan history speaking. Especially in comparison to roles like the medicine cat. And some were less...",
             "Compassionate towards the role we perform, despite its importance.",
-            "They viewed us as wasting clan resources, and nothing but baby makers. But we are so much more than that. We help in ways medicine cats cannot.",
+            "Some viewed us as wasting clan resources. A long time ago, the parent of the Queen's role, a cat called Ferncloud, received some... uncomfortable comments from individuals related to her choice. However, we do more than sit and play with kits, we help in ways medicine cats cannot.",
             "We're formally trained to recognise signs of illness in kits and Queens, and to provide comfort in stressful situations.",
             "I believe our constant presence with the kits helps us to realise something's wrong and get help before... the worst happens.",
             "Just make sure to know that no matter what, everyone has their role to play. Don't be a cat who believes they're more important than those whose role is less flashy."
@@ -1151,6 +1151,180 @@
             "Working hard, y_c? Or, is it more like hardly working? Hehe.",
             "Y'know, it's good to contribute to the clan, but make sure you take some time to grow up, too. Working isn't everything. Now's the time for you to get out and explore!",
             "*Sigh* I sorta miss those days myself ..."
+        ]
+    ],
+    "brooding_queen3": [
+        [
+            "no_kit",
+            "brooding"
+        ],
+        [
+            "[t_c is sitting at the nursery entrance, vigilantly scanning for any potential threats to the kits.]",
+            "[Their face is so stony and focused. If you tried to chat with them now, it probably wouldn't end too nicely!]",
+            "[You decide to leave them to their duties.]"
+        ]
+    ],
+    "brooding_queen4": [
+        [
+            "no_kit",
+            "brooding",
+            "random_cat"
+        ],
+        [
+            "[t_c looks after r_k fondly.]",
+            "[They're so sweet with the kits, despite their ... less-than-sweet disposition towards everyone else.]"
+        ]
+    ],
+    "brooding_queen5": [
+        [
+            "no_kit",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "Hm? Oh, hey, y_c. What are you doing in the nursery?",
+            "You want to look in on the kits? Well, I suppose so ...",
+            "I just put them down for a nap, though, so be very quiet.",
+            "[You look in on the kits all curled together in a big pile of fluff. How did t_c tire them out so much?]"
+        ]
+    ],
+    "brooding_queen6": [
+        [
+            "no_kit",
+            "brooding",
+            "romantic_like"
+        ],
+        [
+            "Oh, y_c. You here to visit the kits?",
+            "No?",
+            "You mean you're here ... just for me?",
+            "Heh ... Well, I guess I have time to chat.",
+            "[t_c looks away shyly, clearly trying to hide how thrilled they are."
+        ]
+    ],
+    "brooding_queen7": [
+        [
+            "no_kit",
+            "brooding",
+            "assertive"
+        ],
+        [
+            "Nope. Not happening. You're not getting anywhere near the nursery.",
+            "The kits have been up all night and I JUST managed to get them down for a nap.",
+            "If anyone wakes them up ... trust, that cat will never know peace again. I'll make sure of it."
+        ]
+    ],
+    "brooding_queen8": [
+        [
+            "apprentice",
+            "mediator apprentice",
+            "warrior",
+            "mediator",
+            "deputy",
+            "leader",
+            "elder",
+            "random_cat"
+        ],
+        [
+            "[r_k just puked in the nursery and it's total chaos.]",
+            "[t_c must attempt to comfort the screaming kit, clean the mess, and alert the medicine cat all at once.]",
+            "... Little help?",
+            "[You rush to grab r_m. You don't envy t_c's job ... Clearly, being a Queen isn't as easy as you may have thought.]"
+        ]
+    ],
+    "brooding_queen9": [
+        [
+            "no_kit",
+            "brooding",
+            "upstanding"
+        ],
+        [
+            "[The kits may act wild around their parents, but they're always polite and well-mannered whenever t_c is near.]",
+            "[Even the youngest of the Clan know that t_c doesn't put up with any nonsense.]"
+        ]
+    ],
+    "brooding_queen10": [
+        [
+            "kitten",
+            "brooding"
+        ],
+        [
+            "It's past your bedtime, y_c. Into your nest, now.",
+            "Don't make me ask you again."
+        ]
+    ],
+    "brooding_queen11": [
+        [
+            "kitten",
+            "brooding"
+        ],
+        [
+            "HEY! No running in the nursery! Don't you know better?",
+            "Go back and try again, slower this time.",
+            "[You shuffle to the other end of the nursery and plod to your destination under t_c's strict, watchful gaze.]"
+        ]
+    ],
+    "brooding_queen12": [
+        [
+            "kitten",
+            "brooding"
+        ],
+        [
+            "y_c, if an unknown threat ever tries to enter the nursery, what should you do?",
+            "That's right. Run, hide, or find an adult to protect you.",
+            "No matter what, don't you ever, EVER try to fight it off by yourself.",
+            "You may be c_nClan, but you're no warrior. Not yet, at least.",
+            "Better to run and live to fight another day. It's advice that will take you far, all throughout your life. Don't forget it"
+        ]
+    ],
+    "brooding_queen13": [
+        [
+            "kitten",
+            "brooding"
+        ],
+        [
+            "Okay, kits. Stop your playing. Time for your daily lesson.",
+            "Yes, y_c, you too. And I don't wanna hear any complaining, either.",
+            "These lessons are as important to your development as warriors as learning to fight or hunt. So listen up.",
+            "o_cClan is the Clan furthest away from us. We don't share any borders with them, but we still have some conflicts sometimes ...",
+            "[t_c soberly and evenly depicts the history, relations, and customs of your rival Clan, leaving out anything that might be inappropriate for your young kit ears.]",
+            "[You listen attentively and find yourself even a little disappointed when the lesson is over, filled with a new curiosity about o_cClan life.]"
+        ]
+    ],
+    "brooding_queen14": [
+        [
+            "kitten",
+            "brooding",
+            "introspective",
+            "platonic_like"
+        ],
+        [
+            "Playing by yourself?",
+            "Here. I'll play with you. Roll the pebble over to me.",
+            "[You roll the stone to t_c. They catch it and gently roll it back to you with their paw.]",
+            "Y'know, I had a hard time making friends, too, at your age ...",
+            "Life isn't always easy for sensitive cats like us.",
+            "But you'll find your place in c_nClan, don't you worry.",
+            "And I'll always be here if you ever need a playmate."
+        ]
+    ],
+    "newborn_unabashed": [
+        [
+            "unabashed",
+            "silly",
+            "newborn"
+        ],
+        [
+            "[t_c prods you with a paw, leaning forward to examine you.]",
+            "Hmm... Is it me or is this kit's head abnormally big?"
+        ]
+    ],
+    "cool_newborn": [
+        [
+            "newborn"
+        ],
+        [
+            "Little y_c. I wonder what type of cat you'll become one day."
         ]
     ]
 }

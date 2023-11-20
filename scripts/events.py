@@ -74,6 +74,7 @@ class Events:
                 self.checks[3] = game.clan.leader.ID
         game.cur_events_list = []
         game.herb_events_list = []
+        game.freshkill_events_list = []
         game.mediated = []
         game.switches['saved_clan'] = False
         self.new_cat_invited = False
@@ -100,7 +101,25 @@ class Events:
         # print(game.clan.current_season)
         Pregnancy_Events.handle_pregnancy_age(game.clan)
         self.check_war()
-        
+
+        if game.clan.game_mode in ['expanded', 'cruel season'
+                                   ] and game.clan.freshkill_pile:
+            # feed the cats and update the nutrient status
+            relevant_cats = list(
+                filter(lambda _cat: _cat.is_alive() and not _cat.exiled and
+                                 not _cat.outside, Cat.all_cats.values()))
+            game.clan.freshkill_pile.time_skip(relevant_cats, game.freshkill_event_list)
+            # handle freshkill pile events, after feeding
+            # first 5 moons there will not be any freshkill pile event
+            if game.clan.age >= 5:
+                Freshkill_Events.handle_amount_freshkill_pile(game.clan.freshkill_pile, relevant_cats)
+            self.get_moon_freshkill()
+			# make a notification if the Clan has not enough prey
+            if FRESHKILL_EVENT_ACTIVE and not game.clan.freshkill_pile.clan_has_enough_food():
+                event_string = f"{game.clan.name}Clan doesn't have enough prey for next moon!"
+                game.cur_events_list.insert(0, Single_Event(event_string))
+                game.freshkill_event_list.append(event_string)
+
         rejoin_upperbound = game.config["lost_cat"]["rejoin_chance"]
         if random.randint(1, rejoin_upperbound) == 1:
             self.handle_lost_cats_return()
@@ -204,13 +223,6 @@ class Events:
                          f"for longer and have a higher chance of dying. "
                 game.cur_events_list.insert(0, Single_Event(string, "health"))
                 
-        new_list = []
-        other_list = []
-        for i in game.cur_events_list:
-            if str(game.clan.your_cat.name) in i.text:
-                new_list.append(i)
-            else:
-                other_list.append(i)
         
         # Clear the list of cats that died this moon.
         game.just_died.clear()
@@ -235,6 +247,14 @@ class Events:
             if not has_med:
                 string = f"{game.clan.name}Clan has no medicine cat!"
                 game.cur_events_list.insert(0, Single_Event(string, "health"))
+        
+        new_list = []
+        other_list = []
+        for i in game.cur_events_list:
+            if str(game.clan.your_cat.name) in i.text:
+                new_list.append(i)
+            else:
+                other_list.append(i)
         
         game.cur_events_list = new_list
         game.other_events_list = other_list
@@ -481,7 +501,7 @@ class Events:
         if len(you.former_apprentices) >= 5:
             achievements.add("9")
         
-        if you.inheritance.get_kits():
+        if you.inheritance.get_children():
             achievements.add("10")
         for i in you.relationships.keys():
             if you.relationships.get(i).dislike >= 60:
@@ -822,6 +842,13 @@ class Events:
             if sibling.outside or sibling.dead:
                 return ""
             text = text.replace("y_s", str(sibling.name))
+        if "y_l" in text:
+            if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
+                return ""
+            sibling = Cat.fetch_cat(random.choice(game.clan.your_cat.inheritance.get_siblings()))
+            if sibling.outside or sibling.dead or sibling.moons != game.clan.your_cat.moons:
+                return ""
+            text = text.replace("y_l", str(sibling.name))
         if "y_p" in text:
             if len(game.clan.your_cat.inheritance.get_parents()) == 0:
                 return ""
@@ -1229,17 +1256,14 @@ class Events:
 
         prey_amount = 0
         for cat in healthy_hunter:
-            lower_value = game.config["freshkill"]["auto_warrior_prey"][0]
-            upper_value = game.config["freshkill"]["auto_warrior_prey"][1]
+            lower_value = game.prey_config["auto_warrior_prey"][0]
+            upper_value = game.prey_config["auto_warrior_prey"][1]
             if cat.status == "apprentice":
-                lower_value = game.config["freshkill"]["auto_apprentice_prey"][
-                    0]
-                upper_value = game.config["freshkill"]["auto_apprentice_prey"][
-                    1]
+                lower_value = game.prey_config["auto_apprentice_prey"][0]
+                upper_value = game.prey_config["auto_apprentice_prey"][1]
 
             prey_amount += random.randint(lower_value, upper_value)
-        if FRESHKILL_ACTIVE:
-            print(f" -- FRESHKILL: added {prey_amount} monthly prey")
+        game.freshkill_event_list.append(f"The clan managed to catch {prey_amount} pieces of prey in this moon.")
         game.clan.freshkill_pile.add_freshkill(prey_amount)
 
     def herb_gather(self):
@@ -2620,13 +2644,17 @@ class Events:
             return True
 
         # chance to die of old age
-        age_chance = game.config["death_related"]["old_age_death_chance"]
         age_start = game.config["death_related"]["old_age_death_start"]
-        if cat.moons > int(
-                random.random() * age_chance) + age_start:  # cat.moons > 150 <--> 200
-            
-            Death_Events.handle_deaths(cat, other_cat, game.clan.war.get("at_war", False),
-                                            enemy_clan, alive_kits)
+        death_curve_setting = game.config["death_related"]["old_age_death_curve"]
+        death_curve_value = 0.001 * death_curve_setting
+        # made old_age_death_chance into a separate value to make testing with print statements easier
+        old_age_death_chance = ((1 + death_curve_value) ** (cat.moons - age_start)) - 1
+        if random.random() <= old_age_death_chance:
+            Death_Events.handle_deaths(cat, other_cat, game.clan.war.get("at_war", False), enemy_clan, alive_kits)
+            return True
+        # max age has been indicated to be 300, so if a cat reaches that age, they die of old age
+        elif cat.moons >= 300:
+            Death_Events.handle_deaths(cat, other_cat, game.clan.war.get("at_war", False), enemy_clan, alive_kits)
             return True
 
         # disaster death chance

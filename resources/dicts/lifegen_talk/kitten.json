@@ -726,11 +726,13 @@
     "assertivekit_sibling2": [
         [
             "Any",
-            "platonic_like"
+            "platonic_like",
+            "from_your_kit",
+            "from_adopted_kit"
         ],
         [
             "*Yaaawwn*",
-            "What? No, t_c, I'm not sleepy ...",
+            "What? No, y_c, I'm not sleepy ...",
             "I swear, I'm not ..",
             "... Zzzz ...",
             "[t_c falls asleep on their paws. The two of you cuddle up to take a nap together.]"
@@ -779,7 +781,7 @@
             "unlawful",
             "brooding",
             "random_cat",
-            "littermates"
+            "littermate"
         ],
         [
             "y_c, wanna play leader and deputy?",
@@ -2247,11 +2249,12 @@
     "neurotic_kit__20": [
         [
             "any",
-            "neurotic"
+            "neurotic",
+            "introspective"
         ],
         [
             "Mm..",
-            "[Seems like all they want to do is watch the rain, as if something was going to come out of it and attack them.]",
+            "[Seems like all t_c wants to do is watch the rain outside the den.]",
             "[You sit down beside them silently, they seem to appreciate that.]"
         ]
     ],
@@ -2814,6 +2817,231 @@
         ],
         [
             "H-hey! You can't just say something like that! r_q!"
+        ]
+    ],
+    "neurotic_kit": [
+        [
+            "Any",
+            "neurotic",
+            "platonic_like"
+        ],
+        [
+            "Eek!",
+            "[Seems like t_c is terrified of the thunder outside the nursery!]",
+            "[You sit beside them, comforting them through the storm and warding off the scary thunderclaps.]"
+        ]
+    ],
+    "neurotic_kit1": [
+        [
+            "Any",
+            "neurotic",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "...",
+            "[While the rest of the kits run and explore, t_c seems to want to linger near your side, terrified of being separated from you.]",
+            "[It seems they're a later bloomer than most ...]"
+        ]
+    ],
+    "neurotic_kit2": [
+        [
+            "Any",
+            "random_cat"
+        ],
+        [
+            "Heehee!",
+            "[t_c laughs over and over as r_q makes funny faces at them.]"
+        ]
+    ],
+    "neurotic_kit3": [
+        [
+            "no_kit",
+            "neurotic",
+            "neutral",
+            "random_cat"
+        ],
+        [
+            "[t_c plays happily in the corner of the nursery.]",
+            "Eep!",
+            "[As soon as they catch sight of you, t_c dashes away to hide under r_q's tail.]",
+            "[Quite a shy little guy, huh?]"
+        ]
+    ],
+    "kit_yourkit": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[t_c presses against your side, sound asleep.]",
+            "[You breathe in their milky scent, swearing to love them forever.]"
+        ]
+    ],
+    "kit_yourkit1": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[While t_c sleeps, you like to make a game out of counting all the toes on their paws.]",
+            "[1, 2, 3, 4, 5 ... 1, 2, 3, 4, 5 ...]",
+            "[Has a more perfect, darling little kit ever existed?]"
+        ]
+    ],
+    "kit_yourkit2": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c chases t_s around the nursery, squealing with laughter.]",
+            "[Seems like the two siblings have become fast friends!]"
+        ]
+    ],
+    "kit_yourkit3": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "*Sniffle* *Sniffle*",
+            "y_c ... t_l just called me a bad name!",
+            "[You call your other kit over and sternly ask what happened. t_l, of course, blames the whole thing on t_c.]",
+            "Don't listen to them! They're lying!",
+            "[You sigh, wishing the two siblings could just get along.]",
+            "[But, to your amazement they're back to playing, laughing, and napping together by sundown.]",
+            "[Amazing, how siblings work like that.]"
+        ]
+    ],
+    "kit_yourkit4": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c and t_s play a game of moss-ball, racing back and forth across the nursery.]",
+            "[The two of them remind you so much of you and y_l, growing up ...]",
+            "[You hope the world never tears the two apart.]"
+        ]
+    ],
+    "kit_yourkit5": [
+        [
+            "any",
+            "random_cat"
+        ],
+        [
+            "[t_c and t_l are comparing the size of their paws.]",
+            "Mine are bigger! Mine are totally bigger than yours! Heehee!"
+        ]
+    ],
+    "kit_yourkit6": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[t_c walks over and flops down against your side.]",
+            "Zzzz ...",
+            "[You cuddle them close, pondering if there's any way to keep them this little forever.]"
+        ]
+    ],
+    "kit_yourkit7": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "y_c, r_c just explained to me what 'dying' means.",
+            "They said that it's what happens to our prey, and to the plants in leafbare.",
+            "But that's never gonna happen to you, right? Or y_m?",
+            "[You gently explain to t_c that, yes, you and y_m will both die one day, but it will hopefully be a long, long time until that happens, and they'll be all grownup by then.]",
+            "...",
+            "But ... But ...",
+            "I'm never gonna be so grownup that I'm not gonna need you with me!"
+        ]
+    ],
+    "kit_yourkit8": [
+        [
+            "any",
+            "from_adopted_kit",
+            "they_abandoned"
+        ],
+        [
+            "[t_c catches a feather, then beams at you with that adorable little smile of theirs.]",
+            "[How anyone could've had the heart to abandon such an incredible kit, you have no idea.]"
+        ]
+    ],
+    "kit_yourkit9": [
+        [
+            "any",
+            "from_adopted_kit",
+            "they_abandoned"
+        ],
+        [
+            "[As t_c snuggles at your side, you think about their real parents, if they're out looking somewhere for them.]",
+            "[t_c is such an amazing young kit, after all ... Who wouldn't want them back?]",
+            "[Still, the thought of giving them up fills your heart with a pang of fear and dread.]",
+            "[t_c is your family now, your baby ... You'll always be here for them, now. No matter what ends up happening.]"
+        ]
+    ],
+    "upstanding_kit9": [
+        [
+            "upstanding",
+            "no_kit",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "y_c!",
+            "[You turn and see your kit holding back tears of frustration as they run over to you and burrow their face into your fur.]",
+            "y_c, r_k called me a tattletale because I told r_q that they were planning on putting nettles into the fresh-kill pile, and now they won't play with me!",
+            "I'm not a tattletale, honest! I only told on them because they were going to break a rule. Why are they so upset with me?"
+        ]
+    ],
+    "upstanding_kit10": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "[t_c is sitting outside the nursery, their expression shifting between a look of awe and determination as they watch l_n move about the camp.]"
+        ]
+    ],
+    "upstanding_kit11": [
+        [
+            "upstanding",
+            "mediator",
+            "mediator apprentice"
+        ],
+        [
+            "y_c, I have a job for you.",
+            "I need YOU, yes you, to take on the super-duper important role of referee for the new game me and the other kits are about to play.",
+            "Of course this is important! I need to make sure that this game is super fun and fair for everyone playing!",
+            "And to make sure that r_k doesn't cheat again."
+        ]
+    ],
+    "upstanding_kit12": [
+        [
+            "upstanding",
+            "no_kit",
+            "platonic_like",
+            "leader"
+        ],
+        [
+            "[You catch t_c peering at you from the nursery. From the far side of the camp, you can just make out their determined expression.]"
         ]
     ]
 }

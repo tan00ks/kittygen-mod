@@ -211,7 +211,7 @@
             "Hey, flea-brain. I've been looking for you all over, what's --",
             "Wait. Something's up. I can tell you're upset about something.",
             "Was someone mean to you? Was it r_c? I swear to StarClan, I'll --",
-            "It wasn't r_c?",
+            "No one was mean to you?",
             "Well, okay ... but I'll still shoot them a few dirty looks, just for good measure."
         ]
     ],
@@ -2256,7 +2256,7 @@
             "No ... No, that just wouldn't do."
         ]
     ],
-    "neurotic_mate": [
+    "neurotic_mate11": [
         [
             "Any",
             "from_mate",
@@ -2275,7 +2275,7 @@
             "... Thanks, y_c. That makes me feel a lot better."
         ]
     ],
-    "neurotic_mate1": [
+    "neurotic_mate21": [
         [
             "Any",
             "from_mate",
@@ -2374,7 +2374,7 @@
             "random_cat"
         ],
         [
-            "Psst, y_c. I heard a rumor that r_w totally has a crush on d_n. Isn't that crazy?",
+            "Psst, y_c. I heard a rumor that n_r1 totally has a crush on n_r2. Isn't that crazy?",
             "... Where'd I get the rumor from?",
             "Uh, well, you see, ah ...",
             "Hmph. You're no fun at all."
@@ -2592,7 +2592,7 @@
         ],
         [
             "Oh my- you're so precious!",
-            "Hello, little one! Welcome to c_n! What a cute lil fella, you are.",
+            "Hello, little one! Welcome to c_nClan! What a cute lil fella, you are.",
             "Here we go, let me take you back to your nest. Little ones like you need plenty of rest to become big strong warriors!"
         ]
     ],
@@ -5155,7 +5155,8 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "Hey, y_c. I was out collecting moss today, and I saved some for you. I know you like to use it to line your nest.",
@@ -5180,7 +5181,8 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "[You decide to strike up a conversation with t_c by telling them about a particularly pretty flower grove you saw today.]",
@@ -5195,7 +5197,8 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "I saw this pretty flower out on the edge of the territory. It reminded me of you.",
@@ -5209,7 +5212,8 @@
         [
             "upstanding",
             "no_kit",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "Oh, y_c!! I've been meaning to ask you- would you like to go on a patrol with me?",
@@ -5248,7 +5252,8 @@
             "medicine cat apprentice",
             "mediator apprentice",
             "queen's apprentice",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "I can't rest now, I've gotta train! You know that, y_c?",
@@ -6315,7 +6320,8 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "non-mates"
         ],
         [
             "I saw this pretty flower out on the edge of the territory. It reminded me of you.",
@@ -6391,12 +6397,10 @@
         [
             "[You're chatting with r_c when t_c races up to you, huge grin on their face.]",
             "y_c, where have you been? I've been waiting for ages to tell you what happened to me today - oh.",
-            "[As soon as t_c sees r_c, it's like a switch flips. Suddenly the light wicks from their eyes and they're back to their usual brooding stare.]",
-            "[When r_c leaves, you ask t_c what their problem is.]",
-            "What? I don't have a problem with r_c.",
-            "[You ask t_c why they suddenly went so quiet.]",
-            "Psh. That's just how I act around everyone who isn't you.",
-            "Now, c'mon. I still have to tell you about what happened today."
+            "[As soon as t_c sees r_c, they stop talking and hand total control of the conversation over to r_c.]",
+            "[The most they contribute to the conversation are a few polite nods and grunts.]",
+            "[As soon as r_c leaves, the light wicks back into t_c's eyes and a huge smile takes back over their face.]",
+            "[It seems like knowing this version of them is a privilege that isn't reserved for all your clanmates.]"
         ]
     ],
     "brooding_love_3": [
@@ -6538,7 +6542,7 @@
         [
             "Yikes, y_c, you should probably lay back down.",
             "Get some rest, drink plenty of water.",
-            "Remember not to push yourself, we need all cats in c_n to be the best they can be."
+            "Remember not to push yourself, we need all cats in c_nClan to be the best they can be."
         ]
     ],
     "stable_15": [
@@ -7234,7 +7238,9 @@
         [
             "I cannot believe it! Oh, y_c, you-re- you're... We're going to be parents, you and me, PARENTS! Can you believe it?!",
             "[t_c pulls you into a fierce hug, and you return it, both of smiling gleefully.]",
-            "Can you imagine it? Little fluffs of fur that look like you and me. What will we name them? What will they be like? I have some ideas- oh, not for names sorry honey, for what we should do. Do you think the queens will let me decorate your nest in the nursery? Put some feathers in the moss, pretty flowers around the nest- the nest... You'll be staying in the nursery!",
+            "Can you imagine it? Little fluffs of fur that look like you and me. What will we name them? What will they be like? I have some ideas-", 
+            "Oh, not for names, sorry Love, for what we should do. Do you think the queens will let me decorate your nest in the nursery? Put some feathers in the moss, pretty flowers around the nest- the nest...",
+            "You'll be staying in the nursery!",
             "I'll ask the queens if I can stay with you, I'm sure they won't mind- no matter what, I want to be by your side. My goodness y_c, I can't wait."
         ]
     ],
@@ -7246,8 +7252,9 @@
             "stable"
         ],
         [
-            "Good morning love, are you feeling better today? Goodness, you're looking a little tired. But, it'll be so worth it, I hope one of our little puffballs has your eyes.",
-            "You'll be a fantastic parent, y_c, my dear they'll love you so much. Wait here, I'll grab you something to eat, I think the hunting patrol just got back, I'll be a minute, love. [You watch as t_c slips out of the den, you watch as they carefully pick out your favourite prey from the freshkill pile and make their way back to you. They waltz into the den and lay down next to you.]",
+            "Good morning Love, are you feeling better today? Goodness, you're looking a little tired. But, it'll be so worth it, I hope one of our little puffballs has your eyes.",
+            "You'll be a fantastic parent, y_c, my dear they'll love you so much. Wait here, I'll grab you something to eat, I think the hunting patrol just got back, I'll be a minute, love.",
+            "[You watch as t_c slips out of the den, you watch as they carefully pick out your favourite prey from the freshkill pile and make their way back to you. They waltz into the den and lay down next to you.]",
             "[You slowly begin to eat the prey, tiredness weighing you down. You smile as t_c grooms your shoulder. The two of you will be perfect, you're certain of it.]"
         ]
     ],
@@ -7259,9 +7266,11 @@
             "stable"
         ],
         [
-            "y_c, looking sharp as always love, love the way you've groomed your fur today. I wonder if you'll teach out kittens that technique, maybe we'll pass down it down through the family. We'll look like our own little clan hehe. Enemy warriors will see us and our perfectly groomed pelts from miles away.",
+            "y_c, looking sharp as always Love, loving the way you've groomed your fur today. I wonder if you'll teach out kittens that technique, maybe we'll pass down it down through the family.",
+            "We'll look like our own little clan hehe. Enemy warriors will see us and our perfectly groomed pelts from miles away.",
             "[You laugh, and state that our shadows will stretch beyond the horizon, our groomed pelts will consume the land!]",
-            "PFT- Yes, and we'll take over all the clans, one pelt at a time! Hahaha, I love you dear. I hope our kits have our sense of humour. I'm sure they will... It's only a matter of time."
+            "PFT- Yes, and we'll take over all the clans, one pelt at a time! Hahaha, I love you dear. I hope our kits have our sense of humour.",
+            "I'm sure they will... It's only a matter of time."
         ]
     ],
     "stable_mate_4": [
@@ -7273,8 +7282,11 @@
         ],
         [
             "I'm so sorry dear that I can't go for our evening walks tonight- I just feel so sore... I love these little furballs, well I will when I meet them.",
-            "y_c, can you imagine the whole family going on walks. It's a nice thought, though they'll probably have to be at least a few moons old... Maybe when they're really young we can put them on our backs and they can see the territory that way.",
-            "They'll giggle and squeal with laughter and you will look so dashing during the sunset. I will compliment my wonderful, beautiful and ever so perfect mate how strong they are and how loving they are to the kits. Don't shake your head at me y_c, I can see it so perfectly~ You'll be the best parent in the whole clan, love."
+            "y_c, can you imagine the whole family going on walks. It's a nice thought, though they'll probably have to be at least a few moons old...",
+            "Maybe when they're really young we can put them on our backs and they can see the territory that way.",
+            "They'll giggle and squeal with laughter and you will look so dashing during the sunset.",
+            "I will compliment my wonderful, beautiful and ever so perfect mate how strong they are and how loving they are to the kits.",
+            "Don't shake your head at me y_c, I can see it so perfectly~ You'll be the best parent in the whole clan, Love."
         ]
     ],
     "stable_mate_5": [
@@ -7287,7 +7299,8 @@
             "stable"
         ],
         [
-            "Just breathe, love, you'll be okay, I promise. I'm not going anywhere, I'm not leaving your side, if r_m thinks they can get rid of me, well then, they'll have to drag me out of here.",
+            "Just breathe, Love, you'll be okay, I promise. I'm not going anywhere, I'm not leaving your side and if r_m thinks they can get rid of me, well then-",
+            "They'll just have to drag me out of here!",
             "[They turn around and stare down the medicine cat who looks unamused.]",
             "Because I'm not moving."
         ]
@@ -7301,7 +7314,8 @@
             "stable"
         ],
         [
-            "[You shuffle inside the den, your nose poking through the entrance. You see t_c curled up in a nest, their breathing is choppy and their nose is scrunched up. It pains you to see them like this... You move inside swiftly and rest beside them, your tail curling around them.]",
+            "[You shuffle inside the den, your nose poking through the entrance. You see t_c curled up in a nest, their breathing is choppy and their nose is scrunched up.]",
+            "[It pains you to see them like this... You move inside swiftly and rest beside them, your tail curling around them.]",
             "Hmm... y_c, is that you?...........Love, you shouldn't be here........... [t_c's eyes are still shut as they whisper.]",
             "[You hold them tighter and watch as they smile.]",
             "... Okay... I love you, y_c... You can stay here, even if it's only for a little while..."
@@ -7318,7 +7332,7 @@
         [
             "Love, darling- y_c, please, please honey calm down- it's not that bad... Really, I'm in good paws, though I do appreciate your concern, I assure you, I'm fi-",
             "[They wince and shutter slightly, you move to catch them.]",
-            "Oh love, what would I do without you?"
+            "Oh Love, what would I do without you?"
         ]
     ],
     "stable_mate_8": [
@@ -7330,7 +7344,8 @@
             "stable"
         ],
         [
-            "Love, you should stop staring at the ceiling and try to get some rest, I know it's hard but you'll feel better. Starclan's watching over you and most importantly, I'm watching over you. It won't be long before you return to your duties, but for now my dear, get some rest."
+            "Love, you should stop staring at the ceiling and try to get some rest, I know it's hard but you'll feel better.",
+            "Starclan's watching over you and most importantly, I'm watching over you. It won't be long before you return to your duties, but for now my dear, get some rest."
         ]
     ],
     "stable_mate_9": [
@@ -7342,9 +7357,12 @@
             "stable"
         ],
         [
-            "[You've hidden yourself away in your den, the loss of d_c has torn you apart. Your claws cling to the moss of your nest, you want to scream and shout- but yet your voice wavers... You can't speak, you feel- broken...]",
+            "[You've hidden yourself away in your den, the loss of d_c has torn you apart. Your claws cling to the moss of your nest, you want to scream and shout- but yet your voice wavers...]",
+            "[You can't speak, you feel- broken...]",
             "Love?",
-            "y_c, my dear... [You glance at t_c and gesture for them to rest beside you, they carefully coil their tail around yours. You both stay silent for a while before t_c speaks again.] I love you, y_c, I love you so much, please- please don't shy away from me, this grief... It's okay to talk. And I'll wait here, and I'll listen when you're ready... For now, it's okay...",
+            "y_c, my dear...",
+            "[You glance at t_c and gesture for them to rest beside you, they carefully coil their tail around yours. You both stay silent for a while before t_c speaks again.]",
+            "I love you, y_c, I love you so much, please- please don't shy away from me, this grief... It's okay to talk. And I'll wait here, and I'll listen when you're ready... For now, it's okay...",
             "[You press yourself into their fur and begin to sob, t_c gently holds you as you wail. They don't say anything, they don't have to. Just being here, that's enough for you.]"
         ]
     ],
@@ -7358,7 +7376,8 @@
         ],
         [
             "I can't believe they're gone... I knew it was to happen someday, but not yet, not like this... It was too soon... d_c, why? Why... Why did you have to go?",
-            "[You rest your head on their shoulder as t_c weeps. You both stand before d_c's grave. The rest of the clan has already left the vigil, leaving the two of you alone. You know t_c prefers to not dive too deeply into these things, but you can tell they're glad you're here.]",
+            "[You rest your head on their shoulder as t_c weeps. You both stand before d_c's grave. The rest of the clan has already left the vigil, leaving the two of you alone.]",
+            "[You know t_c prefers to not dive too deeply into these things, but you can tell they're glad you're here.]",
             "Love, what will I do without d_c?......."
         ]
     ],
@@ -7379,8 +7398,8 @@
             "stable"
         ],
         [
-            "My love, I was meaning to ask, what have you done with your claws as of recently? They're looking absolutely magnificent today!",
-            "Awww, love, are you blushing? Stop, please, I haven't even complimented how beautiful your eyes are in this light!"
+            "My Love, I was meaning to ask, what have you done with your claws as of recently? They're looking absolutely magnificent today!",
+            "Awww, Love, are you blushing? Stop, please, I haven't even complimented how beautiful your eyes are in this light!"
         ]
     ],
     "stable_mate_48": [
@@ -7402,7 +7421,11 @@
             "stable"
         ],
         [
-            "You want to know something, love? Sometimes I question how I fell for a cat like you... I never thought I'd be so lucky, I've always wanted a mate but, I didn't think it was going to be you, nor could I ever imagine how wonderful it would be. You're perfect, I truly don't deserve you... [You quickly press your nose into their cheek, t_c shuts their mouth and begins to purr.] You ruin me, y_c."
+            "You want to know something, Love? Sometimes I question how I fell for a cat like you... I never thought I'd be so lucky, I've always wanted a mate but-",
+            "I didn't think it was going to be you, nor could I ever imagine how wonderful it would be.",
+            "You're perfect, I truly don't deserve you...",
+            "[You quickly press your nose into their cheek, t_c shuts their mouth and begins to purr.]",
+            "You ruin me, y_c."
         ]
     ],
     "stable_mate_50": [
@@ -7413,7 +7436,8 @@
         ],
         [
             "Ever since I met you, y_c, my life has been perfect. But, one day, I fear- no I dread the fact that it will end... I can't imagine my life without you and the thought of you being just out of my grasp terrifies me. It destroys me.",
-            "y_c, know this, I will fight, I will do whatever I can to protect you. That's a promise. I can't stand the thought of losing you and I'll make sure I'll do whatever I can to keep you safe, to keep you here with me. Nothing will tear us apart, not even Starclan itself."
+            "y_c, know this, I will fight, I will do whatever I can to protect you. That's a promise. I can't stand the thought of losing you and I'll make sure I'll do whatever I can to keep you safe, to keep you here with me.",
+            "Nothing will tear us apart, not even Starclan itself."
         ]
     ],
     "stable_mate_11": [
@@ -7435,9 +7459,12 @@
             "stable"
         ],
         [
-            "I tell you this, love, when I'm out of here, the whole of the territory will feel my wrath. I'm looking forward to having these kits, don't get me wrong- but, argh! I just wish they didn't slow me down... When our kittens are born, I'll train them to fight! So that way, we can go on patrols together!- Love, why are you looking at me like that? Was it something I said?",
+            "I tell you this, Love, when I'm out of here, the whole of the territory will feel my wrath. I'm looking forward to having these kits, don't get me wrong- but, argh! I just wish they didn't slow me down...",
+            "When our kittens are born, I'll train them to fight! So that way, we can go on patrols together!-",
+            "Love, why are you looking at me like that? Was it something I said?",
             "[You raise your eyebrow at them, your ears flattening.]",
-            "Oh, darling, I wasn't actually thinking about taking them outside the camp not to worry! But anyways, you'll be strong enough for the both of us! My mate, y_c, the fearsome warrior who will raise an army of terrifying balls of fluffy cuteness!"
+            "Oh, darling, I wasn't actually thinking about taking them outside the camp not to worry! But anyways, you'll be strong enough for the both of us!",
+            "My mate, y_c, the fearsome warrior who will raise an army of terrifying balls of fluffy cuteness!"
         ]
     ],
     "introspective_mate_8": [
@@ -7550,7 +7577,8 @@
         ],
         [
             "Hey, look out for y_s in the apprentice's den, alright?",
-            "I'm a little worried about them ..."
+            "The two of you are family. That's important. No one can ever take that from you.",
+            "Now that you're older, it's more vital now than ever that the two of you support each other."
         ]
     ],
     "genparent_toapp2": [
@@ -7735,9 +7763,9 @@
         ],
         [
             "[t_c is talking with r_c across camp.]",
-            "Haha, yeah, and then ... Ohh, here's the cat of the hour, y_c! What's up? Me and r_c were just talking about embarrassing moments.",
-            "Oh, SPEAKING of embarrassing, r_c, you gotta get a load of this story ...",
-            "[t_c then proceeds to regale r_c with the most embarrassing possible stories from your kithood as possible.]",
+            "Haha, yeah, and then ... Ohh, here's the cat of the hour, my sibling! What's up? Me and r_c were just talking about embarrassing moments.",
+            "Oh, SPEAKING of embarrassing, hey, you gotta get a load of this story ...",
+            "[t_c then proceeds to regale the cat with the most embarrassing possible stories from your kithood as possible.]",
             "[Clearly, your Clanmate sees you in a new light now, and t_c shoots you a smarmy grin. Not to worry ... You'll get them back later.]"
         ]
     ],
@@ -8064,6 +8092,909 @@
         ],
         [
             "Your words mean nothing. Just like you."
+        ]
+    ],
+    "neurotic_gen": [
+        [
+            "Any",
+            "neurotic"
+        ],
+        [
+            "AAH!",
+            "[t_c literally startles at their own shadow, then awkwardly starts grooming their chest fur, trying to play it off.]"
+        ]
+    ],
+    "neurotic_gen1": [
+        [
+            "Any",
+            "neurotic"
+        ],
+        [
+            "[t_c anxiously scans the sky for hawks, fur bristling.]",
+            "[You're pretty sure that trying to talk to them in this state would give them a heart attack, or worse.]"
+        ]
+    ],
+    "neurotic_gen2": [
+        [
+            "Any",
+            "neurotic",
+            "random_cat"
+        ],
+        [
+            "[t_c watches r_c and r_w laugh together a little ways away, apparently too nervous to join in the conversation.]",
+            "[You decide to leave the poor cat alone.]"
+        ]
+    ],
+    "neurotic_gen3": [
+        [
+            "Any",
+            "neurotic",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "Ah, hey, y_c! Pretty nice out today, huh?",
+            "Wanna come soak up the rays with me?",
+            "Gotta enjoy the sun while we still can. Pretty sure it's gonna rain tomorrow ... See those clouds gathering?",
+            "Ah ... gimme a second. Thinking about it too hard makes me dizzy."
+        ]
+    ],
+    "neurotic_gen4": [
+        [
+            "no_kit",
+            "neurotic",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "Hey, do you think r_w is mad at me?",
+            "[You ask t_c why they think the warrior could possibly have a problem with them.]",
+            "Well, when they greeted me this morning, they said 'Hello' instead of 'Hi', like they usually do!",
+            "And, they didn't laugh at my joke on patrol earlier ...",
+            "All clear signs that they must hate me!"
+        ]
+    ],
+    "neurotic_gen5": [
+        [
+            "no_kit",
+            "neurotic",
+            "random_cat"
+        ],
+        [
+            "r_c told me earlier that 'no other cat in the Clan could do what I do' ... What do you think they meant by that?",
+            "[Leave it to t_c to overthink even the sincerest of compliments.]"
+        ]
+    ],
+    "neurotic_gen6": [
+        [
+            "Any",
+            "neurotic",
+            "cool"
+        ],
+        [
+            "[t_c has been grooming every inch of themself for what seems like hours now ...]",
+            "[You can't tell if they're incredibly vain, or just super paranoid.]"
+        ]
+    ],
+    "neurotic_gen7": [
+        [
+            "Any",
+            "neurotic"
+        ],
+        [
+            "[t_c avoids stepping around every puddle in camp after a rain.]",
+            "[Confused by this ritual, you ask them why.]",
+            "Ah ... If I'm being honest, I can't stand the look of my own reflection, heh.",
+            "Plus, it's no good getting my paws wet, either."
+        ]
+    ],
+    "neurotic_like": [
+        [
+            "Any",
+            "neurotic",
+            "platonic_love"
+        ],
+        [
+            "y_c! Look out!",
+            "[t_c tackles you, barely pushing you out of the way of a falling branch in camp.]",
+            "[A group of cats surround you to make sure you're okay. t_c's eyes are wild, and they're trembling in every limb.]",
+            "*Pant* *Pant* Are ... Are you okay?",
+            "[You assure them that you are, and they step away from you, still shaking.]",
+            "[It must've taken a lot for a nervous wreck like t_c to pull a stunt like that ...]",
+            "[You wonder where the sudden burst of courage came from.]"
+        ]
+    ],
+    "neurotic_like1": [
+        [
+            "Any",
+            "neurotic",
+            "platonic_love"
+        ],
+        [
+            "Ah - hey, y_c! Over here!",
+            "Where have you been? I've been waiting for you to hit up the freshkill pile ... I'm so starving, I could eat a whole badger!",
+            "Ack, okay, that's kind of gross ... Maybe not a badger, but like, a quail, or something.",
+            "[You and t_c chat happily as you grab your food together.]"
+        ]
+    ],
+    "neurotic_like2": [
+        [
+            "no_kit",
+            "neurotic",
+            "platonic_love",
+            "random_cat"
+        ],
+        [
+            "Hey ... I saw you hanging out with r_c earlier. They're a fun cat, huh?",
+            "It was good, seeing them make you laugh so hard, heh ...",
+            "Way harder than I ever could ...",
+            "[t_c smiles, but you swear you see their eyes flash with something potent and fearful.]"
+        ]
+    ],
+    "neurotic_like3": [
+        [
+            "no_kit",
+            "neurotic",
+            "introspective",
+            "platonic_like"
+        ],
+        [
+            "[You invite t_c to sneak out of camp on a late night walk with you.]",
+            "Erm ... I think I'm okay.",
+            "I'd prefer a quiet night in, if that's alright with you.",
+            "Make sure you're careful, though! I'll try and cover for you if you get caught, but, ah, no promises."
+        ]
+    ],
+    "neurotic_like4": [
+        [
+            "Any",
+            "neurotic",
+            "platonic_love"
+        ],
+        [
+            "[You sneak back into camp after a late night patrol, only to find t_c up waiting on you.]",
+            "y_c! You're back!",
+            "You were gone so long, I was starting to get worried ... I thought you had been hurt, or gone missing, or - or --",
+            "[You press your pelt into t_c's, assuring them that you're alright. They bury their face in your fur, still practically shaking in relief.]"
+        ]
+    ],
+    "neurotic_like5": [
+        [
+            "Any",
+            "neurotic",
+            "platonic_love"
+        ],
+        [
+            "[t_c is sitting in camp with an anxious look on their face.]",
+            "[But, as soon as they see you, their expression melts into a soft and pleasant smile.]",
+            "Oh, hey, you. Everything okay?",
+            "[They relax into your fur and the two of you swap details of your days.]"
+        ]
+    ],
+    "neurotic_like6": [
+        [
+            "Any",
+            "neurotic",
+            "introspective",
+            "sweet",
+            "platonic_like"
+        ],
+        [
+            "Mm? Oh, watch out, y_c! Don't come any closer!",
+            "[You leap back, expecting thorns or sharp rocks, but instead, t_c's gaze is fixed on ... a bee?]",
+            "It must've just stung something ... I think it's dying. Poor little guy.",
+            "[You ask t_c why they don't just squish it. They recoil.]",
+            "It's a living thing, just like you or me! What crime has this bee committed? The crime of being small?",
+            "No, it deserves a death with dignity, just like the rest of us ...",
+            "[The bee suddenly falls very still.]",
+            "Oh ... I think it just went ...",
+            "Ah, I'm sorry little guy ... I hope, wherever you are, you find plenty of flowers, and even more mercy.",
+            "[t_c gently scoops up the bee in their paw and lays it in a bed of moss.]",
+            "[They trot away, but you linger by the bee for another moment, in awe of their gentleness and insight.]",
+            "[You vow to never kill another bug again.]"
+        ]
+    ],
+    "neurotic_like7": [
+        [
+            "no_kit",
+            "neurotic",
+            "platonic_love"
+        ],
+        [
+            "Hey, y_c! What are we gonna do today?",
+            "What? You ... need to get some chores done by yourself?",
+            "Oh, okay ... That's fine. I guess I'll find something else to do.",
+            "[t_c leaves you to work, but you notice their tail is significantly droopier than when they bounded up to you ...]"
+        ]
+    ],
+    "neurotic_dislike": [
+        [
+            "Any",
+            "neurotic",
+            "dislike"
+        ],
+        [
+            "Leave me alone ..."
+        ]
+    ],
+    "neurotic_dislike1": [
+        [
+            "Any",
+            "neurotic",
+            "dislike"
+        ],
+        [
+            "[t_c shoots across camp as soon as they catch wind of your approach, tail bristling.]"
+        ]
+    ],
+    "neurotic_dislike2": [
+        [
+            "Any",
+            "neurotic",
+            "dislike",
+            "random_cat"
+        ],
+        [
+            "[t_c seemingly shrinks into their own pelt as soon as you approach.]",
+            "y_c ... Hello ...",
+            "[They seem wildly uncomfortable the whole conversation, and as soon as it's done, they shoot across camp to r_w, who gives you a death glare.]",
+            "[What's all that about ...?]"
+        ]
+    ],
+    "neurotic_romlike": [
+        [
+            "Any",
+            "neurotic",
+            "romantic_like",
+            "random_cat",
+            "non-mates"
+        ],
+        [
+            "Oh, y_c, it's you!",
+            "I mean, ah, o-of course it's you! Who else would it be?",
+            "Not that I was like, expecting you, or anything! Uh, not that I was not expecting you either, of course.",
+            "I was just, ah, sitting here, not really expecting anyone, or, ah, thinking about anything weird at all, really.",
+            "Oh, would you look at the time! r_c totally needs me now, but it was great seeing you! Uh, in a normal way, of course.",
+            "[t_c stiffly walks across camp, tripping over their own paws a few times for good measure.]",
+            "[What in StarClan's name was that about?"
+        ]
+    ],
+    "neurotic_romlike1": [
+        [
+            "Any",
+            "neurotic",
+            "romantic_like",
+            "random_cat"
+        ],
+        [
+            "[t_c does an impression of r_c that's so accurate, you can't help but crack up.]",
+            "[Their eyes flash and they smile sweetly every time you laugh.]",
+            "Heh ... You're so beautiful when you laugh like that, y'know.",
+            "... Uhm. No, I'm so sorry, I don't know why I just said that, I don't --",
+            "[You stop them, insisting that you loved the compliment.]",
+            "What? R-Really?",
+            "Heh ...",
+            "[t_c looks away shyly, grinning from ear to ear.]"
+        ]
+    ],
+    "neurotic_romlike2": [
+        [
+            "Any",
+            "romantic_like"
+        ],
+        [
+            "[You catch t_c admiring you shyly out of the corner of your eye.]",
+            "[The way they look at you ... No one's ever looked at you like that before.]",
+            "[Like you hung the moon.]",
+            "[They look away and bury their face in their paws as soon as you glance over.]",
+            "[You must have them really smitten ...]"
+        ]
+    ],
+    "neurotic_romlike3": [
+        [
+            "Any",
+            "romantic_like",
+            "non-mates"
+        ],
+        [
+            "[t_c seems to be avoiding you lately.]",
+            "[You decide to approach them and ask what their problem is.]",
+            "Ah - No, no, y_c, you've got it all wrong.",
+            "I'm not mad at you. Really, I swear, I'm not. It's just that, when I'm with you, it feels ...",
+            "I mean, because I know it's impossible, I ...",
+            "Augh. All my words, they're getting so caught up ...",
+            "I just ... think it's best for us to spend some time apart, okay?",
+            "Until ... Until I can get myself under control.",
+            "Ack - I'm sorry.",
+            "[t_c flees, clearly embarrassed. What a strange cat. You wonder what type of feelings they were walking about ...]"
+        ]
+    ],
+    "neurotic_romlike4": [
+        [
+            "Any",
+            "romantic_like",
+            "non-mates"
+        ],
+        [
+            "y_c, what do you do if you like someone you know you don't stand a chance with?",
+            "Is it best to just move on and forget about it? Or, is it worth it just to stay in love for a little while, even if nothing can come of it?",
+            "[You ask t_c why they ask.]",
+            "Uhm ...",
+            "[They blush and glance away shyly.]",
+            "Asking for a friend."
+        ]
+    ],
+    "neurotic_mate": [
+        [
+            "Any",
+            "neurotic",
+            "from_mate",
+            "leaffall",
+            "leafbare"
+        ],
+        [
+            "Oh, y_c, a-are you cold?",
+            "[t_c presses into your pelt, covering you with their tail and purring softly.]",
+            "It's a tough season ... You gotta make sure you keep warm, 'kay?"
+        ]
+    ],
+    "neurotic_mate1": [
+        [
+            "Any",
+            "from_mate"
+        ],
+        [
+            "Hmm ... Good morning, sleepyhead ~",
+            "[t_c rolls over in your shared nest and buries their head in your fur, purring so hard their body vibrates.]",
+            "Don't even think about getting up ... I don't ever wanna move from this spot, not ever."
+        ]
+    ],
+    "neurotic_mate2": [
+        [
+            "Any",
+            "from_mate",
+            "neurotic",
+            "cool",
+            "introspective"
+        ],
+        [
+            "Hello, my darling.",
+            "Heh. I love calling you that.",
+            "My darling. My dearest. My beloved. My betrothed. My beautiful. My adoring.",
+            "I'm just -- so lucky to be able to call you mine."
+        ]
+    ],
+    "neurotic_mate3": [
+        [
+            "Any",
+            "neurotic",
+            "from_mate"
+        ],
+        [
+            "Hey, love. I saved you this from out on patrol.",
+            "[t_c drops a flower at your paws. With a purr, you remark that it's almost as beautiful as they are.]",
+            "What -- tch. Me? Beautiful? Ah, y-you really think so? Really?",
+            "Oh, well, if - if anything, you're the beautiful one, not me. You're the one that's like this flower. That's why I got it for you, I mean.",
+            "Ahh, heh ... Is it hot in here, suddenly?",
+            "[Even though you and t_c are mates, it's still as easy as ever to get them flustered!]"
+        ]
+    ],
+    "neurotic_mate5": [
+        [
+            "Any",
+            "from_mate"
+        ],
+        [
+            "[You catch t_c staring at you, eyes as wide and admiring as if your pelt were woven from the stars themselves.]",
+            "Ah, y_c, when the light hits you just like that ...",
+            "I must be the luckiest cat in the entire world."
+        ]
+    ],
+    "neurotic_mate7": [
+        [
+            "Any",
+            "neurotic",
+            "from_mate",
+            "random_cat"
+        ],
+        [
+            "Ah ... I was just reminiscing with r_w about the time before we were mates.",
+            "It's so funny, I liked you for so long, but never in a hundred, million moons did I ever dream you'd like me back!",
+            "Sometimes, I still have a hard time believing it ...",
+            "How'd I get so lucky, huh?"
+        ]
+    ],
+    "apprentice_yourkit": [
+        [
+            "any",
+            "from_adopted_kit",
+            "from_your_kit",
+            "cool",
+            "upstanding",
+            "stable",
+            "brooding",
+            "neurotic",
+            "random_cat"
+        ],
+        [
+            "y_c, not to brag, but tm_n told me that I was the most advanced apprentice they've ever seen today during training.",
+            "[t_c smiles and coyly purrs as you ruffle their fur, complimenting their tenacity.]",
+            "Hehe ... Okay, okay, it's not such a big deal!",
+            "Well, okay, maybe it is a big deal ...",
+            "[You insist to d_n that your kit deserves the first pick of the freshkill pile, which they take to gladly.]",
+            "[Your little guy just couldn't be making you more proud!]"
+        ]
+    ],
+    "apprentice_yourkit1": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c watches tm_n studiously, face screwed up in concentration.]",
+            "[You giggle a little at their 'serious' face.]",
+            "[Hard to take a cat seriously after you spent moons licking their belly to help them make dirt.]"
+        ]
+    ],
+    "apprentice_yourkit2": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "cool",
+            "upstanding",
+            "assertive",
+            "brooding",
+            "unabashed",
+            "unlawful"
+        ],
+        [
+            "Ugh, yes, y_c, I'm gonna be safe in my training and keep my claws sheathed! Relax!",
+            "I'm not a little kit, anymore, y'know ... I can look out for myself."
+        ]
+    ],
+    "apprentice_yourkit3": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[As r_m shares news from o_cClan, you realize with a jolt that your kit, t_c, is now old enough to face the enemy Clan in battle.]",
+            "[You imagine your baby torn to shreds at the claws of o_cClan warriors ... Or worse, your baby's maw dripping with blood, forced to take another cat's life in the name of the Clan.]",
+            "[You draw closer to t_c and wrap a protective tail around them, much to their confusion.]",
+            "[You silently vow not to let anything bad happen to them ... Not ever.]"
+        ]
+    ],
+    "apprentice_yourkit4": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[t_c has been trying to act all big and tough ever since leaving the nursery.]",
+            "[But you notice that they sleep near a little scrap of your fur at night, apparently still comforted by your scent.]"
+        ]
+    ],
+    "gen_yourkit": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c and t_l race up to you, breathless from squabbling.]",
+            "y_c! Please tell t_l to stop picking on me!",
+            "[t_c's sibling butts in that t_c stole a piece of prey they had been saving.]",
+            "[Unbelievable, that they're still bickering like they did in the nursery.]",
+            "[ ... But, a little adorable, too.]"
+        ]
+    ],
+    "gen_yourkit1": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[t_c loses their balance and trips a little while grooming their fur.]",
+            "[They used to do that all the time as a kit ...]",
+            "[You purr to yourself, comforted by the fact that, despite all their moons and challenges, they're still the same cat who used to sleep at your side in the nursery every night.]"
+        ]
+    ],
+    "gen_yourkit2": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "platonic_love"
+        ],
+        [
+            "[t_c presses into your pelt after what was clearly a long day.]",
+            "...",
+            "... Can you do that thing? With your tail? Like you used to when I was young?",
+            "[You gently drape your tail over t_c's shoulders, and they relax into your fur, seemingly put at ease.]"
+        ]
+    ],
+    "gen_yourkit3": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_l makes t_c laugh over and over, reminiscing on old kit stories you used to tell them in the nursery.]",
+            "[You think about butting in with some stories they left out, but decide not to spoil the moment.]"
+        ]
+    ],
+    "gen_yourkit4": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_l makes t_c laugh over and over, reminiscing on old kit stories you used to tell them in the nursery.]",
+            "[You think about butting in with some stories they left out, but decide not to spoil the moment.]"
+        ]
+    ],
+    "gen_yourkit5": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "Hey, y_c, what was that one story you used to tell in the nursery? The one about the kit who went missing about not eating all of their freshkill?",
+            "[You retell the details of the story to t_c.]",
+            "Ah, yes! That's the one! StarClan, it was driving me crazy, not remembering ...",
+            "Kind of a messed up story, no?",
+            "[You concede that maybe it was a little morbid ...]",
+            "But, hey, I guess I've always cleaned my bones since then."
+        ]
+    ],
+    "gen_yourkit6": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c is talking with l_n across camp.]",
+            "[They're so poised and intelligent with their words, so much smarter than you ever have dreamed of becoming ...]",
+            "[You beam with pride as l_n walks by, thrilled by the joy of being the parent of such an incredible young cat.]"
+        ]
+    ],
+    "gen_yourkit7": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c and t_l share tongues in the warmth of the clearing.]",
+            "[Glad to see your kits are still getting along well, even after all these moons.]"
+        ]
+    ],
+    "gen_yourkit8": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[t_c has a little rasp in their voice, and you swear they sound just like y_p, in the way they pronounce certain words ...]",
+            "[You wonder if your parent is proud of their grandkit.]"
+        ]
+    ],
+    "gen_yourkit9": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "Oh, hey, y_c! I learned this really cool new thing today, it's like ...",
+            "[The way t_c's eyes flash with excitement reminds you so much of y_m, it's crazy.]",
+            "[Clearly, your mate has had an influence on them.]"
+        ]
+    ],
+    "gen_yourkit10": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "y_c, did you see that I got a compliment from l_n today? The leader of the whole Clan!",
+            "[They beam at you, tail swishing with pride, as you purr your compliments.]",
+            "[Nice to see you're still the first one they come to with good news.]"
+        ]
+    ],
+    "gen_yourkit11": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit",
+            "random_cat"
+        ],
+        [
+            "[You tease t_c about how much time they've been spending with their crush, asking if there will maybe be an expansion to the family soon.]",
+            "Ah, come off it, y_c. their_crush is just a friend, that's all ...",
+            "[They sigh wistfully and you can't suppress an eyeroll. If t_c and their_crush are 'just friends', then hedgehogs can fly.]",
+            "[Still, you just hope the kit has the sense not to get their heart broken ... Or else you might have to have a conversation with their_crush yourself.]"
+        ]
+    ],
+    "gen_mate": [
+        [
+            "Any",
+            "random_cat"
+        ],
+        [
+            "[t_c cuddles with t_m across camp, a blissful expression on their face.]",
+            "[Clearly, they don't want to be interrupted right now, and you decide to leave it alone.]"
+        ]
+    ],
+    "gen_mate1": [
+        [
+            "Any",
+            "random_cat"
+        ],
+        [
+            "[t_c is sharing tongues with t_m in the clearing.]",
+            "[Who would have the heart to interrupt such a display of coupley bliss?]"
+        ]
+    ],
+    "thoughtful_mate": [
+        [
+            "no_kit",
+            "random_cat",
+            "sweet",
+            "neurotic",
+            "stable",
+            "introspective"
+        ],
+        [
+            "Hm? You want this fish, y_c?",
+            "Ah, sorry. No can do. t_m just asked me to fetch it for them.",
+            "If it were for me, you could totally have it, but I just couldn't bear to let my mate down, y'know?",
+            "But there's a trout towards the back of the pile if you still have a taste for fish!"
+        ]
+    ],
+    "excited_mate": [
+        [
+            "Any",
+            "random_cat",
+            "sweet",
+            "neurotic",
+            "stable",
+            "upstanding",
+            "unabashed"
+        ],
+        [
+            "Eek! Can you believe it, y_c? t_m just brought me back the most thoughtful gift from their patrol!",
+            "I must be the luckiest cat in the whole Clan ... no, in the entire world!"
+        ]
+    ],
+    "calm_mate": [
+        [
+            "Any",
+            "random_cat",
+            "introspective",
+            "stable",
+            "brooding"
+        ],
+        [
+            "[You compliment t_c on a pretty flower they have on their pelt.]",
+            "Hm? Oh, thank you.",
+            "t_m brought it for me ...",
+            "[t_c trails off into a melty smile, reduced to a puddle at just the thought of their mate.]"
+        ]
+    ],
+    "unlawful_newborn": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "How... small."
+        ]
+    ],
+    "gen_mate2": [
+        [
+            "Any",
+            "random_cat",
+            "leaffall",
+            "leafbare"
+        ],
+        [
+            "[t_c is completely lost in t_m's fur, to the point that it's hard to even discern them as two different cats.]",
+            "[You suppose that's one way to beat the cold ...]"
+        ]
+    ],
+    "gen_mate3": [
+        [
+            "Any",
+            "random_cat"
+        ],
+        [
+            "[It rained earlier, and the camp is covered in puddles.]",
+            "[t_c steps in one a little too hard, accidentally splashing t_m.]",
+            "[t_m splashes them back in retaliation, and before you know it, the couple is running around camp, skidding and laughing in the mud.]",
+            "[You roll your eyes at their coupley behavior ... But, you can't deny it's a little cute, too.]"
+        ]
+    ],
+    "gen_mate4": [
+        [
+            "Any",
+            "random_cat"
+        ],
+        [
+            "[You go to talk to t_c, but right as you open your mouth, they notice t_m across camp and rush to greet them.]",
+            "[The two cats intertwine their tails and quickly rush off to share a meal together. Clearly, they're too busy with couple time to pay you any mind ...]"
+        ]
+    ],
+    "gen_mate5": [
+        [
+            "Any",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "Heehee! ...",
+            "Oh, hey y_c. Sorry, I was just remembering this really funny joke t_m said earlier ...",
+            "What was the joke?",
+            "Ah, it's sort of a personal thing between me and t_m ... I'm not sure you'd find it funny.",
+            "It goes like - 'Why do the rivers freeze over in leafbare? Must be the work of fox-snakes!!!'",
+            "... It's funnier in context, I swear."
+        ]
+    ],
+    "gen_mate6": [
+        [
+            "no_kit",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "Hm ... A hawk feather, maybe? No, no, too hard to come by ...",
+            "Oh, hey, y_c. I was just brainstorming possible gift ideas for t_m.",
+            "They're just so incredible and perfect ... What could I possibly give them to show how much they mean to me?",
+            "A song? Say, that's not a bad idea ... Good thinking, y_c.",
+            "I'll keep you updated on how it goes."
+        ]
+    ],
+    "gen_mate7": [
+        [
+            "any",
+            "random_cat",
+            "platonic_like",
+            "assertive",
+            "sweet",
+            "upstanding",
+            "unabashed",
+            "silly",
+            "neurotic"
+        ],
+        [
+            "Hey, y_c, you'll never guess what t_m did!",
+            "They took me out to this secret spot on the territory and we spent the whole night out there, just talking and laughing together ...",
+            "Ah, StarClan, isn't t_m great? They're just so beautiful, and funny, and smart, and did I mention beautiful? Plus, brave and kind and courageous and --",
+            "[You swear to StarClan, if you have to hear t_c talk about how much they love their mate any more, it just might drive you insane.]"
+        ]
+    ],
+    "gen_mate07": [
+        [
+            "any",
+            "random_cat",
+            "from_your_parent",
+            "from_adopted_parent"
+        ],
+        [
+            "[t_c and t_m share tongues, purring and laughing across camp.]",
+            "[You and y_l fake gag at their affection, but secretly, you think it's sort of sweet how well your parents get along!]"
+        ]
+    ],
+    "assertive_gen": [
+        [
+            "Any",
+            "assertive",
+            "random_cat"
+        ],
+        [
+            "[t_c is talking with r_w, their voice so loud it reverberates off the walls of camp.]",
+            "[For just one cat, they sure to manage to take up a lot of space!]"
+        ]
+    ],
+    "assertive_gen1": [
+        [
+            "Any",
+            "assertive",
+            "cool",
+            "random_cat"
+        ],
+        [
+            "[t_c is flexing, showing off their muscles for their_crush.]",
+            "[It almost seems like t_c is enjoying the whole display more than their_crush is.]"
+        ]
+    ],
+    "assertive_gen2": [
+        [
+            "Any",
+            "assertive",
+            "they_clanborn",
+            "greenleaf",
+            "newleaf",
+            "leaffall"
+        ],
+        [
+            "Heh. Nice weather today, huh?",
+            "Sun on my pelt, wind in my ears ... Could you imagine being a kittypet, having to be cooped up with some twoleg all day? I'd lose it!",
+            "Just another reason why it's great to be a c_nClan cat."
+        ]
+    ],
+    "assertive_gen3": [
+        [
+            "Any",
+            "assertive",
+            "platonic_like"
+        ],
+        [
+            "Hey, y_c, dare me to jump off the warrior's den!",
+            "No? Why in StarClan's name not?!",
+            "Because I could hurt myself ...?",
+            "But that's what's fun about it!"
+        ]
+    ],
+    "assertive_gen4": [
+        [
+            "Any",
+            "assertive",
+            "platonic_like"
+        ],
+        [
+            "I met some kittypets on patrol today ... StarClan, I sure gave them a scare!",
+            "One look at my 'mean' face and they went mewling back home to their twolegs like little kits running into the nursery! Bahahahahaha!"
+        ]
+    ],
+    "assertive_gen5": [
+        [
+            "Any",
+            "assertive",
+            "platonic_like"
+        ],
+        [
+            "I found this super cool cave network just outside the territory ... Wanna come explore it with me later?",
+            "What was I doing outside the territory?",
+            "Psh, do you seriously expect me to spend my entire life on c_nClan territory? How could any cat be happy being trapped like that?",
+            "That's basically just like being a kittypet, but with extra steps.",
+            "Now, are you coming with me, or not?"
+        ]
+    ],
+    "assertive_gen6": [
+        [
+            "Any",
+            "assertive",
+            "platonic_like"
+        ],
+        [
+            "Hey, buddy ... You're looking a little small, there. Have you been eating enough? Doing the exercises I gave you?",
+            "Y'know, you might think that shoulders are the most important muscle group to target, but the secret is, it's all in the hindquarters.",
+            "You're gonna wanna do at least five sets of leg lifts every day, then ...",
+            "[t_c spends several minutes describing, in-depth, their workout routine.]",
+            "... And that's all there is to it!",
+            "It might seem excessive, but I swear, it all pays off in the end."
         ]
     ]
 }

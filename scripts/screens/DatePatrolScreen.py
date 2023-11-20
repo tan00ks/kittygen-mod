@@ -52,6 +52,8 @@ class DatePatrolScreen(Screens):
         self.results_text = ""
         self.start_patrol_thread = None
         self.proceed_patrol_thread = None
+        self.dbclock = pygame.time.Clock()
+        self.cat_id = None
 
     def handle_event(self, event):
         if game.switches["window_open"]:
@@ -59,7 +61,10 @@ class DatePatrolScreen(Screens):
         
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if self.patrol_stage == "choose_cats":
-                self.handle_choose_cats_events(event)
+                if self.dbclock.tick() < 500:
+                    self.handle_choose_cats_events(event, doubleclick=True)
+                else:
+                    self.handle_choose_cats_events(event, doubleclick=False)
             elif self.patrol_stage == 'patrol_events':
                 self.handle_patrol_events_event(event)
             elif self.patrol_stage == 'patrol_complete':
@@ -73,7 +78,7 @@ class DatePatrolScreen(Screens):
             elif event.key == pygame.K_RIGHT:
                 self.change_screen('list screen')
 
-    def handle_choose_cats_events(self, event):
+    def handle_choose_cats_events(self, event, doubleclick=False):
         if 'cat_icon' in self.elements:
             if event.ui_element == self.elements['cat_icon']:
                 self.change_screen("patrol screen2")
@@ -94,8 +99,23 @@ class DatePatrolScreen(Screens):
             self.update_button()
         
         # Check is a cat is clicked
+        elif event.ui_element in self.cat_buttons.values() and doubleclick:
+            self.selected_cat = event.ui_element.return_cat_object()
+            if self.selected_cat.ID == self.cat_id:
+                if self.selected_cat in self.current_patrol:
+                    self.current_patrol.remove(self.selected_cat)
+                else:
+                    self.current_patrol.append(self.selected_cat)
+                self.update_cat_images_buttons()
+                self.update_button()
+            else:
+                self.selected_cat = event.ui_element.return_cat_object()
+                self.cat_id = self.selected_cat.ID
+                self.update_selected_cat()
+                self.update_button()
         elif event.ui_element in self.cat_buttons.values():
             self.selected_cat = event.ui_element.return_cat_object()
+            self.cat_id = self.selected_cat.ID
             self.update_selected_cat()
             self.update_button()
         elif event.ui_element == self.elements["add_remove_cat"]:
@@ -276,7 +296,7 @@ class DatePatrolScreen(Screens):
                         self.patrol_type = 'general'
 
                 if self.patrol_type == 'general':
-                    text = 'random patrol type'
+                    text = 'date'
                 elif self.patrol_type == 'training':
                     text = 'training'
                 elif self.patrol_type == 'border':
@@ -636,9 +656,7 @@ class DatePatrolScreen(Screens):
             game.switches['patrolled'] = []
         if not you.dead and "4" not in game.switches['patrolled'] and not you.outside and not you.not_working():
             for the_cat in Cat.all_cats_list:
-                if not the_cat.dead and the_cat.in_camp and the_cat.ID not in game.patrolled and the_cat.status not in [
-                    'newborn', 'kitten', 'apprentice', 'mediator apprentice', 'medicine cat apprentice', "queen's apprentice"
-                ] and not the_cat.outside and the_cat not in self.current_patrol and the_cat.is_potential_mate(game.clan.your_cat) and the_cat.moons < game.clan.your_cat.moons + 40 and the_cat.moons > game.clan.your_cat.moons - 40:
+                if the_cat.in_camp and the_cat.ID not in game.patrolled and the_cat not in self.current_patrol and the_cat.is_dateable(game.clan.your_cat):
                     self.able_cats.append(the_cat)
 
         if not self.able_cats:

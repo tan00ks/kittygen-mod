@@ -595,7 +595,7 @@
         [
             "Ah, y_c! There's the little bruiser! How're you doing? Growing up big and strong?",
             "Y'know, at your age, I used to get into all sorts of trouble. Sneaking out of the nursery, following around the apprentices ... not to give you any ideas, or anything. Ahaha!",
-            "[r_c's laugh is so loud that it almost shakes your whole body.]"
+            "[t_c's laugh is so loud that it almost shakes your whole body.]"
         ]
     ],
     "assertive_tonewborn": [
@@ -1001,11 +1001,30 @@
     "assertive_elder_13": [
         [
             "Any",
+            "assertive",
+            "upstanding",
+            "cool",
+            "unabashed",
+            "unlawful",
             "platonic_like"
         ],
         [
             "Don't let anybody tell ya that we elders can't defend ourselves. In my prime, I could take down a whole o_cClan patrol ... With my leg broken!",
             "I'm serious! Ask anybody, they'll tell you!"
+        ]
+    ],
+    "assertive_elder_133": [
+        [
+            "Any",
+            "assertive",
+            "cool",
+            "unabashed",
+            "unlawful",
+            "platonic_like"
+        ],
+        [
+            "Tell ya what, there's one secret to me living this long: plain, dumb luck.",
+            "With all the stupid stunts I've pulled throughout my life, there's gotta be someone up in StarClan lookin' out for me if I've made it this far!"
         ]
     ],
     "introspective_elder_2": [

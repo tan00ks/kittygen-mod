@@ -79,7 +79,14 @@
         "y_s fakes an injury to spend more time with you in the medicine den.",
         "You give y_s a tour of the den, giggling at how overwhelmed they seem at all the herbs.",
         "Your training has kept both of you busy, but you y_s schedule some much-needed sibling time.",
-        "You spend the day cleaning out the very back corner of the herb store, much to the approval of your mentor."
+        "You spend the day cleaning out the very back corner of the herb store, much to the approval of your mentor.",
+        "You can't help but feel a bit left out after watching the warrior apprentices share an inside joke you don't understand.",
+        "As instructed by y_m, you take over the task of checking your clanmates ailments for the day. A glow of pride runs through you as you are entrusted with the duty.",
+        "You get turned around while trying to find a specific herb in the den. Why does y_m's way of organizing have to be so complicated?",
+        "You pull a face while chewing on a foul-tasting herb. y_m laughs and promises that you'll get used to it.",
+        "r_w claims they have such a foul bellyache, and they should really stay in from patrols today. You're convinced they simply ate too much prey, but y_m still demands you to provide them with juniper berries.",
+        "You're more than overjoyed to be working with the other apprentices, leading them out of camp for herb gathering. Apparently, they have been dreading it, and you feel lonely as the only cat to trek back with herbs in their mouth.",
+        "You bedazzle yourself with flowers from the herb store, feeling like the prettiest cat of c_nClan."
     ],
     "medicine cat apprentice assertive": [],
     "medicine cat apprentice brooding": [],
@@ -92,5 +99,8 @@
     "medicine cat apprentice sweet": [],
     "medicine cat apprentice unabashed": [],
     "medicine cat apprentice unlawful": [],
-    "medicine cat apprentice rare": []
+    "medicine cat apprentice rare": [
+        "Whilst you're out training, you see a strange looking cat. You run after them, only to find yourself falling into an empty darkness, only lit by the glow of stars. When you bring this to m_n, they immediately seem concerned, and have you tell l_n everything that happened.",
+        "You swear that you can hear ghostly whispers in the wind, begging you to listen."
+    ]
 }

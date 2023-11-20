@@ -1075,5 +1075,330 @@
             "The warriors got into a little scuffle over some prey earlier, but I managed to get everything sorted out no problem.",
             "As far as I can tell, you have nothing to worry about!"
         ]
+    ],
+    "sweet_mediator_1": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "Ah- what's a little one doing so far from the Nursery? Let's get ya back to the nest.",
+            "Here we go, let's get a little bit of nest material on ya to keep you warm... There you go, that should be much more comfortable.",
+            "I hope that solves your little conflict, hehe."
+        ]
+    ],
+    "sweet_mediator_2": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "Oh, what's up, y_c? Is there an issue you need me to solve?",
+            "You just want to hang out? Well, I don't see why not. I'm leaving to go to o_c soon, but I have some time to chat.",
+            "What's on your mind then, little fella?"
+        ]
+    ],
+    "sweet_mediator_3": [
+        [
+            "kitten",
+            "sweet",
+            "random_cat"
+        ],
+        [
+            "Hey y_c! What are you up to today, are you remembering to play safely?",
+            "Oh, you have an issue with r_c? Leave it to me, I'll help you out!"
+        ]
+    ],
+    "sweet_mediator_4": [
+        [
+            "kitten",
+            "sweet",
+            "random_cat"
+        ],
+        [
+            "Ah! I'm here! r_c told me all about the fight you had, are you alright?",
+            "What they said was wrong, let me deal with it, alright? You go get some rest, little one."
+        ]
+    ],
+    "sweet_mediator_5": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "-You see them mediating a pair of cats, who seemed to have gotten into a small fight over prey-",
+            "Oh, hey there y_c! I'll see you in a moment, if that's alright?",
+            "-It doesn't take too much longer before they trot over to you, a kind smile on their face-",
+            "Wow, today has been eventful! I've been kept on my toes, haha. What is it that you needed?",
+            "Ahh, you and r_c can't agree on what the best thing to learn in training is? Alright, take me to them and I'll see what I can do!"
+        ]
+    ],
+    "sweet_mediator_6": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Hey y_c! I've got some prey for ya. Don't worry about l_n, they know you're eating early.",
+            "r_c told me you were feeling really stressed lately, so I thought I'd give you a little bit of a break! You should talk to them after this, they're looking after ya."
+        ]
+    ],
+    "sweet_mediator_7": [
+        [
+            "apprentice",
+            "sweet"
+        ],
+        [
+            "Hey y_c, is something wrong?",
+            "Ah, I understand. Other clan cats are picking on you? I've gone through that before, believe it or not. They always called me fluff-brained for being too nice.",
+            "Just understand that, as painful as words are, they mean nothing if they don't know you. I know you're a wonderful cat just doing your best, and that's all we need you to be."
+        ]
+    ],
+    "sweet_mediator_8": [
+        [
+            "queen's apprentice",
+            "sweet"
+        ],
+        [
+            "Oh, y_c, the kits are arguing again? Mm, that seems to be an inevitability with them, hehe.",
+            "Come on, show me where they're at. I think I know what might just help."
+        ]
+    ],
+    "sweet_mediator_9": [
+        [
+            "medicine cat apprentice",
+            "sweet"
+        ],
+        [
+            "How's it going, y_c? Hopefully it's not been too stressful.",
+            "[They seem to nod patiently as you explain the situation to them, and they give you a gentle smile.]",
+            "I'll have that handled before you know it. Go get some rest, okay? Tomorrow is gonna be super busy."
+        ]
+    ],
+    "sweet_mediator_10": [
+        [
+            "mediator apprentice",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "y_c? Is everything alright?",
+            "[They comfortingly bring their tail around you, looking at you with a concerned look.]",
+            "Ah... Mediation didn't go well. I understand.. Why don't we go and talk with r_c about it?",
+            "[Looks like even mediators need mediators sometimes.]"
+        ]
+    ],
+    "sweet_mediator_11": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You see t_c running up to you, a kit tightly clamped in their jaws.]",
+            "y_c, I was just visiting o_cClan, and they found r_k by the border!",
+            "I tried to get back as fast as I could, they seemed really cold.. Do you know what we can do?"
+        ]
+    ],
+    "sweet_mediator_12": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "sweet"
+        ],
+        [
+            "[You find t_c leaving the camp just after most of the clan has gone to sleep. Deciding to follow out of curiosity, you see them stop at this little ledge, staring up at the sky.]",
+            "y_c, I know you followed me. You don't need to hide, I'm not upset or anything.",
+            "[The mediator gives you a kind smile, inviting you to sit with them via gesturing with their tail.]",
+            "I know I'm not typically the adventurous type, but this is my favorite place in the whole territory.",
+            "I love being a mediator, I love helping my clanmates, I love everything about my role... but it can be a lot sometimes.",
+            "Staring at the stars, knowing that our ancestors are staring down at us, smiling and laughing along...",
+            "Crying with us, just wanting to be part of our lives. Perhaps it's not fully true, but it's a comforting thought.",
+            "After a long day of nothing but fighting... imagining our ancestors coming down and just telling me I'm doing a good job, it makes me happy."
+        ]
+    ],
+    "sweet_mediator_13": [
+        [
+            "warrior",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Mm, another fight with r_w today? What seems to be the issue?",
+            "Ah, I understand. They stole the mouse you were going to eat, and then kicked dust at you when you tried to ask them about it.",
+            "Would you mind if I go and speak with them about it?",
+            "[t_c leaves for a while, leaving you to your thoughts. They soon return, placing the mouse at your paws.]",
+            "Alright. It seems like they thought you were playing around, and didn't realize you were upset.",
+            "If something like this happens again, please do let me know! I'll be happy to help."
+        ]
+    ],
+    "sweet_mediator_14": [
+        [
+            "medicine cat",
+            "sweet"
+        ],
+        [
+            "[You have been exhausted, cats have been getting injured left and right today, you didn't even get to eat without being interrupted.]",
+            "[You wander into a den, falling down into the nearest nest to you. You didn't realize that this wasn't the Medicine Cat's den, not until...]",
+            "Ah! y_c!",
+            "[Oops, you just fell down onto the poor Mediator. t_c stood up, beginning to ask what was wrong until they saw your exhaustion.]",
+            "Oh, I see... Give me a second, alright?",
+            "[They leave for a minute, bringing back some herbs. You point out which one you need, and they pass it to you.]",
+            "[t_c settles down next to you, curling their tail around you comfortingly.]",
+            "You just rest now. If anyone needs help, I'll take care of it."
+        ]
+    ],
+    "sweet_mediator_15": [
+        [
+            "mediator",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[t_c had been missing for a few days, you were very worried for your fellow mediator, especially since they'd been headed to o_cClan.]",
+            "[You find them stuck at the bottom of a pit, they clearly seemed embarrassed.]",
+            "Ah! y_c! Could you lend me a paw? Some o_cClan apprentices pushed me down here yesterday.",
+            "I was just about to head home... but it looked like one of them was crying, so I tried to comfort them and now I'm here."
+        ]
+    ],
+    "sweet_mediator_16": [
+        [
+            "queen",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You hear a bunch of fighting from some of the kits, though just as you go to deal with it, t_c arrives.]",
+            "Now now! No more fighting. Can you please lend r_k's toy back to them? Stealing isn't nice.",
+            "[They smile to you and wave as the kits sort out their differences and apologize...]",
+            "[... Only to start another fight over something much more trivial. t_c sighs as you laugh, at least you know they won't be taking your job anytime soon.]"
+        ]
+    ],
+    "sweet_mediator_17": [
+        [
+            "deputy",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Hey y_c! Thanks again for helping me out with this. It's always pretty frightening to go to o_cClan, so it's nice to have someone along for the ride.",
+            "Ah... can I speak with you about something whilst we're alone? You're the deputy, so I feel you should know.",
+            "r_w... they've been skipping out on the patrols they've been sent on. They'll make me do it for them instead.",
+            "I know I'm a mediator and that I have every right to tell them to stop but... they've been through a lot lately.",
+            "I feel really bad... I want to help them with anything that I can but at this point... I can't keep doing two cat's daily roles.",
+            "Can you speak with them? ... Be kind though, I know it has to be coming from the hard times they've been through."
+        ]
+    ],
+    "sweet_mediator_18": [
+        [
+            "deputy",
+            "sweet"
+        ],
+        [
+            "Help-",
+            "[You see t_c being playfully attacked by the kits. Seems they'd been mediating, the kits had  turned on them and they were too nice to stop them.]",
+            "[You tell them you will not, in fact, be helping them. Their pained look as they gently try to send the kits back to the Nursery is pretty funny.]"
+        ]
+    ],
+    "sweet_mediator_19": [
+        [
+            "deputy",
+            "sweet"
+        ],
+        [
+            "[You stare intently at the sky, emotions welling up in your throat. You're struggling as a deputy, it's a lot of pressure for one cat.]",
+            "y_c...?",
+            "[The mediator had a tired expression, it seems they heard your quiet sobs and had come to investigate.]",
+            "[You explain your doubts, your struggles, that you've been under the pressure of the entire clan and you don't know how much longer you can do this.]",
+            "y_c... I understand. Being a deputy is no easy job. Do you see those stars in the sky? They guide clancats day in and day out.",
+            "We worship them, but they never asked for that. It's a lot of pressure, many can't handle the pressure of such a position.",
+            "That's why sometimes there are no stars in the sky. Sometimes, they need a rest too. It's nothing to be ashamed of.",
+            "You are our star, y_c. Shine as brightly as you can, but remember to rest and take care of yourself too. You're the only you we have."
+        ]
+    ],
+    "sweet_mediator_20": [
+        [
+            "leader",
+            "sweet"
+        ],
+        [
+            "You know, I've mediated twolegs once... kinda.",
+            "They were making loud sounds at each other, waving their paws like they were going to fight.",
+            "They relaxed when I nuzzled their legs, and started to pat me with their paws.",
+            "They tried to pick me up and that's when I ran... don't tell anyone this though, I'm kinda embarrassed about it."
+        ]
+    ],
+    "sweet_mediator_21": [
+        [
+            "leader",
+            "sweet"
+        ],
+        [
+            "y_c, what's wrong? Why do you need my help?",
+            "I'm always happy to help, but I'm just a mediator, I don't know what I could do that's so important.",
+            "Oh, I understand... You need me to come with you to the Moonstone?",
+            "Alright, let me tell everyone what's going on. I'm honored to do this for you!"
+        ]
+    ],
+    "sweet_mediator_22": [
+        [
+            "leader",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! I really need your help.",
+            "Two of the warriors are fighting and they won't listen to me, do you think you could help?",
+            "Thank StarClan! Let me know if there's anything I could do for you in return."
+        ]
+    ],
+    "sweet_mediator_23": [
+        [
+            "elder",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! What's wrong? You sound really upset.",
+            "r_e took your nest and is making you sleep outside the den?",
+            "How about this, you can have my nest for tonight and I'll talk to them in the morning? You deserve it.",
+            "Don't worry about me, I'll be alright."
+        ]
+    ],
+    "sweet_mediator_24": [
+        [
+            "elder",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! What's wrong? You sound really upset.",
+            "r_e took your nest and is making you sleep outside the den?",
+            "How about this, you can have my nest for tonight and I'll talk to them in the morning? You deserve it.",
+            "Don't worry about me, I'll be alright."
+        ]
+    ],
+    "sweet_mediator_25": [
+        [
+            "elder",
+            "sweet"
+        ],
+        [
+            "[You spot y_c mediating a couple from afar. They seem to spot you looking at them.]",
+            "[They give you a gentle smile, waving their tail in a greeting.]",
+            "[They've always really cared about the Elders in the clan, and you are no exception.]"
+        ]
     ]
 }

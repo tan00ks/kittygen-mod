@@ -713,13 +713,9 @@ class ProfileScreen(Screens):
                     self.profile_elements["insult"].disable()
                 else:
                     self.profile_elements["insult"].enable()
-            is_former_mentor = (self.the_cat.ID in game.clan.your_cat.former_apprentices or game.clan.your_cat.ID in self.the_cat.former_apprentices)
-            no_flirt = False
-            if is_former_mentor:
-                if not game.clan.clan_settings['romantic with former mentor']:
-                    no_flirt = True 
-            if (self.the_cat.ID not in game.clan.your_cat.get_relatives() and not no_flirt and self.the_cat.moons >= 12 and self.the_cat.moons < game.clan.your_cat.moons + 40 and self.the_cat.moons > game.clan.your_cat.moons - 40 and game.clan.your_cat.moons >= 12) or self.the_cat.ID in game.clan.your_cat.mate:
-                if not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice']:
+                    
+            if self.the_cat.is_dateable(game.clan.your_cat):
+                if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice']:
                     self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
                         (646, 220), (68, 68))),
                         "",
@@ -730,30 +726,7 @@ class ProfileScreen(Screens):
                         self.profile_elements["flirt"].disable()
                     else:
                         self.profile_elements["flirt"].enable()
-                elif not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status in ['leader', 'mediator', 'mediator apprentice']:
-                    self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
-                        (910, 220), (68, 68))),
-                        "",
-                        object_id="#flirt_button",
-                        tool_tip_text="Flirt with this Cat", manager=MANAGER
-                    )
-                    if self.the_cat.flirted:
-                        self.profile_elements["flirt"].disable()
-                    else:
-                        self.profile_elements["flirt"].enable()
-            elif self.the_cat.ID not in game.clan.your_cat.get_relatives() and game.clan.your_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"] and self.the_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
-                if not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status not in ['mediator apprentice']:
-                    self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
-                        (646, 220), (68, 68))),
-                        "",
-                        object_id="#flirt_button",
-                        tool_tip_text="Flirt with this Cat", manager=MANAGER
-                    )
-                    if self.the_cat.flirted:
-                        self.profile_elements["flirt"].disable()
-                    else:
-                        self.profile_elements["flirt"].enable()
-                elif not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status in ['mediator apprentice']:
+                elif self.the_cat.status in ['leader', 'mediator', 'mediator apprentice']:
                     self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
                         (910, 220), (68, 68))),
                         "",
@@ -1280,6 +1253,13 @@ class ProfileScreen(Screens):
             output = '\n\n'.join(life_history)
         return output
 
+    def get_living_cats(self):
+        living_cats = []
+        for the_cat in Cat.all_cats_list:
+            if not the_cat.dead and not the_cat.outside:
+                living_cats.append(the_cat)
+        return living_cats
+
     def get_backstory_text(self):
         """
         returns the backstory blurb
@@ -1314,6 +1294,13 @@ class ProfileScreen(Screens):
             if game.clan.all_clans:
                 other_clan = str(choice(game.clan.all_clans).name)
             text = text.replace("o_c", other_clan)
+        if "c_n" in text:
+            text = text.replace("c_n", str(game.clan.name))
+        if "r_c" in text:
+            # random_cat = choice(self.get_living_cats())
+            # while random_cat.status in ['newborn', 'kitten']:
+            #     random_cat = choice(self.get_living_cats())
+            text = text.replace("r_c", "one of their clanmates")
         return text
 
     def get_scar_text(self):
@@ -1965,7 +1952,7 @@ class ProfileScreen(Screens):
                 tool_tip_text='Choose to murder one of your clanmates',
                 starting_height=2, manager=MANAGER
             )
-            if game.clan.murdered:
+            if game.clan.murdered or game.clan.your_cat.moons == 0:
                 self.murder_cat_button.disable()
             if game.clan.your_cat.joined_df:
                 self.exit_df_button = UIImageButton(
@@ -1983,6 +1970,8 @@ class ProfileScreen(Screens):
                 tool_tip_text='Join the Dark Forest',
                 starting_height=2, manager=MANAGER
             )
+            if game.clan.your_cat.moons < 6:
+                self.join_df_button.disable()
             self.affair_button = UIImageButton(
                 scale(pygame.Rect((1156, 1188), (344, 72))),
                 "",

@@ -1476,5 +1476,145 @@
             "Would you please stop hovering over me? I'm not in the nursery anymore. I'm my own cat, and I can catch my prey however I like.",
             "Even if it does involve beheading."
         ]
+    ],
+    "brooding_deputy19": [
+        [
+            "apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "mediator apprentice",
+            "brooding",
+            "random_cat",
+            "neutral",
+            "non-related"
+        ],
+        [
+            "Look alive, apprentice.",
+            "I just got word back from m_n about your performance in training.",
+            "It seems you've been doing ... satisfactory.",
+            "Not bad. Keep up the good work and you'll earn your full name yet."
+        ]
+    ],
+    "brooding_deputy13": [
+        [
+            "Any"
+        ],
+        [
+            "[You overhear t_c and d_n very seriously discussing some diplomatic affairs with o_cClan.]",
+            "[Clearly, they're too busy with important matters to chat with you right now.]"
+        ]
+    ],
+    "brooding_deputy14": [
+        [
+            "any",
+            "brooding",
+            "upstanding",
+            "neurotic",
+            "assertive",
+            "cool"
+        ],
+        [
+            "[The border patrol came back with news of twolegs on the territory, so t_c personally guards the camp entrance, casting paranoid glances.]",
+            "[It's clear they take their job as leader very seriously.]"
+        ]
+    ],
+    "brooding_deputy15": [
+        [
+            "any",
+            "brooding",
+            "upstanding",
+            "neurotic",
+            "assertive",
+            "cool"
+        ],
+        [
+            "[You overheard a rumor that the leader of o_cClan is terrified of t_c, and it's not hard to see why.]",
+            "[Sitting up on the highrock with that intense glare, they just look so intimidating!]"
+        ]
+    ],
+    "brooding_deputy16": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "brooding",
+            "stable",
+            "introspective",
+            "random_cat"
+        ],
+        [
+            "Hey, I saw you talking with r_k earlier.",
+            "The two of you seem awfully compatible ... what would you think about taking them on as an apprentice?",
+            "... I'll keep in mind. Thanks, y_c."
+        ]
+    ],
+    "brooding_deputy17": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "brooding",
+            "introspective",
+            "platonic_love",
+            "random_cat"
+        ],
+        [
+            "*Wince* Oof ...",
+            "Oh, y_c, it's you.",
+            "Yes, I'm fine. Just a bit sore, is all. I think I've been tensing my muscles while I sleep at night ...",
+            "I'd thought I could handle the pressures of being deputy, shouldering the responsibilities of the Clan, but it seems the stress is manifesting in other ways ...",
+            "Ah, but come off it. I'm fine, I swear it. I'm a grown cat. I can handle my own issues.",
+            "Though, maybe I should consult r_m, if it gets any worse ..."
+        ]
+    ],
+    "brooding_leader0": [
+        [
+            "Any",
+            "brooding",
+            "neutral"
+        ],
+        [
+            "... What do you need?",
+            "Just to chat? Do you know who you're talking to?",
+            "I'm the leader of c_nClan. I have far more important things to concern myself with than 'chatting'."
+        ]
+    ],
+    "brooding_leader1": [
+        [
+            "medicine cat",
+            "medicine cat apprentice"
+        ],
+        [
+            "[You tell t_c about an interesting dream you had recently that could be a potential omen from StarClan.]",
+            "Hm ...",
+            "Duly noted, y_c. Thank you for telling me. Please keep me updated if you hear anything more."
+        ]
+    ],
+    "brooding_leader2": [
+        [
+            "medicine cat",
+            "medicine cat apprentice",
+            "dislike"
+        ],
+        [
+            "[You tell t_c about an interesting dream you had recently that could be a potential omen from StarClan.]",
+            "Hm ...",
+            "Is that all?",
+            "In case you haven't noticed, I'm the leader, y_c. I have more pressing things to worry about than your so-called 'interesting' dreams.",
+            "If a StarClan cat actually appears to you, that would be a cause for concern. Until then, you can keep your vague impressions to yourself."
+        ]
+    ],
+    "brooding_leader3": [
+        [
+            "any",
+            "brooding"
+        ],
+        [
+            "[t_c is talking with a mediator from o_cClan just outside of camp.]",
+            "[The mediator tries to laugh and make jokes to ease the tension, but t_c won't even offer them a polite smile.]",
+            "[You hope your leader's hatred for small talk doesn't lead to serious conflict between the clans ...]"
+        ]
     ]
 }

@@ -432,5 +432,87 @@
         [
             "[t_c is hard at work, kneading their nest with itty-bitty paws.]"
         ]
+    ],
+    "neurotic_newborn": [
+        [
+            "Any",
+            "neurotic"
+        ],
+        [
+            "Squeak!"
+        ]
+    ],
+    "neurotic_newborn1": [
+        [
+            "Any",
+            "neurotic"
+        ],
+        [
+            "Eep!",
+            "[t_c buries themself deep into the fluff of t_p's tail.]"
+        ]
+    ],
+    "neurotic_newborn2": [
+        [
+            "Any",
+            "neurotic"
+        ],
+        [
+            "Mrow!",
+            "[t_c is buried under a pile of their siblings!]"
+        ]
+    ],
+    "neurotic_newborn3": [
+        [
+            "Any",
+            "neurotic"
+        ],
+        [
+            "[You can barely make out t_c, they're so deeply buried in their parent's nest.]"
+        ]
+    ],
+    "newborn_yourkit": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[t_c snuggles deep into your belly fur.]",
+            "[You wrap your tail around them, shielding them from the cold.]"
+        ]
+    ],
+    "newborn_yourkit1": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[t_c squirms at your side, mewling frantically.]",
+            "[You lick the top of their head, quieting their cries.]"
+        ]
+    ],
+    "newborn_yourkit2": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[t_c presses against your side, sound asleep.]",
+            "[You breathe in their milky scent, swearing to love them forever.]"
+        ]
+    ],
+    "newborn_yourkit3": [
+        [
+            "any",
+            "from_your_kit",
+            "from_adopted_kit"
+        ],
+        [
+            "[t_c ... t_c ... t_c ...]",
+            "[You run your beautiful new kit's perfect name over and over through your mind, certain you'll never ever forget it.]"
+        ]
     ]
 }

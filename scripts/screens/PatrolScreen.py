@@ -54,6 +54,8 @@ class PatrolScreen(Screens):
         self.start_patrol_thread = None
         self.proceed_patrol_thread = None
         self.outcome_art = None
+        self.dbclock = pygame.time.Clock()
+        self.cat_id = None
 
     def handle_event(self, event):
         if game.switches["window_open"]:
@@ -61,7 +63,10 @@ class PatrolScreen(Screens):
         
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if self.patrol_stage == "choose_cats":
-                self.handle_choose_cats_events(event)
+                if self.dbclock.tick() < 500:
+                    self.handle_choose_cats_events(event, doubleclick=True)
+                else:
+                    self.handle_choose_cats_events(event, doubleclick=False)
             elif self.patrol_stage == 'patrol_events':
                 self.handle_patrol_events_event(event)
             elif self.patrol_stage == 'patrol_complete':
@@ -75,7 +80,7 @@ class PatrolScreen(Screens):
             elif event.key == pygame.K_RIGHT:
                 self.change_screen('list screen')
 
-    def handle_choose_cats_events(self, event):
+    def handle_choose_cats_events(self, event, doubleclick=False):
         if 'cat_icon' in self.elements:
             self.elements['cat_icon'].disable()
         if 'df_icon' in self.elements:
@@ -96,8 +101,23 @@ class PatrolScreen(Screens):
             self.update_button()
         
         # Check is a cat is clicked
+        elif event.ui_element in self.cat_buttons.values() and doubleclick:
+            self.selected_cat = event.ui_element.return_cat_object()
+            if self.selected_cat.ID == self.cat_id:
+                if self.selected_cat in self.current_patrol:
+                    self.current_patrol.remove(self.selected_cat)
+                else:
+                    self.current_patrol.append(self.selected_cat)
+                self.update_cat_images_buttons()
+                self.update_button()
+            else:
+                self.selected_cat = event.ui_element.return_cat_object()
+                self.cat_id = self.selected_cat.ID
+                self.update_selected_cat()
+                self.update_button()
         elif event.ui_element in self.cat_buttons.values():
             self.selected_cat = event.ui_element.return_cat_object()
+            self.cat_id = self.selected_cat.ID
             self.update_selected_cat()
             self.update_button()
         elif event.ui_element == self.elements["add_remove_cat"]:
@@ -510,6 +530,18 @@ class PatrolScreen(Screens):
                                               object_id="#paw_patrol_button"
                                               , manager=MANAGER)
         self.elements['your_cat'].disable()
+
+        # add prey information
+        current_amount =  round(game.clan.freshkill_pile.total_amount,2)
+        self.elements['current_prey'] = pygame_gui.elements.UITextBox(
+            f"current prey: {current_amount}", scale(pygame.Rect((640, 180), (300, 100))),
+            object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
+        )
+        needed_amount = round(game.clan.freshkill_pile.amount_food_needed(),2)
+        self.elements['needed_prey'] = pygame_gui.elements.UITextBox(
+            f"needed prey: {needed_amount}", scale(pygame.Rect((640, 215), (300, 100))),
+            object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
+        )
 
         self.update_cat_images_buttons()
         self.update_button()

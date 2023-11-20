@@ -1,5 +1,5 @@
 import os
-from random import choice, randint
+from random import choice, randint, choices
 
 import pygame
 
@@ -228,7 +228,7 @@ class TalkScreen(Screens):
         you = game.clan.your_cat
 
         resource_dir = "resources/dicts/lifegen_talk/"
-        possible_texts = None
+        possible_texts = {}
         with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
             
@@ -239,6 +239,11 @@ class TalkScreen(Screens):
         
         if cat.status not in ['kitten', "newborn"] and you.status in ['kitten', 'newborn']:
             with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
+                possible_texts3 = ujson.loads(read_file.read())
+                possible_texts.update(possible_texts3)
+
+        if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn']:
+            with open(f"{resource_dir}crush.json", 'r') as read_file:
                 possible_texts3 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts3)
         
@@ -282,6 +287,9 @@ class TalkScreen(Screens):
             if "insult" in tags:
                 continue
 
+            if you.moons == 0 and "newborn" not in tags:
+                continue
+
             # Status tags
             if you.status not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags and "newborn" not in tags:
                 continue
@@ -290,6 +298,11 @@ class TalkScreen(Screens):
             elif "no_kit" in tags and you.status in ['kitten', 'newborn']:
                 continue
             elif "newborn" in tags and you.moons != 0:
+                continue
+
+            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+                continue
+            if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
             
             if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
@@ -374,7 +387,7 @@ class TalkScreen(Screens):
                 if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries and "recovering from birth" not in you.injuries:
                     for injury in you.injuries:
                         if you.injuries[injury]['severity'] != 'minor':
-                            ill_injured = True                
+                            ill_injured = True            
                 if not ill_injured:
                     continue 
             
@@ -388,14 +401,14 @@ class TalkScreen(Screens):
                 if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries and "recovering from birth" not in cat.injuries:
                     for injury in cat.injuries:
                         if cat.injuries[injury]['severity'] != 'minor':
-                            ill_injured = True    
+                            ill_injured = True
 
                 if not ill_injured:
                     continue 
             
             # Relationships
             # Family tags:
-            if any(i in ["half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
+            if any(i in ["half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
                 
                 fam = False
                 if "from_mentor" in tags:
@@ -407,17 +420,17 @@ class TalkScreen(Screens):
                 if "from_mate" in tags:
                     if cat.ID in you.mate:
                         fam = True   
-                if "from_parent" in tags:
+                if "from_parent" in tags or "from_your_parent" in tags:
                     if you.parent1:
                         if you.parent1 == cat.ID:
                             fam = True
                     if you.parent2:
                         if you.parent2 == cat.ID:
                             fam = True
-                if "adopted_parent" in tags:
+                if "adopted_parent" in tags or "from adopted_parent" in tags:
                     if cat.ID in you.inheritance.get_no_blood_parents():
                         fam = True
-                if "from_kit" in tags:
+                if "from_kit" in tags or "from_your_kit" in tags:
                     if cat.ID in you.inheritance.get_blood_kits():
                         fam = True
                 if "from_adopted_kit" in tags:
@@ -484,7 +497,10 @@ class TalkScreen(Screens):
             if "war" in tags:
                 if game.clan.war.get("at_war", False):
                     continue
-        
+                    
+            if "non-mates" in tags:
+                if you.ID in cat.mate:
+                    continue
             
             # Relationship conditions
             if you.ID in cat.relationships:
@@ -511,121 +527,65 @@ class TalkScreen(Screens):
             else:
                 if any(i in ["hate","romantic_like","platonic_like","jealousy","dislike","comfort","respect","trust"] for i in tags):
                     continue
-            
-            if "random_cat" in talk[0]:
-                random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
-                counter = 0
-                while random_cat.outside or random_cat.dead or random_cat.ID == you.ID or random_cat.ID == cat.ID:
-                    counter+=1
-                    if counter == 15:
-                        continue
-                    random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
-                text = [t1.replace("r_c", str(random_cat.name)) for t1 in talk[1]]
-                texts_list[talk_key] = text
-                continue
-           
-            texts_list[talk_key] = talk[1]
+
+            texts_list[talk_key] = talk
         
         if not texts_list:
             resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
-            texts_list['general'] = possible_texts['general'][1]
+            texts_list['general'] = possible_texts['general']
 
         max_retries = 30
         counter = 0
         if len(game.clan.talks) > 50:
             game.clan.talks.clear()
+        
+        weights = []
+        for item in texts_list.values():
+            tags = item[0]
+            weights.append(len(tags))
+
         while counter < max_retries:
-            text_chosen_key = choice(list(texts_list.keys()))
-            text = texts_list[text_chosen_key]
+            # Select a key randomly, weighted by the number of tags
+            text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+            text = texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
-            
+
             if text_chosen_key not in game.clan.talks and new_text:
                 game.clan.talks.append(text_chosen_key)
                 return new_text
 
             counter += 1
 
-        text_chosen_key = choice(list(texts_list.keys()))
-        text = texts_list[text_chosen_key]
+        text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+        text = texts_list[text_chosen_key][1]
         new_text = self.get_adjusted_txt(text, cat)
         counter = 0
         while not new_text:
-            text_chosen_key = choice(list(texts_list.keys()))
-            text = texts_list[text_chosen_key]
+            text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+            text = texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
             counter +=1
             if counter == 30:
-                break
+                possible_texts = None
+                with open(f"{resource_dir}general.json", 'r') as read_file:
+                    possible_texts = ujson.loads(read_file.read())
+                return possible_texts['general'][1]
         return new_text
-        #TODO: y_m, y_k, y_p, y_s
 
     def get_adjusted_txt(self, text, cat):
         you = game.clan.your_cat
-        if any(abbrev in t for abbrev in ["r_k", "r_a", "r_w", "r_m", "r_d", "r_q", "r_e", "r_s", "r_i"] for t in text):
-            living_meds = []
-            living_mediators = []
-            living_warriors = []
-            living_apprentices = []
-            living_queens = []
-            living_kits = []
-            living_elders = []
-            sick_cats = []
-            injured_cats = []
-            
-            for c in Cat.all_cats.values():
-                if not c.dead and not c.outside and c.ID != you.ID and c.ID != cat.ID:
-                    if len(c.illnesses) > 0:
-                        sick_cats.append(c)
-                    if len(c.injuries) > 0:
-                        injured_cats.append(c)
-                    if c.status == "medicine cat":
-                        living_meds.append(c)
-                    elif c.status == "warrior":
-                        living_warriors.append(c)
-                    elif c.status == "mediator":
-                        living_mediators.append(c)
-                    elif c.status == 'queen':
-                        living_queens.append(c)
-                    elif c.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"]:
-                        living_apprentices.append(c)
-                    elif c.status in ["kitten", "newborn"]:
-                        living_kits.append(c)
-                    elif c.status == "elder":
-                        living_elders.append(c)
-
-            replace_mappings = {
-                "r_k": living_kits,
-                "r_a": living_apprentices,
-                "r_w": living_warriors,
-                "r_m": living_meds,
-                "r_d": living_mediators,
-                "r_q": living_queens,
-                "r_e": living_elders,
-                "r_s": sick_cats,
-                "r_i": injured_cats
-            }
-            
-            for abbrev, replace_list in replace_mappings.items():
-                for idx, t in enumerate(text):
-                    if abbrev in t:
-                        if not replace_list:
-                            return ""
-                        text[idx] = t.replace(abbrev, str(choice(replace_list).name))
-                        
-
+       
         text = [t1.replace("c_n", game.clan.name) for t1 in text]
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
         text = [t1.replace("t_c", str(cat.name)) for t1 in text]
+        
         for i in range(len(text)):
             text[i] = self.adjust_txt(text[i], cat)
             if text[i] == "":
                 return ""
-        if cat.mentor:
-            mentor = Cat.all_cats.get(cat.mentor).name
-            text = [t1.replace("tm_n", str(mentor)) for t1 in text]
 
         if "grief stricken" in cat.illnesses:
             try:
@@ -658,130 +618,236 @@ class TalkScreen(Screens):
         return living_cats
         
     def adjust_txt(self, text, cat):
-        if "r_c" in text:
-            alive_cats = self.get_living_cats()
-            alive_cat = choice(alive_cats)
-            while alive_cat.ID == game.clan.your_cat.ID:
-                alive_cat = choice(alive_cat)
-            text = text.replace("r_c", str(alive_cat.name))
-        if "r_k" in text:
-            alive_kits = get_alive_kits(Cat)
-            if len(alive_kits) <= 1:
-                return ""
-            alive_kit = choice(alive_kits)
-            while alive_kit.ID == game.clan.your_cat.ID:
+        try:
+            if "your_crush" in text:
+                if len(game.clan.your_cat.mate) > 0 or game.clan.your_cat.no_mates:
+                    return ""
+                crush = None
+                for c in self.get_living_cats():
+                    if c.ID == game.clan.your_cat.ID or c.ID == cat.ID:
+                        continue
+                    relations = game.clan.your_cat.relationships.get(c.ID)
+                    if not relations:
+                        continue
+                    if relations.romantic_love > 10:
+                        crush = c
+                        break
+                if crush:
+                    text = text.replace("your_crush", str(crush.name))
+                else:
+                    return ""
+            if "their_crush" in text:
+                if len(cat.mate) > 0 or cat.no_mates:
+                    return ""
+                crush = None
+                for c in self.get_living_cats():
+                    if c.ID == game.clan.your_cat.ID or c.ID == cat.ID:
+                        continue
+                    relations = cat.relationships.get(c.ID)
+                    if not relations:
+                        continue
+                    if relations.romantic_love > 10:
+                        crush = c
+                        break
+                if crush:
+                    text = text.replace("their_crush", str(crush.name))
+                else:
+                    return ""
+            if "r_c" in text:
+                alive_cats = self.get_living_cats()
+                alive_cat = choice(alive_cats)
+                while alive_cat.ID == game.clan.your_cat.ID or alive_cat.ID == cat.ID:
+                    alive_cat = choice(alive_cats)
+                text = text.replace("r_c", str(alive_cat.name))
+            if "r_k" in text:
+                alive_kits = get_alive_kits(Cat)
+                if len(alive_kits) <= 1:
+                    return ""
                 alive_kit = choice(alive_kits)
-            text = text.replace("r_k", str(alive_kit.name))
-        if "r_a" in text:
-            alive_apps = get_alive_apps(Cat)
-            if len(alive_apps) <= 1:
-                return ""
-            alive_app = choice(alive_apps)
-            while alive_app.ID == game.clan.your_cat.ID:
+                while alive_kit.ID == game.clan.your_cat.ID or alive_kit.ID == cat.ID:
+                    alive_kit = choice(alive_kits)
+                text = text.replace("r_k", str(alive_kit.name))
+            if "r_a" in text:
+                alive_apps = get_alive_apps(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
                 alive_app = choice(alive_apps)
-            text = text.replace("r_a", str(alive_app.name))
-        if "r_w" in text:
-            alive_apps = get_alive_warriors(Cat)
-            if len(alive_apps) <= 1:
-                return ""
-            alive_app = choice(alive_apps)
-            while alive_app.ID == game.clan.your_cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                    alive_app = choice(alive_apps)
+                text = text.replace("r_a", str(alive_app.name))
+            if "r_w" in text:
+                alive_apps = get_alive_warriors(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
                 alive_app = choice(alive_apps)
-            text = text.replace("r_w", str(alive_app.name))
-        if "r_m" in text:
-            alive_apps = get_alive_meds(Cat)
-            if len(alive_apps) <= 1:
-                return ""
-            alive_app = choice(alive_apps)
-            while alive_app.ID == game.clan.your_cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                    alive_app = choice(alive_apps)
+                text = text.replace("r_w", str(alive_app.name))
+            if "r_m" in text:
+                alive_apps = get_alive_meds(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
                 alive_app = choice(alive_apps)
-            text = text.replace("r_m", str(alive_app.name))
-        if "r_d" in text:
-            alive_apps = get_alive_mediators(Cat)
-            if len(alive_apps) <= 1:
-                return ""
-            alive_app = choice(alive_apps)
-            while alive_app.ID == game.clan.your_cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                    alive_app = choice(alive_apps)
+                text = text.replace("r_m", str(alive_app.name))
+            if "r_d" in text:
+                alive_apps = get_alive_mediators(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
                 alive_app = choice(alive_apps)
-            text = text.replace("r_d", str(alive_app.name))
-        if "r_q" in text:
-            alive_apps = get_alive_queens(Cat)
-            if len(alive_apps) <= 1:
-                return ""
-            alive_app = choice(alive_apps)
-            while alive_app.ID == game.clan.your_cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                    alive_app = choice(alive_apps)
+                text = text.replace("r_d", str(alive_app.name))
+            if "r_q" in text:
+                alive_apps = get_alive_queens(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
                 alive_app = choice(alive_apps)
-            text = text.replace("r_q", str(alive_app.name))
-        if "r_e" in text:
-            alive_apps = get_alive_elders(Cat)
-            if len(alive_apps) <= 1:
-                return ""
-            alive_app = choice(alive_apps)
-            while alive_app.ID == game.clan.your_cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                    alive_app = choice(alive_apps)
+                text = text.replace("r_q", str(alive_app.name))
+            if "r_e" in text:
+                alive_apps = get_alive_elders(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
                 alive_app = choice(alive_apps)
-            text = text.replace("r_e", str(alive_app.name))
-        if "r_s" in text:
-            alive_apps = get_alive_cats(Cat)
-            if len(alive_apps) <= 1:
-                return ""
-            alive_app = choice(alive_apps)
-            while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_ill():
+                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                    alive_app = choice(alive_apps)
+                text = text.replace("r_e", str(alive_app.name))
+            if "r_s" in text:
+                alive_apps = get_alive_cats(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
                 alive_app = choice(alive_apps)
-            text = text.replace("r_s", str(alive_app.name))
-        if "r_i" in text:
-            alive_apps = get_alive_cats(Cat)
-            if len(alive_apps) <= 1:
-                return ""
-            alive_app = choice(alive_apps)
-            while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_injured():
+                while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_ill():
+                    alive_app = choice(alive_apps)
+                text = text.replace("r_s", str(alive_app.name))
+            if "r_i" in text:
+                alive_apps = get_alive_cats(Cat)
+                if len(alive_apps) <= 1:
+                    return ""
                 alive_app = choice(alive_apps)
-            text = text.replace("r_i", str(alive_app.name))
-        if "l_n" in text:
-            if game.clan.leader is None:
+                while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_injured():
+                    alive_app = choice(alive_apps)
+                text = text.replace("r_i", str(alive_app.name))
+            if "l_n" in text:
+                if game.clan.leader is None:
+                    return ""
+                if game.clan.leader.dead or game.clan.leader.outside or game.clan.leader.ID == game.clan.your_cat.ID or game.clan.leader.ID == cat.ID:
+                    return ""
+                text = text.replace("l_n", str(game.clan.leader.name))
+            if "d_n" in text:
+                if game.clan.deputy is None:
+                    return ""
+                if game.clan.deputy.dead or game.clan.deputy.outside or game.clan.deputy.ID == game.clan.your_cat.ID or game.clan.deputy.ID == cat.ID:
+                    return ""
+                text = text.replace("d_n", str(game.clan.deputy.name))
+            if "y_s" in text:
+                if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
+                    return ""
+                sibling = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_siblings()))
+                if sibling.outside or sibling.dead:
+                    return ""
+                text = text.replace("y_s", str(sibling.name))
+            if "t_s" in text:
+                if len(cat.inheritance.get_siblings()) == 0:
+                    return ""
+                sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
+                if sibling.outside or sibling.dead:
+                    return ""
+                text = text.replace("t_s", str(sibling.name))
+            if "y_l" in text:
+                if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
+                    return ""
+                sibling = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_siblings()))
+                counter = 0
+                while sibling.moons != game.clan.your_cat.moons or sibling.outside or sibling.dead:
+                    sibling = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_siblings()))
+                    counter+=1
+                    if counter == 15:
+                        return ""
+                text = text.replace("y_l", str(sibling.name))
+            if "t_l" in text:
+                if len(cat.inheritance.get_siblings()) == 0:
+                    return ""
+                sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
+                counter = 0
+                while sibling.moons != cat.moons or sibling.outside or sibling.dead:
+                    sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
+                    counter+=1
+                    if counter == 15:
+                        return ""
+                text = text.replace("t_l", str(sibling.name))
+            if "y_p" in text:
+                if len(game.clan.your_cat.inheritance.get_parents()) == 0:
+                    return ""
+                parent = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_parents()))
+                if parent.outside or parent.dead or parent.ID==cat.ID:
+                    return ""
+                text = text.replace("y_p", str(parent.name))
+            if "t_p" in text:
+                if len(cat.inheritance.get_parents()) == 0:
+                    return ""
+                parent = Cat.fetch_cat(choice(cat.get_parents()))
+                if parent.outside or parent.dead or parent.ID==game.clan.your_cat.ID:
+                    return ""
+                text = text.replace("t_p", str(parent.name))
+            if "y_m" in text:
+                if game.clan.your_cat.mate is None or len(game.clan.your_cat.mate) == 0 or cat.ID in game.clan.your_cat.mate:
+                    return ""
+                text = text.replace("y_m", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
+            if "t_mn" in text:
+                if cat.mentor is None:
+                    return ""
+                text = text.replace("t_mn", str(Cat.fetch_cat(cat.mentor).name))
+            if "tm_n" in text:
+                if cat.mentor is None:
+                    return ""
+                text = text.replace("tm_n", str(Cat.fetch_cat(cat.mentor).name))
+            if "m_n" in text:
+                if game.clan.your_cat.mentor is None:
+                    return ""
+                text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
+            if "o_c" in text:
+                other_clan = choice(game.clan.all_clans)
+                if not other_clan:
+                    return ""
+                text = text.replace("o_c", str(other_clan.name))
+            if "t_m" in text:
+                if cat.mate is None or len(cat.mate) == 0 or cat.ID in game.clan.your_cat.mate:
+                    return ""
+                text = text.replace("t_m", str(Cat.fetch_cat(choice(cat.mate)).name))
+            if "t_k" in text:
+                if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
+                    return ""
+                text = text.replace("t_k", str(choice(cat.inheritance.get_children()).name))
+            if "y_k" in text:
+                if game.clan.your_cat.inheritance.get_children() is None or len(game.clan.your_cat.inheritance.get_children()) == 0:
+                    return ""
+                text = text.replace("y_k", str(choice(game.clan.your_cat.inheritance.get_children()).name))
+            if "n_r1" in text:
+                if "n_r2" not in text:
+                    return ""
+                random_cat1 = choice(self.get_living_cats())
+                random_cat2 = choice(self.get_living_cats())
+                counter = 0
+                while not random_cat1.is_potential_mate(random_cat2) or random_cat2.age != random_cat1.age:
+                    random_cat1 = choice(self.get_living_cats())
+                    random_cat2 = choice(self.get_living_cats())
+                    counter +=1
+                    if counter > 40:
+                        return ""
+                text = text.replace("n_r1", str(random_cat1.name))
+                text = text.replace("n_r2", str(random_cat2.name))
+            if "_" in text:
+                print(f"_ found in {text}")
                 return ""
-            if game.clan.leader.dead or game.clan.leader.outside:
-                return ""
-            text = text.replace("l_n", str(game.clan.leader.name))
-        if "d_n" in text:
-            if game.clan.deputy is None:
-                return ""
-            if game.clan.deputy.dead or game.clan.deputy.outside:
-                return ""
-            text = text.replace("d_n", str(game.clan.deputy.name))
-        if "y_s" in text:
-            if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
-                return ""
-            sibling = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_siblings()))
-            if sibling.outside or sibling.dead:
-                return ""
-            text = text.replace("y_s", str(sibling.name))
-        if "y_p" in text:
-            if len(game.clan.your_cat.inheritance.get_parents()) == 0:
-                return ""
-            parent = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_parents()))
-            if parent.outside or parent.dead:
-                return ""
-            text = text.replace("y_p", str(parent.name))
-        if "y_m" in text:
-            if game.clan.your_cat.mate is None:
-                return ""
-            text = text.replace("y_m", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
-        if "t_mn" in text:
-            if cat.mentor is None:
-                return ""
-            text = text.replace("tm_n", str(Cat.fetch_cat(cat.mentor).name))
-        if "m_n" in text:
-            if game.clan.your_cat.mentor is None:
-                return ""
-            text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
-        if "o_c" in text:
-            other_clan = choice(game.clan.all_clans)
-            if not other_clan:
-                return ""
-            text = text.replace("o_c", str(other_clan.name))
-        # if "n_r1" in text:
-        #     nr1 = choice(Cat.all_cats_list)
-        # if "n_r2" in text:
-        #     nr2 = choice(Cat.all_cats_list)
+             
+        except Exception as e:
+            print(e)
+            print("ERROR: could not replace abbrv.")
+            return text
+
 
         return text

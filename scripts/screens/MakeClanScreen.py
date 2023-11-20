@@ -6,7 +6,7 @@ from .Screens import Screens
 
 from scripts.utility import get_text_box_theme, scale, generate_sprite
 from scripts.clan import Clan
-from scripts.cat.cats import create_example_cats, Cat
+from scripts.cat.cats import create_example_cats, Cat, Personality
 from scripts.cat.pelts import Pelt
 from scripts.cat.names import names
 from re import sub
@@ -294,7 +294,9 @@ class MakeClanScreen(Screens):
         not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 'LEFTBLIND', 'BRIGHTHEART',
                     'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
         c_size = 15
-        backstories = ["clan_founder", "clan_founder1", "clan_founder2", "clan_founder3", "clan_founder4", "clan_founder5", "clan_founder6", "clan_founder7"]
+        backstories = ["clan_founder"]
+        for i in range(1, 17):
+            backstories.append(f"clan_founder{i}")
         if self.clan_age == "established":
             backstories = ['halfclan1', 'halfclan2', 'outsider_roots1', 'outsider_roots2', 'loner1', 'loner2', 'kittypet1', 'kittypet2', 'kittypet3', 'kittypet4', 'rogue1', 'rogue2', 'rogue3', 'rogue4', 'rogue5', 'rogue6', 'rogue7', 'rogue8', 'abandoned1', 'abandoned2', 'abandoned3', 'abandoned4', 'otherclan1', 'otherclan2', 'otherclan3', 'otherclan4', 'otherclan5', 'otherclan6', 'otherclan7', 'otherclan8', 'otherclan9', 'otherclan10', 'disgraced1', 'disgraced2', 'disgraced3', 'refugee1', 'refugee2', 'refugee3', 'refugee4', 'refugee5', 'tragedy_survivor1', 'tragedy_survivor2', 'tragedy_survivor3', 'tragedy_survivor4', 'tragedy_survivor5', 'tragedy_survivor6', 'guided1', 'guided2', 'guided3', 'guided4', 'orphaned1', 'orphaned2', 'orphaned3', 'orphaned4', 'orphaned5', 'orphaned6', 'outsider1', 'outsider2', 'outsider3', 'kittypet5', 'kittypet6', 'kittypet7', 'guided5', 'guided6', 'outsider4', 'outsider5', 'outsider6', 'orphaned7', 'halfclan4', 'halfclan5', 'halfclan6', 'halfclan7', 'halfclan8', 'halfclan9', 'halfclan10', 'outsider_roots3', 'outsider_roots4', 'outsider_roots5', 'outsider_roots6', 'outsider_roots7', 'outsider_roots8']
 
@@ -332,6 +334,9 @@ class MakeClanScreen(Screens):
 
             if self.clan_age == "new":
                 if game.choose_cats[a].status not in ['newborn', 'kitten']:
+                    unique_backstories = ["clan_founder4", "clan_founder13", "clan_founder14", "clan_founder15"]
+                    unique = choice(unique_backstories)
+                    backstories = [story for story in backstories if story not in unique_backstories or story == unique]
                     game.choose_cats[a].backstory = choice(backstories)
                 else:
                     game.choose_cats[a].backstory = 'clanborn'
@@ -369,6 +374,9 @@ class MakeClanScreen(Screens):
         elif event.ui_element == self.tabs["tab3"]:
             self.selected_camp_tab = 3
             self.refresh_selected_camp()
+        elif event.ui_element == self.tabs["tab4"]:
+            self.selected_camp_tab = 4
+            self.refresh_selected_camp()
         elif event.ui_element == self.tabs["newleaf_tab"]:
             self.selected_season = "Newleaf"
             self.refresh_text_and_buttons()
@@ -389,7 +397,10 @@ class MakeClanScreen(Screens):
             if old_biome is not None:
                 possible_biomes.remove(old_biome)
             self.biome_selected = choice(possible_biomes)
-            self.selected_camp_tab = randrange(1, 4)
+            if self.biome_selected == 'Forest':
+                self.selected_camp_tab = randrange (1, 5)
+            else:
+                self.selected_camp_tab = randrange(1, 4)
             self.refresh_selected_camp()
             self.refresh_text_and_buttons()
         elif event.ui_element == self.elements['done_button']:
@@ -424,7 +435,7 @@ class MakeClanScreen(Screens):
                 self.selected_camp_tab -= 1
                 self.refresh_selected_camp()
         elif event.key == pygame.K_DOWN and self.biome_selected is not None:
-            if self.selected_camp_tab < 3:
+            if self.selected_camp_tab < 4:
                 self.selected_camp_tab += 1
                 self.refresh_selected_camp()
         elif event.key == pygame.K_RETURN:
@@ -631,12 +642,16 @@ class MakeClanScreen(Screens):
         self.tabs["tab1"].kill()
         self.tabs["tab2"].kill()
         self.tabs["tab3"].kill()
+        self.tabs["tab4"].kill()
+
         if self.biome_selected == 'Forest':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((190, 360), (308, 60))), "", object_id="#classic_tab"
                                               , manager=MANAGER)
             self.tabs["tab2"] = UIImageButton(scale(pygame.Rect((216, 430), (308, 60))), "", object_id="#gully_tab"
                                               , manager=MANAGER)
             self.tabs["tab3"] = UIImageButton(scale(pygame.Rect((190, 500), (308, 60))), "", object_id="#grotto_tab"
+                                              , manager=MANAGER)
+            self.tabs["tab4"] = UIImageButton(scale(pygame.Rect((170, 570), (308, 60))), "", object_id="#lakeside_tab"
                                               , manager=MANAGER)
         elif self.biome_selected == 'Mountainous':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((222, 360), (308, 60))), "", object_id="#cliff_tab"
@@ -664,18 +679,27 @@ class MakeClanScreen(Screens):
             self.tabs["tab1"].disable()
             self.tabs["tab2"].enable()
             self.tabs["tab3"].enable()
+            self.tabs["tab4"].enable()
         elif self.selected_camp_tab == 2:
             self.tabs["tab1"].enable()
             self.tabs["tab2"].disable()
             self.tabs["tab3"].enable()
+            self.tabs["tab4"].enable()
         elif self.selected_camp_tab == 3:
             self.tabs["tab1"].enable()
             self.tabs["tab2"].enable()
             self.tabs["tab3"].disable()
+            self.tabs["tab4"].enable()
+        elif self.selected_camp_tab == 4:
+            self.tabs["tab1"].enable()
+            self.tabs["tab2"].enable()
+            self.tabs["tab3"].enable()
+            self.tabs["tab4"].disable()
         else:
             self.tabs["tab1"].enable()
             self.tabs["tab2"].enable()
             self.tabs["tab3"].enable()
+            self.tabs["tab4"].enable()
 
         # I have to do this for proper layering.
         if "camp_art" in self.elements:
@@ -1107,12 +1131,12 @@ class MakeClanScreen(Screens):
 
         self.elements['para text'] = pygame_gui.elements.UITextBox(
             'Paralyzed',
-            scale(pygame.Rect((column2_x - x_align2, y_pos[0] ),(1200,-1))),
+            scale(pygame.Rect((column2_x - x_align2, y_pos[7] ),(1200,-1))),
             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
         )
         self.elements['reverse text'] = pygame_gui.elements.UITextBox(
             'Reverse',
-            scale(pygame.Rect((column2_x - x_align2, y_pos[1] ),(1200,-1))),
+            scale(pygame.Rect((column3_x - x_align2, y_pos[7] ),(1200,-1))),
             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
         )
         self.elements['scar text'] = pygame_gui.elements.UITextBox(
@@ -1142,17 +1166,17 @@ class MakeClanScreen(Screens):
         )
         self.elements['personality text'] = pygame_gui.elements.UITextBox(
             'Personality',
-            scale(pygame.Rect((column2_x - x_align2, y_pos[7] ),(1200,-1))),
+            scale(pygame.Rect((column2_x - x_align2, y_pos[0] ),(1200,-1))),
             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
         )
-        self.elements['paralyzed'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[0]), (250, 70))), manager=MANAGER)
-        self.elements['reverse'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[1]), (250, 70))), manager=MANAGER)
+        self.elements['paralyzed'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column2_x, y_pos[7]), (250, 70))), manager=MANAGER)
+        self.elements['permanent conditions'] = pygame_gui.elements.UIDropDownMenu(["None"] + permanent_conditions, "None", scale(pygame.Rect((column2_x, y_pos[1]), (250, 70))), manager=MANAGER)
         self.elements['scars'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.scars1 + Pelt.scars2 + Pelt.scars3, "None", scale(pygame.Rect((column2_x, y_pos[2]), (250, 70))), manager=MANAGER)
         self.elements['vitiligo'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.vit, "None", scale(pygame.Rect((column2_x, y_pos[3]), (250, 70))), manager=MANAGER)
         self.elements['points'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.point_markings, "None", scale(pygame.Rect((column2_x, y_pos[4]), (250, 70))), manager=MANAGER)
         self.elements['tint'] = pygame_gui.elements.UIDropDownMenu(["pink", "gray", "red", "orange", "None"], "None", scale(pygame.Rect((column2_x, y_pos[5]), (250, 70))), manager=MANAGER)
         self.elements['pose'] = pygame_gui.elements.UIDropDownMenu(["0", "1", "2"], "0", scale(pygame.Rect((column2_x, y_pos[6]), (250, 70))), manager=MANAGER)
-        self.elements['personality'] = pygame_gui.elements.UIDropDownMenu(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'], "troublesome", scale(pygame.Rect((column2_x, y_pos[7]), (250, 70))), manager=MANAGER)
+        self.elements['personality'] = pygame_gui.elements.UIDropDownMenu(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'], "troublesome", scale(pygame.Rect((column2_x, y_pos[0]), (250, 70))), manager=MANAGER)
 
         self.elements['skin text'] = pygame_gui.elements.UITextBox(
             'Skin',
@@ -1192,7 +1216,7 @@ class MakeClanScreen(Screens):
 
         self.elements['permanent condition text'] = pygame_gui.elements.UITextBox(
             'Condition',
-            scale(pygame.Rect((column3_x - x_align2, y_pos[7] ),(1200,-1))),
+            scale(pygame.Rect((column2_x - x_align2, y_pos[1] ),(1200,-1))),
             object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
         )
         self.elements['skin'] = pygame_gui.elements.UIDropDownMenu(Pelt.skin_sprites, "BLACK", scale(pygame.Rect((column3_x, y_pos[0]), (250, 70))), manager=MANAGER)
@@ -1204,7 +1228,8 @@ class MakeClanScreen(Screens):
         self.elements['tortiecolor'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_colours, "GINGER", scale(pygame.Rect((column3_x, y_pos[5]), (250, 70))), manager=MANAGER)
         self.elements['tortiepattern'] = pygame_gui.elements.UIDropDownMenu(pelts_tortie, "Bengal", scale(pygame.Rect((column3_x, y_pos[6]), (250, 70))), manager=MANAGER)
 
-        self.elements['permanent conditions'] = pygame_gui.elements.UIDropDownMenu(["None"] + permanent_conditions, "None", scale(pygame.Rect((column3_x, y_pos[7]), (250, 70))), manager=MANAGER)
+        self.elements['reverse'] = pygame_gui.elements.UIDropDownMenu(["Yes", "No"], "No", scale(pygame.Rect((column3_x, y_pos[7]), (250, 70))), manager=MANAGER)
+
         
         self.elements['pattern'].disable()
         self.elements['tortiebase'].disable()
@@ -1352,12 +1377,15 @@ class MakeClanScreen(Screens):
                 new_cat.pelt = self.custom_cat.pelt
                 new_cat.gender = self.sex
                 new_cat.genderalign = self.sex
-                new_cat.personality.trait = self.personality
                 self.your_cat = new_cat
-                if self.permanent_condition is not None:
+                if self.permanent_condition is not None and self.permanent_condition != 'paralyzed':
                     self.your_cat.get_permanent_condition(self.permanent_condition)
                     self.your_cat.permanent_condition[self.permanent_condition]["moons_until"] = -1
+                if self.paralyzed and 'paralyzed' not in self.your_cat.permanent_condition:
+                    self.your_cat.get_permanent_condition("paralyzed")
+                    self.your_cat.permanent_condition['paralyzed']["moons_until"] = -1
                 self.your_cat.accessory = self.accessory
+                self.your_cat.personality = Personality(trait=self.personality, kit_trait=True)
                 self.selected_cat = None
                 self.open_name_cat()
             elif event.ui_element == self.elements['previous_step']:
@@ -1424,6 +1452,8 @@ class MakeClanScreen(Screens):
                                           visible=False, manager=MANAGER)
         self.tabs["tab3"] = UIImageButton(scale(pygame.Rect((0, 0), (0, 0))), "",
                                           visible=False, manager=MANAGER)
+        self.tabs["tab4"] = UIImageButton(scale(pygame.Rect((0, 0), (0, 0))), "",
+                                          visible=False, manager=MANAGER)
 
         y_pos = 550
         self.tabs["newleaf_tab"] = UIImageButton(scale(pygame.Rect((1250, y_pos), (78, 68))), "",
@@ -1487,7 +1517,7 @@ class MakeClanScreen(Screens):
         game.cat_to_fade.clear()
         Cat.outside_cats.clear()
         Patrol.used_patrols.clear()
-        convert_camp = {1: 'camp1', 2: 'camp2', 3: 'camp3'}
+        convert_camp = {1: 'camp1', 2: 'camp2', 3: 'camp3', 4: 'camp4'}
         self.your_cat.create_inheritance_new_cat()
         game.clan = Clan(self.clan_name,
                          self.leader,
