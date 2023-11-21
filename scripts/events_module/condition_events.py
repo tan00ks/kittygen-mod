@@ -467,7 +467,10 @@ class Condition_Events():
                 History.remove_possible_history(cat, illness)
                 game.switches['skip_conditions'].append(illness)
                 # gather potential event strings for healed illness
-                possible_string_list = Condition_Events.ILLNESS_HEALED_STRINGS[illness]
+                try:
+                    possible_string_list = Condition_Events.ILLNESS_HEALED_STRINGS[illness]
+                except:
+                    print("couldn't find illness")
 
                 # choose event string
                 random_index = int(random.random() * len(possible_string_list))
