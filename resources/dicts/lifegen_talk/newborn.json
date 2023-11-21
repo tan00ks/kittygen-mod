@@ -113,6 +113,15 @@
             "Grr..."
         ]
     ],
+    "newborn_littermate": [
+        [
+            "newborn",
+            "littermate"
+        ],
+        [
+            "[You flop on top of t_c and they let out an annoyed squeak.]"
+        ]
+    ],
     "assertive_newborn1": [
         [
             "Any",
