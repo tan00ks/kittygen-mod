@@ -212,7 +212,6 @@
 - Added additional flavor text
 - Added elder ceremonies 
 
-
 <strong>v0.1.0</strong>
 - Welcome to LifeGen - a ClanGen mod
 - Experience ClanGen from the perspective of a single cat that you control!
