@@ -535,8 +535,21 @@ class TalkScreen(Screens):
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
+                clusters_1 = f"{cluster1} "
+                if cluster2:
+                    clusters_1 += f"and {cluster2}"
+                clusters_2 = f"{cluster3} "
+                if cluster4:
+                    clusters_2 += f"and {cluster4}"
+                try:
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status)
+                except Exception as e:
+                    print(e)
             texts_list['general'] = possible_texts['general']
-
+    
         max_retries = 30
         counter = 0
         if len(game.clan.talks) > 50:
@@ -572,6 +585,20 @@ class TalkScreen(Screens):
                 possible_texts = None
                 with open(f"{resource_dir}general.json", 'r') as read_file:
                     possible_texts = ujson.loads(read_file.read())
+                    clusters_1 = f"{cluster1} "
+                    if cluster2:
+                        clusters_1 += f"and {cluster2}"
+                    clusters_2 = f"{cluster3} "
+                    if cluster4:
+                        clusters_2 += f"and {cluster4}"
+                    try:
+                        possible_texts['general'][1][0].replace("c_1", clusters_1)
+                        possible_texts['general'][1][0].replace("c_2", clusters_2)
+                        possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
+                        possible_texts['general'][1][0].replace("r_2", cat.status)
+                    except Exception as e:
+                        print(e)
+                
                 return possible_texts['general'][1]
         return new_text
 
