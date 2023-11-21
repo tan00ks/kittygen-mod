@@ -56,6 +56,63 @@
             "Grr..."
         ]
     ],
+    "newborn_11": [
+        [
+            "newborn"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_12": [
+        [
+            "newborn"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_13": [
+        [
+            "newborn"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_14": [
+        [
+            "newborn"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_15": [
+        [
+            "newborn"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_16": [
+        [
+            "newborn"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_17": [
+        [
+            "newborn",
+            "insult"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
     "assertive_newborn1": [
         [
             "Any",
