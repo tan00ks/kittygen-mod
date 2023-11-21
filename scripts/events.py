@@ -214,15 +214,6 @@ class Events:
         self.herb_destruction()
         self.herb_gather()
         game.switches['have kits'] = True
-        if game.clan.game_mode in ["expanded", "cruel season"]:
-            amount_per_med = get_amount_cat_for_one_medic(game.clan)
-            med_fullfilled = medical_cats_condition_fulfilled(
-                Cat.all_cats.values(), amount_per_med)
-            if not med_fullfilled:
-                string = f"{game.clan.name}Clan does not have enough healthy medicine cats! Cats will be sick/hurt " \
-                         f"for longer and have a higher chance of dying. "
-                game.cur_events_list.insert(0, Single_Event(string, "health"))
-                
         
         # Clear the list of cats that died this moon.
         game.just_died.clear()
