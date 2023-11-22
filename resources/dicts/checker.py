@@ -85,28 +85,33 @@ def count_dialogue(f, data):
         l = value[0]
         for i in range(len(l)):
             l[i] = l[i].lower()
-        if "newborn" in l:
-            newborn_count += 1
-            for i in cluster_list:
-                if i in l:
-                    cluster_dict[i]+=1
+        newborn_count += 1
+        for i in cluster_list:
+            if i in l:
+                cluster_dict[i]+=1
+        # if "newborn" in l:
+        #     newborn_count += 1
+        #     for i in cluster_list:
+        #         if i in l:
+        #             cluster_dict[i]+=1
     print(f"{f} contains {newborn_count} newborn dialogues")
     return newborn_count
 
 def read_json_files_in_folder(folder_path):
 
-    print("You are role newborn: dialogue data")
+    print("They are role newborn: dialogue data")
     total_newborn_count = 0
     for filename in os.listdir(folder_path):
         if filename.endswith('.json'):
             with open(os.path.join(folder_path, filename), 'r') as json_file:
                 try:
-                    data = ujson.load(json_file)
-    
-                    total_newborn_count += count_dialogue(filename, data)
+                    if filename == "newborn.json":
+                        data = ujson.load(json_file)
+        
+                        total_newborn_count += count_dialogue(filename, data)
                 except ValueError:
                     print(f"Error reading JSON data from {filename}")
-    print(f"Total you_newborn dialogues: {total_newborn_count}")
+    print(f"Total they_newborn dialogues: {total_newborn_count}")
     print(cluster_dict)
 
 if __name__ == "__main__":

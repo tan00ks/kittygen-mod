@@ -562,7 +562,8 @@ class TalkScreen(Screens):
 
         while counter < max_retries:
             # Select a key randomly, weighted by the number of tags
-            text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+            # text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+            text_chosen_key = choice(list(texts_list.keys()))
             text = texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
 
