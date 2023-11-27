@@ -753,7 +753,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_ill():
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.is_ill():
                     alive_app = choice(alive_apps)
                 text = text.replace("r_s", str(alive_app.name))
             if "r_i" in text:
@@ -761,7 +761,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_injured():
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.is_injured():
                     alive_app = choice(alive_apps)
                 text = text.replace("r_i", str(alive_app.name))
             if "l_n" in text:
@@ -780,16 +780,20 @@ class TalkScreen(Screens):
                 if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
                     return ""
                 sibling = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_siblings()))
-                if sibling.outside or sibling.dead:
+                if sibling.outside or sibling.dead or sibling.ID == cat.ID:
                     return ""
                 text = text.replace("y_s", str(sibling.name))
             if "t_s" in text:
                 if len(cat.inheritance.get_siblings()) == 0:
                     return ""
                 sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
-                if sibling.outside or sibling.dead:
+                if sibling.outside or sibling.dead or sibling.ID == game.clan.your_cat.ID:
                     return ""
                 text = text.replace("t_s", str(sibling.name))
+            if "y_a" in text:
+                if len(game.clan.your_cat.apprentice) == 0:
+                    return ""
+                text = text.replace("y_a", str(Cat.fetch_cat(choice(game.clan.your_cat.apprentice)).name))
             if "y_l" in text:
                 if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
                     return ""

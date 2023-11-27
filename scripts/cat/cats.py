@@ -2357,7 +2357,7 @@ class Cat():
         """Create Relationships to all current Clancats."""
         for id in self.all_cats:
             the_cat = self.all_cats.get(id)
-            if the_cat.ID is not self.ID:
+            if the_cat.ID is not self.ID and the_cat.moons > -1:
                 mates = the_cat.ID in self.mate
                 are_parents = False
                 parents = False

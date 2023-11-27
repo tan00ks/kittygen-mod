@@ -73,9 +73,9 @@ class DFPatrolScreen(Screens):
 
     def handle_choose_cats_events(self, event, doubleclick=False):
         if 'cat_icon' in self.elements:
-            if event.ui_element == self.elements['df_icon']:
-                    self.change_screen("patrol screen2")
-                    self.elements['df_icon'].disable()
+            if event.ui_element == self.elements['cat_icon']:
+                self.change_screen("patrol screen2")
+                self.elements['df_icon'].disable()
         if 'df_icon' in self.elements:
             self.elements['df_icon'].disable()
         if "date_icon" in self.elements:
