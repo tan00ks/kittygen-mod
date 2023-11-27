@@ -1380,10 +1380,10 @@ class MakeClanScreen(Screens):
                 self.your_cat = new_cat
                 if self.permanent_condition is not None and self.permanent_condition != 'paralyzed':
                     self.your_cat.get_permanent_condition(self.permanent_condition)
-                    self.your_cat.permanent_condition[self.permanent_condition]["moons_until"] = -1
+                    self.your_cat.permanent_condition[self.permanent_condition]["moons_until"] = 1
                 if self.paralyzed and 'paralyzed' not in self.your_cat.permanent_condition:
                     self.your_cat.get_permanent_condition("paralyzed")
-                    self.your_cat.permanent_condition['paralyzed']["moons_until"] = -1
+                    self.your_cat.permanent_condition['paralyzed']["moons_until"] = 1
                 self.your_cat.accessory = self.accessory
                 self.your_cat.personality = Personality(trait=self.personality, kit_trait=True)
                 self.selected_cat = None

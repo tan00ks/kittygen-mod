@@ -234,7 +234,7 @@ class ClearingScreen(Screens):
             concern_text = "The freshkill pile is empty, the Clan desperately needs prey!"
             self.pile_size = "#freshkill_pile_empty"
         elif 0 < current_prey_amount <= needed_amount / 2:
-            concern_text = "The freshkill pile can't even fed half of the Clan. Hunting patrols should be organized imitatively."
+            concern_text = "The freshkill pile can't even feed half of the Clan. Hunting patrols should be organized imitatively."
             self.pile_size = "#freshkill_pile_verylow"
         elif needed_amount / 2 < current_prey_amount <= needed_amount:
             concern_text = "Only half of the Clan can be fed currently. Hunting patrols should be organized."
