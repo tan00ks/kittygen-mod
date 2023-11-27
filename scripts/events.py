@@ -101,6 +101,9 @@ class Events:
         # print(game.clan.current_season)
         Pregnancy_Events.handle_pregnancy_age(game.clan)
         self.check_war()
+        if 'freshkill' in game.clan.clan_settings:
+            if game.clan.clan_settings['freshkill']:
+                self.add_freshkill()
 
         if game.clan.game_mode in ['expanded', 'cruel season'
                                    ] and game.clan.freshkill_pile:
@@ -333,6 +336,9 @@ class Events:
                 game.save_events()
             except:
                 SaveError(traceback.format_exc())
+    
+    def add_freshkill(self):
+        game.clan.freshkill_pile.add_freshkill(game.clan.freshkill_pile.amount_food_needed())
                 
     def gain_acc(self):
         possible_accs = ["WILD", "PLANT", "COLLAR", "FLOWER", "PLANT2", "SNAKE", "SMALLANIMAL", "DEADINSECT", "ALIVEINSECT", "FRUIT", "CRAFTED", "TAIL2"]
