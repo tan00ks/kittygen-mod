@@ -1079,7 +1079,10 @@ def event_text_adjust(Cat,
             text = text.replace("mur_c", str(victim_cat.name))
     
     if other_cat:
-        cat_dict["r_c"] = (str(other_cat.name), choice(other_cat.pronouns))
+        if other_cat.pronouns:
+            cat_dict["r_c"] = (str(other_cat.name), choice(other_cat.pronouns))
+        else:
+            cat_dict["r_c"] = (str(other_cat.name))
 
     if new_cat:
         cat_dict["n_c_pre"] = (str(new_cat.name.prefix), None)
