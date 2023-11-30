@@ -2186,7 +2186,8 @@ class Cat():
         # no mates check - can be commented out if it's desired to allow MCs to flirt with/date cats regardless of their romantic interactions being limited
 
         if not ignore_no_mates and (self.no_mates or other_cat.no_mates):
-            return False
+            if self.ID not in other_cat.mate:
+                return False
         
         # make sure the cat isn't too closely related
 
