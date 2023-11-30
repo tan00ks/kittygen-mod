@@ -2210,7 +2210,8 @@ class Cat():
             
             if game.config["mates"].get("override_same_age_group", False) or self.age != other_cat.age:
                 if abs(self.moons - other_cat.moons)> game.config["mates"]["age_range"] + 1:
-                    return False
+                    if self.ID not in other_cat.mate:
+                        return False
         
         # check for mentor
 
