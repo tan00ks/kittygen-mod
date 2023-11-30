@@ -2186,7 +2186,8 @@ class Cat():
         # no mates check - can be commented out if it's desired to allow MCs to flirt with/date cats regardless of their romantic interactions being limited
 
         if not ignore_no_mates and (self.no_mates or other_cat.no_mates):
-            return False
+            if self.ID not in other_cat.mate:
+                return False
         
         # make sure the cat isn't too closely related
 
@@ -2210,7 +2211,8 @@ class Cat():
             
             if game.config["mates"].get("override_same_age_group", False) or self.age != other_cat.age:
                 if abs(self.moons - other_cat.moons)> game.config["mates"]["age_range"] + 1:
-                    return False
+                    if self.ID not in other_cat.mate:
+                        return False
         
         # check for mentor
 
