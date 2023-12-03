@@ -450,7 +450,7 @@ class Cat():
                 fetched_cat.update_mentor()
         self.update_mentor()
 
-        if game.clan.game_mode != 'classic' and not (self.outside or self.exiled):
+        if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled):
             self.grief(body)
 
         if not self.outside:
@@ -1640,10 +1640,10 @@ class Cat():
         if duration == 0:
             duration = 1
 
-        # if game.clan.game_mode == "cruel season":
-        #     if mortality != 0:
-        #         mortality = int(mortality * 0.5)
-        #         med_mortality = int(med_mortality * 0.5)
+        if game.clan and game.clan.game_mode == "cruel season":
+            if mortality != 0:
+                mortality = int(mortality * 0.5)
+                med_mortality = int(med_mortality * 0.5)
 
         #         # to prevent an illness gets no mortality, check and set it to 1 if needed
         #         if mortality == 0 or med_mortality == 0:
@@ -1679,6 +1679,9 @@ class Cat():
                 self.illnesses[new_illness.name]['grief_cat'] = grief_cat.ID
 
     def get_injured(self, name, event_triggered=False, lethal=True, severity='default'):
+        if game.clan and game.clan.game_mode == "classic":
+            return
+        
         if name not in INJURIES:
             if name not in INJURIES:
                 print(f"WARNING: {name} is not in the injuries collection.")
@@ -1706,9 +1709,9 @@ class Cat():
         if duration == 0:
             duration = 1
 
-        # if mortality != 0:
-        #     if game.clan.game_mode == "cruel season":
-        #         mortality = int(mortality * 0.5)
+        if mortality != 0:
+            if game.clan and game.clan.game_mode == "cruel season":
+                mortality = int(mortality * 0.5)
 
         #         if mortality == 0:
         #             mortality = 1
@@ -1805,9 +1808,9 @@ class Cat():
         condition = PERMANENT[name]
         new_condition = False
         mortality = condition["mortality"][self.age]
-        # if mortality != 0:
-        #     if game.clan.game_mode == "cruel season":
-        #         mortality = int(mortality * 0.65)
+        if mortality != 0:
+            if game.clan and game.clan.game_mode == "cruel season":
+                mortality = int(mortality * 0.65)
 
         if condition['congenital'] == 'always':
             born_with = True
@@ -2186,7 +2189,8 @@ class Cat():
         # no mates check - can be commented out if it's desired to allow MCs to flirt with/date cats regardless of their romantic interactions being limited
 
         if not ignore_no_mates and (self.no_mates or other_cat.no_mates):
-            return False
+            if self.ID not in other_cat.mate:
+                return False
         
         # make sure the cat isn't too closely related
 
@@ -2210,7 +2214,8 @@ class Cat():
             
             if game.config["mates"].get("override_same_age_group", False) or self.age != other_cat.age:
                 if abs(self.moons - other_cat.moons)> game.config["mates"]["age_range"] + 1:
-                    return False
+                    if self.ID not in other_cat.mate:
+                        return False
         
         # check for mentor
 
@@ -2357,7 +2362,7 @@ class Cat():
         """Create Relationships to all current Clancats."""
         for id in self.all_cats:
             the_cat = self.all_cats.get(id)
-            if the_cat.ID is not self.ID:
+            if the_cat.ID is not self.ID and the_cat.moons > -1:
                 mates = the_cat.ID in self.mate
                 are_parents = False
                 parents = False
@@ -2566,9 +2571,9 @@ class Cat():
                 EX_gain = randint(10, 24)
 
                 gm_modifier = 1
-                if game.clan.game_mode == 'expanded':
+                if game.clan and game.clan.game_mode == 'expanded':
                     gm_modifier = 3
-                elif game.clan.game_mode == 'cruel season':
+                elif game.clan and game.clan.game_mode == 'cruel season':
                     gm_modifier = 6
 
                 if mediator.experience_level == "average":

@@ -482,9 +482,9 @@ class EventsScreen(Screens):
         if get_living_clan_cat_count(Cat) == 0:
             GameOver('events screen')
         
-        self.event_display_type = 'all events'
-        self.cat_icon.hide()
-        self.all_events_button.disable()
+        if self.event_display_type != 'relationship events':
+            self.cat_icon.hide()
+
         self.update_display_events_lists()
 
         self.ceremonies_events_button.enable()
@@ -553,18 +553,25 @@ class EventsScreen(Screens):
             if not self.all_events:
                 self.all_events.append(Single_Event("Nothing interesting happened this moon."))
             self.display_events = self.all_events
+            self.update_list_buttons(self.all_events_button)
         elif self.event_display_type == "ceremony events":
             self.display_events = self.ceremony_events
+            self.update_list_buttons(self.ceremonies_events_button)
         elif self.event_display_type == "birth death events":
             self.display_events = self.birth_death_events
+            self.update_list_buttons(self.birth_death_events_button)
         elif self.event_display_type == "relationship events":
             self.display_events = self.relation_events
+            self.update_list_buttons(self.relationship_events_button)
         elif self.event_display_type == "health events":
             self.display_events = self.health_events
+            self.update_list_buttons(self.health_events_button)
         elif self.event_display_type == "other clans events":
             self.display_events = self.other_clans_events
+            self.update_list_buttons(self.other_clans_events_button)
         elif self.event_display_type == "misc events":
             self.display_events = self.misc_events
+            self.update_list_buttons(self.misc_events_button)
 
         self.update_events_display()
         self.show_menu_buttons()
@@ -737,9 +744,6 @@ class EventsScreen(Screens):
         self.health_events = [x for x in (game.other_events_list + game.cur_events_list) if "health" in x.types]
         self.other_clans_events = [x for x in (game.other_events_list + game.cur_events_list) if "other_clans" in x.types]
         self.misc_events = [x for x in (game.other_events_list + game.cur_events_list) if "misc" in x.types]
-
-    
-        
 
     def make_events_container(self):
         """ In its own function so that there is only one place the box size is set"""

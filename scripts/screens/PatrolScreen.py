@@ -107,7 +107,8 @@ class PatrolScreen(Screens):
                 if self.selected_cat in self.current_patrol:
                     self.current_patrol.remove(self.selected_cat)
                 else:
-                    self.current_patrol.append(self.selected_cat)
+                    if len(self.current_patrol) < 6:
+                        self.current_patrol.append(self.selected_cat)
                 self.update_cat_images_buttons()
                 self.update_button()
             else:
@@ -534,12 +535,12 @@ class PatrolScreen(Screens):
         # add prey information
         current_amount =  round(game.clan.freshkill_pile.total_amount,2)
         self.elements['current_prey'] = pygame_gui.elements.UITextBox(
-            f"current prey: {current_amount}", scale(pygame.Rect((640, 180), (300, 100))),
+            f"current prey: {current_amount}", scale(pygame.Rect((640, 180), (400, 100))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
         )
         needed_amount = round(game.clan.freshkill_pile.amount_food_needed(),2)
         self.elements['needed_prey'] = pygame_gui.elements.UITextBox(
-            f"needed prey: {needed_amount}", scale(pygame.Rect((640, 215), (300, 100))),
+            f"needed prey: {needed_amount}", scale(pygame.Rect((640, 215), (400, 100))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
         )
 

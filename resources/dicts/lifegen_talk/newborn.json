@@ -56,6 +56,72 @@
             "Grr..."
         ]
     ],
+    "newborn_11": [
+        [
+            "newborn"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_12": [
+        [
+            "newborn"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_13": [
+        [
+            "newborn"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_14": [
+        [
+            "newborn"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_15": [
+        [
+            "newborn"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_16": [
+        [
+            "newborn"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_17": [
+        [
+            "newborn",
+            "insult"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_littermate": [
+        [
+            "newborn",
+            "littermate"
+        ],
+        [
+            "[You flop on top of t_c and they let out an annoyed squeak.]"
+        ]
+    ],
     "assertive_newborn1": [
         [
             "Any",
@@ -435,8 +501,7 @@
     ],
     "neurotic_newborn": [
         [
-            "Any",
-            "neurotic"
+            "Any"
         ],
         [
             "Squeak!"
@@ -444,8 +509,7 @@
     ],
     "neurotic_newborn1": [
         [
-            "Any",
-            "neurotic"
+            "Any"
         ],
         [
             "Eep!",
@@ -454,8 +518,7 @@
     ],
     "neurotic_newborn2": [
         [
-            "Any",
-            "neurotic"
+            "Any"
         ],
         [
             "Mrow!",
@@ -513,6 +576,25 @@
         [
             "[t_c ... t_c ... t_c ...]",
             "[You run your beautiful new kit's perfect name over and over through your mind, certain you'll never ever forget it.]"
+        ]
+    ],
+    "newborn_UNLAWFUL": [
+        [
+            "any",
+            "unlawful"
+        ],
+        [
+            "[t_c reaches up and bats at you. Their tiny claws prick your nose.]",
+            "[You reel back with a yelp.]"
+        ]
+    ],
+    "newborn_UNLAWFUL2": [
+        [
+            "any"
+        ],
+        [
+            "[t_c managed to wiggle their way out of their nest and is trying to make their way out of the nursery.]",
+            "[t_p doesn't seem to notice.]"
         ]
     ]
 }

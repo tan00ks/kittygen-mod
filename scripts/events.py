@@ -101,6 +101,9 @@ class Events:
         # print(game.clan.current_season)
         Pregnancy_Events.handle_pregnancy_age(game.clan)
         self.check_war()
+        if 'freshkill' in game.clan.clan_settings:
+            if game.clan.clan_settings['freshkill']:
+                self.add_freshkill()
 
         if game.clan.game_mode in ['expanded', 'cruel season'
                                    ] and game.clan.freshkill_pile:
@@ -214,15 +217,6 @@ class Events:
         self.herb_destruction()
         self.herb_gather()
         game.switches['have kits'] = True
-        if game.clan.game_mode in ["expanded", "cruel season"]:
-            amount_per_med = get_amount_cat_for_one_medic(game.clan)
-            med_fullfilled = medical_cats_condition_fulfilled(
-                Cat.all_cats.values(), amount_per_med)
-            if not med_fullfilled:
-                string = f"{game.clan.name}Clan does not have enough healthy medicine cats! Cats will be sick/hurt " \
-                         f"for longer and have a higher chance of dying. "
-                game.cur_events_list.insert(0, Single_Event(string, "health"))
-                
         
         # Clear the list of cats that died this moon.
         game.just_died.clear()
@@ -342,6 +336,9 @@ class Events:
                 game.save_events()
             except:
                 SaveError(traceback.format_exc())
+    
+    def add_freshkill(self):
+        game.clan.freshkill_pile.add_freshkill(game.clan.freshkill_pile.amount_food_needed())
                 
     def gain_acc(self):
         possible_accs = ["WILD", "PLANT", "COLLAR", "FLOWER", "PLANT2", "SNAKE", "SMALLANIMAL", "DEADINSECT", "ALIVEINSECT", "FRUIT", "CRAFTED", "TAIL2"]
@@ -823,6 +820,14 @@ class Events:
             while alive_app.ID == game.clan.your_cat.ID or not alive_app.is_injured():
                 alive_app = random.choice(alive_apps)
             text = text.replace("r_i", str(alive_app.name))
+        if "r_t" in text:
+            alive_apps = get_alive_cats(Cat)
+            if len(alive_apps) <= 1:
+                return ""
+            alive_app = random.choice(alive_apps)
+            while alive_app.ID == game.clan.your_cat.ID or not "starving" in alive_app.illnesses:
+                alive_app = random.choice(alive_apps)
+            text = text.replace("r_t", str(alive_app.name))
         if "l_n" in text:
             if game.clan.leader is None:
                 return ""
@@ -860,6 +865,10 @@ class Events:
             if game.clan.your_cat.mate is None:
                 return ""
             text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
+        if "y_a" in text:
+            if len(game.clan.your_cat.apprentice) == 0:
+                return ""
+            text = text.replace("y_a", str(Cat.fetch_cat(random.choice(game.clan.your_cat.apprentice)).name))
         if "m_n" in text or "mentor1" in text:
             if game.clan.your_cat.mentor is None:
                 return ""
@@ -1128,11 +1137,9 @@ class Events:
     def check_retire(self):
         if 'retire' in game.switches:
             if game.switches['retire']:
-                
                 game.switches['retire'] = False
         if 'retire_reject' in game.switches:
-            if game.switches['retire_reject']:
-                
+            if game.switches['retire_reject']:              
                 game.switches['retire_reject'] = False
     
     def generate_death_event(self):

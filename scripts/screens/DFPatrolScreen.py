@@ -73,9 +73,9 @@ class DFPatrolScreen(Screens):
 
     def handle_choose_cats_events(self, event, doubleclick=False):
         if 'cat_icon' in self.elements:
-            if event.ui_element == self.elements['df_icon']:
-                    self.change_screen("patrol screen2")
-                    self.elements['df_icon'].disable()
+            if event.ui_element == self.elements['cat_icon']:
+                self.change_screen("patrol screen2")
+                self.elements['df_icon'].disable()
         if 'df_icon' in self.elements:
             self.elements['df_icon'].disable()
         if "date_icon" in self.elements:
@@ -641,9 +641,10 @@ class DFPatrolScreen(Screens):
         if not the_cat.dead and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working():
             if "3" not in game.switches['patrolled']:
                 self.current_patrol.append(game.clan.your_cat)
-                for c in Cat.all_cats_list:
-                    if c.moons >= 6 and not c.dead and c.in_camp and c.ID != game.clan.your_cat.ID and c.ID not in game.patrolled and not c.outside and c not in self.current_patrol and not c.not_working():
-                        self.able_cats.append(c)
+        if "3" not in game.switches['patrolled']:
+            for c in Cat.all_cats_list:
+                if c.moons >= 6 and not c.dead and c.in_camp and c.ID != game.clan.your_cat.ID and c.ID not in game.patrolled and not c.outside and c not in self.current_patrol and not c.not_working():
+                    self.able_cats.append(c)
                 
         if not self.able_cats:
             all_pages = []

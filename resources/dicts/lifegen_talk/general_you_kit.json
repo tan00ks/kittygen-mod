@@ -11,6 +11,220 @@
             "Rest now, little one. Dream of the great warrior you'll become one day."
         ]
     ],
+    "introspective_to_NB": [
+        [
+            "newborn",
+            "introspective"
+        ],
+        [
+            "Aw. hello there, little one.",
+            "How did you get so far away from the nursery? Where's your parent?",
+            "Hm... You need to go back there, they'll be worrying about you."
+        ]
+    ],
+    "sweet_6": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "Ohh, look at you! You're so tiny!! Ah- that's so precious.",
+            "Oh my, and you have a ferocious mew too! Ah, you'll make a wonderful warrior someday, I just know it.",
+            "You're so little, yet I know you're going to make everyone proud.. Just by being yourself."
+        ]
+    ],
+    "assertive_parent11": [
+        [
+            "kitten",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "Hey, y_c, play nice! Be careful with your playmates!",
+            "*Whisper* Even though, between you and me, we both know you could totally destroy them. Hehehe!"
+        ]
+    ],
+    "assertive_parent21": [
+        [
+            "kitten",
+            "assertive",
+            "silly",
+            "stable",
+            "sweet",
+            "unabashed",
+            "platonic_like",
+            "from_parent"
+        ],
+        [
+            "Ready for a badger ride, y_c? Hurry up and climb on!",
+            "[You clamber onto t_c's shoulders, laughing and squealing with glee.]",
+            "Rrragh, I'm the big scary badger! Hahaha!"
+        ]
+    ],
+    "assertive_insult": [
+        [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "assertive",
+            "unlawful",
+            "unabashed",
+            "silly",
+            "insult",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "Hehehe! Little guy's got a mouth on 'em! That's hilarious!",
+            "Wait, stay right there!",
+            "r_c! Guess what y_c just called me! Ahahaha!"
+        ]
+    ],
+    "sweetgrieving_5": [
+        [
+            "dead_close",
+            "they_grieving",
+            "kitten",
+            "sweet",
+            "stable"
+        ],
+        [
+            "O- Oh! Oh, you want a story, little one? A... About d_c...",
+            "Okay.. I'm.. I'm sorry if I get a little... teary... but I don't want them to be forgotten. Let me tell you about one of the most wonderful cats in the Clans."
+        ]
+    ],
+    "assertive_insult1": [
+        [
+            "kitten",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "assertive",
+            "insult",
+            "unlawful",
+            "dislike"
+        ],
+        [
+            "Try that again, and see what happens, pipsqueak.",
+            "I could chew you up and spit you out again without thinking twice about it."
+        ]
+    ],
+    "assertive_murder4_2": [
+        [
+            "murder",
+            "kitten",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "y_c, I ... why wouldn't you tell me?",
+            "To send another cat to StarClan ... and then lie about it ...",
+            "I know I taught you to take risks, but this isn't what I meant!"
+        ]
+    ],
+    "assertive_parent13": [
+        [
+            "kitten",
+            "assertive",
+            "platonic_like",
+            "from_parent",
+            "silly",
+            "sweet",
+            "stable",
+            "unabashed"
+        ],
+        [
+            "What's that, y_c? You wanna play? Sure! You can be the leader, and I'll be the rogue.",
+            "Ahem ...",
+            "Stop right there, clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
+            "Wait, stop! What are you doing? AHHH!!!!",
+            "Too ... powerful ... bleeegh!",
+            "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
+        ]
+    ],
+    "upstanding_general1": [
+        [
+            "upstanding",
+            "newborn",
+            "you_outsiderroots",
+            "you_abandoned",
+            "you_orphaned"
+        ],
+        [
+            "Is this little scrap of fur the new addition to the clan?",
+            "Hmph. Let's just hope they stay out of trouble, that seems to be an issue for a lot of the kits around here."
+        ]
+    ],
+    "sweet_7": [
+        [
+            "newborn",
+            "sweet",
+            "stable"
+        ],
+        [
+            "Oh my- you're so precious!",
+            "Hello, little one! Welcome to c_nClan! What a cute lil fella, you are.",
+            "Here we go, let me take you back to your nest. Little ones like you need plenty of rest to become big strong warriors!"
+        ]
+    ],
+    "sweet_8": [
+        [
+            "newborn",
+            "sweet",
+            "stable"
+        ],
+        [
+            "Why hello there, little flower!",
+            "Now now, you've gotta stay near your nest. Those big stinky cats might not see you there!",
+            "There we are! Ah- I've been meaning to bring this to you anyway. It's a little bundle of moss you can cuddle with!"
+        ]
+    ],
+    "introspective_to_NB_1": [
+        [
+            "Newborn",
+            "Introspective"
+        ],
+        [
+            "[You, while stumbling around outside the nursery, trip over t_c's tail, and faceplant at their feet.]",
+            "...",
+            "[They don't seem to notice you, so you blindly stumble off.]",
+            "... Did a bird just land on my tail?"
+        ]
+    ],
+    "introspective_to_NB_2": [
+        [
+            "Newborn",
+            "Introspective"
+        ],
+        [
+            "Hi, little one. You must be y_c.",
+            "Aren't you a cute little thing?",
+            "Aw, coming to the nursery just makes me want to have kits of my own. I doubt if that'll ever happen though."
+        ]
+    ],
+    "assertive_1": [
+        [
+            "newborn",
+            "assertive",
+            "from_parent"
+        ],
+        [
+            "*Sigh* My perfect little y_c ...",
+            "You're gonna do great things someday, kiddo, I just know it."
+        ]
+    ],
+    "unlawful_newborn": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "How... small."
+        ]
+    ],
     "stable_8": [
         [
             "newborn",
