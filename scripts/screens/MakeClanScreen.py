@@ -1140,9 +1140,9 @@ class MakeClanScreen(Screens):
                 object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
             )
             if self.tint:
-                self.elements['tint'] = pygame_gui.elements.UIDropDownMenu(["pink", "gray", "red", "orange", "None"], str(self.tint), scale(pygame.Rect((column2_x, y_pos[1]), (300, 70))), manager=MANAGER)
+                self.elements['tint'] = pygame_gui.elements.UIDropDownMenu(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue", "None"], str(self.tint), scale(pygame.Rect((column2_x, y_pos[1]), (300, 70))), manager=MANAGER)
             else:
-                self.elements['tint'] = pygame_gui.elements.UIDropDownMenu(["pink", "gray", "red", "orange", "None"], "None", scale(pygame.Rect((column2_x, y_pos[1]), (300, 70))), manager=MANAGER)
+                self.elements['tint'] = pygame_gui.elements.UIDropDownMenu(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue",  "None"], "None", scale(pygame.Rect((column2_x, y_pos[1]), (300, 70))), manager=MANAGER)
         
         # page 1
         # White patches
@@ -1183,9 +1183,9 @@ class MakeClanScreen(Screens):
                 object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
             )
             if self.white_patches_tint:
-                self.elements['white_patches_tint'] = pygame_gui.elements.UIDropDownMenu(["None"] + ["offwhite"], str(self.white_patches_tint), scale(pygame.Rect((column2_x, y_pos[1]), (300, 70))), manager=MANAGER)
+                self.elements['white_patches_tint'] = pygame_gui.elements.UIDropDownMenu(["None"] + ["offwhite", "cream", "darkcream", "gray", "pink"], str(self.white_patches_tint), scale(pygame.Rect((column2_x, y_pos[1]), (300, 70))), manager=MANAGER)
             else:
-                self.elements['white_patches_tint'] = pygame_gui.elements.UIDropDownMenu(["None"] + ["offwhite"], "None", scale(pygame.Rect((column2_x, y_pos[1]), (300, 70))), manager=MANAGER)
+                self.elements['white_patches_tint'] = pygame_gui.elements.UIDropDownMenu(["None"] + ["offwhite", "cream", "darkcream", "gray", "pink"], "None", scale(pygame.Rect((column2_x, y_pos[1]), (300, 70))), manager=MANAGER)
         
         #page 2
         #tortie
