@@ -544,7 +544,10 @@ class TalkScreen(Screens):
                 try:
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
-                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
+                    if game.clan.your_cat.moons == 0:
+                        possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", "newborn")
+                    else:
+                        possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status)
                 except Exception as e:
                     print(e)
