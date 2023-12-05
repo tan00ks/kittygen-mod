@@ -114,11 +114,15 @@ class MakeClanScreen(Screens):
         self.personality = "troublesome"
         self.accessory = None
         self.permanent_condition = None
+        self.preview_age = "kitten"
         self.page = 0
+        self.adolescent_pose = 0
+        self.adult_pose = 0
+        self.elder_pose = 0
 
         # Buttons that appear on every screen.
         self.menu_warning = pygame_gui.elements.UITextBox(
-            'Note: going back to main menu resets the generated cats.',
+            '',
             scale(pygame.Rect((50, 50), (1200, -1))),
             object_id=get_text_box_theme("#text_box_22_horizleft"), manager=MANAGER
         )
@@ -1053,16 +1057,15 @@ class MakeClanScreen(Screens):
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
+            adol_sprite=self.adolescent_pose if self.adolescent_pose > 0 else 3,
+            adult_sprite=self.adult_pose if self.adult_pose > 0 else 6,
+            senior_sprite=self.elder_pose if self.elder_pose > 0 else 12,
             reverse=self.reverse,
             accessories=self.accessories
         )
-        self.custom_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
-        self.custom_cat.sprite = generate_sprite(self.custom_cat)
-        self.elements["sprite"] = UISpriteButton(scale(pygame.Rect
-                                         ((700,100), (300, 300))),
-                                   self.custom_cat.sprite,
-                                   self.custom_cat.ID,
-                                   starting_height=0, manager=MANAGER)
+        if self.length == 'long' and self.adult_pose == 0:
+            pelt2.cat_sprites['young adult'] = 9
+
         self.elements["left"] = UIImageButton(scale(pygame.Rect((50, 700), (76, 100))), "", object_id="#arrow_right_fancy",
                                                  starting_height=2)
         
@@ -1096,9 +1099,26 @@ class MakeClanScreen(Screens):
         pelts_tortie.append("Single")
         
         permanent_conditions = ['born without a leg', 'weak leg', 'twisted leg', 'born without a tail', 'paralyzed', 'raspy lungs', 'wasting disease', 'blind', 'one bad eye', 'failing eyesight', 'partial hearing loss', 'deaf', 'constant joint pain', 'seizure prone', 'allergies', 'persistent headaches']
-        
-        
-        
+        self.elements['preview text'] = pygame_gui.elements.UITextBox(
+                'Preview Age',
+                scale(pygame.Rect((y_pos[6], 100),(1200,-1))),
+                object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+            )
+        self.elements['preview age'] = pygame_gui.elements.UIDropDownMenu(["kitten", "adolescent", "adult", "elder"], str(self.preview_age), scale(pygame.Rect((y_pos[6], 200), (300, 70))), manager=MANAGER)
+        c_moons = 1
+        if self.preview_age == "adolescent":
+            c_moons = 6
+        elif self.preview_age == "adult":
+            c_moons = 12
+        elif self.preview_age == "elder":
+            c_moons = 121
+        self.custom_cat = Cat(moons = c_moons, pelt=pelt2, loading_cat=True)
+        self.custom_cat.sprite = generate_sprite(self.custom_cat)
+        self.elements["sprite"] = UISpriteButton(scale(pygame.Rect
+                                         ((700,100), (300, 300))),
+                                   self.custom_cat.sprite,
+                                   self.custom_cat.ID,
+                                   starting_height=0, manager=MANAGER)
         # page 0
         # pose
         # pelt type
@@ -1108,21 +1128,43 @@ class MakeClanScreen(Screens):
         if self.page == 0:
 
             self.elements['pose text'] = pygame_gui.elements.UITextBox(
-                'Pose',
+                'Kitten Pose',
                 scale(pygame.Rect((column1_x - x_align, y_pos[0] ),(1200,-1))),
                 object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
             )
             self.elements['pose'] = pygame_gui.elements.UIDropDownMenu(["0", "1", "2"], str(self.kitten_sprite), scale(pygame.Rect((column1_x, y_pos[0]), (300, 70))), manager=MANAGER)
             
-            self.elements['pelt text'] = pygame_gui.elements.UITextBox(
-                'Pelt type',
+            self.elements['pose text2'] = pygame_gui.elements.UITextBox(
+                'Adolescent Pose',
                 scale(pygame.Rect((column1_x - x_align, y_pos[1] ),(1200,-1))),
                 object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
             )
+            self.elements['adolescent pose'] = pygame_gui.elements.UIDropDownMenu(["0", "1", "2"], str(self.adolescent_pose), scale(pygame.Rect((column1_x, y_pos[1]), (300, 70))), manager=MANAGER)
+
+            self.elements['pose text3'] = pygame_gui.elements.UITextBox(
+                'Adult Pose',
+                scale(pygame.Rect((column1_x - x_align, y_pos[2] ),(1200,-1))),
+                object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+            )
+            self.elements['adult pose'] = pygame_gui.elements.UIDropDownMenu(["0", "1", "2"], str(self.adult_pose), scale(pygame.Rect((column1_x, y_pos[2]), (300, 70))), manager=MANAGER)
+
+            self.elements['pose text4'] = pygame_gui.elements.UITextBox(
+                'Elder Pose',
+                scale(pygame.Rect((column1_x - x_align, y_pos[3] ),(1200,-1))),
+                object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+            )
+            self.elements['elder pose'] = pygame_gui.elements.UIDropDownMenu(["0", "1", "2"], str(self.elder_pose), scale(pygame.Rect((column1_x, y_pos[3]), (300, 70))), manager=MANAGER)
+
+
+            self.elements['pelt text'] = pygame_gui.elements.UITextBox(
+                'Pelt type',
+                scale(pygame.Rect((column1_x - x_align, y_pos[4] ),(1200,-1))),
+                object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
+            )
             if self.pname == "Tortie":
-                self.elements['pelt dropdown'] = pygame_gui.elements.UIDropDownMenu(pelts, "SingleColour", scale(pygame.Rect((column1_x, y_pos[1]),(300,70))), manager=MANAGER)
+                self.elements['pelt dropdown'] = pygame_gui.elements.UIDropDownMenu(pelts, "SingleColour", scale(pygame.Rect((column1_x, y_pos[4]),(300,70))), manager=MANAGER)
             else:
-                self.elements['pelt dropdown'] = pygame_gui.elements.UIDropDownMenu(pelts, str(self.pname), scale(pygame.Rect((column1_x, y_pos[1]),(300,70))), manager=MANAGER)
+                self.elements['pelt dropdown'] = pygame_gui.elements.UIDropDownMenu(pelts, str(self.pname), scale(pygame.Rect((column1_x, y_pos[4]),(300,70))), manager=MANAGER)
             if self.pname == "Tortie":
                 self.elements['pelt dropdown'].disable()
             else:
@@ -1348,6 +1390,9 @@ class MakeClanScreen(Screens):
                 
     def handle_customize_cat_event(self, event):
         if event.type == pygame_gui.UI_DROP_DOWN_MENU_CHANGED:
+            if event.ui_element == self.elements['preview age']:
+                self.preview_age = event.text
+                self.update_sprite()
             if self.page == 0:
                 if event.ui_element == self.elements['pelt dropdown']:
                     self.pname = event.text
@@ -1363,6 +1408,18 @@ class MakeClanScreen(Screens):
                     self.update_sprite()
                 elif event.ui_element == self.elements['pose']:
                     self.kitten_sprite = int(event.text)
+                    self.update_sprite()
+                elif event.ui_element == self.elements['adolescent pose']:
+                    self.adolescent_pose = int(event.text) + 3
+                    self.update_sprite()
+                elif event.ui_element == self.elements['adult pose']:
+                    if self.length == 'short':
+                        self.adult_pose = int(event.text) + 6
+                    elif self.length == 'long':
+                        self.adult_pose = int(event.text) + 9
+                    self.update_sprite()
+                elif event.ui_element == self.elements['elder pose']:
+                    self.elder_pose = int(event.text) + 12
                     self.update_sprite()
             elif self.page == 1:
                 if event.ui_element == self.elements['eye color']:
@@ -1528,10 +1585,23 @@ class MakeClanScreen(Screens):
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
+            adol_sprite=self.adolescent_pose if self.adolescent_pose > 0 else 3,
+            adult_sprite=self.adult_pose if self.adult_pose > 0 else 6,
+            senior_sprite=self.elder_pose if self.elder_pose > 0 else 12,
             reverse=self.reverse,
             accessories=self.accessories
         )
-        self.custom_cat = Cat(moons = 1, pelt=pelt2, loading_cat=True)
+        if self.length == 'long' and self.adult_pose == 0:
+            pelt2.cat_sprites['young adult'] = 9
+        c_moons = 1
+        if self.preview_age == "adolescent":
+            c_moons = 6
+        elif self.preview_age == "adult":
+            c_moons = 12
+        elif self.preview_age == "elder":
+            c_moons = 121
+        self.custom_cat = Cat(moons = c_moons, pelt=pelt2, loading_cat=True)
+
         self.custom_cat.sprite = generate_sprite(self.custom_cat)
         self.elements['sprite'].kill()
         self.elements["sprite"] = UISpriteButton(scale(pygame.Rect
