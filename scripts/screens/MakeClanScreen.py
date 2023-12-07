@@ -1033,6 +1033,43 @@ class MakeClanScreen(Screens):
 
         # draw cats to choose from
         self.refresh_cat_images_and_info()
+    
+    def randomize_custom_cat(self):
+        pelts = list(Pelt.sprites_names.keys())
+        pelts.remove("Tortie")
+        pelts.remove("Calico")
+        pelts_tortie = pelts.copy()
+        pelts_tortie.remove("SingleColour")
+        pelts_tortie.remove("TwoColour")
+        pelts_tortie.append("Single")
+        permanent_conditions = ['born without a leg', 'weak leg', 'twisted leg', 'born without a tail', 'paralyzed', 'raspy lungs', 'wasting disease', 'blind', 'one bad eye', 'failing eyesight', 'partial hearing loss', 'deaf', 'constant joint pain', 'seizure prone', 'allergies', 'persistent headaches']
+
+        white_patches = ["FULLWHITE"] + Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white
+        self.pname= random.choice(pelts)
+        self.length=random.choice(["short", "medium", "long"])
+        self.colour=random.choice(Pelt.pelt_colours)
+        self.white_patches= choice(white_patches) if random.randint(1,2) == 1 else None
+        self.eye_color=choice(Pelt.eye_colours)
+        self.eye_colour2=choice(Pelt.eye_colours) if random.randint(1,10) == 1 else None
+        self.tortiebase=choice(Pelt.tortiebases)
+        self.tortiecolour=choice(Pelt.pelt_colours)
+        self.pattern=choice(pelts_tortie)
+        self.tortiepattern=choice(Pelt.tortiepatterns)
+        self.vitiligo=choice(Pelt.vit) if random.randint(1,5) == 1 else None
+        self.points=choice(Pelt.point_markings) if random.randint(1,5) == 1 else None
+        self.scars=choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3) if random.randint(1,10) == 1 else None
+        self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue"]) if random.randint(1,5) == 1 else None
+        self.skin=choice(Pelt.skin_sprites)
+        self.white_patches_tint=choice(["offwhite", "cream", "darkcream", "gray", "pink"]) if random.randint(1,5) == 1 else None
+        self.kitten_sprite=random.randint(0,2)
+        self.reverse=False if random.randint(1,2) == 1 else True
+        self.sex = random.choice(["male", "female"])
+        self.personality = choice(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'])
+        self.accessory = choice(Pelt.plant_accessories + Pelt.wild_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.plant2_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories) if random.randint(1,5) == 1 else None
+        self.permanent_condition = choice(permanent_conditions) if random.randint(1,30) == 1 else None
+        self.adolescent_pose = random.randint(0,2)
+        self.adult_pose = random.randint(0,2)
+        self.elder_pose = random.randint(0,2)
 
     def open_customize_cat(self):
         self.clear_all_page()
@@ -1057,9 +1094,9 @@ class MakeClanScreen(Screens):
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
-            adol_sprite=self.adolescent_pose if self.adolescent_pose > 0 else 3,
-            adult_sprite=self.adult_pose if self.adult_pose > 0 else 6,
-            senior_sprite=self.elder_pose if self.elder_pose > 0 else 12,
+            adol_sprite=self.adolescent_pose if self.adolescent_pose > 2 else 3,
+            adult_sprite=self.adult_pose if self.adult_pose > 2 else 6,
+            senior_sprite=self.elder_pose if self.elder_pose > 2 else 12,
             reverse=self.reverse,
             accessories=self.accessories
         )
@@ -1080,6 +1117,9 @@ class MakeClanScreen(Screens):
             self.elements['right'].disable()
         else:
             self.elements['right'].enable()
+
+        self.elements['random_customize'] = UIImageButton(scale(pygame.Rect((500, 100), (68, 68))), "", object_id="#random_dice_button",
+                                             starting_height=2)
         
         column1_x = 500  # x-coordinate for column 1
         column2_x = 1100  # x-coordinate for column 2
@@ -1101,7 +1141,7 @@ class MakeClanScreen(Screens):
         permanent_conditions = ['born without a leg', 'weak leg', 'twisted leg', 'born without a tail', 'paralyzed', 'raspy lungs', 'wasting disease', 'blind', 'one bad eye', 'failing eyesight', 'partial hearing loss', 'deaf', 'constant joint pain', 'seizure prone', 'allergies', 'persistent headaches']
         self.elements['preview text'] = pygame_gui.elements.UITextBox(
                 'Preview Age',
-                scale(pygame.Rect((y_pos[6], 100),(1200,-1))),
+                scale(pygame.Rect((y_pos[6], 130),(1200,-1))),
                 object_id=get_text_box_theme("#text_box_30_horizleft"), manager=MANAGER
             )
         self.elements['preview age'] = pygame_gui.elements.UIDropDownMenu(["kitten", "adolescent", "adult", "elder"], str(self.preview_age), scale(pygame.Rect((y_pos[6], 200), (300, 70))), manager=MANAGER)
@@ -1545,6 +1585,9 @@ class MakeClanScreen(Screens):
                 if self.page > 0:
                     self.page -= 1
                     self.open_customize_cat()
+            elif event.ui_element == self.elements['random_customize']:
+                self.randomize_custom_cat()
+                self.open_customize_cat()
             elif event.ui_element == self.elements['next_step']:
                 new_cat = Cat(moons = 1)
                 new_cat.pelt = self.custom_cat.pelt
@@ -1585,9 +1628,9 @@ class MakeClanScreen(Screens):
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
-            adol_sprite=self.adolescent_pose if self.adolescent_pose > 0 else 3,
-            adult_sprite=self.adult_pose if self.adult_pose > 0 else 6,
-            senior_sprite=self.elder_pose if self.elder_pose > 0 else 12,
+            adol_sprite=self.adolescent_pose if self.adolescent_pose > 2 else 3,
+            adult_sprite=self.adult_pose if self.adult_pose > 2 else 6,
+            senior_sprite=self.elder_pose if self.elder_pose > 2 else 12,
             reverse=self.reverse,
             accessories=self.accessories
         )
