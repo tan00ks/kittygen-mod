@@ -328,7 +328,7 @@ class Events:
         GenerateEvents.clear_loaded_events()
 
         # autosave
-        if game.settings.get('autosave') is True and game.clan.age % 5 == 0:
+        if game.clan.clan_settings.get('autosave') is True and game.clan.age % 5 == 0:
             try:
                 game.save_cats()
                 game.clan.save_clan()
