@@ -829,7 +829,7 @@ class TalkScreen(Screens):
             if "t_p" in text:
                 if len(cat.inheritance.get_parents()) == 0:
                     return ""
-                parent = Cat.fetch_cat(choice(cat.get_parents()))
+                parent = Cat.fetch_cat(choice(cat.inheritance.get_parents()))
                 if parent.outside or parent.dead or parent.ID==game.clan.your_cat.ID:
                     return ""
                 text = text.replace("t_p", str(parent.name))
