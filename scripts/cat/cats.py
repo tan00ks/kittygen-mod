@@ -221,7 +221,7 @@ class Cat():
         self.no_kits = False
         self.no_mates = False
         self.no_retire = False
-
+        self.backstory_str = ""
         
         self.prevent_fading = False  # Prevents a cat from fading.
         self.faded_offspring = []  # Stores of a list of faded offspring, for family page purposes.
@@ -3048,7 +3048,8 @@ class Cat():
                 "joined_df": self.joined_df if self.joined_df else False,
                 "revealed": self.revealed if self.revealed and isinstance(self.revealed, int) else 0,
                 "inventory": self.inventory if self.inventory else [],
-                "revives": self.revives if self.revives else 0
+                "revives": self.revives if self.revives else 0,
+                "backstory_str": self.backstory_str if self.backstory_str else ""
             }
 
 
