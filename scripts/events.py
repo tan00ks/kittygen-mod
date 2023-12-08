@@ -98,7 +98,6 @@ class Events:
         # age up the clan, set current season
         game.clan.age += 1
         get_current_season()
-        # print(game.clan.current_season)
         Pregnancy_Events.handle_pregnancy_age(game.clan)
         self.check_war()
         if 'freshkill' in game.clan.clan_settings:
