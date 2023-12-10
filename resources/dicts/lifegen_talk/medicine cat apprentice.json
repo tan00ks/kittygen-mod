@@ -1510,5 +1510,14 @@
             "[t_c is staring intently at the wall of herbs in the medicine den, mumbling under their breath.]",
             "[It seems like they're trying to memorize each and every one. Now that's determination.]"
         ]
+    ],
+    "newborn_frommedapp": [
+        [
+            "newborn"
+        ],
+        [
+            "I never expected kittens to be this small when they're born. They're like a little pebble... that meows.",
+            "...this one's a very cute pebble."
+        ]
     ]
 }

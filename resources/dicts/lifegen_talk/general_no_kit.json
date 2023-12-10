@@ -1109,7 +1109,6 @@
             "No matter how hard you try, your guilt won't bring d_c back. They wouldn't want this to keep you from living."
         ]
     ],
-    
     "assertive_jealous1_5": [
         [
             "Any",
@@ -4409,6 +4408,7 @@
     ],
     "brooding_mate": [
         [
+            "any",
             "brooding",
             "from_mate"
         ],
@@ -4420,6 +4420,7 @@
     ],
     "brooding_mate1": [
         [
+            "any",
             "brooding",
             "from_mate"
         ],
@@ -4432,6 +4433,7 @@
     ],
     "brooding_mate2": [
         [
+            "any",
             "brooding",
             "from_mate"
         ],
@@ -7031,7 +7033,7 @@
         [
             "I cannot believe it! Oh, y_c, you-re- you're... We're going to be parents, you and me, PARENTS! Can you believe it?!",
             "[t_c pulls you into a fierce hug, and you return it, both of smiling gleefully.]",
-            "Can you imagine it? Little fluffs of fur that look like you and me. What will we name them? What will they be like? I have some ideas-", 
+            "Can you imagine it? Little fluffs of fur that look like you and me. What will we name them? What will they be like? I have some ideas-",
             "Oh, not for names, sorry Love, for what we should do. Do you think the queens will let me decorate your nest in the nursery? Put some feathers in the moss, pretty flowers around the nest- the nest...",
             "You'll be staying in the nursery!",
             "I'll ask the queens if I can stay with you, I'm sure they won't mind- no matter what, I want to be by your side. My goodness y_c, I can't wait."
@@ -7869,6 +7871,7 @@
     ],
     "insult_19": [
         [
+            "any",
             "insult",
             "stable",
             "introspective"
@@ -8779,6 +8782,407 @@
             "[t_c spends several minutes describing, in-depth, their workout routine.]",
             "... And that's all there is to it!",
             "It might seem excessive, but I swear, it all pays off in the end."
+        ]
+    ],
+    "theystarving_1": [
+        [
+            "they_starving",
+            "Any"
+        ],
+        [
+            "[t_c kneads their stomach, eyes hollow with hunger.]",
+            "[Seems like this famine is really doing a number on everyone ...]"
+        ]
+    ],
+    "theystarving_2": [
+        [
+            "they_starving",
+            "warrior"
+        ],
+        [
+            "Is it time for another hunting patrol already?",
+            "[t_c struggles to their paws and heads to the camp's entrance.]",
+            "Let's hope we catch something this time…"
+        ]
+    ],
+    "they_starving_3": [
+        [
+            "any",
+            "introspective",
+            "they_starving"
+        ],
+        [
+            "... y_c. Hello.",
+            "This situation... I can barely describe it.",
+            "'Hunger is the killer of the mind' is something the elders used to tell me. I think I finally understand that.",
+            "I can barely focus on anything else.",
+            "We need to find more prey. The clan can't thrive like this."
+        ]
+    ],
+    "they_starving_5": [
+        [
+            "any",
+            "introspective",
+            "they_starving"
+        ],
+        [
+            "...",
+            "[t_c was staring up at the trees, scanning the branches.]",
+            "You know, y_c. It seems this hunger is affecting everything. The grass seems dry, and the little birds that normally sing above our camp haven't appeared.",
+            "It's demoralising. I don't know how we'll go on, y_c."
+        ]
+    ],
+    "they_starving_6": [
+        [
+            "they_starving",
+            "Any"
+        ],
+        [
+            "I'd give anything for a nice mouse right now. Starclan, I'd even settle for a stale one! Anything to get rid of this hunger..."
+        ]
+    ],
+    "starving_queen": [
+        [
+            "no_kit",
+            "sweet",
+            "introspective",
+            "stable",
+            "upstanding",
+            "neurotic",
+            "they_starving"
+        ],
+        [
+            "[t_c stares into the nursery, eyes hollow.]",
+            "None of the kits have been out to play today.",
+            "[t_c makes a choking sound, avoiding your gaze.]",
+            "Th-they’re usually always so energetic… I don’t…",
+            "y_c, I don’t know what to do! This starvation it’s.. I know it affects the kits. I need to get some prey. I can’t think."
+        ]
+    ],
+    "theystarving_sweet1": [
+        [
+            "they_starving",
+            "no_kit",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[Despite their obvious hunger, you can see t_c nudging what little they have to r_c.]",
+            "[They look at you and smile tiredly, the pain meant nothing to them if it meant they could help someone else.]"
+        ]
+    ],
+    "theystarving_sweet2": [
+        [
+            "they_starving",
+            "no_kit",
+            "sweet"
+        ],
+        [
+            "I’m gonna do what I can to get more food... I promise.",
+            "If I can’t, you can have my portion tonight.. I don’t mind."
+        ]
+    ],
+    "theystarving_sweet3": [
+        [
+            "they_starving",
+            "no_kit",
+            "sweet"
+        ],
+        [
+            "[Despite everything, t_c continues to smile. Despite everything, they keep trying to make you happy.]",
+            "StarClan will bring us food, we just need to be patient.",
+            "[Despite everything... the look in their eyes tells you they’re just as hopeless as you are.]"
+        ]
+    ],
+    "youstarving_1": [
+        [
+            "you_starving",
+            "Any",
+            "platonic_like"
+        ],
+        [
+            "[t_c drops a small mouse at your paws, nosing it towards you.]",
+            "Eat. We all need to keep our strength up, especially in times like these."
+        ]
+    ],
+    "you_starving_2": [
+        [
+            "any",
+            "you_starving"
+        ],
+        [
+            "Oh, y_c.",
+            "[t_c came trotting up to you, worry carved into their face.]",
+            "You know... I didn't expect that you would fall victim to hunger. You always seemed too strong for it.",
+            "Please... just hold on for a little bit longer. I'll make sure that the next fresh kill goes to you."
+        ]
+    ],
+    "you_starving_3": [
+        [
+            "any",
+            "you_starving"
+        ],
+        [
+            "Oh, y_c. I'm so sorry...",
+            "[t_c scanned over the fresh kill pile, it appearing to be barren.]",
+            "There's still no fresh kill. Nothing's been found.",
+            "[Their voice hitched and they sniffed quietly to themself.]",
+            "This... why would Starclan do this to us...?"
+        ]
+    ],
+    "you_starving_4": [
+        [
+            "warrior",
+            "apprentice",
+            "you_starving"
+        ],
+        [
+            "y_c?",
+            "[You turned to look up at t_c.]",
+            "Listen... I know you're hungry, but we need more cats on hungry --- hunting. Hunting patrol.",
+            "There's nothing in the fresh kill pile, and we're getting a little desperate. Maybe you might be able to find something? A fresh pair of eyes is helpful.",
+            "I know, I know. I wouldn't ask if it wasn't essential, y_c. You know this."
+        ]
+    ],
+    "you_starving_5": [
+        [
+            "any",
+            "you_starving"
+        ],
+        [
+            "Oh, good morning, y_c.",
+            "[You look over to see t_c coming over to you, a bundle of herbs wrapped in a leaf in their mouth. They gently place the package down next to you.]",
+            "Listen, I've noticed that... well you're not doing okay. This starvation is awful for the body and the mind. I've been thinking about it since yesterday, and I decided to make some herb bundles.",
+            "They're normally for traveling, but I suppose in a morbid sense this is its own kind of adventure. Please will you eat them? I've made a bundle for all the cats that need it, so you don't need to worry that you're taking herbs off of someone else.",
+            "In case you're wondering, it's a mixture of honey, chamomile and willow herb, and wrapped in a laurel leaf.",
+            "... there we go. Thank you y_c. Hopefully there will be more fresh-kill soon."
+        ]
+    ],
+    "you_starving_6": [
+        [
+            "you_starving",
+            "Any"
+        ],
+        [
+            "[t_c trudges back into camp with their head and tail lowered in defeat. Their dull eyes meet yours and they shake their head.]",
+            "There's not even so much as a mouse out there... I'm sorry. Let's try not to worry though, we have to catch at least something sooner or later!",
+            "...",
+            "Right?"
+        ]
+    ],
+    "you_starving_7": [
+        [
+            "you_starving",
+            "they_starving",
+            "no_kit",
+            "greenleaf"
+        ],
+        [
+            "Ironic, isn't it? Greenleaf is supposed to be the time of year when prey is the most abundant, yet here we are. Starving."
+        ]
+    ],
+    "upstanding_theygrief": [
+        [
+            "upstanding",
+            "any",
+            "dead_close",
+            "they_grieving"
+        ],
+        [
+            "Hey y_c, I finally figured out why everyone's nests keep getting soaked by the rain!",
+            "The den roof is leaking again, can you believe it? Don't worry though, I'm sure me and d_c can–",
+            "Oh… right. W-well I'm sure I can still fix it, it just… may take a bit longer with only one set of paws."
+        ]
+    ],
+    "upstanding_they_grief1": [
+        [
+            "upstanding",
+            "they_grieving",
+            "dead_close",
+            "Any"
+        ],
+        [
+            "[t_c, the cat who is usually bounding around camp and offering their help to any and every cat in the clan, is left lying in their nest, sobbing.]",
+            "[It seems like the death of d_c hit them harder than even t_c themself realized.]"
+        ]
+    ],
+    "upstanding_they_grief2": [
+        [
+            "upstanding",
+            "they_grieving",
+            "dead_close",
+            "Any"
+        ],
+        [
+            "[You watch t_c as they go through their many daily tasks as usual. However, something seems off. They seem distracted and their movements are sluggish and unbalanced.]",
+            "[t_c seems to be missing d_c more than they are willing to admit.]"
+        ]
+    ],
+    "upstanding_they_grief3": [
+        [
+            "upstanding",
+            "they_grieving",
+            "Any"
+        ],
+        [
+            "[Ever since the death of d_c, t_c has been busying themselves with various different tasks around the camp, refusing to sit still for even a minute.]"
+        ]
+    ],
+    "upstanding_they_grief4": [
+        [
+            "upstanding",
+            "they_grieving",
+            "dead_close",
+            "no_kit"
+        ],
+        [
+            "[t_c is sitting alone, staring down sadly at a small flower that laid in front of their paws.]",
+            "... This used to be d_c's favorite flower. I found this one in their nest... Starclan it's already wilting.",
+            "You know what? I'm going to build a garden for d_c. A really nice garden filled with flowers just like this one, maybe even others too. I'm going to make sure that it is the greatest, most extraordinary garden any cat will ever see because that's what d_c deserves.",
+            "That way I'll always have something to remember them by. Starclan I miss d_c so much..."
+        ]
+    ],
+    "upstanding_they_grief5": [
+        [
+            "upstanding",
+            "they_greiving",
+            "dead_close",
+            "Any"
+        ],
+        [
+            "[t_c is staring intensely up at the sky. Their fur is ruffled and they seem on edge as if they are waiting for something.]",
+            "Come on Starclan... please? I've worked so hard, a-and I'll work even harder, I swear! Just send me a sign...",
+            "Let me know that d_c is ok."
+        ]
+    ],
+    "upstanding_you_expecting1": [
+        [
+            "any",
+            "upstanding",
+            "you_pregnant",
+            "from_your_kit",
+            "platonic_like"
+        ],
+        [
+            "[You're about to pick something from the fresh-kill pile when you see something from the corner of your eye. It's y_k, bounding towards you at full speed!]",
+            "y_c! y_c!",
+            "[y_k slid to a stop in the nick of time, purring happily as they wind around you.]",
+            "You're having kits! Kits! My younger siblings! Are you doing ok? How are you feeling?",
+            "Oh I can't wait! I'll be the best littermate ever, you can count on it! I can play with them while you're busy, I'll tell them stories, I'll keep an eye on them while they play out in the clearing, anything. Just name it!"
+        ]
+    ],
+    "upstanding_you_expecting2": [
+        [
+            "any",
+            "upstanding",
+            "you_pregnant",
+            "from_mate"
+        ],
+        [
+            "[As you lie down in your nest, waiting for sleep, you hear the soft pitter-patter of pawsteps outside the den. You sigh, grinning half-heartedly as you rest your head on the side of your nest.]",
+            "[Ever since you told y_m that you were expecting kits, they have been absolutely ecstatic, filled with nervous energy. Recently, however, y_m has opted to use up their nervous energy by keeping watch outside the nursery each night.]"
+        ]
+    ],
+    "upstanding_they_expecting": [
+        [
+            "upstanding",
+            "they_pregnant",
+            "Any"
+        ],
+        [
+            "[t_c has spent the entire day weaving a nest out of reeds, twigs, and moss in preparation for their kits.]"
+        ]
+    ],
+    "upstanding_they_expecting1": [
+        [
+            "upstanding",
+            "from_mate",
+            "they_pregnant",
+            "leader",
+            "deputy",
+            "warrior",
+            "medicine cat",
+            "platonic_like",
+            "romantic_like"
+        ],
+        [
+            "[t_c perked up as you poked your head into the den, purring softly.]",
+            "Back so soon? How was the patrol?",
+            "[t_c listened with unwavering attention as you ran through the patrol that you had gone on earlier that day.]",
+            "I can't wait until our kits will be old enough to patrol with us. Just imagine it! Me, you, and our kits, all patrolling together out in the territory. Nothing would get in our way!"
+        ]
+    ],
+    "upstanding_they_expecting2": [
+        [
+            "upstanding",
+            "they_pregnant",
+            "from_mate",
+            "platonic_like"
+        ],
+        [
+            "I can't wait to see what fine c_nClan cats our kits will become. They'll be perfect, I just know it."
+        ]
+    ],
+    "upstanding_they_injured1": [
+        [
+            "any",
+            "upstanding",
+            "they_injured",
+            "they_ill",
+            "platonic_like",
+            "from_your_apprentice"
+        ],
+        [
+            "Hey!  y_c, over here!",
+            "[t_c beckons to you from their nest in the corner of the medicine den.]",
+            "You finally stopped by! I've been sooooo bored in here, and I've been meaning to ask you something.",
+            "Well, I was thinking, since you're the most amazing, wonderful, and talented mentor in the history of the clans, do you think that you could give me a few extra training lessons once I'm better?",
+            "[You tell your apprentice that they should be more focused on getting better rather then their training.]",
+            "...",
+            "Alright."
+        ]
+    ],
+    "upstanding_you_grief": [
+        [
+            "upstanding",
+            "you_grieving",
+            "from_parent",
+            "Any",
+            "platonic_like",
+            "platonic_love"
+        ],
+        [
+            "Hey there champ, how are you holding up?",
+            "I know it's hard, losing someone close to you like that.",
+            "If you ever need me to take on a few extra duties so that you can have a bit of a break, just let me know, ok? I'd be more than happy to do it for you.",
+            "Love you kiddo, I'm here for you."
+        ]
+    ],
+    "upstanding_you_grief1": [
+        [
+            "upstanding",
+            "you_grieving",
+            "no_kit",
+            "dead_close"
+        ],
+        [
+            "Hey, what are you doing? I know you're still upset about d_c...",
+            "Ah ah ah, you shouldn't have to worry about clan duties for now. I have everything covered.",
+            "Don't worry about it. Now maybe go take a walk, or a nap in your nest. Leave everything to me."
+        ]
+    ],
+    "upstanding_you_grief2": [
+        [
+            "any",
+            "upstanding",
+            "you_grieving",
+            "platonic_like",
+            "dead_close"
+        ],
+        [
+            "Hey, are you doing alright? I know d_c's death hit you pretty hard...",
+            "If you want, I could take you for a walk out in the territory! I think it would do us both some good.",
+            "Oh please, tasks around camp can wait! This is much more important, trust me."
         ]
     ]
 }

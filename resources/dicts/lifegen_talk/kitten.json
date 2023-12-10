@@ -3043,5 +3043,270 @@
         [
             "[You catch t_c peering at you from the nursery. From the far side of the camp, you can just make out their determined expression.]"
         ]
+    ],
+    "newborn_fromkit": [
+        [
+            "newborn",
+            "brooding",
+            "unabashed"
+        ],
+        [
+            "... Why's it so small and ugly looking?",
+            "What? I'm just saying! It can't even hear me!"
+        ]
+    ],
+    "newborn_fromkit1": [
+        [
+            "newborn",
+            "introspective",
+            "neurotic",
+            "random_cat"
+        ],
+        [
+            "...",
+            "[t_c gently reaches out and touches your nose with a paw.]",
+            "[r_q quickly chases them off, insisting that newborn kits need to be left alone.]",
+            "Eep! I just wanted to see if y_c's eyes would open!"
+        ]
+    ],
+    "newborn_fromkit2": [
+        [
+            "newborn",
+            "assertive",
+            "silly"
+        ],
+        [
+            "Okay, y_c. I know none of the other cats think you can talk yet, but they're not here now! It's just you and me.",
+            "So go ahead and open your eyes and say something!",
+            "Can you say 't_c'? ... Hello?",
+            "Why aren't you doing it?"
+        ]
+    ],
+    "newborn_fromkit3": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "[t_c takes one look at you and immediately bursts into tears.]",
+            "They're just - s-so - cute! Gah! *Sob*"
+        ]
+    ],
+    "stable_kit_younewborn_1": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Wowza, look at y_c! Aww, they’re so tiny, like a miniature version of you, y_p!",
+            "I hope they grow up big and strong.",
+            "Big and strong like me! Maybe strongerer than me… maybe??? No nevermind, I want to be the strongerest!"
+        ]
+    ],
+    "stable_kit_younewborn_2": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Little tiny baby! Little tiny baby! Every kitty in the clan look at this little tiny baby!!!",
+            "[You look up and slowly bop your head along to the strange tune t_c sings.]",
+            "Yippee! See, I can sing! y_c thinks so! Hey t_s did you see that? HEY! Don’t shake your head at me! If y_c thinks I can sing then they must be right!"
+        ]
+    ],
+    "stable_kit_younewborn_3": [
+        [
+            "newborn",
+            "random_cat",
+            "stable"
+        ],
+        [
+            "[t_c trots into the nursery and drops a mossball into the nest.]",
+            "See this, y_c? This is called a mossball and you should remember that! You bat it around with your paws like this, see? And you use it to play really fun games! You’re going to love it!",
+            "[r_c snickers and reminds t_c that you’re a newborn, far younger than they are and that you probably don’t understand a word they said. t_c puffs out their little chest.]",
+            "Well, yeah, I know that! But I thought that maybe they’d like to see one for the first time because then that way they’ll like playing games with me!",
+            "[r_c states that it’s a nice gesture and lovely thought but maybe y_p wouldn’t want their kittens playing with such a big toy until you’re a little older. y_p laughs it off and pushes the ball towards t_c and asks if they want to play.]",
+            "Really? YES!",
+            "[You squint as you watch your loving parent paw the ball back and forth, your whiskers twitch eagerly, maybe when you’re older this will be a fun game! You will remember this.]"
+        ]
+    ],
+    "stable_kit_younewborn_4": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "... Y’know… I think…",
+            "I think the nursery is going to get a little crowded here with more of us… It will be very noisy when you get a little older and I don’t really want that…",
+            "[t_c looks up at r_q and with a blunt expression asks,]",
+            "Can we get rid of it? I don’t want it.",
+            "[The queen scolds the kitten for their behaviour and escorts them out of the den to find their parents to tell them. You don’t understand what’s going on but judging by the glare of the queen- it can’t be good…]"
+        ]
+    ],
+    "sweet_kit_26": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "Hello y_c! Welcome to c_nClan! It’s so very nice to meet you!",
+            "[They plop down next to you, forming the smallest loaf as they start to purr.]",
+            "I’m y_c! That over there is the Leader’s Den, and that’s the Warrior’s Den, and-!",
+            "[r_w approaches, letting t_c know that you can’t really hear them yet.]",
+            "Oh, I don’t mind repeating myself! We’re gonna be denmates and so I gotta be a good role mobile!",
+            "It’s model? Whoops, hehehe."
+        ]
+    ],
+    "sweet_kit_27": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "[t_c lets out a quiet gasp, looking at you with wonder.]",
+            "That’s y_c?",
+            "They’re so cute... and so perfect!"
+        ]
+    ],
+    "sweet_kit_28": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "[You let out a wail, the cold is just too... cold! You are also much too small to do anything else about it.]",
+            "y_c? Are you okay?",
+            "[Ah, your big denmate! Perhaps you can convince them to chase the cold away with eloquent words.]",
+            "[In other words, you scream again.]",
+            "Um um- does this help?",
+            "[They run to go get you some moss to play with, but drop it on you instead. It does make you feel warmer, though.]",
+            "I’ll stay with you until someone comes back, they’ll know what to do!"
+        ]
+    ],
+    "sweet_kit_29": [
+        [
+            "Any",
+            "sweet"
+        ],
+        [
+            "Hey, do you know how to befriend birds?",
+            "Why? Because everyone deserves friends, even birds!"
+        ]
+    ],
+    "sweet_kit_30": [
+        [
+            "Any",
+            "sweet"
+        ],
+        [
+            "[You see t_c looking at the stars, trying to count them all.]",
+            "I gotta make sure every single star is seen!"
+        ]
+    ],
+    "sweet_kit_31": [
+        [
+            "Any",
+            "sweet"
+        ],
+        [
+            "r_c said you weren’t taking enough breaks, why?",
+            "Can we be friends?",
+            "Cause if we’re friends, then you’re gonna have to take a break to play with me!"
+        ]
+    ],
+    "sweet_kit_32": [
+        [
+            "Any",
+            "talk_dead",
+            "sweet"
+        ],
+        [
+            "y_c, I made a friend! They’re super cool and helped me help so many cats!",
+            "They’ve got a really shiny pelt, and they’re seethrough! Isn’t that cool?",
+            "You wanna know their name?",
+            "Well, they said their name was d_c!”"
+        ]
+    ],
+    "sweet_kit_33": [
+        [
+            "kitten",
+            "you_sleeper",
+            "sweet"
+        ],
+        [
+            "Hi y_c! Are you taking a nap?",
+            "Can I be your nap buddy? Everything’s always better with a buddy!",
+            "[And thus, the two of you became snooze buddies for the day.]"
+        ]
+    ],
+    "upstanding_kit13": [
+        [
+            "upstanding",
+            "newborn",
+            "random_cat"
+        ],
+        [
+            "r_q, r_k is trying to hide thorns in y_c's nest!"
+        ]
+    ],
+    "upstanding_kit14": [
+        [
+            "upstanding",
+            "newborn"
+        ],
+        [
+            "You're so small... I wonder what plans you'll have for the future. What kind of goals will you want to meet? What will you be interested in?",
+            "Of course, I already have my entire life planned out. I know exactly what I'm going to grow up to be.",
+            "Maybe you can tell me your plans when you're a bit older. I would love to hear them!"
+        ]
+    ],
+    "upstanding_kit15": [
+        [
+            "upstanding",
+            "newborn"
+        ],
+        [
+            "[t_c rears up onto their hind legs in an attempt to peer over the side of your nest. They place their front paws on the edge of the nest for balance and stare down at you with wide eyes.]",
+            "Woah, you really are tiny! Your little paws and ears and eyes, no wonder y_p said that I couldn't show you around yet. You probably can't even understand me yet.",
+            "When you get a bit older, I'll teach you all of the nursery rules and stuff. Other kits think they're pretty boring and dumb, but they don't realize just how important they are!",
+            "The way I see it, rules are there to help guide us into the best cats that we can be. Who wouldn't want that?"
+        ]
+    ],
+    "upstanding_kit16": [
+        [
+            "upstanding",
+            "medicine cat",
+            "medicine cat apprentice",
+            "random_cat"
+        ],
+        [
+            "[You hear the soft pitter-patter of small paw steps near the entrance of your den. You turn and see t_c holding a large mouse by the tail, looking ecstatic as they drag the creature into the den.]",
+            "Special delivery! One freshly caught mouse, straight from the fresh-kill pile!",
+            "Can you believe it? I'm finally doing real apprentice jobs! r_a said that I could help them give out fresh kill to the elders and anyone else who is too busy to get some, and they even turned it into a competition. Right now I'm beating them by a landslide!",
+            "[You should probably have a word with r_a's mentor about this.]"
+        ]
+    ],
+    "upstanding_kit17": [
+        [
+            "upstanding",
+            "apprentice"
+        ],
+        [
+            "y_c, I need you to teach me some battle moves.",
+            "Pleeeease? I need to be ready to defend the camp! What if there's an invasion? What if I need to defend the nursery against o_cClan cats?",
+            "Trust me, there is nothing to worry about. The Warrior Code says nothing about teaching a kit some self-defense, so it should be fine!"
+        ]
+    ],
+    "upstanding_kit18": [
+        [
+            "upstanding",
+            "no_kit",
+            "random_cat"
+        ],
+        [
+            "[While the other kits are playing out in the clearing, t_c is in the nursery, trying to tidy up the moss that was tossed aside and scattered across the den floor.]",
+            "[Curious, you ask t_c why they aren't playing outside with the other kits.]",
+            "Oh! Well, I overheard r_a mention that the nursery was always a huge mess everytime they come in to change the moss in the nests, so I thought I could help out and clean up a bit!"
+        ]
     ]
 }
