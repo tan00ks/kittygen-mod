@@ -1094,14 +1094,14 @@ class MakeClanScreen(Screens):
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
-            adol_sprite=self.adolescent_pose if self.adolescent_pose > 2 else 3,
-            adult_sprite=self.adult_pose if self.adult_pose > 2 else 6,
-            senior_sprite=self.elder_pose if self.elder_pose > 2 else 12,
+            adol_sprite=self.adolescent_pose if self.adolescent_pose > 2 else self.adolescent_pose + 3,
+            adult_sprite=self.adult_pose if self.adult_pose > 2 else self.adult_pose + 6,
+            senior_sprite=self.elder_pose if self.elder_pose > 2 else self.elder_pose + 12,
             reverse=self.reverse,
             accessories=self.accessories
         )
-        if self.length == 'long' and self.adult_pose == 0:
-            pelt2.cat_sprites['young adult'] = 9
+        if self.length == 'long' and self.adult_pose < 3:
+            pelt2.cat_sprites['young adult'] = self.adult_pose + 9
 
         self.elements["left"] = UIImageButton(scale(pygame.Rect((50, 700), (76, 100))), "", object_id="#arrow_right_fancy",
                                                  starting_height=2)
@@ -1118,7 +1118,7 @@ class MakeClanScreen(Screens):
         else:
             self.elements['right'].enable()
 
-        self.elements['random_customize'] = UIImageButton(scale(pygame.Rect((500, 100), (68, 68))), "", object_id="#random_dice_button",
+        self.elements['random_customize'] = UIImageButton(scale(pygame.Rect((400, 97), (68, 68))), "", object_id="#random_dice_button", tool_tip_text="Randomize appearance",
                                              starting_height=2)
         
         column1_x = 500  # x-coordinate for column 1
