@@ -1,3 +1,11 @@
+<strong>v0.6.6: </strong>
+- New dialouge
+- Adjusted customization screen
+- Randomize cat appearance
+- Preview other ages
+- Auto freshkill setting
+- Fix bugs
+
 <strong>v0.6.5: </strong>
 - Lots of new dialogue!
 - Double click to move cats in patrol screens 
