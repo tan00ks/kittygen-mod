@@ -1102,7 +1102,7 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "Your mentor asks you to clean out the elders den",
+        "intro_text": "Your mentor asks you to clean out the elders den.",
         "decline_text": "Cleaning out the elders den? You slip away quietly saying your off to gather moss, but you curl up and take nap in a patch of warm sun.",
         "chance_of_success": 40,
         "success_outcomes": [

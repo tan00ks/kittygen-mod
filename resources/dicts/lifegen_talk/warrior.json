@@ -2603,5 +2603,15 @@
             "All I wanted to do was to catch a bit of prey before the dawn patrol went out. That way, they could have a little bit of something before they left. I clearly underestimated how much snow, and how little prey there would be.",
             "I was wondering if you have a herb or remedy that could warm me up a little? Maybe even just some dry moss? Right now, I feel like my paws are frozen solid."
         ]
+    ],
+    "newborn_upstanding_warrior": [
+        [
+            "newborn",
+            "upstanding"
+        ],
+        [
+            "[t_c peers at you, whiskers twitching.]",
+            "This is y_c? I see..."
+        ]
     ]
 }

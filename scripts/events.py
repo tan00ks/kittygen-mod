@@ -866,7 +866,7 @@ class Events:
             if "y_m" in text:
                 if game.clan.your_cat.mate is None:
                     return ""
-                text = text.replace("y_p", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
+                text = text.replace("y_m", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
             if "y_a" in text:
                 if len(game.clan.your_cat.apprentice) == 0 or game.clan.your_cat.apprentice is None:
                     return ""

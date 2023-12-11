@@ -1333,7 +1333,7 @@
             "kitten"
         ],
         [
-            "Hey! C’mere you little furball! What did I tell you about leaving the nursery at this hour?",
+            "Hey! C'mere you little furball! What did I tell you about leaving the nursery at this hour?",
             "Ah ah, no buts! Rules are rules, and those rules say that you are going straight back to the nursery!"
         ]
     ],
@@ -1343,8 +1343,8 @@
             "kitten"
         ],
         [
-            "Oh hey there y_c, didn't think I’d find you in here all by yourself. How about you go out into the clearing and play? There’s plenty of space out there!",
-            "Just don’t feel like it huh? Well, How about I tell you a story instead?",
+            "Oh hey there y_c, didn't think I'd find you in here all by yourself. How about you go out into the clearing and play? There's plenty of space out there!",
+            "Just don't feel like it huh? Well, How about I tell you a story instead?",
             "[t_c begins a long and detailed story about how the Warrior Code was created and why it applies to all clans across the territories. They trail off about halfway through and watch as you roll around on the nursery floor with a ball of moss clutched between your paws]",
             "... Are you even listening to me right now?"
         ]
@@ -1371,7 +1371,7 @@
             "Watch out y_c!","[You quickly duck out of the way as t_c stumbles past, dragging a few large tree branches. They carefully set the branches down before turning to you.]",
             "Sorry about that! Who knew tree branches could be so heavy? They're super useful though.",
             "Right now, I'm planning on building the kits a little playpen outside the nursery. Of course, they can still roam around camp under supervision, but I thought it would be nice to have. It could help introduce younger kits to life outside the nursery, or provide safe place to put the kits during a meeting.",
-            "Whatever the case is, I’m going to need a lot more branches. Want to help out?"
+            "Whatever the case is, I'm going to need a lot more branches. Want to help out?"
         ]
     ]
 }
