@@ -376,6 +376,11 @@ class TalkScreen(Screens):
             
             if "grief stricken" not in you.illnesses and "you_grieving" in tags:
                 continue
+                
+            if "starving" not in you.illnesses and "you_starving" in tags:
+                continue
+            if "starving" not in cat.illnesses and "they_starving" in tags:
+                continue
             
             if any(i in ["you_ill", "you_injured"] for i in tags):
                 ill_injured = False
