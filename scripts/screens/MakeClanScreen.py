@@ -1450,16 +1450,16 @@ class MakeClanScreen(Screens):
                     self.kitten_sprite = int(event.text)
                     self.update_sprite()
                 elif event.ui_element == self.elements['adolescent pose']:
-                    self.adolescent_pose = int(event.text) + 3
+                    self.adolescent_pose = int(event.text)
                     self.update_sprite()
                 elif event.ui_element == self.elements['adult pose']:
                     if self.length == 'short':
-                        self.adult_pose = int(event.text) + 6
+                        self.adult_pose = int(event.text)
                     elif self.length == 'long':
-                        self.adult_pose = int(event.text) + 9
+                        self.adult_pose = int(event.text)
                     self.update_sprite()
                 elif event.ui_element == self.elements['elder pose']:
-                    self.elder_pose = int(event.text) + 12
+                    self.elder_pose = int(event.text)
                     self.update_sprite()
             elif self.page == 1:
                 if event.ui_element == self.elements['eye color']:
@@ -1629,9 +1629,9 @@ class MakeClanScreen(Screens):
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
-            adol_sprite=self.adolescent_pose if self.adolescent_pose > 2 else 3,
-            adult_sprite=self.adult_pose if self.adult_pose > 2 else 6,
-            senior_sprite=self.elder_pose if self.elder_pose > 2 else 12,
+            adol_sprite=self.adolescent_pose if self.adolescent_pose > 2 else self.adolescent_pose + 3,
+            adult_sprite=self.adult_pose if self.adult_pose > 2 else self.adult_pose + 6,
+            senior_sprite=self.elder_pose if self.elder_pose > 2 else self.elder_pose + 12,
             reverse=self.reverse,
             accessories=self.accessories
         )
