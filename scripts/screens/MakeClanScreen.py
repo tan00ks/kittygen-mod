@@ -1100,8 +1100,10 @@ class MakeClanScreen(Screens):
             reverse=self.reverse,
             accessories=self.accessories
         )
-        if self.length == 'long' and self.adult_pose < 3:
+        if self.length == 'long' and self.adult_pose < 9:
             pelt2.cat_sprites['young adult'] = self.adult_pose + 9
+            pelt2.cat_sprites['adult'] = self.adult_pose + 9
+            pelt2.cat_sprites['senior adult'] = self.adult_pose + 9
 
         self.elements["left"] = UIImageButton(scale(pygame.Rect((50, 700), (76, 100))), "", object_id="#arrow_right_fancy",
                                                  starting_height=2)
@@ -1635,8 +1637,10 @@ class MakeClanScreen(Screens):
             reverse=self.reverse,
             accessories=self.accessories
         )
-        if self.length == 'long' and self.adult_pose == 0:
-            pelt2.cat_sprites['young adult'] = 9
+        if self.length == 'long' and self.adult_pose < 9:
+            pelt2.cat_sprites['young adult'] = self.adult_pose + 9
+            pelt2.cat_sprites['adult'] = self.adult_pose + 9
+            pelt2.cat_sprites['senior adult'] = self.adult_pose + 9
         c_moons = 1
         if self.preview_age == "adolescent":
             c_moons = 6
