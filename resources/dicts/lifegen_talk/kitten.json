@@ -3308,5 +3308,14 @@
             "[Curious, you ask t_c why they aren't playing outside with the other kits.]",
             "Oh! Well, I overheard r_a mention that the nursery was always a huge mess everytime they come in to change the moss in the nests, so I thought I could help out and clean up a bit!"
         ]
+    ],
+    "stable_kitten": [
+        [
+            "stable",
+            "newborn"
+        ],
+        [
+            "Oh, I can't wait for you to grow up, y_c! We'll have so much fun playing together!"
+        ]
     ]
 }

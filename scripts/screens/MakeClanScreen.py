@@ -103,7 +103,7 @@ class MakeClanScreen(Screens):
         self.points=None
         self.paralyzed=False
         self.opacity=100
-        self.scars=None
+        self.scars=[]
         self.tint="None"
         self.skin="BLACK"
         self.white_patches_tint="None"
@@ -1057,7 +1057,7 @@ class MakeClanScreen(Screens):
         self.tortiepattern=choice(Pelt.tortiepatterns)
         self.vitiligo=choice(Pelt.vit) if random.randint(1,5) == 1 else None
         self.points=choice(Pelt.point_markings) if random.randint(1,5) == 1 else None
-        self.scars=choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3) if random.randint(1,10) == 1 else None
+        self.scars=choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3) if random.randint(1,10) == 1 else []
         self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue"]) if random.randint(1,5) == 1 else None
         self.skin=choice(Pelt.skin_sprites)
         self.white_patches_tint=choice(["offwhite", "cream", "darkcream", "gray", "pink"]) if random.randint(1,5) == 1 else None
@@ -1084,7 +1084,7 @@ class MakeClanScreen(Screens):
             tortiebase=self.tortiebase,
             tortiecolour=self.tortiecolour,
             pattern=self.pattern,
-            tortiepattern=self.tortiepattern,
+            tortiepattern=Pelt.sprites_names.get(self.tortiepattern),
             vitiligo=self.vitiligo,
             points=self.points,
             accessory=self.accessory,
@@ -1100,8 +1100,10 @@ class MakeClanScreen(Screens):
             reverse=self.reverse,
             accessories=self.accessories
         )
-        if self.length == 'long' and self.adult_pose < 3:
+        if self.length == 'long' and self.adult_pose < 9:
             pelt2.cat_sprites['young adult'] = self.adult_pose + 9
+            pelt2.cat_sprites['adult'] = self.adult_pose + 9
+            pelt2.cat_sprites['senior adult'] = self.adult_pose + 9
 
         self.elements["left"] = UIImageButton(scale(pygame.Rect((50, 700), (76, 100))), "", object_id="#arrow_right_fancy",
                                                  starting_height=2)
@@ -1383,7 +1385,7 @@ class MakeClanScreen(Screens):
             
             self.elements['skin'] = pygame_gui.elements.UIDropDownMenu(Pelt.skin_sprites, str(self.skin), scale(pygame.Rect((column1_x, y_pos[0]), (300, 70))), manager=MANAGER)
             if self.scars:
-                self.elements['scars'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.scars1 + Pelt.scars2 + Pelt.scars3, str(self.scars), scale(pygame.Rect((column1_x, y_pos[1]), (300, 70))), manager=MANAGER)
+                self.elements['scars'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.scars1 + Pelt.scars2 + Pelt.scars3, str(self.scars[0]), scale(pygame.Rect((column1_x, y_pos[1]), (300, 70))), manager=MANAGER)
             else:
                 self.elements['scars'] = pygame_gui.elements.UIDropDownMenu(["None"] + Pelt.scars1 + Pelt.scars2 + Pelt.scars3, "None", scale(pygame.Rect((column1_x, y_pos[1]), (300, 70))), manager=MANAGER)
             self.elements['pelt length'] = pygame_gui.elements.UIDropDownMenu(Pelt.pelt_length, str(self.length), scale(pygame.Rect((column1_x, y_pos[2]), (300, 70))), manager=MANAGER)
@@ -1450,16 +1452,16 @@ class MakeClanScreen(Screens):
                     self.kitten_sprite = int(event.text)
                     self.update_sprite()
                 elif event.ui_element == self.elements['adolescent pose']:
-                    self.adolescent_pose = int(event.text) + 3
+                    self.adolescent_pose = int(event.text)
                     self.update_sprite()
                 elif event.ui_element == self.elements['adult pose']:
                     if self.length == 'short':
-                        self.adult_pose = int(event.text) + 6
+                        self.adult_pose = int(event.text)
                     elif self.length == 'long':
-                        self.adult_pose = int(event.text) + 9
+                        self.adult_pose = int(event.text)
                     self.update_sprite()
                 elif event.ui_element == self.elements['elder pose']:
-                    self.elder_pose = int(event.text) + 12
+                    self.elder_pose = int(event.text)
                     self.update_sprite()
             elif self.page == 1:
                 if event.ui_element == self.elements['eye color']:
@@ -1494,7 +1496,7 @@ class MakeClanScreen(Screens):
                         self.elements['tortiepattern'].enable()
                         
                         self.pattern = "ONE"
-                        self.tortiepattern = "bengal"
+                        self.tortiepattern = "Bengal"
                         self.tortiebase = "single"
                         self.tortiecolour = "GINGER"
                     else:
@@ -1515,7 +1517,7 @@ class MakeClanScreen(Screens):
                     self.pattern = event.text
                     self.update_sprite()
                 elif event.ui_element == self.elements['tortiepattern']:
-                    self.tortiepattern = event.text.lower()
+                    self.tortiepattern = event.text
                     self.update_sprite()
                 elif event.ui_element == self.elements['tortiebase']:
                     self.tortiebase = event.text
@@ -1571,6 +1573,10 @@ class MakeClanScreen(Screens):
                         self.custom_cat.get_permanent_condition(chosen_condition, True)
                         if event.text == 'paralyzed':
                             self.paralyzed = True
+                        if event.text == 'born without a leg' and 'NOPAW' not in self.custom_cat.pelt.scars:
+                            self.custom_cat.pelt.scars.append('NOPAW')
+                        elif event.text == "born without a tail" and "NOTAIL" not in self.custom_cat.pelt.scars:
+                            self.custom_cat.pelt.scars.append('NOTAIL')
                         self.update_sprite()
 
         
@@ -1619,7 +1625,7 @@ class MakeClanScreen(Screens):
             tortiebase=self.tortiebase,
             tortiecolour=self.tortiecolour,
             pattern=self.pattern,
-            tortiepattern=self.tortiepattern,
+            tortiepattern=Pelt.sprites_names.get(self.tortiepattern),
             vitiligo=self.vitiligo,
             points=self.points,
             accessory=self.accessory,
@@ -1629,14 +1635,16 @@ class MakeClanScreen(Screens):
             skin=self.skin,
             white_patches_tint=self.white_patches_tint,
             kitten_sprite=self.kitten_sprite,
-            adol_sprite=self.adolescent_pose if self.adolescent_pose > 2 else 3,
-            adult_sprite=self.adult_pose if self.adult_pose > 2 else 6,
-            senior_sprite=self.elder_pose if self.elder_pose > 2 else 12,
+            adol_sprite=self.adolescent_pose if self.adolescent_pose > 2 else self.adolescent_pose + 3,
+            adult_sprite=self.adult_pose if self.adult_pose > 2 else self.adult_pose + 6,
+            senior_sprite=self.elder_pose if self.elder_pose > 2 else self.elder_pose + 12,
             reverse=self.reverse,
             accessories=self.accessories
         )
-        if self.length == 'long' and self.adult_pose == 0:
-            pelt2.cat_sprites['young adult'] = 9
+        if self.length == 'long' and self.adult_pose < 9:
+            pelt2.cat_sprites['young adult'] = self.adult_pose + 9
+            pelt2.cat_sprites['adult'] = self.adult_pose + 9
+            pelt2.cat_sprites['senior adult'] = self.adult_pose + 9
         c_moons = 1
         if self.preview_age == "adolescent":
             c_moons = 6

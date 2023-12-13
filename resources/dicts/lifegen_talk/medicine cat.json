@@ -1882,5 +1882,15 @@
             "[As they settle down as well, you question what they're doing in here.]",
             "I'm not busy right now, and the little guy really wants me near, so..."
         ]
+    ],
+    "medicine_cat_stable": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "[t_c talks to some cat out of view.]",
+            "y_c is just the perfect little thing, they're growing well for their age and I'm sure they are going to be the greatest warrior someday. "
+        ]
     ]
 }

@@ -501,7 +501,7 @@ class Game():
         Save current events list to events.json
         """
         events_list = []
-        for event in game.cur_events_list:
+        for event in game.cur_events_list + game.other_events_list:
             events_list.append(event.to_dict())
         game.safe_save(
             f"{get_save_dir()}/{game.clan.name}/events.json", events_list)
