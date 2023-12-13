@@ -2607,11 +2607,34 @@
     "newborn_upstanding_warrior": [
         [
             "newborn",
-            "upstanding"
+            "upstanding",
+            "introspective",
+            "unlawful"
         ],
         [
             "[t_c peers at you, whiskers twitching.]",
             "This is y_c? I see..."
+        ]
+    ],
+    "newborn_silly_warrior": [
+        [
+            "newborn",
+            "silly",
+            "random_cat"
+        ],
+        [
+            "Oh my StarClan, you are just the cutest!",
+            "r_w! Come look at y_c!"
+        ]
+    ],
+    "newborn_cool_warrior": [
+        [
+            "newborn",
+            "cool"
+        ],
+        [
+            "There's the talk of the camp! Ferocious y_c.",
+            "[t_c boops your nose and giggles when you let out an annoyed meow.]"
         ]
     ]
 }

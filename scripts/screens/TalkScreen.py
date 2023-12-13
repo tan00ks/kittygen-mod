@@ -432,7 +432,7 @@ class TalkScreen(Screens):
                     if you.parent2:
                         if you.parent2 == cat.ID:
                             fam = True
-                if "adopted_parent" in tags or "from adopted_parent" in tags:
+                if "adopted_parent" in tags or "from adopted_parent" in tags or "from_adopted_parent" in tags:
                     if cat.ID in you.inheritance.get_no_blood_parents():
                         fam = True
                 if "from_kit" in tags or "from_your_kit" in tags:

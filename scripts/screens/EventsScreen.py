@@ -288,7 +288,6 @@ class EventsScreen(Screens):
         if not self.first_opened:
             self.first_opened = True
         self.update_display_events_lists()
-        self.display_events = self.all_events
             
         self.heading = pygame_gui.elements.UITextBox("",
                                                      scale(pygame.Rect((200, 220), (1200, 80))),
@@ -356,6 +355,7 @@ class EventsScreen(Screens):
         self.cat_icon = UIImageButton(
             scale(pygame.Rect((75, 875), (50, 50))),
             "",
+            tool_tip_text="Show your cat/favorited cat relationship events",
             object_id="#events_cat_button")
         self.cat_icon.hide()
         self.health_events_button = UIImageButton(
@@ -379,6 +379,7 @@ class EventsScreen(Screens):
             self.birth_death_events_button.disable()
         elif self.event_display_type == "relationship events":
             self.relationship_events_button.disable()
+            self.cat_icon.show()
         elif self.event_display_type == "health events":
             self.health_events_button.disable()
         elif self.event_display_type == "other clans events":

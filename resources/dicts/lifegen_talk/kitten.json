@@ -3312,10 +3312,63 @@
     "stable_kitten": [
         [
             "stable",
+            "sweet",
             "newborn"
         ],
         [
             "Oh, I can't wait for you to grow up, y_c! We'll have so much fun playing together!"
+        ]
+    ],
+    "grieving": [
+        [
+            "they_grieving",
+            "newborn"
+        ],
+        [
+            "[t_c smiles for the first time this moon, watching you.]",
+            "[You curl up by their side and they let out a soft purr.]"
+        ]
+    ],
+    "brooding": [
+        [
+            "newborn",
+            "brooding"
+        ],
+        [
+            "[You wriggle closer to t_c.]",
+            "[They step away from you awkwardly.]"
+        ]
+    ],
+    "cool": [
+        [
+            "cool",
+            "upstanding",
+            "newborn"
+        ],
+        [
+            "[t_c looks at you critically from the entrance of the nursery.]",
+            "Hey, r_q, is it normal that y_c can't really walk or speak yet? When I was their age, I was already learning the Warrior Code and hunting leaves.",
+            "[r_q assures them that yes, it is normal, and no, t_c certainly was not a super-newborn.]"
+        ]
+    ],
+    "newborn_silly_warrior": [
+        [
+            "newborn",
+            "brooding"
+        ],
+        [
+            "[r_q beckons t_c to come closer to meet you.]",
+            "[t_c doesn't seem very interested.]"
+        ]
+    ],
+    "newborn_silly_warrior2": [
+        [
+            "newborn",
+            "brooding",
+            "unlawful"
+        ],
+        [
+            "When you're older, I'll show you the BEST spots for spying on the warriors."
         ]
     ]
 }
