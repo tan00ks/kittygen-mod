@@ -1573,6 +1573,10 @@ class MakeClanScreen(Screens):
                         self.custom_cat.get_permanent_condition(chosen_condition, True)
                         if event.text == 'paralyzed':
                             self.paralyzed = True
+                        if event.text == 'born without a leg' and 'NOPAW' not in self.custom_cat.pelt.scars:
+                            self.custom_cat.pelt.scars.append('NOPAW')
+                        elif event.text == "born without a tail" and "NOTAIL" not in self.custom_cat.pelt.scars:
+                            self.custom_cat.pelt.scars.append('NOTAIL')
                         self.update_sprite()
 
         
