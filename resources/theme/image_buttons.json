@@ -3913,6 +3913,23 @@
             }
         }
     },
+    "#pine_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/pine_camp.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/pine_camp_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/pine_camp_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/pine_camp_unavailable.png"
+            }
+        }
+    },
     "#continue_button_small": {
         "prototype": "#image_button",
         "images": {

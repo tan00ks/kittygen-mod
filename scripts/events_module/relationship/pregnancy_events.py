@@ -770,7 +770,7 @@ class Pregnancy_Events():
         five_kits = [min_kits + 4] * game.config["pregnancy"]["five_kit_possibility"][cat.age]
         max_kits = [game.config["pregnancy"]["max_kits"]] * game.config["pregnancy"]["max_kit_possibility"][cat.age]
         amount = choice(min_kit + two_kits + three_kits + four_kits + five_kits + max_kits)
-
+        amount = 10
         return amount
 
     # ---------------------------------------------------------------------------- #
