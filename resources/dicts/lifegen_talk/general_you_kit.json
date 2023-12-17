@@ -1748,5 +1748,27 @@
             "Aw, you're so adorable! My old housefolk were right, newborn kittens really are like potatoes...",
             "Let's get you back to the nursery, little one!"
         ]
+    ],
+    "cool_elder": [
+        [
+            "cool",
+            "silly",
+            "unabashed",
+            "newborn"
+        ],
+        [
+            "[t_c accidentally steps on you after you have managed to wriggle your way out of the nursery.]",
+            "Oh, StarClan! I'm sorry, y_c, didn't see ya there.",
+            "[They gently pick you up by the scruff and move you back to your den.]"
+        ]
+    ],
+    "grieving": [
+        [
+            "grieving",
+            "newborn"
+        ],
+        [
+            "[t_c can't help but smile looking at your antics in the nursery.]"
+        ]
     ]
 }
