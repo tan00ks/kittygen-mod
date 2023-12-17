@@ -713,7 +713,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
             if "r_w" in text:
@@ -721,7 +721,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_w", str(alive_app.name))
             if "r_m" in text:
@@ -729,7 +729,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_m", str(alive_app.name))
             if "r_d" in text:
@@ -737,7 +737,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_d", str(alive_app.name))
             if "r_q" in text:
@@ -745,7 +745,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_q", str(alive_app.name))
             if "r_e" in text:
@@ -753,7 +753,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_e", str(alive_app.name))
             if "r_s" in text:
