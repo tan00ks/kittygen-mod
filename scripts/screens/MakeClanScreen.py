@@ -1058,11 +1058,11 @@ class MakeClanScreen(Screens):
         pelts_tortie = pelts.copy()
         pelts_tortie.remove("SingleColour")
         pelts_tortie.remove("TwoColour")
-        pelts_tortie.append("Single")
+        # pelts_tortie.append("Single")
         permanent_conditions = ['born without a leg', 'weak leg', 'twisted leg', 'born without a tail', 'paralyzed', 'raspy lungs', 'wasting disease', 'blind', 'one bad eye', 'failing eyesight', 'partial hearing loss', 'deaf', 'constant joint pain', 'seizure prone', 'allergies', 'persistent headaches']
 
         white_patches = ["FULLWHITE"] + Pelt.little_white + Pelt.mid_white + Pelt.high_white + Pelt.mostly_white
-        self.pname= random.choice(pelts)
+        self.pname= random.choice(pelts) if random.randint(1,3) == 1 else "Tortie"
         self.length=random.choice(["short", "medium", "long"])
         self.colour=random.choice(Pelt.pelt_colours)
         self.white_patches= choice(white_patches) if random.randint(1,2) == 1 else None
@@ -1070,8 +1070,8 @@ class MakeClanScreen(Screens):
         self.eye_colour2=choice(Pelt.eye_colours) if random.randint(1,10) == 1 else None
         self.tortiebase=choice(Pelt.tortiebases)
         self.tortiecolour=choice(Pelt.pelt_colours)
-        self.pattern=choice(pelts_tortie)
-        self.tortiepattern=choice(Pelt.tortiepatterns)
+        self.pattern=choice(Pelt.tortiepatterns)
+        self.tortiepattern=choice(pelts_tortie)
         self.vitiligo=choice(Pelt.vit) if random.randint(1,5) == 1 else None
         self.points=choice(Pelt.point_markings) if random.randint(1,5) == 1 else None
         self.scars=choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3) if random.randint(1,10) == 1 else []
@@ -1155,7 +1155,6 @@ class MakeClanScreen(Screens):
         pelts_tortie = pelts.copy()
         pelts_tortie.remove("SingleColour")
         pelts_tortie.remove("TwoColour")
-        pelts_tortie.append("Single")
         
         permanent_conditions = ['born without a leg', 'weak leg', 'twisted leg', 'born without a tail', 'paralyzed', 'raspy lungs', 'wasting disease', 'blind', 'one bad eye', 'failing eyesight', 'partial hearing loss', 'deaf', 'constant joint pain', 'seizure prone', 'allergies', 'persistent headaches']
         self.elements['preview text'] = pygame_gui.elements.UITextBox(
@@ -1290,7 +1289,7 @@ class MakeClanScreen(Screens):
         
         #page 2
         #tortie
-        #tortie patternm
+        #tortie pattern
         #tortie base
         #tortie color
         #tortie pattern2
