@@ -746,12 +746,12 @@ class EventsScreen(Screens):
         self.other_clans_events = [x for x in (game.other_events_list + game.cur_events_list) if "other_clans" in x.types]
         self.misc_events = [x for x in (game.other_events_list + game.cur_events_list) if "misc" in x.types]
         
-        not_displayed = []
-        for i in game.other_events_list + game.cur_events_list:
-            if i not in self.all_events and i not in self.ceremony_events and i not in self.birth_death_events and i not in self.relation_events and i not in self.health_events and i not in self.other_clans_events and i not in self.misc_events:
-                not_displayed.append(i.text)
-        if not_displayed:
-            print("EVENTS NOT DISPLAYED: " + str(not_displayed))
+        # not_displayed = []
+        # for i in game.other_events_list + game.cur_events_list:
+        #     if i not in self.all_events and i not in self.ceremony_events and i not in self.birth_death_events and i not in self.relation_events and i not in self.health_events and i not in self.other_clans_events and i not in self.misc_events:
+        #         not_displayed.append(i.text)
+        # if not_displayed:
+        #     print("EVENTS NOT DISPLAYED: " + str(not_displayed))
 
     def make_events_container(self):
         """ In its own function so that there is only one place the box size is set"""
