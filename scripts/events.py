@@ -119,7 +119,7 @@ class Events:
 			# make a notification if the Clan has not enough prey
             if FRESHKILL_EVENT_ACTIVE and not game.clan.freshkill_pile.clan_has_enough_food():
                 event_string = f"{game.clan.name}Clan doesn't have enough prey for next moon!"
-                game.cur_events_list.insert(0, Single_Event(event_string))
+                game.cur_events_list.insert(0, Single_Event(event_string, "health"))
                 game.freshkill_event_list.append(event_string)
 
         rejoin_upperbound = game.config["lost_cat"]["rejoin_chance"]
