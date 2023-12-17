@@ -119,7 +119,7 @@ class Events:
 			# make a notification if the Clan has not enough prey
             if FRESHKILL_EVENT_ACTIVE and not game.clan.freshkill_pile.clan_has_enough_food():
                 event_string = f"{game.clan.name}Clan doesn't have enough prey for next moon!"
-                game.cur_events_list.insert(0, Single_Event(event_string, "health"))
+                game.cur_events_list.insert(0, Single_Event(event_string, "alert"))
                 game.freshkill_event_list.append(event_string)
 
         rejoin_upperbound = game.config["lost_cat"]["rejoin_chance"]
@@ -231,7 +231,7 @@ class Events:
             if not med_fullfilled:
                 string = f"{game.clan.name}Clan does not have enough healthy medicine cats! Cats will be sick/hurt " \
                             f"for longer and have a higher chance of dying. "
-                game.cur_events_list.insert(0, Single_Event(string, "health"))
+                game.cur_events_list.insert(0, Single_Event(string, "alert"))
         else:
             has_med = any(
                 str(cat.status) in {"medicine cat", "medicine cat apprentice"}
@@ -239,14 +239,14 @@ class Events:
                 for cat in Cat.all_cats.values())
             if not has_med:
                 string = f"{game.clan.name}Clan has no medicine cat!"
-                game.cur_events_list.insert(0, Single_Event(string, "health"))
+                game.cur_events_list.insert(0, Single_Event(string, "alert"))
         
         new_list = []
         other_list = []
         for i in game.cur_events_list:
-            if str(game.clan.your_cat.name) in i.text:
+            if str(game.clan.your_cat.name) in i.text or "alert" in i.types and i not in new_list:
                 new_list.append(i)
-            else:
+            elif i not in other_list and i not in new_list:
                 other_list.append(i)
         
         game.cur_events_list = new_list
@@ -3056,7 +3056,7 @@ class Events:
 
             if leader_dead or leader_outside:
                 game.cur_events_list.insert(
-                    0, Single_Event(f"{game.clan.name}Clan has no leader!"))
+                    0, Single_Event(f"{game.clan.name}Clan has no leader!", "alert"))
 
     def check_and_promote_deputy(self):
         """Checks if a new deputy needs to be appointed, and appointed them if needed. """
@@ -3179,6 +3179,6 @@ class Events:
 
             else:
                 game.cur_events_list.insert(
-                    0, Single_Event(f"{game.clan.name}Clan has no deputy!"))
+                    0, Single_Event(f"{game.clan.name}Clan has no deputy!", "alert"))
 
 events_class = Events()
