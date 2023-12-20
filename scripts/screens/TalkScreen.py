@@ -376,6 +376,11 @@ class TalkScreen(Screens):
             
             if "grief stricken" not in you.illnesses and "you_grieving" in tags:
                 continue
+                
+            if "starving" not in you.illnesses and "you_starving" in tags:
+                continue
+            if "starving" not in cat.illnesses and "they_starving" in tags:
+                continue
             
             if any(i in ["you_ill", "you_injured"] for i in tags):
                 ill_injured = False
@@ -427,7 +432,7 @@ class TalkScreen(Screens):
                     if you.parent2:
                         if you.parent2 == cat.ID:
                             fam = True
-                if "adopted_parent" in tags or "from adopted_parent" in tags:
+                if "adopted_parent" in tags or "from adopted_parent" in tags or "from_adopted_parent" in tags:
                     if cat.ID in you.inheritance.get_no_blood_parents():
                         fam = True
                 if "from_kit" in tags or "from_your_kit" in tags:
@@ -544,7 +549,10 @@ class TalkScreen(Screens):
                 try:
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
-                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
+                    if game.clan.your_cat.moons == 0:
+                        possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", "newborn")
+                    else:
+                        possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status)
                 except Exception as e:
                     print(e)
@@ -826,7 +834,7 @@ class TalkScreen(Screens):
             if "t_p" in text:
                 if len(cat.inheritance.get_parents()) == 0:
                     return ""
-                parent = Cat.fetch_cat(choice(cat.get_parents()))
+                parent = Cat.fetch_cat(choice(cat.inheritance.get_parents()))
                 if parent.outside or parent.dead or parent.ID==game.clan.your_cat.ID:
                     return ""
                 text = text.replace("t_p", str(parent.name))

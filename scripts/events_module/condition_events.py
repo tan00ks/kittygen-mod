@@ -171,7 +171,6 @@ class Condition_Events():
             text = event_string
         else:
             # EVENTS
-
             if not triggered and \
                     cat.personality.trait in ["adventurous",
                                             "bold",
@@ -268,7 +267,7 @@ class Condition_Events():
 
         if text is not None:
             types = ["health"]
-            if cat.dead or triggered:
+            if cat.dead:
                 types.append("birth_death")
             if has_other_clan:
                 types.append("other_clans")

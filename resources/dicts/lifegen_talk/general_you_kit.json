@@ -125,6 +125,19 @@
             "I know I taught you to take risks, but this isn't what I meant!"
         ]
     ],
+    "you_starving_3": [
+        [
+            "any",
+            "you_starving"
+        ],
+        [
+            "Oh, y_c. I'm so sorry...",
+            "[t_c scanned over the fresh kill pile, it appearing to be barren.]",
+            "There's still no fresh kill. Nothing's been found.",
+            "[Their voice hitched and they sniffed quietly to themself.]",
+            "This... why would Starclan do this to us...?"
+        ]
+    ],
     "assertive_parent13": [
         [
             "kitten",
@@ -1704,6 +1717,36 @@
             "Let me hear your warrior's roar!",
             "[You try to roar, like you've heard the older cats do, but all you can muster is a pitiful squeak.]",
             "Hehe ... You'll work on it."
+        ]
+    ],
+    "sweet_9": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "Welcome to the world, y_c. You've got lots of growing up to do, but I know you'll be just fine."
+        ]
+    ],
+    "sweet_10": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "[t_c spots you trying to wiggle your way to freedom, and moves you back into the nursery with a purr.]",
+            "[It seems like newborn escapes will not be happening.]"
+        ]
+    ],
+    "sweet_11": [
+        [
+            "newborn",
+            "they_formerlykittypet",
+            "sweet"
+        ],
+        [
+            "Aw, you're so adorable! My old housefolk were right, newborn kittens really are like potatoes...",
+            "Let's get you back to the nursery, little one!"
         ]
     ]
 }

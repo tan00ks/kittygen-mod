@@ -221,7 +221,7 @@ class Cat():
         self.no_kits = False
         self.no_mates = False
         self.no_retire = False
-
+        self.backstory_str = ""
         
         self.prevent_fading = False  # Prevents a cat from fading.
         self.faded_offspring = []  # Stores of a list of faded offspring, for family page purposes.
@@ -409,7 +409,8 @@ class Cat():
         This is used to kill a cat.
 
         body - defaults to True, use this to mark if the body was recovered so
-        that grief messages will align with body status
+        that grief messages will align with body status 
+        - if it is None, a lost cat died and therefore not trigger grief, since the clan does not know
 
         May return some additional text to add to the death event.
         """
@@ -450,7 +451,7 @@ class Cat():
                 fetched_cat.update_mentor()
         self.update_mentor()
 
-        if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled):
+        if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled) and body != None:
             self.grief(body)
 
         if not self.outside:
@@ -3047,7 +3048,8 @@ class Cat():
                 "joined_df": self.joined_df if self.joined_df else False,
                 "revealed": self.revealed if self.revealed and isinstance(self.revealed, int) else 0,
                 "inventory": self.inventory if self.inventory else [],
-                "revives": self.revives if self.revives else 0
+                "revives": self.revives if self.revives else 0,
+                "backstory_str": self.backstory_str if self.backstory_str else ""
             }
 
 

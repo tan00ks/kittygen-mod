@@ -857,5 +857,43 @@
         [
             "Hi there, sweet kit. You're so precious."
         ]
+    ],
+    "upstanding_queenapp": [
+        [
+            "upstanding",
+            "clan_has_kits",
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice"
+        ],
+        [
+            "Oh, hey there y_c! What are you doing up this early?",
+            "Hm. I guess that camp is pretty nice when you have it all to yourself. As for me, I've been a little busy making a few things for the kits.",
+            "[t_c nodded to a pile of several carefully crafted playthings. Some are made out of feathers and twigs, others out of moss and leaves.]",
+            "Isn't it great? Sure, it was pretty hard to put those together, and yeah, it might have taken me all night, but it'll be so worth it once I see the looks on their faces!"
+        ]
+    ],
+    "upstanding_queenapp1": [
+        [
+            "upstanding",
+            "kitten"
+        ],
+        [
+            "Hey! C'mere you little furball! What did I tell you about leaving the nursery at this hour?",
+            "Ah ah, no buts! Rules are rules, and those rules say you are going straight back to the nursery!"
+        ]
+    ],
+    "upstanding_queenapp2": [
+        [
+            "upstanding",
+            "kitten"
+        ],
+        [
+            "Oh hey there y_c, didn't think I'd find you in here all by yourself. How about you go out into the clearing and play? There's plenty of space out there!",
+            "Just don't feel like it huh? Well, How about I tell you a story instead?",
+            "[t_c begins a long and detailed story about how the Warrior Code was created, and why it applies to all clans across the territories. They trail off about halfway through and watch as you roll around on the nursery floor with a ball of moss clutched between your paws]",
+            "... are you even listening to me right now?"
+        ]
     ]
 }

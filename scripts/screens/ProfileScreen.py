@@ -1290,17 +1290,29 @@ class ProfileScreen(Screens):
 
         text = process_text(text, cat_dict)
         if "o_c" in text:
-            other_clan = "a different Clan"
-            if game.clan.all_clans:
-                other_clan = str(choice(game.clan.all_clans).name)
-            text = text.replace("o_c", other_clan)
+            if self.the_cat.backstory_str:
+                text = text.replace("o_c", self.the_cat.backstory_str)
+            else:
+                other_clan = "a different Clan"
+                if game.clan.all_clans:
+                    other_clan = str(choice(game.clan.all_clans).name)
+                self.the_cat.backstory_str = other_clan
+                text = text.replace("o_c", other_clan)
         if "c_n" in text:
             text = text.replace("c_n", str(game.clan.name))
         if "r_c" in text:
-            # random_cat = choice(self.get_living_cats())
-            # while random_cat.status in ['newborn', 'kitten']:
-            #     random_cat = choice(self.get_living_cats())
-            text = text.replace("r_c", "one of their clanmates")
+            if self.the_cat.backstory_str:
+                text = text.replace("r_c", self.the_cat.backstory_str)
+            else:
+                random_cat = choice(self.get_living_cats())
+                counter = 0
+                while random_cat.moons < self.the_cat.moons or random_cat.ID == self.the_cat.ID:
+                    if counter == 30:
+                        break
+                    random_cat = choice(self.get_living_cats())
+                    counter+=1
+                self.the_cat.backstory_str = str(random_cat.name)
+                text = text.replace("r_c", str(random_cat.name))
         return text
 
     def get_scar_text(self):

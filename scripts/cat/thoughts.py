@@ -12,6 +12,9 @@ class Thoughts():
         if not random_cat:
             return False
         
+        if random_cat.moons < 0:
+            return False
+        
         # No current relationship-value bases tags, so this is commented out.
         relationship = None
         if random_cat.ID in main_cat.relationships:
@@ -169,7 +172,9 @@ class Thoughts():
                 living_status = "living"
             if living_status and living_status != "living":
                 return False
-        
+        if random_cat:
+            if random_cat.moons < 0:
+                return False
         if random_cat and 'random_outside_status' in thought:
             outside_status = None
             if random_cat and random_cat.outside and random_cat.status not in ["kittypet", "loner", "rogue", "former Clancat", "exiled"]:

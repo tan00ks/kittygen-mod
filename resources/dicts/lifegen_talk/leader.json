@@ -1616,5 +1616,41 @@
             "[The mediator tries to laugh and make jokes to ease the tension, but t_c won't even offer them a polite smile.]",
             "[You hope your leader's hatred for small talk doesn't lead to serious conflict between the clans ...]"
         ]
+    ],
+    "newborn_fromleader": [
+        [
+            "newborn",
+            "platonic_like"
+        ],
+        [
+            "Our next little warrior.",
+            "Grow up to make c_nClan proud, y_c."
+        ]
+    ],
+    "newborn_fromleader1": [
+        [
+            "newborn",
+            "neutral",
+            "random_cat"
+        ],
+        [
+            "Hm ...",
+            "No, they're cute, y_p, don't get me wrong ...",
+            "I'm just worried about how fast our Clan is growing.",
+            "We may have to start sending out more hunting patrols to keep up."
+        ]
+    ],
+    "newborn_fromleader2": [
+        [
+            "newborn",
+            "assertive",
+            "cool",
+            "platonic_like"
+        ],
+        [
+            "[You bat at t_c's nose with your paw.]",
+            "Heh. Spirited little thing!",
+            "I might have to be careful, or else y_c just might grow up and take my job! Hehe!"
+        ]
     ]
 }
