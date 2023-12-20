@@ -447,7 +447,7 @@ class Events:
             ##WILDCARD check, because I've lost control of my life
             ##Declare Lists of wildcard combos for comparison. (Will be made more professional later.)
             not_wildcard_patterns = ['single', 'smoke', 'singlestripe']
-            all_patterns = ['tabby', 'ticked', 'mackerel', 'classic', 'sokoke', 'agouti', 'speckled', 'rosette', 'smoke', 'singlestripe', 'bengal', 'marbled']
+            all_patterns = ['tabby', 'ticked', 'mackerel', 'classic', 'sokoke', 'agouti', 'speckled', 'rosette', 'smoke', 'singlestripe', 'bengal', 'marbled', 'masked']
             ID_check = 0
             ##Actual check for wildcardness
             if Cat.all_cats.get(cat).pelt.name == "Tortie" or Cat.all_cats.get(cat).pelt.name == "Calico":
@@ -485,6 +485,8 @@ class Events:
                 elif (Cat.all_cats.get(cat).pelt.tortiebase == "bengal" and not Cat.all_cats.get(cat).pelt.tortiepattern == "bengal") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
                 elif (Cat.all_cats.get(cat).pelt.tortiebase == "marbled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "marbled") and (ID_check == Cat.all_cats.get(cat).ID):
+                    achievements.add("6")
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "masked" and not Cat.all_cats.get(cat).pelt.tortiepattern == "masked") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
             ##if Cat.all_cats.get(cat).mate
             ##  achievements.add("31")   
