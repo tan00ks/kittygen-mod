@@ -664,7 +664,6 @@ class MakeClanScreen(Screens):
                                               , manager=MANAGER)
             self.tabs["tab5"] = UIImageButton(scale(pygame.Rect((170, 640), (308, 60))), "", object_id="#pine_tab"
                                               , manager=MANAGER)
-            self.tabs["tab5"].hide()
         elif self.biome_selected == 'Mountainous':
             self.tabs["tab1"] = UIImageButton(scale(pygame.Rect((222, 360), (308, 60))), "", object_id="#cliff_tab"
                                               , manager=MANAGER)

@@ -1,0 +1,24 @@
+{
+    "comments": {
+        "stats": ["courage", "compassion", "intelligence", "empathy"]
+    },
+    "mossball": {
+        "stat_change": ["courage up", "courage down", "empathy up", "empathy down", "intelligence down"],
+        "courage up": [""]
+    },
+    "clean": {
+        "stat_change": ["compassion up", "empathy up", "compassion up", "empathy up"]
+    },
+    "lecture": {
+        "stat_change": ["intelligence down", "intelligence up", "compassion up", "compassion down"]
+    },
+    "playfight": {
+        "stat_change": ["courage up", "intelligence up", "courage down", "intelligence down"]
+    },
+    "tell story": {
+        "stat_change": ["compassion up", "empathy up", "compassion down", "empathy down"]
+    },
+    "scavenger hunt": {
+        "stat_change": ["intelligence up", "courage up", "intelligence down", "courage down"]
+    }
+}

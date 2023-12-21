@@ -231,6 +231,8 @@ class ProfileScreen(Screens):
                 self.change_screen('med den screen')
             elif "mediation" in self.profile_elements and event.ui_element == self.profile_elements["mediation"]:
                 self.change_screen('mediation screen')
+            elif "queen" in self.profile_elements and event.ui_element == self.profile_elements["queen"]:
+                self.change_screen('queen screen')
             elif event.ui_element == self.profile_elements["favourite_button"]:
                 self.the_cat.favourite = False
                 self.profile_elements["favourite_button"].hide()
@@ -668,7 +670,7 @@ class ProfileScreen(Screens):
                                             manager=MANAGER)
         
         if self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.dead and not self.the_cat.outside and not game.clan.your_cat.dead and not game.clan.your_cat.outside and not game.clan.your_cat.moons < 0:    
-            if not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice']:
+            if not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(
                     (726, 220), (68, 68))),
                     "",
@@ -679,7 +681,7 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
-            elif not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status in ['leader', 'mediator', 'mediator apprentice']:
+            elif not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(
                     (662, 220), (68, 68))),
                     "",
@@ -691,7 +693,7 @@ class ProfileScreen(Screens):
                 else:
                     self.profile_elements["talk"].enable()
         if self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.dead and not self.the_cat.outside and not game.clan.your_cat.dead and not game.clan.your_cat.outside and not game.clan.your_cat.moons < 0:    
-            if not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice']:
+            if not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["insult"] = UIImageButton(scale(pygame.Rect(
                     (806, 220), (68, 68))),
                     "",
@@ -702,7 +704,7 @@ class ProfileScreen(Screens):
                     self.profile_elements["insult"].disable()
                 else:
                     self.profile_elements["insult"].enable()
-            elif not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status in ['leader', 'mediator', 'mediator apprentice']:
+            elif not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["insult"] = UIImageButton(scale(pygame.Rect(
                     (830, 220), (68, 68))),
                     "",
@@ -715,7 +717,7 @@ class ProfileScreen(Screens):
                     self.profile_elements["insult"].enable()
                     
             if self.the_cat.is_dateable(game.clan.your_cat):
-                if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice']:
+                if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                     self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
                         (646, 220), (68, 68))),
                         "",
@@ -726,7 +728,7 @@ class ProfileScreen(Screens):
                         self.profile_elements["flirt"].disable()
                     else:
                         self.profile_elements["flirt"].enable()
-                elif self.the_cat.status in ['leader', 'mediator', 'mediator apprentice']:
+                elif self.the_cat.status in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                     self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
                         (910, 220), (68, 68))),
                         "",
@@ -767,6 +769,14 @@ class ProfileScreen(Screens):
             )
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["mediation"].disable()
+        elif self.the_cat.status in ["queen", "queen's apprentice"]:
+            self.profile_elements["queen"] = UIImageButton(scale(pygame.Rect(
+                (746, 220), (68, 68))),
+                "",
+                object_id="#mediation_button", manager=MANAGER
+            )
+            if self.the_cat.dead or self.the_cat.outside:
+                self.profile_elements["queen"].disable()
 
     def determine_previous_and_next_cat(self):
         """'Determines where the next and previous buttons point too."""
