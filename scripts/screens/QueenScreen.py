@@ -97,6 +97,17 @@ class QueenScreen(Screens):
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
 
+        if self.the_cat.did_activity:
+            self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
+                                                     scale(pygame.Rect((300, 110), (1000, 160))),
+                                                     object_id=get_text_box_theme("#text_box_26_horizcenter"),
+                                                     manager=MANAGER)
+        else:
+            self.heading2 = pygame_gui.elements.UITextBox("Nursery activities can impact a kit's stats.\nStats may affect the kit's future role and personality.",
+                                                     scale(pygame.Rect((300, 110), (1000, 160))),
+                                                     object_id=get_text_box_theme("#text_box_26_horizcenter"),
+                                                     manager=MANAGER)
+
         self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((830, 226), (562, 394))),
                                                         pygame.transform.scale(
                                                             image_cache.load_image(
@@ -118,8 +129,10 @@ class QueenScreen(Screens):
         self.activities = pygame_gui.elements.UIDropDownMenu(["mossball", "playfight", "lecture", "clean", "tell story", "scavenger hunt"], "mossball", scale(pygame.Rect((200, 300), (300, 70))), manager=MANAGER)
         self.confirm_mentor = UIImageButton(scale(pygame.Rect((580, 300), (208, 52))), "",
                                             object_id="#patrol_select_button")
+        if self.the_cat.did_activity:
+            self.confirm_mentor.disable()
         self.activity_box = pygame_gui.elements.UITextBox("",
-                                                     scale(pygame.Rect((200, 420), (600, 800))),
+                                                     scale(pygame.Rect((200, 420), (600, 400))),
                                                      object_id=get_text_box_theme("#text_box_26_horizcenter"),
                                                      manager=MANAGER)
         
@@ -145,7 +158,8 @@ class QueenScreen(Screens):
 
         self.heading.kill()
         del self.heading
-
+        self.heading2.kill()
+        del self.heading2
         self.mentor_frame.kill()
         del self.mentor_frame
 
@@ -158,6 +172,10 @@ class QueenScreen(Screens):
         del self.previous_page_button
         self.next_page_button.kill()
         del self.next_page_button
+
+        self.activity_box.kill()
+        self.activity_text.kill()
+        self.activities.kill()
 
 
     def find_next_previous_cats(self):
@@ -196,13 +214,42 @@ class QueenScreen(Screens):
         if self.next_cat == 1:
             self.next_cat = 0
             
-    RESOURCE_DIR = "resources/dicts/events/lifegen_events/"
+
     def change_cat(self, affair_cat=None):
+        RESOURCE_DIR = "resources/dicts/events/lifegen_events/"
+        with open(f"{RESOURCE_DIR}nursery_activities.json", 'r') as read_file:
+            display_events = ujson.loads(read_file.read())[self.activity]
+        stat_change = choice(display_events["stat_change"])
+        self.activity_box.kill()
+        self.activity_box = pygame_gui.elements.UITextBox(self.adjust_txt(choice(display_events[stat_change])),
+                                                     scale(pygame.Rect((200, 420), (600, 400))),
+                                                     object_id=get_text_box_theme("#text_box_26_horizcenter"),
+                                                     manager=MANAGER)
+        if stat_change == "courage up":
+            self.selected_cat.courage += 1
+        elif stat_change == "courage down":
+            self.selected_cat.courage -= 1
+        elif stat_change == "empathy up":
+            self.selected_cat.empathy += 1
+        elif stat_change == "empathy down":
+            self.selected_cat.empathy -= 1
+        elif stat_change == "compassion up":
+            self.selected_cat.compassion += 1
+        elif stat_change == "compassion down":
+            self.selected_cat.compassion -= 1
+        elif stat_change == "intelligence up":
+            self.selected_cat.intelligence += 1
+        elif stat_change == "intelligence down":
+            self.selected_cat.intelligence -= 1
         
-        
-    
-    def get_fail_consequence(self):
-        return randint(0,1)
+        self.the_cat.did_activity = True
+        self.confirm_mentor.disable()
+        self.update_selected_cat()
+
+    def adjust_txt(self, text):
+        text = text.replace("t_k", str(self.selected_cat.name))
+        text = text.replace("t_q", str(self.the_cat.name))
+        return text
 
     def update_selected_cat(self):
         """Updates the image and information on the currently selected mentor"""
@@ -284,7 +331,7 @@ class QueenScreen(Screens):
         # Behold! The uglest list comprehension ever created! 
         valid_mates = [i for i in Cat.all_cats_list if
                        not i.faded
-                       and i.moons >=0 and i.moons < 6]
+                       and i.moons >=1 and i.moons < 6]
         
         return valid_mates
 

@@ -2068,14 +2068,16 @@ class Events:
                     if cat.is_disabled():
                         chance = int(chance / 2)
 
-                    if chance == 0:
+                    chance += (cat.intelligence * -1)
+
+                    if chance <= 0:
                         chance = 1
 
                     if not has_med_app and not int(random.random() * chance):
                         self.ceremony(cat, 'medicine cat apprentice')
                         self.ceremony_accessory = True
                         self.gain_accessories(cat)
-                    elif random.randint(1,40) == 1:
+                    elif random.randint(1,40 + (cat.compassion*-1)) == 1:
                         self.ceremony(cat, "queen's apprentice")
                         self.ceremony_accessory = True
                         self.gain_accessories(cat)
@@ -2102,7 +2104,8 @@ class Events:
                         if cat.is_disabled():
                             chance = int(chance / 2)
 
-                        if chance == 0:
+                        chance += (cat.empathy * -1)
+                        if chance <= 0:
                             chance = 1
 
                         # Only become a mediator if there is already one in the clan.

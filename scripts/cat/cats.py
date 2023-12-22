@@ -226,6 +226,7 @@ class Cat():
         self.compassion = 0
         self.intelligence = 0
         self.empathy = 0
+        self.did_activity = False
         
         self.prevent_fading = False  # Prevents a cat from fading.
         self.faded_offspring = []  # Stores of a list of faded offspring, for family page purposes.
@@ -3057,7 +3058,8 @@ class Cat():
                 "courage": self.courage if self.courage else 0,
                 "compassion": self.compassion if self.compassion else 0,
                 "intelligence": self.intelligence if self.intelligence else 0,
-                "empathy": self.empathy if self.empathy else 0
+                "empathy": self.empathy if self.empathy else 0,
+                "did_activity": self.did_activity if self.did_activity else False
             }
 
 
