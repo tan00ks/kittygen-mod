@@ -2493,6 +2493,9 @@ class Events:
         """
         TODO: DOCS
         """
+        if not cat:
+            return
+            
         if cat.status in [
             "apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"
         ]:
