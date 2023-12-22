@@ -104,8 +104,7 @@ class QueenScreen(Screens):
                                                             (562, 394)), manager=MANAGER)
 
         self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
-        self.confirm_mentor = UIImageButton(scale(pygame.Rect((880, 610), (208, 52))), "",
-                                            object_id="#patrol_select_button")
+        
 
         self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1160), (68, 68))), "",
                                                   object_id="#relation_list_previous", manager=MANAGER)
@@ -113,12 +112,13 @@ class QueenScreen(Screens):
                                               object_id="#relation_list_next", manager=MANAGER)
 
         self.activity_text = pygame_gui.elements.UITextBox("Activity:",
-                                                     scale(pygame.Rect((450, 550), (1000, 80))),
+                                                     scale(pygame.Rect((-110, 220), (1000, 80))),
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
-        self.activities = pygame_gui.elements.UIDropDownMenu(["mossball", "playfight", "lecture", "clean", "tell story", "scavenger hunt"], "mossball", scale(pygame.Rect((450, 610), (300, 70))), manager=MANAGER)
-
-
+        self.activities = pygame_gui.elements.UIDropDownMenu(["mossball", "playfight", "lecture", "clean", "tell story", "scavenger hunt"], "mossball", scale(pygame.Rect((200, 300), (300, 70))), manager=MANAGER)
+        self.confirm_mentor = UIImageButton(scale(pygame.Rect((580, 300), (208, 52))), "",
+                                            object_id="#patrol_select_button")
+        
         self.update_selected_cat()  # Updates the image and details of selected cat
         self.update_cat_list()
         # self.update_buttons()
@@ -221,11 +221,9 @@ class QueenScreen(Screens):
                     self.selected_cat.sprite,
                     (300, 300)), manager=MANAGER)
 
-            info = self.selected_cat.status + "\n" + \
-                   self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n" + \
-                   self.selected_cat.skills.skill_string(short=True)
-
-            self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
+            stats = f"Courage: {self.selected_cat.courage}\nCompassion: {self.selected_cat.compassion} \nIntelligence: {self.selected_cat.intelligence} \nEmpathy: {self.selected_cat.empathy}"
+            
+            self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(stats,
                                                                                    scale(pygame.Rect((1180, 325),
                                                                                                      (210, 250))),
                                                                                    object_id="#text_box_22_horizcenter_vertcenter_spacing_95",

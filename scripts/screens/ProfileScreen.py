@@ -2003,6 +2003,13 @@ class ProfileScreen(Screens):
             )
             if len(game.clan.your_cat.mate) == 0:
                 self.affair_button.disable()
+            if game.clan.your_cat.mate:
+                alive_mate = False
+                for m in game.clan.your_cat.mate:
+                    if Cat.all_cats.get(m).dead == False:
+                        alive_mate = True
+                if not alive_mate:
+                    self.affair_button.disable()
 
             # These are a placeholders, to be killed and recreated in self.update_disabled_buttons_and_text().
             #   This it due to the image switch depending on the cat's status, and the location switch the close button

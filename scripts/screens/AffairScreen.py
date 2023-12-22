@@ -233,6 +233,8 @@ class AffairScreen(Screens):
     def adjust_txt(self, txt, affair_cat):
         txt = txt.replace("a_n", str(affair_cat.name))
         random_mate = Cat.fetch_cat(choice(game.clan.your_cat.mate))
+        while random_mate.dead or random_mate.outside:
+            random_mate = Cat.fetch_cat(choice(game.clan.your_cat.mate))
         txt = txt.replace("m_n", str(random_mate.name))
         random_warrior = Cat.fetch_cat(choice(game.clan.clan_cats))
         counter = 0

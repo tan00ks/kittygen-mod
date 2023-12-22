@@ -222,6 +222,10 @@ class Cat():
         self.no_mates = False
         self.no_retire = False
         self.backstory_str = ""
+        self.courage = 0
+        self.compassion = 0
+        self.intelligence = 0
+        self.empathy = 0
         
         self.prevent_fading = False  # Prevents a cat from fading.
         self.faded_offspring = []  # Stores of a list of faded offspring, for family page purposes.
@@ -3049,7 +3053,11 @@ class Cat():
                 "revealed": self.revealed if self.revealed and isinstance(self.revealed, int) else 0,
                 "inventory": self.inventory if self.inventory else [],
                 "revives": self.revives if self.revives else 0,
-                "backstory_str": self.backstory_str if self.backstory_str else ""
+                "backstory_str": self.backstory_str if self.backstory_str else "",
+                "courage": self.courage if self.courage else 0,
+                "compassion": self.compassion if self.compassion else 0,
+                "intelligence": self.intelligence if self.intelligence else 0,
+                "empathy": self.empathy if self.empathy else 0
             }
 
 
