@@ -118,6 +118,10 @@ class QueenScreen(Screens):
         self.activities = pygame_gui.elements.UIDropDownMenu(["mossball", "playfight", "lecture", "clean", "tell story", "scavenger hunt"], "mossball", scale(pygame.Rect((200, 300), (300, 70))), manager=MANAGER)
         self.confirm_mentor = UIImageButton(scale(pygame.Rect((580, 300), (208, 52))), "",
                                             object_id="#patrol_select_button")
+        self.activity_box = pygame_gui.elements.UITextBox("",
+                                                     scale(pygame.Rect((200, 420), (600, 800))),
+                                                     object_id=get_text_box_theme("#text_box_26_horizcenter"),
+                                                     manager=MANAGER)
         
         self.update_selected_cat()  # Updates the image and details of selected cat
         self.update_cat_list()
@@ -195,15 +199,7 @@ class QueenScreen(Screens):
     RESOURCE_DIR = "resources/dicts/events/lifegen_events/"
     def change_cat(self, affair_cat=None):
         
-        success = self.is_success()
         
-        self.exit_screen()
-        game.switches['cur_screen'] = "events screen"
-    
-    def is_success(self):
-        if randint(0,1) == 0:
-            return True
-        return False
     
     def get_fail_consequence(self):
         return randint(0,1)

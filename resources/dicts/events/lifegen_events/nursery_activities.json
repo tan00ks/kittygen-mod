@@ -3,14 +3,25 @@
         "stats": ["courage", "compassion", "intelligence", "empathy"]
     },
     "mossball": {
-        "stat_change": ["courage up", "courage down", "empathy up", "empathy down", "intelligence down"],
-        "courage up": [""]
+        "stat_change": ["courage up", "courage down", "empathy up", "empathy down"],
+        "courage up": ["You throw a mossball high in the air for t_k to catch. They make a daring leap off of a nearby rock to catch it."],
+        "courage down": ["During a game of mossball, when it's t_k's turn to catch, they hesitate and shrink back as the ball flies their way."],
+        "empathy up": ["As you and t_k play mossball, you notice how t_k takes a gentle approach when passing the ball back to you, making sure it doesn't fly at your face."],
+        "empathy down": ["After passing the mossball to t_k, they start to hog the ball and refuse to continue playing."]
     },
     "clean": {
-        "stat_change": ["compassion up", "empathy up", "compassion up", "empathy up"]
+        "stat_change": ["compassion up", "empathy up", "compassion down", "empathy down"],
+        "compassion up": ["After showing t_k how to clean out their bedding, they ask if they can help the elders with theirs too."],
+        "compassion down": ["When changing out the nursery's moss bedding, you notice t_k saved all of the best moss for themselves."],
+        "empathy up": ["Before you even ask t_k to help clean the nursery, they had already volunteered. The space becomes tidy in no time."],
+        "empathy down": ["t_k whines and flops down in their nest, refusing to help you clean the nursery."]
     },
     "lecture": {
-        "stat_change": ["intelligence down", "intelligence up", "compassion up", "compassion down"]
+        "stat_change": ["intelligence down", "intelligence up", "compassion up", "compassion down"],
+        "intelligence down": ["You try to teach t_k about the dangers of eating herbs without consulting the medicine cat. They seem more engrossed in playing with a feather instead."],
+        "intelligence up": ["During your lecture on clan history, t_k is completely engrossed, asking insightful questions that you try your best to answer."],
+        "compassion up": ["You lecture t_k about the different roles in the Clan and they answer every question in your pop quiz correctly."],
+        "compassion down": ["You lecture t_k about the times of hardship in Clan history, but they appear completely indifferent."]
     },
     "playfight": {
         "stat_change": ["courage up", "intelligence up", "courage down", "intelligence down"]
