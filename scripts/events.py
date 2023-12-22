@@ -1757,6 +1757,7 @@ class Events:
         cat.talked_to = False
         cat.insulted = False
         cat.flirted = False
+        cat.did_activity = False
         
         # prevent injured or sick cats from unrealistic Clan events
         if cat.is_ill() or cat.is_injured():
