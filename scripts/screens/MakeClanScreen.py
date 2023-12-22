@@ -754,6 +754,7 @@ class MakeClanScreen(Screens):
                                                    str(selected.personality.trait) + "\n" +
                                                    str(selected.skills.skill_string()))
             if selected.permanent_condition:
+
                 self.elements['cat_info'].set_text(selected.gender + "\n" +
                                                "fur length: " + str(selected.pelt.length) + "\n" +
                                                    str(selected.personality.trait) + "\n" +
@@ -1559,7 +1560,8 @@ class MakeClanScreen(Screens):
                     if event.text == "None":
                         self.scars = None
                     else:
-                        self.scars = [event.text]
+                        self.scars = []
+                        self.scars.append(event.text) 
                     self.update_sprite()
                 elif event.ui_element == self.elements['skin']:
                     self.skin = event.text
@@ -1589,9 +1591,13 @@ class MakeClanScreen(Screens):
                         self.custom_cat.get_permanent_condition(chosen_condition, True)
                         if event.text == 'paralyzed':
                             self.paralyzed = True
+                        else:
+                            self.paralyzed = False
                         if event.text == 'born without a leg' and 'NOPAW' not in self.custom_cat.pelt.scars:
+                            self.custom_cat.pelt.scars = []
                             self.custom_cat.pelt.scars.append('NOPAW')
                         elif event.text == "born without a tail" and "NOTAIL" not in self.custom_cat.pelt.scars:
+                            self.custom_cat.pelt.scars = []
                             self.custom_cat.pelt.scars.append('NOTAIL')
                         self.update_sprite()
 
@@ -1623,6 +1629,7 @@ class MakeClanScreen(Screens):
                 if self.paralyzed and 'paralyzed' not in self.your_cat.permanent_condition:
                     self.your_cat.get_permanent_condition("paralyzed")
                     self.your_cat.permanent_condition['paralyzed']["moons_until"] = 1
+                    self.your_cat.permanent_condition['paralyzed']["moons_with"] = -1
                 self.your_cat.accessory = self.accessory
                 self.your_cat.personality = Personality(trait=self.personality, kit_trait=True)
                 self.selected_cat = None
