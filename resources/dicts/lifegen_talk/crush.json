@@ -16,7 +16,12 @@
         [
             "no_kit",
             "random_cat",
-            "platonic_like"
+            "platonic_like",
+            "silly",
+            "assertive",
+            "cool",
+            "unlawful",
+            "unabashed"
         ],
         [
             "[t_c and their_crush laugh hysterically together in the middle of the clearing, howls careening off the camp walls.]",
@@ -26,7 +31,9 @@
     "gen_crush4": [
         [
             "no_kit",
-            "random_cat"
+            "random_cat",
+            "introspective",
+            "neurotic"
         ],
         [
             "[t_c sits alone at the edge of camp, grinning from ear to ear with a dreamy look in their eyes.]",
@@ -39,7 +46,10 @@
         [
             "no_kit",
             "random_cat",
-            "they_adult"
+            "they_adult",
+            "brooding",
+            "assertive",
+            "unlawful"
         ],
         [
             "[t_c stares at their_crush talking with r_w across camp, expression filled with pain.]",
@@ -51,7 +61,10 @@
         [
             "no_kit",
             "random_cat",
-            "they_app"
+            "they_app",
+            "brooding",
+            "assertive",
+            "unlawful"
         ],
         [
             "[t_c stares at their_crush talking with r_a across camp, expression filled with pain.]",
@@ -81,7 +94,6 @@
             "assertive",
             "unlawful",
             "brooding",
-            "upstanding",
             "cool"
         ],
         [
@@ -110,7 +122,11 @@
     "crush_dream": [
         [
             "no_kit",
-            "random_cat"
+            "random_cat",
+            "upstanding",
+            "stable",
+            "introspective",
+            "sweet"
         ],
         [
             "[t_c is talking in their sleep.]",
@@ -137,7 +153,10 @@
     "gen_yourcrush1": [
         [
             "no_kit",
-            "random_cat"
+            "random_cat",
+            "assertive",
+            "unabashed",
+            "upstanding"
         ],
         [
             "[t_c walks over to you with a plump rabbit.]",
@@ -180,12 +199,10 @@
     "hater_yourcrush1": [
         [
             "any",
-            "dislike",
             "random_cat",
             "assertive",
             "cool",
             "unlawful",
-            "brooding",
             "unabashed",
             "silly"
         ],
@@ -221,9 +238,6 @@
             "platonic_like",
             "assertive",
             "cool",
-            "unabashed",
-            "upstanding",
-            "silly",
             "respect"
         ],
         [
@@ -396,7 +410,7 @@
             "adopted_parent"
         ],
         [
-            "y_c? Where are you going in that hast?",
+            "y_c? Where are you going in that haste?",
             "You're going to hang out with your_crush?",
             "[t_c shoots you that familiar proud smile they always give you.]",
             "Well, in that case, you can't be going out like that. Get over here.",
