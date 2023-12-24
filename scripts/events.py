@@ -72,7 +72,8 @@ class Events:
             self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), 0, None]
             if game.clan.leader:
                 self.checks[3] = game.clan.leader.ID
-        game.cur_events_list = []
+        game.cur_events_list = [] + game.next_events_list
+        game.next_events_list = []
         game.herb_events_list = []
         game.freshkill_events_list = []
         game.mediated = []

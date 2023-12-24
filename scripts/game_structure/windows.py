@@ -4,7 +4,7 @@ import threading
 import time
 from re import search as re_search
 import platform
-
+import ujson
 import pygame
 import pygame_gui
 from sys import exit
@@ -1400,7 +1400,6 @@ class DeathScreen(UIWindow):
             object_id="#leader_ceremony_button",
             container=self,
             tool_tip_text='Revive'
-
         )
         
 
@@ -1445,6 +1444,11 @@ class DeathScreen(UIWindow):
                 game.clan.your_cat.thought = "Is surprised to find themselves back in the Clan"
                 game.last_screen_forupdate = None
                 game.switches['window_open'] = False
+                with open("resources/dicts/events/lifegen_events/revival.json", "r") as read_file:
+                    revival_json = ujson.loads(read_file.read())['revival']
+                
+                game.next_events_list.append(Single_Event(choice(revival_json), 'alert'))
+                game.switches['cur_screen'] = "events screen"
                 self.begin_anew_button.kill()
                 self.pick_path_message.kill()
                 self.mediator_button.kill()
