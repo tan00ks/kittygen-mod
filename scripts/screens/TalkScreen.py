@@ -389,7 +389,7 @@ class TalkScreen(Screens):
                     for illness in you.illnesses:
                         if you.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
-                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries and "recovering from birth" not in you.injuries:
+                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries and "recovering from birth" not in you.injuries and "sprain" not in you.injuries:
                     for injury in you.injuries:
                         if you.injuries[injury]['severity'] != 'minor':
                             ill_injured = True            
@@ -403,7 +403,7 @@ class TalkScreen(Screens):
                     for illness in cat.illnesses:
                         if cat.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
-                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries and "recovering from birth" not in cat.injuries:
+                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries and "recovering from birth" not in cat.injuries and "sprain" not in cat.injuries:
                     for injury in cat.injuries:
                         if cat.injuries[injury]['severity'] != 'minor':
                             ill_injured = True
@@ -505,6 +505,18 @@ class TalkScreen(Screens):
                     
             if "non-mates" in tags:
                 if you.ID in cat.mate:
+                    continue
+
+            if "they_older" in tags:
+                if you.age != cat.age and cat.moons < you.moons:
+                    continue
+            
+            if "they_sameage" in tags:
+                if you.age != cat.age:
+                    continue
+            
+            if "they_younger" in tags:
+                if you.age != cat.age and cat.moons > you.moons:
                     continue
             
             # Relationship conditions
@@ -700,6 +712,27 @@ class TalkScreen(Screens):
                     text = text.replace("their_crush", str(crush.name))
                 else:
                     return ""
+            
+            
+            if "r_c1" in text:
+                alive_apps = self.get_living_cats()
+                if len(alive_apps) <= 2:
+                    return ""
+                alive_app = choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    alive_app = choice(alive_apps)
+                alive_apps.remove(alive_app)
+                text = text.replace("r_c1", str(alive_app.name))
+                if "r_c2" in text:
+                    alive_app2 = choice(alive_apps)
+                    while alive_app2.ID == game.clan.your_cat.ID or alive_app2.ID == cat.ID:
+                        alive_app2 = choice(alive_apps)
+                    text = text.replace("r_c2", str(alive_app2.name))
+                if "r_c3" in text:
+                    alive_app3 = choice(alive_apps)
+                    while alive_app3.ID == game.clan.your_cat.ID or alive_app3.ID == cat.ID:
+                        alive_app3 = choice(alive_apps)
+                    text = text.replace("r_c3", str(alive_app3.name))
             if "r_k" in text:
                 alive_kits = get_alive_kits(Cat)
                 if len(alive_kits) <= 1:

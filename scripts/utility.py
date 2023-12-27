@@ -761,7 +761,7 @@ def change_relationship_values(cats_to: list,
 def get_cluster(trait):
         # Mapping traits to their respective clusters
         trait_to_clusters = {
-            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "vengeful", "competitive", "smug", "impulsive", "noisy"],
+            "assertive": ["troublesome", "fierce", "bold", "daring", "confident", "adventurous", "arrogant", "competitive", "smug", "impulsive", "noisy"],
             "brooding": ["bloodthirsty", "cold", "strict", "vengeful", "grumpy", "bullying", "secretive"],
             "cool": ["charismatic", "sneaky", "cunning", "arrogant", "charming", "manipulative", "leader-like", "passionate"],
             "upstanding": ["righteous", "ambitious", "strict", "competitive", "responsible", "bossy", "know-it-all", "leader-like", "smug"],

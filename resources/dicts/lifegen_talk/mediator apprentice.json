@@ -1179,5 +1179,38 @@
             "Hope you all don't mind!",
             "[You feel like this is the only time you've seen an apprentice that was /thrilled/ to take care of you. It was a pretty nice feeling.]"
         ]
+    ],
+    "neurotic_app4": [
+        [
+            "no_kit",
+            "neurotic",
+            "upstanding",
+            "random_cat"
+        ],
+        [
+            "Gah, stupid, stupid, so stupid, t_c ...",
+            "Wuh - y_c? How long have you been standing there?",
+            "Why was I talking to myself ...?",
+            "*Sigh* It's, like, the dumbest thing ever. t_mn gave me this surprise assessment today, and I totally flunked it!",
+            "How could I have answered that the fastest way to o_cClan is by swimming up to the border? It doesn't even make any sense!",
+            "I just know that t_mn is still laughing at me ... the whole Clan probably is.",
+            "[You tell t_c not to be so hard on themself.]",
+            "But, if I'm not hard on myself, then how will I ever become stronger?",
+            "I refuse to be an embarrassment to my Clan and mentor. I'll pass that assessment next time ... Whatever it takes!"
+        ]
+    ],
+    "neurotic_app2": [
+        [
+            "no_kit",
+            "neurotic",
+            "random_cat",
+            "trust"
+        ],
+        [
+            "[t_c watches tm_n apprehensively from across camp.]",
+            "Do you think tm_n even likes me?",
+            "It seems like, every new skill they try and teach me, I always seem to mess it up somehow ...",
+            "I just hope I'm not making them look like a bad mentor."
+        ]
     ]
 }

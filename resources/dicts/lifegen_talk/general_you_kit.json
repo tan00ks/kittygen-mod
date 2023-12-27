@@ -1770,5 +1770,89 @@
         [
             "[t_c can't help but smile looking at your antics in the nursery.]"
         ]
+    ],
+    "newborn_fromupstanding": [
+        [
+            "newborn",
+            "upstanding",
+            "non-related"
+        ],
+        [
+            "A new kit?",
+            "Hmm ... How will this factor into my twenty-moon plan?",
+            "I suppose they'll be grown in six moons ... I could take them on as my apprentice ... raise them into a strong and capable member of c_nClan ...",
+            "Then, l_n would have to recognize my greatness!",
+            "Just you wait, y_c. You and I are gonna do big things together!"
+        ]
+    ],
+    "newborn_fromcool": [
+        [
+            "newborn",
+            "cool",
+            "non-related"
+        ],
+        [
+            "Wow, is that the most beautiful little kit you've ever seen, or what?",
+            "Sort of reminds me of myself, at that age ... Hah!"
+        ]
+    ],
+    "newborn_fromunabahsed": [
+        [
+            "newborn",
+            "unabashed",
+            "non-related"
+        ],
+        [
+            "Oh, I'm great with kits! Outta the way! Let me see!",
+            "... Haha! Yep, that's a little warrior if I've ever seen one!",
+            "Hello there, little y_c! I can already tell you and me are gonna be fast friends."
+        ]
+    ],
+    "newborn_frombrooding": [
+        [
+            "newborn",
+            "non-related",
+            "dislike"
+        ],
+        [
+            "Hmph. Great. Yet another mouth to feed.",
+            "Whatever ... Not my business, not getting involved."
+        ]
+    ],
+    "newborn_dislike": [
+        [
+            "newborn",
+            "non-related",
+            "dislike",
+            "you_outsiderroots",
+            "you_half-Clan",
+            "you_orphaned",
+            "you_abandoned"
+        ],
+        [
+            "... So, are we just letting anyone into the Clan now, or ...?"
+        ]
+    ],
+    "newborn_introspective": [
+        [
+            "newborn",
+            "introspective"
+        ],
+        [
+            "The miracle of life never ceases to amaze me ...",
+            "So many forces, so many variables, all culminating in perfect harmony to produce one beautiful living, breathing thing.",
+            "Ah, I guess all this is to say ... Welcome to the world, y_c.",
+            "c_nClan's newest little miracle."
+        ]
+    ],
+    "newborn_brooding": [
+        [
+            "newborn",
+            "brooding",
+            "non-related"
+        ],
+        [
+            "Hmph. Anyone who thinks these things are cute must be delusional."
+        ]
     ]
 }

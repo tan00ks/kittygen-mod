@@ -455,7 +455,7 @@
             "Hm. I've been thinking about the role I've chosen, being a queen.",
             "The role of a permanent queen is fairly recent, clan history speaking. Especially in comparison to roles like the medicine cat. And some were less...",
             "Compassionate towards the role we perform, despite its importance.",
-            "Some viewed us as wasting clan resources. A long time ago, the parent of the Queen's role, a cat called Ferncloud, received some... uncomfortable comments from individuals related to her choice.", 
+            "Some viewed us as wasting clan resources. A long time ago, the parent of the Queen's role, a cat called Ferncloud, received some... uncomfortable comments from individuals related to her choice.",
             "However, we do more than sit and play with kits, we help in ways medicine cats cannot. We're formally trained to recognise signs of illness in kits and Queens, and to provide comfort in stressful situations.",
             "I believe our constant presence with the kits helps us to realise something's wrong and get help before... the worst happens.",
             "Just make sure to know that no matter what, everyone has their role to play. Don't be a cat who believes they're more important than those whose role is less flashy."
@@ -1369,10 +1369,94 @@
             "no_kit"
         ],
         [
-            "Watch out y_c!","[You quickly duck out of the way as t_c stumbles past, dragging a few large tree branches. They carefully set the branches down before turning to you.]",
+            "Watch out y_c!",
+            "[You quickly duck out of the way as t_c stumbles past, dragging a few large tree branches. They carefully set the branches down before turning to you.]",
             "Sorry about that! Who knew tree branches could be so heavy? They're super useful though.",
             "Right now, I'm planning on building the kits a little playpen outside the nursery. Of course, they can still roam around camp under supervision, but I thought it would be nice to have. It could help introduce younger kits to life outside the nursery, or provide safe place to put the kits during a meeting.",
             "Whatever the case is, I'm going to need a lot more branches. Want to help out?"
+        ]
+    ],
+    "silly_queen_stares": [
+        [
+            "Any",
+            "silly",
+            "no_kit",
+            "clan_has_kits",
+            "trust"
+        ],
+        [
+            "Something that really bumbles my bees is the stares that certain cats will give me whenever I walk across camp.",
+            "Like, is it because I care for the kits? If they really think that's not a worthwhile job, they can do it themselves and come back and tell me just how easy it is!"
+        ]
+    ],
+    "silly_queen_1": [
+        [
+            "Any",
+            "silly",
+            "no_kit",
+            "clan_has_kits"
+        ],
+        [
+            "I love being a queen, y_c!",
+            "Whenever I have ideas I get to get all the kits involved in them, too.",
+            "Like, yesterday, I had the idea of building a rock fort for the frogs. So I turned it into a nursery competition!",
+            "Whoever made the coolest rock fort as decided by votes got to have a version of it put up by the river.",
+            "r_k won. And now r_w owes me a mouse, hehe."
+        ]
+    ],
+    "silly_queen_fishClan": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "Oh, y_c! Look at you!",
+            "So tiny... so small... like a little fish.",
+            "You better not organize your fish Clan against me!"
+        ]
+    ],
+    "silly_queen_quietkit": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "You're getting bigger, yanno?",
+            "Soon, you're gonna be triple my size! Pretty soon, YOU'RE gonna be the one defending ME from the badgers and big scary predators!",
+            "I'll be good if that's the case. I'll go to bed on time so Quietkit won't get me, but you have to promise the same!"
+        ]
+    ],
+    "silly_queen_stoneclan": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "Have you been playing StoneClan with r_k lately?",
+            "I did see you playing it with them yesterday! It seems like a really fun game, you've gotta teach me someday!"
+        ]
+    ],
+    "silly_queen_kit4": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "y_c! Gather r_k and all of the other kits!",
+            "I came up with this big story game for us all to play. Basically, I have a story, but you kits are all characters in it.",
+            "And you get to decide how it ends! It's a choose-your-own-adventure game that we get to play with our minds!"
+        ]
+    ],
+    "silly_queen_app1": [
+        [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "silly"
+        ],
+        [
+            "y_c, how's it been?",
+            "You're getting so old! I'm really proud of you. I know you got it in ya to do real good things."
         ]
     ]
 }

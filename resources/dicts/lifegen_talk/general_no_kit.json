@@ -9108,6 +9108,56 @@
             "I can't wait until our kits will be old enough to patrol with us. Just imagine it! Me, you, and our kits, all patrolling together out in the territory. Nothing would get in our way!"
         ]
     ],
+    "theystarving_silly": [
+        [
+            "they_starving",
+            "no_kit",
+            "silly",
+            "assertive",
+            "stable",
+            "unabashed",
+            "cool"
+        ],
+        [
+            "Y'know, I heard that if you imagine a meal in vivid enough detail, you can trick your brain into thinking you've eaten!",
+            "Okay, so ... I'm imagining a mouse still warm from the hunting patrol, with super tender flesh.",
+            "Now I'm imagining a ginormous fish shimmering with scales!",
+            "Now, I'm imagining one -- no, two -- no, ten squirrels, topped off with a vole or two, and maybe a sparrow to finish it all off!",
+            "... Man. If anything, all that did was make me even hungrier."
+        ]
+    ],
+    "you_starving_8": [
+        [
+            "you_starving",
+            "no_kit",
+            "introspective",
+            "sweet",
+            "stable",
+            "platonic_like"
+        ],
+        [
+            "[t_c noses a small sparrow towards you.]",
+            "Please, t_c, you have to eat something.",
+            "It's very moving to see your dedication to the Clan during this period of hardship, but no cat can go without forever.",
+            "Your life is not worth any less than the rest of ours. c_nClan needs you healthy.",
+            "Promise me you'll eat it and regain your strength, okay?"
+        ]
+    ],
+    "you_starving_9": [
+        [
+            "you_starving",
+            "no_kit",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "[t_c drops a tiny mouse at your paws and looks away shyly.]",
+            "I know it's not much, but ... the hunting patrol couldn't bring much back. It's all I could manage to save for you.",
+            "What about me?",
+            "[t_c looks away.]",
+            "I ... I'll be fine. Don't worry."
+        ]
+    ],
     "upstanding_they_expecting2": [
         [
             "upstanding",
@@ -9179,6 +9229,445 @@
             "Hey, are you doing alright? I know d_c's death hit you pretty hard...",
             "If you want, I could take you for a walk out in the territory! I think it would do us both some good.",
             "Oh please, tasks around camp can wait! This is much more important, trust me."
+        ]
+    ],
+    "theycondition_gen5": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "random_cat"
+        ],
+        [
+            "[t_c is taking shallow, raspy breaths.]",
+            "[All of a sudden, their chest stops moving ...]",
+            "[... But then, they suck in another breath. You sigh in relief. Though, maybe it'd be best to let r_m know what happened.]"
+        ]
+    ],
+    "theycondition_gen6": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "random_cat",
+            "dead_close"
+        ],
+        [
+            "[In their weakened state, it seems like t_c is hallucinating.]",
+            "Mmf ... What's happening? ...",
+            "d_c ... What are you doing? ...",
+            "[t_c is seeing the faces of StarClan cats! Deciding that this can't be good, you shake t_c awake to make sure they're still conscious.]",
+            "Whuh - y_c?",
+            "I don't know what happened ... d_c was there, and they were telling me that ... It's not my time yet?",
+            "It was a little unnerving ...",
+            "I hope they know what they're talking about."
+        ]
+    ],
+    "theycondition_gen7": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "random_cat",
+            "they_app"
+        ],
+        [
+            "y_c, I am gonna get better ... right?",
+            "I don't wanna go yet. There's still so much I need to do ...",
+            "I haven't even gotten my full name yet."
+        ]
+    ],
+    "theycondition_gen8": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "sibling",
+            "adopted_sibling",
+            "random_cat"
+        ],
+        [
+            "y_c ... If I don't make it out of this, promise to take care of t_p? I don't want them getting too lonely.",
+            "Our family can't fall apart because of this ... It just can't."
+        ]
+    ],
+    "theycondition_gen9": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "from_parent",
+            "from_adopted_parent",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "y_c, listen to me. This is serious.",
+            "I might make it out of this, I might not. But no matter what happens, I need you to remember that I'll always be with you.",
+            "You are my kit, and that's never going to change. I am always going to love you, from here, or from StarClan.",
+            "And no matter what, nothing is ever going to change that."
+        ]
+    ],
+    "theycondition_gen10": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "from_parent",
+            "from_adopted_parent",
+            "random_cat",
+            "platonic_like"
+        ],
+        [
+            "[t_c looks so fragile in this state, so frail.]",
+            "[Your parent is always supposed to take care of you ...]",
+            "[It's not easy, seeing them in this state.]"
+        ]
+    ],
+    "theycondition_gen11": [
+        [
+            "any",
+            "they_ill",
+            "platonic_love"
+        ],
+        [
+            "[t_c's eyelids flutter at the sound of your pawsteps.]",
+            "y_c ...? Is that you ...?",
+            "S-Stay away! ... I don't want you getting sick, too."
+        ]
+    ],
+    "theycondition_gen12": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "random_cat",
+            "platonic_love"
+        ],
+        [
+            "[r_m tells you that t_c has been asleep for days.]",
+            "[But, at the sound of your voice, they instantly rouse from their nest.]",
+            "y_c?",
+            "[A weak smile cracks over their face.]",
+            "Y-You have no idea how good it is to see you."
+        ]
+    ],
+    "theycondition_gen13": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "platonic_love"
+        ],
+        [
+            "[t_c is in the medicine den, their body frail and wracked with shivers.]",
+            "[It's all you can muster not to rush to their side to comfort them.]",
+            "[The heartbreak of seeing them like this is already too much to bear.]"
+        ]
+    ],
+    "theycondition_gen14": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "platonic_love"
+        ],
+        [
+            "[t_c is fast asleep.]",
+            "[You curl up beside them, swearing not to leave their side until they're better.]"
+        ]
+    ],
+    "theycondition_gen15": [
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "from_parent",
+            "from_adopted_parent",
+            "random_cat"
+        ],
+        [
+            "No matter what happens ... I can put my mind at ease knowing that you and t_l will always have each other.",
+            "Take care of one another, if I go. You got that?",
+            "Don't let my loss set our family drifting apart."
+        ]
+    ],
+    "theycondition_gen16": [
+        "any",
+        "they_ill",
+        "they_injured",
+        "platonic_love",
+        [
+            "[t_c is nonresponsive.]",
+            "[You gently lick their ear, hoping that, wherever they are right now, they can sense your closeness.]"
+        ]
+    ],
+    "theycondition_gen17": [
+        "any",
+        "they_ill",
+        "they_injured",
+        "platonic_love",
+        [
+            "[t_c is thin, their body wracked with chills.]",
+            "Augh ... y_c ...",
+            "[You gently groom their pelt, wishing desperately you could take their pain away from them.]"
+        ]
+    ],
+    "brooding_frommate": [
+        [
+            "any",
+            "brooding",
+            "cool",
+            "from_mate"
+        ],
+        [
+            "Y'know ... Before you, I never really got the whole 'mates' thing.",
+            "Just stuck with one cat, for moons and moons on end? It just didn't make sense to me.",
+            "But ... then I met you. And suddenly, I understood.",
+            "No matter how many moons we get together, I still feel like it'd never be enough."
+        ]
+    ],
+    "brooding_frommate1": [
+        [
+            "any",
+            "brooding",
+            "platonic_love"
+        ],
+        [
+            "y_c, when you're around, the whole world seems a little less ...",
+            "Dark."
+        ]
+    ],
+    "brooding_frommate2": [
+        [
+            "any",
+            "brooding",
+            "romantic_like"
+        ],
+        [
+            "[You compliment your mate, t_c, on their pretty eyes.]",
+            "Heh. You really think so?",
+            "I never even noticed my eyes before ...",
+            "[t_c lets loose a rare purr, clearly pleased.]"
+        ]
+    ],
+    "brooding_frommate3": [
+        [
+            "any",
+            "brooding",
+            "from_mate"
+        ],
+        [
+            "I never even noticed how pretty the sunsets are this time of year, until you mentioned you liked them.",
+            "I never cared about the birds in the sky, or the flowers out on the territory, or the smell of the camp after a rain ...",
+            "Knowing you has made my whole world more beautiful, y_c."
+        ]
+    ],
+    "brooding_frommate4": [
+        [
+            "any",
+            "brooding",
+            "platonic_love"
+        ],
+        [
+            "y_c, out of curiosity ... What was your first impression of me?",
+            "I imagine you found me standoffish and rude. Most cats often do.",
+            "But, even so ... You never gave up on me. I'll always remember that.",
+            "No matter what happens, I'll never give up on you, either."
+        ]
+    ],
+    "silly_mentor_grown": [
+        [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "silly",
+            "from_mentor"
+        ],
+        [
+            "Wow, you've grown a lot since you were little.",
+            "Well here soon, you're gonna be double my size! And you're gonna be double as good, too!"
+        ]
+    ],
+    "silly_mentor_practice": [
+        [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "silly",
+            "random_cat",
+            "from_mentor"
+        ],
+        [
+            "How'ya doin, y_c?",
+            "Hm... what do you think of some practice with me and r_w today?",
+            "You can invite r_a too, if you wanna!"
+        ]
+    ],
+    "silly_mentor_perfect": [
+        [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "silly",
+            "random_cat",
+            "from_mentor"
+        ],
+        [
+            "Practice makes perfect, as l_n always says!",
+            "Or for another phrase, \"Can't be the best without knowing the bird's nest!\"",
+            "Well, I don't like that one. How about \"If you don't practice, you'll never...\" uh...",
+            "Normally I'm better at fun phrases! Guess t_c here needs more practice.",
+            "Well dang it, now I'm gonna be thinking about this all day!"
+        ]
+    ],
+    "silly_mentor_duties": [
+        [
+            "apprentice",
+            "silly",
+            "from_mentor"
+        ],
+        [
+            "y_c! Didja remember? Today is apprentice duties day! Everyone has to do apprentice duties all day, even after the sun goes down.",
+            "Hah. No, of course I'm kidding!",
+            "But you still have to clean the elders today. Doesn't sound so bad now, does it?",
+            "[t_c playfully sticks their tongue out at you.]",
+            "Here, I'll even show you this little trick I learned when I was first starting."
+        ]
+    ],
+    "silly_mentor_drama": [
+        [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "silly",
+            "random_cat",
+            "from_mentor"
+        ],
+        [
+            "So how's it been between you and r_a recently?",
+            "C'mon, give me that juicy apprentice drama! It gets so boring when you graduate sometimes. All the stuff there is to worry about is serious stuff.",
+            "[t_c laughs, looking off to the side as if remembering something.]",
+            "I mean, ya can create it, sure. But that feels mean. And also, r_c scares me sometimes."
+        ]
+    ],
+    "silly_mentor_cobwebs": [
+        [
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "silly",
+            "from_mentor",
+            "random_cat"
+        ],
+        [
+            "y_c, I came up with a cool experiment for us to try!",
+            "So, you understand the use of cobwebs, right? They bind wounds.",
+            "What do you think about going into the territory together with r_w and looking for other substances that might also work as binders?",
+            "Then, we'll compare their effects on binding tree sap to, like, a tree or something... sounds fun, right?"
+        ]
+    ],
+    "silly_mentor_war": [
+        [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "silly",
+            "war",
+            "from_mentor"
+        ],
+        [
+            "y_c...",
+            "I, uh... I wanna let you know that I know everything's scary right now.",
+            "Not to mention the... well, everything?",
+            "I dunno! I'm not good at these weird adulty talks. But I wanna let you know that even if no warriors in your life have your back, I do. I might not be good at talking seriously, but I wanna hear what you have to say.",
+            "Here, I gotcha a pebble. It's a fun shape and your favorite color, so it reminded me of you!"
+        ]
+    ],
+    "silly_parent_spikednest": [
+        [
+            "apprentice",
+            "mediator apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "silly",
+            "from_parent"
+        ],
+        [
+            "Ah, y_c, when I was your age- StarClan above, I can't believe I'm saying that, but do ya want to know something funny I did one time?",
+            "Hah- okay, so, I didn't like our deputy. I thought they had this one really bad idea. And I'm not a rebellious cat, but it was REALLY stupid. So I took a bunch of pebbles, the smallest, spikiest pebbles I could find, and I put 'em all in their nest, and then I drew a little heart in the ground with my claws.",
+            "It was stupid and really passive aggressive and I don't think you should do that because it's mean. But I did it, and I thought it was funny when I did it.",
+            "And maybe a little bit scary because they interrogated everyone asking who did it afterwards.",
+            "And I'll give you a pass, but only if d_n turns out to be a tyrannical murderer or something. Okay? Then you can put pebbles in their nest.",
+            "I'll even help you. And then if they find out who it was and target you next, I'll, uh... wait, maybe we should rethink this plan."
+        ]
+    ],
+    "silly_parent_drink": [
+        [
+            "Any",
+            "no_kit",
+            "silly",
+            "from_parent"
+        ],
+        [
+            "y_c, do you think fish drink water?",
+            "Hey! Just because you're my kid doesn't mean I'm smarter than 'ya! You should know that by now! Answer the question!"
+        ]
+    ],
+    "silly_parent_ribbiting": [
+        [
+            "Any",
+            "no_kit",
+            "silly",
+            "from_parent"
+        ],
+        [
+            "Ehe. Hehehe.",
+            "[t_c giggles to themself. You ask your parent what's so amusing.]",
+            "Ah- hehe, well...",
+            "What do you- hehe... give me a moment!",
+            "[While t_c composes themself, giggling incessantly, your mind wanders. How did you get here?]",
+            "Okay. Okay, I'm ready. What do you call a frog with really good nursery stories?",
+            "You- you call the frog... a ribbiting storyteller."
+        ]
+    ],
+    "silly_parent_languages": [
+        [
+            "Any",
+            "silly",
+            "from_parent"
+        ],
+        [
+            "We gotta invent more languages...",
+            "Just one isn't enough to tell you how much I love you!",
+            "Here. I'll even make one up right now.",
+            "Swoopy swabby swimbo...",
+            "[t_c goes on much longer than they probably ever needed to, but that's what you love about them.]",
+            "[Eventually, t_c chokes on their own breath. They quickly recover, though, and their laughter afterwards is nearly as contagious as greencough.]",
+            "Haha! [cough] That- that means I love you. And if you were a little frog I would carry you around everywhere and take you to see all the lily pads in the world."
+        ]
+    ],
+    "silly_parent_murder": [
+        [
+            "Any",
+            "silly",
+            "murder",
+            "random_cat",
+            "from_parent"
+        ],
+        [
+            "[t_c sits down next to you almost the same as they would when everything was normal. However, you can tell it's the same awkward way your parent would sit around any other cat they want to naively give the benefit of the doubt.]",
+            "So, how have you been feeling these days? Been debating why the worms come out early if the early bird always gets the worm?",
+            "I mean, seriously, surely the worms should've put some defense system in place by now...",
+            "[r_c gives the two of you a dirty look from the other side of camp. They scoot a little closer to you, as though they still trust you to care for them. They've always hated picking sides, after all.]"
         ]
     ]
 }

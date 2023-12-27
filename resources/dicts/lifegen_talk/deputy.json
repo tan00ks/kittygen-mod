@@ -1865,5 +1865,84 @@
             "Heh. Spirited little thing!",
             "I might have to be careful, or else y_c just might grow up and take my job! Hehe!"
         ]
+    ],
+    "silly_deputy_plotting": [
+        [
+            "Any",
+            "silly",
+            "random_cat"
+        ],
+        [
+            "Oh, hi y_c! I had a question for you, actually.",
+            "Well... is it mean to send r_c on a border patrol if I know they don't like them?",
+            "They told me I was as helpful as a Twoleg kit chasing prey, and I'm feeling extra petty today."
+        ]
+    ],
+    "silly_deputy_weather": [
+        [
+            "Any",
+            "silly"
+        ],
+        [
+            "Morning, y_c!",
+            "Gah... or \"mourning\". The weather is miserable today, and how likely is anyone else to really want to do anything? I'm gonna have to drag these cats out of their nests by the tips of their tails!",
+            "Or, maybe I'll just let them have a free day today... Yeah, good enough. I'm going back to my nest, then. Nighty!~"
+        ]
+    ],
+    "silly_deputy_timemgmt": [
+        [
+            "Any",
+            "silly"
+        ],
+        [
+            "Oh, sometimes I hate being busy all the time! One minute I have to organize patrols, and the next I have to deal with important c_nClan business, and then go on my own patrols for the day, and who knows what else?",
+            "Seriously! I can barely manage my own day, how does l_n expect me to manage the days of everyone else? If only I had some way to visualize it all...",
+            "Oh! What if I used pebbles to represent every member of the Clan? And then dug small pits in the ground to put them in and visualize what needs to get done? y_c, let's go collect some pebbles!"
+        ]
+    ],
+    "silly_deputy_memory": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "elder",
+            "silly"
+        ],
+        [
+            "y_c, you may not be the one to ask, but how do you keep track of things like Clan politics?",
+            "I don't know how l_n expects me to do it! I don't remember what happened yesterday, let alone three moons ago!"
+        ]
+    ],
+    "silly_deputy_song": [
+        [
+            "Any",
+            "silly",
+            "they_song"
+        ],
+        [
+            "[t_c is singing. When you approach them, they don't stop, continuing to sing their song about being mostly alone in camp. Maybe they can see you... maybe they can't.]",
+            "We're mostly alone in camp, that means we can do anything!",
+            "But I'll probably just sing to myself, and maybe watch that bluebird that comes around sunhigh...",
+            "[t_c finally notices you, flying out of their pelt; they must take after that bluebird more than they thought.]",
+            "Aah- y_c! Did you, uh... need something?"
+        ]
+    ],
+    "silly_deputy_best": [
+        [
+            "apprentice",
+            "silly",
+            "from_mentor",
+            "random_cat"
+        ],
+        [
+            "Hey, y_c!",
+            "Glad to be trained by the best'a the best, huh? Even l_n has to agree, or else I wouldn't be the deputy.",
+            "[You jokingly mention yesterday, when t_c tripped over a log in front of six other cats.]",
+            "Well... almost the best. Right?",
+            "[Then, you mention the time t_c managed the daily patrols poorly and left the camp completely unguarded except for you, them, and l_n.]",
+            "Awh! I didn't know I had a mean apprentice! Whenever did that happen to you?",
+            "[You consider saying \"since the time you got lost and forgot I was with you while training and left me to wander alone until sundown,\" but decide maybe that one's really too mean.]"
+        ]
     ]
 }

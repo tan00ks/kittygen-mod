@@ -455,7 +455,7 @@
             "I'm really starting to get worried ..."
         ]
     ],
-    "brooding_elder": [
+    "brooding_elder111": [
         [
             "Any",
             "brooding",
@@ -1168,6 +1168,155 @@
             "Oh...? Is that mouse for me?",
             "[t_c stares longingly at the prey, eyes dull with hunger.]",
             "No, you take it, young'un. It's not long before I take my place in StarClan, and you need your strength."
+        ]
+    ],
+    "brooding_elder": [
+        [
+            "kitten",
+            "brooding",
+            "neutral",
+            "random_cat"
+        ],
+        [
+            "[You normally like visiting with the older cats in the Clan, but t_c has always scared you a little.]",
+            "[With their torn, scarred pelt and their mean face, they look just like a monster ripped straight out of one of r_q's stories!]"
+        ]
+    ],
+    "brooding_elder1": [
+        [
+            "kitten",
+            "brooding",
+            "dislike",
+            "non-related"
+        ],
+        [
+            "Augh ... Who let the little nuisance into the elder's den again?",
+            "With all the moons I've lived, why should I give a mouse's tail what a runty little kit has to say?"
+        ]
+    ],
+    "brooding_elder2": [
+        [
+            "kitten",
+            "brooding"
+        ],
+        [
+            "What is it, y_c? You want a story?",
+            "Uhm ... You might have a little more luck going elsewhere.",
+            "I don't have many stories. And the ones I do aren't appropriate for kits."
+        ]
+    ],
+    "brooding_elder3": [
+        [
+            "kitten",
+            "brooding",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "[You ask t_c if they have any cool stories from their youth they can tell you.]",
+            "Uhm ... Well, I guess one time, when I was a young warrior, I ripped a c_nClan cat's throat out with my teeth.",
+            "It happened so easily ... It was just like tearing into a piece of prey ... The taste didn't leave my mouth for moons afterwards, and -- Ope.",
+            "[r_q quickly swoops in and hurries you away. Safe to say you won't be going to t_c for any stories anymore.]"
+        ]
+    ],
+    "brooding_elder4": [
+        [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "Growing up fast, huh, y_c?",
+            "Everyone's in such a hurry. Just try and hold onto your innocence as long as you can ... I can guarantee, you'll miss it when it's gone."
+        ]
+    ],
+    "brooding_elder5": [
+        [
+            "no_kit",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "Hmph. My advice to you, y_c: don't ever get old.",
+            "I used to be one of the most valuable warriors in this Clan. Now, everyone just talks about me like I'm obsolete. A nobody.",
+            "My entire life was my purpose to my Clan ... what do I do now that that purpose is over?"
+        ]
+    ],
+    "brooding_elder6": [
+        [
+            "no_kit",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "Hmph. My advice to you, y_c: don't ever get old.",
+            "I used to be one of the most valuable warriors in c_nClan. Now, everyone just talks about me like I'm obsolete. A nobody.",
+            "My entire life was my purpose to my Clan ... what do I do now that that purpose is over?"
+        ]
+    ],
+    "brooding_elder7": [
+        [
+            "no_kit",
+            "brooding",
+            "assertive",
+            "platonic_like"
+        ],
+        [
+            "If a battle ever made its way into c_nClan camp, don't count on me just lazing around the elder's den.",
+            "I still have more than enough fight left in me to defend my Clan, and I'll do it to my last dying breath."
+        ]
+    ],
+    "brooding_elder8": [
+        [
+            "no_kit",
+            "brooding",
+            "neurotic",
+            "introspective",
+            "platonic_love"
+        ],
+        [
+            "[t_c stares at the side of the elder's den resentfully.]",
+            "It's not right, me living this long ...",
+            "All of my loved ones died honorable deaths, warriors' deaths. What was StarClan thinking? Why am I still here, after all these moons?",
+            "Ah ... I'm sorry, t_c. This isn't your battle to fight. It's mine.",
+            "I know StarClan has a plan for me. Still, I just can't stop myself from doubting ...",
+            "It's easy to lose control of your thoughts when you've been around for so long."
+        ]
+    ],
+    "brooding_elder9": [
+        [
+            "Any",
+            "brooding"
+        ],
+        [
+            "*Cough* *Hack*",
+            "... What are you ogling at? Buzz off! Nothing to see here!",
+            "It's just a little cough ... Everybody's looking at me like I'm about to drop dead!"
+        ]
+    ],
+    "brooding_elder10": [
+        [
+            "Any",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "My advice? Try not to let yourself get too attached to anyone.",
+            "There's nothing more dangerous. Makes it way too easy to lose your grip."
+        ]
+    ],
+    "brooding_elder11": [
+        [
+            "Any",
+            "brooding",
+            "platonic_like"
+        ],
+        [
+            "All these young cats milling about ... Politics, drama ... It's all just play to me now.",
+            "When you've been around as long as I have, you start to realize just how little stuff like that matters."
         ]
     ]
 }
