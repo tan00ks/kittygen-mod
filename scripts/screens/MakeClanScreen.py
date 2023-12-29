@@ -408,7 +408,7 @@ class MakeClanScreen(Screens):
             if self.biome_selected == 'Forest':
                 self.selected_camp_tab = randrange(1, 6)
             elif self.biome_selected == "Mountainous":
-                self.selected_camp_tab = randrange(1, 5)
+                self.selected_camp_tab = randrange(1, 6)
             else:
                 self.selected_camp_tab = randrange(1, 4)
             self.refresh_selected_camp()
