@@ -521,8 +521,8 @@ class ProfileScreen(Screens):
                 if not game.switches['request apprentice']:
                     game.switches['request apprentice'] = True
                     self.request_apprentice_button.disable()
-            if event.ui_element == self.change_accessory_button:
-                self.change_screen("accessory screen")
+            # if event.ui_element == self.change_accessory_button:
+            #     self.change_screen("accessory screen")
         # Dangerous Tab
         elif self.open_tab == 'dangerous':
             if event.ui_element == self.kill_cat_button:
@@ -2299,7 +2299,7 @@ class ProfileScreen(Screens):
             self.open_tab = 'your tab'
             self.have_kits_button = None
             self.request_apprentice_button = None
-            self.change_accessory_button = None
+            # self.change_accessory_button = None
             self.update_disabled_buttons_and_text()
 
     def toggle_roles_tab(self):
@@ -2501,16 +2501,16 @@ class ProfileScreen(Screens):
                                                  manager=MANAGER)
                 self.have_kits_button.disable()
                 
-            self.change_accessory_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
-                                                 starting_height=2, object_id="#change_accessory_button",
-                                                 manager=MANAGER)
+            # self.change_accessory_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
+            #                                      starting_height=2, object_id="#change_accessory_button",
+            #                                      manager=MANAGER)
             if self.the_cat.status in ['leader', 'deputy', 'medicine cat', 'mediator', 'queen', 'warrior']:
-                self.request_apprentice_button = UIImageButton(scale(pygame.Rect((804, 1028), (344, 72))), "",
+                self.request_apprentice_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
                                                                tool_tip_text='You will be more likely to recieve an apprentice.',
                                                     starting_height=2, object_id="#request_apprentice_button",
                                                     manager=MANAGER)
             else:
-                self.request_apprentice_button = UIImageButton(scale(pygame.Rect((804, 1028), (344, 72))), "",
+                self.request_apprentice_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
                                                     starting_height=2, 
                                                     tool_tip_text='You will be more likely to recieve an apprentice.', object_id="#request_apprentice_button",
                                                     manager=MANAGER)
@@ -2764,8 +2764,8 @@ class ProfileScreen(Screens):
         elif self.open_tab == 'your tab':
             if self.have_kits_button:
                 self.have_kits_button.kill()
-            if self.change_accessory_button:
-                self.change_accessory_button.kill()
+            # if self.change_accessory_button:
+            #     self.change_accessory_button.kill()
             if self.request_apprentice_button:
                 self.request_apprentice_button.kill()
         elif self.open_tab == 'conditions':
