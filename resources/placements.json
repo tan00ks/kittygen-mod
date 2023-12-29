@@ -911,6 +911,22 @@
         "warrior place": [[[0, 0], "xy"]],
         "elder place": [[[0, 0], "xy"]]
     },
+    "Plainscamp4": {
+        "leader den": [798, 188],
+        "medicine den": [122, 338],
+        "nursery": [1234, 334],
+        "clearing": [720, 589],
+        "apprentice den": [164, 802],
+        "warrior den": [1180, 860],
+        "elder den": [696, 946],
+        "leader place": [[[0, 0], "xy"]],
+        "medicine place": [[[0, 0], "xy"]],
+        "nursery place": [[[0, 0], "xy"]],
+        "clearing place": [[[0, 0], "xy"]],
+        "apprentice place": [[[0, 0], "xy"]],
+        "warrior place": [[[0, 0], "xy"]],
+        "elder place": [[[0, 0], "xy"]]
+    },
     "Beachcamp2": {
         "leader den": [688, 200],
         "medicine den": [210, 400],
