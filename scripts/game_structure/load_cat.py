@@ -106,7 +106,8 @@ def json_load():
                 scars=cat["scars"] if "scars" in cat else [],
                 accessory=cat["accessory"],
                 opacity=cat["opacity"] if "opacity" in cat else 100,
-                accessories=cat["accessories"] if "accessories" in cat else []
+                accessories=cat["accessories"] if "accessories" in cat else [],
+                inventory = cat["inventory"] if "inventory" in cat else []
             )
             
             # Runs a bunch of apperence-related convertion of old stuff. 
@@ -181,7 +182,6 @@ def json_load():
             new_cat.flirted = cat['flirted'] if "flirted" in cat else False
             new_cat.joined_df = cat["joined_df"] if "joined_df" in cat else False
             new_cat.revealed = cat["revealed"] if "revealed" in cat else 0
-            new_cat.inventory = cat["inventory"] if "inventory" in cat else []
             new_cat.revives = cat["revives"] if "revives" in cat else 0
             
             if "died_by" in cat or "scar_event" in cat or "mentor_influence" in cat:

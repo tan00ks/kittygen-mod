@@ -2433,9 +2433,9 @@ class Events:
             return
 
         # check if cat already has acc
-        if cat.pelt.accessory:
-            self.ceremony_accessory = False
-            return
+        # if cat.pelt.accessory:
+        #     self.ceremony_accessory = False
+        #     return
 
         # find other_cat
         other_cat = random.choice(list(Cat.all_cats.values()))

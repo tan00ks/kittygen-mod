@@ -3913,6 +3913,40 @@
             }
         }
     },
+    "#accessories_tab_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/accessories.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/accessories_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/accessories_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/accessories_unavailable.png"
+            }
+        }
+    },
+    "#fav_marker": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/fav_marker.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/fav_marker.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/fav_marker.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/fav_marker.png"
+            }
+        }
+    },
     "#pine_tab": {
         "prototype": "#image_button",
         "images": {

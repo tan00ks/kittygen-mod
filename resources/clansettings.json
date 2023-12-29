@@ -64,6 +64,12 @@
             "Enable auto freshkill",
             "With this setting on, no cat will ever go hungry and hunting patrols will not be needed",
             false
+        ],
+        
+        "all accessories": [
+            "Enable all accessories",
+            "All cats will have all accessories available in their inventory",
+            false
         ]
     },
     "role": {
