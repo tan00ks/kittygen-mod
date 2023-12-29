@@ -4464,7 +4464,6 @@
             "queen's apprentice",
             "queen",
             "brooding",
-            "neutral",
             "platonic_like"
         ],
         [
@@ -4477,8 +4476,7 @@
         [
             "queen's apprentice",
             "brooding",
-            "neutral",
-            "dislike"
+            "neutral"
         ],
         [
             "Anything happens to these kits, and I end you.",
