@@ -64,7 +64,7 @@ class QueenScreen(Screens):
                     self.update_selected_cat()
                     self.change_cat(self.selected_cat)
             elif event.ui_element == self.back_button:
-                self.change_screen('events screen')
+                self.change_screen('profile screen')
             elif event.ui_element == self.next_cat_button:
                 if isinstance(Cat.fetch_cat(self.next_cat), Cat):
                     game.switches['cat'] = self.next_cat
@@ -99,13 +99,13 @@ class QueenScreen(Screens):
 
         if self.the_cat.did_activity:
             self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
-                                                     scale(pygame.Rect((300, 110), (1000, 160))),
-                                                     object_id=get_text_box_theme("#text_box_26_horizcenter"),
+                                                     scale(pygame.Rect((550, 110), (1000, 160))),
+                                                     object_id=get_text_box_theme("#text_box_26"),
                                                      manager=MANAGER)
         else:
             self.heading2 = pygame_gui.elements.UITextBox("Nursery activities can impact a kit's stats.\nStats may affect the kit's future role and personality.",
-                                                     scale(pygame.Rect((300, 110), (1000, 160))),
-                                                     object_id=get_text_box_theme("#text_box_26_horizcenter"),
+                                                     scale(pygame.Rect((550, 110), (1000, 160))),
+                                                     object_id=get_text_box_theme("#text_box_26"),
                                                      manager=MANAGER)
 
         self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((830, 226), (562, 394))),
@@ -133,7 +133,7 @@ class QueenScreen(Screens):
             self.confirm_mentor.disable()
         self.activity_box = pygame_gui.elements.UITextBox("",
                                                      scale(pygame.Rect((200, 420), (600, 400))),
-                                                     object_id=get_text_box_theme("#text_box_26_horizcenter"),
+                                                     object_id=get_text_box_theme("#text_box_26"),
                                                      manager=MANAGER)
         
         self.update_selected_cat()  # Updates the image and details of selected cat
