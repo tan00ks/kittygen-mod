@@ -9391,20 +9391,24 @@
         ]
     ],
     "theycondition_gen16": [
-        "any",
-        "they_ill",
-        "they_injured",
-        "platonic_love",
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "platonic_love"
+        ],
         [
             "[t_c is nonresponsive.]",
             "[You gently lick their ear, hoping that, wherever they are right now, they can sense your closeness.]"
         ]
     ],
     "theycondition_gen17": [
-        "any",
-        "they_ill",
-        "they_injured",
-        "platonic_love",
+        [
+            "any",
+            "they_ill",
+            "they_injured",
+            "platonic_love"
+        ],
         [
             "[t_c is thin, their body wracked with chills.]",
             "Augh ... y_c ...",
