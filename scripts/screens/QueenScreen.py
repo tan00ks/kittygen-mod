@@ -92,6 +92,7 @@ class QueenScreen(Screens):
 
     def screen_switches(self):
         self.the_cat = Cat.all_cats.get(game.switches['cat'])
+        self.activity = "mossball"
         self.heading = pygame_gui.elements.UITextBox(f"{self.the_cat.name}'s Nursery Activities",
                                                      scale(pygame.Rect((300, 50), (1000, 80))),
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
@@ -331,7 +332,7 @@ class QueenScreen(Screens):
         # Behold! The uglest list comprehension ever created! 
         valid_mates = [i for i in Cat.all_cats_list if
                        not i.faded
-                       and i.moons >=1 and i.moons < 6]
+                       and i.moons >=1 and i.moons < 6 and not i.dead and not i.outside]
         
         return valid_mates
 
