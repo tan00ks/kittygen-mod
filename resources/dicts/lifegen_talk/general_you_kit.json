@@ -210,7 +210,8 @@
     "introspective_to_NB_2": [
         [
             "Newborn",
-            "Introspective"
+            "Introspective",
+            "non-related"
         ],
         [
             "Hi, little one. You must be y_c.",
