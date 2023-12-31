@@ -132,9 +132,9 @@ class QueenScreen(Screens):
         self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
         
 
-        self.previous_page_button = UIImageButton(scale(pygame.Rect((330, 1160), (68, 68))), "",
+        self.previous_page_button = UIImageButton(scale(pygame.Rect((310, 1160), (68, 68))), "",
                                                   object_id="#relation_list_previous", manager=MANAGER)
-        self.next_page_button = UIImageButton(scale(pygame.Rect((602, 1160), (68, 68))), "",
+        self.next_page_button = UIImageButton(scale(pygame.Rect((582, 1160), (68, 68))), "",
                                               object_id="#relation_list_next", manager=MANAGER)
 
         self.activity_text = pygame_gui.elements.UITextBox("Activity:",
@@ -238,7 +238,7 @@ class QueenScreen(Screens):
         self.activity_box.kill()
         self.activity_box = pygame_gui.elements.UITextBox(self.adjust_txt(choice(display_events[stat_change])),
                                                      scale(pygame.Rect((200, 420), (600, 400))),
-                                                     object_id=get_text_box_theme("#text_box_26_horizcenter"),
+                                                     object_id=get_text_box_theme("#text_box_26"),
                                                      manager=MANAGER)
         if stat_change == "courage up":
             self.selected_cat.courage += 1
