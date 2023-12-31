@@ -99,17 +99,29 @@ class QueenScreen(Screens):
                                                      scale(pygame.Rect((300, 50), (1000, 80))),
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
+        if game.settings['dark mode']:
+            if self.the_cat.did_activity:
+                self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
+                                                        scale(pygame.Rect((320, 110), (1000, 160))),
+                                                        object_id=get_text_box_theme("#text_box_26"),
+                                                        manager=MANAGER)
+            else:
+                self.heading2 = pygame_gui.elements.UITextBox("Nursery activities can impact a kit's stats.\nStats may affect the kit's future role and personality.",
+                                                        scale(pygame.Rect((320, 110), (1000, 160))),
+                                                        object_id=get_text_box_theme("#text_box_26"),
+                                                        manager=MANAGER)
 
-        if self.the_cat.did_activity:
-            self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
-                                                     scale(pygame.Rect((540, 110), (1000, 160))),
-                                                     object_id=get_text_box_theme("#text_box_26"),
-                                                     manager=MANAGER)
         else:
-            self.heading2 = pygame_gui.elements.UITextBox("Nursery activities can impact a kit's stats.\nStats may affect the kit's future role and personality.",
-                                                     scale(pygame.Rect((540, 110), (1000, 160))),
-                                                     object_id=get_text_box_theme("#text_box_26"),
-                                                     manager=MANAGER)
+            if self.the_cat.did_activity:
+                self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
+                                                        scale(pygame.Rect((530, 110), (1000, 160))),
+                                                        object_id=get_text_box_theme("#text_box_26"),
+                                                        manager=MANAGER)
+            else:
+                self.heading2 = pygame_gui.elements.UITextBox("Nursery activities can impact a kit's stats.\nStats may affect the kit's future role and personality.",
+                                                        scale(pygame.Rect((530, 110), (1000, 160))),
+                                                        object_id=get_text_box_theme("#text_box_26"),
+                                                        manager=MANAGER)
 
         self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((830, 226), (562, 394))),
                                                         pygame.transform.scale(
