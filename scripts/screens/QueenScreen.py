@@ -27,7 +27,9 @@ class QueenScreen(Screens):
     selected_cat = None
     current_page = 1
     list_frame = pygame.transform.scale(image_cache.load_image("resources/images/choosing_frame.png").convert_alpha(),
-                                        (1300 / 1600 * screen_x, 452 / 1400 * screen_y))
+                                        (1300 / 3200 * screen_x, 452 / 1400 * screen_y))
+    queen_art = pygame.transform.scale(image_cache.load_image("resources/images/queenart.png").convert_alpha(),
+                                        (300, 300))
     apprentice_details = {}
     selected_details = {}
     cat_list_buttons = {}
@@ -100,12 +102,12 @@ class QueenScreen(Screens):
 
         if self.the_cat.did_activity:
             self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
-                                                     scale(pygame.Rect((550, 110), (1000, 160))),
+                                                     scale(pygame.Rect((540, 110), (1000, 160))),
                                                      object_id=get_text_box_theme("#text_box_26"),
                                                      manager=MANAGER)
         else:
             self.heading2 = pygame_gui.elements.UITextBox("Nursery activities can impact a kit's stats.\nStats may affect the kit's future role and personality.",
-                                                     scale(pygame.Rect((550, 110), (1000, 160))),
+                                                     scale(pygame.Rect((540, 110), (1000, 160))),
                                                      object_id=get_text_box_theme("#text_box_26"),
                                                      manager=MANAGER)
 
@@ -118,9 +120,9 @@ class QueenScreen(Screens):
         self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
         
 
-        self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1160), (68, 68))), "",
+        self.previous_page_button = UIImageButton(scale(pygame.Rect((330, 1160), (68, 68))), "",
                                                   object_id="#relation_list_previous", manager=MANAGER)
-        self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1160), (68, 68))), "",
+        self.next_page_button = UIImageButton(scale(pygame.Rect((602, 1160), (68, 68))), "",
                                               object_id="#relation_list_next", manager=MANAGER)
 
         self.activity_text = pygame_gui.elements.UITextBox("Activity:",
@@ -321,7 +323,7 @@ class QueenScreen(Screens):
                 scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))),
                 cat.sprite, cat_object=cat, manager=MANAGER)
             pos_x += 120
-            if pos_x >= 1100:
+            if pos_x >= 525:
                 pos_x = 0
                 pos_y += 120
             i += 1
@@ -339,6 +341,7 @@ class QueenScreen(Screens):
     def on_use(self):
         # Due to a bug in pygame, any image with buttons over it must be blited
         screen.blit(self.list_frame, (150 / 1600 * screen_x, 720 / 1400 * screen_y))
+        screen.blit(self.queen_art, (150 / 260 * screen_x, 720 / 1410 * screen_y))
 
     def chunks(self, L, n):
         return [L[x: x + n] for x in range(0, len(L), n)]
