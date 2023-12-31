@@ -32,7 +32,7 @@
     },
     "tell story": {
         "stat_change": ["compassion up", "empathy up", "compassion down", "empathy down"],
-        "compassion up": ["As t_q tells a story about a clan cat who helped others in need, t_k listens intently, eyes wide with admiration."],
+        "compassion up": ["As t_q tells a story about a Clan cat who helped others in need, t_k listens intently, eyes wide with admiration."],
         "empathy up": ["t_q shares a story about forgiveness between rival warring clans and t_k takes the moral of the tale to heart."],
         "compassion down": ["t_q tells a story about the struggle of leafbare, but t_k seems disinterested and dismissive of the struggles depicted."],
         "empathy down": ["As t_q recounts a story about a misunderstood loner, t_k laughs and makes jokes, showing little regard for the character's situation."]

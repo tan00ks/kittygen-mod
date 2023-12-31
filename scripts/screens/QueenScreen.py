@@ -138,7 +138,7 @@ class QueenScreen(Screens):
                                                      scale(pygame.Rect((200, 420), (600, 400))),
                                                      object_id=get_text_box_theme("#text_box_26"),
                                                      manager=MANAGER)
-        
+        self.selected_cat = None
         self.update_selected_cat()  # Updates the image and details of selected cat
         self.update_cat_list()
         # self.update_buttons()

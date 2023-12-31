@@ -375,16 +375,16 @@ class Events:
                     except ValueError:
                         print(f'attempted to remove {acc} from possible acc list, but it was not in the list!')
 
-        if not game.clan.your_cat.inventory:
-            game.clan.your_cat.inventory = []
+        if not game.clan.your_cat.pelt.inventory:
+            game.clan.your_cat.pelt.inventory = []
         acc = random.choice(acc_list)
         counter = 0
-        while acc in game.clan.your_cat.inventory:
+        while acc in game.clan.your_cat.pelt.inventory:
             counter+=1
             if counter == 30:
                 break
             acc = random.choice(acc_list)
-        game.clan.your_cat.inventory.append(acc)
+        game.clan.your_cat.pelt.inventory.append(acc)
         string = f"You found a new accessory, {self.accessory_display_name(acc)}! You choose to store it in a safe place for now."
         game.cur_events_list.insert(0, Single_Event(string, "health"))
 

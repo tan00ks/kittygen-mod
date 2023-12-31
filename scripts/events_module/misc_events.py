@@ -232,9 +232,9 @@ class MiscEvents():
 
         acc = random.choice(acc_list)
         cat.pelt.accessory = acc
-        if not cat.inventory:
-            cat.inventory = []
-        cat.inventory.append(acc)
+        if not cat.pelt.inventory:
+            cat.pelt.inventory = []
+        cat.pelt.inventory.append(acc)
 
     @staticmethod
     def handle_murder_self_reveals(cat):
