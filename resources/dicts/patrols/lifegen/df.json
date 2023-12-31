@@ -14,7 +14,7 @@
             "border",
             "death"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_default",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -51,7 +51,7 @@
         "tags": [
             "training"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_mentor",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -88,7 +88,7 @@
         "tags": [
             "encounter"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -125,7 +125,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -162,7 +162,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_starcat",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -200,7 +200,7 @@
             "border",
             "death"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -238,7 +238,7 @@
             "border",
             "convince_rc"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -276,7 +276,7 @@
             "border",
             "non_lethal"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_friendly",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},
@@ -331,7 +331,7 @@
             "border",
             "convince_rc"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_friendly",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},
@@ -369,7 +369,7 @@
             "border",
             "convince_rc"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_friendly",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},
@@ -412,7 +412,7 @@
             "border",
             "convince_rc"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_default",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},
@@ -450,7 +450,7 @@
             "border",
             "convince_rc"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "df_default",
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {},

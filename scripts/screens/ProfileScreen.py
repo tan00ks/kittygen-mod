@@ -755,6 +755,10 @@ class ProfileScreen(Screens):
 
         self.accessories_tab_button = UIImageButton(scale(pygame.Rect((1152, 1244), (352, 60))), "",
                                                object_id="#accessories_tab_button", starting_height=1, manager=MANAGER)
+        if self.the_cat.moons == 0:
+            self.accessories_tab_button.disable()
+        else:
+            self.accessories_tab_button.enable()
         self.build_profile()
 
         self.hide_menu_buttons()  # Menu buttons don't appear on the profile screen
