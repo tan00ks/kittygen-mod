@@ -425,19 +425,19 @@
         "max_cats": 2,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You're out fishing with r_c when you notice them staring into the dark water with a sad expression on their muzzle.",
+        "intro_text": "You're out fishing with r_c when you notice them staring into the dark water with a sad expression on their face.",
         "decline_text": "You decide it's not your place to be nosy. You respect r_c's boundaries, after all. If it was important, they'd tell you, right?",
         "chance_of_success": 50,
         "success_outcomes": [
             {
-                "text": "You carefully ask r_c what's on their head. They tell you about how they've been feeling worthless lately, and the dark, cloudy weather hasn't been helping. They splash the water in frustration. You give them a soft smile and reassure them of their worth, splashing some water back at them. The moment of sadness turns into a fun water fight.",
+                "text": "You carefully ask r_c what's on their mind. They tell you about how they've been feeling worthless lately, and the dark, cloudy weather hasn't been helping. They splash the water in frustration. You give them a soft smile and reassure them of their worth, splashing some water back at them. The moment of sadness turns into a fun water fight.",
                 "exp": 0,
                 "weight": 20
             }
         ],
         "fail_outcomes": [
             {
-                "text": "You ask r_c what's on their head, but they shrug you off and dismiss their worries, instead telling you to focus on the task at paw. You both go back to fishing in an awkward atmosphere. Does r_c not trust you enough? Are you annoying them...?",
+                "text": "You ask r_c what's on their mind, but they shrug you off and dismiss their worries, instead telling you to focus on the task at paw. You both go back to fishing in an awkward atmosphere. Does r_c not trust you enough? Are you annoying them...?",
                 "exp": 0,
                 "weight": 20
             }
