@@ -3964,6 +3964,57 @@
             }
         }
     },
+    "#quarry_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/quarry_camp.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/quarry_camp_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/quarry_camp_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/quarry_camp_unavailable.png"
+            }
+        }
+    },
+    "#rocky_slope_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/rocky_slope_camp.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/rocky_slope_camp_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/rocky_slope_camp_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/rocky_slope_camp_unavailable.png"
+            }
+        }
+    },
+    "#taiga_camp_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/taiga_camp.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/taiga_camp_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/taiga_camp_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/taiga_camp_unavailable.png"
+            }
+        }
+    },
     "#continue_button_small": {
         "prototype": "#image_button",
         "images": {
