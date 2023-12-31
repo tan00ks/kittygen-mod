@@ -647,8 +647,11 @@ class ProfileScreen(Screens):
             if b_data in b_2data:
                 value = b_2data.index(b_data)
                 n = value
-                if self.accessories_list[n] == self.the_cat.pelt.accessory:
-                    self.the_cat.pelt.accessory = None
+                try:
+                    if self.accessories_list[n] == self.the_cat.pelt.accessory:
+                        self.the_cat.pelt.accessory = None
+                except:
+                    print("ERROR with accessory screen")
                 if self.accessories_list[n] in self.the_cat.pelt.accessories:
                     self.the_cat.pelt.accessories.remove(self.accessories_list[n])
                 else:
@@ -666,9 +669,9 @@ class ProfileScreen(Screens):
                     for a, accessory in enumerate(cat.pelt.inventory[start_index:min(end_index, len(cat.pelt.inventory) + start_index)], start = start_index):
                         try:
                             if accessory in cat.pelt.accessories:
-                                self.accessory_buttons[str(i) + str(randint(0,500))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
+                                self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
                             else:
-                                self.accessory_buttons[str(i) + str(randint(0,500))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#blank_button")
+                                self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#blank_button")
                             if accessory in cat.pelt.plant_accessories:
                                 self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
                             elif accessory in cat.pelt.wild_accessories:
