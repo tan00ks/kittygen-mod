@@ -1,6 +1,6 @@
 [
     {
-        "patrol_id": "gen_your_cat1",
+        "patrol_id": "lifegen_warrior1",
         "biome": [
             "Any"
         ],
@@ -38,7 +38,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat2",
+        "patrol_id": "lifegen_warrior2",
         "biome": [
             "Any"
         ],
@@ -76,7 +76,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat3",
+        "patrol_id": "lifegen_warrior3",
         "biome": [
             "Any"
         ],
@@ -114,7 +114,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat15",
+        "patrol_id": "lifegen_warrior4",
         "biome": [
             "Any"
         ],
@@ -151,7 +151,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat16",
+        "patrol_id": "lifegen_warrior5",
         "biome": [
             "Any"
         ],
@@ -188,7 +188,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat17",
+        "patrol_id": "lifegen_warrior6",
         "biome": [
             "Any"
         ],
@@ -225,7 +225,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat18",
+        "patrol_id": "lifegen_warrior7",
         "biome": [
             "Any"
         ],
@@ -262,7 +262,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat30",
+        "patrol_id": "lifegen_warrior8",
         "biome": [
             "Any"
         ],
@@ -299,7 +299,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat31",
+        "patrol_id": "lifegen_warrior9",
         "biome": [
             "Any"
         ],
@@ -336,7 +336,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat32",
+        "patrol_id": "lifegen_warrior10",
         "biome": [
             "Any"
         ],
@@ -373,7 +373,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat33",
+        "patrol_id": "lifegen_warrior11",
         "biome": [
             "Any"
         ],
@@ -410,7 +410,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat34",
+        "patrol_id": "lifegen_warrior12",
         "biome": [
             "Any"
         ],
@@ -447,7 +447,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat35",
+        "patrol_id": "lifegen_warrior13",
         "biome": [
             "Any"
         ],
@@ -484,7 +484,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat36",
+        "patrol_id": "lifegen_warrior14",
         "biome": [
             "Any"
         ],
@@ -521,7 +521,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat37",
+        "patrol_id": "lifegen_warrior15",
         "biome": [
             "Any"
         ],
@@ -558,7 +558,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat38",
+        "patrol_id": "lifegen_warrior16",
         "biome": [
             "Any"
         ],
@@ -595,7 +595,7 @@
         ]
     },
     {
-        "patrol_id": "gen_your_cat39",
+        "patrol_id": "lifegen_warrior17",
         "biome": [
             "Any"
         ],
@@ -632,7 +632,7 @@
         ]
     },
     {
-        "patrol_id": "lifegen_X",
+        "patrol_id": "lifegen_warrior_18",
         "biome": [
             "Any"
         ],
