@@ -1,5 +1,15 @@
+<strong>v0.6.7: </strong>
+- New dialogue and writing
+- New revival text
+- Accessory screen
+- New accessories
+- Menu art
+- Queen gameplay
+- Lots of new art - patrols/camps/accessories etc
+- Fix bugs
+
 <strong>v0.6.6: </strong>
-- New dialouge
+- New dialogue
 - Adjusted customization screen
 - Randomize cat appearance
 - Preview other ages
