@@ -511,6 +511,9 @@ class Romantic_Events():
     @staticmethod
     def check_if_new_mate(cat_from, cat_to):
         """Checks if the two cats can become mates, or not. Returns: boolean and event_string"""
+        if not cat_from or not cat_to:
+            return False, None
+
         become_mates = False
         young_age = ['newborn', 'kitten', 'adolescent']
         if not cat_from.is_potential_mate(cat_to):

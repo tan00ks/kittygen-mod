@@ -26,7 +26,7 @@ from scripts.event_class import Single_Event
 from .thoughts import Thoughts
 from scripts.cat_relations.inheritance import Inheritance
 from scripts.game_structure.windows import RetireScreen
-
+import uuid
 
 class Cat():
     dead_cats = []
@@ -243,15 +243,7 @@ class Cat():
 
         # setting ID
         if ID is None:
-            potential_id = str(next(Cat.id_iter))
-
-            if game.clan:
-                faded_cats = game.clan.faded_ids
-            else:
-                faded_cats = []
-
-            while potential_id in self.all_cats or potential_id in faded_cats:
-                potential_id = str(next(Cat.id_iter))
+            potential_id = str(uuid.uuid4())
             self.ID = potential_id
         else:
             self.ID = ID
