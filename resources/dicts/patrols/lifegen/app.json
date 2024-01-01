@@ -1065,7 +1065,7 @@
         "min_max_status": {},
         "weight": 20,
         "intro_text": "The medicine cat asks you to collect some more moss for the herb storage.",
-        "decline_text": "Medicine cat duties! No way! Your training to be a warrior!",
+        "decline_text": "Medicine cat duties! No way! You're training to be a warrior!",
         "chance_of_success": 40,
         "success_outcomes": [
             {
