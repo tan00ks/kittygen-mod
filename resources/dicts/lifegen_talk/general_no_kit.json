@@ -10767,7 +10767,8 @@
     "cool_insult": [
         [
             "no_kit",
-            "cool"
+            "cool",
+            "insult"
         ],
         [
             "Tough talk, from a cat with a face like that."
@@ -10777,7 +10778,8 @@
         [
             "no_kit",
             "cool",
-            "brooding"
+            "brooding",
+            "insult"
         ],
         [
             "... *snrk*"
@@ -10787,7 +10789,8 @@
         [
             "no_kit",
             "cool",
-            "unabashed"
+            "unabashed",
+            "insult"
         ],
         [
             "Are you lashing out to compensate for your abnormally large nose?"
