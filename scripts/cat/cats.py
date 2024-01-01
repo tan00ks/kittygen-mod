@@ -243,7 +243,7 @@ class Cat():
 
         # setting ID
         if ID is None:
-            potential_id = str(uuid.uuid4())
+            potential_id = randint(0,50000)
             self.ID = potential_id
         else:
             self.ID = ID
