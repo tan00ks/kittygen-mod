@@ -892,7 +892,10 @@ class TalkScreen(Screens):
             if "t_m" in text:
                 if cat.mate is None or len(cat.mate) == 0 or cat.ID in game.clan.your_cat.mate:
                     return ""
-                text = text.replace("t_m", str(Cat.fetch_cat(choice(cat.mate)).name))
+                mate1 = Cat.fetch_cat(choice(cat.mate))
+                if mate1.outside or mate1.dead:
+                    return ""
+                text = text.replace("t_m", str(mate1.name))
             if "t_k" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""

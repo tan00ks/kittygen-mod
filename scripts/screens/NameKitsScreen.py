@@ -125,7 +125,7 @@ class NameKitsScreen(Screens):
                                                   object_id="#relation_list_previous", manager=MANAGER)
         self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1160), (68, 68))), "",
                                               object_id="#relation_list_next", manager=MANAGER)
-
+        self.selected_cat = None
         self.update_selected_cat()  # Updates the image and details of selected cat
         self.update_cat_list()
         # self.update_buttons()

@@ -1154,5 +1154,25 @@
     "default": "violet harness",
     "plural": "violet harness",
     "singular": "violet harness"
+  },
+  "YELLOWCROWN": {
+    "default": "yellow crown",
+    "plural": "yellow crowns",
+    "singular": "yellow crown"
+  },
+  "REDCROWN": {
+    "default": "red crown",
+    "plural": "red crowns",
+    "singular": "red crown"
+  },
+  "LILYPADCROWN": {
+    "default": "lilypad crown",
+    "plural": "lilypad crowns",
+    "singular": "lilypad crown"
+  },
+  "WOODDRAGON": {
+    "default": "wood dragon",
+    "plural": "wood dragon",
+    "singular": "wood dragon"
   }
 }

@@ -160,6 +160,7 @@ class ProfileScreen(Screens):
         self.clear_accessories = None
         self.previous_page_button = None
         self.next_page_button = None
+        self.accessory_tab_button = None
 
     def handle_event(self, event):
 
@@ -920,6 +921,12 @@ class ProfileScreen(Screens):
         else:
             self.profile_elements["favourite_button"].hide()
             self.profile_elements["not_favourite_button"].show()
+
+        if self.accessory_tab_button:
+            if self.the_cat.moons == 0:
+                self.accessory_tab_button.disable()
+            else:
+                self.accessory_tab_button.enable()
 
         # Determine where the next and previous cat buttons lead
         self.determine_previous_and_next_cat()

@@ -133,7 +133,11 @@ class Sprites():
             #coffee
             'coffee',
 
-            'eragona'
+            'eragona',
+
+            "crowns",
+
+            "wooddragon"
 
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -505,5 +509,13 @@ class Sprites():
         for a, i in enumerate([
             "PINKHARNESS", "MAGENTAHARNESS", "PEACHHARNESS", "VIOLETHARNESS"]):
             self.make_group('eragona', (a, 2), f'collars{i}')
+
+        for a, i in enumerate([
+            "YELLOWCROWN", "REDCROWN", "LILYPADCROWN"]):
+            self.make_group('crowns', (a, 0), f'acc_wild{i}')
+
+        for a, i in enumerate([
+            "WOODDRAGON"]):
+            self.make_group('wooddragon', (a, 0), f'acc_wild{i}')
 # CREATE INSTANCE
 sprites = Sprites()
