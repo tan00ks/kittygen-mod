@@ -7412,6 +7412,22 @@
             "Heh. Look at you, growing up on me."
         ]
     ],
+    "genparent_toadult01": [
+	[
+		"apprentice",
+		"medicine cat apprentice",
+		"queen's apprentice",
+		"mediator apprentice",
+		"from_parent",
+		"adoptive_parent"
+	],
+	[
+		"Here, y_c, let me help you get your favorite prey from the top of the freshkill pi -- oop!",
+		"[t_c stops in their tracks as you stretch to the top of the pile and easily fetch the prey you want.]",
+		"Since when have you been big enough to do that?!",
+		"You better stop growing up so fast, y_c! Or else you're gonna be bigger than me before I know it!"
+	]
+	],
     "sibling_assertive": [
         [
             "no_kit",
