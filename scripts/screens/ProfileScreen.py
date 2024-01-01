@@ -1068,7 +1068,7 @@ class ProfileScreen(Screens):
             self.profile_elements["queen"] = UIImageButton(scale(pygame.Rect(
                 (746, 220), (68, 68))),
                 "",
-                object_id="#mediation_button", manager=MANAGER
+                object_id="#queen_activity_button", manager=MANAGER
             )
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["queen"].disable()
