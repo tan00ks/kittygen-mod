@@ -10344,11 +10344,13 @@
             "cool",
             "silly",
             "unlawful",
-            "unabashed"
+            "unabashed",
+            "random_cat"
         ],
         [
-            "Tch. Seems like practically every cat I talk to these days is all about 'patrols' and 'busywork'.",
-            "Doesn't anyone have anything more interesting to say? We already waste, like, over half our lives doing mindless chores ... Do we have to talk about it in our free time, too?"
+            "Tch. Seems like practically every cat I talk to these days is all about 'patrols' and 'busywork'. Doesn't anyone have anything more interesting to say?",
+            "We already waste, like, over half our lives doing mindless chores ... Do we have to talk about it in our free time, too?",
+            "Why don't we dedicate our precious time to discussing something more meaningful? Like, for example, how patchy r_w's fur is looking lately."
         ]
     ],
     "cool_8": [
@@ -10359,7 +10361,7 @@
             "unabashed"
         ],
         [
-            "[t_c is up before first light, looking bleary eyed and absolutely miserable.",
+            "[t_c is up before first light, looking bleary eyed and absolutely miserable.]",
             "I am going to kill d_n. Like, actually. I'm not even joking.",
             "[Looks like all their moons of weaseling out of morning patrols have finally caught up to them.]"
         ]
@@ -10374,7 +10376,7 @@
         [
             "[t_c stretches out blissfully in a sunbeam ...]",
             "[... In the middle of the clearing, while the rest of the Clan has to avoid tripping over them.]",
-            "Not the most considerate cat, are they?]"
+            "[Not the most considerate cat, are they?]"
         ]
     ],
     "cool_9": [
