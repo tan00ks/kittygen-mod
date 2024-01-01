@@ -3370,5 +3370,60 @@
         [
             "When you're older, I'll show you the BEST spots for spying on the warriors."
         ]
+    ],
+    "cool_kit_1": [
+        [
+            "Any",
+            "cool",
+            "leaffall",
+            "forest"
+        ],
+        [
+            "Hey, y_c! Look, look!",
+            "r_w taught me this!",
+            "[t_c eyes the sky before leaping up at a falling leaf, swatting it from the air with playful glee.]",
+            "[It already seems like t_c is going to be a great hunter!]"
+        ]
+    ],
+    "cool_kit_3": [
+        [
+            "no_kit",
+            "cool",
+            "random_cat"
+        ],
+        [
+            "[The other kits are gathered around t_c, seemingly enthralled at their every word.]",
+            "[They seem to be repeating a story they heard from r_e.]",
+            "... And then, when the first light shone in the morning, there was no trace of the cat ever having been there!",
+            "[For their age, they're shockingly eloquent.]",
+            "[You wonder how that skill will serve them as they grow older.]"
+        ]
+    ],
+    "cool_kit_4": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[t_c is giving a performance in the middle of the clearing, singing and dancing their little heart out.]",
+            "... From once before and now onwards, as a Clan we strive forwards, we push on, and this is the c_nClan cats' soooong!",
+            "[As soon as they finish, seemingly the entire Clan explodes into cheers and applause, praising what a talented young cat t_c is.]",
+            "[t_c is certainly not lacking in supporters!]"
+        ]
+    ],
+    "cool_kit_5": [
+        [
+            "Any",
+            "cool",
+            "brooding",
+            "unlawful",
+            "non-related"
+        ],
+        [
+            "Psh, can you believe some kits still play moss-ball? That game is, like, totally for babies.",
+            "I grew out of moss-ball moons ago. Now, every kit who knows what's what is playing Catch the Mouse.",
+            "What? You still like moss-ball, y_c?",
+            "... You must not be very popular, huh?"
+        ]
     ]
 }

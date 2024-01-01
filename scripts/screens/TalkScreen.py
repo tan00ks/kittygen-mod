@@ -861,6 +861,30 @@ class TalkScreen(Screens):
                 if parent.outside or parent.dead or parent.ID==cat.ID:
                     return ""
                 text = text.replace("y_p", str(parent.name))
+            if "t_p_positive" in text:
+                if len(cat.inheritance.get_parents()) == 0:
+                    return ""
+                parent = Cat.fetch_cat(choice(cat.inheritance.get_parents()))
+                if parent.outside or parent.dead or parent.ID==game.clan.your_cat.ID:
+                    return ""
+                relations = cat.relationships.get(parent.ID)
+                if not relations:
+                    return ""
+                if relations.platonic_like < 10:
+                    return ""
+                text = text.replace("t_p_positive", str(parent.name))
+            if "t_p_negative" in text:
+                if len(cat.inheritance.get_parents()) == 0:
+                    return ""
+                parent = Cat.fetch_cat(choice(cat.inheritance.get_parents()))
+                if parent.outside or parent.dead or parent.ID==game.clan.your_cat.ID:
+                    return ""
+                relations = cat.relationships.get(parent.ID)
+                if not relations:
+                    return ""
+                if relations.dislike < 20:
+                    return ""
+                text = text.replace("t_p_negative", str(parent.name))
             if "t_p" in text:
                 if len(cat.inheritance.get_parents()) == 0:
                     return ""
@@ -896,6 +920,20 @@ class TalkScreen(Screens):
                 if mate1.outside or mate1.dead:
                     return ""
                 text = text.replace("t_m", str(mate1.name))
+            if "t_ka" in text:
+                if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
+                    return ""
+                kit = choice(cat.inheritance.get_children())
+                if kit.moons < 12 or kit.outside or kit.dead:
+                    return ""
+                text = text.replace("t_ka", str(kit.name))
+            if "t_kk" in text:
+                if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
+                    return ""
+                kit = choice(cat.inheritance.get_children())
+                if kit.moons >= 6 or kit.outside or kit.dead:
+                    return ""
+                text = text.replace("t_kk", str(kit.name))
             if "t_k" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""

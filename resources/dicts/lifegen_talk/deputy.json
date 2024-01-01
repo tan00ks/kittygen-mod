@@ -1944,5 +1944,17 @@
             "Awh! I didn't know I had a mean apprentice! Whenever did that happen to you?",
             "[You consider saying \"since the time you got lost and forgot I was with you while training and left me to wander alone until sundown,\" but decide maybe that one's really too mean.]"
         ]
+    ],
+    "cool_5": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[In the middle of a sparring session, t_c instinctively hides their face behind their paws.]",
+            "Gah! Not my beautiful face!",
+            "[In the end, t_c's face comes out untouched ... though, the maneuver did leave many of their vital organs unprotected.]",
+            "[Seems they don't exactly have their priorities in order.]"
+        ]
     ]
 }

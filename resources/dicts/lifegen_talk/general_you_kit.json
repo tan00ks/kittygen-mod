@@ -1855,5 +1855,56 @@
         [
             "Hmph. Anyone who thinks these things are cute must be delusional."
         ]
+    ],
+    "stable_kit_younewborn_1": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Wowza, look at y_c! Aww, they're so tiny, like a miniature version of you, y_p!",
+            "I hope they grow up big and strong.",
+            "Big and strong like me! Maybe strongerer than me... maybe??? No nevermind, I want to be the strongerest!"
+        ]
+    ],
+    "stable_kit_younewborn_2": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Little tiny baby! Little tiny baby! Every kitty in the clan look at this little tiny baby!!!",
+            "[You look up and slowly nod your head along to the strange tune t_c sings.]",
+            "Yippee! See, I can sing! Y_c thinks so! Hey t_s did you see that? HEY! Don't shake your head at me! If y_c thinks I can sing then they must be right!"
+        ]
+    ],
+    "stable_kit_younewborn_3": [
+        [
+            "newborn",
+            "random_cat",
+            "stable"
+        ],
+        [
+            "[t_c trots into the nursery and drops a mossball into the nest.]",
+            "See this, y_c? This is called a mossball and you should remember that! You bat it around with your paws like this, see? And you use it to play really fun games! You're going to love it!",
+            "[r_c snickers and reminds t_c that you're a newborn, far younger than they are and that you probably don't understand a word they said. t_c puffs out their little chest.]",
+            "Well, yeah, I know that! But I thought that maybe they'd like to see one for the first time because then that way they'll like playing games with me!",
+            "[r_c states that it's a nice gesture and lovely thought but maybe y_p wouldn't want their kittens playing with such a big toy until you're a little older. y_p laughs it off and pushes the ball towards t_c and asks if they want to play.]",
+            "Really? YES!",
+            "[You squint as you watch your loving parent paw the ball back and forth, your whiskers twitch eagerly, maybe when you're older this will be a fun game! You will remember this.]"
+        ]
+    ],
+    "stable_kit_younewborn_4": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "... Y'know... I think...",
+            "I think the nursery is going to get a little crowded here with more of us... It will be very noisy when you get a little older and I don't really want that...",
+            "[t_c looks up at r_q and with a blunt expression asks,]",
+            "Can we get rid of it? I don't want it.",
+            "[The queen scolds the kitten for their behaviour and escorts them out of the den to find their parents to tell them. You don't understand what's going on but judging by the glare of the queen- it can't be good...]"
+        ]
     ]
 }

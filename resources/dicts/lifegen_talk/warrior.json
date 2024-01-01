@@ -2636,5 +2636,57 @@
             "There's the talk of the camp! Ferocious y_c.",
             "[t_c boops your nose and giggles when you let out an annoyed meow.]"
         ]
+    ],
+    "cool_5": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[In the middle of a sparring session, t_c instinctively hides their face behind their paws.]",
+            "Gah! Not my beautiful face!",
+            "[In the end, t_c's face comes out untouched ... though, the maneuver did leave many of their vital organs unprotected.]",
+            "[Seems they don't exactly have their priorities in order.]"
+        ]
+    ],
+    "stable_warrior_01": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "y_c, Why is your head drooping? Remember that when you walk to keep you chin up and eyes straight. With you head hanging low it leaves you open to being attacked, and if that were to happen, that would not be good. No! Absolutely not! That would be just terrible!",
+            "So please, for my sake and for the sake of c_nClan, pick yourself up, shake off whatever- this is and get back to work!",
+            "[You watch in confusion as t_c struts away, their head held high. They walk for a while in a strong march but stop midway through the clearing, a look of hesitation on their face. They bolt back and skid to a stop before you.]",
+            "I'm so sorry y_c, I didn't mean to be so harsh! I take it all back, I swear! I just wanted to sound tough but then I felt so bad!",
+            "...Don't get me wrong, the head trick is helpful but obviously when we're out of camp, there's no need to be scared here... Is there?"
+        ]
+    ],
+    "stable_warrior_02": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up.",
+            "I swear to Starclan y_c, you can't just fall asleep in at the camp entrance, heck, what are you even doing here?",
+            "You were chasing a bug and then fell asleep???",
+            "[t_c doesn't look too convinced, their gaze shifting back to a small stick beside you, they frown slightly... Funny, why does your head hurt a little???]",
+            "Yeah... Let's go find r_m..."
+        ]
+    ],
+    "stable_warrior_03": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "Oh! Hey y_c, can I get your advice on something? Please it will only be a moment of your time.",
+            "[You sit beside them and look down at the ferns at their paws. Green, yellow and a darker green.]",
+            "So while I was out on patrol I came across this twoleg nest, on the borders they have them made of wood right, these giant posts. There were strange glittery things that looked like leaves that wound up the wood and I thought that just looked so cool!",
+            "I'm going to decorate my nest a little bit in the same way and I want your advice on what looks best! So which fern?",
+            "[You point to the one of your choice and explain why. t_c's eyes light up.]",
+            "Yes! That's perfect! I love it! Great thinking y_c! Would you like to help me decorate?"
+        ]
     ]
 }

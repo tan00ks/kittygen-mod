@@ -3220,5 +3220,17 @@
         [
             "Hehe, what a teeny guy!"
         ]
+    ],
+    "cool_5": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[In the middle of a sparring session, t_c instinctively hides their face behind their paws.]",
+            "Gah! Not my beautiful face!",
+            "[In the end, t_c's face comes out untouched ... though, the maneuver did leave many of their vital organs unprotected.]",
+            "[Seems they don't exactly have their priorities in order.]"
+        ]
     ]
 }

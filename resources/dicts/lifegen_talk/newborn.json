@@ -430,6 +430,116 @@
             "(They shake their head at you disapprovingly. They have so much to learn...)"
         ]
     ],
+    "stable_newborn_112": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "... ... ...",
+            "Mew... me..."
+        ]
+    ],
+    "stable_newborn_113": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "[You watch curiously as t_c opens their little mouth again and again making a small popping sound. They're so cute!!!]"
+        ]
+    ],
+    "stable_newborn_14": [
+        [
+            "newborn",
+            "littermate",
+            "stable"
+        ],
+        [
+            "Meep!",
+            "[t_c boops your nose as you roll into them.]"
+        ]
+    ],
+    "stable_newborn_15": [
+        [
+            "newborn",
+            "littermate",
+            "stable"
+        ],
+        [
+            "Mraow. Mew?",
+            "[You climb on top of t_c's back and begin to purr as their tiny body settles. The two of you seem comfortable despite the distant yowling of your parents in worry. y_p attempts to separate the two of you.]",
+            "[To their disdain a few moments you both are in the same spot but this time t_c sleeps on your back.]"
+        ]
+    ],
+    "stable_newborn_16": [
+        [
+            "newborn",
+            "littermate",
+            "stable"
+        ],
+        [
+            "[y_p carefully places a moss blanket over you and your littermates. You smile softly as you curl up under the warm coverage. t_c nudges your paw and settles beside you.]",
+            "[Together like this, you're safe. Nothing outside the nursery matters. Not here and now, not while you and t_c are together.]"
+        ]
+    ],
+    "stable_newborn_17": [
+        [
+            "newborn",
+            "littermate",
+            "stable"
+        ],
+        [
+            "Mehehe mew.",
+            "[t_c cheekily giggles as they roll around the nest, you and y_l purr in tiny laughter as you squint watching their little form.]"
+        ]
+    ],
+    "stable_newborn_18": [
+        [
+            "newborn",
+            "littermate",
+            "stable"
+        ],
+        [
+            "MEOW!",
+            "[You flinch back as t_c yowls in your little ear- well there's always one.]"
+        ]
+    ],
+    "stable_newborn_19": [
+        [
+            "newborn",
+            "littermate",
+            "stable"
+        ],
+        [
+            "[You and t_c snuggle together in a pile of feathers that r_q gave y_p as a present. You both smile as you knead the soft texture. t_c seems like their especially enjoying it.]"
+        ]
+    ],
+    "stable_newborn_20": [
+        [
+            "newborn",
+            "littermate",
+            "stable"
+        ],
+        [
+            "Me...",
+            "Wuv...",
+            "... ... ...",
+            "Mew!"
+        ]
+    ],
+    "stable_newborn_21": [
+        [
+            "newborn",
+            "littermate",
+            "stable"
+        ],
+        [
+            "[You curl again y_p and shiver slightly as a cool breeze enters the nursery. Despite their small size, t_c takes notice.]",
+            "Meow!",
+            "[y_p stares in shock at the little kitten who spoke so clearly only to see tiny t_c pointing at you with their little paws. y_p immediately pulls you both closer and purrs loudly.]"
+        ]
+    ],
     "unabashed_newborn": [
         [
             "newborn",
