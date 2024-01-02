@@ -1156,10 +1156,11 @@ class ProfileScreen(Screens):
                     try:
                         output += "\n"
                         output += 'accessories: ' + str(ACC_DISPLAY[the_cat.pelt.accessories[0]]["default"])
+                        if len(the_cat.pelt.accessories) > 1:
+                            output += ' and ' + str(len(the_cat.pelt.accessories) - 1) + ' more'
                     except:
                         print("error with column1")
-            if len(the_cat.pelt.accessories) > 1:
-                output += ' and ' + str(len(the_cat.pelt.accessories) - 1) + ' more'
+
         elif the_cat.pelt.accessory and the_cat.pelt.accessory in the_cat.pelt.accessories:
             output += "\n"
             output += 'accessory: ' + str(ACC_DISPLAY[the_cat.pelt.accessory]["default"])
