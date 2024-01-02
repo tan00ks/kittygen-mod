@@ -913,14 +913,14 @@ class TalkScreen(Screens):
             if "t_ka" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
-                kit = choice(cat.inheritance.get_children())
+                kit = Cat.fetch_cat(choice(cat.inheritance.get_children()))
                 if kit.moons < 12 or kit.outside or kit.dead:
                     return ""
                 text = text.replace("t_ka", str(kit.name))
             if "t_kk" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
-                kit = choice(cat.inheritance.get_children())
+                kit = Cat.fetch_cat(choice(cat.inheritance.get_children()))
                 if kit.moons >= 6 or kit.outside or kit.dead:
                     return ""
                 text = text.replace("t_kk", str(kit.name))
