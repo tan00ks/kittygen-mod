@@ -1156,19 +1156,19 @@
     "singular": "violet harness"
   },
   "YELLOWCROWN": {
-    "default": "yellow crown",
-    "plural": "yellow crowns",
-    "singular": "yellow crown"
+    "default": "dandelion crown",
+    "plural": "dandelion crowns",
+    "singular": "dandelion crown"
   },
   "REDCROWN": {
-    "default": "red crown",
-    "plural": "red crowns",
-    "singular": "red crown"
+    "default": "poppy crown",
+    "plural": "poppy crowns",
+    "singular": "poppy crown"
   },
   "LILYPADCROWN": {
-    "default": "lilypad crown",
-    "plural": "lilypad crowns",
-    "singular": "lilypad crown"
+    "default": "lilypad hat",
+    "plural": "lilypad hats",
+    "singular": "lilypad hat"
   },
   "WOODDRAGON": {
     "default": "wood dragon",
