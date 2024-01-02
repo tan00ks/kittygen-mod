@@ -193,7 +193,7 @@ class ProfileScreen(Screens):
                         else:
                             self.previous_page_button.enable()
                             self.next_page_button.enable()
-                        self.update_disabled_buttons_and_text()
+                    self.update_disabled_buttons_and_text()
                 else:
                     print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.next_cat_button:
@@ -218,7 +218,7 @@ class ProfileScreen(Screens):
                         else:
                             self.previous_page_button.enable()
                             self.next_page_button.enable()
-                        self.update_disabled_buttons_and_text()
+                    self.update_disabled_buttons_and_text()
                 else:
                     print("invalid next cat", self.previous_cat)
             elif event.ui_element == self.inspect_button:
