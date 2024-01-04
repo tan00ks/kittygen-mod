@@ -96,6 +96,7 @@ class ChooseRebornScreen(Screens):
                                                      scale(pygame.Rect((300, 50), (1000, 80))),
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
+        self.selected_cat = None
         # self.info = pygame_gui.elements.UITextBox("If an apprentice is 6 moons old and their mentor is changed, they "
         #                                           "will not be listed as a former apprentice on their old mentor's "
         #                                           "profile. An apprentice's mentor can have an influence on their "
