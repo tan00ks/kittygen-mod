@@ -128,6 +128,23 @@
             }
         }
     },
+    "#queen_activity_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/queen_activity.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/queen_activity_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/queen_activity_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/queen_activity.png"
+            }
+        }
+    },
     "#quit_button": {
         "prototype": "#image_button",
         "images": {

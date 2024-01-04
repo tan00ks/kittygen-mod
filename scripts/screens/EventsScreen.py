@@ -287,6 +287,7 @@ class EventsScreen(Screens):
         # On first open, update display events list
         if not self.first_opened:
             self.first_opened = True
+    
         self.update_display_events_lists()
             
         self.heading = pygame_gui.elements.UITextBox("",
@@ -745,7 +746,22 @@ class EventsScreen(Screens):
         self.health_events = [x for x in (game.other_events_list + game.cur_events_list) if "health" in x.types]
         self.other_clans_events = [x for x in (game.other_events_list + game.cur_events_list) if "other_clans" in x.types]
         self.misc_events = [x for x in (game.other_events_list + game.cur_events_list) if "misc" in x.types]
-        
+
+        if self.event_display_type == "all events":
+            self.display_events = self.all_events
+        elif self.event_display_type == "ceremony events":
+            self.display_events = self.ceremony_events
+        elif self.event_display_type == "birth death events":
+            self.display_events = self.birth_death_events
+        elif self.event_display_type == "relationship events":
+            self.display_events = self.relation_events
+        elif self.event_display_type == "health events":
+            self.display_events = self.health_events
+        elif self.event_display_type == "other clans events":
+            self.display_events = self.other_clans_events
+        elif self.event_display_type == "misc events":
+            self.display_events = self.misc_events
+
         # not_displayed = []
         # for i in game.other_events_list + game.cur_events_list:
         #     if i not in self.all_events and i not in self.ceremony_events and i not in self.birth_death_events and i not in self.relation_events and i not in self.health_events and i not in self.other_clans_events and i not in self.misc_events:

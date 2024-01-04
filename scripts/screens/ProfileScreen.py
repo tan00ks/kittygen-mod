@@ -193,7 +193,7 @@ class ProfileScreen(Screens):
                         else:
                             self.previous_page_button.enable()
                             self.next_page_button.enable()
-                        self.update_disabled_buttons_and_text()
+                    self.update_disabled_buttons_and_text()
                 else:
                     print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.next_cat_button:
@@ -218,7 +218,7 @@ class ProfileScreen(Screens):
                         else:
                             self.previous_page_button.enable()
                             self.next_page_button.enable()
-                        self.update_disabled_buttons_and_text()
+                    self.update_disabled_buttons_and_text()
                 else:
                     print("invalid next cat", self.previous_cat)
             elif event.ui_element == self.inspect_button:
@@ -1068,7 +1068,7 @@ class ProfileScreen(Screens):
             self.profile_elements["queen"] = UIImageButton(scale(pygame.Rect(
                 (746, 220), (68, 68))),
                 "",
-                object_id="#mediation_button", manager=MANAGER
+                object_id="#queen_activity_button", manager=MANAGER
             )
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["queen"].disable()
@@ -1152,10 +1152,15 @@ class ProfileScreen(Screens):
         # ACCESSORY
         if the_cat.pelt.accessories:
             if len(the_cat.pelt.accessories) > 0:
-                output += "\n"
-                output += 'accessories: ' + str(ACC_DISPLAY[the_cat.pelt.accessories[0]]["default"])
-            if len(the_cat.pelt.accessories) > 1:
-                output += ' and ' + str(len(the_cat.pelt.accessories) - 1) + ' more'
+                if the_cat.pelt.accessories[0]:
+                    try:
+                        output += "\n"
+                        output += 'accessories: ' + str(ACC_DISPLAY[the_cat.pelt.accessories[0]]["default"])
+                        if len(the_cat.pelt.accessories) > 1:
+                            output += ' and ' + str(len(the_cat.pelt.accessories) - 1) + ' more'
+                    except:
+                        print("error with column1")
+
         elif the_cat.pelt.accessory and the_cat.pelt.accessory in the_cat.pelt.accessories:
             output += "\n"
             output += 'accessory: ' + str(ACC_DISPLAY[the_cat.pelt.accessory]["default"])

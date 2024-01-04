@@ -7931,7 +7931,7 @@
             "random_cat"
         ],
         [
-            "[t_c watches r_c and r_w laugh together a little ways away, apparently too nervous to join in the conversation.]",
+            "[t_c watches r_c1 and r_c2 laugh together a little ways away, apparently too nervous to join in the conversation.]",
             "[You decide to leave the poor cat alone.]"
         ]
     ],
@@ -10441,7 +10441,7 @@
             "[You catch t_c in an off-limits area of camp that you had no idea they even knew about.]",
             "Hm? Oh, hey, y_c. Say, did you know there's a secret tunnel in the back of the warriors' den that leads straight to this part of camp?",
             "Oh, don't look so worried. Relax! I've known about the tunnel for moons, and everyone's been fine.",
-            "Say, you don't think t_c's afraid of spiders, do you?",
+            "Say, you don't think r_c's afraid of spiders, do you?",
             "What! It's a totally unrelated question! Hehehe."
         ]
     ],
