@@ -3067,7 +3067,7 @@ class Cat():
 class Personality():
     """Hold personality information for a cat, and functions to deal with it """
     facet_types = ["lawfulness", "sociability", "aggression", "stability"]
-    facet_range = [0, 16]
+    facet_range = [0, 15]
     
     with open("resources/dicts/traits/trait_ranges.json", "r") as read_file:
         trait_ranges = ujson.loads(read_file.read())
