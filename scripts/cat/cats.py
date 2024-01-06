@@ -243,7 +243,15 @@ class Cat():
 
         # setting ID
         if ID is None:
-            potential_id = str(randint(0,500000))
+            potential_id = str(next(Cat.id_iter))
+
+            if game.clan:
+                faded_cats = game.clan.faded_ids
+            else:
+                faded_cats = []
+
+            while potential_id in self.all_cats or potential_id in faded_cats:
+                potential_id = str(next(Cat.id_iter))
             self.ID = potential_id
         else:
             self.ID = ID
@@ -1288,12 +1296,15 @@ class Cat():
 
     def one_moon(self):
         """Handles a moon skip for an alive cat. """
-        
+        if self.status == "kitten" and self.moons > 5:
+            print("something's wrong")
         
         old_age = self.age
         self.moons += 1
         if self.moons == 1 and self.status == "newborn":
             self.status = 'kitten'
+        elif self.moons == 0 and self.status == "kitten":
+            self.status = 'newborn'
         self.in_camp = 1
         
         if self.exiled or self.outside:
@@ -2811,7 +2822,8 @@ class Cat():
             with open(get_save_dir() + '/' + game.switches['clan_list'][0] + '/faded_cats/' + cat + ".json",
                       'r') as read_file:
                 cat_info = ujson.loads(read_file.read())
-        except:
+        except Exception as e:
+            print(e)
             print("ERROR: in loading faded cat")
             return False
 

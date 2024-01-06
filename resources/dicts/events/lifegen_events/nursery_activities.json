@@ -20,7 +20,7 @@
         "stat_change": ["intelligence down", "intelligence up", "compassion up", "compassion down"],
         "intelligence down": ["t_q tries to teach t_k about the dangers of eating herbs without consulting the medicine cat. They seem more engrossed in playing with a feather instead."],
         "intelligence up": ["During t_q's lecture on clan history, t_k is completely engrossed, asking insightful questions that t_q tries their best to answer."],
-        "compassion up": ["t_q lectures t_k about the different roles in the Clan and t_q answers every question in the pop quiz correctly."],
+        "compassion up": ["t_q lectures t_k about the different roles in the Clan and t_k answers every question in the pop quiz correctly."],
         "compassion down": ["t_q lectures t_k about times of hardship in Clan history, but the kit appears completely indifferent."]
     },
     "playfight": {

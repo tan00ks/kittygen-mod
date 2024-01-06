@@ -382,7 +382,7 @@ class Condition_Events():
             "BOTHBLIND": ["blind"],
             "RATBITE": ["weak leg"]
         }
-
+        
         scarless_conditions = [
             "weak leg", "paralyzed", "raspy lungs", "wasting disease", "blind", "failing eyesight", "one bad eye",
             "partial hearing loss", "deaf", "constant joint pain", "constantly dizzy", "recurring shock",

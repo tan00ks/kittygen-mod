@@ -298,7 +298,7 @@ class QueenScreen(Screens):
 
     def update_cat_list(self):
         """Updates the cat sprite buttons. """
-        valid_mentors = self.chunks(self.get_valid_cats(), 30)
+        valid_mentors = self.chunks(self.get_valid_cats(), 15)
 
         # If the number of pages becomes smaller than the number of our current page, set
         #   the current page to the last page

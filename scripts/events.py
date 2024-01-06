@@ -32,7 +32,7 @@ from scripts.event_class import Single_Event
 from scripts.game_structure.game_essentials import game
 from scripts.cat_relations.relationship import Relationship
 from scripts.utility import get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats, ceremony_text_adjust, \
-    get_current_season, adjust_list_text, ongoing_event_text_adjust, event_text_adjust, create_new_cat
+    get_current_season, adjust_list_text, ongoing_event_text_adjust, event_text_adjust, create_new_cat, create_outside_cat
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
 from scripts.game_structure.windows import SaveError
@@ -595,6 +595,7 @@ class Events:
         num_siblings = random.choice([0,1,2,3])
         siblings, sibling_text = self.create_siblings(num_siblings)
         birth_type = random.randint(1,7)
+        birth_type = 1
         if birth_type == 1:
             game.clan.your_cat.backstory = random.choice(["abandoned1", "abandoned2", "abandoned3", "abandoned4", "orphaned1", "orphaned2", "orphaned3", "orphaned4", "orphaned5", "orphaned6"])
             return self.handle_birth_no_parents(siblings, sibling_text)
@@ -610,13 +611,14 @@ class Events:
 
     def handle_birth_no_parents(self, siblings, sibling_text):
         thought = "Is happy their kits are safe"
-        blood_parent = create_new_cat(Cat, Relationship,
+        
+        if random.randint(1,2) == 1 and not siblings:
+            blood_parent = create_new_cat(Cat, Relationship,
                                         status='warrior',
                                         alive=True,
                                         thought=thought,
                                         age=random.randint(15,120),
                                         backstory=random.choice(["kittypet1", "kittypet2", "kittypet3", "kittypet4", "refugee3", "loner1", "loner2", "tragedy_survivor3", "guided1", "rogue1", "rogue2", "rogue3", "refugee4", "tragedy_survivor2", "guided2", "refugee5"]))[0]
-        if random.randint(1,2) == 1 and not siblings:
             game.clan.add_to_clan(blood_parent)
             game.clan.your_cat.parent1 = blood_parent.ID
             game.clan.your_cat.create_inheritance_new_cat()
@@ -625,7 +627,8 @@ class Events:
             game.clan.your_cat.backstory = "outsider_roots2"
             return self.set_birth_text("birth_parent_outsider", {"y_c": game.clan.your_cat.name, "parent1": blood_parent.name})
         else:
-            blood_parent.outside = True
+            blood_parent = create_outside_cat(Cat, "loner", random.choice(["kittypet1", "kittypet2", "kittypet3", "kittypet4", "refugee3", "loner1", "loner2", "tragedy_survivor3", "guided1", "rogue1", "rogue2", "rogue3", "refugee4", "tragedy_survivor2", "guided2", "refugee5"]), False, thought)
+            blood_parent.thought = thought
             game.clan.add_to_unknown(blood_parent)
         if siblings:
             self.add_siblings_and_inheritance(siblings, blood_parent=blood_parent)
@@ -916,6 +919,9 @@ class Events:
         status = game.clan.your_cat.status
         if game.clan.your_cat.status == 'elder' and game.clan.your_cat.moons < 100:
             status = "young elder"
+            with open(f"{resource_dir}{status}.json",
+                  encoding="ascii") as read_file:
+                all_events = ujson.loads(read_file.read())
 
         possible_events = all_events[f"{status} general"]
 
@@ -969,7 +975,10 @@ class Events:
             ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony no mentor'])
         ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
         ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
-        ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+        try:
+            ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+        except:
+            ceremony_txt = ceremony_txt.replace('c_l', "a cat")
         if game.clan.your_cat.mentor:
             ceremony_txt = ceremony_txt.replace('m_n', str(Cat.all_cats[game.clan.your_cat.mentor].name))
         game.cur_events_list.append(Single_Event(ceremony_txt))
@@ -985,7 +994,12 @@ class Events:
         
         ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
         ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
-        ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+
+        try:
+            ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+            ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.deputy.name))
+        except:
+            ceremony_txt = ceremony_txt.replace('c_l', "a cat")
 
         random_honor = None
         resource_dir = "resources/dicts/events/ceremonies/"
@@ -1004,7 +1018,10 @@ class Events:
         ceremony_txt = random.choice(self.b_txt['elder_ceremony'])
         ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
         ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
-        ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+        try:
+            ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+        except:
+            ceremony_txt = ceremony_txt.replace('c_l', "a cat")
         game.cur_events_list.append(Single_Event(ceremony_txt))
     
     

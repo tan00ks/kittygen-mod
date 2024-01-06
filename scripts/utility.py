@@ -526,7 +526,7 @@ def create_outside_cat(Cat, status, backstory, alive=True, thought=None):
     game.clan.add_to_outside(new_cat)
     name = str(name + suffix)
 
-    return name
+    return new_cat
 
 
 # ---------------------------------------------------------------------------- #

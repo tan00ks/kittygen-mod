@@ -119,6 +119,7 @@ class MakeClanScreen(Screens):
         self.adolescent_pose = 0
         self.adult_pose = 0
         self.elder_pose = 0
+        game.choose_cats = {}
 
         # Buttons that appear on every screen.
         self.menu_warning = pygame_gui.elements.UITextBox(
@@ -1126,7 +1127,7 @@ class MakeClanScreen(Screens):
             adult_sprite=self.adult_pose if self.adult_pose > 2 else self.adult_pose + 6,
             senior_sprite=self.elder_pose if self.elder_pose > 2 else self.elder_pose + 12,
             reverse=self.reverse,
-            accessories=[self.accessory]
+            accessories=[self.accessory] if self.accessory else []
         )
         if self.length == 'long' and self.adult_pose < 9:
             pelt2.cat_sprites['young adult'] = self.adult_pose + 9
@@ -1482,7 +1483,7 @@ class MakeClanScreen(Screens):
                     self.adolescent_pose = int(event.text)
                     self.update_sprite()
                 elif event.ui_element == self.elements['adult pose']:
-                    if self.length == 'short':
+                    if self.length in ['short', 'medium']:
                         self.adult_pose = int(event.text)
                     elif self.length == 'long':
                         self.adult_pose = int(event.text)
@@ -1674,7 +1675,7 @@ class MakeClanScreen(Screens):
             adult_sprite=self.adult_pose if self.adult_pose > 2 else self.adult_pose + 6,
             senior_sprite=self.elder_pose if self.elder_pose > 2 else self.elder_pose + 12,
             reverse=self.reverse,
-            accessories=[self.accessory]
+            accessories=[self.accessory] if self.accessory else []
         )
         if self.length == 'long' and self.adult_pose < 9:
             pelt2.cat_sprites['young adult'] = self.adult_pose + 9
