@@ -23,6 +23,62 @@
             "I'm not a kit anymore, I know how to do it myself!"
         ]
     ],
+ "assertivewarrior_mediatorapp1": [
+        [
+            "Any",
+            "from_adopted_kit",
+            "from_kit",
+            "platonic_like",
+            "assertive"
+        ],
+        [
+            "[Seeing the bold, daring, fierce cat that t_c has grown into fills your heart with pride.]",
+            "[Could they really have been your kit in the nursery a few moons ago?]"
+        ]
+    ],
+"assertive_tokit5": [
+        [
+            "kitten",
+            "dislike",
+            "assertive",
+            "cool",
+            "unlawful",
+            "non-related"
+        ],
+        [
+            "Hey, mouse-brain! Watch where you're going!",
+            "Wait, I recognize you. You're one of the new kits, right? Shouldn't you be in the nursery?",
+            "Hmph. Whatever. Just stay outta the real warriors' way, before someone squishes you."
+        ]
+    ],
+"assertive_15": [
+        [
+            "elder",
+            "assertive",
+            "cool",
+            "silly",
+            "unlawful",
+            "platonic_like"
+        ],
+        [
+            "Hey, furbag. I brought you something!",
+            "[r_c lays a colorful feather at your paws.]",
+            "I know this is your favorite color, and you miss exploring the territory. So I knew I just had to bring it to you.",
+            "Yeah, yeah, don't get all soft on me, hehe. Wanna grab a meal together?"
+        ]
+    ],
+	"assertivewarrior_mediatorapp": [
+        [
+            "mediator apprentice",
+            "assertive",
+		"they_older"
+        ],
+        [
+            "Man, you're insightful for an apprentice, y_c!",
+            "When I was your age, all I thought about was smashing stuff and chasing after my crushes. But now, here you are! Sorting out problems with cats who've been around ten times longer than you!",
+            "That must take a lot of discipline. The whole clan is proud of you!"
+        ]
+    ],
     "insult_1": [
         [
             "Any",
@@ -56,22 +112,7 @@
             "[Maybe now is not a good time.]"
         ]
     ],
-    "assertive_elder_7": [
-        [
-            "elder",
-            "assertive",
-            "cool",
-            "silly",
-            "unlawful",
-            "platonic_like"
-        ],
-        [
-            "Hey, furbag. I brought you something!",
-            "[r_c lays a colorful feather at your paws.]",
-            "I know this is your favorite color, and you miss exploring the territory. So I knew I just had to bring it to you.",
-            "Yeah, yeah, don't get all soft on me, hehe. Wanna grab a meal together?"
-        ]
-    ],
+   
     "assertive_rom4": [
         [
             "Any",
@@ -87,22 +128,7 @@
             "[The blush on t_c's cheeks confirms that, yes, they did mean it in that way. And they're doing a terrible job of hiding it.]"
         ]
     ],
-    "assertive_elder_25": [
-        [
-            "leader",
-            "deputy",
-            "assertive",
-            "platonic_like",
-            "trust",
-            "comfort"
-        ],
-        [
-            "Hey, you've been looking stressed lately. Want to take a little walk to unwind?",
-            "You don't need to take everything so seriously, y_c. Relax! Sure, you're clan leadership, but that doesn't mean you're not allowed to have a little fun every once in a while.",
-            "Now, c'mon. Let's go for a little stroll by the water. I know you need it!",
-            "The clan will still be here when we get back."
-        ]
-    ],
+    
     "assertive_love1": [
         [
             "Any",
@@ -114,6 +140,71 @@
             "I love you, y_c.",
             "And ... I'm sorry if I don't say it enough, either.",
             "Without you, I don't know what I'd do."
+        ]
+    ],
+"assertive_elder_25": [
+        [
+            "leader",
+            "deputy",
+            "assertive",
+            "platonic_like"
+        ],
+        [
+            "Hey, you've been looking stressed lately. Want to take a little walk to unwind?",
+            "You don't need to take everything so seriously, y_c. Relax! Sure, you're clan leadership, but that doesn't mean you're not allowed to have a little fun every once in a while.",
+            "Now, c'mon. Let's go for a little stroll by the water. I know you need it!",
+            "The clan will still be here when we get back."
+        ]
+    ],
+	 "assertive_warrior_or_elder_1": [
+        [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "platonic_like",
+            "assertive",
+            "sweet",
+            "you_introspective",
+            "you_neurotic",
+            "you_brooding",
+            "you_upstanding",
+		"they_older"
+        ],
+        [
+            "You're so insightful for your age, y_c!",
+            "I wish I were as smart as you when I was an apprentice ... it might've saved me a lot of trouble! Heh."
+        ]
+    ],
+	  "assertive_warrior_or_elder1": [
+        [
+            "apprentice",
+		"medicine cat apprentice",
+		"mediator apprentice",
+		"queen's apprentice",
+            "assertive",
+            "cool",
+            "silly",
+		"they_older"
+        ],
+        [
+            "Working hard, y_c? Or, is it more like hardly working? Hehe.",
+            "Y'know, it's good to contribute to the clan, but make sure you take some time to grow up, too. Working isn't everything. Now's the time for you to get out and explore!",
+            "*Sigh* I sorta miss those days myself ..."
+        ]
+    ],
+"assertive_mediatorapp3": [
+        [
+            "mediator apprentice",
+            "assertive",
+            "unabashed",
+            "brooding"
+        ],
+        [
+            "y_c, I think that peace is a noble pursuit, and all, but don't you think that there's some cases where conflict is necessary?",
+            "What about standing up for what's right? What about fighting for justice and fairness? You're still just an apprentice. You have a lot to learn about clan life.",
+            "And, from what I've learned, sometimes the true only way to settle a dispute is with teeth and claws.",
+            "No matter what your mentor might tell you."
         ]
     ],
     "assertive_leafbare1": [
