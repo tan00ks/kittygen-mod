@@ -11,6 +11,18 @@
             "Must ... escape ... camp ..."
         ]
     ],
+"assertive_parent4_6": [
+        [
+            "from_adopted_kit",
+            "from_your_kit",
+            "Any",
+            "assertive"
+        ],
+        [
+            "Hehe, quit trying to fix my fur, y_c!",
+            "I'm not a kit anymore, I know how to do it myself!"
+        ]
+    ],
     "insult_1": [
         [
             "Any",
