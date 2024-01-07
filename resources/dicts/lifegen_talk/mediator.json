@@ -669,10 +669,8 @@
     ],
     "assertivemediator_5_3": [
         [
-            "from_mentor",
-            "mediator apprentice",
+            "Any",
             "assertive",
-            "leaffall",
             "random_cat"
         ],
         [
