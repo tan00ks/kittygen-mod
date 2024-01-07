@@ -411,8 +411,8 @@ class Condition_Events():
                 except KeyError:
                     print(f"WARNING: {injury_name} couldn't be found in injury dict! no permanent condition was given")
                     return perm_condition
-            else:
-                print(f"WARNING: {scar} for {injury_name} is either None or is not in scar_to_condition dict.")
+            # else:
+            #     print(f"WARNING: {scar} for {injury_name} is either None or is not in scar_to_condition dict.")
 
         elif condition is not None:
             perm_condition = condition

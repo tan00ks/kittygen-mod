@@ -321,7 +321,6 @@ class Thoughts():
             chosen_thought = choice(chosen_thought_group["thoughts"])
         except Exception:
             traceback.print_exc()
-            print("cat:" + main_cat.ID + str(main_cat.name))
             chosen_thought = "Prrrp! You shouldn't see this! Report as a bug."
 
         return chosen_thought
