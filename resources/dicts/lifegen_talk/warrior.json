@@ -2483,9 +2483,11 @@
             "stable"
         ],
         [
-            "y_c, Why is your head drooping? Remember that when you walk to keep you chin up and eyes straight. With you head hanging low it leaves you open to being attacked, and if that were to happen, that would not be good. No! Absolutely not! That would be just terrible!",
+            "y_c, Why is your head drooping? Remember that when you walk to keep you chin up and eyes straight.",
+            "With you head hanging low it leaves you open to attack, and if that were to happen, that would not be good. No! Absolutely not! That would be just terrible!",
             "So please, for my sake and for the sake of c_nClan, pick yourself up, shake off whatever- this is and get back to work!",
-            "[You watch in confusion as t_c struts away, their head held high. They walk for a while in a strong march but stop midway through the clearing, a look of hesitation on their face. They bolt back and skid to a stop before you.]",
+            "[You watch in confusion as t_c struts away, their head held high.]",
+            "[They walk for a while in a strong march but stop midway through the clearing, a look of hesitation on their face. They bolt back and skid to a stop before you.]",
             "I'm so sorry y_c, I didn't mean to be so harsh! I take it all back, I swear! I just wanted to sound tough but then I felt so bad!",
             "...Don't get me wrong, the head trick is helpful but obviously when we're out of camp, there's no need to be scared here... Is there?"
         ]
