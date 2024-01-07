@@ -450,9 +450,9 @@
     ],
     "assertivewarrior_mediatorapp1": [
         [
-            "kitten",
+            "Any",
             "from_adopted_kit",
-            "from_kit",
+            "from_your_kit",
             "platonic_like"
         ],
         [
@@ -460,32 +460,7 @@
             "[The sight of them standing alongside l_n fills your heart with pride!]"
         ]
     ],
-    "assertivewarrior_mediatorapp1_2": [
-        [
-            "kitten",
-            "from_adopted_kit",
-            "from_kit",
-            "platonic_like",
-            "assertive"
-        ],
-        [
-            "[Seeing the bold, daring, fierce cat that t_c has grown into fills your heart with pride.]",
-            "[Could they really have been your kit in the nursery a few moons ago?]"
-        ]
-    ],
-    "assertive_parent4_4": [
-        [
-            "from_adopted_kit",
-            "from_kit",
-            "from_kit",
-            "kitten",
-            "assertive"
-        ],
-        [
-            "Hehe, quit trying to fix my fur, y_c!",
-            "I'm not a kit anymore, I know how to do it myself!"
-        ]
-    ],
+    
     "assertivewarrior_mediatorapp1_3": [
         [
             "mediator apprentice",
@@ -532,50 +507,7 @@
             "Hmph. Whatever. Just stay outta the real warriors' way, before someone squishes you."
         ]
     ],
-    "assertive_4": [
-        [
-            "kitten",
-            "assertive"
-        ],
-        [
-            "Whoa! Watch where you're going there, little pal! One wrong move, and you might get stepped on!",
-            "Ah, quit that, you don't need to apologize. Just be a bit more careful from now on, is all.",
-            "Or else, when you get bigger, it'll really become a problem. Hehe!"
-        ]
-    ],
-    "assertive_tokit": [
-        [
-            "kitten",
-            "assertive",
-            "unlawful"
-        ],
-        [
-            "Ah, y_c! There's the little bruiser! How're you doing? Growing up big and strong?",
-            "Y'know, at your age, I used to get into all sorts of trouble. Sneaking out of the nursery, following around the apprentices ... not to give you any ideas, or anything. Ahaha!",
-            "t_c's laugh is so loud that it almost shakes your whole body.]"
-        ]
-    ],
-    "assertive_tonewborn": [
-        [
-            "newborn",
-            "assertive"
-        ],
-        [
-            "Whoa! Hey there, little guy! Shouldn't you be in the nursery?",
-            "Hehe. You've got an adventurous spirit. I like that about you.",
-            "But for now, you gotta stay where it's safe! C'mon. Let's go back to your parents."
-        ]
-    ],
-    "assertive_tonewborn1": [
-        [
-            "newborn",
-            "assertive"
-        ],
-        [
-            "Aw ... little guy hasn't even gotten their eyes open yet!",
-            "They're gonna be a killer, though. I can already tell. See those little paws? This kit's got fight in 'em!"
-        ]
-    ],
+   
     "assertive_tonewborn3": [
         [
             "newborn",
@@ -589,31 +521,12 @@
             "Hm ..."
         ]
     ],
-    "assertive_1": [
-        [
-            "Any",
-            "assertive",
-            "stable",
-            "upstanding",
-            "unabashed"
-        ],
-        [
-            "HEY!!! You leave them alone!",
-            "Ugh. Can you believe how cruel some cats are, y_c? A bunch of apprentices were trying to convince these two kits to sneak into a badger den ... what a bunch of mouse-brains.",
-            "No matter what, don't let anyone try to pressure you into doing something you don't think is right. Go with your gut, and stick to your own values. That's what's really important."
-        ]
-    ],
     "assertive_1_2": [
         [
             "Any",
             "assertive",
             "cool",
-            "they_clanfounder",
             "they_clanborn",
-            "they_outsiderroots",
-            "they_half-Clan",
-            "they_orphaned",
-            "they_abandoned",
             "newleaf",
             "greenleaf",
             "leaffall"
