@@ -417,5 +417,23 @@
             "There, you're all done.",
             "... Have fun!"
         ]
-    ]
+    ],
+    "meddy_crush":  [
+	[
+	    "medicine cat",
+        "medicine cat apprentice",
+		"assertive",
+        "silly",
+        "cool",
+        "sweet",
+        "stable",
+        "upstanding"
+	],
+	[
+		“Is it just me, or has your_crush been coming into the medicine den an awful lot lately?”,
+		“What? I’m just saying! I’ve seen the way they look at you!”,
+		“Not like they’re exactly bad looking either … You could certainly do much worse!”,
+		“Okay, okay, I’ll stop now. Hehe!”
+	]
+]
 }
