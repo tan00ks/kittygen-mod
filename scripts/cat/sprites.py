@@ -137,7 +137,9 @@ class Sprites():
 
             "crowns",
 
-            "wooddragon"
+            "wooddragon",
+
+            "springwinter"
 
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -520,5 +522,18 @@ class Sprites():
         for a, i in enumerate([
             "WOODDRAGON"]):
             self.make_group('wooddragon', (a, 0), f'acc_wild{i}')
+
+
+        for a, i in enumerate(["CHERRYBLOSSOM","TULIPPETALS","CLOVERFLOWER","PANSIES","BELLFLOWERS","SANVITALIAFLOWERS","EGGSHELLS","BLUEEGGSHELLS","EASTEREGG","FORSYTHIA"]):
+            self.make_group('springwinter', (a, 0), f'acc_wild{i}')
+        for a, i in enumerate([
+            "MINTLEAF","STICKS","SPRINGFEATHERS","SNAILSHELL","MUD","CHERRYPLUMLEAVES","CATKIN","HONEYCOMB","FLOWERCROWN","LILIESOFTHEVALLEY"]):
+            self.make_group('springwinter', (a, 1), f'acc_wild{i}')
+        for a, i in enumerate([
+            "STRAWMANE","MISTLETOE","REDPOINSETTIA","WHITEPOINSETTIA","COTONEASTERWREATH","YEWS","HEATHER","TEETHCOLLAR","DRIEDORANGE","ROESKULL"]):
+            self.make_group('springwinter', (a, 2), f'acc_wild{i}')
+        for a, i in enumerate([
+            "WOODENOAKANTLERS","WOODENBIRCHANTLERS","DOGWOOD","GRAYWOOL","BLACKWOOL","CREAMWOOL","WHITEWOOL","FIRBRANCHES","CORALBELLS","SLIVERDUSTPLANT"]):
+            self.make_group('springwinter', (a, 3), f'acc_wild{i}')
 # CREATE INSTANCE
 sprites = Sprites()
