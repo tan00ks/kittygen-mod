@@ -1,29 +1,18 @@
-import os
-from random import choice, randint, choices
-
+from random import choice, choices
 import pygame
-
-from ..cat.history import History
-from ..housekeeping.datadir import get_save_dir
-from ..game_structure.windows import ChangeCatName, SpecifyCatGender, KillCat, SaveAsImage
-
 import ujson
 
-from scripts.utility import event_text_adjust, scale, ACC_DISPLAY, process_text, chunks
+from scripts.utility import scale
 
 from .Screens import Screens
 
-from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats
-from scripts.cat.cats import Cat, BACKSTORIES
-from scripts.cat.pelts import Pelt
+from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors
+from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
 from re import sub
-from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
-from scripts.game_structure.image_button import UIImageButton, UITextBoxTweaked
+from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
-from scripts.cat.names import names, Name
-from scripts.clan_resources.freshkill import FRESHKILL_ACTIVE
 
 class TalkScreen(Screens):
 
@@ -180,12 +169,12 @@ class TalkScreen(Screens):
             if event.key == pygame.K_ESCAPE:
                 self.change_screen('profile screen')
         elif event.type == pygame.MOUSEBUTTONDOWN:
-                if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                    if self.text_index < len(self.texts) - 1:
-                        self.text_index += 1
-                        self.frame_index = 0
-                else:
-                    self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
+            if self.frame_index == len(self.text_frames[self.text_index]) - 1:
+                if self.text_index < len(self.texts) - 1:
+                    self.text_index += 1
+                    self.frame_index = 0
+            else:
+                self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
         return
     
     def get_cluster_list(self):
@@ -958,7 +947,6 @@ class TalkScreen(Screens):
             if "_" in text:
                 print(f"_ found in {text}")
                 return ""
-             
         except Exception as e:
             print(e)
             print("ERROR: could not replace abbrv.")
@@ -966,3 +954,4 @@ class TalkScreen(Screens):
 
 
         return text
+    

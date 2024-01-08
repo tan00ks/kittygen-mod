@@ -1605,11 +1605,11 @@ class MakeClanScreen(Screens):
                         else:
                             self.paralyzed = False
                         if event.text == 'born without a leg' and 'NOPAW' not in self.custom_cat.pelt.scars:
-                            self.custom_cat.pelt.scars = []
-                            self.custom_cat.pelt.scars.append('NOPAW')
+                            self.scars = []
+                            self.scars.append('NOPAW')
                         elif event.text == "born without a tail" and "NOTAIL" not in self.custom_cat.pelt.scars:
-                            self.custom_cat.pelt.scars = []
-                            self.custom_cat.pelt.scars.append('NOTAIL')
+                            self.scars = []
+                            self.scars.append('NOTAIL')
                         self.update_sprite()
 
         
@@ -1643,6 +1643,16 @@ class MakeClanScreen(Screens):
                     self.your_cat.permanent_condition['paralyzed']["moons_until"] = 1
                     self.your_cat.permanent_condition['paralyzed']["moons_with"] = -1
                     self.your_cat.permanent_condition['paralyzed']['born_with'] = True
+                if self.permanent_condition is not None and self.permanent_condition == "born without a tail" and "NOTAIL" not in self.your_cat.pelt.scars:
+                    self.your_cat.pelt.scars.append('NOTAIL')
+                    self.your_cat.permanent_condition['born without a tail']["moons_until"] = 1
+                    self.your_cat.permanent_condition['born without a tail']["moons_with"] = -1
+                    self.your_cat.permanent_condition['born without a tail']['born_with'] = True
+                elif self.permanent_condition is not None and self.permanent_condition == "born without a leg" and "NOPAW" not in self.your_cat.pelt.scars:
+                    self.your_cat.pelt.scars.append('NOPAW')
+                    self.your_cat.permanent_condition['born without a leg']["moons_until"] = 1
+                    self.your_cat.permanent_condition['born without a leg']["moons_with"] = -1
+                    self.your_cat.permanent_condition['born without a leg']['born_with'] = True
                 self.your_cat.accessory = self.accessory
                 self.your_cat.personality = Personality(trait=self.personality, kit_trait=True)
                 self.selected_cat = None
