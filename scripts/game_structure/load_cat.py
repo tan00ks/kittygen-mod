@@ -183,7 +183,10 @@ def json_load():
             new_cat.joined_df = cat["joined_df"] if "joined_df" in cat else False
             new_cat.revealed = cat["revealed"] if "revealed" in cat else 0
             new_cat.revives = cat["revives"] if "revives" in cat else 0
-            
+            new_cat.courage = cat["courage"] if "courage" in cat else 0
+            new_cat.intelligence = cat["intelligence"] if "intelligence" in cat else 0
+            new_cat.empathy = cat["empathy"] if "empathy" in cat else 0
+            new_cat.compassion = cat["compassion"] if "compassion" in cat else 0
             if "died_by" in cat or "scar_event" in cat or "mentor_influence" in cat:
                 new_cat.convert_history(
                     cat["died_by"] if "died_by" in cat else [],
