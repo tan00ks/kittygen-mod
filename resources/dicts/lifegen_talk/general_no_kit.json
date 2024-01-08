@@ -11,7 +11,7 @@
             "Must ... escape ... camp ..."
         ]
     ],
-"assertive_parent4_6": [
+    "assertive_parent4_6": [
         [
             "from_adopted_kit",
             "from_your_kit",
@@ -23,7 +23,7 @@
             "I'm not a kit anymore, I know how to do it myself!"
         ]
     ],
- "assertivewarrior_mediatorapp1": [
+    "assertivewarrior_mediatorapp1": [
         [
             "Any",
             "from_adopted_kit",
@@ -36,7 +36,7 @@
             "[Could they really have been your kit in the nursery a few moons ago?]"
         ]
     ],
-"assertive_tokit5": [
+    "assertive_tokit5": [
         [
             "kitten",
             "dislike",
@@ -51,7 +51,7 @@
             "Hmph. Whatever. Just stay outta the real warriors' way, before someone squishes you."
         ]
     ],
-"assertive_15": [
+    "assertive_15": [
         [
             "elder",
             "assertive",
@@ -67,11 +67,11 @@
             "Yeah, yeah, don't get all soft on me, hehe. Wanna grab a meal together?"
         ]
     ],
-	"assertivewarrior_mediatorapp": [
+    "assertivewarrior_mediatorapp": [
         [
             "mediator apprentice",
             "assertive",
-		"they_older"
+            "they_older"
         ],
         [
             "Man, you're insightful for an apprentice, y_c!",
@@ -112,7 +112,6 @@
             "[Maybe now is not a good time.]"
         ]
     ],
-   
     "assertive_rom4": [
         [
             "Any",
@@ -128,7 +127,6 @@
             "[The blush on t_c's cheeks confirms that, yes, they did mean it in that way. And they're doing a terrible job of hiding it.]"
         ]
     ],
-    
     "assertive_love1": [
         [
             "Any",
@@ -142,7 +140,7 @@
             "Without you, I don't know what I'd do."
         ]
     ],
-"assertive_elder_25": [
+    "assertive_elder_25": [
         [
             "leader",
             "deputy",
@@ -156,7 +154,7 @@
             "The clan will still be here when we get back."
         ]
     ],
-	 "assertive_warrior_or_elder_1": [
+    "assertive_warrior_or_elder_1": [
         [
             "apprentice",
             "medicine cat apprentice",
@@ -169,14 +167,14 @@
             "you_neurotic",
             "you_brooding",
             "you_upstanding",
-		"they_older"
+            "they_older"
         ],
         [
             "You're so insightful for your age, y_c!",
             "I wish I were as smart as you when I was an apprentice ... it might've saved me a lot of trouble! Heh."
         ]
     ],
-"assertive_jealous1": [
+    "assertive_jealous1": [
         [
             "Any",
             "sibling",
@@ -190,16 +188,16 @@
             "Must've been really terrible."
         ]
     ],
-	  "assertive_warrior_or_elder1": [
+    "assertive_warrior_or_elder1": [
         [
             "apprentice",
-		"medicine cat apprentice",
-		"mediator apprentice",
-		"queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
             "assertive",
             "cool",
             "silly",
-		"they_older"
+            "they_older"
         ],
         [
             "Working hard, y_c? Or, is it more like hardly working? Hehe.",
@@ -207,7 +205,7 @@
             "*Sigh* I sorta miss those days myself ..."
         ]
     ],
-"assertive_mediatorapp3": [
+    "assertive_mediatorapp3": [
         [
             "mediator apprentice",
             "assertive",
@@ -2772,7 +2770,6 @@
             "Hehe, just kidding. But seriously, how exciting! Soon you'll have your own mini-yous running around."
         ]
     ],
-    
     "you_pregnant21": [
         [
             "any",
@@ -7519,21 +7516,21 @@
         ]
     ],
     "genparent_toadult01": [
-	[
-		"apprentice",
-		"medicine cat apprentice",
-		"queen's apprentice",
-		"mediator apprentice",
-		"from_parent",
-		"adoptive_parent"
-	],
-	[
-		"Here, y_c, let me help you get your favorite prey from the top of the freshkill pi -- oop!",
-		"[t_c stops in their tracks as you stretch to the top of the pile and easily fetch the prey you want.]",
-		"Since when have you been big enough to do that?!",
-		"You better stop growing up so fast, y_c! Or else you're gonna be bigger than me before I know it!"
-	]
-	],
+        [
+            "apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "mediator apprentice",
+            "from_parent",
+            "adoptive_parent"
+        ],
+        [
+            "Here, y_c, let me help you get your favorite prey from the top of the freshkill pi -- oop!",
+            "[t_c stops in their tracks as you stretch to the top of the pile and easily fetch the prey you want.]",
+            "Since when have you been big enough to do that?!",
+            "You better stop growing up so fast, y_c! Or else you're gonna be bigger than me before I know it!"
+        ]
+    ],
     "sibling_assertive": [
         [
             "no_kit",
@@ -9060,7 +9057,6 @@
             "I know, I know. I wouldn't ask if it wasn't essential, y_c. You know this."
         ]
     ],
-
     "you_starving_6": [
         [
             "you_starving",
@@ -9580,7 +9576,7 @@
             "any",
             "brooding",
             "platonic_love",
-		"non-related"
+            "non-related"
         ],
         [
             "y_c, out of curiosity ... What was your first impression of me?",
