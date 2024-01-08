@@ -564,8 +564,6 @@
             "medicine cat",
             "medicine cat apprentice",
             "assertive",
-            "dislike",
-            "neutral",
             "you_upstanding",
             "you_stable",
             "you_sweet",
@@ -585,28 +583,14 @@
             "medicine cat apprentice",
             "assertive",
             "platonic_like",
-            "neutral"
+            "neutral",
+            "they_younger"
         ],
         [
             "Eeek! The half-moon meeting is coming up! Aren't you excited?",
             "Is it just me, or is it high time the o_cClan apprentice earns their full name? I hope their name ends in -cloud ... that would really suit them.",
             "And the o_cClan medicine cat has been totally eyeing you at every gathering ... C'mon, don't tell me you haven't noticed!",
             "Though, I suppose whatever they feel is between them and StarClan, teehee!"
-        ]
-    ],
-    "assertive_elder_13": [
-        [
-            "medicine cat",
-            "assertive",
-            "platonic_like",
-            "neutral",
-            "random_cat"
-        ],
-        [
-            "Is it just me, or has r_w been coming into the medicine den an awful lot lately?",
-            "What? I'm just saying! I've seen the way they look at you!",
-            "Not like they're exactly bad looking either ... You could certainly do much worse!",
-            "Okay, okay, I'll stop now. Hehe!"
         ]
     ],
     "assertive_like": [
@@ -873,6 +857,7 @@
         [
             "Any",
             "assertive",
+            "cool",
             "you_injured",
             "you_ill"
         ],
@@ -931,7 +916,6 @@
     "assertivemedapp_tokit": [
         [
             "kitten",
-            "neutral",
             "non-related",
             "assertive",
             "silly",
@@ -1004,7 +988,10 @@
         [
             "leader",
             "deputy",
-            "assertive"
+            "assertive",
+            "silly",
+            "cool",
+            "stable"
         ],
         [
             "Can I be honest with you for a second, y_c? I'm a bit worried for the future of the clan ...",

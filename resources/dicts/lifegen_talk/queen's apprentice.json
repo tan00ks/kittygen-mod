@@ -496,7 +496,7 @@
     ],
     "assertive_queensapp_3": [
         [
-            "queen",
+            "any",
             "assertive"
         ],
         [
@@ -504,7 +504,7 @@
             "Psh, c'mon, y_c, loosen up! You worry too much!",
             "These are the fearsome future warriors of c_nClan. They can withstand a little -",
             "[One of the kits smacks facefirst into the nursery wall and starts crying.]",
-            "... Okay, that's the first time that's happened."
+            "... Okay, I swear that's the first time that's happened."
         ]
     ],
     "assertive_queensapp_4": [

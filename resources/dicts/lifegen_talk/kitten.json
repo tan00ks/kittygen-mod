@@ -3284,7 +3284,8 @@
         [
             "[You hear the soft pitter-patter of small paw steps near the entrance of your den. You turn and see t_c holding a large mouse by the tail, looking ecstatic as they drag the creature into the den.]",
             "Special delivery! One freshly caught mouse, straight from the fresh-kill pile!",
-            "Can you believe it? I'm finally doing real apprentice jobs! r_a said that I could help them give out fresh kill to the elders and anyone else who is too busy to get some, and they even turned it into a competition. Right now I'm beating them by a landslide!",
+            "Can you believe it? I'm finally doing real apprentice jobs!",
+            "r_a said that I could help them give out fresh kill to the elders and anyone else who is too busy to get some, and they even turned it into a competition. Right now I'm beating them by a landslide!",
             "[You should probably have a word with r_a's mentor about this.]"
         ]
     ],

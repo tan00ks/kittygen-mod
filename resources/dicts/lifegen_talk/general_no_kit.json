@@ -176,6 +176,20 @@
             "I wish I were as smart as you when I was an apprentice ... it might've saved me a lot of trouble! Heh."
         ]
     ],
+"assertive_jealous1": [
+        [
+            "Any",
+            "sibling",
+            "half sibling",
+            "adopted_sibling",
+            "dislike",
+            "assertive"
+        ],
+        [
+            "What did I do in a past life to wind up related to you, y_c?",
+            "Must've been really terrible."
+        ]
+    ],
 	  "assertive_warrior_or_elder1": [
         [
             "apprentice",
