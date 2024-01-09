@@ -232,13 +232,6 @@
             "text_horiz_alignment": "center"
         }
     },
-    "#text_box_30_horizcenter_dark": {
-        "prototype": "#text_box_30",
-        "misc": {
-            "text_horiz_alignment": "center"
-        }
-    },
-
     "#text_box_30_horizcenter_red": {
         "prototype": "#text_box_30_horizcenter",
         "colours": {
@@ -313,14 +306,8 @@
             "text_horiz_alignment": "center"
         }
     },
-    "#text_box_26_horizcenter_dark": {
-        "prototype": "#text_box_26_horizcenter_dark",
-        "colours": {
-            "normal_text": "#efe5ce"
-        }
-    },
-    "#text_box_26_horizcenter_light": {
-        "prototype": "#text_box_26_horizcenter_light",
+    "#text_box_34_horizcenter_light": {
+        "prototype": "#text_box_34_horizcenter",
         "colours": {
             "normal_text": "#efe5ce"
         }
