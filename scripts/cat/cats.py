@@ -25,8 +25,7 @@ from scripts.game_structure import image_cache
 from scripts.event_class import Single_Event
 from .thoughts import Thoughts
 from scripts.cat_relations.inheritance import Inheritance
-from scripts.game_structure.windows import RetireScreen
-import uuid
+
 
 class Cat():
     dead_cats = []
