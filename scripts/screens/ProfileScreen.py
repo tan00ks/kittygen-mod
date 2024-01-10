@@ -651,16 +651,16 @@ class ProfileScreen(Screens):
                 try:
                     if self.accessories_list[n] == self.the_cat.pelt.accessory:
                         self.the_cat.pelt.accessory = None
+                    if self.accessories_list[n] in self.the_cat.pelt.accessories:
+                        self.the_cat.pelt.accessories.remove(self.accessories_list[n])
+                    else:
+                        self.the_cat.pelt.accessories.append(self.accessories_list[n])
+                    for acc in self.accessory_buttons:
+                        self.accessory_buttons[acc].kill()
+                    for acc in self.cat_list_buttons:
+                        self.cat_list_buttons[acc].kill()
                 except:
                     print("ERROR with accessory screen")
-                if self.accessories_list[n] in self.the_cat.pelt.accessories:
-                    self.the_cat.pelt.accessories.remove(self.accessories_list[n])
-                else:
-                    self.the_cat.pelt.accessories.append(self.accessories_list[n])
-                for acc in self.accessory_buttons:
-                    self.accessory_buttons[acc].kill()
-                for acc in self.cat_list_buttons:
-                    self.cat_list_buttons[acc].kill()
                 start_index = self.page * 18
                 end_index = start_index + 18                
                 self.max_pages = math.ceil(len(cat.pelt.inventory)/18)

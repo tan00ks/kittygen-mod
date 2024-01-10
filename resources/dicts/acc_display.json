@@ -1174,5 +1174,205 @@
     "default": "wood dragon",
     "plural": "wood dragon",
     "singular": "wood dragon"
+  },
+  "CHERRYBLOSSOM": {
+    "default": "cherry blossom",
+    "plural": "cherry blossoms",
+    "singular": "cherry blossom"
+  },
+  "TULIPPETALS": {
+    "default": "tulip petals",
+    "plural": "tulip petals",
+    "singular": "tulip petal"
+  },
+  "CLOVERFLOWER": {
+    "default": "clover flower",
+    "plural": "clover flowers",
+    "singular": "clover flower"
+  },
+  "PANSIES": {
+    "default": "pansies",
+    "plural": "pansies",
+    "singular": "pansy"
+  },
+  "BELLFLOWERS": {
+    "default": "bell flowers",
+    "plural": "bell flowers",
+    "singular": "bell flower"
+  },
+  "SANVITALIAFLOWERS": {
+    "default": "sanvitalia flowers",
+    "plural": "sanvitalia flowers",
+    "singular": "sanvitalia flower"
+  },
+  "EGGSHELLS": {
+    "default": "eggshells",
+    "plural": "eggshells",
+    "singular": "eggshell"
+  },
+  "BLUEEGGSHELLS": {
+    "default": "blue eggshells",
+    "plural": "blue eggshells",
+    "singular": "blue eggshell"
+  },
+  "EASTEREGG": {
+    "default": "Easter egg",
+    "plural": "Easter eggs",
+    "singular": "Easter egg"
+  },
+  "FORSYTHIA": {
+    "default": "forsythia",
+    "plural": "forsythias",
+    "singular": "forsythia"
+  },
+  "MINTLEAF": {
+    "default": "mint leaf",
+    "plural": "mint leaves",
+    "singular": "mint leaf"
+  },
+  "STICKS": {
+    "default": "sticks",
+    "plural": "sticks",
+    "singular": "stick"
+  },
+  "SPRINGFEATHERS": {
+    "default": "spring feathers",
+    "plural": "spring feathers",
+    "singular": "spring feather"
+  },
+  "SNAILSHELL": {
+    "default": "snail shell",
+    "plural": "snail shells",
+    "singular": "snail shell"
+  },
+  "MUD": {
+    "default": "mud",
+    "plural": "mud",
+    "singular": "mud"
+  },
+  "CHERRYPLUMLEAVES": {
+    "default": "cherry plum leaves",
+    "plural": "cherry plum leaves",
+    "singular": "cherry plum leaf"
+  },
+  "CATKIN": {
+    "default": "catkin",
+    "plural": "catkins",
+    "singular": "catkin"
+  },
+  "HONEYCOMB": {
+    "default": "honeycomb",
+    "plural": "honeycombs",
+    "singular": "honeycomb"
+  },
+  "FLOWERCROWN": {
+    "default": "flower crown",
+    "plural": "flower crowns",
+    "singular": "flower crown"
+  },
+  "LILIESOFTHEVALLEY": {
+    "default": "lilies of the valley",
+    "plural": "lilies of the valley",
+    "singular": "lily of the valley"
+  },
+  "STRAWMANE": {
+    "default": "straw mane",
+    "plural": "straw manes",
+    "singular": "straw mane"
+  },
+  "MISTLETOE": {
+    "default": "mistletoe",
+    "plural": "mistletoes",
+    "singular": "mistletoe"
+  },
+  "REDPOINSETTIA": {
+    "default": "red poinsettia",
+    "plural": "red poinsettias",
+    "singular": "red poinsettia"
+  },
+  "WHITEPOINSETTIA": {
+    "default": "white poinsettia",
+    "plural": "white poinsettias",
+    "singular": "white poinsettia"
+  },
+  "COTONEASTERWREATH": {
+    "default": "cotoneaster wreath",
+    "plural": "cotoneaster wreaths",
+    "singular": "cotoneaster wreath"
+  },
+  "YEWS": {
+    "default": "yew",
+    "plural": "yews",
+    "singular": "yew"
+  },
+  "HEATHER": {
+    "default": "heather",
+    "plural": "heathers",
+    "singular": "heather"
+  },
+  "TEETHCOLLAR": {
+    "default": "teeth collar",
+    "plural": "teeth collars",
+    "singular": "teeth collar"
+  },
+  "DRIEDORANGE": {
+    "default": "dried orange",
+    "plural": "dried oranges",
+    "singular": "dried orange"
+  },
+  "ROESKULL": {
+    "default": "roe skull",
+    "plural": "roe skulls",
+    "singular": "roe skull"
+  },
+  "WOODENOAKANTLERS": {
+    "default": "wooden oak antlers",
+    "plural": "wooden oak antlers",
+    "singular": "wooden oak antler"
+  },
+  "WOODENBIRCHANTLERS": {
+    "default": "wooden birch antlers",
+    "plural": "wooden birch antlers",
+    "singular": "wooden birch antler"
+  },
+  "DOGWOOD": {
+    "default": "dogwood",
+    "plural": "dogwoods",
+    "singular": "dogwood"
+  },
+  "GRAYWOOL": {
+    "default": "gray wool",
+    "plural": "gray wool",
+    "singular": "gray wool"
+  },
+  "BLACKWOOL": {
+    "default": "black wool",
+    "plural": "black wool",
+    "singular": "black wool"
+  },
+  "CREAMWOOL": {
+    "default": "cream wool",
+    "plural": "cream wool",
+    "singular": "cream wool"
+  },
+  "WHITEWOOL": {
+    "default": "white wool",
+    "plural": "white wool",
+    "singular": "white wool"
+  },
+  "FIRBRANCHES": {
+    "default": "fir branches",
+    "plural": "fir branches",
+    "singular": "fir branch"
+  },
+  "CORALBELLS": {
+    "default": "coral bells",
+    "plural": "coral bells",
+    "singular": "coral bell"
+  },
+  "SLIVERDUSTPLANT": {
+    "default": "sliver dust plant",
+    "plural": "sliver dust plants",
+    "singular": "sliver dust plant"
   }
 }

@@ -454,11 +454,11 @@ class Romantic_Events():
 
         if become_mate:
             if cat_from.ID == game.clan.your_cat.ID or cat_to.ID == game.clan.your_cat.ID:
-                if cat_from.ID == game.clan.your_cat.ID:
-                    game.switches['new_mate'] = cat_to
-                else:
-                    game.switches['new_mate'] = cat_from
                 if not game.switches['window_open']:
+                    if cat_from.ID == game.clan.your_cat.ID:
+                        game.switches['new_mate'] = cat_to
+                    else:
+                        game.switches['new_mate'] = cat_from
                     MateScreen("events screen")
             else:
                 cat_from.set_mate(cat_to)

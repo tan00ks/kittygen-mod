@@ -1599,7 +1599,6 @@ class MakeClanScreen(Screens):
                     else:
                         chosen_condition = event.text
                         self.permanent_condition = event.text
-                        self.custom_cat.get_permanent_condition(chosen_condition, True)
                         if event.text == 'paralyzed':
                             self.paralyzed = True
                         else:
@@ -1634,7 +1633,7 @@ class MakeClanScreen(Screens):
                 new_cat.genderalign = self.sex
                 self.your_cat = new_cat
                 if self.permanent_condition is not None and self.permanent_condition != 'paralyzed':
-                    self.your_cat.get_permanent_condition(self.permanent_condition)
+                    self.your_cat.get_permanent_condition(self.permanent_condition, born_with=True)
                     self.your_cat.permanent_condition[self.permanent_condition]["moons_until"] = 1
                     self.your_cat.permanent_condition[self.permanent_condition]["moons_with"] = -1
                     self.your_cat.permanent_condition[self.permanent_condition]['born_with'] = True
