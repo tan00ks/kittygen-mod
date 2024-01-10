@@ -24,7 +24,7 @@ class LifeGenPatrolScreen(Screens):
                                         (332, 340))
     cat_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/cat_icon.png").convert_alpha(),
                                       (100, 100))
-    df_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/df_toggle.png").convert_alpha(),
+    df_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/df_toggle2.png").convert_alpha(),
                                       (100, 100))
     date_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/flirt.png").convert_alpha(),
                                       (100, 100))
@@ -463,7 +463,7 @@ class LifeGenPatrolScreen(Screens):
                                              , manager=MANAGER)
         self.elements['cat_icon'].disable()
         self.elements['df_icon'] = UIImageButton(scale(pygame.Rect((726, 1120), (68, 68))), "",
-                                               object_id="#dark_forest_button"
+                                               object_id="#df_toggle"
                                                , manager=MANAGER)
         self.elements['df_icon'].disable()
         self.elements['date_icon'] = UIImageButton(scale(pygame.Rect((806, 1120), (68, 68))), "",
