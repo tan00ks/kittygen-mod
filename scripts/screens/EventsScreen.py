@@ -45,6 +45,7 @@ class EventsScreen(Screens):
         self.events_list_box = None
         self.toggle_borders_button = None
         self.timeskip_button = None
+        self.freshkill_pile_button = None
         self.events_frame = None
         self.clan_age = None
         self.season = None
@@ -102,7 +103,9 @@ class EventsScreen(Screens):
                     self.toggle_borders_button.set_text("Close Clan Borders")
                 else:
                     game.clan.closed_borders = True
-                    self.toggle_borders_button.set_text("Open Clan Borders")            
+                    self.toggle_borders_button.set_text("Open Clan Borders")
+            elif event.ui_element == self.freshkill_pile_button and game.clan.game_mode != "classic":
+                self.change_screen('clearing screen')            
             # Change the type of events displayed
             elif event.ui_element == self.all_events_button:
                 if self.event_container.vert_scroll_bar:
@@ -286,14 +289,14 @@ class EventsScreen(Screens):
     def screen_switches(self):
         # On first open, update display events list
         if not self.first_opened:
-            self.first_opened = True
-    
-        self.update_display_events_lists()
-            
-        self.heading = pygame_gui.elements.UITextBox("",
-                                                     scale(pygame.Rect((200, 220), (1200, 80))),
-                                                     object_id=get_text_box_theme("#text_box_30_horizcenter"),
-                                                     manager=MANAGER)
+            self.first_opened = True            
+            self.update_display_events_lists()
+            self.display_events = self.all_events
+
+        if game.clan.game_mode != "classic":
+            self.freshkill_pile_button =  UIImageButton(scale(pygame.Rect((1270, 210), (282, 60))), "", object_id="#freshkill_pile_button"
+                                             , manager=MANAGER)
+
         self.season = pygame_gui.elements.UITextBox(f'Current season: {game.clan.current_season}',
                                                     scale(pygame.Rect((200, 220), (1200, 80))),
                                                     object_id=get_text_box_theme("#text_box_30_horizcenter"),
@@ -413,6 +416,9 @@ class EventsScreen(Screens):
 
         self.timeskip_button.kill()
         del self.timeskip_button
+        if game.clan.game_mode != "classic":
+            self.freshkill_pile_button.kill()
+            del self.freshkill_pile_button
         self.all_events_button.kill()
         del self.all_events_button
         self.ceremonies_events_button.kill()
@@ -449,8 +455,6 @@ class EventsScreen(Screens):
         del self.events_frame
         self.clan_age.kill()
         del self.clan_age
-        self.heading.kill()
-        del self.heading
         self.season.kill()
         del self.season
         self.leaf.kill()
