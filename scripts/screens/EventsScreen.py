@@ -297,10 +297,6 @@ class EventsScreen(Screens):
             self.freshkill_pile_button =  UIImageButton(scale(pygame.Rect((1270, 210), (282, 60))), "", object_id="#freshkill_pile_button"
                                              , manager=MANAGER)
 
-        self.heading = pygame_gui.elements.UITextBox("See which events are currently happening in the Clan.",
-                                                     scale(pygame.Rect((200, 220), (1200, 80))),
-                                                     object_id=get_text_box_theme("#text_box_30_horizcenter"),
-                                                     manager=MANAGER)
         self.season = pygame_gui.elements.UITextBox(f'Current season: {game.clan.current_season}',
                                                     scale(pygame.Rect((200, 220), (1200, 80))),
                                                     object_id=get_text_box_theme("#text_box_30_horizcenter"),
@@ -459,8 +455,6 @@ class EventsScreen(Screens):
         del self.events_frame
         self.clan_age.kill()
         del self.clan_age
-        self.heading.kill()
-        del self.heading
         self.season.kill()
         del self.season
         self.leaf.kill()
