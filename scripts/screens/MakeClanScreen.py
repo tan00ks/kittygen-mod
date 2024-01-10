@@ -514,7 +514,7 @@ class MakeClanScreen(Screens):
             elif self.game_mode == 'expanded':
                 display_text = self.expanded_mode_text
                 display_name = "Expanded Mode"
-            elif self.game_mode == 'cruel':
+            elif self.game_mode == 'cruel season':
                 display_text = self.cruel_mode_text
                 display_name = "Cruel Season"
             else:
@@ -534,7 +534,7 @@ class MakeClanScreen(Screens):
                 self.elements['classic_mode_button'].enable()
                 self.elements['expanded_mode_button'].disable()
                 self.elements['cruel_mode_button'].enable()
-            elif self.game_mode == 'cruel':
+            elif self.game_mode == 'cruel season':
                 self.elements['classic_mode_button'].enable()
                 self.elements['expanded_mode_button'].enable()
                 self.elements['cruel_mode_button'].disable()
@@ -544,7 +544,7 @@ class MakeClanScreen(Screens):
                 self.elements['cruel_mode_button'].enable()
 
             # Don't let the player go forwards with cruel mode, it's not done yet.
-            if self.game_mode == 'cruel':
+            if self.game_mode == 'cruel season':
                 self.elements['next_step'].disable()
             else:
                 self.elements['next_step'].enable()
