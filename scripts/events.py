@@ -658,6 +658,8 @@ class Events:
             return self.handle_birth_two_parents(siblings, sibling_text)
 
     def handle_birth_one_parent(self, siblings, sibling_text):
+        if Cat.all_cats[game.clan.your_cat.parent1].gender == "female":
+            Cat.all_cats[game.clan.your_cat.parent1].get_injured("recovering from birth")
         if siblings:
             self.add_siblings_and_inheritance(siblings, game.clan.your_cat.parent1)
             return self.set_birth_text("birth_one_parent_siblings", {"parent1": Cat.all_cats[game.clan.your_cat.parent1].name, "y_c": game.clan.your_cat.name,"insert_siblings": sibling_text})
@@ -667,11 +669,18 @@ class Events:
     def handle_birth_two_parents(self, siblings, sibling_text):
         Cat.all_cats[game.clan.your_cat.parent1].set_mate(Cat.all_cats[game.clan.your_cat.parent2])
         Cat.all_cats[game.clan.your_cat.parent2].set_mate(Cat.all_cats[game.clan.your_cat.parent1])
+        if Cat.all_cats[game.clan.your_cat.parent1].gender == "female":
+            Cat.all_cats[game.clan.your_cat.parent1].get_injured("recovering from birth")
+        elif Cat.all_cats[game.clan.your_cat.parent2].gender == "female":
+            Cat.all_cats[game.clan.your_cat.parent2].get_injured("recovering from birth")
+        elif game.clan.clan_settings['same sex birth']:
+            Cat.all_cats[random.choice([game.clan.your_cat.parent1, game.clan.your_cat.parent2])].get_injured("recovering from birth")
         if siblings:
             self.add_siblings_and_inheritance(siblings, game.clan.your_cat.parent1, game.clan.your_cat.parent2)
             return self.set_birth_text("birth_two_parents_siblings", {"parent1": Cat.all_cats[game.clan.your_cat.parent1].name, "parent2": Cat.all_cats[game.clan.your_cat.parent2].name, "y_c": game.clan.your_cat.name,"insert_siblings": sibling_text})
         replacements = {"parent1": Cat.all_cats[game.clan.your_cat.parent1].name, "parent2": Cat.all_cats[game.clan.your_cat.parent2].name, "y_c": game.clan.your_cat.name}
         self.create_inheritance([game.clan.your_cat.parent1, game.clan.your_cat.parent2])
+    
         return self.set_birth_text("birth_two_parents", replacements)
 
     def handle_birth_adoptive_parents(self, siblings, sibling_text):
