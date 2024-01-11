@@ -4,7 +4,7 @@ from .Screens import Screens
 import pygame
 from scripts.events import events_class
 from scripts.utility import get_living_clan_cat_count, get_text_box_theme, scale, shorten_text_to_fit
-from scripts.game_structure.image_button import IDImageButton, UIImageButton
+from scripts.game_structure.image_button import IDImageButton, UIImageButton, UISpriteButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER
 from ..cat.cats import Cat
 from ..game_structure import image_cache
@@ -26,6 +26,7 @@ class EventsScreen(Screens):
     misc_events = ""
     display_text = ""
     display_events = ""
+    display_cats = []
     
     def __init__(self, name=None):
         super().__init__(name)
@@ -92,6 +93,9 @@ class EventsScreen(Screens):
             elif event.ui_element == self.timeskip_button and (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled):
                     DeathScreen('events screen')
                     return
+            elif event.ui_element in self.display_cats:
+                game.switches["cat"] = event.ui_element.return_cat_id()
+                self.change_screen('profile screen')
             elif event.ui_element == self.timeskip_button:
                 # Save the start time, so the loading animation can be
                 # set to only show up if timeskip is taking a good amount of time. 
@@ -462,6 +466,9 @@ class EventsScreen(Screens):
         self.event_container.kill()
         self.cat_icon.kill()
         del self.cat_icon
+        for cat in self.display_cats:
+            cat.kill()
+        self.display_cats = []
 
         for ele in self.display_events_elements:
             self.display_events_elements[ele].kill()
@@ -612,12 +619,15 @@ class EventsScreen(Screens):
 
         for ele in self.display_events_elements:
             self.display_events_elements[ele].kill()
+        for cat in self.display_cats:
+            cat.kill()
+        self.display_cats = []
         self.display_events_elements = {}
         if game.clan.your_cat.moons != -1:
-            self.display_events_elements["you"] = pygame_gui.elements.UIImage(scale(pygame.Rect((1050, 200), (200, 200))),
-                                                                        pygame.transform.scale(
-                                                                            game.clan.your_cat.sprite,
-                                                                            (200, 200)), manager=MANAGER)
+            self.display_cats.append(UISpriteButton(scale(pygame.Rect((1050, 200), (200, 200))),
+                                   game.clan.your_cat.sprite,
+                                   game.clan.your_cat.ID,
+                                   manager=MANAGER))
         for ele in self.involved_cat_buttons:
             ele.kill()
         self.involved_cat_buttons = []
@@ -766,12 +776,6 @@ class EventsScreen(Screens):
         elif self.event_display_type == "misc events":
             self.display_events = self.misc_events
 
-        # not_displayed = []
-        # for i in game.other_events_list + game.cur_events_list:
-        #     if i not in self.all_events and i not in self.ceremony_events and i not in self.birth_death_events and i not in self.relation_events and i not in self.health_events and i not in self.other_clans_events and i not in self.misc_events:
-        #         not_displayed.append(i.text)
-        # if not_displayed:
-        #     print("EVENTS NOT DISPLAYED: " + str(not_displayed))
 
     def make_events_container(self):
         """ In its own function so that there is only one place the box size is set"""
