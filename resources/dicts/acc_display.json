@@ -1374,5 +1374,40 @@
     "default": "sliver dust plant",
     "plural": "sliver dust plants",
     "singular": "sliver dust plant"
+  },
+  "RAINCOAT": {
+    "default": "raincoat",
+    "plural": "raincoat",
+    "singular": "raincoat"
+  },
+  "POPTABS": {
+    "default": "poptab necklace",
+    "plural": "poptab necklace",
+    "singular": "poptab necklace"
+  },
+  "FAZBEAR": {
+    "default": "fancy bear",
+    "plural": "fancy bear",
+    "singular": "fancy bear"
+  },
+  "WHITEBEAR": {
+    "default": "white teddy",
+    "plural": "white teddy",
+    "singular": "white teddy"
+  },
+  "PANDA": {
+    "default": "panda",
+    "plural": "panda",
+    "singular": "panda"
+  },
+  "BEAR": {
+    "default": "teddy bear",
+    "plural": "teddy bear",
+    "singular": "teddy bear"
+  },
+  "BROWNBEAR": {
+    "default": "brown teddy",
+    "plural": "brown teddies",
+    "singular": "brown teddy"
   }
 }

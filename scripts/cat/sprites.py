@@ -139,7 +139,15 @@ class Sprites():
 
             "wooddragon",
 
-            "springwinter"
+            "springwinter",
+
+            "raincoat",
+
+            "poptabs",
+
+            "fazbear",
+
+            "bears"
 
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -535,5 +543,21 @@ class Sprites():
         for a, i in enumerate([
             "WOODENOAKANTLERS","WOODENBIRCHANTLERS","DOGWOOD","GRAYWOOL","BLACKWOOL","CREAMWOOL","WHITEWOOL","FIRBRANCHES","CORALBELLS","SLIVERDUSTPLANT"]):
             self.make_group('springwinter', (a, 3), f'acc_wild{i}')
+
+        for a, i in enumerate([
+            "RAINCOAT"]):
+            self.make_group('raincoat', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "POPTABS"]):
+            self.make_group('poptabs', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "FAZBEAR"]):
+            self.make_group('fazbear', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "WHITEBEAR", "PANDA", "BEAR", "BROWNBEAR"]):
+            self.make_group('bears', (a, 0), f'acc_crafted{i}')
 # CREATE INSTANCE
 sprites = Sprites()
