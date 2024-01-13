@@ -292,10 +292,7 @@ class EventsScreen(Screens):
 
     def screen_switches(self):
         # On first open, update display events list
-        if not self.first_opened:
-            self.first_opened = True            
-            self.update_display_events_lists()
-            self.display_events = self.all_events
+        self.update_display_events_lists()
 
         if game.clan.game_mode != "classic":
             self.freshkill_pile_button =  UIImageButton(scale(pygame.Rect((1270, 210), (282, 60))), "", object_id="#freshkill_pile_button"
