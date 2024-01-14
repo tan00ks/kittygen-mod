@@ -1,29 +1,18 @@
-import os
-from random import choice, randint, choices
-
+from random import choice, choices
 import pygame
-
-from ..cat.history import History
-from ..housekeeping.datadir import get_save_dir
-from ..game_structure.windows import ChangeCatName, SpecifyCatGender, KillCat, SaveAsImage
-
 import ujson
 
-from scripts.utility import event_text_adjust, scale, ACC_DISPLAY, process_text, chunks
+from scripts.utility import scale
 
 from .Screens import Screens
 
-from scripts.utility import get_text_box_theme, scale_dimentions, generate_sprite, shorten_text_to_fit, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_med_cats
-from scripts.cat.cats import Cat, BACKSTORIES
-from scripts.cat.pelts import Pelt
+from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors
+from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
 from re import sub
-from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
-from scripts.game_structure.image_button import UIImageButton, UITextBoxTweaked
+from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
-from scripts.cat.names import names, Name
-from scripts.clan_resources.freshkill import FRESHKILL_ACTIVE
 
 class TalkScreen(Screens):
 
@@ -180,12 +169,12 @@ class TalkScreen(Screens):
             if event.key == pygame.K_ESCAPE:
                 self.change_screen('profile screen')
         elif event.type == pygame.MOUSEBUTTONDOWN:
-                if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                    if self.text_index < len(self.texts) - 1:
-                        self.text_index += 1
-                        self.frame_index = 0
-                else:
-                    self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
+            if self.frame_index == len(self.text_frames[self.text_index]) - 1:
+                if self.text_index < len(self.texts) - 1:
+                    self.text_index += 1
+                    self.frame_index = 0
+            else:
+                self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
         return
     
     def get_cluster_list(self):
@@ -389,7 +378,7 @@ class TalkScreen(Screens):
                     for illness in you.illnesses:
                         if you.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
-                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries and "recovering from birth" not in you.injuries:
+                if you.is_injured() and "you_injured" in tags and "pregnant" not in you.injuries and "recovering from birth" not in you.injuries and "sprain" not in you.injuries:
                     for injury in you.injuries:
                         if you.injuries[injury]['severity'] != 'minor':
                             ill_injured = True            
@@ -403,7 +392,7 @@ class TalkScreen(Screens):
                     for illness in cat.illnesses:
                         if cat.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
-                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries and "recovering from birth" not in cat.injuries:
+                if cat.is_injured() and "they_injured" in tags and "pregnant" not in cat.injuries and "recovering from birth" not in cat.injuries and "sprain" not in cat.injuries:
                     for injury in cat.injuries:
                         if cat.injuries[injury]['severity'] != 'minor':
                             ill_injured = True
@@ -413,7 +402,7 @@ class TalkScreen(Screens):
             
             # Relationships
             # Family tags:
-            if any(i in ["half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling","from_adopted_kit"] for i in tags):
+            if any(i in ["from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit"] for i in tags):
                 
                 fam = False
                 if "from_mentor" in tags:
@@ -506,6 +495,18 @@ class TalkScreen(Screens):
             if "non-mates" in tags:
                 if you.ID in cat.mate:
                     continue
+
+            if "they_older" in tags:
+                if you.age != cat.age and cat.moons < you.moons:
+                    continue
+            
+            if "they_sameage" in tags:
+                if you.age != cat.age:
+                    continue
+            
+            if "they_younger" in tags:
+                if you.age != cat.age and cat.moons > you.moons:
+                    continue
             
             # Relationship conditions
             if you.ID in cat.relationships:
@@ -549,10 +550,7 @@ class TalkScreen(Screens):
                 try:
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
-                    if game.clan.your_cat.moons == 0:
-                        possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", "newborn")
-                    else:
-                        possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status)
                 except Exception as e:
                     print(e)
@@ -622,7 +620,7 @@ class TalkScreen(Screens):
             text[i] = self.adjust_txt(text[i], cat)
             if text[i] == "":
                 return ""
-
+                
         r_c_found = False
         for i in range(len(text)):
             if "r_c" in text[i]:
@@ -700,6 +698,27 @@ class TalkScreen(Screens):
                     text = text.replace("their_crush", str(crush.name))
                 else:
                     return ""
+            
+            
+            if "r_c1" in text:
+                alive_apps = self.get_living_cats()
+                if len(alive_apps) <= 2:
+                    return ""
+                alive_app = choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    alive_app = choice(alive_apps)
+                alive_apps.remove(alive_app)
+                text = text.replace("r_c1", str(alive_app.name))
+                if "r_c2" in text:
+                    alive_app2 = choice(alive_apps)
+                    while alive_app2.ID == game.clan.your_cat.ID or alive_app2.ID == cat.ID:
+                        alive_app2 = choice(alive_apps)
+                    text = text.replace("r_c2", str(alive_app2.name))
+                if "r_c3" in text:
+                    alive_app3 = choice(alive_apps)
+                    while alive_app3.ID == game.clan.your_cat.ID or alive_app3.ID == cat.ID:
+                        alive_app3 = choice(alive_apps)
+                    text = text.replace("r_c3", str(alive_app3.name))
             if "r_k" in text:
                 alive_kits = get_alive_kits(Cat)
                 if len(alive_kits) <= 1:
@@ -713,7 +732,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
             if "r_w" in text:
@@ -721,7 +740,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_w", str(alive_app.name))
             if "r_m" in text:
@@ -729,7 +748,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_m", str(alive_app.name))
             if "r_d" in text:
@@ -737,7 +756,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_d", str(alive_app.name))
             if "r_q" in text:
@@ -745,7 +764,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_q", str(alive_app.name))
             if "r_e" in text:
@@ -753,7 +772,7 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
-                while alive_app.ID == game.clan.your_cat.ID or alive_app == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_e", str(alive_app.name))
             if "r_s" in text:
@@ -831,6 +850,30 @@ class TalkScreen(Screens):
                 if parent.outside or parent.dead or parent.ID==cat.ID:
                     return ""
                 text = text.replace("y_p", str(parent.name))
+            if "t_p_positive" in text:
+                if len(cat.inheritance.get_parents()) == 0:
+                    return ""
+                parent = Cat.fetch_cat(choice(cat.inheritance.get_parents()))
+                if parent.outside or parent.dead or parent.ID==game.clan.your_cat.ID:
+                    return ""
+                relations = cat.relationships.get(parent.ID)
+                if not relations:
+                    return ""
+                if relations.platonic_like < 10:
+                    return ""
+                text = text.replace("t_p_positive", str(parent.name))
+            if "t_p_negative" in text:
+                if len(cat.inheritance.get_parents()) == 0:
+                    return ""
+                parent = Cat.fetch_cat(choice(cat.inheritance.get_parents()))
+                if parent.outside or parent.dead or parent.ID==game.clan.your_cat.ID:
+                    return ""
+                relations = cat.relationships.get(parent.ID)
+                if not relations:
+                    return ""
+                if relations.dislike < 20:
+                    return ""
+                text = text.replace("t_p_negative", str(parent.name))
             if "t_p" in text:
                 if len(cat.inheritance.get_parents()) == 0:
                     return ""
@@ -862,7 +905,24 @@ class TalkScreen(Screens):
             if "t_m" in text:
                 if cat.mate is None or len(cat.mate) == 0 or cat.ID in game.clan.your_cat.mate:
                     return ""
-                text = text.replace("t_m", str(Cat.fetch_cat(choice(cat.mate)).name))
+                mate1 = Cat.fetch_cat(choice(cat.mate))
+                if mate1.outside or mate1.dead:
+                    return ""
+                text = text.replace("t_m", str(mate1.name))
+            if "t_ka" in text:
+                if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
+                    return ""
+                kit = Cat.fetch_cat(choice(cat.inheritance.get_children()))
+                if kit.moons < 12 or kit.outside or kit.dead:
+                    return ""
+                text = text.replace("t_ka", str(kit.name))
+            if "t_kk" in text:
+                if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
+                    return ""
+                kit = Cat.fetch_cat(choice(cat.inheritance.get_children()))
+                if kit.moons >= 6 or kit.outside or kit.dead:
+                    return ""
+                text = text.replace("t_kk", str(kit.name))
             if "t_k" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
@@ -885,10 +945,18 @@ class TalkScreen(Screens):
                         return ""
                 text = text.replace("n_r1", str(random_cat1.name))
                 text = text.replace("n_r2", str(random_cat2.name))
+            if "r_c" in text:
+                random_cat = choice(self.get_living_cats())
+                counter = 0
+                while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID:
+                    if counter == 30:
+                        return ""
+                    random_cat = choice(self.get_living_cats())
+                    counter +=1
+                text = text.replace("r_c", str(random_cat.name))
             if "_" in text:
                 print(f"_ found in {text}")
                 return ""
-             
         except Exception as e:
             print(e)
             print("ERROR: could not replace abbrv.")
@@ -896,3 +964,4 @@ class TalkScreen(Screens):
 
 
         return text
+    

@@ -2360,7 +2360,8 @@
         [
             "Ello y_c. I'm just looking at the stars. I know that Starclan is up there- somewhere, but, are they really there? What do you think?",
             "I guess that makes sense...",
-            "What do I think? I think it's a lot more complex than simply, dead cats who haunt the living. When I look up, I get this feeling. A feeling of safety, that somehow I know I'm going to be alright. Even when I make mistakes, I'll get up again. And they will cheer me on.",
+            "What do I think? I think it's a lot more complex than simply, dead cats who haunt the living. When I look up, I get this feeling. A feeling of safety, that somehow I know I'm going to be alright.",
+            "Even when I make mistakes, I'll get up again. And they will cheer me on.",
             "I feel like I'm glowing, that this is where I'm supposed to be. "
         ]
     ],
@@ -3125,7 +3126,8 @@
             "See this, y_c? This is called a mossball and you should remember that! You bat it around with your paws like this, see? And you use it to play really fun games! You're going to love it!",
             "[r_c snickers and reminds t_c that you're a newborn, far younger than they are and that you probably don't understand a word they said. t_c puffs out their little chest.]",
             "Well, yeah, I know that! But I thought that maybe they'd like to see one for the first time because then that way they'll like playing games with me!",
-            "[r_c states that it's a nice gesture and lovely thought but maybe y_p wouldn't want their kittens playing with such a big toy until you're a little older. y_p laughs it off and pushes the ball towards t_c and asks if they want to play.]",
+            "[r_c states that it's a nice gesture and lovely thought but maybe y_p wouldn't want their kittens playing with such a big toy until you're a little older.]",
+            "[y_p laughs it off and pushes the ball towards t_c and asks if they want to play.]",
             "Really? YES!",
             "[You squint as you watch your loving parent paw the ball back and forth, your whiskers twitch eagerly, maybe when you're older this will be a fun game! You will remember this.]"
         ]
@@ -3282,7 +3284,8 @@
         [
             "[You hear the soft pitter-patter of small paw steps near the entrance of your den. You turn and see t_c holding a large mouse by the tail, looking ecstatic as they drag the creature into the den.]",
             "Special delivery! One freshly caught mouse, straight from the fresh-kill pile!",
-            "Can you believe it? I'm finally doing real apprentice jobs! r_a said that I could help them give out fresh kill to the elders and anyone else who is too busy to get some, and they even turned it into a competition. Right now I'm beating them by a landslide!",
+            "Can you believe it? I'm finally doing real apprentice jobs!",
+            "r_a said that I could help them give out fresh kill to the elders and anyone else who is too busy to get some, and they even turned it into a competition. Right now I'm beating them by a landslide!",
             "[You should probably have a word with r_a's mentor about this.]"
         ]
     ],
@@ -3348,7 +3351,7 @@
         [
             "[t_c looks at you critically from the entrance of the nursery.]",
             "Hey, r_q, is it normal that y_c can't really walk or speak yet? When I was their age, I was already learning the Warrior Code and hunting leaves.",
-            "[r_q assures them that yes, it is normal, and no, t_c certainly was not a super-newborn.]"
+            "[r_q assures them that yes, it is normal, and no, y_c certainly is not a super-newborn.]"
         ]
     ],
     "newborn_silly_warrior": [
@@ -3369,6 +3372,61 @@
         ],
         [
             "When you're older, I'll show you the BEST spots for spying on the warriors."
+        ]
+    ],
+    "cool_kit_1": [
+        [
+            "Any",
+            "cool",
+            "leaffall",
+            "forest"
+        ],
+        [
+            "Hey, y_c! Look, look!",
+            "r_w taught me this!",
+            "[t_c eyes the sky before leaping up at a falling leaf, swatting it from the air with playful glee.]",
+            "[It already seems like t_c is going to be a great hunter!]"
+        ]
+    ],
+    "cool_kit_3": [
+        [
+            "no_kit",
+            "cool",
+            "random_cat"
+        ],
+        [
+            "[The other kits are gathered around t_c, seemingly enthralled at their every word.]",
+            "[They seem to be repeating a story they heard from r_e.]",
+            "... And then, when the first light shone in the morning, there was no trace of the cat ever having been there!",
+            "[For their age, they're shockingly eloquent.]",
+            "[You wonder how that skill will serve them as they grow older.]"
+        ]
+    ],
+    "cool_kit_4": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[t_c is giving a performance in the middle of the clearing, singing and dancing their little heart out.]",
+            "... From once before and now onwards, as a Clan we strive forwards, we push on, and this is the c_nClan cats' soooong!",
+            "[As soon as they finish, seemingly the entire Clan explodes into cheers and applause, praising what a talented young cat t_c is.]",
+            "[t_c is certainly not lacking in supporters!]"
+        ]
+    ],
+    "cool_kit_5": [
+        [
+            "Any",
+            "cool",
+            "brooding",
+            "unlawful",
+            "non-related"
+        ],
+        [
+            "Psh, can you believe some kits still play moss-ball? That game is, like, totally for babies.",
+            "I grew out of moss-ball moons ago. Now, every kit who knows what's what is playing Catch the Mouse.",
+            "What? You still like moss-ball, y_c?",
+            "... You must not be very popular, huh?"
         ]
     ]
 }

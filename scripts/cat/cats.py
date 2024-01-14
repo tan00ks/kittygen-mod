@@ -25,7 +25,6 @@ from scripts.game_structure import image_cache
 from scripts.event_class import Single_Event
 from .thoughts import Thoughts
 from scripts.cat_relations.inheritance import Inheritance
-from scripts.game_structure.windows import RetireScreen
 
 
 class Cat():
@@ -222,6 +221,11 @@ class Cat():
         self.no_mates = False
         self.no_retire = False
         self.backstory_str = ""
+        self.courage = 0
+        self.compassion = 0
+        self.intelligence = 0
+        self.empathy = 0
+        self.did_activity = False
         
         self.prevent_fading = False  # Prevents a cat from fading.
         self.faded_offspring = []  # Stores of a list of faded offspring, for family page purposes.
@@ -1291,12 +1295,15 @@ class Cat():
 
     def one_moon(self):
         """Handles a moon skip for an alive cat. """
-        
+        if self.status == "kitten" and self.moons > 5:
+            print("something's wrong")
         
         old_age = self.age
         self.moons += 1
         if self.moons == 1 and self.status == "newborn":
             self.status = 'kitten'
+        elif self.moons == 0 and self.status == "kitten":
+            self.status = 'newborn'
         self.in_camp = 1
         
         if self.exiled or self.outside:
@@ -1857,17 +1864,24 @@ class Cat():
 
     def not_working(self):
         """returns True if the cat cannot work, False if the cat can work"""
-        not_working = False
         for illness in self.illnesses:
             if self.illnesses[illness]['severity'] != 'minor':
-                not_working = True
-                break
+                return True
         for injury in self.injuries:
             if self.injuries[injury]['severity'] != 'minor':
-                not_working = True
-                break
-        return not_working
+                return True
+        return False
 
+    def not_work_because_hunger(self):
+        """returns True if the only condition, why the cat cannot work is because of starvation"""
+        non_minor_injuries = [injury for injury in self.injuries if self.injuries[injury]['severity'] != 'minor']
+        if len(non_minor_injuries) > 0:
+            return False
+        non_minor_illnesses = [illness for illness in self.illnesses if self.illnesses[illness]['severity'] != 'minor']
+        if "starving" in non_minor_illnesses and len(non_minor_illnesses) == 1:
+            return True
+        else:
+            return False
     
     def retire_cat(self):
         """This is only for cats that retire due to health condition"""
@@ -2814,7 +2828,8 @@ class Cat():
             with open(get_save_dir() + '/' + game.switches['clan_list'][0] + '/faded_cats/' + cat + ".json",
                       'r') as read_file:
                 cat_info = ujson.loads(read_file.read())
-        except:
+        except Exception as e:
+            print(e)
             print("ERROR: in loading faded cat")
             return False
 
@@ -3047,9 +3062,14 @@ class Cat():
                 "flirted": self.flirted if self.flirted else False,
                 "joined_df": self.joined_df if self.joined_df else False,
                 "revealed": self.revealed if self.revealed and isinstance(self.revealed, int) else 0,
-                "inventory": self.inventory if self.inventory else [],
+                "inventory": self.pelt.inventory if self.pelt.inventory else [],
                 "revives": self.revives if self.revives else 0,
-                "backstory_str": self.backstory_str if self.backstory_str else ""
+                "backstory_str": self.backstory_str if self.backstory_str else "",
+                "courage": self.courage if self.courage else 0,
+                "compassion": self.compassion if self.compassion else 0,
+                "intelligence": self.intelligence if self.intelligence else 0,
+                "empathy": self.empathy if self.empathy else 0,
+                "did_activity": self.did_activity if self.did_activity else False
             }
 
 
@@ -3065,7 +3085,7 @@ class Cat():
 class Personality():
     """Hold personality information for a cat, and functions to deal with it """
     facet_types = ["lawfulness", "sociability", "aggression", "stability"]
-    facet_range = [0, 16]
+    facet_range = [0, 15]
     
     with open("resources/dicts/traits/trait_ranges.json", "r") as read_file:
         trait_ranges = ujson.loads(read_file.read())

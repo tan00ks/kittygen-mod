@@ -31,8 +31,8 @@
             false
         ],
         "showxp": [
-            "Show exact XP",
-            "Will turn experience: proficient into experience: proficient (151)",
+            "Show exact XP and nutrition status",
+            "Will turn 'experience: proficient' into 'experience: proficient (151)'; and 'nutrition: full' into 'nutrition: full (70)'",
             false
         ],
         "random med cat": [
@@ -63,6 +63,12 @@
         "freshkill": [
             "Enable auto freshkill",
             "With this setting on, no cat will ever go hungry and hunting patrols will not be needed",
+            false
+        ],
+        
+        "all accessories": [
+            "Enable all accessories",
+            "All cats will have all accessories available in their inventory",
             false
         ]
     },

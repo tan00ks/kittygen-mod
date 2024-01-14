@@ -4,7 +4,7 @@ import threading
 import time
 from re import search as re_search
 import platform
-
+import ujson
 import pygame
 import pygame_gui
 from sys import exit
@@ -1400,7 +1400,6 @@ class DeathScreen(UIWindow):
             object_id="#leader_ceremony_button",
             container=self,
             tool_tip_text='Revive'
-
         )
         
 
@@ -1440,11 +1439,24 @@ class DeathScreen(UIWindow):
                 game.clan.your_cat.df = False
                 game.clan.your_cat.dead_for = 0
                 game.clan.your_cat.moons+=1
-                game.clan.add_to_clan(game.clan.your_cat)
                 game.clan.your_cat.update_mentor()
+                if game.clan.your_cat.outside:
+                    game.clan.add_to_clan(game.clan.your_cat)
+                if game.clan.your_cat.ID in game.clan.starclan_cats:
+                    game.clan.starclan_cats.remove(game.clan.your_cat.ID)
+                if game.clan.your_cat.ID in game.clan.darkforest_cats:
+                    game.clan.darkforest_cats.remove(game.clan.your_cat.ID)
+                if game.clan.your_cat.moons >= 6 and "kit" in str(game.clan.your_cat.name):
+                    game.clan.your_cat.status_change(game.clan.your_cat.status)
+
                 game.clan.your_cat.thought = "Is surprised to find themselves back in the Clan"
                 game.last_screen_forupdate = None
                 game.switches['window_open'] = False
+                with open("resources/dicts/events/lifegen_events/revival.json", "r") as read_file:
+                    revival_json = ujson.loads(read_file.read())['revival']
+                
+                game.next_events_list.append(Single_Event(choice(revival_json), 'alert'))
+                game.switches['cur_screen'] = "events screen"
                 self.begin_anew_button.kill()
                 self.pick_path_message.kill()
                 self.mediator_button.kill()

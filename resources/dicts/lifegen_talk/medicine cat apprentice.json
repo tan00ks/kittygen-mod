@@ -546,7 +546,6 @@
     "assertivemedapp_tokit": [
         [
             "kitten",
-            "neutral",
             "non-related",
             "assertive",
             "silly",
@@ -864,14 +863,17 @@
             "silly"
         ],
         [
-            "[The medicine cat asked you to meet t_c in the medicine den at sun-high so that they could practice their check-up skills. However, when you enter the den, you notice that the medicine cat is nowhere in sight, and t_c has fashioned a bunch of dark, crumbling plants onto their pelt so thickly that you almost can't see their fur. They're sitting very still in the corner of the den, so you try to greet them, assuming they just didn't see you walk in.]",
+            "[The medicine cat asked you to meet t_c in the medicine den at sun-high so that they could practice their check-up skills.]",
+            "[However, when you enter the den, you notice that the medicine cat is nowhere in sight ...]",
+            "[ ... and t_c has fashioned a bunch of dark, crumbling plants onto their pelt so thickly that you almost can't see their fur.]",
+            "[They're sitting very still in the corner of the den, so you try to greet them, assuming they just didn't see you walk in.]",
             "Shh! I'm a bush, can't you tell?",
             "If I'm a bush, then maybe the herbs won't see the cats coming, and they'll grow more!"
         ]
     ],
     "silly_medapp_gathering": [
         [
-            "Any",
+            "no_kit",
             "silly"
         ],
         [
@@ -1518,6 +1520,53 @@
         [
             "I never expected kittens to be this small when they're born. They're like a little pebble... that meows.",
             "...this one's a very cute pebble."
+        ]
+    ],
+    "neurotic_app4": [
+        [
+            "no_kit",
+            "neurotic",
+            "upstanding",
+            "random_cat"
+        ],
+        [
+            "Gah, stupid, stupid, so stupid, t_c ...",
+            "Wuh - y_c? How long have you been standing there?",
+            "Why was I talking to myself ...?",
+            "*Sigh* It's, like, the dumbest thing ever. t_mn gave me this surprise assessment today, and I totally flunked it!",
+            "How could I have answered that yarrow is the best treatment for a toothache? It doesn't even make any sense!",
+            "I just know that t_mn is still laughing at me ... the whole Clan probably is.",
+            "[You tell t_c not to be so hard on themself.]",
+            "But, if I'm not hard on myself, then how will I ever become stronger?",
+            "I refuse to be an embarrassment to my Clan and mentor. I'll pass that assessment next time ... Whatever it takes!"
+        ]
+    ],
+    "neurotic_app2": [
+        [
+            "no_kit",
+            "neurotic",
+            "random_cat",
+            "trust"
+        ],
+        [
+            "[t_c watches tm_n apprehensively from across camp.]",
+            "Do you think tm_n even likes me?",
+            "It seems like, every new skill they try and teach me, I always seem to mess it up somehow ...",
+            "I just hope I'm not making them look like a bad mentor."
+        ]
+    ],
+    "you_starving_5": [
+        [
+            "any",
+            "you_starving"
+        ],
+        [
+            "Oh, good morning, y_c.",
+            "[You look over to see t_c coming over to you, a bundle of herbs wrapped in a leaf in their mouth. They gently place the package down next to you.]",
+            "Listen, I've noticed that... well you're not doing okay. This starvation is awful for the body and the mind. I've been thinking about it since yesterday, and I decided to make some herb bundles.",
+            "They're normally for traveling, but I suppose in a morbid sense this is its own kind of adventure. Please will you eat them? I've made a bundle for all the cats that need it, so you don't need to worry that you're taking herbs off of someone else.",
+            "In case you're wondering, it's a mixture of honey, chamomile and willow herb, and wrapped in a laurel leaf.",
+            "... there we go. Thank you y_c. Hopefully there will be more fresh-kill soon."
         ]
     ]
 }

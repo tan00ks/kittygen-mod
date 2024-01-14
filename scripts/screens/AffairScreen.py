@@ -13,7 +13,6 @@ from .Screens import Screens
 from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
-from scripts.cat.sprites2 import Sprites2, spriteSize
 from scripts.cat.pelts import Pelt
 from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton, UIRelationStatusBar
@@ -233,6 +232,8 @@ class AffairScreen(Screens):
     def adjust_txt(self, txt, affair_cat):
         txt = txt.replace("a_n", str(affair_cat.name))
         random_mate = Cat.fetch_cat(choice(game.clan.your_cat.mate))
+        while random_mate.dead or random_mate.outside:
+            random_mate = Cat.fetch_cat(choice(game.clan.your_cat.mate))
         txt = txt.replace("m_n", str(random_mate.name))
         random_warrior = Cat.fetch_cat(choice(game.clan.clan_cats))
         counter = 0

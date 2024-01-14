@@ -13,7 +13,6 @@ from .Screens import Screens
 from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
-from scripts.cat.sprites2 import Sprites2, spriteSize
 from scripts.cat.pelts import Pelt
 from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton, UIRelationStatusBar
@@ -96,6 +95,7 @@ class ChooseRebornScreen(Screens):
                                                      scale(pygame.Rect((300, 50), (1000, 80))),
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
+        self.selected_cat = None
         # self.info = pygame_gui.elements.UITextBox("If an apprentice is 6 moons old and their mentor is changed, they "
         #                                           "will not be listed as a former apprentice on their old mentor's "
         #                                           "profile. An apprentice's mentor can have an influence on their "
@@ -290,7 +290,7 @@ class ChooseRebornScreen(Screens):
         self.exit_screen()
         game.cur_events_list.clear()
         game.clan.your_cat = new_mentor
-        if game.clan.your_cat.status not in ['kitten', 'apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+        if game.clan.your_cat.status not in ['newborn', 'kitten', 'apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
             game.clan.your_cat.w_done = True
         game.switches['cur_screen'] = "events screen"
 

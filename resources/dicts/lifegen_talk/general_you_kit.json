@@ -210,7 +210,8 @@
     "introspective_to_NB_2": [
         [
             "Newborn",
-            "Introspective"
+            "Introspective",
+            "non-related"
         ],
         [
             "Hi, little one. You must be y_c.",
@@ -1510,7 +1511,8 @@
         [
             "What are you doing here, y_c? You shouldn't be here... I just need time alone, please.",
             "What's it like? It feels like it's eating me up from the inside, tearing me apart, ripping me open, swallowing me whole. This hole, this pit, it's agonising. But- that's the cost to lose someone you love.",
-            "With love, comes loss, that's the price we pay. And it's so worth it. Because if we could do it again, we would, and wouldn't change a thing. To love is both a blessing and a curse. Don't let the fear of losing someone stop you from loving them, ever. Cherish every moment, every fight, every breath.",
+            "With love, comes loss, that's the price we pay. And it's so worth it. Because if we could do it again, we would, and wouldn't change a thing. To love is both a blessing and a curse. Don't let the fear of losing someone stop you from loving them, ever.",
+            "Cherish every moment, every fight, every breath.",
             "Thank you for visiting me, y_c. You remind me so much of them, thank you... Now run off and play, and please, y_c, never stop loving those around you. Kin or clanmate."
         ]
     ],
@@ -1674,8 +1676,7 @@
             "kitten",
             "assertive",
             "cool",
-            "non-related",
-            "platonic_like"
+            "non-related"
         ],
         [
             "Hey, pipsqueak! Sure, I'll play a game!",
@@ -1692,8 +1693,7 @@
             "kitten",
             "assertive",
             "cool",
-            "silly",
-            "platonic_like"
+            "silly"
         ],
         [
             "[t_c notices you sneaking up on a feather and drops down beside you, waggling their haunches.]",
@@ -1747,6 +1747,163 @@
         [
             "Aw, you're so adorable! My old housefolk were right, newborn kittens really are like potatoes...",
             "Let's get you back to the nursery, little one!"
+        ]
+    ],
+    "cool_elder": [
+        [
+            "cool",
+            "silly",
+            "unabashed",
+            "newborn"
+        ],
+        [
+            "[t_c accidentally steps on you after you have managed to wriggle your way out of the nursery.]",
+            "Oh, StarClan! I'm sorry, y_c, didn't see ya there.",
+            "[They gently pick you up by the scruff and move you back to your den.]"
+        ]
+    ],
+    "grieving": [
+        [
+            "grieving",
+            "newborn"
+        ],
+        [
+            "[t_c can't help but smile looking at your antics in the nursery.]"
+        ]
+    ],
+    "newborn_fromupstanding": [
+        [
+            "newborn",
+            "upstanding",
+            "non-related"
+        ],
+        [
+            "A new kit?",
+            "Hmm ... How will this factor into my twenty-moon plan?",
+            "I suppose they'll be grown in six moons ... I could take them on as my apprentice ... raise them into a strong and capable member of c_nClan ...",
+            "Then, l_n would have to recognize my greatness!",
+            "Just you wait, y_c. You and I are gonna do big things together!"
+        ]
+    ],
+    "newborn_fromcool": [
+        [
+            "newborn",
+            "cool",
+            "non-related"
+        ],
+        [
+            "Wow, is that the most beautiful little kit you've ever seen, or what?",
+            "Sort of reminds me of myself, at that age ... Hah!"
+        ]
+    ],
+    "newborn_fromunabahsed": [
+        [
+            "newborn",
+            "unabashed",
+            "non-related"
+        ],
+        [
+            "Oh, I'm great with kits! Outta the way! Let me see!",
+            "... Haha! Yep, that's a little warrior if I've ever seen one!",
+            "Hello there, little y_c! I can already tell you and me are gonna be fast friends."
+        ]
+    ],
+    "newborn_frombrooding": [
+        [
+            "newborn",
+            "non-related",
+            "dislike"
+        ],
+        [
+            "Hmph. Great. Yet another mouth to feed.",
+            "Whatever ... Not my business, not getting involved."
+        ]
+    ],
+    "newborn_dislike": [
+        [
+            "newborn",
+            "non-related",
+            "dislike",
+            "you_outsiderroots",
+            "you_half-Clan",
+            "you_orphaned",
+            "you_abandoned"
+        ],
+        [
+            "... So, are we just letting anyone into the Clan now, or ...?"
+        ]
+    ],
+    "newborn_introspective": [
+        [
+            "newborn",
+            "introspective"
+        ],
+        [
+            "The miracle of life never ceases to amaze me ...",
+            "So many forces, so many variables, all culminating in perfect harmony to produce one beautiful living, breathing thing.",
+            "Ah, I guess all this is to say ... Welcome to the world, y_c.",
+            "c_nClan's newest little miracle."
+        ]
+    ],
+    "newborn_brooding": [
+        [
+            "newborn",
+            "brooding",
+            "non-related"
+        ],
+        [
+            "Hmph. Anyone who thinks these things are cute must be delusional."
+        ]
+    ],
+    "stable_kit_younewborn_1": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Wowza, look at y_c! Aww, they're so tiny, like a miniature version of you, y_p!",
+            "I hope they grow up big and strong.",
+            "Big and strong like me! Maybe strongerer than me... maybe??? No nevermind, I want to be the strongerest!"
+        ]
+    ],
+    "stable_kit_younewborn_2": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "Little tiny baby! Little tiny baby! Every kitty in the clan look at this little tiny baby!!!",
+            "[You look up and slowly nod your head along to the strange tune t_c sings.]",
+            "Yippee! See, I can sing! Y_c thinks so! Hey t_s did you see that? HEY! Don't shake your head at me! If y_c thinks I can sing then they must be right!"
+        ]
+    ],
+    "stable_kit_younewborn_3": [
+        [
+            "newborn",
+            "random_cat",
+            "stable"
+        ],
+        [
+            "[t_c trots into the nursery and drops a mossball into the nest.]",
+            "See this, y_c? This is called a mossball and you should remember that! You bat it around with your paws like this, see? And you use it to play really fun games! You're going to love it!",
+            "[r_c snickers and reminds t_c that you're a newborn, far younger than they are and that you probably don't understand a word they said. t_c puffs out their little chest.]",
+            "Well, yeah, I know that! But I thought that maybe they'd like to see one for the first time because then that way they'll like playing games with me!",
+            "[r_c states that it's a nice gesture and lovely thought but maybe y_p wouldn't want their kittens playing with such a big toy until you're a little older. y_p laughs it off and pushes the ball towards t_c and asks if they want to play.]",
+            "Really? YES!",
+            "[You squint as you watch your loving parent paw the ball back and forth, your whiskers twitch eagerly, maybe when you're older this will be a fun game! You will remember this.]"
+        ]
+    ],
+    "stable_kit_younewborn_4": [
+        [
+            "newborn",
+            "stable"
+        ],
+        [
+            "... Y'know... I think...",
+            "I think the nursery is going to get a little crowded here with more of us... It will be very noisy when you get a little older and I don't really want that...",
+            "[t_c looks up at r_q and with a blunt expression asks,]",
+            "Can we get rid of it? I don't want it.",
+            "[The queen scolds the kitten for their behaviour and escorts them out of the den to find their parents to tell them. You don't understand what's going on but judging by the glare of the queen- it can't be good...]"
         ]
     ]
 }

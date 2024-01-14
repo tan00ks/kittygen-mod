@@ -454,11 +454,11 @@ class Romantic_Events():
 
         if become_mate:
             if cat_from.ID == game.clan.your_cat.ID or cat_to.ID == game.clan.your_cat.ID:
-                if cat_from.ID == game.clan.your_cat.ID:
-                    game.switches['new_mate'] = cat_to
-                else:
-                    game.switches['new_mate'] = cat_from
                 if not game.switches['window_open']:
+                    if cat_from.ID == game.clan.your_cat.ID:
+                        game.switches['new_mate'] = cat_to
+                    else:
+                        game.switches['new_mate'] = cat_from
                     MateScreen("events screen")
             else:
                 cat_from.set_mate(cat_to)
@@ -511,6 +511,9 @@ class Romantic_Events():
     @staticmethod
     def check_if_new_mate(cat_from, cat_to):
         """Checks if the two cats can become mates, or not. Returns: boolean and event_string"""
+        if not cat_from or not cat_to:
+            return False, None
+
         become_mates = False
         young_age = ['newborn', 'kitten', 'adolescent']
         if not cat_from.is_potential_mate(cat_to):
@@ -561,12 +564,12 @@ class Romantic_Events():
         if not become_mates:
             return False, None
 
-        if poly:
-            print("----- POLY-POLY-POLY", cat_from.name, cat_to.name)
-            print(cat_from.mate)
-            print(cat_to.mate)
-        else:
-            print("BECOME MATES")
+        # if poly:
+        #     print("----- POLY-POLY-POLY", cat_from.name, cat_to.name)
+        #     print(cat_from.mate)
+        #     print(cat_to.mate)
+        # else:
+        #     print("BECOME MATES")
 
         mate_string = Romantic_Events.prepare_relationship_string(mate_string, cat_from, cat_to)
 

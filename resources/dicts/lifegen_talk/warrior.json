@@ -111,15 +111,6 @@
             "You again? Haven't you done enough?"
         ]
     ],
-    "warrior_2293": [
-        [
-            "murder",
-            "Any"
-        ],
-        [
-            "You killed them, didn't you?"
-        ]
-    ],
     "Introspective_warrior": [
         [
             "any",
@@ -290,18 +281,6 @@
             "You were distracted during training today, is everything alright? I know it's been rough lately, but.. you're doing very good, you know that?",
             "You caught so much prey, won so many mock battles, gave so much back to the clan..",
             "I'm proud of you, little one. I'm sure d_c is too."
-        ]
-    ],
-    "brooding_gen5_9": [
-        [
-            "no_kit",
-            "brooding",
-            "introspective"
-        ],
-        [
-            "l_n ... What do you think of them?",
-            "Their leadership style, the choices they've made ... Would you have done it differently, if you were in that position?",
-            "I'm just curious. What you think of who's in charge could reveal a lot about your character."
         ]
     ],
     "warrior231": [
@@ -912,29 +891,6 @@
             "Do we still even count as family anymore?"
         ]
     ],
-    "assertive_parent4_4": [
-        [
-            "assertive",
-            "platonic_like",
-            "sweet",
-            "upstanding",
-            "stable",
-            "kit",
-            "apprentice",
-            "warrior",
-            "mediator apprentice",
-            "mediator",
-            "medicine cat apprentice",
-            "medicine cat",
-            "queen's apprentice",
-            "queen",
-            "random_cat"
-        ],
-        [
-            "Sorry, y_c! No time to talk right now, I just got a task from d_n.",
-            "I'll be sure to catch up with you some other time, though!"
-        ]
-    ],
     "assertive_parent4_5": [
         [
             "assertive",
@@ -949,33 +905,15 @@
             "I'll be sure to catch up with you some other time, though!"
         ]
     ],
-    "assertive_parent4_6": [
-        [
-            "from_adopted_kit",
-            "from_kit",
-            "kitten",
-            "assertive"
-        ],
-        [
-            "Hehe, quit trying to fix my fur, y_c!",
-            "I'm not a kit anymore, I know how to do it myself!"
-        ]
-    ],
     "assertive_parent4_7": [
         [
             "from_adopted_kit",
-            "from_kit",
-            "kitten",
+            "from_your_kit",
             "warrior",
             "deputy",
             "leader",
             "apprentice",
             "assertive",
-            "sibling",
-            "adopted_sibling",
-            "half sibling",
-            "from_parent",
-            "adopted_parent",
             "platonic_like",
             "greenleaf",
             "newleaf",
@@ -988,19 +926,6 @@
             "We don't get to see as much of each other lately. It'd mean a lot to me!",
             "You'll go? Yay!!!",
             "I'll go gather everyone else up. It'll be great!"
-        ]
-    ],
-    "assertivewarrior_mediatorapp1": [
-        [
-            "kitten",
-            "from_adopted_kit",
-            "from_kit",
-            "platonic_like",
-            "assertive"
-        ],
-        [
-            "[Seeing the bold, daring, fierce cat that t_c has grown into fills your heart with pride.]",
-            "[Could they really have been your kit in the nursery a few moons ago?]"
         ]
     ],
     "assertivewarrior_mediatorapp1_2": [
@@ -1052,7 +977,8 @@
             "medicine cat",
             "assertive",
             "silly",
-            "upstanding"
+            "upstanding",
+            "they_younger"
         ],
         [
             "Hey, y_c ... is it really true that you can talk to StarClan?",
@@ -1065,7 +991,6 @@
         [
             "medicine cat",
             "platonic_like",
-            "romantic_like",
             "assertive",
             "sweet",
             "unlawful",
@@ -1075,22 +1000,6 @@
         [
             "Hey, y_c ... do you ever get lonely sleeping here in the medicine den all by yourself? I know I would ...",
             "Tell you what, if you ever get scared or cold in the night, just come over to my den. You can sleep in my nest, with me. Okay?"
-        ]
-    ],
-    "assertive_tokit5": [
-        [
-            "kitten",
-            "dislike",
-            "assertive",
-            "cool",
-            "unlawful",
-            "neutral",
-            "non-related"
-        ],
-        [
-            "Hey, mouse-brain! Watch where you're going!",
-            "Wait, I recognize you. You're one of the new kits, right? Shouldn't you be in the nursery?",
-            "Hmph. Whatever. Just stay outta the real warriors' way, before someone squishes you."
         ]
     ],
     "assertive_tokit4": [
@@ -1156,7 +1065,8 @@
             "platonic_like",
             "assertive",
             "silly",
-            "random_cat"
+            "random_cat",
+            "they_younger"
         ],
         [
             "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon, you get magic powers!",
@@ -1182,12 +1092,7 @@
             "Any",
             "assertive",
             "cool",
-            "they_clanfounder",
             "they_clanborn",
-            "they_outsiderroots",
-            "they_half-Clan",
-            "they_orphaned",
-            "they_abandoned",
             "newleaf",
             "greenleaf",
             "leaffall"
@@ -1223,13 +1128,10 @@
             "Any",
             "neutral",
             "dislike",
-            "neutral",
             "assertive",
             "cool",
             "brooding",
-            "sibling",
-            "adopted_sibling",
-            "half sibling"
+            "sibling"
         ],
         [
             "... Who are you?",
@@ -1252,14 +1154,11 @@
         [
             "Any",
             "dislike",
-            "neutral",
             "assertive",
             "cool",
             "unabashed",
             "unlawful",
-            "sibling",
-            "half sibling",
-            "adopted_sibling"
+            "sibling"
         ],
         [
             "Look, just because we're siblings doesn't mean that we're, like, friends, or anything.",
@@ -1270,7 +1169,6 @@
         [
             "Any",
             "dislike",
-            "neutral",
             "assertive",
             "cool",
             "unabashed",
@@ -1322,8 +1220,8 @@
     "assertive_8": [
         [
             "warrior",
-            "assertive",
-            "neutral"
+            "apprentice",
+            "assertive"
         ],
         [
             "Hey, don't think I didn't see you bring down that catch earlier today! Nice work!",
@@ -1349,13 +1247,7 @@
             "mediator apprentice",
             "assertive",
             "random_cat",
-            "platonic_like",
-            "comfort",
-            "trust",
-            "from_parent",
-            "from_mate",
-            "sibling",
-            "adopted_sibling"
+            "platonic_love"
         ],
         [
             "Tch. Did you see what a snake-heart r_c was acting like earlier? And over a piece of prey, no less!",
@@ -1404,8 +1296,7 @@
             "unlawful",
             "silly",
             "unabashed",
-            "adopted_sibling",
-            "half sibling"
+            "adopted_sibling"
         ],
         [
             "*Huff* *Huff*",
@@ -1432,24 +1323,6 @@
             "[t_c clumsily attempts to reorganize the pile, breaking several pieces in the process.]",
             "There! Good as new ... kinda. Heh. Sorry, again.",
             "Be on the lookout for that mouse for me, will ya? Come find me if you see it again."
-        ]
-    ],
-    "assertive_15": [
-        [
-            "elder",
-            "assertive",
-            "cool",
-            "silly",
-            "unlawful",
-            "platonic_like",
-            "romantic_like",
-            "from_mate"
-        ],
-        [
-            "Hey, furbag. I brought you something!",
-            "[r_c lays a colorful feather at your paws.]",
-            "I know this is your favorite color, and you miss exploring the territory. So I knew I just had to bring it to you.",
-            "Yeah, yeah, don't get all soft on me, hehe. Wanna grab a meal together?"
         ]
     ],
     "assertivewarrior_leader5": [
@@ -1564,7 +1437,8 @@
             "brooding",
             "unabashed",
             "unlawful",
-            "dislike"
+            "dislike",
+            "they_sameage"
         ],
         [
             "Hehe. Of course you'd never leave the nursery, y_c.",
@@ -1586,17 +1460,6 @@
             "I know compromise has its place, but you'd say you'd really forsake your values - the values of this clan - just so all of us can just laze around on our haunches and never have to risk anything real?",
             "I don't think so. I fight for what I believe in. No matter what it costs.",
             "Maybe think about that the next time you try to make a compromise with the enemy."
-        ]
-    ],
-    "assertivewarrior_mediatorapp": [
-        [
-            "mediator apprentice",
-            "assertive"
-        ],
-        [
-            "Man, you're insightful for an apprentice, y_c!",
-            "When I was your age, all I thought about was smashing stuff and chasing after my crushes. But now, here you are! Sorting out problems with cats who've been around ten times longer than you!",
-            "That must take a lot of discipline. The whole clan is proud of you!"
         ]
     ],
     "assertivewarrior_mediatorapp1_3": [
@@ -1626,20 +1489,6 @@
             "Whoa! That's so cool!!! I've always wanted to explore the other territories, but I've never been allowed.",
             "Is it true that o_cClan cats can swim like fish? Or that their territory is full of snakes?",
             "[You and t_c have a long conversation about the other clans. With each detail you share, their eyes grow bigger and bigger.]"
-        ]
-    ],
-    "assertive_mediatorapp3": [
-        [
-            "mediator apprentice",
-            "assertive",
-            "unabashed",
-            "brooding"
-        ],
-        [
-            "y_c, I think that peace is a noble pursuit, and all, but don't you think that there's some cases where conflict is necessary?",
-            "What about standing up for what's right? What about fighting for justice and fairness? You're still just an apprentice. You have a lot to learn about clan life.",
-            "And, from what I've learned, sometimes the true only way to settle a dispute is with teeth and claws.",
-            "No matter what your mentor might tell you."
         ]
     ],
     "assertivewarrior_mediatorapp5": [
@@ -1750,22 +1599,6 @@
             "Heh, look at me, getting all wise ... Just my opinion, is all."
         ]
     ],
-    "assertive_warrior_or_elder_1": [
-        [
-            "apprentice",
-            "platonic_like",
-            "assertive",
-            "sweet",
-            "you_introspective",
-            "you_neurotic",
-            "you_brooding",
-            "you_upstanding"
-        ],
-        [
-            "You're so insightful for your age, y_c!",
-            "I wish I were as smart as you when I was an apprentice ... it might've saved me a lot of trouble! Heh."
-        ]
-    ],
     "assertive_warrior9": [
         [
             "apprentice",
@@ -1776,19 +1609,6 @@
             "Heads up, y_c! Moss in the elders' den needs changing!",
             "Guess being a warrior's not always fighting battles and scaring off kittypets, huh?",
             "But there's still plenty of that, too, if you're lucky. Hehehe."
-        ]
-    ],
-    "assertive_warrior_or_elder1": [
-        [
-            "apprentice",
-            "assertive",
-            "cool",
-            "silly"
-        ],
-        [
-            "Working hard, y_c? Or, is it more like hardly working? Hehe.",
-            "Y'know, it's good to contribute to the clan, but make sure you take some time to grow up, too. Working isn't everything. Now's the time for you to get out and explore!",
-            "*Sigh* I sorta miss those days myself ..."
         ]
     ],
     "sweet_warrior_1": [
@@ -2264,7 +2084,7 @@
             "What is it now?! After what happened out there I don't want to-",
             "Oh! Erm...sorry y_c. Thought you were someone else for a moment.",
             "I don't mean to be so prickly, it's just something that happened on a patrol earlier really bugged me. Do you mind if I talk about it?",
-            "So me and a few others were out on a hunting patrol, and we spotted an o_clan cat cross right over the border! Can you believe that?",
+            "So me and a few others were out on a hunting patrol, and we spotted an o_cClan cat cross right over the border! Can you believe that?",
             "They claimed that they had been stalking some prey before it went over our border, so that made it theirs. And get this, the rest of my patrol agreed with them!",
             "How could some cat have such little respect for the rules and still get away with it? At this rate, the other clans will be prancing all over our territory faster than you can say 'mouse!'"
         ]
@@ -2635,6 +2455,61 @@
         [
             "There's the talk of the camp! Ferocious y_c.",
             "[t_c boops your nose and giggles when you let out an annoyed meow.]"
+        ]
+    ],
+    "cool_5": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[In the middle of a sparring session, t_c instinctively hides their face behind their paws.]",
+            "Gah! Not my beautiful face!",
+            "[In the end, t_c's face comes out untouched ... though, the maneuver did leave many of their vital organs unprotected.]",
+            "[Seems they don't exactly have their priorities in order.]"
+        ]
+    ],
+    "stable_warrior_01": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "y_c, Why is your head drooping? Remember that when you walk to keep you chin up and eyes straight.",
+            "With you head hanging low it leaves you open to attack, and if that were to happen, that would not be good. No! Absolutely not! That would be just terrible!",
+            "So please, for my sake and for the sake of c_nClan, pick yourself up, shake off whatever- this is and get back to work!",
+            "[You watch in confusion as t_c struts away, their head held high.]",
+            "[They walk for a while in a strong march but stop midway through the clearing, a look of hesitation on their face. They bolt back and skid to a stop before you.]",
+            "I'm so sorry y_c, I didn't mean to be so harsh! I take it all back, I swear! I just wanted to sound tough but then I felt so bad!",
+            "...Don't get me wrong, the head trick is helpful but obviously when we're out of camp, there's no need to be scared here... Is there?"
+        ]
+    ],
+    "stable_warrior_02": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "Wake up. Wake up. Wake up. Wake up. Wake up. Wake up. Wake up.",
+            "I swear to Starclan y_c, you can't just fall asleep in at the camp entrance, heck, what are you even doing here?",
+            "You were chasing a bug and then fell asleep???",
+            "[t_c doesn't look too convinced, their gaze shifting back to a small stick beside you, they frown slightly... Funny, why does your head hurt a little???]",
+            "Yeah... Let's go find r_m..."
+        ]
+    ],
+    "stable_warrior_03": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "Oh! Hey y_c, can I get your advice on something? Please it will only be a moment of your time.",
+            "[You sit beside them and look down at the ferns at their paws. Green, yellow and a darker green.]",
+            "So while I was out on patrol I came across this Twoleg nest.",
+            "On the borders they have them made of wood right, these giant posts. There were strange glittery things that looked like leaves that wound up the wood and I thought that just looked so cool!",
+            "I'm going to decorate my nest a little bit in the same way and I want your advice on what looks best! So which fern?",
+            "[You point to the one of your choice and explain why. t_c's eyes light up.]",
+            "Yes! That's perfect! I love it! Great thinking y_c! Would you like to help me decorate?"
         ]
     ]
 }

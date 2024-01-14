@@ -221,22 +221,6 @@
             "You're turning into a fine member of c_nClan already."
         ]
     ],
-    "assertive_jealous1": [
-        [
-            "Any",
-            "sibling",
-            "half sibling",
-            "kitten",
-            "adopted_sibling",
-            "half sibling",
-            "dislike",
-            "assertive"
-        ],
-        [
-            "What did I do in a past life to wind up related to you, y_c?",
-            "Must've been really terrible."
-        ]
-    ],
     "assertive_parent4": [
         [
             "assertive",
@@ -669,10 +653,8 @@
     ],
     "assertivemediator_5_3": [
         [
-            "from_mentor",
-            "mediator apprentice",
+            "Any",
             "assertive",
-            "leaffall",
             "random_cat"
         ],
         [
@@ -1094,7 +1076,7 @@
         ],
         [
             "Oh, what's up, y_c? Is there an issue you need me to solve?",
-            "You just want to hang out? Well, I don't see why not. I'm leaving to go to o_c soon, but I have some time to chat.",
+            "You just want to hang out? Well, I don't see why not. I'm leaving to go to o_cClan soon, but I have some time to chat.",
             "What's on your mind then, little fella?"
         ]
     ],

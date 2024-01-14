@@ -455,7 +455,7 @@
             "Hm. I've been thinking about the role I've chosen, being a queen.",
             "The role of a permanent queen is fairly recent, clan history speaking. Especially in comparison to roles like the medicine cat. And some were less...",
             "Compassionate towards the role we perform, despite its importance.",
-            "Some viewed us as wasting clan resources. A long time ago, the parent of the Queen's role, a cat called Ferncloud, received some... uncomfortable comments from individuals related to her choice.", 
+            "Some viewed us as wasting clan resources. A long time ago, the parent of the Queen's role, a cat called Ferncloud, received some... uncomfortable comments from individuals related to her choice.",
             "However, we do more than sit and play with kits, we help in ways medicine cats cannot. We're formally trained to recognise signs of illness in kits and Queens, and to provide comfort in stressful situations.",
             "I believe our constant presence with the kits helps us to realise something's wrong and get help before... the worst happens.",
             "Just make sure to know that no matter what, everyone has their role to play. Don't be a cat who believes they're more important than those whose role is less flashy."
@@ -896,7 +896,7 @@
         [
             "Is it really true that you're allowed to just ... travel between the clans as you please?",
             "Whoa! That's so cool!!! I've always wanted to explore the other territories, but I've never been allowed.",
-            "Is it true that o_c cats can swim like fish? Or that their territory is full of snakes?",
+            "Is it true that o_cClan cats can swim like fish? Or that their territory is full of snakes?",
             "[You and t_c have a long conversation about the other clans. With each detail you share, their eyes grow bigger and bigger.]"
         ]
     ],
@@ -1345,7 +1345,8 @@
         [
             "Oh hey there y_c, didn't think I'd find you in here all by yourself. How about you go out into the clearing and play? There's plenty of space out there!",
             "Just don't feel like it huh? Well, How about I tell you a story instead?",
-            "[t_c begins a long and detailed story about how the Warrior Code was created and why it applies to all clans across the territories. They trail off about halfway through and watch as you roll around on the nursery floor with a ball of moss clutched between your paws]",
+            "[t_c begins a long and detailed story about how the Warrior Code was created and why it applies to all clans across the territories.]",
+            "[They trail off about halfway through and watch as you roll around on the nursery floor with a ball of moss clutched between your paws]",
             "... Are you even listening to me right now?"
         ]
     ],
@@ -1356,7 +1357,8 @@
             "Any"
         ],
         [
-            "[Throughout the day, t_c has been entertaining the kits with various different games such as Hunt the Pebble, Hide n' Seek, Guess the Sound, and more. This latest game seemed to involve t_c pretending like an enemy warrior from o_cClan.]",
+            "[Throughout the day, t_c has been entertaining the kits with various different games such as Hunt the Pebble, Hide n' Seek, Guess the Sound, and more.",
+            "This latest game seems to involve t_c pretending like an enemy warrior from o_cClan.]",
             "Gah! You've killed me! I'm no match for c_nClan kits!",
             "[t_c stumbled back, dramatically flopping onto their side as the kits squealed with delight.]"
         ]
@@ -1368,10 +1370,407 @@
             "no_kit"
         ],
         [
-            "Watch out y_c!","[You quickly duck out of the way as t_c stumbles past, dragging a few large tree branches. They carefully set the branches down before turning to you.]",
+            "Watch out y_c!",
+            "[You quickly duck out of the way as t_c stumbles past, dragging a few large tree branches. They carefully set the branches down before turning to you.]",
             "Sorry about that! Who knew tree branches could be so heavy? They're super useful though.",
-            "Right now, I'm planning on building the kits a little playpen outside the nursery. Of course, they can still roam around camp under supervision, but I thought it would be nice to have. It could help introduce younger kits to life outside the nursery, or provide safe place to put the kits during a meeting.",
+            "Right now, I'm planning on building the kits a little playpen outside the nursery. Of course, they can still roam around camp under supervision, but I thought it would be nice to have.",
+            "It could help introduce younger kits to life outside the nursery, or provide safe place to put the kits during a meeting.",
             "Whatever the case is, I'm going to need a lot more branches. Want to help out?"
+        ]
+    ],
+    "silly_queen_stares": [
+        [
+            "Any",
+            "silly",
+            "no_kit",
+            "clan_has_kits",
+            "trust"
+        ],
+        [
+            "Something that really bumbles my bees is the stares that certain cats will give me whenever I walk across camp.",
+            "Like, is it because I care for the kits? If they really think that's not a worthwhile job, they can do it themselves and come back and tell me just how easy it is!"
+        ]
+    ],
+    "silly_queen_1": [
+        [
+            "Any",
+            "silly",
+            "no_kit",
+            "clan_has_kits"
+        ],
+        [
+            "I love being a queen, y_c!",
+            "Whenever I have ideas I get to get all the kits involved in them, too.",
+            "Like, yesterday, I had the idea of building a rock fort for the frogs. So I turned it into a nursery competition!",
+            "Whoever made the coolest rock fort as decided by votes got to have a version of it put up by the river.",
+            "r_k won. And now r_w owes me a mouse, hehe."
+        ]
+    ],
+    "silly_queen_fishClan": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "Oh, y_c! Look at you!",
+            "So tiny... so small... like a little fish.",
+            "You better not organize your fish Clan against me!"
+        ]
+    ],
+    "silly_queen_quietkit": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "You're getting bigger, yanno?",
+            "Soon, you're gonna be triple my size! Pretty soon, YOU'RE gonna be the one defending ME from the badgers and big scary predators!",
+            "I'll be good if that's the case. I'll go to bed on time so Quietkit won't get me, but you have to promise the same!"
+        ]
+    ],
+    "silly_queen_stoneclan": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "Have you been playing StoneClan with r_k lately?",
+            "I did see you playing it with them yesterday! It seems like a really fun game, you've gotta teach me someday!"
+        ]
+    ],
+    "silly_queen_kit4": [
+        [
+            "kitten",
+            "silly"
+        ],
+        [
+            "y_c! Gather r_k and all of the other kits!",
+            "I came up with this big story game for us all to play. Basically, I have a story, but you kits are all characters in it.",
+            "And you get to decide how it ends! It's a choose-your-own-adventure game that we get to play with our minds!"
+        ]
+    ],
+    "silly_queen_app1": [
+        [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "silly"
+        ],
+        [
+            "y_c, how's it been?",
+            "You're getting so old! I'm really proud of you. I know you got it in ya to do real good things."
+        ]
+    ],
+    "sweet_queen_1": [
+        [
+            "newborn",
+            "sweet"
+        ],
+        [
+            "Greetings, little friend! Welcome to the world. Let's get you situated, shall we?",
+            "There you go... A little moss bundle to cuddle with. Ah- seeing little ones like you taking their first steps into the world will never stop being magical."
+        ]
+    ],
+    "sweet_queen_2": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "-t_c lets out a soft yawn, stretching as you tug at their tail for attention-",
+            "Oh, good evening, y_c! What is it that you need, littlest one?",
+            "You had a nightmare...? Come here, tell me all about it... You don't ever need to worry, c_nClan will always keep you safe."
+        ]
+    ],
+    "sweet_queen_3": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "Hello there! I'm back from my walk-",
+            "Now now y_c, settle down. I'm happy to see you too, but you don't need to run circles around the den, hehe.",
+            "What all happened whilst I was gone? I hope nothing too chaotic... You didn't get hurt, did you?"
+        ]
+    ],
+    "sweet_queen_4": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "Greetings y_c! How was your day so far? Are you ready to settle into bed? It's getting late, so I'd prefer you not stay up too late.",
+            "Oh, you heard a story from the Elders? How about you tell me about it whilst I fix up your nest, alright?"
+        ]
+    ],
+    "sweet_queen_5": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! You're filthy! Is everything alright?? Nothing happened, did it?",
+            "Oh, it's just from training? I see... m_n is filthy too?",
+            "-t_c begins to gently laugh- Well, you both can go get your hindquarters cleaned!"
+        ]
+    ],
+    "sweet_queen_6": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "sweet"
+        ],
+        [
+            "Oh hello, y_c! How has everything been going lately?",
+            "Training's been a bit rough? ... I see... Come here for a second.",
+            "Here, have something to eat and take a quick rest. If m_n bugs you about it, I'll talk to them, alright?"
+        ]
+    ],
+    "sweet_queen_7": [
+        [
+            "apprentice",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! How has your day been today, are you remembering to rest?",
+            "Do you think you could take a moment and watch the kits? I need to go and get r_k's toy, they knocked it out of camp by accident."
+        ]
+    ],
+    "sweet_queen_8": [
+        [
+            "queen's apprentice",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! Was it you that reorganized the toys?",
+            "Wonderful job! It looks amazing! You can take the rest of the day off, I'll take it from here! You'll be an amazing queen in no time, I bet."
+        ]
+    ],
+    "sweet_queen_9": [
+        [
+            "medicine cat apprentice",
+            "sweet"
+        ],
+        [
+            "[You run up to t_c and bury your nose in their fur, just needing a break after all the stress. They seem surprised, but gently rest their paw on your back, comforting you like a parent would.]",
+            "It's gonna be okay, y_c. You're doing amazing, and we're all super proud of you... just try to breathe, okay?"
+        ]
+    ],
+    "sweet_queen_10": [
+        [
+            "mediator apprentice",
+            "sweet"
+        ],
+        [
+            "[You've been struggling a lot with learning how to mediate, and you approach t_c to ask for advice.]",
+            "Oh, me? I'm not a mediator but I can do my best if you wish.",
+            "The most important thing is to stay calm, and to listen to both sides. Don't let your emotions get to you.",
+            "Sometimes, all a cat needs is someone to speak to, that's something I've learnt with kits and the same is true for adults."
+        ]
+    ],
+    "sweet_queen_11": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "sweet"
+        ],
+        [
+            "[t_c is humming, laying down as the younger cats seem to rest nearby. Even the apprentices seem to be here for nap time.]",
+            "Hmhm... hmhm... hm-",
+            "[They spot you, giving you a warm smile after a moment and gesturing for you to join.]",
+            "[Seems even adults are welcome to enjoy nap time.]"
+        ]
+    ],
+    "sweet_queen_12": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! Hello! How have you- ouch!",
+            "[They look down at r_k, who seems to be biting onto their tail.]",
+            "Oh you... could you please try to be a bit more gentle? You can be rough with toys, but not with cats."
+        ]
+    ],
+    "sweet_queen_13": [
+        [
+            "warrior",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Hey, y_c? I know I'm suppose to be focused on the Nursery, but r_a has been seeming really stressed out lately.",
+            "I just saw them leave camp after hitting a rock, it nearly hit me in the head!",
+            "I'm really worried... I hope that was just a game gone wrong."
+        ]
+    ],
+    "sweet_queen_14": [
+        [
+            "medicine cat",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "y_c! It's time for r_k's moonly checkup!",
+            "[t_c places the little kit at your paws, quietly meowing some gentle encouragement to the little kits.]",
+            "Don't mind me, we're still learning that the Medicine Cat's den isn't a scary place."
+        ]
+    ],
+    "sweet_queen_15": [
+        [
+            "mediator",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You see t_c exiting the Nursery, the inhabitants of the Nursery following.]",
+            "Hello y_c! Would you mind doing a little class on what mediators do?",
+            "r_k was really curious, I think we might have a future mediator on our paws!"
+        ]
+    ],
+    "sweet_queen_16": [
+        [
+            "queen",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! There you are! I've been looking everywhere for you.",
+            "[They greet you with a friendly headbump, purring happily.]",
+            "I've got the best idea for new nursery decorations! What do you think of putting little flowers over there?"
+        ]
+    ],
+    "sweet_queen_17": [
+        [
+            "deputy",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! Could I speak to you for just a moment?",
+            "I've been monitoring r_k's progress lately, and they seem to take a really strong interest in what I do.",
+            "If you could... would you speak to them about it? I wouldn't mind having another Queen to help out."
+        ]
+    ],
+    "sweet_queen_18": [
+        [
+            "deputy",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[t_c is proudly walking around camp with r_k in tow, seems they've been decorating.]",
+            "[The kitten bounds towards you, snuggling a flower within your fur.]",
+            "Oh no! We don't need to decorate the deputy!",
+            "[They are doing their best to be a good role model, but you can tell they're trying very hard not to giggle at the kit's shenanigans.]"
+        ]
+    ],
+    "sweet_queen_19": [
+        [
+            "deputy",
+            "sweet"
+        ],
+        [
+            "[You've known t_c to be a wonderful Queen, a truly kind soul with a genuine love for what they do.]",
+            "[What surprises you is seeing them saddened, staring wistfully at the nursery they call home.]",
+            "Ah, y_c! I'm sorry if I disturbed you, I just...",
+            "I love doing what I do, making the kits laugh or feel supported, giving them fun games or decorating the nursery...",
+            "I just... worry. Once they're grown, will what I did matter? Will they get hurt, and will they blame me for not being good enough?",
+            "It's been a long time since I've had these worries, but...",
+            "I want to be the best queen I can be for them. I know I'm a bit too kind for my own good, but...",
+            "[You reassure them that they're one of the best queens you've ever known, that they're genuinely kind and really care for what they do.]",
+            "Thank you, I really needed that...",
+            "You're a wonderful deputy y_c, you're going to do great things. I just... hope you know that."
+        ]
+    ],
+    "sweet_queen_20": [
+        [
+            "leader",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You enter the nursery, blinking in surprise as r_k seems to jump up from their nap.]",
+            "Oh, y_c! I wasn't expecting to see you this evening. What's on your mind?",
+            "[You explain that you're just checking on everyone to see how they're doing.]",
+            "Well, everyone in here is doing as well as we could be! We've even done a little decorating today."
+        ]
+    ],
+    "sweet_queen_21": [
+        [
+            "leader",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You overhear t_c speaking with r_k about the different roles a cat can have.]",
+            "You could be a warrior, just like r_w. They fight and defend the clan, whilst going out hunting and doing similar daily tasks.",
+            "You could be a mediator or a medicine cat, both roles are integral to the safety and well-being of the clan, physical and mental.",
+            "Or, maybe, you could be a queen like me, and help foster and raise the future of the clan.",
+            "[The kitten looks thoughtful for a moment before they announce that they're going to be a rock.]",
+            "Well, I bet you'll be the best rock the clan has ever seen.",
+            "[They glance at you with a joyful and amused look in their eyes. It doesn't take the wisdom of a leader to see how important their job is to them!]"
+        ]
+    ],
+    "sweet_queen_22": [
+        [
+            "leader",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[t_c walks into the den with a serious look on their face, them gently nudging a kit along with them.]",
+            "y_c, can we have a moment of your time?",
+            "[You sit up, glancing at them with a confused and worried expression.]",
+            "[r_k explains they saw a rogue lurking outside the camp, and that they seemed dangerous.]",
+            "I saw the rogue too... I hope they're not in need of help... Do you think you could check that out?"
+        ]
+    ],
+    "sweet_queen_23": [
+        [
+            "elder",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You'd been kitsitting r_k for t_c, they'd seemed very tired lately but were too kind to ask for help.]",
+            "[As they return from their nap, you can already tell they seem much better.]",
+            "Thank you very kindly, y_c. I really needed that break."
+        ]
+    ],
+    "sweet_queen_24": [
+        [
+            "elder",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You were going to go get yourself some fresh kill when you trip, about to fall.]",
+            "[You feel t_c rush to your side, preventing you from falling and holding you up.]",
+            "I've gotcha y_c, don't worry. Hey, r_k, do you think you could get that mouse from the fresh kill pile?",
+            "[As the kitten runs to go get you something to eat, they gently guide you to where you wanted to go.]"
+        ]
+    ],
+    "sweet_queen_25": [
+        [
+            "elder",
+            "sweet"
+        ],
+        [
+            "Hm, y_c? What's up?",
+            "Oh, sure thing, I can bring everyone in the nursery over for storytime! Thank you, it's very kind of you to do this.",
+            "You stay right there, I'll be back in a few moments!"
         ]
     ]
 }

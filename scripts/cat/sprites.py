@@ -64,7 +64,6 @@ class Sprites():
         sprites_x -- Number of sprites horizontally (default: 3)
         sprites_y -- Number of sprites vertically (default: 3)
         """
-
         group_x_ofs = pos[0] * sprites_x * self.size
         group_y_ofs = pos[1] * sprites_y * self.size
         i = 0
@@ -87,6 +86,8 @@ class Sprites():
                             pygame.HWSURFACE | pygame.SRCALPHA
                         )
                     new_sprite = self.blank_sprite
+                while f'{name}{i}' in self.sprites:
+                    i+=1
                 self.sprites[f'{name}{i}'] = new_sprite
                 i += 1
 
@@ -108,7 +109,8 @@ class Sprites():
 
         del width, height # unneeded
 
-        for x in [ 'lineart', 'singlecolours', 'speckledcolours', 'tabbycolours',
+        for x in [
+            'lineart', 'singlecolours', 'speckledcolours', 'tabbycolours',
             'whitepatches', 'eyes', 'eyes2', 'skin', 'scars', 'missingscars',
             'collars', 'bellcollars', 'bowcollars', 'nyloncollars',
             'bengalcolours', 'marbledcolours', 'rosettecolours', 'smokecolours', 'tickedcolours', 
@@ -116,8 +118,38 @@ class Sprites():
             'maskedcolours', 
             'shadersnewwhite', 'lineartdead', 'tortiepatchesmasks', 
             'medcatherbs', 'lineartdf', 'lightingnew', 'fademask',
-            'fadestarclan', 'fadedarkforest', 'flower_accessories', 'plant2_accessories', 'snake_accessories', 'smallAnimal_accessories', 'deadInsect_accessories', 'aliveInsect_accessories', 'fruit_accessories', 'crafted_accessories', 'tail2_accessories'
-            ]:
+            'fadestarclan', 'fadedarkforest',
+
+            #OHDANS
+            'flower_accessories', 'plant2_accessories', 'snake_accessories', 'smallAnimal_accessories', 'deadInsect_accessories',
+            'aliveInsect_accessories', 'fruit_accessories', 'crafted_accessories', 'tail2_accessories',
+
+            #WILDS
+            'wildacc', 'wildaccextra', 'wildacc2', 'wildacc2extra',
+
+            #SUPERARTSI
+            'superartsi',
+
+            #coffee
+            'coffee',
+
+            'eragona',
+
+            "crowns",
+
+            "wooddragon",
+
+            "springwinter",
+
+            "raincoat",
+
+            "poptabs",
+
+            "fazbear",
+
+            "bears"
+
+        ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
                 self.spritesheet(f"sprites/aprilfools{x}.png", x)
             else:
@@ -321,6 +353,9 @@ class Sprites():
                 ["TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY", "TOETRAP", "SNAKE",
                  "LEGBITE", "NECKBITE", "FACE"]):
             self.make_group('scars', (a, 2), f'scars{i}')
+        for a, i in enumerate(
+                ["HINDLEG", "BACK", "QUILLSIDE", "SCRATCHSIDE", "TOE", "BEAKSIDE", "CATBITETWO", "SNAKETWO", "FOUR"]):
+            self.make_group('scars', (a, 3), f'scars{i}')
         # missing parts
         for a, i in enumerate(
                 ["LEFTEAR", "RIGHTEAR", "NOTAIL", "NOLEFTEAR", "NORIGHTEAR", "NOEAR", "HALFTAIL", "NOPAW"]):
@@ -377,8 +412,9 @@ class Sprites():
             self.make_group('nyloncollars', (a, 1), f'collars{i}')
         for a, i in enumerate(["PINKNYLON", "PURPLENYLON", "MULTINYLON", "INDIGONYLON"]):
             self.make_group('nyloncollars', (a, 2), f'collars{i}')
-            
-        # ohdan's accessories
+
+
+            # ohdan's accessories
         for a, i in enumerate([
             "DAISY", "DIANTHUS", "BLEEDING HEARTS", "FRANGIPANI", "BLUE GLORY", "CATNIP FLOWER", "BLANKET FLOWER", "ALLIUM", "LACELEAF", "PURPLE GLORY"]):
             self.make_group('flower_accessories', (a, 0), f'acc_flower{i}')
@@ -430,20 +466,98 @@ class Sprites():
             "SEAWEED", "DAISY CORSAGE"]):
             self.make_group('tail2_accessories', (a, 0), f'acc_tail2{i}')
 
-# get the width and height of the spritesheet
-lineart = pygame.image.load('sprites/lineart.png')
-width, height = lineart.get_size()
-del lineart # unneeded
+       # wild's accessories
+        for a, i in enumerate([
+            "LILYPAD", "LARGE DEATHBERRY", "SMALL DEATHBERRY", "ACORN2", "PINECONE", "VINE"]):
+            sprites.make_group('wildacc', (a, 0), f'acc_herbs{i}',sprites_x=3,sprites_y=3)
+            sprites.make_group('wildaccextra', (a, 0),
+                               f'acc_herbs{i}',sprites_x=3,sprites_y=2)
+        for a, i in enumerate(
+                ["CHERRY2", "BLEEDING HEARTS", "SHELL PACK", "FERNS", "GOLD FERNS"]):
+            sprites.make_group('wildacc', (a, 1), f'acc_herbs{i}',sprites_x=3,sprites_y=3)
+            sprites.make_group('wildaccextra', (a, 1),
+                               f'acc_herbs{i}',sprites_x=3,sprites_y=2)
+        for a, i in enumerate(["WHEAT", "BLACK WHEAT"]):
+            sprites.make_group('wildacc', (a, 2), f'acc_herbs{i}',sprites_x=3,sprites_y=3)
+            sprites.make_group('wildaccextra', (a, 2),
+                               f'acc_herbs{i}',sprites_x=3,sprites_y=2)    
 
-# if anyone changes lineart for whatever reason update this
-if width / 3 == height / 7:
-    spriteSize = width / 3
-else:
-    spriteSize = 50 # default, what base clangen uses
-    print(f"lineart.png is not 3x7, falling back to {spriteSize}")
-    print(f"if you are a modder, please update scripts/cat/sprites.py and do a search for 'if width / 3 == height / 7:'")
+        for a, i in enumerate([
+            "BERRIES", "CLOVERS", "CLOVER", "MOSS", "FLOWER MOSS", "MUSHROOMS"]):
+            sprites.make_group('wildacc2', (a, 0), f'acc_herbs{i}',sprites_x=3,sprites_y=3)
+            sprites.make_group('wildacc2extra', (a, 0),
+                               f'acc_herbs{i}',sprites_x=3,sprites_y=2)
+        for a, i in enumerate(
+                ["LARGE LUNA", "LARGE COMET", "SMALL LUNA", "SMALL COMET", "LADYBUG"]):
+            sprites.make_group('wildacc2', (a, 1), f'acc_wild{i}', sprites_x=3,sprites_y=3)
+            sprites.make_group('wildacc2extra', (a, 1),
+                               f'acc_wild{i}',sprites_x=3,sprites_y=2)
+        for a, i in enumerate(["MUD PAWS", "ASHY PAWS"]):
+            sprites.make_group('wildacc2', (a, 2), f'acc_wild{i}',sprites_x=3,sprites_y=3)
+            sprites.make_group('wildacc2extra', (a, 2),
+                               f'acc_wild{i}',sprites_x=3,sprites_y=2)
+        
+        # superartsi's accessories
 
-del width, height # unneeded
+        for a, i in enumerate([
+            "ORANGEBUTTERFLY", "BLUEBUTTERFLY", "BROWNPELT", "GRAYPELT", "BROWNMOSSPELT", "GRAYMOSSPELT"]):
+            self.make_group('superartsi', (a, 0), f'acc_wild{i}')
+        for a, i in enumerate([
+            "FERN", "MOREFERN", "BLEEDINGHEART", "LILY"]):
+            self.make_group('superartsi', (a, 1), f'acc_wild{i}')
+
+        # coffee's accessories
+        for a, i in enumerate([
+            "PINKFLOWERCROWN", "YELLOWFLOWERCROWN", "BLUEFLOWERCROWN", "PURPLEFLOWERCROWN"]):
+            self.make_group('coffee', (a, 0), f'acc_flower{i}')
+
+        # eragona rose's accessories
+
+        for a, i in enumerate([
+            "REDHARNESS", "NAVYHARNESS", "YELLOWHARNESS", "TEALHARNESS", "ORANGEHARNESS", "GREENHARNESS"]):
+            self.make_group('eragona', (a, 0), f'collars{i}')
+        for a, i in enumerate([
+            "MOSSHARNESS", "RAINBOWHARNESS", "BLACKHARNESS", "BEEHARNESS", "CREAMHARNESS"]):
+            self.make_group('eragona', (a, 1), f'collars{i}')
+        for a, i in enumerate([
+            "PINKHARNESS", "MAGENTAHARNESS", "PEACHHARNESS", "VIOLETHARNESS"]):
+            self.make_group('eragona', (a, 2), f'collars{i}')
+
+        for a, i in enumerate([
+            "YELLOWCROWN", "REDCROWN", "LILYPADCROWN"]):
+            self.make_group('crowns', (a, 0), f'acc_wild{i}')
+
+        for a, i in enumerate([
+            "WOODDRAGON"]):
+            self.make_group('wooddragon', (a, 0), f'acc_wild{i}')
 
 
-sprites = Sprites(spriteSize)
+        for a, i in enumerate(["CHERRYBLOSSOM","TULIPPETALS","CLOVERFLOWER","PANSIES","BELLFLOWERS","SANVITALIAFLOWERS","EGGSHELLS","BLUEEGGSHELLS","EASTEREGG","FORSYTHIA"]):
+            self.make_group('springwinter', (a, 0), f'acc_wild{i}')
+        for a, i in enumerate([
+            "MINTLEAF","STICKS","SPRINGFEATHERS","SNAILSHELL","MUD","CHERRYPLUMLEAVES","CATKIN","HONEYCOMB","FLOWERCROWN","LILIESOFTHEVALLEY"]):
+            self.make_group('springwinter', (a, 1), f'acc_wild{i}')
+        for a, i in enumerate([
+            "STRAWMANE","MISTLETOE","REDPOINSETTIA","WHITEPOINSETTIA","COTONEASTERWREATH","YEWS","HEATHER","TEETHCOLLAR","DRIEDORANGE","ROESKULL"]):
+            self.make_group('springwinter', (a, 2), f'acc_wild{i}')
+        for a, i in enumerate([
+            "WOODENOAKANTLERS","WOODENBIRCHANTLERS","DOGWOOD","GRAYWOOL","BLACKWOOL","CREAMWOOL","WHITEWOOL","FIRBRANCHES","CORALBELLS","SLIVERDUSTPLANT"]):
+            self.make_group('springwinter', (a, 3), f'acc_wild{i}')
+
+        for a, i in enumerate([
+            "RAINCOAT"]):
+            self.make_group('raincoat', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "POPTABS"]):
+            self.make_group('poptabs', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "FAZBEAR"]):
+            self.make_group('fazbear', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "WHITEBEAR", "PANDA", "BEAR", "BROWNBEAR"]):
+            self.make_group('bears', (a, 0), f'acc_crafted{i}')
+# CREATE INSTANCE
+sprites = Sprites()

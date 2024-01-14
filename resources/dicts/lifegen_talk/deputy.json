@@ -450,40 +450,14 @@
     ],
     "assertivewarrior_mediatorapp1": [
         [
-            "kitten",
+            "Any",
             "from_adopted_kit",
-            "from_kit",
+            "from_your_kit",
             "platonic_like"
         ],
         [
             "[It's hard to believe your own kit is in charge of you now ...]",
             "[The sight of them standing alongside l_n fills your heart with pride!]"
-        ]
-    ],
-    "assertivewarrior_mediatorapp1_2": [
-        [
-            "kitten",
-            "from_adopted_kit",
-            "from_kit",
-            "platonic_like",
-            "assertive"
-        ],
-        [
-            "[Seeing the bold, daring, fierce cat that t_c has grown into fills your heart with pride.]",
-            "[Could they really have been your kit in the nursery a few moons ago?]"
-        ]
-    ],
-    "assertive_parent4_4": [
-        [
-            "from_adopted_kit",
-            "from_kit",
-            "from_kit",
-            "kitten",
-            "assertive"
-        ],
-        [
-            "Hehe, quit trying to fix my fur, y_c!",
-            "I'm not a kit anymore, I know how to do it myself!"
         ]
     ],
     "assertivewarrior_mediatorapp1_3": [
@@ -532,50 +506,6 @@
             "Hmph. Whatever. Just stay outta the real warriors' way, before someone squishes you."
         ]
     ],
-    "assertive_4": [
-        [
-            "kitten",
-            "assertive"
-        ],
-        [
-            "Whoa! Watch where you're going there, little pal! One wrong move, and you might get stepped on!",
-            "Ah, quit that, you don't need to apologize. Just be a bit more careful from now on, is all.",
-            "Or else, when you get bigger, it'll really become a problem. Hehe!"
-        ]
-    ],
-    "assertive_tokit": [
-        [
-            "kitten",
-            "assertive",
-            "unlawful"
-        ],
-        [
-            "Ah, y_c! There's the little bruiser! How're you doing? Growing up big and strong?",
-            "Y'know, at your age, I used to get into all sorts of trouble. Sneaking out of the nursery, following around the apprentices ... not to give you any ideas, or anything. Ahaha!",
-            "t_c's laugh is so loud that it almost shakes your whole body.]"
-        ]
-    ],
-    "assertive_tonewborn": [
-        [
-            "newborn",
-            "assertive"
-        ],
-        [
-            "Whoa! Hey there, little guy! Shouldn't you be in the nursery?",
-            "Hehe. You've got an adventurous spirit. I like that about you.",
-            "But for now, you gotta stay where it's safe! C'mon. Let's go back to your parents."
-        ]
-    ],
-    "assertive_tonewborn1": [
-        [
-            "newborn",
-            "assertive"
-        ],
-        [
-            "Aw ... little guy hasn't even gotten their eyes open yet!",
-            "They're gonna be a killer, though. I can already tell. See those little paws? This kit's got fight in 'em!"
-        ]
-    ],
     "assertive_tonewborn3": [
         [
             "newborn",
@@ -589,31 +519,12 @@
             "Hm ..."
         ]
     ],
-    "assertive_1": [
-        [
-            "Any",
-            "assertive",
-            "stable",
-            "upstanding",
-            "unabashed"
-        ],
-        [
-            "HEY!!! You leave them alone!",
-            "Ugh. Can you believe how cruel some cats are, y_c? A bunch of apprentices were trying to convince these two kits to sneak into a badger den ... what a bunch of mouse-brains.",
-            "No matter what, don't let anyone try to pressure you into doing something you don't think is right. Go with your gut, and stick to your own values. That's what's really important."
-        ]
-    ],
     "assertive_1_2": [
         [
             "Any",
             "assertive",
             "cool",
-            "they_clanfounder",
             "they_clanborn",
-            "they_outsiderroots",
-            "they_half-Clan",
-            "they_orphaned",
-            "they_abandoned",
             "newleaf",
             "greenleaf",
             "leaffall"
@@ -1864,6 +1775,97 @@
             "[You bat at t_c's nose with your paw.]",
             "Heh. Spirited little thing!",
             "I might have to be careful, or else y_c just might grow up and take my job! Hehe!"
+        ]
+    ],
+    "silly_deputy_plotting": [
+        [
+            "Any",
+            "silly",
+            "random_cat"
+        ],
+        [
+            "Oh, hi y_c! I had a question for you, actually.",
+            "Well... is it mean to send r_c on a border patrol if I know they don't like them?",
+            "They told me I was as helpful as a Twoleg kit chasing prey, and I'm feeling extra petty today."
+        ]
+    ],
+    "silly_deputy_weather": [
+        [
+            "Any",
+            "silly"
+        ],
+        [
+            "Morning, y_c!",
+            "Gah... or \"mourning\". The weather is miserable today, and how likely is anyone else to really want to do anything? I'm gonna have to drag these cats out of their nests by the tips of their tails!",
+            "Or, maybe I'll just let them have a free day today... Yeah, good enough. I'm going back to my nest, then. Nighty!~"
+        ]
+    ],
+    "silly_deputy_timemgmt": [
+        [
+            "Any",
+            "silly"
+        ],
+        [
+            "Oh, sometimes I hate being busy all the time! One minute I have to organize patrols, and the next I have to deal with important c_nClan business, and then go on my own patrols for the day, and who knows what else?",
+            "Seriously! I can barely manage my own day, how does l_n expect me to manage the days of everyone else? If only I had some way to visualize it all...",
+            "Oh! What if I used pebbles to represent every member of the Clan? And then dug small pits in the ground to put them in and visualize what needs to get done? y_c, let's go collect some pebbles!"
+        ]
+    ],
+    "silly_deputy_memory": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "elder",
+            "silly"
+        ],
+        [
+            "y_c, you may not be the one to ask, but how do you keep track of things like Clan politics?",
+            "I don't know how l_n expects me to do it! I don't remember what happened yesterday, let alone three moons ago!"
+        ]
+    ],
+    "silly_deputy_song": [
+        [
+            "Any",
+            "silly",
+            "they_song"
+        ],
+        [
+            "[t_c is singing. When you approach them, they don't stop, continuing to sing their song about being mostly alone in camp. Maybe they can see you... maybe they can't.]",
+            "We're mostly alone in camp, that means we can do anything!",
+            "But I'll probably just sing to myself, and maybe watch that bluebird that comes around sunhigh...",
+            "[t_c finally notices you, flying out of their pelt; they must take after that bluebird more than they thought.]",
+            "Aah- y_c! Did you, uh... need something?"
+        ]
+    ],
+    "silly_deputy_best": [
+        [
+            "apprentice",
+            "silly",
+            "from_mentor",
+            "random_cat"
+        ],
+        [
+            "Hey, y_c!",
+            "Glad to be trained by the best'a the best, huh? Even l_n has to agree, or else I wouldn't be the deputy.",
+            "[You jokingly mention yesterday, when t_c tripped over a log in front of six other cats.]",
+            "Well... almost the best. Right?",
+            "[Then, you mention the time t_c managed the daily patrols poorly and left the camp completely unguarded except for you, them, and l_n.]",
+            "Awh! I didn't know I had a mean apprentice! Whenever did that happen to you?",
+            "[You consider saying \"since the time you got lost and forgot I was with you while training and left me to wander alone until sundown,\" but decide maybe that one's really too mean.]"
+        ]
+    ],
+    "cool_5": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[In the middle of a sparring session, t_c instinctively hides their face behind their paws.]",
+            "Gah! Not my beautiful face!",
+            "[In the end, t_c's face comes out untouched ... though, the maneuver did leave many of their vital organs unprotected.]",
+            "[Seems they don't exactly have their priorities in order.]"
         ]
     ]
 }

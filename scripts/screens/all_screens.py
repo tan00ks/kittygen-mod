@@ -30,7 +30,6 @@ from .FlirtScreen import FlirtScreen
 from .ChooseRebornScreen import ChooseRebornScreen
 from .AchievementScreen import AchievementScreen
 from .MurderScreen import MurderScreen
-from .AccessoryScreen import ChangeAccessoryScreen
 from .DeputyScreen import DeputyScreen
 from .NameKitsScreen import NameKitsScreen
 from .LifeGenPatrolScreen import LifeGenPatrolScreen
@@ -38,6 +37,7 @@ from .DFPatrolScreen import DFPatrolScreen
 from .DatePatrolScreen import DatePatrolScreen
 from .AffairScreen import AffairScreen
 from .ClearingScreen import ClearingScreen
+from .QueenScreen import QueenScreen
 
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
@@ -99,11 +99,11 @@ flirt_screen = FlirtScreen('flirt screen')
 
 achivement_screen = AchievementScreen('achievement screen')
 murder_screen = MurderScreen("murder screen")
-accessory_screen = ChangeAccessoryScreen("accessory screen")
 deputy_screen = DeputyScreen("deputy screen")
 name_kits_screen = NameKitsScreen("name kits screen")
 choose_reborn_screen = ChooseRebornScreen("choose reborn screen")
 affair_screen = AffairScreen("affair screen")
+queen_screen = QueenScreen("queen screen")
 
 patrol_screen = PatrolScreen('patrol screen2')
 patrol_screen2 = LifeGenPatrolScreen('patrol screen')

@@ -802,7 +802,7 @@
             "unlawful",
             "kitten",
             "from_adopted_kit",
-            "from_kit",
+            "from_your_kit",
             "from_your_apprentice"
         ],
         [
@@ -1371,14 +1371,12 @@
         [
             "Any",
             "dislike",
-            "neutral",
             "assertive",
             "cool",
             "unabashed",
             "unlawful",
             "neurotic",
-            "kitten",
-            "from_kit"
+            "from_your_kit"
         ],
         [
             "Ugh, y_c, quit embarrassing me! I'm not a little kit anymore!",
@@ -1416,9 +1414,8 @@
             "assertive",
             "unlawful",
             "kitten",
-            "from_kit",
             "from_adopted_kit",
-            "from_kit"
+            "from_your_kit"
         ],
         [
             "Yes, y_c, I've been behaving. You don't even need to ask.",
@@ -1826,7 +1823,7 @@
         ],
         [
             "Ah- y_c! Um- I wasn't crying- I was.. mmn...",
-            "Okay... you caught me. I saw a kittypet when out on patrol earlier, and they seemed hurt and scared! So, of course, I helped them out there... but then an o_c cat started making fun of me.",
+            "Okay... you caught me. I saw a kittypet when out on patrol earlier, and they seemed hurt and scared! So, of course, I helped them out there... but then an o_cClan cat started making fun of me.",
             "They said I was soft-hearted, and that I should be a Medicine Cat or a Queen instead... Do you think so too..?",
             "Thank you for listening to the ramblings of silly ol' me... It really means a lot, you know?"
         ]
@@ -1974,7 +1971,7 @@
             "sweet"
         ],
         [
-            "y_c!! You looked so cool at the gathering!! The way you stopped the fight between the o_c warrior and r_c was so amazing! I wish it never had happened in the first place though...",
+            "y_c!! You looked so cool at the gathering!! The way you stopped the fight between the o_cClan warrior and r_c was so amazing! I wish it never had happened in the first place though...",
             "I know everyone was pretty spooked after what happened though... Are you feeling okay after it? I'd be happy to hunt for you if not!",
             "Oh right- I have training today- uhmmm- I'll do it for you after training!! Hehe, oops."
         ]
@@ -2018,7 +2015,7 @@
         ],
         [
             "Oh, you're back from the gathering, hi y_c! How was it, there wasn't anything serious, right?",
-            "Do you know how o_c's doing? Me and some of the other apprentices saw one of their apprentices and they seemed to be really struggling, I hope they're doing okay."
+            "Do you know how o_cClan's doing? Me and some of the other apprentices saw one of their apprentices and they seemed to be really struggling, I hope they're doing okay."
         ]
     ],
     "sweet_apprentice_25": [
@@ -2399,7 +2396,7 @@
             "brooding",
             "platonic_like",
             "from_your_apprentice",
-            "from_kit"
+            "from_your_kit"
         ],
         [
             "y_c. I caught this mouse today.",
@@ -2778,7 +2775,8 @@
             "stable"
         ],
         [
-            "Excuse me, y_c, could you check something for me? I got my paw jammed under a couple of roots while I was digging for a mouse. It hurts a little, but I don't think it's anything too serious but tm_n told me to get it checked out.",
+            "Excuse me, y_c, could you check something for me? I got my paw jammed under a couple of roots while I was digging for a mouse.",
+            "It hurts a little, but I don't think it's anything too serious but tm_n told me to get it checked out.",
             "...So sorry for the trouble.",
             "[you shake your head and ask to see their paw, they show you and let you turn it over in inspection. It doesn't look too bad, maybe a little bruised and matted fur.]",
             "[You tell them there's no issue, just a scratch. You instruct them to stay out of trouble and keep their weight off the paw for the rest of the day after they give it a light wash of water.]",
@@ -3219,6 +3217,18 @@
         ],
         [
             "Hehe, what a teeny guy!"
+        ]
+    ],
+    "cool_5": [
+        [
+            "Any",
+            "cool"
+        ],
+        [
+            "[In the middle of a sparring session, t_c instinctively hides their face behind their paws.]",
+            "Gah! Not my beautiful face!",
+            "[In the end, t_c's face comes out untouched ... though, the maneuver did leave many of their vital organs unprotected.]",
+            "[Seems they don't exactly have their priorities in order.]"
         ]
     ]
 }

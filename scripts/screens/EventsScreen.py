@@ -4,7 +4,7 @@ from .Screens import Screens
 import pygame
 from scripts.events import events_class
 from scripts.utility import get_living_clan_cat_count, get_text_box_theme, scale, shorten_text_to_fit
-from scripts.game_structure.image_button import IDImageButton, UIImageButton
+from scripts.game_structure.image_button import IDImageButton, UIImageButton, UISpriteButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER
 from ..cat.cats import Cat
 from ..game_structure import image_cache
@@ -45,6 +45,7 @@ class EventsScreen(Screens):
         self.events_list_box = None
         self.toggle_borders_button = None
         self.timeskip_button = None
+        self.freshkill_pile_button = None
         self.events_frame = None
         self.clan_age = None
         self.season = None
@@ -58,6 +59,7 @@ class EventsScreen(Screens):
         self.loading_window = None
         self.done_moon = False
         self.events_thread = None
+        self.you = None
 
         # Stores the involved cat button that currently has its cat profile buttons open
         self.open_involved_cat_button = None
@@ -85,12 +87,15 @@ class EventsScreen(Screens):
                 print("too much button pressing!")
         if game.switches['window_open']:
             pass
-        elif event.type == pygame_gui.UI_BUTTON_START_PRESS:
+        if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.timeskip_button and game.clan.your_cat.moons == 5 and game.clan.your_cat.status == 'kitten':
                     PickPath('events screen')
             elif event.ui_element == self.timeskip_button and (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled):
                     DeathScreen('events screen')
                     return
+            elif event.ui_element == self.you or ("you" in self.display_events_elements and event.ui_element == self.display_events_elements["you"]):
+                game.switches['cat'] = game.clan.your_cat.ID
+                self.change_screen("profile screen")
             elif event.ui_element == self.timeskip_button:
                 # Save the start time, so the loading animation can be
                 # set to only show up if timeskip is taking a good amount of time. 
@@ -102,7 +107,9 @@ class EventsScreen(Screens):
                     self.toggle_borders_button.set_text("Close Clan Borders")
                 else:
                     game.clan.closed_borders = True
-                    self.toggle_borders_button.set_text("Open Clan Borders")            
+                    self.toggle_borders_button.set_text("Open Clan Borders")
+            elif event.ui_element == self.freshkill_pile_button and game.clan.game_mode != "classic":
+                self.change_screen('clearing screen')            
             # Change the type of events displayed
             elif event.ui_element == self.all_events_button:
                 if self.event_container.vert_scroll_bar:
@@ -285,26 +292,25 @@ class EventsScreen(Screens):
 
     def screen_switches(self):
         # On first open, update display events list
-        if not self.first_opened:
-            self.first_opened = True
         self.update_display_events_lists()
-            
-        self.heading = pygame_gui.elements.UITextBox("",
-                                                     scale(pygame.Rect((200, 220), (1200, 80))),
-                                                     object_id=get_text_box_theme("#text_box_30_horizcenter"),
-                                                     manager=MANAGER)
+
+        if game.clan.game_mode != "classic":
+            self.freshkill_pile_button =  UIImageButton(scale(pygame.Rect((1270, 210), (282, 60))), "", object_id="#freshkill_pile_button"
+                                             , manager=MANAGER)
+
         self.season = pygame_gui.elements.UITextBox(f'Current season: {game.clan.current_season}',
-                                                    scale(pygame.Rect((200, 220), (1200, 80))),
+                                                    scale(pygame.Rect((600, 220), (400, 80))),
                                                     object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                     manager=MANAGER)
         self.clan_age = pygame_gui.elements.UITextBox("",
-                                                      scale(pygame.Rect((200, 280), (1200, 80))),
+                                                      scale(pygame.Rect((600, 280), (400, 80))),
                                                       object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                       manager=MANAGER)
         self.leaf = pygame_gui.elements.UITextBox("leafbare",
-                                                      scale(pygame.Rect((200, 340), (1200, 80))),
+                                                      scale(pygame.Rect((600, 340), (400, 80))),
                                                       object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                       manager=MANAGER)
+ 
         self.events_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((412, 532), (1068, 740))),
                                                         image_cache.load_image(
                                                             "resources/images/event_page_frame.png").convert_alpha()
@@ -412,6 +418,9 @@ class EventsScreen(Screens):
 
         self.timeskip_button.kill()
         del self.timeskip_button
+        if game.clan.game_mode != "classic":
+            self.freshkill_pile_button.kill()
+            del self.freshkill_pile_button
         self.all_events_button.kill()
         del self.all_events_button
         self.ceremonies_events_button.kill()
@@ -448,8 +457,6 @@ class EventsScreen(Screens):
         del self.events_frame
         self.clan_age.kill()
         del self.clan_age
-        self.heading.kill()
-        del self.heading
         self.season.kill()
         del self.season
         self.leaf.kill()
@@ -457,7 +464,8 @@ class EventsScreen(Screens):
         self.event_container.kill()
         self.cat_icon.kill()
         del self.cat_icon
-
+        if self.you:
+            self.you.kill()
         for ele in self.display_events_elements:
             self.display_events_elements[ele].kill()
         self.display_events_elements = {}
@@ -607,12 +615,9 @@ class EventsScreen(Screens):
 
         for ele in self.display_events_elements:
             self.display_events_elements[ele].kill()
-        self.display_events_elements = {}
-        if game.clan.your_cat.moons != -1:
-            self.display_events_elements["you"] = pygame_gui.elements.UIImage(scale(pygame.Rect((1050, 200), (200, 200))),
-                                                                        pygame.transform.scale(
-                                                                            game.clan.your_cat.sprite,
-                                                                            (200, 200)), manager=MANAGER)
+        if self.you:
+            self.you.kill()
+    
         for ele in self.involved_cat_buttons:
             ele.kill()
         self.involved_cat_buttons = []
@@ -691,7 +696,14 @@ class EventsScreen(Screens):
         # Set the scroll bar to the last position it was at
         if self.event_container.vert_scroll_bar and self.scroll_height.get(self.event_display_type):
             self.event_container.vert_scroll_bar.set_scroll_from_start_percentage(self.scroll_height[self.event_display_type])
-
+        if self.you:
+            self.you.kill()
+        if game.clan.your_cat.moons != -1:
+            self.you = UISpriteButton(scale(pygame.Rect((1050, 200), (200, 200))),
+                                   game.clan.your_cat.sprite,
+                                   cat_object=game.clan.your_cat,
+                                   manager=MANAGER)
+            
     def make_cat_buttons(self, button_pressed):
         """ Makes the buttons that take you to the profile. """
 
@@ -745,6 +757,22 @@ class EventsScreen(Screens):
         self.health_events = [x for x in (game.other_events_list + game.cur_events_list) if "health" in x.types]
         self.other_clans_events = [x for x in (game.other_events_list + game.cur_events_list) if "other_clans" in x.types]
         self.misc_events = [x for x in (game.other_events_list + game.cur_events_list) if "misc" in x.types]
+
+        if self.event_display_type == "all events":
+            self.display_events = self.all_events
+        elif self.event_display_type == "ceremony events":
+            self.display_events = self.ceremony_events
+        elif self.event_display_type == "birth death events":
+            self.display_events = self.birth_death_events
+        elif self.event_display_type == "relationship events":
+            self.display_events = self.relation_events
+        elif self.event_display_type == "health events":
+            self.display_events = self.health_events
+        elif self.event_display_type == "other clans events":
+            self.display_events = self.other_clans_events
+        elif self.event_display_type == "misc events":
+            self.display_events = self.misc_events
+
 
     def make_events_container(self):
         """ In its own function so that there is only one place the box size is set"""
