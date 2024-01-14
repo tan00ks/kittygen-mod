@@ -32,6 +32,7 @@ class Cat():
     dead_cats = []
     used_screen = screen
     
+    
     ages = [
         'newborn', 'kitten', 'adolescent', 'young adult', 'adult', 'senior adult',
         'senior'
@@ -152,6 +153,8 @@ class Cat():
                 self.df = kwargs["df"]
             else:
                 self.df = False
+            if self.the_cat.ID == game.clan.demon.ID:
+                self.df = True
             if moons > 300:
                 # Out of range, always elder
                 self.age = 'senior'
@@ -164,6 +167,8 @@ class Cat():
             self.set_faded()  # Sets the faded sprite and faded tag (self.faded = True)
 
             return
+        
+   
 
         self.generate_events = GenerateEvents()
 
@@ -289,6 +294,8 @@ class Cat():
             self.backstory = 'clanborn'
         else:
             self.backstory = self.backstory
+        
+
 
         # sex!?!??!?!?!??!?!?!?!??
         if self.gender is None:
@@ -390,8 +397,10 @@ class Cat():
             Cat.insert_cat(self)
 
     def __repr__(self):
-        return "CAT OBJECT:" + self.ID
 
+        
+        return "CAT OBJECT:" + self.ID
+            
     @property
     def mentor(self):
         """Return managed attribute '_mentor', which is the ID of the cat's mentor."""
@@ -437,7 +446,7 @@ class Cat():
                 game.just_died.append(self.ID)
                 game.clan.leader_lives = 0
                 self.thought = 'Is surprised to find themselves walking the stars of Silverpelt'
-                if game.clan.instructor.df is False:
+                if game.clan.followingsc == True:
                     text = 'They\'ve lost their last life and have travelled to StarClan.'
                 else:
                     text = 'They\'ve lost their last life and have travelled to the Dark Forest.'
@@ -461,6 +470,12 @@ class Cat():
 
         if not self.outside:
             Cat.dead_cats.append(self)
+            if game.clan.followingsc==False:
+                self.df = True
+                self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
+            else:
+                self.thought = 'Is surprised to find themselves walking the stars of Silverpelt'
+                game.clan.add_to_darkforest(self)
             if self.history:
                 if self.history.murder:
                     if "is_murderer" in self.history.murder:
@@ -468,18 +483,15 @@ class Cat():
                             self.df = True
                             self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
                             game.clan.add_to_darkforest(self)
-            elif game.clan.instructor.df is False:
-                self.df = False
-                game.clan.add_to_starclan(self)
-            elif game.clan.instructor.df is True:
-                self.df = True
-                self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
-                game.clan.add_to_darkforest(self)
+            
         else:
             self.thought = "Is fascinated by the new ghostly world they've stumbled into"
             game.clan.add_to_unknown(self)
 
         return text
+
+        if the_cat.dead and the_cat.ID != game.clan.demon.ID and not the_cat.faded:
+            game.clan.add_to_darkforest
 
     def exile(self):
         """This is used to send a cat into exile. This removes the cat's status and gives them a special 'exiled'
@@ -969,7 +981,7 @@ class Cat():
         """
 
         # determine which dict we're pulling from
-        if game.clan.instructor.df:
+        if game.clan.followingsc == False:
             starclan = False
             ceremony_dict = LEAD_CEREMONY_DF
         else:
@@ -1028,7 +1040,7 @@ class Cat():
                     if kitty.ID not in game.clan.darkforest_cats:
                         continue
                 # guides aren't allowed here
-                if kitty == game.clan.instructor:
+                if kitty == game.clan.instructor or  game.clan.demon:
                     continue
                 else:
                     dead_relations.append(rel)
@@ -2374,6 +2386,7 @@ class Cat():
             inter_cat.relationships[self.ID] = Relationship(inter_cat, self)
             self.relationships[inter_cat.ID] = Relationship(self, inter_cat)
 
+
     def init_all_relationships(self):
         """Create Relationships to all current Clancats."""
         for id in self.all_cats:
@@ -2407,6 +2420,7 @@ class Cat():
                 if game.settings['random relation']:
                     if game.clan:
                         if the_cat == game.clan.instructor:
+
                             pass
                         elif randint(1, 20) == 1 and romantic_love < 1:
                             dislike = randint(10, 25)

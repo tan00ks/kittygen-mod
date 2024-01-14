@@ -1749,6 +1749,55 @@
             }
         }
     },
+
+    "#follow_df_button": 
+    {
+        "prototype": "#image_button",
+		"images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/follow_df.png"
+            },
+            "hovered_image":
+            {
+                "path": "resources/images/buttons/follow_df_hover.png"
+            },
+			"selected_image":
+            {
+                "path": "resources/images/buttons/follow_df_hover.png"
+            },
+            "disabled_image":
+            {
+                "path":"resources/images/buttons/follow_df_unavailable.png"
+            }
+        }
+    },
+
+        "#follow_sc_button": 
+    {
+        "prototype": "#image_button",
+		"images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/follow_sc.png"
+            },
+            "hovered_image":
+            {
+                "path": "resources/images/buttons/follow_sc_hover.png"
+            },
+			"selected_image":
+            {
+                "path": "resources/images/buttons/follow_sc_hover.png"
+            },
+            "disabled_image":
+            {
+                "path":"resources/images/buttons/follow_sc_unavailable.png"
+            }
+        }
+    },
+
     "#backstory_tab_button": 
     {
         "prototype": "#image_button",
