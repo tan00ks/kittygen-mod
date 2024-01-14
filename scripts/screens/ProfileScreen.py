@@ -92,6 +92,7 @@ def backstory_text(cat):
 
     return bs_display
 
+
 # ---------------------------------------------------------------------------- #
 #                               Profile Screen                                 #
 # ---------------------------------------------------------------------------- #
@@ -524,6 +525,7 @@ class ProfileScreen(Screens):
                     self.request_apprentice_button.disable()
             # if event.ui_element == self.change_accessory_button:
             #     self.change_screen("accessory screen")
+
         # Dangerous Tab
         elif self.open_tab == 'dangerous':
             if event.ui_element == self.kill_cat_button:
@@ -545,16 +547,26 @@ class ProfileScreen(Screens):
                     self.build_profile()
                     self.update_disabled_buttons_and_text()
                 if self.the_cat.dead:
-                    if self.the_cat.df is True:
+                  if self.the_cat.ID != game.clan.instructor.ID and self.the_cat.ID != game.clan.demon.ID:
+                    if self.the_cat.df:
                         self.the_cat.outside, self.the_cat.exiled = False, False
                         self.the_cat.df = False
                         game.clan.add_to_starclan(self.the_cat)
-                        self.the_cat.thought = "Is relieved to once again hunt in StarClan"
+                        self.the_cat.thought = "Is relieved to set paw in StarClan"
                     else:
                         self.the_cat.outside, self.the_cat.exiled = False, False
                         self.the_cat.df = True
                         game.clan.add_to_darkforest(self.the_cat)
                         self.the_cat.thought = "Is distraught after being sent to the Place of No Stars"
+                    
+                        
+                  if self.the_cat.ID == game.clan.demon.ID and game.clan.followingsc == True:
+                            game.clan.followingsc = False
+               
+                  elif self.the_cat.ID == game.clan.instructor.ID and not game.clan.followingsc:
+                       game.clan.followingsc = True
+             
+                
 
                 self.clear_profile()
                 self.build_profile()
@@ -803,6 +815,9 @@ class ProfileScreen(Screens):
         """Rebuild builds the cat profile. Run when you switch cats
             or for changes in the profile."""
         self.the_cat = Cat.all_cats.get(game.switches["cat"])
+        
+        if self.the_cat.dead and game.clan.demon.ID == self.the_cat.ID:
+            self.the_cat.df = True
 
         # use these attributes to create differing profiles for StarClan cats etc.
         is_sc_instructor = False
@@ -811,7 +826,7 @@ class ProfileScreen(Screens):
             return
         if self.the_cat.dead and game.clan.instructor.ID == self.the_cat.ID and self.the_cat.df is False:
             is_sc_instructor = True
-        elif self.the_cat.dead and game.clan.instructor.ID == self.the_cat.ID and self.the_cat.df is True:
+        elif self.the_cat.dead and game.clan.demon.ID == self.the_cat.ID and self.the_cat.df is True:
             is_df_instructor = True
 
         # Info in string
@@ -819,10 +834,21 @@ class ProfileScreen(Screens):
         cat_name = shorten_text_to_fit(cat_name, 425, 40)
         if self.the_cat.dead:
             cat_name += " (dead)"  # A dead cat will have the (dead) sign next to their name
+            
+
         if is_sc_instructor:
-            self.the_cat.thought = "Hello. I am here to guide the dead cats of " + game.clan.name + "Clan into StarClan."
+
+            if game.clan.followingsc == True:
+                self.the_cat.thought = "Hello. I will be guiding the cats of " + game.clan.name + "Clan into StarClan."
+            else:
+                self.the_cat.thought = "Misses watching over " + game.clan.name + "Clan"
+
         if is_df_instructor:
-            self.the_cat.thought = "Hello. I am here to drag the dead cats of " + game.clan.name + "Clan into the Dark Forest."
+            if game.clan.followingsc == True:
+                self.the_cat.thought = "Wants to drag the cats of " + game.clan.name + "Clan into the Dark Forest"
+                self.the_cat.df
+            else:
+                self.the_cat.thought = "Is picking more " + game.clan.name + "Clan cats to join them"
 
 
         self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(cat_name,
@@ -1077,30 +1103,46 @@ class ProfileScreen(Screens):
         """'Determines where the next and previous buttons point too."""
 
         is_instructor = False
+        
         if self.the_cat.dead and game.clan.instructor.ID == self.the_cat.ID:
             is_instructor = True
+            
+        is_demon = False
+        
+        if self.the_cat.dead and game.clan.demon.ID == self.the_cat.ID:
+            is_demon = True
+            
 
         previous_cat = 0
         next_cat = 0
         current_cat_found = 0
-        if self.the_cat.dead and not is_instructor and self.the_cat.df == game.clan.instructor.df and \
+        
+        if self.the_cat.dead and not is_instructor and not self.the_cat.df and \
                 not (self.the_cat.outside or self.the_cat.exiled):
             previous_cat = game.clan.instructor.ID
 
         if is_instructor:
             current_cat_found = 1
+            
+        if self.the_cat.dead and not is_demon and self.the_cat.df and \
+                not (self.the_cat.outside or self.the_cat.exiled):
+            previous_cat = game.clan.demon.ID
+
+        if is_demon:
+            current_cat_found = 1
+         
 
         for check_cat in Cat.all_cats_list:
             if check_cat.ID == self.the_cat.ID:
                 current_cat_found = 1
             else:
                 if current_cat_found == 0 and check_cat.ID != self.the_cat.ID and check_cat.dead == self.the_cat.dead \
-                        and check_cat.ID != game.clan.instructor.ID and check_cat.outside == self.the_cat.outside and \
+                        and check_cat.ID != (game.clan.instructor.ID or game.clan.demon.ID) and check_cat.outside == self.the_cat.outside and \
                         check_cat.df == self.the_cat.df and not check_cat.faded and check_cat.moons > -1:
                     previous_cat = check_cat.ID
 
                 elif current_cat_found == 1 and check_cat != self.the_cat.ID and check_cat.dead == self.the_cat.dead \
-                        and check_cat.ID != game.clan.instructor.ID and check_cat.outside == self.the_cat.outside and \
+                        and check_cat.ID != (game.clan.instructor.ID or game.clan.demon.ID) and check_cat.outside == self.the_cat.outside and \
                         check_cat.df == self.the_cat.df and not check_cat.faded and check_cat.moons > -1:
                     next_cat = check_cat.ID
                     break
@@ -2546,7 +2588,7 @@ class ProfileScreen(Screens):
         # Dangerous Tab
         elif self.open_tab == 'dangerous':
 
-            # Button to exile cat
+            # Exile/Guide/Follow button
             if self.exile_cat_button:
                 self.exile_cat_button.kill()
             if not self.the_cat.dead:
@@ -2556,22 +2598,40 @@ class ProfileScreen(Screens):
                     object_id="#exile_cat_button",
                     tool_tip_text='This cannot be reversed.',
                     starting_height=2, manager=MANAGER)
+                
                 if self.the_cat.exiled or self.the_cat.outside:
                     self.exile_cat_button.disable()
+                    
             elif self.the_cat.dead:
                 object_id = "#exile_df_button"
                 if self.the_cat.df:
                     object_id = "#guide_sc_button"
-                if self.the_cat.dead and game.clan.instructor.ID == self.the_cat.ID:
+                    
+                if game.clan.instructor.ID == self.the_cat.ID:
                     self.exile_cat_button = UIImageButton(scale(pygame.Rect((1156, 900), (344, 92))),
-                                                          "",
-                                                          object_id=object_id,
-                                                          tool_tip_text='Changing where this cat resides will change '
-                                                                        'where your Clan goes after death. ',
+                                                            "",
+                                                          object_id= "#follow_sc_button",
+                                                           tool_tip_text='Your Clan will go to Starclan'
+                                                                         ' after death.',
+                                                          
                                                           starting_height=2, manager=MANAGER)
+                    
+                    if game.clan.followingsc:    
+                        self.exile_cat_button.disable()
+                        
+                elif game.clan.demon.ID == self.the_cat.ID:
+                    self.exile_cat_button = UIImageButton(scale(pygame.Rect((1156, 900), (344, 92))),
+                                                            "",
+                                                          object_id= "#follow_df_button",
+                                                          tool_tip_text='Your Clan will go to the Dark'
+                                                                         ' forest after death.',
+                                                          starting_height=2, manager=MANAGER)
+                    if not game.clan.followingsc:    
+                        self.exile_cat_button.disable()
+                        
                 else:
                     self.exile_cat_button = UIImageButton(scale(pygame.Rect((1156, 900), (344, 92))),
-                                                          "",
+                                                          "Error",
                                                           object_id=object_id,
                                                           starting_height=2, manager=MANAGER)
             else:
@@ -2799,6 +2859,8 @@ class ProfileScreen(Screens):
             self.condition_container.kill()
 
         self.open_tab = None
+
+
 
     # ---------------------------------------------------------------------------- #
     #                               cat platforms                                  #
