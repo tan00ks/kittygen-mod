@@ -153,8 +153,6 @@ class Cat():
                 self.df = kwargs["df"]
             else:
                 self.df = False
-            if self.the_cat.ID == game.clan.demon.ID:
-                self.df = True
             if moons > 300:
                 # Out of range, always elder
                 self.age = 'senior'
@@ -470,7 +468,7 @@ class Cat():
 
         if not self.outside:
             Cat.dead_cats.append(self)
-            if game.clan.followingsc==False:
+            if game.clan.followingsc == False:
                 self.df = True
                 self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
             else:
@@ -489,9 +487,6 @@ class Cat():
             game.clan.add_to_unknown(self)
 
         return text
-
-        if the_cat.dead and the_cat.ID != game.clan.demon.ID and not the_cat.faded:
-            game.clan.add_to_darkforest
 
     def exile(self):
         """This is used to send a cat into exile. This removes the cat's status and gives them a special 'exiled'
