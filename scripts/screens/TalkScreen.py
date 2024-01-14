@@ -620,7 +620,17 @@ class TalkScreen(Screens):
             text[i] = self.adjust_txt(text[i], cat)
             if text[i] == "":
                 return ""
-
+                
+        r_c_found = False
+        for i in range(len(text)):
+            if "r_c" in text[i]:
+                r_c_found = True
+        if r_c_found:
+            alive_cats = self.get_living_cats()
+            alive_cat = choice(alive_cats)
+            while alive_cat.ID == game.clan.your_cat.ID or alive_cat.ID == cat.ID:
+                alive_cat = choice(alive_cats)
+            text = [t1.replace("r_c", str(alive_cat.name)) for t1 in text]
 
         if "grief stricken" in cat.illnesses:
             try:

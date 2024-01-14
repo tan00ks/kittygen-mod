@@ -957,7 +957,7 @@ class MakeClanScreen(Screens):
             self.elements["clan_age"] = pygame_gui.elements.UITextBox("Clan Age: ",
                                                               scale(pygame.Rect((400, 195), (200, 60))),
                                                               object_id="#text_box_30_horizcenter",
-                                                              manager=MANAGER)  
+                                                              manager=MANAGER)
         
         self.elements["small"] = UIImageButton(scale(pygame.Rect((600,100), (192, 60))), "Small", object_id="#clan_size_small", manager=MANAGER)
         self.elements["medium"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,100), (192, 60))), "Medium", object_id="#clan_size_medium", manager=MANAGER)
