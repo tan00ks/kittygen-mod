@@ -10,7 +10,6 @@ from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_al
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
-from re import sub
 from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
 
@@ -215,7 +214,7 @@ class TalkScreen(Screens):
             'respect': 30,
             'trust': 30
         }
-        
+        tags = talk["intro"] if "intro" in talk else talk[0]
         for key, value in relationship_conditions.items():
             if key in tags and cat_relationship < value:
                 return True

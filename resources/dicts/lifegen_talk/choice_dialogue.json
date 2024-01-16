@@ -1,44 +1,73 @@
 {
-    "kitten_playing1": {
+    "template": {
         "tags": [
-            "Any"
+            ""
         ],
         "intro": [
-            "[You're basking in the sun when t_c bounds up to you.]",
-            "y_c! y_c! Come play with me!"
+            ""
         ],
         "intro_choices": {
             "choice1": {
-                "text": "Play mossball",
-                "next_scene": "mossball"
+                "text": "",
+                "next_scene": ""
             },
             "choice2": {
-                "text": "Decline",
-                "next_scene": "decline"
+                "text": "",
+                "next_scene": ""
             }
         },
         "mossball": [
-            "[You have a fun time playing mossball with t_c.]",
-            "Woo!"
+            ""
         ],
         "mossball_choices": {
             "choice1": {
-                "text": "Continue playing",
-                "next_scene": "continue"
+                "text": " ",
+                "next_scene": ""
             },
             "choice2": {
-                "text": "Stop playing",
-                "next_scene": "stop"
+                "text": " ",
+                "next_scene": ""
             }
         },
         "continue": [
-            "[You continue having fun.]"
+            ""
         ],
         "stop": [
-            "[You stop playing mossball.]"
+            ""
         ],
         "decline": [
-            "[You politely decline playing with t_c.]"
+            ""
+        ]
+    },
+    "sweetchoice_1": {
+        "tags": [
+            "any",
+	        "sweet"
+        ],
+        "intro": [
+            "Oh, y_c! It's so good to see you. I hope you've been having a good evening!",
+            "Mm.. actually- do you think you could help me with something?",
+            "I've been trying to decorate the camp and I wanted to know which you prefer, purple flowers or golden flowers?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Purple flowers.",
+                "next_scene": "purple"
+            },
+            "choice2": {
+                "text": "Golden flowers.",
+                "next_scene": ""
+            }
+        },
+        "purple": [
+            "Oh, really? Let me put them up here and see how they look...",
+            "Oh, wow, they look fantastic! They make the Leader's Den look quite regal!",
+            "Thanks y_c, it means a lot!"
+        ],
+        "golden": [
+            "Oh, really? Let me put them up here and see how they look...",
+            "Oh, I see now! These golden flowers on the Medicine Cat's den really give it this bright but comforting look.",
+            "Thanks y_c, it means a lot!"
         ]
     }
 }
