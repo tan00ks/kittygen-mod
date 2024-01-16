@@ -1,0 +1,44 @@
+{
+    "kitten_playing1": {
+        "tags": [
+            "Any"
+        ],
+        "intro": [
+            "[You're basking in the sun when t_c bounds up to you.]",
+            "y_c! y_c! Come play with me!"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Play mossball",
+                "next_scene": "mossball"
+            },
+            "choice2": {
+                "text": "Decline",
+                "next_scene": "decline"
+            }
+        },
+        "mossball": [
+            "[You have a fun time playing mossball with t_c.]",
+            "Woo!"
+        ],
+        "mossball_choices": {
+            "choice1": {
+                "text": "Continue playing",
+                "next_scene": "continue"
+            },
+            "choice2": {
+                "text": "Stop playing",
+                "next_scene": "stop"
+            }
+        },
+        "continue": [
+            "[You continue having fun.]"
+        ],
+        "stop": [
+            "[You stop playing mossball.]"
+        ],
+        "decline": [
+            "[You politely decline playing with t_c.]"
+        ]
+    }
+}
