@@ -445,6 +445,8 @@ class Events:
                 achievements.add("29")
             if Cat.all_cats.get(cat).name.prefix == "Coffee" and Cat.all_cats.get(cat).name.suffix == "dot":
                 achievements.add("30")
+            if Cat.all_cats.get(cat).status == 'apprentice' and Cat.all_cats.get(cat).name.prefix == "Pea" and Cat.all_cats.get(cat).pelt.white_colours:
+                achievements.add("33")
             ##WILDCARD check, because I've lost control of my life
             ##Declare Lists of wildcard combos for comparison. (Will be made more professional later.)
             not_wildcard_patterns = ['single', 'smoke', 'singlestripe']
