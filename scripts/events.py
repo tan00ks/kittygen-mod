@@ -450,7 +450,7 @@ class Events:
             ##WILDCARD check, because I've lost control of my life
             ##Declare Lists of wildcard combos for comparison. (Will be made more professional later.)
             not_wildcard_patterns = ['single', 'smoke', 'singlestripe']
-            all_patterns = ['tabby', 'ticked', 'mackerel', 'classic', 'sokoke', 'agouti', 'speckled', 'rosette', 'smoke', 'singlestripe', 'bengal', 'marbled']
+            all_patterns = ['tabby', 'ticked', 'mackerel', 'classic', 'sokoke', 'agouti', 'speckled', 'rosette', 'smoke', 'singlestripe', 'bengal', 'marbled', 'masked']
             ID_check = 0
             ##Actual check for wildcardness
             if Cat.all_cats.get(cat).pelt.name == "Tortie" or Cat.all_cats.get(cat).pelt.name == "Calico":
@@ -465,29 +465,31 @@ class Events:
                 elif ((Cat.all_cats.get(cat).pelt.colour in Pelt.brown_colours) and Cat.all_cats.get(cat).pelt.tortiecolour in Pelt.white_colours) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
                 ##Check if wildcard pattern combo
-                if (Cat.all_cats.get(cat).pelt.tortiebase == "tabby" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "tabby" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                if (Cat.all_cats.get(cat).pelt.tortiebase == "tabby" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "tabby" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "ticked" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "ticked" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "ticked" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "ticked" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "mackerel" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "mackerel" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "mackerel" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "mackerel" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "classic" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "classic" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "classic" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "classic" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "sokoke" and not Cat.all_cats.get(cat).pelt.tortiepattern == "sokoke") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "sokoke" and not Cat.all_cats.get(cat).pelt.tortiepattern == "sokoke" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "agouti" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "agouti" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "agouti" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "agouti" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "speckled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "speckled") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "speckled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "speckled" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "rosette" and not Cat.all_cats.get(cat).pelt.tortiepattern == "rosette") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "rosette" and not Cat.all_cats.get(cat).pelt.tortiepattern == "rosette" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "smoke" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "smoke" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "smoke" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "smoke" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "singlestripe" and not Cat.all_cats.get(cat).pelt.tortiepattern == "singlestripe") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "singlestripe" and not Cat.all_cats.get(cat).pelt.tortiepattern == "singlestripe" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "bengal" and not Cat.all_cats.get(cat).pelt.tortiepattern == "bengal") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "bengal" and not Cat.all_cats.get(cat).pelt.tortiepattern == "bengal" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "marbled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "marbled") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "marbled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "marbled" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
+                    achievements.add("6")
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "masked" and not Cat.all_cats.get(cat).pelt.tortiepattern == "masked" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
             ##if Cat.all_cats.get(cat).mate
             ##  achievements.add("31")   
