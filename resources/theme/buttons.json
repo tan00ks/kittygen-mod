@@ -4069,52 +4069,6 @@
             }
         }
     },
-    "#filter_by_closed_button":
-    {
-        "prototype": "#image_button",
-        "images":
-        {
-            "normal_image":
-            {
-                "path": "resources/images/buttons/filter_by_closed.png"
-            },
-            "hovered_image":
-            {
-                "path": "resources/images/buttons/filter_by_closed_hover.png"
-            },
-            "selected_image":
-            {
-                "path": "resources/images/buttons/filter_by_closed_unavailable.png"
-            },
-            "disabled_image":
-            {
-                "path":"resources/images/buttons/filter_by_closed_unavailable.png"
-            }
-        }
-    },
-    "#filter_by_open_button":
-    {
-        "prototype": "#image_button",
-        "images":
-        {
-            "normal_image":
-            {
-                "path": "resources/images/buttons/filter_by_open.png"
-            },
-            "hovered_image":
-            {
-                "path": "resources/images/buttons/filter_by_open_hover.png"
-            },
-            "selected_image":
-            {
-                "path": "resources/images/buttons/filter_by_open_unavailable.png"
-            },
-            "disabled_image":
-            {
-                "path":"resources/images/buttons/filter_by_open_unavailable.png"
-            }
-        }
-    },
     "#filter_rank_button":
     {
         "prototype": "#image_button",
