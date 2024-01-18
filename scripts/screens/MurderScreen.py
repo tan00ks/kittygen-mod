@@ -119,25 +119,30 @@ class MurderScreen(Screens):
             self.mentor = Cat.fetch_cat(self.the_cat.mentor)
             self.selected_cat = None
             self.next = None
-            self.heading = pygame_gui.elements.UITextBox("Choose a cat to murder",
+            self.heading = pygame_gui.elements.UITextBox("Choose your target",
                                                         scale(pygame.Rect((300, 50), (1000, 80))),
                                                         object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                         manager=MANAGER)
             
             # Layout Images:
-            self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((630, 226), (562, 394))),
+            self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((200, 226), (569, 399))),
                                                             pygame.transform.scale(
                                                                 image_cache.load_image(
-                                                                    "resources/images/choosing_cat1_frame_ment.png").convert_alpha(),
+                                                                    "resources/images/murder_select.png").convert_alpha(),
+                                                                (562, 394)), manager=MANAGER)
+            self.murderimg = pygame_gui.elements.UIImage(scale(pygame.Rect((850, 150), (446, 494))),
+                                                            pygame.transform.scale(
+                                                                image_cache.load_image(
+                                                                    "resources/images/choose_victim.png").convert_alpha(),
                                                                 (562, 394)), manager=MANAGER)
             
             self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
-            self.confirm_mentor = UIImageButton(scale(pygame.Rect((680, 610), (208, 52))), "",
+            self.confirm_mentor = UIImageButton(scale(pygame.Rect((270, 610), (208, 52))), "",
                                                 object_id="#patrol_select_button")
         
-            self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1160), (68, 68))), "",
+            self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1155), (68, 68))), "",
                                                     object_id="#relation_list_previous", manager=MANAGER)
-            self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1160), (68, 68))), "",
+            self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1155), (68, 68))), "",
                                                 object_id="#relation_list_next", manager=MANAGER)
 
             self.update_selected_cat()  # Updates the image and details of selected cat
@@ -153,22 +158,29 @@ class MurderScreen(Screens):
                                                         manager=MANAGER)
             
             # Layout Images:
-            self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((630, 226), (562, 394))),
+            self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((200, 226), (569, 399))),
                                                             pygame.transform.scale(
                                                                 image_cache.load_image(
-                                                                    "resources/images/choosing_cat1_frame_ment.png").convert_alpha(),
+                                                                    "resources/images/murder_select.png").convert_alpha(),
                                                                 (562, 394)), manager=MANAGER)
             
+            self.murderimg = pygame_gui.elements.UIImage(scale(pygame.Rect((850, 150), (446, 494))),
+                                                            pygame.transform.scale(
+                                                                image_cache.load_image(
+                                                                    "resources/images/proceed_accomplice.png").convert_alpha(),
+                                                                (562, 394)), manager=MANAGER)
+
             self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
-            self.confirm_mentor = UIImageButton(scale(pygame.Rect((680, 610), (208, 52))), "",
+            self.confirm_mentor = UIImageButton(scale(pygame.Rect((235, 610), (208, 52))), "",
                                                 object_id="#patrol_select_button")
         
-            self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1160), (68, 68))), "",
+            self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1155), (68, 68))), "",
                                                     object_id="#relation_list_previous", manager=MANAGER)
-            self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1160), (68, 68))), "",
+            self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1155), (68, 68))), "",
                                                 object_id="#relation_list_next", manager=MANAGER)
             
-            self.next = UIImageButton(scale(pygame.Rect((890, 595), (68, 68))), "",
+            self.next = UIImageButton(scale(pygame.Rect((450, 595), (68, 68))), "",
+                                                tool_tip_text= "Proceed without an accomplice.",
                                                 object_id="#relation_list_next", manager=MANAGER)
 
             self.update_selected_cat2()  # Updates the image and details of selected cat
@@ -193,6 +205,10 @@ class MurderScreen(Screens):
         if self.heading:
             self.heading.kill()
             del self.heading
+        
+        if self.murderimg:
+            self.murderimg.kill()
+            del self.murderimg
 
         if self.mentor_frame:
             self.mentor_frame.kill()
@@ -607,17 +623,17 @@ class MurderScreen(Screens):
         if self.selected_cat:
 
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((650, 300), (300, 300))),
+                scale(pygame.Rect((233, 310), (270, 270))),
                 pygame.transform.scale(
                     self.selected_cat.sprite,
-                    (300, 300)), manager=MANAGER)
+                    (270, 270)), manager=MANAGER)
 
             info = self.selected_cat.status + "\n" + \
                    self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n" + \
                    self.selected_cat.skills.skill_string(short=True)
             
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
-                                                                                   scale(pygame.Rect((980, 325),
+                                                                                   scale(pygame.Rect((540, 325),
                                                                                                      (210, 250))),
                                                                                    object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
                                                                                    manager=MANAGER)
@@ -626,8 +642,8 @@ class MurderScreen(Screens):
             if 11 <= len(name):  # check name length
                 short_name = str(name)[0:9]
                 name = short_name + '...'
-            self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
-                scale(pygame.Rect((690, 230), (220, 60))),
+            self.selected_details["victim_name"] = pygame_gui.elements.ui_label.UILabel(
+                scale(pygame.Rect((260, 230), (220, 60))),
                 name,
                 object_id="#text_box_34_horizcenter", manager=MANAGER)
             if self.stage == 'choose murder cat':
@@ -646,14 +662,14 @@ class MurderScreen(Screens):
                         c_text = "very high"
                     if game.settings['dark mode']:
                         self.selected_details["chance"] = pygame_gui.elements.UITextBox("murder chance: " + c_text,
-                                                                                                scale(pygame.Rect((980, 500),
+                                                                                                scale(pygame.Rect((540, 500),
                                                                                                                     (210, 250))),
                                                                                                 object_id="#text_box_22_horizcenter_vertcenter_spacing_95_dark",
                                                                                                 manager=MANAGER)
 
                     else:
                         self.selected_details["chance"] = pygame_gui.elements.UITextBox("murder chance: " + c_text,
-                                                                                            scale(pygame.Rect((980, 500),
+                                                                                            scale(pygame.Rect((540, 500),
                                                                                                                 (210, 250))),
                                                                                             object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
                                                                                             manager=MANAGER)
@@ -673,14 +689,14 @@ class MurderScreen(Screens):
                         c_text = "very high"
                     if game.settings['dark mode']:
                         self.selected_details["chance"] = pygame_gui.elements.UITextBox("willingness: " + c_text,
-                                                                                                scale(pygame.Rect((980, 500),
+                                                                                                scale(pygame.Rect((540, 500),
                                                                                                                     (210, 250))),
                                                                                                 object_id="#text_box_22_horizcenter_vertcenter_spacing_95_dark",
                                                                                                 manager=MANAGER)
 
                     else:
                         self.selected_details["chance"] = pygame_gui.elements.UITextBox("willingness: " + c_text,
-                                                                                            scale(pygame.Rect((980, 500),
+                                                                                            scale(pygame.Rect((540, 500),
                                                                                                                 (210, 250))),
                                                                                             object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
                                                                                             manager=MANAGER)
@@ -717,7 +733,7 @@ class MurderScreen(Screens):
         if self.selected_cat:
 
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((650, 300), (300, 300))),
+                scale(pygame.Rect((440, 300), (300, 300))),
                 pygame.transform.scale(
                     self.selected_cat.sprite,
                     (300, 300)), manager=MANAGER)
@@ -727,7 +743,7 @@ class MurderScreen(Screens):
                    self.selected_cat.skills.skill_string(short=True)
             
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
-                                                                                   scale(pygame.Rect((980, 325),
+                                                                                   scale(pygame.Rect((540, 325),
                                                                                                      (210, 250))),
                                                                                    object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
                                                                                    manager=MANAGER)
