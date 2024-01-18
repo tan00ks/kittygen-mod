@@ -503,7 +503,6 @@ class MakeClanScreen(Screens):
                 self.elements['next_step'].enable()
             
 
-
     def clear_all_page(self):
         """Clears the entire page, including layout images"""
         for image in self.elements:

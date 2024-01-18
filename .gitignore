@@ -177,3 +177,8 @@ cache/
 download.tmp
 version.ini
 *.xml
+
+#jay moment 
+
+.vs/
+lgvenv/
