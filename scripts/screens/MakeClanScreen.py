@@ -1089,7 +1089,7 @@ class MakeClanScreen(Screens):
         self.tortiepattern=choice(pelts_tortie)
         self.vitiligo=choice(Pelt.vit) if random.randint(1,5) == 1 else None
         self.points=choice(Pelt.point_markings) if random.randint(1,5) == 1 else None
-        self.scars=choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3) if random.randint(1,10) == 1 else []
+        self.scars=[choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3)] if random.randint(1,10) == 1 else []
         self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue"]) if random.randint(1,5) == 1 else None
         self.skin=choice(Pelt.skin_sprites)
         self.white_patches_tint=choice(["offwhite", "cream", "darkcream", "gray", "pink"]) if random.randint(1,5) == 1 else None

@@ -1,0 +1,73 @@
+{
+    "template": {
+        "tags": [
+            ""
+        ],
+        "intro": [
+            ""
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "",
+                "next_scene": ""
+            },
+            "choice2": {
+                "text": "",
+                "next_scene": ""
+            }
+        },
+        "mossball": [
+            ""
+        ],
+        "mossball_choices": {
+            "choice1": {
+                "text": " ",
+                "next_scene": ""
+            },
+            "choice2": {
+                "text": " ",
+                "next_scene": ""
+            }
+        },
+        "continue": [
+            ""
+        ],
+        "stop": [
+            ""
+        ],
+        "decline": [
+            ""
+        ]
+    },
+    "sweetchoice_1": {
+        "tags": [
+            "any",
+	        "sweet"
+        ],
+        "intro": [
+            "Oh, y_c! It's so good to see you. I hope you've been having a good evening!",
+            "Mm.. actually- do you think you could help me with something?",
+            "I've been trying to decorate the camp and I wanted to know which you prefer, purple flowers or golden flowers?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Purple flowers.",
+                "next_scene": "purple"
+            },
+            "choice2": {
+                "text": "Golden flowers.",
+                "next_scene": ""
+            }
+        },
+        "purple": [
+            "Oh, really? Let me put them up here and see how they look...",
+            "Oh, wow, they look fantastic! They make the Leader's Den look quite regal!",
+            "Thanks y_c, it means a lot!"
+        ],
+        "golden": [
+            "Oh, really? Let me put them up here and see how they look...",
+            "Oh, I see now! These golden flowers on the Medicine Cat's den really give it this bright but comforting look.",
+            "Thanks y_c, it means a lot!"
+        ]
+    }
+}
