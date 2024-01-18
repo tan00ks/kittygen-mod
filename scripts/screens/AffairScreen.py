@@ -324,12 +324,12 @@ class AffairScreen(Screens):
     def get_valid_cats(self):
         """Get a list of valid mates for the current cat"""
         
-        # Behold! The uglest list comprehension ever created! 
+        # Behold! The uglest list comprehension ever created!
         valid_mates = [i for i in Cat.all_cats_list if
                        not i.faded
                        and self.the_cat.is_potential_mate(
                            i, for_love_interest=False, 
-                           age_restriction=False) 
+                           age_restriction=True) 
                        and i.ID not in self.the_cat.mate]
         
         return valid_mates
