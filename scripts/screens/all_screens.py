@@ -30,7 +30,6 @@ from .FlirtScreen import FlirtScreen
 from .ChooseRebornScreen import ChooseRebornScreen
 from .AchievementScreen import AchievementScreen
 from .MurderScreen import MurderScreen
-from .AccessoryScreen import ChangeAccessoryScreen
 from .DeputyScreen import DeputyScreen
 from .NameKitsScreen import NameKitsScreen
 from .LifeGenPatrolScreen import LifeGenPatrolScreen
@@ -100,7 +99,6 @@ flirt_screen = FlirtScreen('flirt screen')
 
 achivement_screen = AchievementScreen('achievement screen')
 murder_screen = MurderScreen("murder screen")
-accessory_screen = ChangeAccessoryScreen("accessory screen")
 deputy_screen = DeputyScreen("deputy screen")
 name_kits_screen = NameKitsScreen("name kits screen")
 choose_reborn_screen = ChooseRebornScreen("choose reborn screen")
