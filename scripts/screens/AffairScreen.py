@@ -13,7 +13,6 @@ from .Screens import Screens
 from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
-from scripts.cat.sprites2 import Sprites2, spriteSize
 from scripts.cat.pelts import Pelt
 from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton, UIRelationStatusBar
@@ -52,6 +51,7 @@ class AffairScreen(Screens):
         self.heading = None
         self.mentor = None
         self.the_cat = None
+        self.affair_screen = None
 
     def handle_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
@@ -96,20 +96,26 @@ class AffairScreen(Screens):
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
 
-        self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((630, 226), (562, 394))),
+        self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((790, 216), (596, 440))),
                                                         pygame.transform.scale(
                                                             image_cache.load_image(
-                                                                "resources/images/choosing_cat1_frame_ment.png").convert_alpha(),
-                                                            (562, 394)), manager=MANAGER)
+                                                                "resources/images/affair_select.png").convert_alpha(),
+                                                            (596, 440)), manager=MANAGER)
 
         self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
-        self.confirm_mentor = UIImageButton(scale(pygame.Rect((680, 610), (208, 52))), "",
+        self.confirm_mentor = UIImageButton(scale(pygame.Rect((895, 605), (208, 52))), "",
                                             object_id="#patrol_select_button")
 
         self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1160), (68, 68))), "",
                                                   object_id="#relation_list_previous", manager=MANAGER)
         self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1160), (68, 68))), "",
                                               object_id="#relation_list_next", manager=MANAGER)
+        
+        self.affair_screen = pygame_gui.elements.UIImage(scale(pygame.Rect((270, 105), (496, 620))),
+                                                        pygame.transform.scale(
+                                                            image_cache.load_image(
+                                                                "resources/images/affair_screen.png").convert_alpha(),
+                                                            (496, 420)), manager=MANAGER)
 
         self.update_selected_cat()  # Updates the image and details of selected cat
         self.update_cat_list()
@@ -146,6 +152,9 @@ class AffairScreen(Screens):
         del self.previous_page_button
         self.next_page_button.kill()
         del self.next_page_button
+
+        if self.affair_screen:
+            self.affair_screen.kill()
 
 
     def find_next_previous_cats(self):
@@ -254,7 +263,7 @@ class AffairScreen(Screens):
         if self.selected_cat:
 
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((650, 300), (300, 300))),
+                scale(pygame.Rect((850, 300), (300, 300))),
                 pygame.transform.scale(
                     self.selected_cat.sprite,
                     (300, 300)), manager=MANAGER)
@@ -264,7 +273,7 @@ class AffairScreen(Screens):
                    self.selected_cat.skills.skill_string(short=True)
 
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
-                                                                                   scale(pygame.Rect((980, 325),
+                                                                                   scale(pygame.Rect((1180, 325),
                                                                                                      (210, 250))),
                                                                                    object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
                                                                                    manager=MANAGER)
@@ -274,7 +283,7 @@ class AffairScreen(Screens):
                 short_name = str(name)[0:9]
                 name = short_name + '...'
             self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
-                scale(pygame.Rect((690, 230), (220, 60))),
+                scale(pygame.Rect((890, 230), (220, 60))),
                 name,
                 object_id="#text_box_34_horizcenter", manager=MANAGER)
 
@@ -325,12 +334,12 @@ class AffairScreen(Screens):
     def get_valid_cats(self):
         """Get a list of valid mates for the current cat"""
         
-        # Behold! The uglest list comprehension ever created! 
+        # Behold! The uglest list comprehension ever created!
         valid_mates = [i for i in Cat.all_cats_list if
                        not i.faded
                        and self.the_cat.is_potential_mate(
                            i, for_love_interest=False, 
-                           age_restriction=False) 
+                           age_restriction=True) 
                        and i.ID not in self.the_cat.mate]
         
         return valid_mates

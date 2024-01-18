@@ -95,6 +95,8 @@ class AchievementScreen(Screens):
         for cat in clan_cats:
             if Cat.all_cats.get(cat).pelt.tortiebase and Cat.all_cats.get(cat).gender == 'male':
                 achievements.add("5")
+            if Cat.all_cats.get(cat).status == 'apprentice' and Cat.all_cats.get(cat).name.prefix == "Pea" and Cat.all_cats.get(cat).pelt.white_colours:
+                achievements.add("33")
         
         if you.joined_df:
             achievements.add("7")

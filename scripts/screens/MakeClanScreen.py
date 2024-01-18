@@ -956,15 +956,15 @@ class MakeClanScreen(Screens):
             self.elements["clan_age"] = pygame_gui.elements.UITextBox("Clan Age: ",
                                                               scale(pygame.Rect((400, 195), (200, 60))),
                                                               object_id="#text_box_30_horizcenter",
-                                                              manager=MANAGER)  
+                                                              manager=MANAGER)
         
-        self.elements["small"] = UIImageButton(scale(pygame.Rect((600,100), (200, 70))), "Small", object_id="#small_button", manager=MANAGER)
-        self.elements["medium"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,100), (200, 70))), "Medium", object_id="#small_button", manager=MANAGER)
-        self.elements["large"] = pygame_gui.elements.UIButton(scale(pygame.Rect((1100,100), (200, 70))), "Large", object_id="#small_button", manager=MANAGER)
+        self.elements["small"] = UIImageButton(scale(pygame.Rect((600,100), (192, 60))), "Small", object_id="#clan_size_small", manager=MANAGER)
+        self.elements["medium"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,100), (192, 60))), "Medium", object_id="#clan_size_medium", manager=MANAGER)
+        self.elements["large"] = pygame_gui.elements.UIButton(scale(pygame.Rect((1100,100), (192, 60))), "Large", object_id="#clan_size_large", manager=MANAGER)
         self.elements["medium"].disable()
 
-        self.elements["established"] = UIImageButton(scale(pygame.Rect((600,200), (200, 70))), "Old", object_id="#small_button", tool_tip_text="The Clan has existed for many moons and cats' backstories will reflect this.",manager=MANAGER)
-        self.elements["new"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,200), (200, 70))), "New", object_id="#small_button", tool_tip_text="The Clan is newly established and cats' backstories will reflect this.", manager=MANAGER)
+        self.elements["established"] = UIImageButton(scale(pygame.Rect((600,200), (192, 60))), "Old", object_id="#clan_age_old", tool_tip_text="The Clan has existed for many moons and cats' backstories will reflect this.",manager=MANAGER)
+        self.elements["new"] = pygame_gui.elements.UIButton(scale(pygame.Rect((850,200), (192, 60))), "New", object_id="#clan_age_new", tool_tip_text="The Clan is newly established and cats' backstories will reflect this.", manager=MANAGER)
         self.elements["established"].disable()
 
     def clan_name_header(self):
@@ -1088,7 +1088,7 @@ class MakeClanScreen(Screens):
         self.tortiepattern=choice(pelts_tortie)
         self.vitiligo=choice(Pelt.vit) if random.randint(1,5) == 1 else None
         self.points=choice(Pelt.point_markings) if random.randint(1,5) == 1 else None
-        self.scars=choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3) if random.randint(1,10) == 1 else []
+        self.scars=[choice(Pelt.scars1 + Pelt.scars2 + Pelt.scars3)] if random.randint(1,10) == 1 else []
         self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue"]) if random.randint(1,5) == 1 else None
         self.skin=choice(Pelt.skin_sprites)
         self.white_patches_tint=choice(["offwhite", "cream", "darkcream", "gray", "pink"]) if random.randint(1,5) == 1 else None

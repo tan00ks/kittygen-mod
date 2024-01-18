@@ -10,7 +10,6 @@ from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_al
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
-from re import sub
 from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
 
@@ -36,6 +35,12 @@ class TalkScreen(Screens):
         self.text = None
         self.profile_elements = {}
         self.talk_box_img = None
+        self.possible_texts = {}
+        self.chosen_text_key = ""
+        self.choice_buttons = {}
+        self.current_scene = ""
+        self.created_choice_buttons = False
+
 
 
     def screen_switches(self):
@@ -43,6 +48,7 @@ class TalkScreen(Screens):
         self.hide_menu_buttons()
         self.text_index = 0
         self.frame_index = 0
+        self.created_choice_buttons = False
         self.the_cat = Cat.all_cats.get(game.switches['cat'])
         self.profile_elements = {}
         self.clan_name_bg = pygame_gui.elements.UIImage(
@@ -53,10 +59,12 @@ class TalkScreen(Screens):
                 (500, 870)),
             manager=MANAGER)
         self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(str(self.the_cat.name),
-                                                                          scale(pygame.Rect((500, 870), (-1, 80))),
+                                                                       scale(pygame.Rect((500, 870), (-1, 80))),
                                                                           object_id="#text_box_34_horizcenter_light",
                                                                           manager=MANAGER)
-        self.texts = self.get_possible_text(self.the_cat)
+
+        self.text_type = ""
+        self.texts = self.load_texts(self.the_cat)
         self.text_frames = [[text[:i+1] for i in range(len(text))] for text in self.texts]
         self.talk_box_img = image_cache.load_image("resources/images/talk_box.png").convert_alpha()
 
@@ -70,9 +78,9 @@ class TalkScreen(Screens):
         self.text = pygame_gui.elements.UITextBox("", 
                                                   scale(pygame.Rect((0, 0), (900, -100))),
                                                   object_id="#text_box_30_horizleft",
-                                                  container=self.scroll_container, manager=MANAGER)
+                                                  container=self.scroll_container,
+                                                manager=MANAGER)
         self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((70, 900), (400, 400))),
-
                                                                          pygame.transform.scale(
                                                                              generate_sprite(self.the_cat),
                                                                              (400, 400)), manager=MANAGER)
@@ -99,6 +107,9 @@ class TalkScreen(Screens):
         del self.talk_box
         self.paw.kill()
         del self.paw
+        for button in self.choice_buttons:
+            self.choice_buttons[button].kill()
+        self.choice_buttons = {}
 
     def update_camp_bg(self):
         light_dark = "light"
@@ -153,6 +164,10 @@ class TalkScreen(Screens):
         if self.text_index == len(self.text_frames) - 1:
             if self.frame_index == len(self.text_frames[self.text_index]) - 1:
                 self.paw.visible = True
+                if not self.created_choice_buttons and self.text_type == "choices":
+                    self.create_choice_buttons()
+                    self.created_choice_buttons = True
+
         # Always render the current frame
         self.text.html_text = self.text_frames[self.text_index][self.frame_index]
         self.text.rebuild()
@@ -164,7 +179,11 @@ class TalkScreen(Screens):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.back_button:
                 self.change_screen('profile screen')
-        
+            else:
+                for key, button in self.choice_buttons.items():
+                    if event.ui_element == button:
+                        self.current_scene = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][key]["next_scene"]
+                        self.handle_choice(self.the_cat)
         elif event.type == pygame.KEYDOWN and game.settings['keybinds']:
             if event.key == pygame.K_ESCAPE:
                 self.change_screen('profile screen')
@@ -195,9 +214,9 @@ class TalkScreen(Screens):
             'respect': 30,
             'trust': 30
         }
-        
+        tags = talk["intro"] if "intro" in talk else talk[0]
         for key, value in relationship_conditions.items():
-            if key in talk[0] and cat_relationship < value:
+            if key in tags and cat_relationship < value:
                 return True
         return False
     
@@ -210,17 +229,52 @@ class TalkScreen(Screens):
                 break
             random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
         return random_cat
-        
-    def get_possible_text(self, cat):
-        text = ""
-        texts_list = {}
-        you = game.clan.your_cat
 
+    def display_intro(self, cat, texts_list, texts_chosen_key):
+        chosen_text_intro = texts_list[texts_chosen_key]["intro"]
+        chosen_text_intro = self.get_adjusted_txt(chosen_text_intro, cat)
+        self.current_scene = "intro"
+        self.possible_texts = texts_list
+        self.chosen_text_key = texts_chosen_key
+        return chosen_text_intro
+
+    def create_choice_buttons(self):
+        y_pos = 0
+        if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
+            return
+        for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
+            text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
+            button = pygame_gui.elements.UIButton(scale(pygame.Rect((700, 200 + y_pos), (-1, 80))),
+                text,
+                manager=MANAGER
+            )
+            self.choice_buttons[c] = button
+            y_pos += 100
+    
+    def handle_choice(self, cat):
+        for b in self.choice_buttons:
+            self.choice_buttons[b].kill()
+
+        self.choice_buttons = {}
+        chosen_text = self.possible_texts[self.chosen_text_key][self.current_scene]
+        chosen_text = self.get_adjusted_txt(chosen_text, cat)
+        self.texts = chosen_text
+        self.text_frames = [[text[:i+1] for i in range(len(text))] for text in chosen_text]
+        self.text_index = 0
+        self.frame_index = 0
+        self.created_choice_buttons = False
+
+
+    def load_texts(self, cat):
+        you = game.clan.your_cat
         resource_dir = "resources/dicts/lifegen_talk/"
         possible_texts = {}
         with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
-            
+        
+        with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
+            possible_texts.update(ujson.loads(read_file.read()))
+
         if cat.status not in ['kitten', "newborn"] and you.status not in ['kitten', 'newborn']:
             with open(f"{resource_dir}general_no_kit.json", 'r') as read_file:
                 possible_texts2 = ujson.loads(read_file.read())
@@ -236,6 +290,14 @@ class TalkScreen(Screens):
                 possible_texts3 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts3)
         
+        return self.filter_texts(cat, possible_texts)
+        
+
+    def filter_texts(self, cat, possible_texts):
+        text = ""
+        texts_list = {}
+        you = game.clan.your_cat
+
         cluster1, cluster2 = get_cluster(cat.personality.trait)
         cluster3, cluster4 = get_cluster(you.personality.trait)
         
@@ -269,7 +331,7 @@ class TalkScreen(Screens):
         skill_list = ['teacher', 'hunter', 'fighter', 'runner', 'climber', 'swimmer', 'speaker', 'mediator1', 'clever', 'insightful', 'sense', 'kit', 'story', 'lore', 'camp', 'healer', 'star', 'omen', 'dream', 'clairvoyant', 'prophet', 'ghost', 'explorer', 'tracker', 'artistan', 'guardian', 'tunneler', 'navigator', 'song', 'grace', 'clean', 'innovator', 'comforter', 'matchmaker', 'thinker', 'cooperative', 'scholar', 'time', 'treasure', 'fisher', 'language', 'sleeper']
         you_skill_list = ['you_teacher', 'you_hunter', 'you_fighter', 'you_runner', 'you_climber', 'you_swimmer', 'you_speaker', 'you_mediator1', 'you_clever', 'you_insightful', 'you_sense', 'you_kit', 'you_story', 'you_lore', 'you_camp', 'you_healer', 'you_star', 'you_omen', 'you_dream', 'you_clairvoyant', 'you_prophet', 'you_ghost', 'you_explorer', 'you_tracker', 'you_artistan', 'you_guardian', 'you_tunneler', 'you_navigator', 'you_song', 'you_grace', 'you_clean', 'you_innovator', 'you_comforter', 'you_matchmaker', 'you_thinker', 'you_cooperative', 'you_scholar', 'you_time', 'you_treasure', 'you_fisher', 'you_language', 'you_sleeper']
         for talk_key, talk in possible_texts.items():
-            tags = talk[0]
+            tags = talk["tags"] if "tags" in talk else talk[0]
             for i in range(len(tags)):
                 tags[i] = tags[i].lower()
                 
@@ -348,12 +410,12 @@ class TalkScreen(Screens):
                     continue
                 
             # Season tags
-            if ('leafbare' in talk[0] and game.clan.current_season != 'Leaf-bare') or ('newleaf' in talk[0] and game.clan.current_season != 'Newleaf') or ('leaffall' in talk[0] and game.clan.current_season != 'Leaf-fall') or ('greenleaf' in talk[0] and game.clan.current_season != 'Greenleaf'):
+            if ('leafbare' in tags and game.clan.current_season != 'Leaf-bare') or ('newleaf' in tags and game.clan.current_season != 'Newleaf') or ('leaffall' in tags and game.clan.current_season != 'Leaf-fall') or ('greenleaf' in tags and game.clan.current_season != 'Greenleaf'):
                 continue
             
             # Biome tags
-            if any(i in ['beach', 'forest', 'plains', 'mountainous', 'wetlands', 'desert'] for i in talk[0]):
-                if game.clan.biome.lower() not in talk[0]:
+            if any(i in ['beach', 'forest', 'plains', 'mountainous', 'wetlands', 'desert'] for i in tags):
+                if game.clan.biome.lower() not in tags:
                     continue
                 
             # Injuries, grieving and illnesses tags
@@ -472,7 +534,7 @@ class TalkScreen(Screens):
                     continue
                 
             # If you have murdered someone and have been revealed
-            if "murder" in talk[0]:
+            if "murder" in tags:
                 if game.clan.your_cat.revealed:
                     if game.clan.your_cat.history:
                         if "is_murderer" in game.clan.your_cat.history.murder:
@@ -535,8 +597,15 @@ class TalkScreen(Screens):
                     continue
 
             texts_list[talk_key] = talk
+
+        return self.choose_text(cat, texts_list)
         
+    
+    def choose_text(self, cat, texts_list):
+        you = game.clan.your_cat
         if not texts_list:
+            cluster1, cluster2 = get_cluster(cat.personality.trait)
+            cluster3, cluster4 = get_cluster(you.personality.trait)
             resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
@@ -563,18 +632,19 @@ class TalkScreen(Screens):
         
         weights = []
         for item in texts_list.values():
-            tags = item[0]
+            tags = item["tags"] if "tags" in item else item[0]
             weights.append(len(tags))
 
         while counter < max_retries:
-            # Select a key randomly, weighted by the number of tags
-            # text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
             text_chosen_key = choice(list(texts_list.keys()))
-            text = texts_list[text_chosen_key][1]
+            text = texts_list[text_chosen_key]["intro"] if "intro" in texts_list[text_chosen_key] else texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
 
             if text_chosen_key not in game.clan.talks and new_text:
                 game.clan.talks.append(text_chosen_key)
+                if "intro" in texts_list[text_chosen_key]:
+                    self.text_type = "choices"
+                    self.display_intro(cat, texts_list, text_chosen_key)
                 return new_text
 
             counter += 1
@@ -621,6 +691,16 @@ class TalkScreen(Screens):
             if text[i] == "":
                 return ""
 
+        r_c_found = False
+        for i in range(len(text)):
+            if "r_c" in text[i]:
+                r_c_found = True
+        if r_c_found:
+            alive_cats = self.get_living_cats()
+            alive_cat = choice(alive_cats)
+            while alive_cat.ID == game.clan.your_cat.ID or alive_cat.ID == cat.ID:
+                alive_cat = choice(alive_cats)
+            text = [t1.replace("r_c", str(alive_cat.name)) for t1 in text]
 
         if "grief stricken" in cat.illnesses:
             try:

@@ -174,7 +174,7 @@
             "I wish I were as smart as you when I was an apprentice ... it might've saved me a lot of trouble! Heh."
         ]
     ],
-    "assertive_jealous1": [
+    "assertive_jealous2": [
         [
             "Any",
             "sibling",
@@ -4254,7 +4254,7 @@
         ],
         [
             "You wanna learn something really stupid about plants? No? Well, too bad, y_c!",
-            "When I was a little younger I would sneak out to the Twoleg houses with r_c and investigate all their plants.",
+            "When I was a little younger I would sneak out to the Twoleg houses with t_l and investigate all their plants.",
             "One house had a bunch of berries, and the kittypet who lives there informed me that most of them were poisonous, but the Twolegs ate them anyway, and nothing happened.",
             "Which, come on! Why can't I eat the long red berries? They look so tasty!",
             "And there were some they called \"cacao beans\" that smelled delightful...",
@@ -4662,12 +4662,10 @@
             "mediator apprentice",
             "mediator",
             "brooding",
-            "neutral",
             "dislike"
         ],
         [
             "Don't even try it, y_c.",
-            "I already know what you're gonna say to me. I need to open up more and be more emotionally available to solve my problems in a healthy way. I've heard it a million times before. Not possible for me.",
             "You think your whole job is to fix people, when really all you do is prance around acting like you're smarter than us and bossing everyone around.",
             "Go try your stupid tricks on somebody else."
         ]
@@ -4694,11 +4692,7 @@
             "medicine cat",
             "brooding",
             "upstanding",
-            "platonic_like",
-            "romantic_like",
-            "trust",
-            "comfort",
-            "from_parent"
+            "romantic_like"
         ],
         [
             "Hello, y_c. I thought I'd come pay you a visit here.",

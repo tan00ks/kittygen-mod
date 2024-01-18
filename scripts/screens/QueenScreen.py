@@ -1,27 +1,13 @@
 import pygame.transform
 import pygame_gui.elements
-from random import choice, randint
+from random import choice
 import ujson
-
-from scripts.cat_relations.inheritance import Inheritance
-from scripts.cat.history import History
-from scripts.event_class import Single_Event
-from scripts.events import events_class
-
 from .Screens import Screens
-
-from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
+from scripts.utility import get_text_box_theme, scale
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
-from scripts.cat.sprites2 import Sprites2, spriteSize
-from scripts.cat.pelts import Pelt
-from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
-from scripts.game_structure.image_button import UIImageButton, UISpriteButton, UIRelationStatusBar
+from scripts.game_structure.image_button import UIImageButton, UISpriteButton
 from scripts.game_structure.game_essentials import game, screen, screen_x, screen_y, MANAGER
-from scripts.game_structure.windows import RelationshipLog
-from scripts.game_structure.propagating_thread import PropagatingThread
-from scripts.events_module.relationship.romantic_events import Romantic_Events
-from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
 
 class QueenScreen(Screens):
     selected_cat = None
@@ -72,7 +58,6 @@ class QueenScreen(Screens):
                     game.switches['cat'] = self.next_cat
                     self.update_cat_list()
                     self.update_selected_cat()
-                    # self.update_buttons()
                 else:
                     print("invalid next cat", self.next_cat)
             elif event.ui_element == self.previous_cat_button:
@@ -80,7 +65,6 @@ class QueenScreen(Screens):
                     game.switches['cat'] = self.previous_cat
                     self.update_cat_list()
                     self.update_selected_cat()
-                    # self.update_buttons()
                 else:
                     print("invalid previous cat", self.previous_cat)
             elif event.ui_element == self.next_page_button:
@@ -153,12 +137,9 @@ class QueenScreen(Screens):
         self.selected_cat = None
         self.update_selected_cat()  # Updates the image and details of selected cat
         self.update_cat_list()
-        # self.update_buttons()
 
     def exit_screen(self):
 
-        # self.selected_details["selected_image"].kill()
-        # self.selected_details["selected_info"].kill()
         for ele in self.cat_list_buttons:
             self.cat_list_buttons[ele].kill()
         self.cat_list_buttons = {}
@@ -343,7 +324,7 @@ class QueenScreen(Screens):
     def get_valid_cats(self):
         """Get a list of valid mates for the current cat"""
         
-        # Behold! The uglest list comprehension ever created! 
+        # Behold! The uglest list comprehension ever created!
         valid_mates = [i for i in Cat.all_cats_list if
                        not i.faded
                        and i.moons >=1 and i.moons < 6 and not i.dead and not i.outside]
