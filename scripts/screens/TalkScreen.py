@@ -569,6 +569,10 @@ class TalkScreen(Screens):
             if "they_younger" in tags:
                 if you.age != cat.age and cat.moons > you.moons:
                     continue
+
+            if "shunned" in tags:
+                if game.clan.your_cat.revealed == 0 or game.clan.age - 3 > game.clan.your_cat.revealed or game.clan.your_cat.moons == 0:
+                    continue
             
             # Relationship conditions
             if you.ID in cat.relationships:
