@@ -629,14 +629,18 @@ class TalkScreen(Screens):
         counter = 0
         if len(game.clan.talks) > 50:
             game.clan.talks.clear()
-        
-        weights = []
+
+        weights2 = []
+        weighted_tags = ["from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit"]
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
-            weights.append(len(tags))
+            num_fam_mentor_tags = 1
+            if any(i in weighted_tags for i in tags):
+                num_fam_mentor_tags+=3
+            weights2.append(num_fam_mentor_tags)
 
         while counter < max_retries:
-            text_chosen_key = choice(list(texts_list.keys()))
+            text_chosen_key = choices(list(texts_list.keys()), weights=weights2, k=1)[0]
             text = texts_list[text_chosen_key]["intro"] if "intro" in texts_list[text_chosen_key] else texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
 
@@ -649,6 +653,10 @@ class TalkScreen(Screens):
 
             counter += 1
 
+        weights = []
+        for item in texts_list.values():
+            tags = item["tags"] if "tags" in item else item[0]
+            weights.append(len(tags))
         text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
         text = texts_list[text_chosen_key][1]
         new_text = self.get_adjusted_txt(text, cat)

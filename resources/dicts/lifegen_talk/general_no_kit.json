@@ -10934,5 +10934,21 @@
             "See that one there, it looks like a bird! That one there, a twoleg! And that one, it almost looks like a monster, but one of the bigger ones, you know the sturdy looking ones.",
             "They move so slowly and effortlessly, like the world can just wait for them. Huh, I wonder what that's like. Must be nice..."
         ]
+    ],
+    "genparent_toadult02": [
+        [
+            "apprentice",
+            "medicine cat apprentice",
+            "queen's apprentice",
+            "mediator apprentice",
+            "from_parent",
+            "adoptive_parent"
+        ],
+        [
+            "Here, y_c, let me help you get your favorite prey from the top of the freshkill pi -- oop!",
+            "[t_c stops in their tracks as you stretch to the top of the pile and easily fetch the prey you want.]",
+            "Since when have you been big enough to do that?!",
+            "You better stop growing up so fast, y_c! Or else you're gonna be bigger than me before I know it!"
+        ]
     ]
 }
