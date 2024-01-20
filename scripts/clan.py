@@ -233,6 +233,8 @@ class Clan():
                 Cat.all_cats.get(cat_id).status_change('apprentice')
             elif Cat.all_cats.get(cat_id).status == "queen's apprentice":
                 Cat.all_cats.get(cat_id).status_change("queen's apprentice")
+            elif Cat.all_cats.get(cat_id).status == 'medicine cat apprentice':
+                Cat.all_cats.get(cat_id).status_change('medicine cat apprentice')
             Cat.all_cats.get(cat_id).thoughts()
 
         game.save_cats()
