@@ -872,7 +872,6 @@
         [
             "kitten",
             "brooding",
-            "neutral",
             "dislike"
         ],
         [
@@ -885,8 +884,7 @@
             "kitten",
             "brooding",
             "random_cat",
-            "neutral",
-            "dislike"
+            "non-related"
         ],
         [
             "What is it? Can't you see that I'm busy?",

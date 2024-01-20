@@ -14,7 +14,7 @@
             "hunting",
             "small_prey"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -52,7 +52,7 @@
             "border",
             "small_prey"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -90,7 +90,7 @@
             "hunting",
             "small_prey"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -127,7 +127,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 5,
         "min_max_status": {},
@@ -164,7 +164,7 @@
         "tags": [
             "training"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -201,7 +201,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -238,7 +238,7 @@
         "tags": [
             "hunting"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -275,7 +275,7 @@
         "tags": [
             "patrol"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 5,
         "min_max_status": {},
@@ -312,7 +312,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -349,7 +349,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -386,7 +386,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -423,7 +423,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -460,7 +460,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -497,7 +497,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior14",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -534,7 +534,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -571,7 +571,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -608,7 +608,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior14",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -645,7 +645,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_warrior_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},

@@ -2137,11 +2137,7 @@
         [
             "queen's apprentice",
             "brooding",
-            "platonic_love",
-            "trust",
-            "comfort",
-            "respect",
-            "romantic_like"
+            "platonic_love"
         ],
         [
             "Hmph. Hi, y_c ...",
@@ -2158,11 +2154,7 @@
         [
             "mediator apprentice",
             "brooding",
-            "platonic_love",
-            "trust",
-            "comfort",
-            "respect",
-            "romantic_like"
+            "platonic_love"
         ],
         [
             "Hmph. Hi, y_c ...",
@@ -2178,12 +2170,7 @@
     "broodingapp_tomedapp": [
         [
             "medicine cat apprentice",
-            "brooding",
-            "platonic_love",
-            "trust",
-            "comfort",
-            "respect",
-            "romantic_like"
+            "brooding"
         ],
         [
             "Hmph. Hi, y_c ...",
@@ -2395,8 +2382,7 @@
             "any",
             "brooding",
             "platonic_like",
-            "from_your_apprentice",
-            "from_your_kit"
+            "from_your_apprentice"
         ],
         [
             "y_c. I caught this mouse today.",

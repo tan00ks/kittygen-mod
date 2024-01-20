@@ -54,11 +54,11 @@
     ],
     "elder general": [
         "You find kits frolicking in your favorite spot to nap, but you don't have the heart to scare them off. Instead, you watch them play fondly until they're eventually called back by the queens.",
-"You spend the day taking a very productive nap in the sun.",
-"You take a moment to think about how much the clan has changed.",
-"You find yourself longing for the time when your biggest worries were catching butterflies and trying to figure out which nest in the nursery had the softest moss.",
-"You attract a small crowd as you tell a thrilling story, leading your audience through many unexpected twists and turns.",
-"You accidentally cause an apprentice to get side-tracked by telling them tales from your own apprentice days."
+        "You spend the day taking a very productive nap in the sun.",
+        "You take a moment to think about how much the clan has changed.",
+        "You find yourself longing for the time when your biggest worries were catching butterflies and trying to figure out which nest in the nursery had the softest moss.",
+        "You attract a small crowd as you tell a thrilling story, leading your audience through many unexpected twists and turns.",
+        "You accidentally cause an apprentice to get side-tracked by telling them tales from your own apprentice days."
     ],
     "elder assertive": [],
     "elder brooding": [],
@@ -71,5 +71,7 @@
     "elder sweet": [],
     "elder unabashed": [],
     "elder unlawful": [],
-    "elder rare": []
+    "elder rare": [
+        "You wake up to the medicine cat and a handful of friends gathered around you in a hush, discovering that you had scared r_e by not waking up when shaken. You shake it off, but your mind keeps wandering back to what would have happened if you didn't awaken."
+    ]
 }

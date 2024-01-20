@@ -781,15 +781,16 @@ class Clan():
             game.clan.add_cat(game.clan.instructor)
             
         # demon Info
-        if clan_data["demon"] in Cat.all_cats:
+        if "demon" in clan_data and clan_data["demon"] in Cat.all_cats:
             game.clan.demon = Cat.all_cats[clan_data["demon"]]
             game.clan.add_cat(game.clan.demon)
+            game.clan.demon.df = True
         else:
             game.clan.demon = Cat(
                 status=choice(["warrior", "warrior", "elder"]))
-            # update_sprite(game.clan.demon)
             game.clan.demon.dead = True
             game.clan.add_cat(game.clan.demon)
+            game.clan.demon.df = True
 
         for name, relation, temper in zip(
                 clan_data["other_clans_names"].split(","),

@@ -445,10 +445,12 @@ class Events:
                 achievements.add("29")
             if Cat.all_cats.get(cat).name.prefix == "Coffee" and Cat.all_cats.get(cat).name.suffix == "dot":
                 achievements.add("30")
+            if Cat.all_cats.get(cat).status == 'apprentice' and Cat.all_cats.get(cat).name.prefix == "Pea" and Cat.all_cats.get(cat).pelt.white_colours:
+                achievements.add("33")
             ##WILDCARD check, because I've lost control of my life
             ##Declare Lists of wildcard combos for comparison. (Will be made more professional later.)
             not_wildcard_patterns = ['single', 'smoke', 'singlestripe']
-            all_patterns = ['tabby', 'ticked', 'mackerel', 'classic', 'sokoke', 'agouti', 'speckled', 'rosette', 'smoke', 'singlestripe', 'bengal', 'marbled']
+            all_patterns = ['tabby', 'ticked', 'mackerel', 'classic', 'sokoke', 'agouti', 'speckled', 'rosette', 'smoke', 'singlestripe', 'bengal', 'marbled', 'masked']
             ID_check = 0
             ##Actual check for wildcardness
             if Cat.all_cats.get(cat).pelt.name == "Tortie" or Cat.all_cats.get(cat).pelt.name == "Calico":
@@ -463,29 +465,31 @@ class Events:
                 elif ((Cat.all_cats.get(cat).pelt.colour in Pelt.brown_colours) and Cat.all_cats.get(cat).pelt.tortiecolour in Pelt.white_colours) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
                 ##Check if wildcard pattern combo
-                if (Cat.all_cats.get(cat).pelt.tortiebase == "tabby" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "tabby" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                if (Cat.all_cats.get(cat).pelt.tortiebase == "tabby" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "tabby" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "ticked" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "ticked" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "ticked" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "ticked" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "mackerel" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "mackerel" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "mackerel" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "mackerel" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "classic" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "classic" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "classic" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "classic" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "sokoke" and not Cat.all_cats.get(cat).pelt.tortiepattern == "sokoke") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "sokoke" and not Cat.all_cats.get(cat).pelt.tortiepattern == "sokoke" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "agouti" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "agouti" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "agouti" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "agouti" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "speckled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "speckled") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "speckled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "speckled" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "rosette" and not Cat.all_cats.get(cat).pelt.tortiepattern == "rosette") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "rosette" and not Cat.all_cats.get(cat).pelt.tortiepattern == "rosette" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "smoke" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "smoke" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns)) and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "smoke" and not (Cat.all_cats.get(cat).pelt.tortiepattern == "smoke" or Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns or Cat.all_cats.get(cat).pelt.tortiepattern == "single")) and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "singlestripe" and not Cat.all_cats.get(cat).pelt.tortiepattern == "singlestripe") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "singlestripe" and not Cat.all_cats.get(cat).pelt.tortiepattern == "singlestripe" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "bengal" and not Cat.all_cats.get(cat).pelt.tortiepattern == "bengal") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "bengal" and not Cat.all_cats.get(cat).pelt.tortiepattern == "bengal" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
-                elif (Cat.all_cats.get(cat).pelt.tortiebase == "marbled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "marbled") and (ID_check == Cat.all_cats.get(cat).ID):
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "marbled" and not Cat.all_cats.get(cat).pelt.tortiepattern == "marbled" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
+                    achievements.add("6")
+                elif (Cat.all_cats.get(cat).pelt.tortiebase == "masked" and not Cat.all_cats.get(cat).pelt.tortiepattern == "masked" or Cat.all_cats.get(cat).pelt.tortiepattern == "single") and (ID_check == Cat.all_cats.get(cat).ID):
                     achievements.add("6")
             ##if Cat.all_cats.get(cat).mate
             ##  achievements.add("31")   
@@ -658,6 +662,8 @@ class Events:
             return self.handle_birth_two_parents(siblings, sibling_text)
 
     def handle_birth_one_parent(self, siblings, sibling_text):
+        if Cat.all_cats[game.clan.your_cat.parent1].gender == "female":
+            Cat.all_cats[game.clan.your_cat.parent1].get_injured("recovering from birth")
         if siblings:
             self.add_siblings_and_inheritance(siblings, game.clan.your_cat.parent1)
             return self.set_birth_text("birth_one_parent_siblings", {"parent1": Cat.all_cats[game.clan.your_cat.parent1].name, "y_c": game.clan.your_cat.name,"insert_siblings": sibling_text})
@@ -667,11 +673,18 @@ class Events:
     def handle_birth_two_parents(self, siblings, sibling_text):
         Cat.all_cats[game.clan.your_cat.parent1].set_mate(Cat.all_cats[game.clan.your_cat.parent2])
         Cat.all_cats[game.clan.your_cat.parent2].set_mate(Cat.all_cats[game.clan.your_cat.parent1])
+        if Cat.all_cats[game.clan.your_cat.parent1].gender == "female":
+            Cat.all_cats[game.clan.your_cat.parent1].get_injured("recovering from birth")
+        elif Cat.all_cats[game.clan.your_cat.parent2].gender == "female":
+            Cat.all_cats[game.clan.your_cat.parent2].get_injured("recovering from birth")
+        elif game.clan.clan_settings['same sex birth']:
+            Cat.all_cats[random.choice([game.clan.your_cat.parent1, game.clan.your_cat.parent2])].get_injured("recovering from birth")
         if siblings:
             self.add_siblings_and_inheritance(siblings, game.clan.your_cat.parent1, game.clan.your_cat.parent2)
             return self.set_birth_text("birth_two_parents_siblings", {"parent1": Cat.all_cats[game.clan.your_cat.parent1].name, "parent2": Cat.all_cats[game.clan.your_cat.parent2].name, "y_c": game.clan.your_cat.name,"insert_siblings": sibling_text})
         replacements = {"parent1": Cat.all_cats[game.clan.your_cat.parent1].name, "parent2": Cat.all_cats[game.clan.your_cat.parent2].name, "y_c": game.clan.your_cat.name}
         self.create_inheritance([game.clan.your_cat.parent1, game.clan.your_cat.parent2])
+    
         return self.set_birth_text("birth_two_parents", replacements)
 
     def handle_birth_adoptive_parents(self, siblings, sibling_text):

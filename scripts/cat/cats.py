@@ -25,8 +25,7 @@ from scripts.game_structure import image_cache
 from scripts.event_class import Single_Event
 from .thoughts import Thoughts
 from scripts.cat_relations.inheritance import Inheritance
-from scripts.game_structure.windows import RetireScreen
-import uuid
+
 
 class Cat():
     dead_cats = []
@@ -2862,21 +2861,23 @@ class Cat():
     # ---------------------------------------------------------------------------- #
 
     @staticmethod
-    def sort_cats():
+    def sort_cats(given_list=[]):
+        if not given_list:
+            given_list = Cat.all_cats_list
         if game.sort_type == "age":
-            Cat.all_cats_list.sort(key=lambda x: Cat.get_adjusted_age(x))
+            given_list.sort(key=lambda x: Cat.get_adjusted_age(x))
         elif game.sort_type == "reverse_age":
-            Cat.all_cats_list.sort(key=lambda x: Cat.get_adjusted_age(x), reverse=True)
+            given_list.sort(key=lambda x: Cat.get_adjusted_age(x), reverse=True)
         elif game.sort_type == "id":
-            Cat.all_cats_list.sort(key=lambda x: int(x.ID))
+            given_list.sort(key=lambda x: int(x.ID))
         elif game.sort_type == "reverse_id":
-            Cat.all_cats_list.sort(key=lambda x: int(x.ID), reverse=True)
+            given_list.sort(key=lambda x: int(x.ID), reverse=True)
         elif game.sort_type == "rank":
-            Cat.all_cats_list.sort(key=lambda x: (Cat.rank_order(x), Cat.get_adjusted_age(x)), reverse=True)
+            given_list.sort(key=lambda x: (Cat.rank_order(x), Cat.get_adjusted_age(x)), reverse=True)
         elif game.sort_type == "exp":
-            Cat.all_cats_list.sort(key=lambda x: x.experience, reverse=True)
+            given_list.sort(key=lambda x: x.experience, reverse=True)
         elif game.sort_type == "death":
-            Cat.all_cats_list.sort(key=lambda x: -1 * int(x.dead_for))
+            given_list.sort(key=lambda x: -1 * int(x.dead_for))
 
         return
 

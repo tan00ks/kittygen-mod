@@ -1,0 +1,73 @@
+{
+    "sweetchoice_1": {
+        "tags": [
+            "any",
+            "sweet"
+        ],
+        "intro": [
+            "Oh, y_c! It's so good to see you. I hope you've been having a good evening!",
+            "Mm.. actually- do you think you could help me with something?",
+            "I've been trying to decorate the camp and I wanted to know which you prefer, purple flowers or golden flowers?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Purple flowers.",
+                "next_scene": "purple"
+            },
+            "choice2": {
+                "text": "Golden flowers.",
+                "next_scene": "golden"
+            }
+        },
+        "purple": [
+            "Oh, really? Let me put them up here and see how they look...",
+            "Oh, wow, they look fantastic! They make the Leader's Den look quite regal!",
+            "Thanks y_c, it means a lot!"
+        ],
+        "golden": [
+            "Oh, really? Let me put them up here and see how they look...",
+            "Oh, I see now! These golden flowers on the Medicine Cat's den really give it this bright but comforting look.",
+            "Thanks y_c, it means a lot!"
+        ]
+    },
+    "leader_inquiry": {
+        "tags": [
+            "no_kit",
+            "brooding",
+            "introspective"
+        ],
+        "intro": [
+            "l_n... What do you think of them?",
+            "Their leadership style, the choices they've made ... Would you have done it differently, if you were in that position?",
+            "I'm just curious. What you think of who's in charge could reveal a lot about your character."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Support l_n",
+                "next_scene": "support"
+            },
+            "choice2": {
+                "text": "Diss l_n",
+                "next_scene": "diss"
+            },
+            "choice3": {
+                "text": "Refuse to answer",
+                "next_scene": "refuse"
+            }
+        },
+        "support": [
+            "Hm ... Interesting.",
+            "But do you really mean that?",
+            "Or are you just worried about what would happen if you answered differently?"
+        ],
+        "diss": [
+            "Hm. It takes a lot of guts to admit that. Respect to you, y_c.",
+            "Though, maybe not the smartest to admit while l_n is standing right behind you ...",
+            "Heh. I made you look."
+        ],
+        "refuse": [
+            "Oh, come on. It's all just in the spirit of inquiry.",
+            "Do you really consider your opinion so important that it needs protecting ...?"
+        ]
+    }
+}

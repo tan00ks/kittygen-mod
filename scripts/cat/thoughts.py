@@ -3,6 +3,7 @@ import traceback
 from random import choice
 
 import ujson
+from scripts.game_structure.game_essentials import game
 
 class Thoughts():
     @staticmethod
@@ -103,6 +104,10 @@ class Thoughts():
 
         if 'main_trait_constraint' in thought:
             if main_cat.personality.trait not in thought['main_trait_constraint']:
+                return False
+            
+        if 'not_main_trait_constraint' in thought:
+            if main_cat.personality.trait in thought['not_main_trait_constraint']:
                 return False
             
         if 'random_trait_constraint' in thought and random_cat:
@@ -298,18 +303,24 @@ class Thoughts():
             spec_dir = ""
 
         THOUGHTS = []
-        with open(f"{base_path}{life_dir}{spec_dir}/{status}.json", 'r') as read_file:
-            THOUGHTS = ujson.loads(read_file.read())
-        GENTHOUGHTS = []
-        with open(f"{base_path}{life_dir}{spec_dir}/general.json", 'r') as read_file:
-            GENTHOUGHTS = ujson.loads(read_file.read())
-            
         # newborns only pull from their status thoughts. this is done for convenience
         if main_cat.age == 'newborn':
+            with open(f"{base_path}{life_dir}{spec_dir}/newborn.json", 'r') as read_file:
+                THOUGHTS = ujson.loads(read_file.read())
             loaded_thoughts = THOUGHTS
         else:
+            with open(f"{base_path}{life_dir}{spec_dir}/{status}.json", 'r') as read_file:
+                THOUGHTS = ujson.loads(read_file.read())
+            GENTHOUGHTS = []
+            with open(f"{base_path}{life_dir}{spec_dir}/general.json", 'r') as read_file:
+                GENTHOUGHTS = ujson.loads(read_file.read())
+            SHUNNEDTHOUGHTS = []
+            if not main_cat.dead and not main_cat.outside and  main_cat.revealed != 0 and game.clan.age - 3 <= main_cat.revealed:
+                with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
+                    SHUNNEDTHOUGHTS = ujson.loads(read_file.read())
             loaded_thoughts = THOUGHTS 
             loaded_thoughts += GENTHOUGHTS
+            loaded_thoughts += SHUNNEDTHOUGHTS
         final_thoughts = Thoughts.create_thoughts(loaded_thoughts, main_cat, other_cat, game_mode, biome, season, camp)
 
         return final_thoughts

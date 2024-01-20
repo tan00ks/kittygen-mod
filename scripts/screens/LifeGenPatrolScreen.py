@@ -24,7 +24,7 @@ class LifeGenPatrolScreen(Screens):
                                         (332, 340))
     cat_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/cat_icon.png").convert_alpha(),
                                       (100, 100))
-    df_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/df_toggle.png").convert_alpha(),
+    df_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/df_toggle2.png").convert_alpha(),
                                       (100, 100))
     date_icon = pygame.transform.scale(pygame.image.load("resources/images/buttons/flirt.png").convert_alpha(),
                                       (100, 100))
@@ -463,7 +463,7 @@ class LifeGenPatrolScreen(Screens):
                                              , manager=MANAGER)
         self.elements['cat_icon'].disable()
         self.elements['df_icon'] = UIImageButton(scale(pygame.Rect((726, 1120), (68, 68))), "",
-                                               object_id="#dark_forest_button"
+                                               object_id="#df_toggle"
                                                , manager=MANAGER)
         self.elements['df_icon'].disable()
         self.elements['date_icon'] = UIImageButton(scale(pygame.Rect((806, 1120), (68, 68))), "",
@@ -661,6 +661,19 @@ class LifeGenPatrolScreen(Screens):
         """Updates all the cat sprite buttons. Also updates the skills tab, if open, and the next and
             previous page buttons.  """
         self.clear_cat_buttons()  # Clear all the cat buttons
+
+        if not game.clan.your_cat:
+            print("Are you playing a normal ClanGen save? Switch to a LifeGen save or create a new cat!")
+            print("Choosing random cat to play...")
+            game.clan.your_cat = Cat.all_cats[choice(game.clan.clan_cats)]
+            counter = 0
+            while game.clan.your_cat.dead or game.clan.your_cat.outside:
+                if counter == 25:
+                    break
+                game.clan.your_cat = Cat.all_cats[choice(game.clan.clan_cats)]
+                counter+=1
+                
+            print("Chose " + str(game.clan.your_cat.name))
 
         self.able_cats = []
         the_cat = game.clan.your_cat

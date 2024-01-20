@@ -7,9 +7,6 @@ from .ChooseAdoptiveParentScreen import ChooseAdoptiveParentScreen
 from .ProfileScreen import ProfileScreen
 from .RoleScreen import RoleScreen
 from .SpriteInspectScreen import SpriteInspectScreen
-from .DFScreen import DFScreen
-from .StarClanScreen import StarClanScreen
-from .UnknownResScreen import UnknownResScreen
 from .MakeClanScreen import MakeClanScreen
 from .MedDenScreen import MedDenScreen
 from .RelationshipScreen import RelationshipScreen
@@ -21,7 +18,6 @@ from .EventsScreen import EventsScreen
 from .ChooseMateScreen import ChooseMateScreen
 from .ChooseMentorScreen import ChooseMentorScreen
 from .FamilyTreeScreen import FamilyTreeScreen
-from .OutsideClanScreen import OutsideClanScreen
 from .MediationScreen import MediationScreen
 from .ClanSettingsScreen import ClanSettingsScreen
 from .TalkScreen import TalkScreen
@@ -30,7 +26,6 @@ from .FlirtScreen import FlirtScreen
 from .ChooseRebornScreen import ChooseRebornScreen
 from .AchievementScreen import AchievementScreen
 from .MurderScreen import MurderScreen
-from .AccessoryScreen import ChangeAccessoryScreen
 from .DeputyScreen import DeputyScreen
 from .NameKitsScreen import NameKitsScreen
 from .LifeGenPatrolScreen import LifeGenPatrolScreen
@@ -74,8 +69,6 @@ make_clan_screen = MakeClanScreen('make clan screen')
 allegiances_screen = AllegiancesScreen('allegiances screen')
 camp_screen = ClanScreen('camp screen')
 catlist_screen = ListScreen('list screen')
-starclan_screen = StarClanScreen('starclan screen')
-df_screen = DFScreen('dark forest screen')
 med_den_screen = MedDenScreen('med den screen')
 freshkill_pile_screen = ClearingScreen('clearing screen')
 events_screen = EventsScreen('events screen')
@@ -89,8 +82,6 @@ choose_adoptive_parent_screen = ChooseAdoptiveParentScreen('choose adoptive pare
 relationship_screen = RelationshipScreen('relationship screen')
 view_children_screen = FamilyTreeScreen('see kits screen')
 mediation_screen = MediationScreen("mediation screen")
-outside_clan_screen = OutsideClanScreen('other screen')
-unknown_residence_screen = UnknownResScreen('unknown residence screen')
 
 # LifeGen screens
 
@@ -100,7 +91,6 @@ flirt_screen = FlirtScreen('flirt screen')
 
 achivement_screen = AchievementScreen('achievement screen')
 murder_screen = MurderScreen("murder screen")
-accessory_screen = ChangeAccessoryScreen("accessory screen")
 deputy_screen = DeputyScreen("deputy screen")
 name_kits_screen = NameKitsScreen("name kits screen")
 choose_reborn_screen = ChooseRebornScreen("choose reborn screen")

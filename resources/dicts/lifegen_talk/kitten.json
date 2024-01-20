@@ -1858,8 +1858,7 @@
             "medicine cat",
             "medicine cat apprentice",
             "brooding",
-            "neutral",
-            "dislike"
+            "neutral"
         ],
         [
             "Eughh ... What's that weird smell?",
@@ -1918,9 +1917,7 @@
         [
             "kitten",
             "brooding",
-            "cool",
-            "neutral",
-            "dislike"
+            "cool"
         ],
         [
             "Tch. Moss-ball? That babyish game?",
@@ -1932,8 +1929,7 @@
         [
             "any",
             "brooding",
-            "neutral",
-            "dislike"
+            "neutral"
         ],
         [
             "Hey, y_c, did your ears get bigger? Hahahaha!",
@@ -1944,8 +1940,7 @@
         [
             "kitten",
             "brooding",
-            "neutral",
-            "dislike"
+            "neutral"
         ],
         [
             "What's the matter, y_c? Missing something?",
@@ -1957,9 +1952,7 @@
     "broodingnewborn_17": [
         [
             "kitten",
-            "brooding",
-            "neutral",
-            "dislike"
+            "brooding"
         ],
         [
             "No, mouse-brain, you can't play with me!",

@@ -13,7 +13,6 @@ from .Screens import Screens
 from scripts.utility import get_personality_compatibility, get_text_box_theme, scale, scale_dimentions, shorten_text_to_fit
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
-from scripts.cat.sprites2 import Sprites2, spriteSize
 from scripts.cat.pelts import Pelt
 from scripts.game_structure.windows import GameOver, PickPath, DeathScreen
 from scripts.game_structure.image_button import UIImageButton, UISpriteButton, UIRelationStatusBar
