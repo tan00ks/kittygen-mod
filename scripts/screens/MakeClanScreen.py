@@ -334,11 +334,11 @@ class MakeClanScreen(Screens):
             if a in e:
                 game.choose_cats[a] = Cat(status='warrior', biome=None)
             else:
-                r = random.randint(1,70)
+                r = random.randint(1,90)
                 s = "warrior"
-                if r > 65:
+                if r > 85:
                     s = "medicine cat"
-                elif r > 60:
+                elif r > 80:
                     s = "medicine cat apprentice"
                 elif r > 40:
                     s = "warrior"

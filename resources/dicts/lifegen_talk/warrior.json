@@ -2477,5 +2477,17 @@
             "[You point to the one of your choice and explain why. t_c's eyes light up.]",
             "Yes! That's perfect! I love it! Great thinking y_c! Would you like to help me decorate?"
         ]
+    ],
+    "unlawful_newborn9": [
+        [
+            "newborn",
+            "unlawful",
+            "non-related"
+        ],
+        [
+            "[t_c wanders into the nursery. They look surprised when they see you.]",
+            "y_c... Huh. Gonna be an apprentice soon, right?",
+            "[r_q informs them that they have many moons to go before becoming an apprentice.]"
+        ]
     ]
 }

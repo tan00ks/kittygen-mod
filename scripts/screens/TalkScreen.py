@@ -156,6 +156,13 @@ class TalkScreen(Screens):
             elif game.clan.current_season == 'Leaf-fall':
                 screen.blit(self.leaffall_bg, (0, 0))    
         now = pygame.time.get_ticks()
+        try:
+            if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
+                self.profile_elements["cat_image"].hide()
+            else:
+                self.profile_elements["cat_image"].show()
+        except:
+            pass
         if self.text_index < len(self.text_frames):
             if now >= self.next_frame_time and self.frame_index < len(self.text_frames[self.text_index]) - 1:
                 self.frame_index += 1
