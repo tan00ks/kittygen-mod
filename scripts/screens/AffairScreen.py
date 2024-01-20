@@ -96,14 +96,14 @@ class AffairScreen(Screens):
                                                      object_id=get_text_box_theme("#text_box_34_horizcenter"),
                                                      manager=MANAGER)
 
-        self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((790, 216), (596, 440))),
+        self.mentor_frame = pygame_gui.elements.UIImage(scale(pygame.Rect((200, 216), (596, 440))),
                                                         pygame.transform.scale(
                                                             image_cache.load_image(
                                                                 "resources/images/affair_select.png").convert_alpha(),
                                                             (596, 440)), manager=MANAGER)
 
         self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
-        self.confirm_mentor = UIImageButton(scale(pygame.Rect((895, 605), (208, 52))), "",
+        self.confirm_mentor = UIImageButton(scale(pygame.Rect((300, 605), (208, 52))), "",
                                             object_id="#patrol_select_button")
 
         self.previous_page_button = UIImageButton(scale(pygame.Rect((630, 1160), (68, 68))), "",
@@ -111,7 +111,7 @@ class AffairScreen(Screens):
         self.next_page_button = UIImageButton(scale(pygame.Rect((902, 1160), (68, 68))), "",
                                               object_id="#relation_list_next", manager=MANAGER)
         
-        self.affair_screen = pygame_gui.elements.UIImage(scale(pygame.Rect((270, 105), (496, 620))),
+        self.affair_screen = pygame_gui.elements.UIImage(scale(pygame.Rect((850, 130), (444, 546))),
                                                         pygame.transform.scale(
                                                             image_cache.load_image(
                                                                 "resources/images/affair_screen.png").convert_alpha(),
@@ -263,17 +263,17 @@ class AffairScreen(Screens):
         if self.selected_cat:
 
             self.selected_details["selected_image"] = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((850, 300), (300, 300))),
+                scale(pygame.Rect((280, 300), (270, 270))),
                 pygame.transform.scale(
                     self.selected_cat.sprite,
-                    (300, 300)), manager=MANAGER)
+                    (270, 270)), manager=MANAGER)
 
             info = self.selected_cat.status + "\n" + \
                    self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n" + \
                    self.selected_cat.skills.skill_string(short=True)
 
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
-                                                                                   scale(pygame.Rect((1180, 325),
+                                                                                   scale(pygame.Rect((570, 325),
                                                                                                      (210, 250))),
                                                                                    object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
                                                                                    manager=MANAGER)
@@ -283,7 +283,7 @@ class AffairScreen(Screens):
                 short_name = str(name)[0:9]
                 name = short_name + '...'
             self.selected_details["mentor_name"] = pygame_gui.elements.ui_label.UILabel(
-                scale(pygame.Rect((890, 230), (220, 60))),
+                scale(pygame.Rect((290, 230), (220, 60))),
                 name,
                 object_id="#text_box_34_horizcenter", manager=MANAGER)
 
