@@ -747,6 +747,7 @@ class Events:
             
     def generate_birth(self):
         birth_txt = self.get_birth_txt()
+        birth_txt = self.adjust_txt(birth_txt)
         game.cur_events_list.append(Single_Event(birth_txt))
         self.w_done = False
         game.clan.your_cat.age = "newborn"
