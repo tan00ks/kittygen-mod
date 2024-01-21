@@ -2489,5 +2489,16 @@
             "y_c... Huh. Gonna be an apprentice soon, right?",
             "[r_q informs them that they have many moons to go before becoming an apprentice.]"
         ]
+    ],
+    "silly_newborn1": [
+        [
+            "newborn",
+            "silly",
+            "unabashed"
+        ],
+        [
+            "Look at those tiny claws!",
+            "Someday, you'll be training with us. I'll teach you how to pounce - and how to land on your feet when you miss, something I'm still perfecting!"
+        ]
     ]
 }

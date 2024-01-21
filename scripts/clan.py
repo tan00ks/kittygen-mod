@@ -201,6 +201,7 @@ class Clan():
         self.demon = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "warrior",
                                              "medicine cat", "leader", "mediator", "queen", "queen's apprentice", "deputy", "elder"]),
                               )
+        self.demon.df = True
         self.demon.dead = True
         self.demon.dead_for = randint(20, 200)
         self.add_cat(self.demon)

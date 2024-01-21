@@ -2041,5 +2041,35 @@
             "y_c's the future of the Clan, huh?",
             "[t_c looks at you with disdain.]"
         ]
+    ],
+    "silly_newborn1": [
+        [
+            "newborn",
+            "silly"
+        ],
+        [
+            "That mew is so squeaky! It's like a tiny mouse trying to roar. Don't worry, you'll find your big cat voice soon... or just keep squeaking, it's adorable!"
+        ]
+    ],
+    "silly_newborn2": [
+        [
+            "newborn",
+            "silly"
+        ],
+        [
+            "Oh, you've got your eyes open! Wait until you see the world outside - it's full of big warriors who pretend to be serious but really just want to play mossball and nap in the sun, just like you."
+        ]
+    ],
+    "silly_newborn3": [
+        [
+            "newborn",
+            "silly",
+            "non-related"
+        ],
+        [
+            "[t_c prances into the nursery, tail high.]",
+            "[They coo at you, a smile on their face.]",
+            "Oh! Aren't you just the cutest thing?"
+        ]
     ]
 }
