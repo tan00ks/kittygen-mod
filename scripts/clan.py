@@ -218,7 +218,7 @@ class Clan():
             if Cat.all_cats[i] != self.leader and Cat.all_cats[i] != \
                     self.medicine_cat and Cat.all_cats[i] != \
                     self.deputy and Cat.all_cats[i] != \
-                    self.instructor != \
+                    self.instructor and Cat.all_cats[i] != \
                     self.demon \
                     and not_found:
                 Cat.all_cats[i].example = True
@@ -577,7 +577,7 @@ class Clan():
             med_cat_info = sections[3].split(',')
             instructor_info = sections[4]
             members = sections[5].split(',')
-            demon_info = sections[6].split (',')
+            demon_info = sections[6]
             other_clans = []
         elif len(sections) == 7:
             general = sections[0].split(',')
@@ -586,7 +586,7 @@ class Clan():
             med_cat_info = sections[3].split(',')
             instructor_info = sections[4]
             members = sections[5].split(',')
-            demon_info = sections[6].split (',')
+            demon_info = sections[6]
             other_clans = []
         else:
             general = sections[0].split(',')
@@ -595,7 +595,7 @@ class Clan():
             med_cat_info = sections[2].split(',')
             instructor_info = sections[3]
             members = sections[4].split(',')
-            demon_info = sections[5].split (',')
+            demon_info = sections[5]
             other_clans = []
         if len(general) == 9:
             if general[3] == 'None':
