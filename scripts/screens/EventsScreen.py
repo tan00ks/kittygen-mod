@@ -100,16 +100,10 @@ class EventsScreen(Screens):
                 # Save the start time, so the loading animation can be
                 # set to only show up if timeskip is taking a good amount of time. 
                 self.events_thread = self.loading_screen_start_work(events_class.one_moon)
-                
-            elif event.ui_element == self.toggle_borders_button:
-                if game.clan.closed_borders:
-                    game.clan.closed_borders = False
-                    self.toggle_borders_button.set_text("Close Clan Borders")
-                else:
-                    game.clan.closed_borders = True
-                    self.toggle_borders_button.set_text("Open Clan Borders")
-            elif event.ui_element == self.freshkill_pile_button and game.clan.game_mode != "classic":
-                self.change_screen('clearing screen')            
+            
+            elif game.clan.game_mode != "classic" and event.ui_element == self.freshkill_pile_button:
+                self.change_screen('clearing screen')
+
             # Change the type of events displayed
             elif event.ui_element == self.all_events_button:
                 if self.event_container.vert_scroll_bar:
