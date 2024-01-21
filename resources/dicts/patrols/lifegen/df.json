@@ -404,7 +404,7 @@
                 ],
                 "history_text": {
                     "reg_death": "m_c died after ingesting too much Dark Forest water",
-                    "lead_death": "{VERB/m_c} after ingesting too much Dark Forest water"
+                    "lead_death": "ingested too much Dark Forest water"
                 }
             },
             {
@@ -419,7 +419,7 @@
                 ],
                 "history_text": {
                     "reg_death": "m_c died after ingesting too much Dark Forest water",
-                    "lead_death": "{VERB/m_c} after ingesting too much Dark Forest water"
+                    "lead_death": "ingested too much Dark Forest water"
                 }
             }
         ],
@@ -436,7 +436,7 @@
                 ],
                 "history_text": {
                     "reg_death": "m_c died after ingesting too much Dark Forest water",
-                    "lead_death": "{VERB/m_c} after ingesting too much Dark Forest water"
+                    "lead_death": "ingested too much Dark Forest water"
                 }
             },
             {
@@ -446,7 +446,7 @@
                 "dead_cats": ["y_c"],
                 "history_text": {
                     "reg_death": "m_c died after ingesting too much Dark Forest water",
-                    "lead_death": "{VERB/m_c} after ingesting too much Dark Forest water"
+                    "lead_death": "ingested too much Dark Forest water"
                 }
             }
         ]
@@ -730,7 +730,7 @@
                 "dead_cats": ["r_c"],
                 "history_text": {
                     "reg_death": "m_c was murdered by in the Dark Forest.",
-                    "lead_death": "{VERB/m_c} were murdered in the Dark Forest"
+                    "lead_death": "murdered in the Dark Forest"
                 }
                 
             }
@@ -880,7 +880,7 @@
                 ],
                 "history_text": {
                     "reg_death": "m_c died after ingesting Dark Forest mud.",
-                    "lead_death": "{VERB/m_c} after ingesting Dark Forest mud"
+                    "lead_death": "ingested Dark Forest mud"
                 }
             }
         ],
@@ -917,7 +917,7 @@
                 ],
                 "history_text": {
                     "reg_death": "m_c died after ingesting Dark Forest mud.",
-                    "lead_death": "{VERB/m_c} after ingesting Dark Forest mud"
+                    "lead_death": "ingested Dark Forest mud"
                 }
             },
             {
@@ -927,7 +927,7 @@
                 "dead_cats": ["y_c"],
                 "history_text": {
                     "reg_death": "m_c died after being left for dead in the Dark Forest.",
-                    "lead_death": "{VERB/m_c} after being left for dead in the Dark Forest "
+                    "lead_death": "{VERB/m_c/were/was} left for dead in the Dark Forest "
                 }
             }
         ]
