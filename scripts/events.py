@@ -450,7 +450,6 @@ class Events:
             ##WILDCARD check, because I've lost control of my life
             ##Declare Lists of wildcard combos for comparison. (Will be made more professional later.)
             not_wildcard_patterns = ['tabby', 'ticked', 'mackerel', 'classic', 'agouti', 'smoke', 'single']
-            ID_check = 0
             ##Actual check for wildcardness
             if Cat.all_cats.get(cat).pelt.name == "Tortie" or Cat.all_cats.get(cat).pelt.name == "Calico":
                 ID_check = Cat.all_cats.get(cat).ID 
