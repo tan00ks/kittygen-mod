@@ -151,12 +151,7 @@ class MurderScreen(Screens):
                                                                 image_cache.load_image(
                                                                     "resources/images/choose_victim.png").convert_alpha(),
                                                                 (562, 394)), manager=MANAGER)
-            
-            self.choose_victim = pygame_gui.elements.UIImage(scale(pygame.Rect((230, 226), (536, 484))),
-                                                            pygame.transform.scale(
-                                                                image_cache.load_image(
-                                                                    "resources/images/choose_victim.png").convert_alpha(),
-                                                                (536, 484)), manager=MANAGER)
+    
             
             self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
             self.confirm_mentor = UIImageButton(scale(pygame.Rect((270, 610), (208, 52))), "",
@@ -186,11 +181,6 @@ class MurderScreen(Screens):
                                                                     "resources/images/murder_select.png").convert_alpha(),
                                                                 (562, 394)), manager=MANAGER)
 
-            self.choose_victim = pygame_gui.elements.UIImage(scale(pygame.Rect((230, 226), (536, 484))),
-                                                            pygame.transform.scale(
-                                                                image_cache.load_image(
-                                                                    "resources/images/choose_accomplice.png").convert_alpha(),
-                                                                (536, 484)), manager=MANAGER)
             
             self.murderimg = pygame_gui.elements.UIImage(scale(pygame.Rect((850, 150), (446, 494))),
                                                             pygame.transform.scale(
