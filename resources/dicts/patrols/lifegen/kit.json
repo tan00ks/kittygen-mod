@@ -14,7 +14,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit1",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -51,7 +51,7 @@
         "tags": [
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit2",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -89,7 +89,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -127,7 +127,7 @@
             "kit_only",
             "border"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -165,7 +165,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_elderstories",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -203,7 +203,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit1",
         "min_cats": 1,
         "max_cats": 2,
         "min_max_status": {},
@@ -241,7 +241,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_moth",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -279,7 +279,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -317,7 +317,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -355,7 +355,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -393,7 +393,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -431,7 +431,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit12",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -469,7 +469,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_spiderweb",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -507,7 +507,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit14",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -545,7 +545,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit_default",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -583,7 +583,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit16",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -621,7 +621,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit17",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
@@ -659,7 +659,7 @@
             "border",
             "kit_only"
         ],
-        "patrol_art": "gen_hunt_mouse",
+        "patrol_art": "lg_kit18",
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
