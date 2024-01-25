@@ -743,6 +743,7 @@ class Events:
             
     def generate_birth(self):
         birth_txt = self.get_birth_txt()
+        birth_txt = self.adjust_txt(birth_txt)
         game.cur_events_list.append(Single_Event(birth_txt))
         self.w_done = False
         game.clan.your_cat.age = "newborn"
@@ -1678,7 +1679,7 @@ class Events:
         TODO: DOCS
         """
         if game.clan.clan_settings["fading"] and not cat.prevent_fading \
-                and cat.ID != game.clan.instructor.ID and not cat.faded:
+                and cat.ID != game.clan.instructor.ID and cat.ID != game.clan.demon.ID and not cat.faded:
 
             age_to_fade = game.config["fading"]["age_to_fade"]
             opacity_at_fade = game.config["fading"]["opacity_at_fade"]

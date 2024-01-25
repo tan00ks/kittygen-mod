@@ -156,6 +156,13 @@ class TalkScreen(Screens):
             elif game.clan.current_season == 'Leaf-fall':
                 screen.blit(self.leaffall_bg, (0, 0))    
         now = pygame.time.get_ticks()
+        try:
+            if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
+                self.profile_elements["cat_image"].hide()
+            else:
+                self.profile_elements["cat_image"].show()
+        except:
+            pass
         if self.text_index < len(self.text_frames):
             if now >= self.next_frame_time and self.frame_index < len(self.text_frames[self.text_index]) - 1:
                 self.frame_index += 1
@@ -181,7 +188,7 @@ class TalkScreen(Screens):
                 self.change_screen('profile screen')
             else:
                 for key, button in self.choice_buttons.items():
-                    if event.ui_element == button:
+                    if event.ui_element == button and self.chosen_text_key:
                         self.current_scene = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][key]["next_scene"]
                         self.handle_choice(self.the_cat)
         elif event.type == pygame.KEYDOWN and game.settings['keybinds']:
@@ -569,6 +576,10 @@ class TalkScreen(Screens):
             if "they_younger" in tags:
                 if you.age != cat.age and cat.moons > you.moons:
                     continue
+
+            if "shunned" in tags:
+                if game.clan.your_cat.revealed == 0 or game.clan.age - 3 > game.clan.your_cat.revealed or game.clan.your_cat.moons == 0:
+                    continue
             
             # Relationship conditions
             if you.ID in cat.relationships:
@@ -629,14 +640,18 @@ class TalkScreen(Screens):
         counter = 0
         if len(game.clan.talks) > 50:
             game.clan.talks.clear()
-        
-        weights = []
+
+        weights2 = []
+        weighted_tags = ["from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit"]
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
-            weights.append(len(tags))
+            num_fam_mentor_tags = 1
+            if any(i in weighted_tags for i in tags):
+                num_fam_mentor_tags+=3
+            weights2.append(num_fam_mentor_tags)
 
         while counter < max_retries:
-            text_chosen_key = choice(list(texts_list.keys()))
+            text_chosen_key = choices(list(texts_list.keys()), weights=weights2, k=1)[0]
             text = texts_list[text_chosen_key]["intro"] if "intro" in texts_list[text_chosen_key] else texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
 
@@ -649,6 +664,10 @@ class TalkScreen(Screens):
 
             counter += 1
 
+        weights = []
+        for item in texts_list.values():
+            tags = item["tags"] if "tags" in item else item[0]
+            weights.append(len(tags))
         text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
         text = texts_list[text_chosen_key][1]
         new_text = self.get_adjusted_txt(text, cat)
@@ -685,11 +704,6 @@ class TalkScreen(Screens):
         text = [t1.replace("c_n", game.clan.name) for t1 in text]
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
         text = [t1.replace("t_c", str(cat.name)) for t1 in text]
-        
-        for i in range(len(text)):
-            text[i] = self.adjust_txt(text[i], cat)
-            if text[i] == "":
-                return ""
 
         r_c_found = False
         for i in range(len(text)):
@@ -701,6 +715,11 @@ class TalkScreen(Screens):
             while alive_cat.ID == game.clan.your_cat.ID or alive_cat.ID == cat.ID:
                 alive_cat = choice(alive_cats)
             text = [t1.replace("r_c", str(alive_cat.name)) for t1 in text]
+        
+        for i in range(len(text)):
+            text[i] = self.adjust_txt(text[i], cat)
+            if text[i] == "":
+                return ""
 
         if "grief stricken" in cat.illnesses:
             try:
@@ -1015,15 +1034,15 @@ class TalkScreen(Screens):
                         return ""
                 text = text.replace("n_r1", str(random_cat1.name))
                 text = text.replace("n_r2", str(random_cat2.name))
-            if "r_c" in text:
-                random_cat = choice(self.get_living_cats())
-                counter = 0
-                while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID:
-                    if counter == 30:
-                        return ""
-                    random_cat = choice(self.get_living_cats())
-                    counter +=1
-                text = text.replace("r_c", str(random_cat.name))
+            # if "r_c" in text:
+            #     random_cat = choice(self.get_living_cats())
+            #     counter = 0
+            #     while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID:
+            #         if counter == 30:
+            #             return ""
+            #         random_cat = choice(self.get_living_cats())
+            #         counter +=1
+            #     text = text.replace("r_c", str(random_cat.name))
             if "_" in text:
                 print(f"_ found in {text}")
                 return ""

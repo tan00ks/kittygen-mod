@@ -1078,6 +1078,7 @@ class Patrol():
         replace_dict = {
             "p_l": (str(self.patrol_leader.name), choice(self.patrol_leader.pronouns)),
             "r_c": (str(self.patrol_random_cat.name), choice(self.patrol_random_cat.pronouns)),
+            "y_c": (str(game.clan.your_cat.name), choice(game.clan.your_cat.pronouns)),
         }
 
         other_cats = [i for i in self.patrol_cats if i not in [self.patrol_leader, self.patrol_random_cat]]

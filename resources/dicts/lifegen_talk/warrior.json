@@ -2014,7 +2014,6 @@
             "Not bad, y_c."
         ]
     ],
-
     "upstanding_warrior1": [
         [
             "warrior",
@@ -2476,6 +2475,29 @@
             "I'm going to decorate my nest a little bit in the same way and I want your advice on what looks best! So which fern?",
             "[You point to the one of your choice and explain why. t_c's eyes light up.]",
             "Yes! That's perfect! I love it! Great thinking y_c! Would you like to help me decorate?"
+        ]
+    ],
+    "unlawful_newborn9": [
+        [
+            "newborn",
+            "unlawful",
+            "non-related"
+        ],
+        [
+            "[t_c wanders into the nursery. They look surprised when they see you.]",
+            "y_c... Huh. Gonna be an apprentice soon, right?",
+            "[r_q informs them that they have many moons to go before becoming an apprentice.]"
+        ]
+    ],
+    "silly_newborn1": [
+        [
+            "newborn",
+            "silly",
+            "unabashed"
+        ],
+        [
+            "Look at those tiny claws!",
+            "Someday, you'll be training with us. I'll teach you how to pounce - and how to land on your feet when you miss, something I'm still perfecting!"
         ]
     ]
 }

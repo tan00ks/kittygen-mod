@@ -1886,7 +1886,8 @@
             "See this, y_c? This is called a mossball and you should remember that! You bat it around with your paws like this, see? And you use it to play really fun games! You're going to love it!",
             "[r_c snickers and reminds t_c that you're a newborn, far younger than they are and that you probably don't understand a word they said. t_c puffs out their little chest.]",
             "Well, yeah, I know that! But I thought that maybe they'd like to see one for the first time because then that way they'll like playing games with me!",
-            "[r_c states that it's a nice gesture and lovely thought but maybe y_p wouldn't want their kittens playing with such a big toy until you're a little older. y_p laughs it off and pushes the ball towards t_c and asks if they want to play.]",
+            "[r_c states that it's a nice gesture and lovely thought but maybe y_p wouldn't want their kittens playing with such a big toy until you're a little older.]",
+            "[y_p laughs it off and pushes the ball towards t_c and asks if they want to play.]",
             "Really? YES!",
             "[You squint as you watch your loving parent paw the ball back and forth, your whiskers twitch eagerly, maybe when you're older this will be a fun game! You will remember this.]"
         ]
@@ -1902,6 +1903,184 @@
             "[t_c looks up at r_q and with a blunt expression asks,]",
             "Can we get rid of it? I don't want it.",
             "[The queen scolds the kitten for their behaviour and escorts them out of the den to find their parents to tell them. You don't understand what's going on but judging by the glare of the queen- it can't be good...]"
+        ]
+    ],
+    "warrior_to_newborn": [
+        [
+            "newborn",
+            "sweet",
+            "cool",
+            "stable"
+        ],
+        [
+            "Look how tiny they are, r_c!",
+            "Give them a few moons, and they'll be exploring the territory with wide-eyed wonder, just like we did when we were young."
+        ]
+    ],
+    "unlawful_newborn1": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "Hmph. So tiny and fragile.",
+            "In the chaos of this Clan, they'll have to toughen up fast. Survival doesn't favor the weak."
+        ]
+    ],
+    "unlawful_newborn2": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "[t_c scoffs.]",
+            "Look at them, all snug and secure in their nest. They have no idea what the world outside the nursery is like. It's not all soft moss out here."
+        ]
+    ],
+    "unlawful_newborn3": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "Cute little thing, aren't they? But cuteness won't help in a fight.",
+            "They better learn to be sharp and cunning if they want to last."
+        ]
+    ],
+    "unlawful_newborn4": [
+        [
+            "newborn",
+            "unlawful",
+            "they_formerlyrogue"
+        ],
+        [
+            "They're born into rules and codes. Pity. In the wild rogue life, it's every cat for themselves. That's the real way of life, not these Clan fairy tales."
+        ]
+    ],
+    "unlawful_newborn5": [
+        [
+            "newborn",
+            "unlawful",
+            "brooding"
+        ],
+        [
+            "They say it's a blessing to be born in a Clan. Ha! Let's see how long it takes before they see the hypocrisy, the lies. I did, and look where I am now."
+        ]
+    ],
+    "unlawful_newborn6": [
+        [
+            "newborn",
+            "unlawful",
+            "brooding"
+        ],
+        [
+            "[r_q beckons t_c into the nursery to visit you. t_c walks past without a glance.]"
+        ]
+    ],
+    "unlawful_newborn7": [
+        [
+            "newborn",
+            "unlawful"
+        ],
+        [
+            "Another soul chained by the Clan's traditions... and Warrior Code.",
+            "Maybe, just maybe, they'll be the one to break free, to see the world for what it really is."
+        ]
+    ],
+    "unlawful_newborn8": [
+        [
+            "newborn",
+            "unlawful",
+            "brooding"
+        ],
+        [
+            "That little one doesn't know the harshness of the world yet.",
+            "Maybe they'll be lucky, maybe they'll find happiness. I hope they do, even if I couldn't."
+        ]
+    ],
+    "upstanding_newborn": [
+        [
+            "newborn",
+            "upstanding"
+        ],
+        [
+            "This kit is a precious new leaf in the Clan's history.",
+            "We must nurture them with the wisdom of our ancestors and the strength of our code."
+        ]
+    ],
+    "upstanding_newborn2": [
+        [
+            "newborn",
+            "upstanding"
+        ],
+        [
+            "Look at those tiny paws! A future warrior of the Clan, no doubt.",
+            "With the right guidance, they will grow to uphold our values and honor. Unlike some of the cats here.",
+            "[t_c glares at some other cat outside of the nursery.]"
+        ]
+    ],
+    "upstanding_newborn3": [
+        [
+            "newborn",
+            "upstanding"
+        ],
+        [
+            "[t_c looks solemn as they stand over you.]",
+            "I vow to protect and guide this young one, to help them understand the importance of loyalty and courage in the life of a Clan cat.",
+            "[Behind them, r_w can't help but snicker at their dramatic oath.]"
+        ]
+    ],
+    "upstanding_newborn4": [
+        [
+            "newborn",
+            "upstanding",
+            "unlawful",
+            "brooding"
+        ],
+        [
+            "y_c's the future of the Clan, huh?",
+            "[t_c looks at you with disdain.]"
+        ]
+    ],
+    "silly_newborn1": [
+        [
+            "newborn",
+            "silly"
+        ],
+        [
+            "That mew is so squeaky! It's like a tiny mouse trying to roar. Don't worry, you'll find your big cat voice soon... or just keep squeaking, it's adorable!"
+        ]
+    ],
+    "silly_newborn2": [
+        [
+            "newborn",
+            "silly"
+        ],
+        [
+            "Oh, you've got your eyes open! Wait until you see the world outside - it's full of big warriors who pretend to be serious but really just want to play mossball and nap in the sun, just like you."
+        ]
+    ],
+    "silly_newborn3": [
+        [
+            "newborn",
+            "silly",
+            "non-related"
+        ],
+        [
+            "[t_c prances into the nursery, tail high.]",
+            "[They coo at you, a smile on their face.]",
+            "Oh! Aren't you just the cutest thing?"
+        ]
+    ],
+    "newborn_prey": [
+        [
+            "newborn",
+            "non-related",
+            "unlawful"
+        ],
+        [
+            "[t_c scoffs at you.]",
+            "... What a waste of prey."
         ]
     ]
 }

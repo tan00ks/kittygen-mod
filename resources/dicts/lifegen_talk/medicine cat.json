@@ -1893,5 +1893,18 @@
             "In case you're wondering, it's a mixture of honey, chamomile and willow herb, and wrapped in a laurel leaf.",
             "... there we go. Thank you y_c. Hopefully there will be more fresh-kill soon."
         ]
+    ],
+    "newborn_omen": [
+        [
+            "newborn",
+            "introspective",
+            "brooding",
+            "stable"
+        ],
+        [
+            "So small, yet they carry the future of the Clan on their little shoulders...",
+            "[t_c has a faraway look in their eyes. They blink and shake their head.]",
+            "Ah, StarClan. What am I saying?"
+        ]
     ]
 }
