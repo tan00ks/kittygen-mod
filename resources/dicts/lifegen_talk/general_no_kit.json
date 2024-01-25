@@ -6597,7 +6597,8 @@
             "Look over there, y_c. What do you think r_c is doing?",
             "Obviously they're doing something with those sticks. But what are they building?",
             "Maybe a basket? Or a gift for l_n...",
-            "Ooh! Or maybe it's some kind of dangerous contraption that they're going to use to take over the world, and we'll have to step up as unlikely heroes bonded by the power of love to stop r_cClan's tyrannical rule! I can imagine the nursery stories already!",
+            "Ooh! Or maybe it's some kind of dangerous contraption that they're going to use to take over the world, and we'll have to step up as unlikely heroes bonded by the power of love to stop r_cClan's tyrannical rule!",
+            "I can imagine the nursery stories already!",
             "[r_c gives t_c a look that seems to mean \"You know I can hear you, right?\" before turning back to what they were doing.]"
         ]
     ],
@@ -9544,7 +9545,9 @@
         [
             "any",
             "brooding",
-            "romantic_like"
+            "romantic_like",
+            "from_mate"
+
         ],
         [
             "[You compliment your mate, t_c, on their pretty eyes.]",
