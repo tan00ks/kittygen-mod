@@ -117,14 +117,7 @@ class MurderScreen(Screens):
                 self.update_cat_list()
 
     def screen_switches(self):
-        # proceed_no_accomplice = pygame.transform.scale(image_cache.load_image("resources/images/proceed_no_accomplice.png").convert_alpha(),
-        #                                 (1000 / 1600 * screen_x, 452 / 1400 * screen_y))
-        # proceed_accomplice = pygame.transform.scale(image_cache.load_image("resources/images/proceed_accomplice.png").convert_alpha(),
-        #                                     (1000 / 1600 * screen_x, 452 / 1400 * screen_y))
-        # choose_victim = pygame.transform.scale(image_cache.load_image("resources/images/choose_victim.png").convert_alpha(),
-        #                                     (1000 / 1600 * screen_x, 452 / 1400 * screen_y))
-        # choose_accomplice = pygame.transform.scale(image_cache.load_image("resources/images/choose_accomplice.png").convert_alpha(),
-        #                                     (1000 / 1600 * screen_x, 452 / 1400 * screen_y))
+
         if self.stage == 'choose murder cat':
             self.the_cat = game.clan.your_cat
             self.mentor = Cat.fetch_cat(self.the_cat.mentor)
@@ -140,12 +133,12 @@ class MurderScreen(Screens):
                                                             pygame.transform.scale(
                                                                 image_cache.load_image(
                                                                     "resources/images/murder_select.png").convert_alpha(),
-                                                                (562, 394)), manager=MANAGER)
+                                                                (569, 399)), manager=MANAGER)
             self.murderimg = pygame_gui.elements.UIImage(scale(pygame.Rect((850, 150), (446, 494))),
                                                             pygame.transform.scale(
                                                                 image_cache.load_image(
                                                                     "resources/images/choose_victim.png").convert_alpha(),
-                                                                (562, 394)), manager=MANAGER)
+                                                                (446, 494)), manager=MANAGER)
     
             
             self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
@@ -174,14 +167,14 @@ class MurderScreen(Screens):
                                                             pygame.transform.scale(
                                                                 image_cache.load_image(
                                                                     "resources/images/murder_select.png").convert_alpha(),
-                                                                (562, 394)), manager=MANAGER)
+                                                                (569, 399)), manager=MANAGER)
 
             
             self.murderimg = pygame_gui.elements.UIImage(scale(pygame.Rect((850, 150), (446, 494))),
                                                             pygame.transform.scale(
                                                                 image_cache.load_image(
                                                                     "resources/images/proceed_accomplice.png").convert_alpha(),
-                                                                (562, 394)), manager=MANAGER)
+                                                                (446, 494)), manager=MANAGER)
 
             self.back_button = UIImageButton(scale(pygame.Rect((50, 1290), (210, 60))), "", object_id="#back_button")
             self.confirm_mentor = UIImageButton(scale(pygame.Rect((235, 610), (208, 52))), "",
