@@ -51,7 +51,7 @@ class MurderScreen(Screens):
         self.the_cat = None
         self.murder_cat = None
         self.next = None
-        self.choose_victim = None
+        self.murderimg = None
         
     def handle_event(self, event):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
@@ -59,13 +59,8 @@ class MurderScreen(Screens):
                 self.selected_cat = event.ui_element.return_cat_object()
                 self.update_selected_cat()
                 if self.stage == "choose accomplice":
-                    if self.choose_victim:
-                        self.choose_victim.kill()
-                    self.choose_victim = pygame_gui.elements.UIImage(scale(pygame.Rect((230, 226), (536, 484))),
-                                                                    pygame.transform.scale(
-                                                                        image_cache.load_image(
-                                                                            "resources/images/proceed_accomplice.png").convert_alpha(),
-                                                                        (536, 484)), manager=MANAGER)
+                    if self.murderimg:
+                        self.murderimg.kill()
 
             elif event.ui_element == self.confirm_mentor and self.selected_cat and self.stage == 'choose murder cat':
                 if not self.selected_cat.dead:
@@ -249,9 +244,6 @@ class MurderScreen(Screens):
         if self.next:
             self.next.kill()
             del self.next
-        if self.choose_victim:
-            self.choose_victim.kill()
-            del self.choose_victim
 
     def find_next_previous_cats(self):
         """Determines where the previous and next buttons lead"""
