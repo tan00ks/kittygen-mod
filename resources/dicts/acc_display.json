@@ -1409,5 +1409,10 @@
     "default": "brown teddy",
     "plural": "brown teddies",
     "singular": "brown teddy"
+  },
+  "TIDE": {
+    "default": "crab",
+    "plural": "crab",
+    "singular": "crab"
   }
 }

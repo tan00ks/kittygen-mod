@@ -69,5 +69,71 @@
             "Oh, come on. It's all just in the spirit of inquiry.",
             "Do you really consider your opinion so important that it needs protecting ...?"
         ]
+    },
+    "you_pregnant20": {
+        "tags": [
+            "any",
+            "you_pregnant",
+            "silly",
+            "random_cat"
+        ],
+        "intro": [
+            "I bet the first pick of the freshkill pile that you'll have three kits!",
+            "r_c thinks there'll be five though. Hehe, what do you think?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Agree with t_c",
+                "next_scene": "agree_tc"
+            },
+            "choice2": {
+                "text": "Agree with r_c",
+                "next_scene": "agree_rc"
+            },
+            "choice3": {
+                "text": "Disagree with both",
+                "next_scene": "disagree"
+            }
+        },
+        "agree_tc": [
+            "Ha, I knew you would agree!",
+            "Say, what do you think of t_c -kit for a name? It has a great ring to it!"
+        ],
+        "agree_rc": [
+            "Aw, really? Well, I guess some cats want a bigger family ...",
+            "Say, what do you think of t_c -kit for a name? It has a great ring to it!"
+        ],
+        "disagree": [
+            "Really? How many were you thinking, then?"
+        ],
+        "disagree_choices": {
+            "choice1": {
+                "text": "One",
+                "next_scene": "small"
+            },
+            "choice2": {
+                "text": "Four",
+                "next_scene": "mid"
+            },
+            "choice3": {
+                "text": "Ten!",
+                "next_scene": "big"
+            }
+        },
+        "small": [
+            "One? Hm ... Seems a little lonely, no?",
+            "Still, I guess if that's what you want."
+        ],
+        "mid": [
+            "Four! Now that's a good, round, even number.",
+            "You'd have one for each role! A warrior, a mediator, a medicine cat, and a queen.",
+            "That way, you'd really always be taken care of. Hehe!"
+        ],
+        "big": [
+            "TEN?!?",
+            "Is ... Is that even possible?",
+            "With ten kits, you could have, like, a whole Clan to yourself ... A whole army, even!",
+            "I'm not sure if r_q would be too happy about it though ..."
+        ]
     }
 }

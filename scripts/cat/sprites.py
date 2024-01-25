@@ -147,7 +147,9 @@ class Sprites():
 
             "fazbear",
 
-            "bears"
+            "bears",
+
+            "tide"
 
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -559,5 +561,9 @@ class Sprites():
         for a, i in enumerate([
             "WHITEBEAR", "PANDA", "BEAR", "BROWNBEAR"]):
             self.make_group('bears', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "TIDE"]):
+            self.make_group('tide', (a, 0), f'acc_crafted{i}')
 # CREATE INSTANCE
 sprites = Sprites()
