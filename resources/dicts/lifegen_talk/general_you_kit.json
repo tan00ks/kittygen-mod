@@ -2071,5 +2071,16 @@
             "[They coo at you, a smile on their face.]",
             "Oh! Aren't you just the cutest thing?"
         ]
+    ],
+    "newborn_prey": [
+        [
+            "newborn",
+            "non-related",
+            "unlawful"
+        ],
+        [
+            "[t_c scoffs at you.]",
+            "... What a waste of prey."
+        ]
     ]
 }
