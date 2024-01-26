@@ -1043,9 +1043,6 @@ class TalkScreen(Screens):
                     random_cat = choice(self.get_living_cats())
                     counter +=1
                 text = text.replace("r_c", str(random_cat.name))
-            if "_" in text:
-                print(f"_ found in {text}")
-                return ""
         except Exception as e:
             print(e)
             print("ERROR: could not replace abbrv.")
