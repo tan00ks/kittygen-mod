@@ -251,6 +251,7 @@ class TalkScreen(Screens):
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
+            text = self.adjust_txt(text, self.the_cat)
             button = pygame_gui.elements.UIButton(scale(pygame.Rect((700, 200 + y_pos), (-1, 80))),
                 text,
                 manager=MANAGER
