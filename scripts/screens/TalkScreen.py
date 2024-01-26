@@ -704,7 +704,12 @@ class TalkScreen(Screens):
         text = [t1.replace("c_n", game.clan.name) for t1 in text]
         text = [t1.replace("y_c", str(you.name)) for t1 in text]
         text = [t1.replace("t_c", str(cat.name)) for t1 in text]
-
+        
+        for i in range(len(text)):
+            text[i] = self.adjust_txt(text[i], cat)
+            if text[i] == "":
+                return ""
+            
         r_c_found = False
         for i in range(len(text)):
             if "r_c" in text[i]:
@@ -715,11 +720,6 @@ class TalkScreen(Screens):
             while alive_cat.ID == game.clan.your_cat.ID or alive_cat.ID == cat.ID:
                 alive_cat = choice(alive_cats)
             text = [t1.replace("r_c", str(alive_cat.name)) for t1 in text]
-        
-        for i in range(len(text)):
-            text[i] = self.adjust_txt(text[i], cat)
-            if text[i] == "":
-                return ""
 
         if "grief stricken" in cat.illnesses:
             try:
@@ -1034,15 +1034,15 @@ class TalkScreen(Screens):
                         return ""
                 text = text.replace("n_r1", str(random_cat1.name))
                 text = text.replace("n_r2", str(random_cat2.name))
-            # if "r_c" in text:
-            #     random_cat = choice(self.get_living_cats())
-            #     counter = 0
-            #     while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID:
-            #         if counter == 30:
-            #             return ""
-            #         random_cat = choice(self.get_living_cats())
-            #         counter +=1
-            #     text = text.replace("r_c", str(random_cat.name))
+            if "r_c" in text:
+                random_cat = choice(self.get_living_cats())
+                counter = 0
+                while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID:
+                    if counter == 30:
+                        return ""
+                    random_cat = choice(self.get_living_cats())
+                    counter +=1
+                text = text.replace("r_c", str(random_cat.name))
             if "_" in text:
                 print(f"_ found in {text}")
                 return ""
