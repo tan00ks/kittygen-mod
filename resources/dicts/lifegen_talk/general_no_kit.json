@@ -8645,16 +8645,7 @@
             "[Still, you just hope the kit has the sense not to get their heart broken ... Or else you might have to have a conversation with their_crush yourself.]"
         ]
     ],
-    "gen_mate1": [
-        [
-            "Any",
-            "random_cat"
-        ],
-        [
-            "[t_c is sharing tongues with t_m in the clearing.]",
-            "[Who would have the heart to interrupt such a display of coupley bliss?]"
-        ]
-    ],
+    
     "thoughtful_mate": [
         [
             "no_kit",
