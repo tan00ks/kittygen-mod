@@ -8014,17 +8014,6 @@
             "[You're pretty sure that trying to talk to them in this state would give them a heart attack, or worse.]"
         ]
     ],
-    "neurotic_gen2": [
-        [
-            "Any",
-            "neurotic",
-            "random_cat"
-        ],
-        [
-            "[t_c watches r_c1 and r_c2 laugh together a little ways away, apparently too nervous to join in the conversation.]",
-            "[You decide to leave the poor cat alone.]"
-        ]
-    ],
     "neurotic_gen3": [
         [
             "Any",
@@ -8039,32 +8028,6 @@
             "Ah ... gimme a second. Thinking about it too hard makes me dizzy."
         ]
     ],
-    "neurotic_gen4": [
-        [
-            "no_kit",
-            "neurotic",
-            "random_cat",
-            "platonic_like"
-        ],
-        [
-            "Hey, do you think r_w is mad at me?",
-            "[You ask t_c why they think the warrior could possibly have a problem with them.]",
-            "Well, when they greeted me this morning, they said 'Hello' instead of 'Hi', like they usually do!",
-            "And, they didn't laugh at my joke on patrol earlier ...",
-            "All clear signs that they must hate me!"
-        ]
-    ],
-    "neurotic_gen5": [
-        [
-            "no_kit",
-            "neurotic",
-            "random_cat"
-        ],
-        [
-            "r_c told me earlier that 'no other cat in the Clan could do what I do' ... What do you think they meant by that?",
-            "[Leave it to t_c to overthink even the sincerest of compliments.]"
-        ]
-    ],
     "neurotic_gen6": [
         [
             "Any",
@@ -8074,18 +8037,6 @@
         [
             "[t_c has been grooming every inch of themself for what seems like hours now ...]",
             "[You can't tell if they're incredibly vain, or just super paranoid.]"
-        ]
-    ],
-    "neurotic_gen7": [
-        [
-            "Any",
-            "neurotic"
-        ],
-        [
-            "[t_c avoids stepping around every puddle in camp after a rain.]",
-            "[Confused by this ritual, you ask them why.]",
-            "Ah ... If I'm being honest, I can't stand the look of my own reflection, heh.",
-            "Plus, it's no good getting my paws wet, either."
         ]
     ],
     "neurotic_like": [
