@@ -1415,12 +1415,14 @@
     ],
     "brooding_medapp_6": [
         [
-            "apprentice",
+            "Any",
             "you_assertive",
             "you_silly",
             "you_upstanding",
             "you_unlawful",
-            "brooding"
+            "you_unabashed",
+            "brooding",
+            "they_older"
         ],
         [
             "Do c_nClan a favor and try not to pull any stupid stunts out there today.",
