@@ -2930,18 +2930,6 @@
             "Even if it does involve beheading."
         ]
     ],
-    "neurotic_app": [
-        [
-            "Any",
-            "neurotic",
-            "random_cat"
-        ],
-        [
-            "[t_c comes in from the hunting patrol, staring at their paws self-consciously as the rest of the patrol adds their catches to the freshkill pile.]",
-            "[tm_n gently reassures them that they tried their best, but t_c just glances away, clearly upset.]",
-            "How am I ever gonna be a real warrior if I can't even catch my own prey ...?"
-        ]
-    ],
     "neurotic_app1": [
         [
             "apprentice",
@@ -2952,6 +2940,25 @@
             "Promise to go easy, alright? There's a lot of stuff I still don't have down."
         ]
     ],
+    "neurotic_app4": [
+	[
+		"no_kit",
+		"neurotic",
+		"upstanding",
+		"random_cat"
+	],
+	[
+		"Gah, stupid, stupid, so stupid, t_c ...",
+		"Wuh - y_c? How long have you been standing there?",
+		"Why was I talking to myself ...?",
+		"*Sigh* It's, like, the dumbest thing ever. t_mn gave me this surprise assessment today, and I totally flunked it!",
+		"How could I have answered that the best way to catch a fish is by swimming up to it? It doesn't even make any sense!",
+		"I just know that t_mn is still laughing at me ... the whole Clan probably is.",
+		"[You tell t_c not to be so hard on themself.]",
+		"But, if I'm not hard on myself, then how will I ever become stronger?",
+		"I refuse to be an embarrassment to my Clan and mentor. I'll pass that assessment next time ... Whatever it takes!"
+	]
+	],
     "neurotic_app2": [
         [
             "no_kit",
