@@ -1377,24 +1377,6 @@
             "You're such a good teacher, y_c! I couldn't imagine being anyone's apprentice but you!"
         ]
     ],
-    "assertive_apprentice26": [
-        [
-            "Any",
-            "assertive",
-            "sweet",
-            "silly",
-            "from_your_apprentice",
-            "platonic_like"
-        ],
-        [
-            "[You notice that t_c isn't asking like their usual, energetic self. You ask them what's wrong.]",
-            "*Sigh* Oh, it's nothing really ...",
-            "It's just that ... Sometimes, I feel so behind my denmates. Not just in training, but in everything!",
-            "Everybody else seems to already have everything figured out. What they want to do with their lives, their places in the clan, who they're going to become mates with ... I just don't know Any of that stuff!",
-            "[You assure t_c that they don't have to know everything right now, and they have plenty of time to figure things out.]",
-            "... Thanks. That makes me feel better."
-        ]
-    ],
     "assertive_apprentice26_2": [
         [
             "Any",
