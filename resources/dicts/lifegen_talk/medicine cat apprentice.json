@@ -535,18 +535,6 @@
             "There's lots of different paths a cat can take in this world, but I know this is the path for me. Can you say the same?"
         ]
     ],
-    "assertivemedapp_4": [
-        [
-            "Any",
-            "assertive",
-            "romantic_like"
-        ],
-        [
-            "*Shudder* I gotta get out of this den, y_c. Come gather herbs with me later?",
-            "Sweet! It's a date! Hehe!",
-            "[t_c's eyes flash a little too intently for it to just be a joke.]"
-        ]
-    ],
     "assertivemedapp_5": [
         [
             "Any",
