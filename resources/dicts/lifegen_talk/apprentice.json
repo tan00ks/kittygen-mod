@@ -22,25 +22,6 @@
             "... Phew, that felt good. I hope somebody heard that!"
         ]
     ],
-    "brooding_jealous": [
-        [
-            "apprentice",
-            "jealousy",
-            "they_clanborn",
-            "they_clanfounder",
-            "you_outsiderroots",
-            "you_half-clan",
-            "you_orphaned",
-            "you_abandoned",
-            "random_cat"
-        ],
-        [
-            "[t_c walks up to you, tail lashing wildly.]",
-            "y_c, I don't know how you manage it, but I'm not surprised you have to cheat in our training sessions.",
-            "It makes sense you can't naturally compare to a clanborn cat, but it doesn't mean you can show me up in front of m_n, and especially not tm_n!",
-            "[t_c sneers at you one last time before stalking off without giving you a chance to reply.]"
-        ]
-    ],
     "silly_gen_prey": [
         [
             "Any",
