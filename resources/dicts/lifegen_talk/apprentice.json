@@ -2253,22 +2253,6 @@
             "Heh ... I guess it is pretty cool ..."
         ]
     ],
-    "broodingapp_toapp4": [
-        [
-            "any",
-            "brooding",
-            "platonic_like",
-            "from_your_apprentice"
-        ],
-        [
-            "[t_c coldly drops a bird at your paws.]",
-            "Before you ask, yes, I did go onto the territory without your permission.",
-            "It was early morning. This bird was perching in camp and I chased after it. There was no time to wake you.",
-            "If you have a problem with it, I'd recommend taking it up with d_n.",
-            "But I'm not gonna apologize, because I'm not sorry.",
-            "[t_c turns around and drops the bird on the freshkill pile. You don't know if you should congratulate them for the catch, or claw their ears off.]"
-        ]
-    ],
     "upstanding_apprentice1": [
         [
             "apprentice",
