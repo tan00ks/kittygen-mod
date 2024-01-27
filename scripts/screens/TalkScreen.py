@@ -40,6 +40,8 @@ class TalkScreen(Screens):
         self.choice_buttons = {}
         self.current_scene = ""
         self.created_choice_buttons = False
+        self.choicepanel = False
+        self.textbox_graphic = None
 
 
 
@@ -48,6 +50,7 @@ class TalkScreen(Screens):
         self.hide_menu_buttons()
         self.text_index = 0
         self.frame_index = 0
+        self.choicepanel = False
         self.created_choice_buttons = False
         self.the_cat = Cat.all_cats.get(game.switches['cat'])
         self.profile_elements = {}
@@ -72,6 +75,7 @@ class TalkScreen(Screens):
                 scale(pygame.Rect((178, 942), (1248, 302))),
                 self.talk_box_img
             )
+        
         self.back_button = UIImageButton(scale(pygame.Rect((50, 50), (210, 60))), "",
                                         object_id="#back_button", manager=MANAGER)
         self.scroll_container = pygame_gui.elements.UIScrollingContainer(scale(pygame.Rect((500, 970), (900, 300))))
@@ -80,6 +84,12 @@ class TalkScreen(Screens):
                                                   object_id="#text_box_30_horizleft",
                                                   container=self.scroll_container,
                                                 manager=MANAGER)
+        
+        self.textbox_graphic = pygame_gui.elements.UIImage(
+                scale(pygame.Rect((170, 942), (346, 302))),
+                image_cache.load_image("resources/images/textbox_graphic.png").convert_alpha()
+            )
+
         self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((70, 900), (400, 400))),
                                                                          pygame.transform.scale(
                                                                              generate_sprite(self.the_cat),
@@ -89,6 +99,17 @@ class TalkScreen(Screens):
                 image_cache.load_image("resources/images/cursor.png").convert_alpha()
             )
         self.paw.visible = False
+        
+        self.choice_panel = pygame_gui.elements.UIImage(
+                            scale(pygame.Rect((950, 630), (450, 330))),
+                            pygame.transform.scale(
+                            image_cache.load_image(
+                                "resources/images/relationship_log_frame.png").convert_alpha(),
+                                (500, 870)),
+                            manager=MANAGER)
+        self.choice_panel.visible = False
+
+
 
 
     def exit_screen(self):
@@ -105,11 +126,16 @@ class TalkScreen(Screens):
         del self.clan_name_bg
         self.talk_box.kill()
         del self.talk_box
+        self.textbox_graphic.kill()
+        del self.textbox_graphic
         self.paw.kill()
         del self.paw
         for button in self.choice_buttons:
             self.choice_buttons[button].kill()
         self.choice_buttons = {}
+        if self.choicepanel is True:
+            self.choice_panel.kill()
+            del self.choice_panel
 
     def update_camp_bg(self):
         light_dark = "light"
@@ -244,24 +270,30 @@ class TalkScreen(Screens):
         self.possible_texts = texts_list
         self.chosen_text_key = texts_chosen_key
         return chosen_text_intro
-
+    
     def create_choice_buttons(self):
+        self.choice_panel.visible = True
+        
         y_pos = 0
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
-            text = self.adjust_txt(text, self.the_cat)
-            button = pygame_gui.elements.UIButton(scale(pygame.Rect((700, 200 + y_pos), (-1, 80))),
+            button = pygame_gui.elements.UIButton(scale(pygame.Rect((1000, 670 + y_pos), (-1, 80))),
                 text,
                 manager=MANAGER
             )
             self.choice_buttons[c] = button
-            y_pos += 100
+            y_pos += 80
     
     def handle_choice(self, cat):
         for b in self.choice_buttons:
             self.choice_buttons[b].kill()
+
+        self.choice_panel.visible = False
+        self.choice_panel.kill()
+    
+        
 
         self.choice_buttons = {}
         chosen_text = self.possible_texts[self.chosen_text_key][self.current_scene]
