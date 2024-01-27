@@ -776,25 +776,6 @@
             "[The very peeved-off looking deputy locks eyes with you and storms in your direction. What mischief did t_c get into this time?]"
         ]
     ],
-    "assertivekit_311": [
-        [
-            "Any",
-            "kitten",
-            "assertive",
-            "silly",
-            "unlawful",
-            "upstanding",
-            "platonic_like",
-            "from_adopted_kit",
-            "from_kit",
-            "random_cat"
-        ],
-        [
-            "y_c, r_k won't play with me! Will you go tell them that they have to?",
-            "What? You won't? But that's not fairrrr!",
-            "[t_c stalks across the nursery to go have a pout. But, as soon as one of the kits suggests a game of moss-ball, their troubles are suddenly forgotten.]"
-        ]
-    ],
     "assertivekit_your": [
         [
             "Any",
