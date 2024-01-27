@@ -1016,36 +1016,6 @@
             "Go find some other cat to impose on."
         ]
     ],
-    "assertivemedcat_queen": [
-        [
-            "queen's apprentice",
-            "queen",
-            "assertive",
-            "cool",
-            "silly"
-        ],
-        [
-            "y_c! Just the cat I was looking for.",
-            "You'll be happy to know that I just gathered up some more borage this morning. Which, pop quiz, should help the queens with ... what?",
-            "Hehe, you got it! I should've known you'dve studied up.",
-            "If you ever need anything, don't hesitate! I'll be here in the den for ya any time."
-        ]
-    ],
-    "assertivemedcat_queen1": [
-        [
-            "queen's apprentice",
-            "queen",
-            "assertive",
-            "cool",
-            "silly"
-        ],
-        [
-            "y_c! Just the cat I was looking for.",
-            "You'll be happy to know that I just gathered up some more borage this morning. Which, pop quiz, should help the queens with ... what?",
-            "Er ... no, that's not right. Like, at all.",
-            "Hm ... maybe now'd be a good time to start your herbal training again ..."
-        ]
-    ],
     "introspective_Med": [
         [
             "any",
