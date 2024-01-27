@@ -311,18 +311,6 @@
             "[You and t_c have a long conversation about the other clans. With each detail you share, their eyes grow bigger and bigger.]"
         ]
     ],
-    "assertivekit_0": [
-        [
-            "no_kit",
-            "assertive"
-        ],
-        [
-            "y_c! y_c! Gimme a badger ride, c'mon, pleeease?",
-            "All the other grownups are too busy! I need you to play with me!",
-            "You will? YAYAYAYAYAY!!!",
-            "[Before you even get a chance to prepare, t_c tackles you from behind, squealing with delight as they clamber onto your shoulders.]"
-        ]
-    ],
     "assertivekit_queensapp1": [
         [
             "queen's apprentice"
@@ -415,19 +403,6 @@
             "Psh, who cares? I don't wanna play pretend! I just want to battle!!!"
         ]
     ],
-    "assertivekit_7": [
-        [
-            "kitten",
-            "assertive",
-            "unlawful"
-        ],
-        [
-            "Hmph. When are they gonna let us out of this stuffy old nursery?",
-            "I want to explore! And I just know, if they let us battle, I could be the best warrior this clan has ever seen!!! I could probably take down two or three o_cClan warriors, all by myself.",
-            "Hey ... maybe we could sneak out!",
-            "Yeah, I know it's against the rules! What are you, a scaredy-cat?"
-        ]
-    ],
     "assertivekit_8": [
         [
             "medicine cat",
@@ -442,30 +417,6 @@
             "y_c, can you show me some battle moves? I want to be big and strong when I grow up, just like you!!!",
             "What? You mean you ... don't know any battle moves?",
             "Hmph. You're no fun! I'll go find someone else to play with, then!"
-        ]
-    ],
-    "assertivekit_9": [
-        [
-            "Any",
-            "assertive"
-        ],
-        [
-            "Hey, y_c! Wanna hear about all the things I like?",
-            "I like fresh-kill and leaves and puddles and rain and rainclouds and normal clouds and my friends and c_nClan and fighting and playing and sleeping and -",
-            "Wait, where are you going? I wasn't finished yet!"
-        ]
-    ],
-    "assertivekit_10": [
-        [
-            "kitten",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "I dare you to go up to r_c and call them a huge stinky dung-face!",
-            "You don't want to? Too bad! I already dared it!",
-            "And if you don't, I'll tell everyone in the nursery that you're the huge stinky dung-face!",
-            "The choice is yours ... Hehehe!"
         ]
     ],
     "assertivekit_11": [
@@ -488,34 +439,6 @@
         ],
         [
             "Go away, you big meanie!!!"
-        ]
-    ],
-    "assertivekit_13": [
-        [
-            "Any",
-            "non-related",
-            "assertive",
-            "platonic_like"
-        ],
-        [
-            "y_c, we're always gonna be best friends, aren't we?",
-            "Promise me that, no matter what happens, we'll stay friends forever and ever and ever and ever and ever until the end of time!",
-            "... You promise? Yippee!",
-            "Now let's go play!"
-        ]
-    ],
-    "assertivekit_14": [
-        [
-            "Any",
-            "assertive",
-            "platonic_like",
-            "comfort",
-            "trust"
-        ],
-        [
-            "y_c, do you ever get scared?",
-            "Hmph. Don't you worry! Whenever you're scared, just come and find me, and I'll chase all the scary things away!",
-            "I can be brave. I can keep you safe!"
         ]
     ],
     "assertivekit_15": [
@@ -545,22 +468,6 @@
             "y_c, can I pleeeease come on patrol with you today? Please please please?",
             "I promise I won't tell anyone! No one will have to know!",
             "I just wanna go explore like a real warrior does!"
-        ]
-    ],
-    "assertivekit_17": [
-        [
-            "kitten",
-            "assertive",
-            "unlawful",
-            "upstanding",
-            "platonic_like",
-            "comfort",
-            "trust"
-        ],
-        [
-            "What do you think our warrior names are gonna be?",
-            "I hope my name ends in '-claw'!!! That's a super tough name, isn't it?",
-            "A name to strike fear into the hearts of all my enemies! Rrraahhh!"
         ]
     ],
     "assertivekit_18": [
@@ -655,26 +562,6 @@
             "y_c, y_p says it's my turn with the moss-ball! You have to give it back!",
             "Come onnnnn!",
             "Hmph. That's it, I'm gonna tell on you!"
-        ]
-    ],
-    "assertivekit_24": [
-        [
-            "kitten",
-            "assertive",
-            "unlawful",
-            "upstanding",
-            "silly",
-            "sweet",
-            "neurotic",
-            "platonic_like",
-            "sibling",
-            "adopted_sibling"
-        ],
-        [
-            "y_c, family means forever, right? We're always gonna be together?",
-            "We're not gonna turn out like those siblings that fight all the time and stop liking each other, are we?",
-            "Heh. Of course not. I'm being silly.",
-            "Why would I ever stop liking you?"
         ]
     ],
     "assertivekit_25": [
