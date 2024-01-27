@@ -263,30 +263,13 @@
             "Okay, okay, I'll stop now. Hehe!"
         ]
     ],
-    "assertive_elder_6": [
-        [
-            "Any",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "Did you see r_c earlier today, y_c? Oh, StarClan, it was the funniest thing ever!",
-            "They mistook a twig for a snake and flew, like, five fox-lengths into the air! Hahahaha!"
-        ]
-    ],
     "assertive_app29": [
         [
             "mediator",
             "mediator apprentice",
             "assertive",
             "random_cat",
-            "platonic_like",
-            "comfort",
-            "trust",
-            "from_parent",
-            "from_mate",
-            "sibling",
-            "adopted_sibling"
+            "platonic_love"
         ],
         [
             "Tch. Did you see what a snake-heart r_c was acting like earlier? And over a piece of prey, no less!",
