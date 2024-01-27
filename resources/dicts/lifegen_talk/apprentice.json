@@ -1029,36 +1029,6 @@
             "Um ... please don't tell t_mn I said that, though. Hehe."
         ]
     ],
-    "assertive_apprentice3": [
-        [
-            "apprentice",
-            "assertive",
-            "upstanding"
-        ],
-        [
-            "y_c, when do you think we'll get to fight in a real warrior battle?",
-            "I know we've been practicing our fighting moves, but practice is nothing compared to the real thing.",
-            "I'm just itching to tear into some o_cClan fur! That'll show them how a real c_nClan cat does it!"
-        ]
-    ],
-    "assertive_apprentice4": [
-        [
-            "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
-            "platonic_like",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "[t_c tackles you from behind.]",
-            "Rahhh! o_cClan warrior, feel my wrath!",
-            "Hehe, don't worry! It's just me, y_c. Did I scare you?",
-            "That's a move tm_n just taught me. Cool, huh? I can't wait to try it out for real!",
-            "Has m_n taught you anything cool yet?"
-        ]
-    ],
     "assertive_apprentice5": [
         [
             "apprentice",
