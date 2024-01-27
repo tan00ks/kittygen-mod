@@ -3037,7 +3037,6 @@
             "dead_close",
             "they_grieving",
             "brooding",
-            "neutral",
             "dislike",
             "unlawful",
             "any"
@@ -4600,8 +4599,7 @@
     "broodingapp_toqueenapp12": [
         [
             "queen's apprentice",
-            "brooding",
-            "neutral"
+            "brooding"
         ],
         [
             "Anything happens to these kits, and I end you.",
@@ -4842,8 +4840,7 @@
             "deputy",
             "leader",
             "brooding",
-            "neutral",
-            "dislike"
+            "neutral"
         ],
         [
             "Uh. Hey.",
@@ -6095,7 +6092,7 @@
         [
             "Um. Hello ...",
             "What do you need?",
-            "[Even though they're your own parent, t_c clearly has no idea how to talk to you."
+            "[Even though they're your own parent, t_c clearly has no idea how to talk to you.]"
         ]
     ],
     "brooding_fromparent_2": [
