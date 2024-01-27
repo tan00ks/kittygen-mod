@@ -2174,6 +2174,23 @@
             "Or are you just going to stand there gawking like a lost kit?"
         ]
     ],
+    "broodingadult_toappx": [
+        [
+            "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "brooding",
+            "platonic_like",
+            "they_older"
+        ],
+        [
+            "Oh, hello, y_c. Is your training going well?",
+            "Just don't worry about the other apprentices. Focus on your studies, and serving your clan. That's all that matters.",
+            "You're turning into a fine young cat ...",
+            "... and the whole clan is proud."
+        ]
+    ],
     "upstanding_1": [
         [
             "Any",
