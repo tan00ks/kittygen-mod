@@ -201,7 +201,6 @@
         [
             "Any",
             "assertive",
-            "neutral",
             "platonic_like",
             "random_cat"
         ],
@@ -640,7 +639,6 @@
             "upstanding",
             "stable",
             "dislike",
-            "neutral",
             "no_kit"
         ],
         [
@@ -1135,11 +1133,10 @@
             "deputy",
             "leader",
             "brooding",
-            "neutral",
             "platonic_like"
         ],
         [
-            "You ... want to know if there's anything you can do to help?",
+            "You ... want to know if there's anything you can do to help out around the medicine den?",
             "Hm. Well, if you're really that desperate, I ... suppose you could bring us some fresh moss?",
             "... Thank you. You're very kind."
         ]
@@ -1162,9 +1159,7 @@
         [
             "kitten",
             "brooding",
-            "non-related",
-            "neutral",
-            "dislike"
+            "non-related"
         ],
         [
             "Pah. Scram, kit! You're messing up the herb stores ..."
@@ -1174,9 +1169,7 @@
         [
             "kitten",
             "brooding",
-            "non-related",
-            "neutral",
-            "dislike"
+            "non-related"
         ],
         [
             "The medicine den is no place for a kit ...",
@@ -1230,7 +1223,6 @@
             "Any",
             "from_your_apprentice",
             "brooding",
-            "neutral",
             "platonic_like"
         ],
         [
@@ -1261,9 +1253,7 @@
         [
             "Any",
             "from_your_apprentice",
-            "brooding",
-            "neutral",
-            "dislike"
+            "brooding"
         ],
         [
             "Hm? What's that, y_c?",
@@ -1276,9 +1266,7 @@
         [
             "Any",
             "from_your_apprentice",
-            "brooding",
-            "neutral",
-            "dislike"
+            "brooding"
         ],
         [
             "[You notice your apprentice is looking a little stressed, and ask them how they're feeling.]",
