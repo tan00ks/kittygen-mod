@@ -402,36 +402,6 @@
             "You don't think so? Thank you so much... I'm a little nervous that they'll laugh at me. I've always been a little different after all."
         ]
     ],
-    "assertive_mentor7": [
-        [
-            "apprentice",
-            "dislike",
-            "assertive",
-            "from_mentor",
-            "silly",
-            "cool"
-        ],
-        [
-            "Surprise assessment, y_c! What's the best way to catch a squirrel?",
-            "... What? That's not ... even remotely close.",
-            "*Sigh*. I was just doing this as a joke, but I guess I really have to show you again now ..."
-        ]
-    ],
-    "assertive_mentor71": [
-        [
-            "apprentice",
-            "platonic_like",
-            "assertive",
-            "from_mentor",
-            "silly",
-            "cool"
-        ],
-        [
-            "Surprise assessment, y_c! What's the best way to catch a squirrel?",
-            "... Whoa. You got it right!",
-            "I was just doing this as a joke, but turns out you're a lot smarter than you let on! Nice work, y_c."
-        ]
-    ],
     "assertive_mentor3": [
         [
             "apprentice",
