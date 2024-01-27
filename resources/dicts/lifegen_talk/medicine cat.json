@@ -1404,11 +1404,11 @@
             "deputy",
             "leader",
             "brooding",
-            "neutral",
             "platonic_like"
         ],
         [
-            "You ... want to know if there's anything you can do to help?",
+            "What do you want?",
+            "You ... want to know if there's anything you can do to help out in the medicine den?",
             "Hm. Well, if you're really that desperate, I ... suppose you could bring us some fresh moss?",
             "... Thank you. You're very kind."
         ]
