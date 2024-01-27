@@ -1126,28 +1126,6 @@
             "You're not even my real sibling, anyways ..."
         ]
     ],
-    "assertive_5": [
-        [
-            "Any",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "Did you see r_c earlier today, y_c? Oh, StarClan, it was the funniest thing ever!",
-            "They mistook a twig for a snake and flew, like, five fox-lengths into the air! Hahahaha!"
-        ]
-    ],
-    "assertive_6": [
-        [
-            "Any",
-            "assertive"
-        ],
-        [
-            "Hehehehe ...",
-            "[t_c is laughing to themself.]",
-            "[They must be remembering a funny joke from earlier.]"
-        ]
-    ],
     "assertive_7": [
         [
             "warrior",
