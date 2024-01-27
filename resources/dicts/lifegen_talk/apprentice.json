@@ -1201,24 +1201,6 @@
             "I'm trying to do something actually cool, for once ... can't you see you're killing the vibe? Go find your own friends!"
         ]
     ],
-    "assertive_apprentice15": [
-        [
-            "Any",
-            "neutral",
-            "dislike",
-            "neutral",
-            "assertive",
-            "cool",
-            "brooding",
-            "sibling",
-            "adopted_sibling",
-            "half sibling"
-        ],
-        [
-            "... Who are you?",
-            "[Is your own sibling seriously pretending not to know you?]"
-        ]
-    ],
     "assertive_apprentice16": [
         [
             "apprentice",
