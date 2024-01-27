@@ -1814,23 +1814,6 @@
             "Any longer and I'll start to believe our ancestors have given up on us."
         ]
     ],
-    "broodingadult_toapp": [
-        [
-            "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
-            "brooding",
-            "platonic_like",
-            "from_parent"
-        ],
-        [
-            "Oh, hello, y_c. Is your training going well?",
-            "Just don't worry about the other apprentices. Focus on your studies, and serving your clan. That's all that matters.",
-            "You're turning into a fine young cat ...",
-            "... and the whole clan is proud."
-        ]
-    ],
     "broodingadult_toapp1": [
         [
             "apprentice",
@@ -1861,9 +1844,6 @@
             "apprentice",
             "brooding",
             "platonic_like",
-            "respect",
-            "comfort",
-            "trust",
             "from_parent"
         ],
         [
