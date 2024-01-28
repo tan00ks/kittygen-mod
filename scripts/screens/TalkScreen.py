@@ -700,10 +700,10 @@ class TalkScreen(Screens):
     
     def choose_text(self, cat, texts_list):
         you = game.clan.your_cat
+        resource_dir = "resources/dicts/lifegen_talk/"
         if not texts_list:
             cluster1, cluster2 = get_cluster(cat.personality.trait)
             cluster3, cluster4 = get_cluster(you.personality.trait)
-            resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
