@@ -1577,7 +1577,7 @@
             "random_cat"
         ],
         "intro": [
-            "[t_c watches r_w and r_w laugh together a little ways away, apparently too nervous to join in the conversation.]"
+            "[t_c watches r_w1 and r_w2 laugh together a little ways away, apparently too nervous to join in the conversation.]"
         ],
         "intro_choices": {
             "choice1": {
@@ -1844,7 +1844,7 @@
         ],
         "intro_choices": {
             "choice1": {
-                "text": "",
+                "text": "[Comfort]",
                 "next_scene": "comfort"
             },
             "choice2": {

@@ -837,6 +837,25 @@ class TalkScreen(Screens):
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
+            if "r_w1" in text:
+                alive_apps = get_alive_warriors(Cat)
+                if len(alive_apps) <= 2:
+                    return ""
+                alive_app = choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat or alive_app.ID == cat.ID:
+                    alive_app = choice(alive_apps)
+                alive_apps.remove(alive_app)
+                text = text.replace("r_w1", str(alive_app.name))
+                if "r_w2" in text:
+                    alive_app2 = choice(alive_apps)
+                    while alive_app2.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                        alive_app2 = choice(alive_apps)
+                    text = text.replace("r_w2", str(alive_app2.name))
+                if "r_w3" in text:
+                    alive_app3 = choice(alive_apps)
+                    while alive_app3.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                        alive_app3 = choice(alive_apps)
+                    text = text.replace("r_w3", str(alive_app3.name))
             if "r_w" in text:
                 alive_apps = get_alive_warriors(Cat)
                 if len(alive_apps) <= 1:
