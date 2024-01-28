@@ -375,7 +375,39 @@ class TalkScreen(Screens):
                 continue
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
-                
+            
+            roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
+            if any(r in roles for r in tags):
+                has_role = False
+                if "they_kitten" in tags and cat.status == "kitten":
+                    has_role = True
+                elif "they_apprentice" in tags and cat.status == "apprentice":
+                    has_role = True
+                elif "they_medicine_cat_apprentice" in tags and cat.status == "medicine cat apprentice":
+                    has_role = True
+                elif "they_mediator_apprentice" in tags and cat.status == "mediator apprentice":
+                    has_role = True
+                elif "they_queen's_apprentice" in tags and cat.status == "queen's apprentice":
+                    has_role = True
+                elif "they_warrior" in tags and cat.status == "warrior":
+                    has_role = True
+                elif "they_mediator" in tags and cat.status == "mediator":
+                    has_role = True
+                elif "they_medicine_cat" in tags and cat.status == "medicine cat":
+                    has_role = True
+                elif "they_queen" in tags and cat.status == "queen":
+                    has_role = True
+                elif "they_deputy" in tags and cat.status == "deputy":
+                    has_role = True
+                elif "they_leader" in tags and cat.status == "leader":
+                    has_role = True
+                elif "they_elder" in tags and cat.status == "elder":
+                    has_role = True
+                elif "they_newborn" in tags and cat.status == "newborn":
+                    has_role = True
+                if not has_role:
+                    continue
+
             if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
                 continue
             if "they_grieving" in tags and "grief stricken" not in cat.illnesses:
