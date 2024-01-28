@@ -182,7 +182,8 @@ class TalkScreen(Screens):
 
         if self.text_index == len(self.text_frames) - 1:
             if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                self.paw.visible = True
+                if self.text_type != "choices":
+                    self.paw.visible = True
                 if not self.created_choice_buttons and self.text_type == "choices":
                     self.create_choice_buttons()
                     self.created_choice_buttons = True
@@ -263,6 +264,7 @@ class TalkScreen(Screens):
     def create_choice_buttons(self):
         y_pos = 0
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
+            self.paw.visible = True
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
