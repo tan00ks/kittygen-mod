@@ -102,7 +102,7 @@ class TalkScreen(Screens):
                 scale(pygame.Rect((170, 942), (346, 302))),
                 image_cache.load_image("resources/images/textbox_graphic.png").convert_alpha()
             )
-        self.textbox_graphic.hide()
+        # self.textbox_graphic.hide()
 
         self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((70, 900), (400, 400))),
                                                                          pygame.transform.scale(
@@ -196,10 +196,10 @@ class TalkScreen(Screens):
         try:
             if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
                 self.profile_elements["cat_image"].hide()
-                self.textbox_graphic.show()
+                # self.textbox_graphic.show()
             else:
                 self.profile_elements["cat_image"].show()
-                self.textbox_graphic.hide()
+                # self.textbox_graphic.hide()
         except:
             pass
         if self.text_index < len(self.text_frames):
