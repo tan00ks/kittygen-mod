@@ -40,6 +40,7 @@ class TalkScreen(Screens):
         self.choice_buttons = {}
         self.current_scene = ""
         self.created_choice_buttons = False
+        self.talk_img = None
 
 
 
@@ -90,6 +91,13 @@ class TalkScreen(Screens):
             )
         self.paw.visible = False
 
+        self.talk_img = pygame_gui.elements.UIImage(
+                scale(pygame.Rect((160, 935), (360, 314))),
+                image_cache.load_image("resources/images/talkboximg.png").convert_alpha()
+            )
+        self.talk_img.hide()
+        
+
 
     def exit_screen(self):
         self.text.kill()
@@ -110,6 +118,8 @@ class TalkScreen(Screens):
         for button in self.choice_buttons:
             self.choice_buttons[button].kill()
         self.choice_buttons = {}
+        self.talk_img.kill()
+        del self.talk_img
 
     def update_camp_bg(self):
         light_dark = "light"
@@ -159,8 +169,10 @@ class TalkScreen(Screens):
         try:
             if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
                 self.profile_elements["cat_image"].hide()
+                self.talk_img.show()
             else:
                 self.profile_elements["cat_image"].show()
+                self.talk_img.hide()
         except:
             pass
         if self.text_index < len(self.text_frames):
