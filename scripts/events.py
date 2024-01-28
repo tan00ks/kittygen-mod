@@ -422,6 +422,7 @@ class Events:
         achievements = set()
         murder_history = History.get_murders(you)
         clan_cats = game.clan.clan_cats
+        count_alive_cats = 0
         if murder_history:
             if 'is_murderer' in murder_history:
                 num_victims = len(murder_history["is_murderer"])
@@ -447,6 +448,8 @@ class Events:
                 achievements.add("30")
             if Cat.all_cats.get(cat).status == 'apprentice' and Cat.all_cats.get(cat).name.prefix == "Pea" and Cat.all_cats.get(cat).pelt.white_colours:
                 achievements.add("33")
+            if Cat.all_cats.get(cat).status == 'kitten' and Cat.all_cats.get(cat).moons > 5:
+                achievements.add("34")
             ##WILDCARD check, because I've lost control of my life
             ##Declare Lists of wildcard combos for comparison. (Will be made more professional later.)
             not_wildcard_patterns = ['tabby', 'ticked', 'mackerel', 'classic', 'agouti', 'smoke', 'single']
@@ -489,6 +492,13 @@ class Events:
                                 countranks += 1
                             if countranks >= 3:
                                 achievements.add("31")
+            #code for achievement 23 + 24
+            if not Cat.all_cats.get(cat).dead and not Cat.all_cats.get(cat).outside:
+                count_alive_cats += 1
+            if count_alive_cats == 1 and Cat.all_cats.get(cat).ID == you.ID:
+                achievements.add('23')
+            elif count_alive_cats >= 100:
+                achievements.add('24')
 
         if you.joined_df:
             achievements.add("7")
@@ -529,11 +539,6 @@ class Events:
             achievements.add('21')
         elif you.outside:
             achievements.add('22')
-        
-        if len(clan_cats) == 1 and not you.dead and not you.outside:
-            achievements.add('23')
-        if len(clan_cats) >= 100:
-            achievements.add('24')
             
         if you.experience >= 100:
             achievements.add('26')
