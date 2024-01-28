@@ -12,6 +12,18 @@ from scripts.game_structure import image_cache
 import pygame_gui
 from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
+from enum import Enum  # pylint: disable=no-name-in-module
+
+class RelationType(Enum):
+    """An enum representing the possible age groups of a cat"""
+
+    BLOOD = ''                      # direct blood related - do not need a special print
+    ADOPTIVE = 'adoptive'       	# not blood related but close (parents, kits, siblings)
+    HALF_BLOOD = 'half sibling'   	# only one blood parent is the same (siblings only)
+    NOT_BLOOD = 'not blood related'	# not blood related for parent siblings
+    RELATED = 'blood related'   	# related by blood (different mates only)
+
+BLOOD_RELATIVE_TYPES = [RelationType.BLOOD, RelationType.HALF_BLOOD, RelationType.RELATED]
 
 class TalkScreen(Screens):
 
@@ -382,7 +394,8 @@ class TalkScreen(Screens):
             tags = talk["tags"] if "tags" in talk else talk[0]
             for i in range(len(tags)):
                 tags[i] = tags[i].lower()
-                
+            
+
             if "insult" in tags:
                 continue
 
@@ -610,7 +623,7 @@ class TalkScreen(Screens):
                 
 
             if "non-related" in tags:
-                if cat.ID in you.inheritance.all_inheritances:
+                if you.inheritance.get_exact_rel_type(cat.ID) == RelationType.RELATED:
                     continue
                 
             # If you have murdered someone and have been revealed
@@ -639,7 +652,7 @@ class TalkScreen(Screens):
                     continue
 
             if "they_older" in tags:
-                if you.age != cat.age and cat.moons < you.moons:
+                if you.age == cat.age or cat.moons < you.moons:
                     continue
             
             if "they_sameage" in tags:
@@ -647,7 +660,7 @@ class TalkScreen(Screens):
                     continue
             
             if "they_younger" in tags:
-                if you.age != cat.age and cat.moons > you.moons:
+                if you.age == cat.age or cat.moons > you.moons:
                     continue
 
             if "shunned" in tags:
