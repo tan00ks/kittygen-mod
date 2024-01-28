@@ -8602,7 +8602,6 @@
             "[Still, you just hope the kit has the sense not to get their heart broken ... Or else you might have to have a conversation with their_crush yourself.]"
         ]
     ],
-    
     "thoughtful_mate": [
         [
             "no_kit",
@@ -9468,7 +9467,6 @@
             "brooding",
             "romantic_like",
             "from_mate"
-
         ],
         [
             "[You compliment your mate, t_c, on their pretty eyes.]",
@@ -10871,6 +10869,203 @@
             "[You sit next to them. They pause for a second, looking at you.]",
             "Whenever we talk, I feel like there's a lot more going on inside you than you ever let anyone see.",
             "Is that true?"
+        ]
+    ],
+    "brave_condition": [
+        [
+            "no_kit",
+            "they_injured",
+            "they_sick",
+            "they_younger",
+            "platonic_love",
+            "assertive",
+            "cool",
+            "brooding",
+            "upstanding"
+        ],
+        [
+            "y_c ...?",
+            "[t_c blinks their eyes open at the sound of your pawsteps, trying weakly to raise their head.]",
+            "Come to visit the sick patient, huh? I must look in pretty rough shape.",
+            "It's okay, though. You don't have to stay with me.",
+            "I ... I promise I'm not scared.",
+            "[t_c smiles, putting on a brave face, but their eyes shine with a terror beyond their moons.]"
+        ]
+    ],
+    "brooding_love01": [
+        [
+            "any",
+            "platonic_love",
+            "brooding",
+            "non-related"
+        ],
+        [
+            "y_c, you're such a nice cat.",
+            "You always take the time out of your day to come and talk to me ... Check up on me ... Spend time with me ...",
+            "But, you're also a smart cat.",
+            "Smart enough to know that 'nice' gets you eaten alive out here in the wild.",
+            "I lost any semblance of 'nice' a long time ago. It was what I had to do to survive. But, somehow, you've managed to hold onto that part of yourself ...",
+            "You're a really special cat, y_c. I hope you never change."
+        ]
+    ],
+    "brooding_mentor4": [
+        [
+            "any",
+            "from_mentor",
+            "brooding",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "[t_c just got done absolutely drilling you in a brutal training session.]",
+            "[You're about to slink back to your nest, defeated, when you overhear them talking with r_c across camp.]",
+            "They're sloppy and green. Too hard on themself ... No one's gonna take them seriously.",
+            "That's how my mentor described me as an apprentice. I hope y_c never has to feel that way.",
+            "The kid is coming into their own so fast ... I can barely keep up.",
+            "A smart little cat, that one is.",
+            "[They smile and shake their head, forcing you to dart out of earshot before they can catch you eavesdropping.]"
+        ]
+    ],
+    "brooding_mentor": [
+        [
+            "apprentice",
+            "from_mentor",
+            "brooding"
+        ],
+        [
+            "Hello, y_c. Today, we are going to be practicing our scruff shake.",
+            "It's a serious tactic, so be sure to treat it as such. This is our Clanmates' lives and deaths, not a silly game.",
+            "[You try your best to heed t_c's words ...]",
+            "[... But you don't know how they don't crack even a hint of a smile when you're shaking them back and forth by the scruff.]"
+        ]
+    ],
+    "brooding_mentor1": [
+        [
+            "apprentice",
+            "from_mentor",
+            "brooding"
+        ],
+        [
+            "[t_c drops a pile of mouse-bile at your paws.]",
+            "The elders are complaining about ticks. Go see that they're made comfortable.",
+            "And I don't want to hear a word of complaint, either. In c_nClan, our elders are to be respected."
+        ]
+    ],
+    "brooding_mentor2": [
+        [
+            "any",
+            "from_mentor",
+            "brooding",
+            "dislike",
+            "random_cat"
+        ],
+        [
+            "[Sigh ... Of course, just your luck that you'd end up with the most brooding, impersonable cat in the Clan as your mentor.]",
+            "[t_c catches you staring at them from across camp and narrows their eyes.]",
+            "y_c, what are you doing lazing around? Get to work!",
+            "[Is it too late to ask l_n to get switched to someone nicer?]"
+        ]
+    ],
+    "brooding_mentor3": [
+        [
+            "any",
+            "from_mentor",
+            "brooding",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "[t_c catches you staring at them from across camp and smiles.]",
+            "Nice work, y_c.",
+            "[t_c might be one of the most brooding, impersonable cats in the Clan, sure ... But you can't help but respect them as a mentor.]"
+        ]
+    ],
+    "upstanding_general6": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "Have you ever had the feeling where you want to achieve something so much, to the point that you feel like you're going to explode?",
+            "I really hope I'm not the only one."
+        ]
+    ],
+    "upstanding_general7": [
+        [
+            "upstanding",
+            "no_kit",
+            "dislike"
+        ],
+        [
+            "Look, I know that we don't always see eye-to-eye, but... we're still c_nClan cats.",
+            "If you ever need a helping paw or anything, just ask. That's what clanmates are for after all"
+        ]
+    ],
+    "upstanding_general8": [
+        [
+            "upstanding",
+            "no_kit",
+            "you_silly",
+            "you_childish",
+            "they_sameage",
+            "they_older",
+            "neutral",
+            "dislike",
+            "hate"
+        ],
+        [
+            "y_c, you're not a kit anymore. Please at least try to start taking things more seriously, for the sake of the clan."
+        ]
+    ],
+    "upstanding_general9": [
+        [
+            "upstanding",
+            "no_kit",
+            "platonic_like",
+            "neutral",
+            "respect"
+        ],
+        [
+            "Keep up the good work y_c! Always remember to go that extra mile!"
+        ]
+    ],
+    "upstanding_warrior10": [
+        [
+            "upstanding",
+            "no_kit"
+        ],
+        [
+            "Hey, um... remember that party you held for r_c the other day?",
+            "Well, I'm just curious. Why wasn't I invited?",
+            "Don't get me wrong, I wasn't going to go either way, but...",
+            "It's nice to know others are thinking about you."
+        ]
+    ],
+    "neurotic_sibling": [
+        [
+            "no_kit",
+            "neurotic",
+            "upstanding",
+            "sibling",
+            "adoptive_sibling"
+        ],
+        [
+            "I just overheard a rumor that apparently l_n thinks that you're the most promising one in the family ...",
+            "Y-You don't think that's true, do you?"
+        ]
+    ],
+    "neurotic_sibling1": [
+        [
+            "no_kit",
+            "neurotic",
+            "sibling",
+            "adoptive_sibling",
+            "random_cat"
+        ],
+        [
+            "Do you think it's true that parents have favorite kits?",
+            "If it is, I think that you'd probably be the favorite ...",
+            "y_p always seemed to like you more."
         ]
     ]
 }

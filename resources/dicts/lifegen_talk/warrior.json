@@ -2327,5 +2327,83 @@
             "Look at those tiny claws!",
             "Someday, you'll be training with us. I'll teach you how to pounce - and how to land on your feet when you miss, something I'm still perfecting!"
         ]
+    ],
+    "upstanding_warrior14": [
+        [
+            "upstanding",
+            "apprentice",
+            "from_mentor"
+        ],
+        [
+            "[While collecting moss with m_n, you decide to play a small prank to try and lighten the mood. As soon as they turn their back, you hook a large wad of moss in your claws and fling it over. It breaks apart on impact, showering their pelt with moss.]",
+            "[Unfortunately, the prank isn't well received. m_n proceeds to  give you a long and stern lecture about the value of clan resources and the importance of taking your duties seriously.]"
+        ]
+    ],
+    "upstanding_warrior15": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "[It's easy to see how intimidating t_c can often be. Just a single glare can discourage even the most mischievous apprentice from pulling a prank!]"
+        ]
+    ],
+    "upstanding_warrior16": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "[t_c immediately rushes to guard the camp entrance after hearing word of a fox roaming about the territory, glaring at every leaf, tree, and bush that so much as rustles in the wind.]"
+        ]
+    ],
+    "upstanding_warrior17": [
+        [
+            "upstanding",
+            "from_mentor",
+            "insult"
+        ],
+        [
+            "Looks like someone is one step closer to missing out on the upcoming Gathering."
+        ]
+    ],
+    "upstanding_warrior18": [
+        [
+            "upstanding",
+            "from_mentor",
+            "platonic_like",
+            "neutral"
+        ],
+        [
+            "[While the rest of the clan is fast asleep in their nests, you are woken up by a paw poking you in the side.]",
+            "Rise and shine y_c! C'mon, up! Up! Up! Let's go! I want to try and get an early start on today's lesson.",
+            "[t_c is certainly an excellent mentor, there's no doubt about that. However, as you sleepily follow them out of camp, you wish that they were slightly less enthusiastic when it comes to training.]"
+        ]
+    ],
+    "upstanding_warrior19": [
+        [
+            "upstanding",
+            "murder",
+            "apprentice",
+            "warrior",
+            "neutral",
+            "dislike",
+            "hate"
+        ],
+        [
+            "[t_c flat out refuses to let you join their patrol.]",
+            "No way am I patrolling with a fox-hearted murderer!"
+        ]
+    ],
+    "upstanding_warrior20": [
+        [
+            "upstanding",
+            "deputy"
+        ],
+        [
+            "Hey y_c? About today's patrols...",
+            "Could I be excused? Please?",
+            "I'm just... feeling a bit burnt out right now."
+        ]
     ]
 }
