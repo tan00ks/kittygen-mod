@@ -28,36 +28,6 @@
             "Come on! Don't be such a buzz-kill. It was fun. Maybe I'll even invite you to come see their face next time.. It was hilarious!"
         ]
     ],
-    "assertive_mentor8": [
-        [
-            "medicine cat apprentice",
-            "dislike",
-            "assertive",
-            "from_mentor",
-            "silly",
-            "cool"
-        ],
-        [
-            "Surprise assessment, y_c! What's the best way to dress a wound?",
-            "... What? That's not ... even remotely close.",
-            "*Sigh*. I was just doing this as a joke, but I guess I really have to show you again now ..."
-        ]
-    ],
-    "assertive_mentor81": [
-        [
-            "medicine cat apprentice",
-            "platonic_like",
-            "assertive",
-            "from_mentor",
-            "silly",
-            "cool"
-        ],
-        [
-            "Surprise assessment, y_c! What's the best way to dress a wound?",
-            "... Whoa. You got it right!",
-            "I was just doing this as a joke, but turns out you're a lot smarter than you let on! Nice work, y_c."
-        ]
-    ],
     "assertive_mentor5": [
         [
             "medicine cat apprentice",
@@ -174,18 +144,12 @@
         [
             "assertive",
             "dislike",
-            "neutral",
             "cool",
             "upstanding",
             "brooding",
             "stable",
-            "kitten",
-            "from_adopted_kit",
-            "from_kit",
             "sibling",
-            "adopted_sibling",
-            "half sibling",
-            "from_parent"
+            "adopted_sibling"
         ],
         [
             "What do you want? Do you need something?",
@@ -391,8 +355,7 @@
         [
             "medicine cat",
             "assertive",
-            "platonic_like",
-            "neutral"
+            "platonic_like"
         ],
         [
             "*Sigh* StarClan, today was hard ...",
@@ -415,17 +378,7 @@
             "Lesson learned. Don't talk with herbs in the mouth."
         ]
     ],
-    "assertive_elder": [
-        [
-            "Any",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "Did you see r_c earlier today, y_c? Oh, StarClan, it was the funniest thing ever!",
-            "They mistook a twig for a snake and flew, like, five fox-lengths into the air! Hahahaha!"
-        ]
-    ],
+   
     "assertive_elder_2": [
         [
             "medicine cat",
@@ -583,7 +536,6 @@
             "medicine cat apprentice",
             "assertive",
             "platonic_like",
-            "neutral",
             "they_younger"
         ],
         [
@@ -752,7 +704,6 @@
             "upstanding",
             "stable",
             "dislike",
-            "neutral",
             "no_kit"
         ],
         [
@@ -839,18 +790,6 @@
             "My decisions could be the difference between a clanmate surviving, or joining our warrior ancestors.",
             "It's terrifying ... but thrilling, too!",
             "There's lots of different paths a cat can take in this world, but I know this is the path for me. Can you say the same?"
-        ]
-    ],
-    "assertivemedapp_4": [
-        [
-            "Any",
-            "assertive",
-            "romantic_like"
-        ],
-        [
-            "*Shudder* I gotta get out of this den, y_c. Come gather herbs with me later?",
-            "Sweet! It's a date! Hehe!",
-            "[t_c's eyes flash a little too intently for it to just be a joke.]"
         ]
     ],
     "assertivemedapp_5": [
@@ -1024,36 +963,6 @@
             "Yeah, right. Like I have to take orders from you!",
             "You may think you're a warrior, but all you do is sit on your haunches and boss everyone around all day. That's no warrior. That's a coward.",
             "Go find some other cat to impose on."
-        ]
-    ],
-    "assertivemedcat_queen": [
-        [
-            "queen's apprentice",
-            "queen",
-            "assertive",
-            "cool",
-            "silly"
-        ],
-        [
-            "y_c! Just the cat I was looking for.",
-            "You'll be happy to know that I just gathered up some more borage this morning. Which, pop quiz, should help the queens with ... what?",
-            "Hehe, you got it! I should've known you'dve studied up.",
-            "If you ever need anything, don't hesitate! I'll be here in the den for ya any time."
-        ]
-    ],
-    "assertivemedcat_queen1": [
-        [
-            "queen's apprentice",
-            "queen",
-            "assertive",
-            "cool",
-            "silly"
-        ],
-        [
-            "y_c! Just the cat I was looking for.",
-            "You'll be happy to know that I just gathered up some more borage this morning. Which, pop quiz, should help the queens with ... what?",
-            "Er ... no, that's not right. Like, at all.",
-            "Hm ... maybe now'd be a good time to start your herbal training again ..."
         ]
     ],
     "introspective_Med": [
@@ -1334,7 +1243,7 @@
             "Well, maybe...",
             "No. Bad idea. What happens if the t_c clones clone themselves ...",
             "And then those t_c clones clone themselves, until there are Too Many t_cs ...",
-            "And we'd have to have have the leader force us all to watch the leaves change colors...",
+            "And we'd have to have the leader force us all to watch the leaves change colors...",
             "Until they find out which one is really me?",
             "[t_c exhales dramatically after finishing the long sentence, but still seems like they're debating the impossible idea.]"
         ]
@@ -1486,23 +1395,25 @@
             "deputy",
             "leader",
             "brooding",
-            "neutral",
             "platonic_like"
         ],
         [
-            "You ... want to know if there's anything you can do to help?",
+            "What do you want?",
+            "You ... want to know if there's anything you can do to help out in the medicine den?",
             "Hm. Well, if you're really that desperate, I ... suppose you could bring us some fresh moss?",
             "... Thank you. You're very kind."
         ]
     ],
     "brooding_medapp_6": [
         [
-            "apprentice",
+            "Any",
             "you_assertive",
             "you_silly",
             "you_upstanding",
             "you_unlawful",
-            "brooding"
+            "you_unabashed",
+            "brooding",
+            "they_older"
         ],
         [
             "Do c_nClan a favor and try not to pull any stupid stunts out there today.",
@@ -1513,9 +1424,7 @@
         [
             "kitten",
             "brooding",
-            "non-related",
-            "neutral",
-            "dislike"
+            "non-related"
         ],
         [
             "Pah. Scram, kit! You're messing up the herb stores ..."
@@ -1525,9 +1434,7 @@
         [
             "kitten",
             "brooding",
-            "non-related",
-            "neutral",
-            "dislike"
+            "non-related"
         ],
         [
             "The medicine den is no place for a kit ...",

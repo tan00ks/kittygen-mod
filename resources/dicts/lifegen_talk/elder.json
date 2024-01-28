@@ -687,30 +687,14 @@
             "Whatever. I'm going to go do something actually exciting. Don't wait up."
         ]
     ],
-    "assertive_elder_2": [
-        [
-            "Any",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "Did you see r_c earlier today, y_c? Oh, StarClan, it was the funniest thing ever!",
-            "They mistook a twig for a snake and flew, like, five fox-lengths into the air! Hahahaha!"
-        ]
-    ],
+    
     "assertive_app29": [
         [
             "mediator",
             "mediator apprentice",
             "assertive",
             "random_cat",
-            "platonic_like",
-            "comfort",
-            "trust",
-            "from_parent",
-            "from_mate",
-            "sibling",
-            "adopted_sibling"
+            "platonic_love"
         ],
         [
             "Tch. Did you see what a snake-heart r_c was acting like earlier? And over a piece of prey, no less!",
@@ -894,7 +878,7 @@
         [
             "I saw d_n show off a belly rake to some apprentices earlier. Took me back to my glory days!",
             "I wonder if I could still ...",
-            "[With a grunt and a whole load of popping joints, t_c rears performs a creaky, but still stunningly precise belly rake. They plop back into their nest, panting with exertion.]",
+            "[With a grunt and a whole load of popping joints, t_c rears and performs a creaky, but still stunningly precise belly rake. They plop back into their nest, panting with exertion.]",
             "Still got it! Hehehe!"
         ]
     ],
