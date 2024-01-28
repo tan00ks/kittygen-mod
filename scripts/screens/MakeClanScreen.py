@@ -1695,6 +1695,10 @@ class MakeClanScreen(Screens):
                     if event.text == "None":
                         self.permanent_condition = None
                         self.paralyzed = False
+                        if "NOTAIL" in self.scars:
+                            self.scars.remove("NOTAIL")
+                        elif "NOPAW" in self.scars:
+                            self.scars.remove("NOPAW")
                     else:
                         chosen_condition = event.text
                         self.permanent_condition = event.text
@@ -1708,6 +1712,11 @@ class MakeClanScreen(Screens):
                         elif event.text == "born without a tail" and "NOTAIL" not in self.custom_cat.pelt.scars:
                             self.scars = []
                             self.scars.append('NOTAIL')
+                        else:
+                            if "NOTAIL" in self.scars:
+                                self.scars.remove("NOTAIL")
+                            elif "NOPAW" in self.scars:
+                                self.scars.remove("NOPAW")
                         self.update_sprite()
 
                 elif event.ui_element == self.elements['sex']:
