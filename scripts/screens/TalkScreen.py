@@ -101,10 +101,10 @@ class TalkScreen(Screens):
         self.paw.visible = False
         
         self.choice_panel = pygame_gui.elements.UIImage(
-                            scale(pygame.Rect((950, 630), (450, 330))),
+                            scale(pygame.Rect((950, 630), (430, 330))),
                             pygame.transform.scale(
                             image_cache.load_image(
-                                "resources/images/relationship_log_frame.png").convert_alpha(),
+                                "resources/images/choice_panel.png").convert_alpha(),
                                 (500, 870)),
                             manager=MANAGER)
         self.choice_panel.visible = False
