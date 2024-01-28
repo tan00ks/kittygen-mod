@@ -315,9 +315,12 @@ class Thoughts():
             with open(f"{base_path}{life_dir}{spec_dir}/general.json", 'r') as read_file:
                 GENTHOUGHTS = ujson.loads(read_file.read())
             SHUNNEDTHOUGHTS = []
-            if not main_cat.dead and not main_cat.outside and  main_cat.revealed != 0 and game.clan.age - 3 <= main_cat.revealed:
-                with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
-                    SHUNNEDTHOUGHTS = ujson.loads(read_file.read())
+            try:
+                if not main_cat.dead and not main_cat.outside and  main_cat.revealed != 0 and game.clan.age - 3 <= main_cat.revealed:
+                    with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
+                        SHUNNEDTHOUGHTS = ujson.loads(read_file.read())
+            except:
+                pass
             loaded_thoughts = THOUGHTS 
             loaded_thoughts += GENTHOUGHTS
             loaded_thoughts += SHUNNEDTHOUGHTS
