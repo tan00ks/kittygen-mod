@@ -507,11 +507,11 @@
     },
     "assertive_gen5": {
         "tags": [
-            "Any",
             "assertive",
             "unlawful",
             "random_cat",
-            "platonic_like"
+            "platonic_like",
+            "they_adult"
         ],
         "intro": [
             "I found this super cool cave network just outside the territory ... Wanna come explore it with me later?",
