@@ -1831,7 +1831,7 @@
             "[They look back at tm_n with a resentful gaze.]"
         ]
     },
-    "neurotic_kit_": {
+   "neurotic_kit_": {
         "tags": [
             "any",
             "random_cat",
@@ -1844,35 +1844,33 @@
         ],
         "intro_choices": {
             "choice1": {
-                "text": "[Comfort]",
+                "text": "r_c really said that to you?!",
                 "next_scene": "comfort"
             },
             "choice2": {
-                "text": "[Confident reassurance]",
+                "text": "Of course you'll get to be a warrior!",
                 "next_scene": "confident_reassurance"
             },
             "choice3": {
-                "text": "[Criticize]",
+                "text": "Maybe it'd help if you were braver.",
                 "next_scene": "criticize"
             }
         },
         "comfort": [
-            "[You purr to t_c that, even if their mentor doesn't like them, it doesn't change the fact that they're trying their best, which is all that matters.]",
-            "Well ... I guess that's true.",
-            "Still, I just hope they won't flunk my warrior's assessment!",
-            "[They look back at tm_n with a fearful gaze.]"
+            "Well ... Maybe it's not exactly what they said, but I know that they meant it!",
+            "I don't know how all the other kits are so excited to become warriors.",
+            "I guess, even if I didn't end up a warrior, it wouldn't be so bad."
         ],
         "confident_reassurance": [
-            "[You assure t_c that of course their mentor likes them.]",
-            "Ah, I don't know, y_c ... No offense, but you haven't been to one of our training sessions.",
-            "They just get so frustrated with me ... I don't know how any cat could still like me after all that.",
-            "[They look back at tm_n with a somber gaze.]"
+            "You really think so?",
+            "Oh ... But what if I don't even wanna be a warrior? What if I mess everything up?",
+            "I don't know how the other kits find all of this so easy ...",
+            "Even the thought of becoming an apprentice makes me feel all dizzy!"
         ],
         "criticize": [
-            "[You tell t_c that maybe they wouldn't have to stress so much if they put the time in to master the skills tm_n taught them.]",
-            "Ah ... You think that's really true?",
-            "It already feels like I have to work a million times harder than any other apprentice, just to get by. Why does everyone else get to have it so easy?",
-            "[They look back at tm_n with a resentful gaze.]"
+            "Eep! Do you really think so?",
+            "[t_c starts to sob.]",
+            "I'm never gonna become a warrior at this rate!"
         ]
     },
     "broodingapp_toapp4": {
