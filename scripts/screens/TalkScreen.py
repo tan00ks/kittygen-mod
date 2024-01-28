@@ -188,7 +188,10 @@ class TalkScreen(Screens):
                     self.created_choice_buttons = True
 
         # Always render the current frame
-        self.text.html_text = self.text_frames[self.text_index][self.frame_index]
+        try:
+            self.text.html_text = self.text_frames[self.text_index][self.frame_index]
+        except:
+            pass
         self.text.rebuild()
         self.clock.tick(60)
 
