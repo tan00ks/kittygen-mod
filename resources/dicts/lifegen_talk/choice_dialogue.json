@@ -171,6 +171,47 @@
             "You do you, y_c, and I'll do me. Freedom of thought. That's what life's really all about."
         ]
     },
+
+    "rumor": {
+        "tags": [
+            "no_kit",
+            "silly",
+            "cool",
+            "unlawful",
+            "unabashed",
+            "random_cat"
+        ],
+        "intro": [
+             "Psst, y_c. I heard a rumor that n_r1 totally has a crush on n_r2. Isn't that crazy?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Where'd you hear that from?",
+                "next_scene": "where"
+            },
+            "choice2": {
+                "text": "I knew it!",
+                "next_scene": "knewit"
+            }
+            "choice3": {
+                "text": "You just made that up.",
+                "next_scene": "madeup"
+            }
+        },
+        "where": [
+            "Um, well, you see, ah ...",
+            "Hmph. You're no fun at all."
+        ],
+        "knewit": [
+            "Oh, really? Because I totally just made that up just now.",
+            "But if you have actual gossip, then by all means, spill!",
+            "I swear, your secrets are safe with me ... hehehe."
+        ]
+        "madeup": [
+            "Hmph. And so what if I did? Is it such a crime for me to want to add some entertainment to my Clanmates' lives?",
+            "C'mon, you can't deny you love a little gossip now and then!"
+        ]
+    },
     "caught_intheact": {
         "tags": [
             "murder",
