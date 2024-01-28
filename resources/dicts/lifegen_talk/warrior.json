@@ -207,25 +207,6 @@
             "... d_c, where are you?"
         ]
     ],
-    "assertive_deadclose1": [
-        [
-            "medicine cat",
-            "medicine cat apprentice",
-            "assertive",
-            "cool",
-            "they_grieving",
-            "dead_close"
-        ],
-        [
-            "Hey, uh ...",
-            "You can talk to StarClan cats, right?",
-            "Have you, uh ... heard anything from d_c?",
-            "Sorry. That's probably a mouse-brained question. I know it doesn't work like that.",
-            "But, if you ever do hear from them ... tell them that, uh ...",
-            "I'm sorry. And I'll keep their nest warm. And they better be saving a spot for me up in StarClan, or else I'll have to come up there myself and teach them a lesson!",
-            "... Thanks."
-        ]
-    ],
     "warrior_1d6": [
         [
             "kitten",
@@ -249,25 +230,6 @@
             "Your stance is all wrong- your tail is too high and your paws are too close together.",
             "And not to mention that mangy pelt... m_n has got some work to do, that's for sure.",
             "[t_c flicks their tail as they leave the nursery, leaving you dumbfounded.]"
-        ]
-    ],
-    "brooding_jealous": [
-        [
-            "warrior",
-            "jealousy",
-            "they_clanborn",
-            "they_clanfounder",
-            "you_outsiderroots",
-            "you_half-clan",
-            "you_orphaned",
-            "you_abandoned",
-            "random_cat"
-        ],
-        [
-            "[t_c walks up to you, tail lashing wildly.]",
-            "y_c, I don't know how you manage it, but I'm not surprised you have to cheat in our training sessions.",
-            "It makes sense you can't naturally compare to a clanborn cat, but it doesn't mean you can show me up in front of d_n, and especially not l_n!",
-            "[t_c sneers at you one last time before stalking off without giving you a chance to reply.]"
         ]
     ],
     "warrior_4324": [
@@ -438,36 +400,6 @@
             "Ugh... The sun's so bright... I hate waking up early for dawn patrol. What about you, y_c?",
             "Yeah, I agree. It's sometimes so hard to leave my nest. It's so warm and soft... I'm a little nervous to admit that I wish I could sleep in my nest forever. Will the others think I'm silly and lazy, like a kittypet?",
             "You don't think so? Thank you so much... I'm a little nervous that they'll laugh at me. I've always been a little different after all."
-        ]
-    ],
-    "assertive_mentor7": [
-        [
-            "apprentice",
-            "dislike",
-            "assertive",
-            "from_mentor",
-            "silly",
-            "cool"
-        ],
-        [
-            "Surprise assessment, y_c! What's the best way to catch a squirrel?",
-            "... What? That's not ... even remotely close.",
-            "*Sigh*. I was just doing this as a joke, but I guess I really have to show you again now ..."
-        ]
-    ],
-    "assertive_mentor71": [
-        [
-            "apprentice",
-            "platonic_like",
-            "assertive",
-            "from_mentor",
-            "silly",
-            "cool"
-        ],
-        [
-            "Surprise assessment, y_c! What's the best way to catch a squirrel?",
-            "... Whoa. You got it right!",
-            "I was just doing this as a joke, but turns out you're a lot smarter than you let on! Nice work, y_c."
         ]
     ],
     "assertive_mentor3": [
@@ -971,22 +903,6 @@
             "Haha, don't look so stressed! I was just joking."
         ]
     ],
-    "assertiveapp_medapp3": [
-        [
-            "medicine cat apprentice",
-            "medicine cat",
-            "assertive",
-            "silly",
-            "upstanding",
-            "they_younger"
-        ],
-        [
-            "Hey, y_c ... is it really true that you can talk to StarClan?",
-            "Whoa! That's so cool! What does StarClan say that I'm gonna do? Am I gonna be strong? Am I destined for greatness?",
-            "... It doesn't work like that? Awh. That's no fun.",
-            "Well, if StarClan ever mentions me, you'll let me know, won't you?"
-        ]
-    ],
     "assertive_medapp2": [
         [
             "medicine cat",
@@ -1180,28 +1096,6 @@
             "You're not even my real sibling, anyways ..."
         ]
     ],
-    "assertive_5": [
-        [
-            "Any",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "Did you see r_c earlier today, y_c? Oh, StarClan, it was the funniest thing ever!",
-            "They mistook a twig for a snake and flew, like, five fox-lengths into the air! Hahahaha!"
-        ]
-    ],
-    "assertive_6": [
-        [
-            "Any",
-            "assertive"
-        ],
-        [
-            "Hehehehe ...",
-            "[t_c is laughing to themself.]",
-            "[They must be remembering a funny joke from earlier.]"
-        ]
-    ],
     "assertive_7": [
         [
             "warrior",
@@ -1226,19 +1120,6 @@
         [
             "Hey, don't think I didn't see you bring down that catch earlier today! Nice work!",
             "We should totally hunt together sometime!"
-        ]
-    ],
-    "assertive_9": [
-        [
-            "warrior",
-            "apprentice",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "Hey, who d'ya think's gonna be deputy once d_n is leader?",
-            "I guess probably r_w ... they'd be good for the job.",
-            "But, who knows? It could be anyone! It could even be you or me!"
         ]
     ],
     "assertive_10": [
@@ -1339,19 +1220,6 @@
             "Do keep in mind, will ya?"
         ]
     ],
-    "assertivewarrior_leader3": [
-        [
-            "leader",
-            "assertive",
-            "silly",
-            "unabashed"
-        ],
-        [
-            "Hey, boss! Come down to mingle with us common folk? Hehe.",
-            "Everything's going just fine around camp, as far as I can tell. There's a leak in the warrior's den that someone should probably get on ... wanna lend a paw?",
-            "... Really? Okay! I'll go grab the brambles!"
-        ]
-    ],
     "assertivewarrior_leader2": [
         [
             "leader",
@@ -1376,16 +1244,6 @@
             "Yeah, right. Like I have to take orders from you!",
             "You may think you're a warrior, but all you do is sit on your haunches and boss everyone around all day. That's no warrior. That's a coward.",
             "Go find some other cat to impose on."
-        ]
-    ],
-    "assertivewarrior_deputy1": [
-        [
-            "deputy",
-            "assertive",
-            "unlawful"
-        ],
-        [
-            "Do me a favor and put me on the border patrol, y_c? I need to feel the wind in my fur. I've been going crazy, cooped up in camp."
         ]
     ],
     "assertivewarrior_deputy": [
@@ -1956,23 +1814,6 @@
             "Any longer and I'll start to believe our ancestors have given up on us."
         ]
     ],
-    "broodingadult_toapp": [
-        [
-            "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
-            "brooding",
-            "platonic_like",
-            "from_parent"
-        ],
-        [
-            "Oh, hello, y_c. Is your training going well?",
-            "Just don't worry about the other apprentices. Focus on your studies, and serving your clan. That's all that matters.",
-            "You're turning into a fine young cat ...",
-            "... and the whole clan is proud."
-        ]
-    ],
     "broodingadult_toapp1": [
         [
             "apprentice",
@@ -2003,9 +1844,6 @@
             "apprentice",
             "brooding",
             "platonic_like",
-            "respect",
-            "comfort",
-            "trust",
             "from_parent"
         ],
         [
@@ -2193,16 +2031,6 @@
             "[You spot t_c lounging about in their nest, fast asleep. Aren't they always up at this time? Did they fall asleep by mistake?]",
             "[As you approach, they slowly begin to stir in their nest]",
             "Zzz... huh? Wha? y_c? What *yawn* what time is... oh Starclan the patrols! I'm going to be late!"
-        ]
-    ],
-    "upstanding_warrior6": [
-        [
-            "upstanding",
-            "Any",
-            "random_cat"
-        ],
-        [
-            "Listen, I'm not the type of cat who likes to rake up old bones, but r_w totally cheated on their warrior assessment!"
         ]
     ],
     "upstanding_warrior7": [
@@ -2498,6 +2326,84 @@
         [
             "Look at those tiny claws!",
             "Someday, you'll be training with us. I'll teach you how to pounce - and how to land on your feet when you miss, something I'm still perfecting!"
+        ]
+    ],
+    "upstanding_warrior14": [
+        [
+            "upstanding",
+            "apprentice",
+            "from_mentor"
+        ],
+        [
+            "[While collecting moss with m_n, you decide to play a small prank to try and lighten the mood. As soon as they turn their back, you hook a large wad of moss in your claws and fling it over. It breaks apart on impact, showering their pelt with moss.]",
+            "[Unfortunately, the prank isn't well received. m_n proceeds to  give you a long and stern lecture about the value of clan resources and the importance of taking your duties seriously.]"
+        ]
+    ],
+    "upstanding_warrior15": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "[It's easy to see how intimidating t_c can often be. Just a single glare can discourage even the most mischievous apprentice from pulling a prank!]"
+        ]
+    ],
+    "upstanding_warrior16": [
+        [
+            "upstanding",
+            "Any"
+        ],
+        [
+            "[t_c immediately rushes to guard the camp entrance after hearing word of a fox roaming about the territory, glaring at every leaf, tree, and bush that so much as rustles in the wind.]"
+        ]
+    ],
+    "upstanding_warrior17": [
+        [
+            "upstanding",
+            "from_mentor",
+            "insult"
+        ],
+        [
+            "Looks like someone is one step closer to missing out on the upcoming Gathering."
+        ]
+    ],
+    "upstanding_warrior18": [
+        [
+            "upstanding",
+            "from_mentor",
+            "platonic_like",
+            "neutral"
+        ],
+        [
+            "[While the rest of the clan is fast asleep in their nests, you are woken up by a paw poking you in the side.]",
+            "Rise and shine y_c! C'mon, up! Up! Up! Let's go! I want to try and get an early start on today's lesson.",
+            "[t_c is certainly an excellent mentor, there's no doubt about that. However, as you sleepily follow them out of camp, you wish that they were slightly less enthusiastic when it comes to training.]"
+        ]
+    ],
+    "upstanding_warrior19": [
+        [
+            "upstanding",
+            "murder",
+            "apprentice",
+            "warrior",
+            "neutral",
+            "dislike",
+            "hate"
+        ],
+        [
+            "[t_c flat out refuses to let you join their patrol.]",
+            "No way am I patrolling with a fox-hearted murderer!"
+        ]
+    ],
+    "upstanding_warrior20": [
+        [
+            "upstanding",
+            "deputy"
+        ],
+        [
+            "Hey y_c? About today's patrols...",
+            "Could I be excused? Please?",
+            "I'm just... feeling a bit burnt out right now."
         ]
     ]
 }

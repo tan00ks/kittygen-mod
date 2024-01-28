@@ -45,6 +45,7 @@ class TalkScreen(Screens):
 
 
 
+
     def screen_switches(self):
         self.update_camp_bg()
         self.hide_menu_buttons()
@@ -110,6 +111,13 @@ class TalkScreen(Screens):
         self.choice_panel.visible = False
 
 
+
+        self.talk_img = pygame_gui.elements.UIImage(
+                scale(pygame.Rect((160, 935), (360, 314))),
+                image_cache.load_image("resources/images/talkboximg.png").convert_alpha()
+            )
+        self.talk_img.hide()
+        
 
 
     def exit_screen(self):
@@ -185,8 +193,10 @@ class TalkScreen(Screens):
         try:
             if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
                 self.profile_elements["cat_image"].hide()
+                self.talk_img.show()
             else:
                 self.profile_elements["cat_image"].show()
+                self.talk_img.hide()
         except:
             pass
         if self.text_index < len(self.text_frames):
@@ -196,13 +206,17 @@ class TalkScreen(Screens):
 
         if self.text_index == len(self.text_frames) - 1:
             if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                self.paw.visible = True
+                if self.text_type != "choices":
+                    self.paw.visible = True
                 if not self.created_choice_buttons and self.text_type == "choices":
                     self.create_choice_buttons()
                     self.created_choice_buttons = True
 
         # Always render the current frame
-        self.text.html_text = self.text_frames[self.text_index][self.frame_index]
+        try:
+            self.text.html_text = self.text_frames[self.text_index][self.frame_index]
+        except:
+            pass
         self.text.rebuild()
         self.clock.tick(60)
 
@@ -276,15 +290,18 @@ class TalkScreen(Screens):
         
         y_pos = 0
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
+            self.paw.visible = True
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
-            button = pygame_gui.elements.UIButton(scale(pygame.Rect((1000, 670 + y_pos), (-1, 80))),
-                text,
-                manager=MANAGER
-            )
-            self.choice_buttons[c] = button
-            y_pos += 80
+            text = self.adjust_txt(text, self.the_cat)
+            if text:
+              button = pygame_gui.elements.UIButton(scale(pygame.Rect((1000, 670 + y_pos), (-1, 80))),
+                  text,
+                  manager=MANAGER
+              )
+              self.choice_buttons[c] = button
+              y_pos += 80
     
     def handle_choice(self, cat):
         for b in self.choice_buttons:
@@ -391,11 +408,43 @@ class TalkScreen(Screens):
             elif "newborn" in tags and you.moons != 0:
                 continue
 
-            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice", "kitten", "newborn"]:
                 continue
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
             
+            roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
+            if any(r in roles for r in tags):
+                has_role = False
+                if "they_kitten" in tags and cat.status == "kitten":
+                    has_role = True
+                elif "they_apprentice" in tags and cat.status == "apprentice":
+                    has_role = True
+                elif "they_medicine_cat_apprentice" in tags and cat.status == "medicine cat apprentice":
+                    has_role = True
+                elif "they_mediator_apprentice" in tags and cat.status == "mediator apprentice":
+                    has_role = True
+                elif "they_queen's_apprentice" in tags and cat.status == "queen's apprentice":
+                    has_role = True
+                elif "they_warrior" in tags and cat.status == "warrior":
+                    has_role = True
+                elif "they_mediator" in tags and cat.status == "mediator":
+                    has_role = True
+                elif "they_medicine_cat" in tags and cat.status == "medicine cat":
+                    has_role = True
+                elif "they_queen" in tags and cat.status == "queen":
+                    has_role = True
+                elif "they_deputy" in tags and cat.status == "deputy":
+                    has_role = True
+                elif "they_leader" in tags and cat.status == "leader":
+                    has_role = True
+                elif "they_elder" in tags and cat.status == "elder":
+                    has_role = True
+                elif "they_newborn" in tags and cat.status == "newborn":
+                    has_role = True
+                if not has_role:
+                    continue
+
             if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
                 continue
             if "they_grieving" in tags and "grief stricken" not in cat.illnesses:
@@ -675,13 +724,26 @@ class TalkScreen(Screens):
             game.clan.talks.clear()
 
         weights2 = []
-        weighted_tags = ["from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit"]
+        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit"]
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
             num_fam_mentor_tags = 1
             if any(i in weighted_tags for i in tags):
                 num_fam_mentor_tags+=3
             weights2.append(num_fam_mentor_tags)
+
+        if "debug_ensure_dialogue" in game.config and game.config["debug_ensure_dialogue"]:
+            if game.config["debug_ensure_dialogue"] in list(texts_list.keys()):
+                text_chosen_key = game.config["debug_ensure_dialogue"] 
+                text = texts_list[text_chosen_key]["intro"] if "intro" in texts_list[text_chosen_key] else texts_list[text_chosen_key][1]
+                new_text = self.get_adjusted_txt(text, cat)
+                if new_text:
+                    if "intro" in texts_list[text_chosen_key]:
+                        self.text_type = "choices"
+                        self.display_intro(cat, texts_list, text_chosen_key)
+                    return new_text
+            else:
+                print("something's wrong")
 
         while counter < max_retries:
             text_chosen_key = choices(list(texts_list.keys()), weights=weights2, k=1)[0]
@@ -857,6 +919,25 @@ class TalkScreen(Screens):
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
+            if "r_w1" in text:
+                alive_apps = get_alive_warriors(Cat)
+                if len(alive_apps) <= 2:
+                    return ""
+                alive_app = choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat or alive_app.ID == cat.ID:
+                    alive_app = choice(alive_apps)
+                alive_apps.remove(alive_app)
+                text = text.replace("r_w1", str(alive_app.name))
+                if "r_w2" in text:
+                    alive_app2 = choice(alive_apps)
+                    while alive_app2.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                        alive_app2 = choice(alive_apps)
+                    text = text.replace("r_w2", str(alive_app2.name))
+                if "r_w3" in text:
+                    alive_app3 = choice(alive_apps)
+                    while alive_app3.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                        alive_app3 = choice(alive_apps)
+                    text = text.replace("r_w3", str(alive_app3.name))
             if "r_w" in text:
                 alive_apps = get_alive_warriors(Cat)
                 if len(alive_apps) <= 1:

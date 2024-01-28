@@ -22,25 +22,6 @@
             "... Phew, that felt good. I hope somebody heard that!"
         ]
     ],
-    "brooding_jealous": [
-        [
-            "apprentice",
-            "jealousy",
-            "they_clanborn",
-            "they_clanfounder",
-            "you_outsiderroots",
-            "you_half-clan",
-            "you_orphaned",
-            "you_abandoned",
-            "random_cat"
-        ],
-        [
-            "[t_c walks up to you, tail lashing wildly.]",
-            "y_c, I don't know how you manage it, but I'm not surprised you have to cheat in our training sessions.",
-            "It makes sense you can't naturally compare to a clanborn cat, but it doesn't mean you can show me up in front of m_n, and especially not tm_n!",
-            "[t_c sneers at you one last time before stalking off without giving you a chance to reply.]"
-        ]
-    ],
     "silly_gen_prey": [
         [
             "Any",
@@ -535,21 +516,6 @@
             "Haha, don't look so stressed! I was just joking."
         ]
     ],
-    "assertiveapp_medapp3": [
-        [
-            "medicine cat apprentice",
-            "medicine cat",
-            "assertive",
-            "silly",
-            "upstanding"
-        ],
-        [
-            "Hey, y_c ... is it really true that you can talk to StarClan?",
-            "Whoa! That's so cool! What does StarClan say that I'm gonna do? Am I gonna be strong? Am I destined for greatness?",
-            "... It doesn't work like that? Awh. That's no fun.",
-            "Well, if StarClan ever mentions me, you'll let me know, won't you?"
-        ]
-    ],
     "assertive_medapp2": [
         [
             "medicine cat apprentice",
@@ -707,18 +673,6 @@
             "... Is tm_n still there?"
         ]
     ],
-    "assertive_app1": [
-        [
-            "Any",
-            "assertive",
-            "cool",
-            "random_cat"
-        ],
-        [
-            "Did you see r_c earlier today, y_c? Oh, StarClan, it was the funniest thing ever!",
-            "They mistook a twig for a snake and flew, like, five fox-lengths into the air! Hahahaha!"
-        ]
-    ],
     "assertive_app01": [
         [
             "warrior",
@@ -848,16 +802,6 @@
             "Yeah, right. Like I have to take orders from you!",
             "You may think you're a warrior, but all you do is sit on your haunches and boss everyone around all day. That's no warrior. That's a coward.",
             "Go find some other cat to impose on."
-        ]
-    ],
-    "assertiveapp_deputy": [
-        [
-            "deputy",
-            "assertive",
-            "unlawful"
-        ],
-        [
-            "Do me a favor and put me on the border patrol, y_c? I need to feel the wind in my fur. I've been going crazy, cooped up in camp."
         ]
     ],
     "assertive_queensapp": [
@@ -1085,36 +1029,6 @@
             "Um ... please don't tell t_mn I said that, though. Hehe."
         ]
     ],
-    "assertive_apprentice3": [
-        [
-            "apprentice",
-            "assertive",
-            "upstanding"
-        ],
-        [
-            "y_c, when do you think we'll get to fight in a real warrior battle?",
-            "I know we've been practicing our fighting moves, but practice is nothing compared to the real thing.",
-            "I'm just itching to tear into some o_cClan fur! That'll show them how a real c_nClan cat does it!"
-        ]
-    ],
-    "assertive_apprentice4": [
-        [
-            "apprentice",
-            "medicine cat apprentice",
-            "mediator apprentice",
-            "queen's apprentice",
-            "platonic_like",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "[t_c tackles you from behind.]",
-            "Rahhh! o_cClan warrior, feel my wrath!",
-            "Hehe, don't worry! It's just me, y_c. Did I scare you?",
-            "That's a move tm_n just taught me. Cool, huh? I can't wait to try it out for real!",
-            "Has m_n taught you anything cool yet?"
-        ]
-    ],
     "assertive_apprentice5": [
         [
             "apprentice",
@@ -1285,24 +1199,6 @@
         [
             "Psh. Buzz off!",
             "I'm trying to do something actually cool, for once ... can't you see you're killing the vibe? Go find your own friends!"
-        ]
-    ],
-    "assertive_apprentice15": [
-        [
-            "Any",
-            "neutral",
-            "dislike",
-            "neutral",
-            "assertive",
-            "cool",
-            "brooding",
-            "sibling",
-            "adopted_sibling",
-            "half sibling"
-        ],
-        [
-            "... Who are you?",
-            "[Is your own sibling seriously pretending not to know you?]"
         ]
     ],
     "assertive_apprentice16": [
@@ -1479,24 +1375,6 @@
         [
             "Thanks again for showing me how to master that move, earlier. I couldn't have gotten it without your help.",
             "You're such a good teacher, y_c! I couldn't imagine being anyone's apprentice but you!"
-        ]
-    ],
-    "assertive_apprentice26": [
-        [
-            "Any",
-            "assertive",
-            "sweet",
-            "silly",
-            "from_your_apprentice",
-            "platonic_like"
-        ],
-        [
-            "[You notice that t_c isn't asking like their usual, energetic self. You ask them what's wrong.]",
-            "*Sigh* Oh, it's nothing really ...",
-            "It's just that ... Sometimes, I feel so behind my denmates. Not just in training, but in everything!",
-            "Everybody else seems to already have everything figured out. What they want to do with their lives, their places in the clan, who they're going to become mates with ... I just don't know Any of that stuff!",
-            "[You assure t_c that they don't have to know everything right now, and they have plenty of time to figure things out.]",
-            "... Thanks. That makes me feel better."
         ]
     ],
     "assertive_apprentice26_2": [
@@ -2375,22 +2253,6 @@
             "Heh ... I guess it is pretty cool ..."
         ]
     ],
-    "broodingapp_toapp4": [
-        [
-            "any",
-            "brooding",
-            "platonic_like",
-            "from_your_apprentice"
-        ],
-        [
-            "[t_c coldly drops a bird at your paws.]",
-            "Before you ask, yes, I did go onto the territory without your permission.",
-            "It was early morning. This bird was perching in camp and I chased after it. There was no time to wake you.",
-            "If you have a problem with it, I'd recommend taking it up with d_n.",
-            "But I'm not gonna apologize, because I'm not sorry.",
-            "[t_c turns around and drops the bird on the freshkill pile. You don't know if you should congratulate them for the catch, or claw their ears off.]"
-        ]
-    ],
     "upstanding_apprentice1": [
         [
             "apprentice",
@@ -3052,18 +2914,6 @@
             "Even if it does involve beheading."
         ]
     ],
-    "neurotic_app": [
-        [
-            "Any",
-            "neurotic",
-            "random_cat"
-        ],
-        [
-            "[t_c comes in from the hunting patrol, staring at their paws self-consciously as the rest of the patrol adds their catches to the freshkill pile.]",
-            "[tm_n gently reassures them that they tried their best, but t_c just glances away, clearly upset.]",
-            "How am I ever gonna be a real warrior if I can't even catch my own prey ...?"
-        ]
-    ],
     "neurotic_app1": [
         [
             "apprentice",
@@ -3074,20 +2924,26 @@
             "Promise to go easy, alright? There's a lot of stuff I still don't have down."
         ]
     ],
-    "neurotic_app2": [
-        [
-            "no_kit",
-            "neurotic",
-            "random_cat",
-            "trust"
-        ],
-        [
-            "[t_c watches tm_n apprehensively from across camp.]",
-            "Do you think tm_n even likes me?",
-            "It seems like, every new skill they try and teach me, I always seem to mess it up somehow ...",
-            "I just hope I'm not making them look like a bad mentor."
-        ]
-    ],
+    "neurotic_app4": [
+	[
+		"no_kit",
+		"neurotic",
+		"upstanding",
+		"random_cat"
+	],
+	[
+		"Gah, stupid, stupid, so stupid, t_c ...",
+		"Wuh - y_c? How long have you been standing there?",
+		"Why was I talking to myself ...?",
+		"*Sigh* It's, like, the dumbest thing ever. t_mn gave me this surprise assessment today, and I totally flunked it!",
+		"How could I have answered that the best way to catch a fish is by swimming up to it? It doesn't even make any sense!",
+		"I just know that t_mn is still laughing at me ... the whole Clan probably is.",
+		"[You tell t_c not to be so hard on themself.]",
+		"But, if I'm not hard on myself, then how will I ever become stronger?",
+		"I refuse to be an embarrassment to my Clan and mentor. I'll pass that assessment next time ... Whatever it takes!"
+	]
+	],
+
     "neurotic_app3": [
         [
             "apprentice",

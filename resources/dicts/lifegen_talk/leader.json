@@ -224,36 +224,6 @@
             "Calm yourself, little one."
         ]
     ],
-    "assertive_mentor7": [
-        [
-            "apprentice",
-            "dislike",
-            "assertive",
-            "from_mentor",
-            "silly",
-            "cool"
-        ],
-        [
-            "Surprise assessment, y_c! What's the best way to catch a squirrel?",
-            "... What? That's not ... even remotely close.",
-            "*Sigh*. I was just doing this as a joke, but I guess I really have to show you again now ..."
-        ]
-    ],
-    "assertive_mentor71": [
-        [
-            "apprentice",
-            "platonic_like",
-            "assertive",
-            "from_mentor",
-            "silly",
-            "cool"
-        ],
-        [
-            "Surprise assessment, y_c! What's the best way to catch a squirrel?",
-            "... Whoa. You got it right!",
-            "I was just doing this as a joke, but turns out you're a lot smarter than you let on! Nice work, y_c."
-        ]
-    ],
     "assertive_mentor3": [
         [
             "apprentice",
@@ -1662,6 +1632,299 @@
             "Gah! Not my beautiful face!",
             "[In the end, t_c's face comes out untouched ... though, the maneuver did leave many of their vital organs unprotected.]",
             "[Seems they don't exactly have their priorities in order.]"
+        ]
+    ],
+    "sweet_leader_1": [
+        [
+            "newborn",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Ah, r_c told me the news about your arrival. Greetings y_c, and welcome to c_nClan!",
+            "I hope I can be nothing short of the best leader I can for you... I can already tell that you'll be a wonderful warrior."
+        ]
+    ],
+    "sweet_leader_2": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "Good evening, y_c! How's the nursery treating you?",
+            "Come on, let's go get something to eat, shall we? A little one like you needs to eat plenty to grow big and strong!"
+        ]
+    ],
+    "sweet_leader_3": [
+        [
+            "kitten",
+            "sweet"
+        ],
+        [
+            "[t_c pokes their head into the Nursery, smiling once they spot you]",
+            "It's okay to come on out now. Don't worry, the fox attack was just a false alarm, it seemed to have gone around the camp, luckily.",
+            "You can get some rest now, if you'd like. This was pretty stressful, and sometimes napping can relieve stress."
+        ]
+    ],
+    "sweet_leader_4": [
+        [
+            "kitten",
+            "sweet",
+            "random_cat"
+        ],
+        [
+            "Hm? Oh, it's just you, y_c. How are you doing this evening?",
+            "Am I sure you're gonna grow up to be tall? Well... Wanna know a secret?",
+            "When r_c was your age, they were even smaller! And now they're super big and strong, just like you will be one day."
+        ]
+    ],
+    "sweet_leader_5": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "sweet"
+        ],
+        [
+            "Oh, hello y_c! How has training been going?",
+            "I see, I see... Well, please let me know if there's anything I can do to make it easier for you!"
+        ]
+    ],
+    "sweet_leader_6": [
+        [
+            "apprentice",
+            "queen's apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! There you are, I have a huge favor to ask of you.",
+            "I'm taking some of the warriors down to the edge of the territory, there was a huge accident involving o_cClan warriors and I have to be there. Can you watch the Nursery while we're gone?",
+            "Thank you so much! You can take the rest of the day off once we get back for your hard work, then."
+        ]
+    ],
+    "sweet_leader_7": [
+        [
+            "apprentice",
+            "sweet"
+        ],
+        [
+            "Hmm, you wanna know what your warrior name is gonna be, y_c?",
+            "Well, I can't tell you, but I really hope you'll like it! What do you think it's gonna be, out of curiosity?"
+        ]
+    ],
+    "sweet_leader_8": [
+        [
+            "queen's apprentice",
+            "sweet"
+        ],
+        [
+            "Hey y_c, you look like you're having a hard time. What's up?",
+            "Mm.. I see.. Feeling insecure about your role in the clan? I understand.",
+            "Well, every cat in the clan has a very special role, from the smallest kit all the way up to the eldest elder. Your role matters too.",
+            "[t_c rests their tail on your shoulders] All you need to do is your best, you're perfect the way you are, as all cats in c_nClan are. Just because you don't really fight or hunt means nothing."
+        ]
+    ],
+    "sweet_leader_9": [
+        [
+            "medicine cat apprentice",
+            "sweet"
+        ],
+        [
+            "How's Medicine Cat training been going for you? I was told you're learning about signs and dreams today.",
+            "Finding the role you're meant to do matters, and sometimes we find out what we're meant to do moons later than you'd expect.",
+            "Ah... You haven't been able to get those dreams... I understand. It's not an easy thing to do.",
+            "I have had one though, if you'd like to hear about it. It wasn't pleasant, but if it helps you in any way, I'm more than happy to talk about it.",
+            "In my dream, I found myself in this strange, stoney place. It was like the Twoleg Place not too far from here.",
+            "Though... it was different. The twolegs seemed to be absent, and their stony dens reached for the skies.",
+            "Some of their dens had toppled over, moss and vines seemed to mend the cracks.",
+            "I found a kit amongst the rubble, I took it with me and tried to find it's family, but they were no where to be found.",
+            "The kit told me to take it to the tallest building, and so I did. Looking down, the landscape almost looked like a forest.",
+            "That is when the ground fell away, and the surroundings melted into a starry sky. I didn't know how I was floating.",
+            "The kit's fur turned starry, and I realized...",
+            "This was during a time where my faith was shaken... They gently guided me back to the stars.",
+            "It was pretty scary at first, but after I got used to it, it was almost comforting being out there.",
+            "Finding your way as a Medicine Cat will be the same."
+        ]
+    ],
+    "sweet_leader_10": [
+        [
+            "mediator apprentice",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[You've been trying to help mediate all day, but you are just an apprentice, you can't take this much for this long.]",
+            "[As another pair of cats approach you, you begin to tear up. You can't take more!]",
+            "Hey, you two! Can you please wait a few moments?",
+            "Yes r_c, I know. I'll come and help with the issue in just a moment. Please, have some patience.",
+            "[t_c waits for the other cats to wander away before wrapping their tail comfortingly around you.]",
+            "It's okay y_c. Just breathe with me for a few moments, okay?",
+            "[y_c does some breathing exercises with you, helping you calm down at least a little bit.]",
+            "You take the rest of today off. I'll cover for you, you get some rest."
+        ]
+    ],
+    "sweet_leader_11": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "sweet"
+        ],
+        [
+            "[t_c pokes their head into the den with a soft 'mrrp', looking around with a slight nostalgic glint in their eyes.]",
+            "Ah, y_c! I hope I'm not being too much of a bother. I just wanted to check and see how everyone in the clan was doing.",
+            "Hopefully, you're doing well?"
+        ]
+    ],
+    "sweet_leader_12": [
+        [
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "sweet"
+        ],
+        [
+            "[t_c called a clan meeting not too long ago to discuss a few things, though they were just about to wrap up.]",
+            "[They look over the whole clan with a warm smile, eyes filled with love for each and every clanmate.]",
+            "[You decide to approach t_c later to ask how they can be so warm to their clan, even to cats who don't like them.]",
+            "Mmh? Why wouldn't I? This clan is my family, I will love and care for them as such.",
+            "[You ask about the cats who don't like them, and their gaze softens a bit.]",
+            "Not every cat is going to like each other, not every family member will love each other, but you can't force that love.",
+            "That isn't going to stop me from caring about them, too."
+        ]
+    ],
+    "sweet_leader_13": [
+        [
+            "warrior",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Oh, y_c! You look exhausted! What's wrong?",
+            "[You explain that the deputy put you on both dawn and dusk patrols, and how you hadn't had time to nap in the afternoon.]",
+            "I see... Go get some rest, I pardon you from your patrols today. I'll go in your place.",
+            "Don't worry about it! I need to bond more with the clan anyway, and what's better than a patrol?",
+            "Who else is going? ... Ah, r_w, I see! You go enjoy your rest now, I'll see you tomorrow morning."
+        ]
+    ],
+    "sweet_leader_14": [
+        [
+            "medicine cat",
+            "sweet"
+        ],
+        [
+            "[t_c is staring at the stars from atop High Rock at night. As you sit next to them, they smile gently at you.]",
+            "Beautiful night isn't it? ... Ah, but I know that's not what you've come to tell me about.",
+            "[Their gaze shifts to a more serious one, though that gentleness can still be found in their voice.]",
+            "What news do you have for me?"
+        ]
+    ],
+    "sweet_leader_15": [
+        [
+            "mediator",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Hey, y_c? You're heading to o_cClan soon?",
+            "Things have been pretty tense between us. Can you please take r_w with you?",
+            "I'd come if I could, but there has been a large bird around and it's threatening the Nursery.",
+            "If I have time, I'll try and come over as well."
+        ]
+    ],
+    "sweet_leader_16": [
+        [
+            "queen",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "[It had been a peaceful evening, you were wrapping up your duties for the day.]",
+            "[You turned your back for only one second, but one of the kits immediately darted away.]",
+            "[You gasp, and go to stop the kit, but t_c moves in the way of the entrance.]",
+            "Now now, r_k! Leaving the camp is super dangerous! You shouldn't be going out here.",
+            "Let's go back to y_c, alright? I can come tell you a story instead.",
+            "[They look up to you and give you a small nod, you let out a sigh of relief.]"
+        ]
+    ],
+    "sweet_leader_17": [
+        [
+            "deputy",
+            "sweet"
+        ],
+        [
+            "y_c!! It's so nice to see you this evening, how are you doing?",
+            "[t_c bounds up to you, pressing their forehead against you as a friendly greeting.]",
+            "I hope nothing's been too difficult for you. I know how tiring it can be being a deputy.",
+            "Just know that you're doing a great job, alright? I'm proud of you."
+        ]
+    ],
+    "sweet_leader_18": [
+        [
+            "deputy",
+            "random_cat",
+            "sweet"
+        ],
+        [
+            "Hey y_c! Can I get your advice?",
+            "I was thinking of assigning r_w as r_k's mentor when they become an apprentice. What do you think about that?",
+            "Mm... true, thanks for your input!"
+        ]
+    ],
+    "sweet_leader_19": [
+        [
+            "deputy",
+            "sweet"
+        ],
+        [
+            "[t_c jumps as you approach, sighing softly as they stare at the stars.]",
+            "y_c... I miss them. My old leader, I mean.",
+            "It felt like they knew what to do... but me... I feel like I'm lost.",
+            "I want to guide my clan to the best possible future... but I don't know...",
+            "Tell me... do you think I'm doing a good job?"
+        ]
+    ],
+    "sweet_leader_20": [
+        [
+            "elder",
+            "sweet"
+        ],
+        [
+            "Ah, y_c! What are you doing up so early? You need your rest!",
+            "Well- yeah- I know I'm up this early too- did I sleep?",
+            "No, but I assure you, I had a good reason.",
+            "[You tell them that you won't sleep unless they do.]",
+            "Wait- no- ah fine. You're right. I need to start taking better care of myself.",
+            "[It's about time! That leader spends so much time caring for the clan that they don't usually care for themself!]"
+        ]
+    ],
+    "sweet_leader_21": [
+        [
+            "elder",
+            "sweet"
+        ],
+        [
+            "[You're surprised to find y_c entering the Elder's Den, nowadays it's typically only apprentices or kits that visit.]",
+            "Hey y_c, I hope you don't mind! Admittedly, I've had quite a rough day.",
+            "I wanted to know, if it's not too much of a bother to you, if I could hear a story?",
+            "[It's not every day you get to tell the leader a story, but you'll gladly do so.]"
+        ]
+    ],
+    "sweet_leader_22": [
+        [
+            "elder",
+            "sweet"
+        ],
+        [
+            "Surprise! I hope you like it.",
+            "I weaved flowers into the Elder's Den to spruce it up a little.",
+            "It's a little project I've been doing with the apprentices and kits of the clan. We're decorating!",
+            "I just felt, after all the service you all have provided, that you deserved it first and foremost."
         ]
     ]
 }
