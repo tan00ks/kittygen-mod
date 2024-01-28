@@ -359,11 +359,11 @@ class TalkScreen(Screens):
             elif "newborn" in tags and you.moons != 0:
                 continue
 
-            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice", "kitten", "newborn"]:
                 continue
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
-            
+                
             if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
                 continue
             if "they_grieving" in tags and "grief stricken" not in cat.illnesses:

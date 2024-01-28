@@ -1790,10 +1790,7 @@
             "neurotic",
             "random_cat",
             "trust",
-            "they_apprentice",
-            "they_medicine_cat_apprentice",
-            "they_mediator_apprentice",
-            "they_queen's_apprentice"
+            "they_app"
         ],
         "intro": [
             "[t_c watches tm_n apprehensively from across camp.]",
@@ -1923,13 +1920,7 @@
             "assertive",
             "unabashed",
             "random_cat",
-            "they_warrior",
-            "they_medicine_cat",
-            "they_elder",
-            "they_apprentice",
-            "they_medicine_cat_apprentice",
-            "they_leader",
-            "they_deputy"
+            "they_adult"
         ],
         "intro": [
             "Hey, y_c, I'll give you a badger ride if you go up to r_w and call them a huge piece of fox dung."
