@@ -111,6 +111,13 @@ class TalkScreen(Screens):
 
 
 
+        self.talk_img = pygame_gui.elements.UIImage(
+                scale(pygame.Rect((160, 935), (360, 314))),
+                image_cache.load_image("resources/images/talkboximg.png").convert_alpha()
+            )
+        self.talk_img.hide()
+        
+
 
     def exit_screen(self):
         self.text.kill()
@@ -185,8 +192,10 @@ class TalkScreen(Screens):
         try:
             if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
                 self.profile_elements["cat_image"].hide()
+                self.talk_img.show()
             else:
                 self.profile_elements["cat_image"].show()
+                self.talk_img.hide()
         except:
             pass
         if self.text_index < len(self.text_frames):
@@ -391,11 +400,43 @@ class TalkScreen(Screens):
             elif "newborn" in tags and you.moons != 0:
                 continue
 
-            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice", "kitten", "newborn"]:
                 continue
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
             
+            roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
+            if any(r in roles for r in tags):
+                has_role = False
+                if "they_kitten" in tags and cat.status == "kitten":
+                    has_role = True
+                elif "they_apprentice" in tags and cat.status == "apprentice":
+                    has_role = True
+                elif "they_medicine_cat_apprentice" in tags and cat.status == "medicine cat apprentice":
+                    has_role = True
+                elif "they_mediator_apprentice" in tags and cat.status == "mediator apprentice":
+                    has_role = True
+                elif "they_queen's_apprentice" in tags and cat.status == "queen's apprentice":
+                    has_role = True
+                elif "they_warrior" in tags and cat.status == "warrior":
+                    has_role = True
+                elif "they_mediator" in tags and cat.status == "mediator":
+                    has_role = True
+                elif "they_medicine_cat" in tags and cat.status == "medicine cat":
+                    has_role = True
+                elif "they_queen" in tags and cat.status == "queen":
+                    has_role = True
+                elif "they_deputy" in tags and cat.status == "deputy":
+                    has_role = True
+                elif "they_leader" in tags and cat.status == "leader":
+                    has_role = True
+                elif "they_elder" in tags and cat.status == "elder":
+                    has_role = True
+                elif "they_newborn" in tags and cat.status == "newborn":
+                    has_role = True
+                if not has_role:
+                    continue
+
             if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
                 continue
             if "they_grieving" in tags and "grief stricken" not in cat.illnesses:
@@ -857,6 +898,25 @@ class TalkScreen(Screens):
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
+            if "r_w1" in text:
+                alive_apps = get_alive_warriors(Cat)
+                if len(alive_apps) <= 2:
+                    return ""
+                alive_app = choice(alive_apps)
+                while alive_app.ID == game.clan.your_cat or alive_app.ID == cat.ID:
+                    alive_app = choice(alive_apps)
+                alive_apps.remove(alive_app)
+                text = text.replace("r_w1", str(alive_app.name))
+                if "r_w2" in text:
+                    alive_app2 = choice(alive_apps)
+                    while alive_app2.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                        alive_app2 = choice(alive_apps)
+                    text = text.replace("r_w2", str(alive_app2.name))
+                if "r_w3" in text:
+                    alive_app3 = choice(alive_apps)
+                    while alive_app3.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                        alive_app3 = choice(alive_apps)
+                    text = text.replace("r_w3", str(alive_app3.name))
             if "r_w" in text:
                 alive_apps = get_alive_warriors(Cat)
                 if len(alive_apps) <= 1:

@@ -1382,5 +1382,71 @@
             "[They give you a gentle smile, waving their tail in a greeting.]",
             "[They've always really cared about the Elders in the clan, and you are no exception.]"
         ]
+    ],
+    "upstanding_mediator": [
+        [
+            "upstanding",
+            "no_kit",
+	"platonice_like",
+	"random_cat"
+	
+        ],
+        [
+           "Hey y_c! You've been working pretty hard recently and I just thought I'd check up on you. Remember to take a break every once in a while, yeah? Rest is important after all!",
+"Oh, me? Don't worry, I'm not even doing much. Just gotta check up on a few of the warriors, see if r_c is doing alright, make sure the kits aren't fighting again, stop by the elder's den...",
+"...",
+"... don't look at me like that."
+        ]
+    ],
+
+"upstanding_mediator1": [
+        [
+            "upstanding",
+"Any"
+	
+        ],
+        [
+          "[It's easy to see how intimidating t_c can often be. Just a single glare can discourage even the most mischievous apprentice from pulling a prank!]"
+        ]
+    ],
+
+"upstanding_mediator2": [
+        [
+            "upstanding",
+"kitten",
+"insult"
+	
+        ],
+        [
+          "You and I are going to have a long talk about what you just said."
+        ]
+    ],
+
+"upstanding_mediator3": [
+        [
+            "upstanding",
+"from_mentor",
+"insult"
+	
+        ],
+        [
+          "Looks like someone is one step closer to missing out on the upcoming Gathering."
+        ]
+    ],
+
+"upstanding_mediator4": [
+        [
+           "upstanding",
+"from_mentor",
+"platonic_like",
+"neutral"
+	
+        ],
+        [
+          "[While the rest of the clan is fast asleep in their nests, you are woken up by a paw poking you in the side.]",
+"Rise and shine y_c! C'mon, up! Up! Up! Let's go! I want to try and get an early start on today's lesson.",
+"[t_c is certainly an excellent mentor, there's no doubt about that. However, as you sleepily follow them out of camp, you wish that they were slightly less enthusiastic when it comes to training.]"
+        ]
     ]
+
 }

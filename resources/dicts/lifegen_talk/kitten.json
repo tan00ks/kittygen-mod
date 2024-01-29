@@ -311,18 +311,6 @@
             "[You and t_c have a long conversation about the other clans. With each detail you share, their eyes grow bigger and bigger.]"
         ]
     ],
-    "assertivekit_0": [
-        [
-            "no_kit",
-            "assertive"
-        ],
-        [
-            "y_c! y_c! Gimme a badger ride, c'mon, pleeease?",
-            "All the other grownups are too busy! I need you to play with me!",
-            "You will? YAYAYAYAYAY!!!",
-            "[Before you even get a chance to prepare, t_c tackles you from behind, squealing with delight as they clamber onto your shoulders.]"
-        ]
-    ],
     "assertivekit_queensapp1": [
         [
             "queen's apprentice"
@@ -415,19 +403,6 @@
             "Psh, who cares? I don't wanna play pretend! I just want to battle!!!"
         ]
     ],
-    "assertivekit_7": [
-        [
-            "kitten",
-            "assertive",
-            "unlawful"
-        ],
-        [
-            "Hmph. When are they gonna let us out of this stuffy old nursery?",
-            "I want to explore! And I just know, if they let us battle, I could be the best warrior this clan has ever seen!!! I could probably take down two or three o_cClan warriors, all by myself.",
-            "Hey ... maybe we could sneak out!",
-            "Yeah, I know it's against the rules! What are you, a scaredy-cat?"
-        ]
-    ],
     "assertivekit_8": [
         [
             "medicine cat",
@@ -442,30 +417,6 @@
             "y_c, can you show me some battle moves? I want to be big and strong when I grow up, just like you!!!",
             "What? You mean you ... don't know any battle moves?",
             "Hmph. You're no fun! I'll go find someone else to play with, then!"
-        ]
-    ],
-    "assertivekit_9": [
-        [
-            "Any",
-            "assertive"
-        ],
-        [
-            "Hey, y_c! Wanna hear about all the things I like?",
-            "I like fresh-kill and leaves and puddles and rain and rainclouds and normal clouds and my friends and c_nClan and fighting and playing and sleeping and -",
-            "Wait, where are you going? I wasn't finished yet!"
-        ]
-    ],
-    "assertivekit_10": [
-        [
-            "kitten",
-            "assertive",
-            "random_cat"
-        ],
-        [
-            "I dare you to go up to r_c and call them a huge stinky dung-face!",
-            "You don't want to? Too bad! I already dared it!",
-            "And if you don't, I'll tell everyone in the nursery that you're the huge stinky dung-face!",
-            "The choice is yours ... Hehehe!"
         ]
     ],
     "assertivekit_11": [
@@ -488,34 +439,6 @@
         ],
         [
             "Go away, you big meanie!!!"
-        ]
-    ],
-    "assertivekit_13": [
-        [
-            "Any",
-            "non-related",
-            "assertive",
-            "platonic_like"
-        ],
-        [
-            "y_c, we're always gonna be best friends, aren't we?",
-            "Promise me that, no matter what happens, we'll stay friends forever and ever and ever and ever and ever until the end of time!",
-            "... You promise? Yippee!",
-            "Now let's go play!"
-        ]
-    ],
-    "assertivekit_14": [
-        [
-            "Any",
-            "assertive",
-            "platonic_like",
-            "comfort",
-            "trust"
-        ],
-        [
-            "y_c, do you ever get scared?",
-            "Hmph. Don't you worry! Whenever you're scared, just come and find me, and I'll chase all the scary things away!",
-            "I can be brave. I can keep you safe!"
         ]
     ],
     "assertivekit_15": [
@@ -545,22 +468,6 @@
             "y_c, can I pleeeease come on patrol with you today? Please please please?",
             "I promise I won't tell anyone! No one will have to know!",
             "I just wanna go explore like a real warrior does!"
-        ]
-    ],
-    "assertivekit_17": [
-        [
-            "kitten",
-            "assertive",
-            "unlawful",
-            "upstanding",
-            "platonic_like",
-            "comfort",
-            "trust"
-        ],
-        [
-            "What do you think our warrior names are gonna be?",
-            "I hope my name ends in '-claw'!!! That's a super tough name, isn't it?",
-            "A name to strike fear into the hearts of all my enemies! Rrraahhh!"
         ]
     ],
     "assertivekit_18": [
@@ -655,26 +562,6 @@
             "y_c, y_p says it's my turn with the moss-ball! You have to give it back!",
             "Come onnnnn!",
             "Hmph. That's it, I'm gonna tell on you!"
-        ]
-    ],
-    "assertivekit_24": [
-        [
-            "kitten",
-            "assertive",
-            "unlawful",
-            "upstanding",
-            "silly",
-            "sweet",
-            "neurotic",
-            "platonic_like",
-            "sibling",
-            "adopted_sibling"
-        ],
-        [
-            "y_c, family means forever, right? We're always gonna be together?",
-            "We're not gonna turn out like those siblings that fight all the time and stop liking each other, are we?",
-            "Heh. Of course not. I'm being silly.",
-            "Why would I ever stop liking you?"
         ]
     ],
     "assertivekit_25": [
@@ -887,25 +774,6 @@
             "[t_c stumbles across camp to you, soaking wet and covered in mud.]",
             "y_c! Before you get mad, I didn't do it!",
             "[The very peeved-off looking deputy locks eyes with you and storms in your direction. What mischief did t_c get into this time?]"
-        ]
-    ],
-    "assertivekit_311": [
-        [
-            "Any",
-            "kitten",
-            "assertive",
-            "silly",
-            "unlawful",
-            "upstanding",
-            "platonic_like",
-            "from_adopted_kit",
-            "from_kit",
-            "random_cat"
-        ],
-        [
-            "y_c, r_k won't play with me! Will you go tell them that they have to?",
-            "What? You won't? But that's not fairrrr!",
-            "[t_c stalks across the nursery to go have a pout. But, as soon as one of the kits suggests a game of moss-ball, their troubles are suddenly forgotten.]"
         ]
     ],
     "assertivekit_your": [
@@ -3412,5 +3280,234 @@
             "What? You still like moss-ball, y_c?",
             "... You must not be very popular, huh?"
         ]
+    ],
+    "kit_grief": [
+        [
+            "any",
+            "they_greiving",
+            "dead_close",
+            "they_kitten"
+        ],
+        [
+            "*Sniffle* What happened to d_c? I miss them ...",
+            "They're gone?",
+            "Well, when are they coming back?"
+        ]
+    ],
+    "kit_grief1": [
+        [
+            "any",
+            "they_greiving",
+            "dead_close",
+            "they_kitten"
+        ],
+        [
+            "[You tell t_c that you like their pretty feather.]",
+            "Thanks!!! It's for d_c!",
+            "Could you help me put it in their nest?",
+            "I'm hoping that, when they see it in StarClan, they'll like it so much that they'll come back down to c_nClan, and we can play together again!"
+        ]
+    ],
+    "kit_grief2": [
+        [
+            "any",
+            "they_greiving",
+            "dead_close",
+            "they_kitten",
+            "random_cat",
+            "assertive",
+            "brooding",
+            "cool",
+            "unabashed",
+            "upstanding"
+        ],
+        [
+            "[t_c is yelling at a hapless r_q, who tries desperately to manage the situation.]",
+            "No, you don't understand! Why aren't you listening to me?",
+            "d_c couldn't have gone up to StarClan, because d_c would never leave me behind like that!",
+            "It's not fair!"
+        ]
+    ],
+    "kit_grief3": [
+        [
+            "any",
+            "they_greiving",
+            "dead_close",
+            "they_kitten",
+            "neurotic",
+            "sweet",
+            "introspective"
+        ],
+        [
+            "[t_c clings to a scrap of moss, claws unsheathed, eyes wide and fearful.]",
+            "The things that got d_c aren't gonna come and get me, too ... right?"
+        ]
+    ],
+    "kittten_condition": [
+        [
+            "any"
+,"they_injured",
+"they_sick",
+"random_cat",
+"they_kitten"	
+        ],
+        [
+           "*Cough* *Cough*",
+	"Oh ... y_c! Did you come to visit me on my special vacation in the medicine den?",
+	"r_m told me that, if I'm really good, they'll go out and get me a really special gift from the territory ...",
+	"I wonder what it'll be? Maybe a really cool feather? Ooh, or a twoleg thing!",
+	"I can't wait to see what it is."
+        ]
+    ],
+
+"kittten_condition1": [
+        [
+            "any"
+,"they_injured",
+"they_sick",
+"random_cat",
+"they_kitten",
+"they_brooding",
+"they_neurotic",
+"they_introspective",
+"they_upstanding",
+"platonic_love"
+        ],
+        [
+           "y_c ...?",
+	"I ... I might die, won't I?",
+	"Everyone keeps trying to tell me it's okay, but I'm not dumb. I know what's going on.",
+	"[t_c is quiet for a moment. Their eyes betray a pain and understanding far beyond their age.]",
+	"If I die ... Do you promise to still come and visit me? When I'm in the ground?",
+	"I don't wanna be lonely ..."
+        ]
+    ],
+
+"kittten_condition2": [
+        [
+            "any"
+,"they_injured",
+"they_sick",
+"they_kitten"
+        ],
+        [
+           "Owie ...",
+	"What's going on ...?",
+	"Why does it hurt so bad ...?"
+        ]
+    ],
+
+"kittten_condition3": [
+        [
+            "any"
+,"they_injured",
+"they_sick",
+"they_kitten"
+        ],
+        [
+          "[t_c's little chest rises and falls, rises and falls ...]",
+	"[They look so small and helpless!]"
+        ]
+    ],
+
+"kittten_condition4": [
+        [
+            "any"
+,"they_injured",
+"they_sick",
+"they_kitten",
+"from_your_kit",
+"adopted_kit"
+        ],
+        [
+          "I'm tired of staying in the medicine den, y_c. I wanna go home.",
+	"Why can't you take me home?"
+        ]
+    ],
+
+"kittten_condition5": [
+        [
+            "any"
+,"they_injured",
+"they_sick",
+"they_kitten",
+"from_your_kit",
+"adopted_kit"
+        ],
+        [
+          "[Your little kit is hurting. They weakly blink their eyes open at you and give you a purr.]",
+	"*Cough* *Cough* y_c ...? You're here!",
+	"[You curl your body around their tiny frame, swearing not to move until they're better.]"
+        ]
+    ],
+    "upstanding_kit19": [
+        [
+            "upstanding",
+"warrior",
+"random_cat"
+	
+        ],
+        [
+          "[While showing r_a a few battle moves, you spot t_c out of the corner of your eye, doing their best to copy you on unsteady paws.]"
+        ]
+    ],
+
+"upstanding_kit20": [
+        [
+            "upstanding",
+"warrior",
+"random_cat"
+	
+        ],
+        [
+          "y_c! Can you make me an apprentice early? Please please pleeeeease! I'm more than ready, I swear!",
+"I'll do all of the apprentice jobs and work super duper hard, harder than any other apprentice!"
+        ]
+    ],
+
+"upstanding_kit21": [
+        [
+           "upstanding",
+"elder",
+"platonic_like",
+"neutral"
+	
+        ],
+        [
+          "[You hear a small trill at the entrance of the den and look over to see t_c trotting in, dragging a squirrel by the scruff of it's neck.]",
+"[They wordlessly set the prey down at your paws and dip their head, turning to leave while you purr gratefully.]"
+        ]
+    ],
+
+"upstanding_kit22": [
+        [
+           "upstanding",
+"they_younger",
+"murder",
+"respect"
+	
+        ],
+        [
+          "I-I looked up to you! How could you do such a thing?!"
+        ]
+    ],
+
+"upstanding_kit23": [
+        [
+           "upstanding",
+"leader",
+"deputy",
+"you_upstanding",
+"platonic_like",
+"neutral",
+"respect"
+	
+        ],
+        [
+"Guess what! Guess what! Guest what!",
+"When I grow up, I want to be just like you!",
+"I want to be all noble-y and important and- and-... all the other good words!"
+        ]
     ]
+
 }
