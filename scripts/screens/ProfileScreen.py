@@ -2608,7 +2608,7 @@ class ProfileScreen(Screens):
                     self.exile_cat_button = UIImageButton(scale(pygame.Rect((1156, 900), (344, 92))),
                                                             "",
                                                           object_id= "#follow_sc_button",
-                                                           tool_tip_text='Your Clan will go to Starclan'
+                                                           tool_tip_text='Your Clan will go to StarClan'
                                                                          ' after death.',
                                                           
                                                           starting_height=2, manager=MANAGER)

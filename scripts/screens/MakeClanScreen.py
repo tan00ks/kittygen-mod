@@ -885,7 +885,7 @@ class MakeClanScreen(Screens):
                     cat_object=game.choose_cats[u])
 
         for u in range(6, 12):
-             if game.choose_cats[u] in [self.leader, self.deputy, self.med_cat] + self.members:
+            if game.choose_cats[u] in [self.leader, self.deputy, self.med_cat] + self.members:
                 self.elements["cat" + str(u)] = self.elements["cat" + str(u)] = UISpriteButton(
                     scale(pygame.Rect((620, 400), (300, 300))),
                     pygame.transform.scale(game.choose_cats[u].sprite, (300, 300)),
@@ -1690,11 +1690,16 @@ class MakeClanScreen(Screens):
                         self.accessory = None
                     else:
                         self.accessory = event.text
-                        self.update_sprite()
+                    self.update_sprite()
                 elif event.ui_element == self.elements['permanent conditions']:
                     if event.text == "None":
                         self.permanent_condition = None
                         self.paralyzed = False
+                        if "NOTAIL" in self.scars:
+                            self.scars.remove("NOTAIL")
+                        elif "NOPAW" in self.scars:
+                            self.scars.remove("NOPAW")
+                        self.update_sprite()
                     else:
                         chosen_condition = event.text
                         self.permanent_condition = event.text
@@ -1708,6 +1713,11 @@ class MakeClanScreen(Screens):
                         elif event.text == "born without a tail" and "NOTAIL" not in self.custom_cat.pelt.scars:
                             self.scars = []
                             self.scars.append('NOTAIL')
+                        else:
+                            if "NOTAIL" in self.scars:
+                                self.scars.remove("NOTAIL")
+                            elif "NOPAW" in self.scars:
+                                self.scars.remove("NOPAW")
                         self.update_sprite()
 
                 elif event.ui_element == self.elements['sex']:

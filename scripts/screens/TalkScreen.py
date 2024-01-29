@@ -12,6 +12,18 @@ from scripts.game_structure import image_cache
 import pygame_gui
 from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
+from enum import Enum  # pylint: disable=no-name-in-module
+
+class RelationType(Enum):
+    """An enum representing the possible age groups of a cat"""
+
+    BLOOD = ''                      # direct blood related - do not need a special print
+    ADOPTIVE = 'adoptive'       	# not blood related but close (parents, kits, siblings)
+    HALF_BLOOD = 'half sibling'   	# only one blood parent is the same (siblings only)
+    NOT_BLOOD = 'not blood related'	# not blood related for parent siblings
+    RELATED = 'blood related'   	# related by blood (different mates only)
+
+BLOOD_RELATIVE_TYPES = [RelationType.BLOOD, RelationType.HALF_BLOOD, RelationType.RELATED]
 
 class TalkScreen(Screens):
 
@@ -88,6 +100,7 @@ class TalkScreen(Screens):
                 scale(pygame.Rect((170, 942), (346, 302))),
                 image_cache.load_image("resources/images/textbox_graphic.png").convert_alpha()
             )
+        # self.textbox_graphic.hide()
 
         self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((70, 900), (400, 400))),
                                                                          pygame.transform.scale(
@@ -107,16 +120,6 @@ class TalkScreen(Screens):
                                 (500, 870)),
                             manager=MANAGER)
         self.choice_panel.visible = False
-
-
-
-        self.talk_img = pygame_gui.elements.UIImage(
-                scale(pygame.Rect((160, 935), (360, 314))),
-                image_cache.load_image("resources/images/talkboximg.png").convert_alpha()
-            )
-        self.talk_img.hide()
-        
-
 
     def exit_screen(self):
         self.text.kill()
@@ -139,9 +142,9 @@ class TalkScreen(Screens):
         for button in self.choice_buttons:
             self.choice_buttons[button].kill()
         self.choice_buttons = {}
-        if self.choicepanel is True:
-            self.choice_panel.kill()
-            del self.choice_panel
+        
+        self.choice_panel.kill()
+        del self.choice_panel
 
     def update_camp_bg(self):
         light_dark = "light"
@@ -191,24 +194,26 @@ class TalkScreen(Screens):
         try:
             if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
                 self.profile_elements["cat_image"].hide()
-                self.talk_img.show()
+                # self.textbox_graphic.show()
             else:
                 self.profile_elements["cat_image"].show()
-                self.talk_img.hide()
+                # self.textbox_graphic.hide()
         except:
             pass
         if self.text_index < len(self.text_frames):
             if now >= self.next_frame_time and self.frame_index < len(self.text_frames[self.text_index]) - 1:
                 self.frame_index += 1
                 self.next_frame_time = now + self.typing_delay
-
-        if self.text_index == len(self.text_frames) - 1:
-            if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                if self.text_type != "choices":
-                    self.paw.visible = True
-                if not self.created_choice_buttons and self.text_type == "choices":
-                    self.create_choice_buttons()
-                    self.created_choice_buttons = True
+        try:
+            if self.text_index == len(self.text_frames) - 1:
+                if self.frame_index == len(self.text_frames[self.text_index]) - 1:
+                    if self.text_type != "choices":
+                        self.paw.visible = True
+                    if not self.created_choice_buttons and self.text_type == "choices":
+                        self.create_choice_buttons()
+                        self.created_choice_buttons = True
+        except:
+            pass
 
         # Always render the current frame
         try:
@@ -289,6 +294,8 @@ class TalkScreen(Screens):
         y_pos = 0
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
             self.paw.visible = True
+            self.choice_panel.kill()
+
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
@@ -306,7 +313,6 @@ class TalkScreen(Screens):
             self.choice_buttons[b].kill()
 
         self.choice_panel.visible = False
-        self.choice_panel.kill()
     
         
 
@@ -389,7 +395,8 @@ class TalkScreen(Screens):
             tags = talk["tags"] if "tags" in talk else talk[0]
             for i in range(len(tags)):
                 tags[i] = tags[i].lower()
-                
+            
+
             if "insult" in tags:
                 continue
 
@@ -617,7 +624,7 @@ class TalkScreen(Screens):
                 
 
             if "non-related" in tags:
-                if cat.ID in you.inheritance.all_inheritances:
+                if you.inheritance.get_exact_rel_type(cat.ID) == RelationType.RELATED:
                     continue
                 
             # If you have murdered someone and have been revealed
@@ -646,7 +653,7 @@ class TalkScreen(Screens):
                     continue
 
             if "they_older" in tags:
-                if you.age != cat.age and cat.moons < you.moons:
+                if you.age == cat.age or cat.moons < you.moons:
                     continue
             
             if "they_sameage" in tags:
@@ -654,7 +661,7 @@ class TalkScreen(Screens):
                     continue
             
             if "they_younger" in tags:
-                if you.age != cat.age and cat.moons > you.moons:
+                if you.age == cat.age or cat.moons > you.moons:
                     continue
 
             if "shunned" in tags:
@@ -694,10 +701,10 @@ class TalkScreen(Screens):
     
     def choose_text(self, cat, texts_list):
         you = game.clan.your_cat
+        resource_dir = "resources/dicts/lifegen_talk/"
         if not texts_list:
             cluster1, cluster2 = get_cluster(cat.personality.trait)
             cluster3, cluster4 = get_cluster(you.personality.trait)
-            resource_dir = "resources/dicts/lifegen_talk/"
             possible_texts = None
             with open(f"{resource_dir}general.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
