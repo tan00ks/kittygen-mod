@@ -206,14 +206,16 @@ class TalkScreen(Screens):
             if now >= self.next_frame_time and self.frame_index < len(self.text_frames[self.text_index]) - 1:
                 self.frame_index += 1
                 self.next_frame_time = now + self.typing_delay
-
-        if self.text_index == len(self.text_frames) - 1:
-            if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                if self.text_type != "choices":
-                    self.paw.visible = True
-                if not self.created_choice_buttons and self.text_type == "choices":
-                    self.create_choice_buttons()
-                    self.created_choice_buttons = True
+        try:
+            if self.text_index == len(self.text_frames) - 1:
+                if self.frame_index == len(self.text_frames[self.text_index]) - 1:
+                    if self.text_type != "choices":
+                        self.paw.visible = True
+                    if not self.created_choice_buttons and self.text_type == "choices":
+                        self.create_choice_buttons()
+                        self.created_choice_buttons = True
+        except:
+            pass
 
         # Always render the current frame
         try:
