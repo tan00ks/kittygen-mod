@@ -946,9 +946,9 @@ class Events:
         cluster, second_cluster = get_cluster(game.clan.your_cat.personality.trait)
 
         if cluster:
-            possible_events = possible_events + all_events[f"{game.clan.your_cat.status} {cluster}"]
+            possible_events = possible_events + all_events[f"{status} {cluster}"]
         if second_cluster:
-            possible_events = possible_events + all_events[f"{game.clan.your_cat.status} {second_cluster}"]
+            possible_events = possible_events + all_events[f"{status} {second_cluster}"]
 
         for i in range(random.randint(0,5)):
             current_event = self.adjust_txt(random.choice(possible_events))

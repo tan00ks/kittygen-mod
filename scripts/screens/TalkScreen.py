@@ -44,7 +44,6 @@ class TalkScreen(Screens):
         self.textbox_graphic = None
 
 
-
     def screen_switches(self):
         self.update_camp_bg()
         self.hide_menu_buttons()
@@ -205,13 +204,17 @@ class TalkScreen(Screens):
 
         if self.text_index == len(self.text_frames) - 1:
             if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                self.paw.visible = True
+                if self.text_type != "choices":
+                    self.paw.visible = True
                 if not self.created_choice_buttons and self.text_type == "choices":
                     self.create_choice_buttons()
                     self.created_choice_buttons = True
 
         # Always render the current frame
-        self.text.html_text = self.text_frames[self.text_index][self.frame_index]
+        try:
+            self.text.html_text = self.text_frames[self.text_index][self.frame_index]
+        except:
+            pass
         self.text.rebuild()
         self.clock.tick(60)
 
@@ -285,15 +288,18 @@ class TalkScreen(Screens):
         
         y_pos = 0
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
+            self.paw.visible = True
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
-            button = pygame_gui.elements.UIButton(scale(pygame.Rect((1000, 670 + y_pos), (-1, 80))),
-                text,
-                manager=MANAGER
-            )
-            self.choice_buttons[c] = button
-            y_pos += 80
+            text = self.adjust_txt(text, self.the_cat)
+            if text:
+              button = pygame_gui.elements.UIButton(scale(pygame.Rect((1000, 670 + y_pos), (-1, 80))),
+                  text,
+                  manager=MANAGER
+              )
+              self.choice_buttons[c] = button
+              y_pos += 80
     
     def handle_choice(self, cat):
         for b in self.choice_buttons:
@@ -716,13 +722,26 @@ class TalkScreen(Screens):
             game.clan.talks.clear()
 
         weights2 = []
-        weighted_tags = ["from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit"]
+        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit"]
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
             num_fam_mentor_tags = 1
             if any(i in weighted_tags for i in tags):
                 num_fam_mentor_tags+=3
             weights2.append(num_fam_mentor_tags)
+
+        if "debug_ensure_dialogue" in game.config and game.config["debug_ensure_dialogue"]:
+            if game.config["debug_ensure_dialogue"] in list(texts_list.keys()):
+                text_chosen_key = game.config["debug_ensure_dialogue"] 
+                text = texts_list[text_chosen_key]["intro"] if "intro" in texts_list[text_chosen_key] else texts_list[text_chosen_key][1]
+                new_text = self.get_adjusted_txt(text, cat)
+                if new_text:
+                    if "intro" in texts_list[text_chosen_key]:
+                        self.text_type = "choices"
+                        self.display_intro(cat, texts_list, text_chosen_key)
+                    return new_text
+            else:
+                print("something's wrong")
 
         while counter < max_retries:
             text_chosen_key = choices(list(texts_list.keys()), weights=weights2, k=1)[0]
