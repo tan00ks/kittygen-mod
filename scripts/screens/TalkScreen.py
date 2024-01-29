@@ -294,6 +294,8 @@ class TalkScreen(Screens):
         y_pos = 0
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
             self.paw.visible = True
+            self.choice_panel.kill()
+            
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
@@ -311,7 +313,6 @@ class TalkScreen(Screens):
             self.choice_buttons[b].kill()
 
         self.choice_panel.visible = False
-        self.choice_panel.kill()
     
         
 
