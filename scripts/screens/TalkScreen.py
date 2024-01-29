@@ -144,9 +144,9 @@ class TalkScreen(Screens):
         for button in self.choice_buttons:
             self.choice_buttons[button].kill()
         self.choice_buttons = {}
-        if self.choicepanel is True:
-            self.choice_panel.kill()
-            del self.choice_panel
+        
+        self.choice_panel.kill()
+        del self.choice_panel
 
     def update_camp_bg(self):
         light_dark = "light"
@@ -297,7 +297,7 @@ class TalkScreen(Screens):
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
             self.paw.visible = True
             self.choice_panel.kill()
-            
+
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
