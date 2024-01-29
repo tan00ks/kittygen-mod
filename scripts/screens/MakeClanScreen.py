@@ -1690,7 +1690,7 @@ class MakeClanScreen(Screens):
                         self.accessory = None
                     else:
                         self.accessory = event.text
-                        self.update_sprite()
+                    self.update_sprite()
                 elif event.ui_element == self.elements['permanent conditions']:
                     if event.text == "None":
                         self.permanent_condition = None
@@ -1699,6 +1699,7 @@ class MakeClanScreen(Screens):
                             self.scars.remove("NOTAIL")
                         elif "NOPAW" in self.scars:
                             self.scars.remove("NOPAW")
+                        self.update_sprite()
                     else:
                         chosen_condition = event.text
                         self.permanent_condition = event.text
