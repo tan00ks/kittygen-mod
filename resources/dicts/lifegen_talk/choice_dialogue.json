@@ -1638,7 +1638,7 @@
         ],
         "help_socialize_choices": {
             "choice11": {
-                "text": "I'm sure they'd love to talk with you!",
+                "text": "They'd love to talk with you!",
                 "next_scene": "sure_love_to_talk"
             }
         },
