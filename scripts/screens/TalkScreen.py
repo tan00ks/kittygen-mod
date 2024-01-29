@@ -410,7 +410,7 @@ class TalkScreen(Screens):
                 continue
             elif "young elder" in tags and cat.status == 'elder' and cat.moons >= 100:
                 continue
-            elif "no_kit" in tags and you.status in ['kitten', 'newborn']:
+            elif "no_kit" in tags and (you.status in ['kitten', 'newborn'] or cat.status in ['kitten', 'newborn']):
                 continue
             elif "newborn" in tags and you.moons != 0:
                 continue
