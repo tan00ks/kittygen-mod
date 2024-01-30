@@ -1640,6 +1640,10 @@
             "choice11": {
                 "text": "They'd love to talk with you!",
                 "next_scene": "sure_love_to_talk"
+            },
+            "choice2": {
+                "text": "Maybe you're right...",
+                "next_scene": "right"
             }
         },
         "sure_love_to_talk": [
@@ -1649,6 +1653,9 @@
             "Here goes nothing, y_c!",
             "[t_c crosses the camp and awkwardly stands near the warriors until they notice enough to include them in their conversation.]",
             "[Though talk is stilted, t_c looks a lot less lonely than before!]"
+        ],
+        "right": [
+            "[t_c nods dejectedly and you leave them to continue sitting alone.]"
         ],
         "leave_alone": [
             "[You decide to leave the poor cat alone.]"
