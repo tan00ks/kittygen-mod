@@ -50,6 +50,8 @@ class TalkScreen(Screens):
         self.possible_texts = {}
         self.chosen_text_key = ""
         self.choice_buttons = {}
+        self.text_choices = {}
+        self.option_bgs = {}
         self.current_scene = ""
         self.created_choice_buttons = False
         self.choicepanel = False
@@ -66,14 +68,14 @@ class TalkScreen(Screens):
         self.the_cat = Cat.all_cats.get(game.switches['cat'])
         self.profile_elements = {}
         self.clan_name_bg = pygame_gui.elements.UIImage(
-            scale(pygame.Rect((450, 875), (380, 70))),
+            scale(pygame.Rect((230, 875), (380, 70))),
             pygame.transform.scale(
                 image_cache.load_image(
                     "resources/images/clan_name_bg.png").convert_alpha(),
                 (500, 870)),
             manager=MANAGER)
         self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(str(self.the_cat.name),
-                                                                       scale(pygame.Rect((500, 870), (-1, 80))),
+                                                                       scale(pygame.Rect((300, 870), (-1, 80))),
                                                                           object_id="#text_box_34_horizcenter_light",
                                                                           manager=MANAGER)
 
@@ -112,14 +114,6 @@ class TalkScreen(Screens):
             )
         self.paw.visible = False
         
-        self.choice_panel = pygame_gui.elements.UIImage(
-                            scale(pygame.Rect((950, 630), (430, 330))),
-                            pygame.transform.scale(
-                            image_cache.load_image(
-                                "resources/images/choice_panel.png").convert_alpha(),
-                                (500, 870)),
-                            manager=MANAGER)
-        self.choice_panel.visible = False
 
     def exit_screen(self):
         self.text.kill()
@@ -142,9 +136,12 @@ class TalkScreen(Screens):
         for button in self.choice_buttons:
             self.choice_buttons[button].kill()
         self.choice_buttons = {}
-        
-        self.choice_panel.kill()
-        del self.choice_panel
+        for option in self.text_choices:
+            self.text_choices[option].kill()
+        self.text_choices = {}
+        for option_bg in self.option_bgs:
+            self.option_bgs[option_bg].kill()
+        self.option_bgs = {}
 
     def update_camp_bg(self):
         light_dark = "light"
@@ -289,30 +286,48 @@ class TalkScreen(Screens):
         return chosen_text_intro
     
     def create_choice_buttons(self):
-        self.choice_panel.visible = True
+  
         
         y_pos = 0
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
             self.paw.visible = True
-            self.choice_panel.kill()
 
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
             text = self.adjust_txt(text, self.the_cat)
-            if text:
-              button = pygame_gui.elements.UIButton(scale(pygame.Rect((1000, 670 + y_pos), (-1, 80))),
-                  text,
-                  manager=MANAGER
-              )
-              self.choice_buttons[c] = button
-              y_pos += 80
+
+            option_bg = pygame_gui.elements.UIImage(scale(pygame.Rect((850, 700 + y_pos), (540, 70))),
+                                                            pygame.transform.scale(
+                                                                image_cache.load_image(
+                                                                    "resources/images/option_bg.png").convert_alpha(),
+                                                                (540, 60)), manager=MANAGER)
+
+            button = UIImageButton(scale(pygame.Rect((780, 700 + y_pos), (70, 70))),
+                                        text = "",
+                                        object_id="#paw_patrol_button", manager=MANAGER)
+            
+            option = pygame_gui.elements.UITextBox(str(text),
+                                                            scale(pygame.Rect((860, 705 + y_pos), (540, 60))),
+                                                            object_id="#text_box_30_horizleft_light",
+                                                            manager=MANAGER)
+            
+            self.choice_buttons[c] = button
+
+            self.text_choices[c] = option
+
+            self.option_bgs[c] = option_bg
+            
+            y_pos += 80
     
     def handle_choice(self, cat):
         for b in self.choice_buttons:
             self.choice_buttons[b].kill()
+        for b in self.text_choices:
+            self.text_choices[b].kill()
+        for b in self.option_bgs:
+            self.option_bgs[b].kill()
 
-        self.choice_panel.visible = False
     
         
 
