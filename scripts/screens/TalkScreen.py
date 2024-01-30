@@ -235,12 +235,15 @@ class TalkScreen(Screens):
             if event.key == pygame.K_ESCAPE:
                 self.change_screen('profile screen')
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                if self.text_index < len(self.texts) - 1:
-                    self.text_index += 1
-                    self.frame_index = 0
-            else:
-                self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
+            try:
+                if self.frame_index == len(self.text_frames[self.text_index]) - 1:
+                    if self.text_index < len(self.texts) - 1:
+                        self.text_index += 1
+                        self.frame_index = 0
+                else:
+                    self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
+            except:
+                pass
         return
     
     def get_cluster_list(self):
