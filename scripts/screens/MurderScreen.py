@@ -58,9 +58,6 @@ class MurderScreen(Screens):
             if event.ui_element in self.cat_list_buttons.values():
                 self.selected_cat = event.ui_element.return_cat_object()
                 self.update_selected_cat()
-                if self.stage == "choose accomplice":
-                    if self.murderimg:
-                        self.murderimg.kill()
 
             elif event.ui_element == self.confirm_mentor and self.selected_cat and self.stage == 'choose murder cat':
                 if not self.selected_cat.dead:
