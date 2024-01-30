@@ -306,9 +306,9 @@ class TalkScreen(Screens):
             self.option_bgs[c] = option_bg
 
             #the button for dialogue choices
-            button = UIImageButton(scale(pygame.Rect((780, 700 + y_pos), (70, 70))),
+            button = UIImageButton(scale(pygame.Rect((780, 700 + y_pos), (68, 68))),
                                         text = "",
-                                        object_id="#paw_patrol_button", manager=MANAGER)
+                                        object_id="#dialogue_choice_button", manager=MANAGER)
             self.choice_buttons[c] = button
             
 
