@@ -1,3 +1,12 @@
+<strong>v0.6.8: </strong>
+- New dialogue and writing
+- New accessories
+- Updated patrols
+- Improved customization and other screens
+- New patrol art 
+- New forest camp: Birch
+- New achievements
+
 <strong>v0.6.7: </strong>
 - New dialogue and writing
 - New revival text
