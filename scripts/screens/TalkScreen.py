@@ -297,26 +297,32 @@ class TalkScreen(Screens):
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
             text = self.adjust_txt(text, self.the_cat)
 
-            option_bg = pygame_gui.elements.UIImage(scale(pygame.Rect((850, 700 + y_pos), (540, 70))),
+            #the background image for the text
+            option_bg = pygame_gui.elements.UIImage(scale(pygame.Rect((860, 700 + y_pos), (540, 70))),
                                                             pygame.transform.scale(
                                                                 image_cache.load_image(
                                                                     "resources/images/option_bg.png").convert_alpha(),
                                                                 (540, 60)), manager=MANAGER)
+            self.option_bgs[c] = option_bg
 
+            #the button for dialogue choices
             button = UIImageButton(scale(pygame.Rect((780, 700 + y_pos), (70, 70))),
                                         text = "",
                                         object_id="#paw_patrol_button", manager=MANAGER)
-            
-            option = pygame_gui.elements.UITextBox(str(text),
-                                                            scale(pygame.Rect((860, 705 + y_pos), (540, 60))),
-                                                            object_id="#text_box_30_horizleft_light",
-                                                            manager=MANAGER)
-            
             self.choice_buttons[c] = button
+            
 
+            #the text for dialogue choices
+            option = pygame_gui.elements.UITextBox(str(text),
+                                                            scale(pygame.Rect((870, 705 + y_pos), (540, 60))),
+                                                            object_id="#text_box_30_horizleft",
+                                                            manager=MANAGER)
             self.text_choices[c] = option
+            
 
-            self.option_bgs[c] = option_bg
+           
+
+            
             
             y_pos += 80
     
