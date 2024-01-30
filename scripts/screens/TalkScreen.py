@@ -298,7 +298,7 @@ class TalkScreen(Screens):
             text = self.adjust_txt(text, self.the_cat)
 
             #the background image for the text
-            option_bg = pygame_gui.elements.UIImage(scale(pygame.Rect((860, 700 + y_pos), (540, 70))),
+            option_bg = pygame_gui.elements.UIImage(scale(pygame.Rect((860, 855 + y_pos), (540, 70))),
                                                             pygame.transform.scale(
                                                                 image_cache.load_image(
                                                                     "resources/images/option_bg.png").convert_alpha(),
@@ -306,7 +306,7 @@ class TalkScreen(Screens):
             self.option_bgs[c] = option_bg
 
             #the button for dialogue choices
-            button = UIImageButton(scale(pygame.Rect((780, 700 + y_pos), (68, 68))),
+            button = UIImageButton(scale(pygame.Rect((780, 855 + y_pos), (68, 68))),
                                         text = "",
                                         object_id="#dialogue_choice_button", manager=MANAGER)
             self.choice_buttons[c] = button
@@ -314,7 +314,7 @@ class TalkScreen(Screens):
 
             #the text for dialogue choices
             option = pygame_gui.elements.UITextBox(str(text),
-                                                            scale(pygame.Rect((870, 705 + y_pos), (540, 60))),
+                                                            scale(pygame.Rect((870, 860 + y_pos), (540, 60))),
                                                             object_id="#text_box_30_horizleft",
                                                             manager=MANAGER)
             self.text_choices[c] = option
@@ -324,7 +324,7 @@ class TalkScreen(Screens):
 
             
             
-            y_pos += 80
+            y_pos -= 80
     
     def handle_choice(self, cat):
         for b in self.choice_buttons:
