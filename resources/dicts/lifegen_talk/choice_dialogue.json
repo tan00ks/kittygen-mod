@@ -1892,7 +1892,7 @@
         ],
         "intro_choices": {
             "choice1": {
-                "text": "r_c really said that to you?!",
+                "text": "They really said that to you?!",
                 "next_scene": "comfort"
             },
             "choice2": {
