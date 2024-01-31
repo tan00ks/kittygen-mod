@@ -1,7 +1,7 @@
 {
     "sweetchoice_1": {
         "tags": [
-            "any",
+            "no_kit",
             "sweet"
         ],
         "intro": [
@@ -72,7 +72,7 @@
     },
     "you_pregnant20": {
         "tags": [
-            "any",
+            "no_kit",
             "you_pregnant",
             "silly",
             "random_cat"
@@ -422,7 +422,6 @@
     },
     "gen_mate1": {
         "tags": [
-            "Any",
             "no_kit"
         ],
         "intro": [
@@ -479,7 +478,7 @@
     "upstanding_warrior6": {
         "tags": [
             "upstanding",
-            "Any",
+            "no_kit",
             "random_cat",
             "they_warrior",
             "they_younger"
@@ -516,7 +515,7 @@
     },
     "assertive_gen3": {
         "tags": [
-            "Any",
+            "no_kit",
             "assertive",
             "platonic_like",
             "random_cat"
@@ -2008,7 +2007,7 @@
     },
     "silly_leafbare_game": {
         "tags": [
-            "any",
+            "no_kit",
             "silly",
             "leafbare"
         ],
