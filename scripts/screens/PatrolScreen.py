@@ -314,38 +314,43 @@ class PatrolScreen(Screens):
                 self.elements['herb'].enable() 
                 self.elements['cat_icon'].disable()
                 self.elements['your_cat'].enable()
+                
                 if game.clan.your_cat.joined_df:
                     self.elements['df_icon'].enable()
                 if game.clan.your_cat.moons >= 12:
                     self.elements['date_icon'].enable()
 
-            if self.patrol_type != 'med' and self.current_patrol:
-                self.elements['herb'].disable()
-                if self.patrol_type == 'med':
-                    self.patrol_type = 'general'
-            if self.patrol_type == 'general':
-                text = 'random patrol type'
-            elif self.patrol_type == 'training':
-                text = 'training'
-            elif self.patrol_type == 'border':
-                text = 'border'
-            elif self.patrol_type == 'hunting':
-                text = 'hunting'
-            elif self.patrol_type == 'med':
-                if self.current_patrol:
-                    text = 'herb gathering'
-                    self.elements['mouse'].disable()
-                    self.elements['claws'].disable()
-                    self.elements['paw'].disable()
-                else:
-                    text = 'herb gathering'
-            else:
-                text = ""
+                self.elements['info'].kill()  # clearing the text before displaying new text
 
-            self.elements['info'] = pygame_gui.elements.UITextBox(
-                text, scale(pygame.Rect((500, 1050), (600, 800))),
-                object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
-            )
+                if self.patrol_type != 'med' and self.current_patrol:
+                    self.elements['herb'].disable()
+                    if self.patrol_type == 'med':
+                        self.patrol_type = 'general'
+                if self.patrol_type == 'general':
+                    text = 'random patrol type'
+                elif self.patrol_type == 'training':
+                    text = 'training'
+                elif self.patrol_type == 'border':
+                    text = 'border'
+                elif self.patrol_type == 'hunting':
+                    text = 'hunting'
+                elif self.patrol_type == 'med':
+                    
+                    if self.current_patrol:
+                    
+                        text = 'herb gathering'
+                        self.elements['mouse'].disable()
+                        self.elements['claws'].disable()
+                        self.elements['paw'].disable()
+                    else:
+                        text = 'herb gathering'
+                else:
+                    text = ""
+
+                self.elements['info'] = pygame_gui.elements.UITextBox(
+                    text, scale(pygame.Rect((500, 1050), (600, 800))),
+                    object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
+                )
 
             able_no_med = [cat for cat in self.able_cats if
                            cat.status not in ['medicine cat', 'medicine cat apprentice']]
@@ -527,14 +532,17 @@ class PatrolScreen(Screens):
         # add prey information
         current_amount =  round(game.clan.freshkill_pile.total_amount,2)
         self.elements['current_prey'] = pygame_gui.elements.UITextBox(
-            f"current prey: {current_amount}", scale(pygame.Rect((640, 180), (400, 100))),
+            f"current prey: {current_amount}", scale(pygame.Rect((600, 180), (400, 100))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
         )
         needed_amount = round(game.clan.freshkill_pile.amount_food_needed(),2)
         self.elements['needed_prey'] = pygame_gui.elements.UITextBox(
-            f"needed prey: {needed_amount}", scale(pygame.Rect((640, 215), (400, 100))),
+            f"needed prey: {needed_amount}", scale(pygame.Rect((600, 215), (400, 100))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"), manager=MANAGER
         )
+
+        if self.elements['current_prey']:
+            self.elements['info'].kill()
 
         self.update_cat_images_buttons()
         self.update_button()
