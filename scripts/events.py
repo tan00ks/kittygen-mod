@@ -926,9 +926,10 @@ class Events:
     
     def generate_events(self):
         resource_dir = "resources/dicts/events/lifegen_events/events/"
-        with open(f"{resource_dir}{game.clan.your_cat.status}.json",
-                  encoding="ascii") as read_file:
-            all_events = ujson.loads(read_file.read())
+        if game.clan.your_cat.status != 'newborn':
+            with open(f"{resource_dir}{game.clan.your_cat.status}.json",
+                    encoding="ascii") as read_file:
+                all_events = ujson.loads(read_file.read())
 
         status = game.clan.your_cat.status
         if game.clan.your_cat.status == 'elder' and game.clan.your_cat.moons < 100:
