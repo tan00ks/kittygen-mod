@@ -5819,5 +5819,57 @@
                 "path":"resources/images/buttons/dialogue_choice_unavailable.png"
             }
         }
+    },
+
+    "#clan_size_small": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/clan_size_small.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/clan_size_small_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/clan_size_small.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/clan_size_small_unavaliable.png"
+            }
+        }
+    },
+    "#clan_size_medium": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/clan_size_medium.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/clan_size_medium_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/clan_size_medium.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/clan_size_medium_unavaliable.png"
+            }
+        }
+    },
+    "#clan_size_large": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/clan_size_large.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/clan_size_large_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/clan_size_large.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/clan_size_large_unavaliable.png"
+            }
+        }
     }
 }
