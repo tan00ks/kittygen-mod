@@ -1218,7 +1218,10 @@ class TalkScreen(Screens):
             if "t_k" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
-                text = text.replace("t_k", str(choice(cat.inheritance.get_children()).name))
+                kit = Cat.fetch_cat(choice(cat.inheritance.get_children()))
+                if kit.outside or kit.dead:
+                    return ""
+                text = text.replace("t_k", str(kit.name))
             if "y_k" in text:
                 if game.clan.your_cat.inheritance.get_children() is None or len(game.clan.your_cat.inheritance.get_children()) == 0:
                     return ""
