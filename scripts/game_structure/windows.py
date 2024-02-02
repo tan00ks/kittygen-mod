@@ -1282,7 +1282,7 @@ class PickPath(UIWindow):
             f"You have an important decision to make...",
             scale(pygame.Rect((40, 40), (720, -1))),
             line_spacing=1,
-            object_id="text_box_30_horizcenter",
+            object_id="#text_box_30_horizcenter",
             container=self
         )
 
@@ -1373,7 +1373,7 @@ class DeathScreen(UIWindow):
             f"What will you do now?",
             scale(pygame.Rect((40, 40), (670, -1))),
             line_spacing=1,
-            object_id="text_box_30_horizcenter",
+            object_id="#text_box_30_horizcenter",
             container=self
         )
 
@@ -1477,7 +1477,7 @@ class DeputyScreen(UIWindow):
             f"Choose your deputy",
             scale(pygame.Rect((40, 40), (500, -1))),
             line_spacing=1,
-            object_id="text_box_30_horizcenter",
+            object_id="#text_box_30_horizcenter",
             container=self
         )
 
@@ -1539,7 +1539,7 @@ class NameKitsWindow(UIWindow):
             f"Name your kits",
             scale(pygame.Rect((40, 40), (500, -1))),
             line_spacing=1,
-            object_id="text_box_30_horizcenter",
+            object_id="#text_box_30_horizcenter",
             container=self
         )
 
@@ -1607,7 +1607,7 @@ class MateScreen(UIWindow):
             f"{self.mate.name} confesses their feelings to you.",
             scale(pygame.Rect((40, 40), (520, -1))),
             line_spacing=1,
-            object_id="text_box_30_horizcenter",
+            object_id="#text_box_30_horizcenter",
             container=self
         )
 
@@ -1684,7 +1684,7 @@ class RetireScreen(UIWindow):
             f"You're asked if you would like to retire",
             scale(pygame.Rect((40, 40), (520, -1))),
             line_spacing=1,
-            object_id="text_box_30_horizcenter",
+            object_id="#text_box_30_horizcenter",
             container=self
         )
 
