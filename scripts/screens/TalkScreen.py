@@ -1200,6 +1200,8 @@ class TalkScreen(Screens):
                 if not other_clan:
                     return ""
                 text = text.replace("o_c", str(other_clan.name))
+
+            #their mate
             if "t_m" in text:
                 if cat.mate is None or len(cat.mate) == 0 or cat.ID in game.clan.your_cat.mate:
                     return ""
@@ -1207,6 +1209,8 @@ class TalkScreen(Screens):
                 if mate1.outside or mate1.dead:
                     return ""
                 text = text.replace("t_m", str(mate1.name))
+
+            #their kit-- apprentice
             if "t_ka" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
@@ -1215,6 +1219,7 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("t_ka", str(kit.name))
 
+            #their kit-- kit aged
             if "t_kk" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
@@ -1222,7 +1227,8 @@ class TalkScreen(Screens):
                 if kit.moons >= 6 or kit.outside or kit.dead:
                     return ""
                 text = text.replace("t_kk", str(kit.name))
-                
+
+            #their kit   
             if "t_k" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
@@ -1231,13 +1237,10 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("t_k", str(kit.name))
 
-            if "y_k" in text:
-                if game.clan.your_cat.inheritance.get_children() is None or len(game.clan.your_cat.inheritance.get_children()) == 0:
-                    return ""
-                kit = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_children()))
-                text = text.replace("y_k", str(kit.name))
 
-                
+        
+
+            #random cats 1 and 2
             if "n_r1" in text:
                 if "n_r2" not in text:
                     return ""
@@ -1252,15 +1255,20 @@ class TalkScreen(Screens):
                         return ""
                 text = text.replace("n_r1", str(random_cat1.name))
                 text = text.replace("n_r2", str(random_cat2.name))
-                
-                random_cat = choice(self.get_living_cats())
-                counter = 0
-                while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID:
-                    if counter == 30:
-                        return ""
+
+                #random cat
+                if "r_c" in text:
+
                     random_cat = choice(self.get_living_cats())
-                    counter +=1
-                text = text.replace("r_c", str(random_cat.name))
+                    counter = 0
+                    while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID:
+                        if counter == 30:
+                            return ""
+                        random_cat = choice(self.get_living_cats())
+                        counter +=1
+                    text = text.replace("r_c", str(random_cat.name))
+                
+               
 
         except Exception as e:
             print(e)
