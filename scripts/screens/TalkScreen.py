@@ -58,6 +58,7 @@ class TalkScreen(Screens):
         self.textbox_graphic = None
 
 
+
     def screen_switches(self):
         self.update_camp_bg()
         self.hide_menu_buttons()
@@ -1124,6 +1125,7 @@ class TalkScreen(Screens):
                     if counter == 15:
                         return ""
                 text = text.replace("y_l", str(sibling.name))
+
             if "t_l" in text:
                 if len(cat.inheritance.get_siblings()) == 0:
                     return ""
@@ -1135,13 +1137,17 @@ class TalkScreen(Screens):
                     if counter == 15:
                         return ""
                 text = text.replace("t_l", str(sibling.name))
+
             if "y_p" in text:
+                parent = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_parents()))
                 if len(game.clan.your_cat.inheritance.get_parents()) == 0:
                     return ""
-                parent = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_parents()))
+                
                 if parent.outside or parent.dead or parent.ID==cat.ID:
                     return ""
                 text = text.replace("y_p", str(parent.name))
+
+
             if "t_p_positive" in text:
                 if len(cat.inheritance.get_parents()) == 0:
                     return ""
@@ -1208,6 +1214,7 @@ class TalkScreen(Screens):
                 if kit.moons < 12 or kit.outside or kit.dead:
                     return ""
                 text = text.replace("t_ka", str(kit.name))
+
             if "t_kk" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
@@ -1215,6 +1222,7 @@ class TalkScreen(Screens):
                 if kit.moons >= 6 or kit.outside or kit.dead:
                     return ""
                 text = text.replace("t_kk", str(kit.name))
+                
             if "t_k" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
@@ -1222,10 +1230,14 @@ class TalkScreen(Screens):
                 if kit.outside or kit.dead:
                     return ""
                 text = text.replace("t_k", str(kit.name))
+
             if "y_k" in text:
                 if game.clan.your_cat.inheritance.get_children() is None or len(game.clan.your_cat.inheritance.get_children()) == 0:
                     return ""
-                text = text.replace("y_k", str(choice(game.clan.your_cat.inheritance.get_children()).name))
+                kit = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_children()))
+                text = text.replace("y_k", str(kit.name))
+
+                
             if "n_r1" in text:
                 if "n_r2" not in text:
                     return ""
@@ -1240,7 +1252,7 @@ class TalkScreen(Screens):
                         return ""
                 text = text.replace("n_r1", str(random_cat1.name))
                 text = text.replace("n_r2", str(random_cat2.name))
-            if "r_c" in text:
+                
                 random_cat = choice(self.get_living_cats())
                 counter = 0
                 while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID:
@@ -1249,6 +1261,7 @@ class TalkScreen(Screens):
                     random_cat = choice(self.get_living_cats())
                     counter +=1
                 text = text.replace("r_c", str(random_cat.name))
+
         except Exception as e:
             print(e)
             print("ERROR: could not replace abbrv.")

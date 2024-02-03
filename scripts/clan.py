@@ -92,7 +92,7 @@ class Clan():
                  game_mode='classic',
                  starting_members=[],
                  starting_season='Newleaf',
-                 followingsc=None,
+                 followingsc=True,
                  your_cat=None,
                  self_run_init_functions = False):
         self.history = History()
@@ -118,10 +118,10 @@ class Clan():
         self.current_season = 'Newleaf'
         self.starting_season = starting_season
         self.instructor = None
-        # ^^ starclan guide 
+        # ^^ starclan guide
         self.demon = None
-        # ^^ dark forest guide 
-        self.followingsc = True
+        # ^^ dark forest guide
+        self.followingsc = followingsc
         self.biome = biome
         self.camp_bg = camp_bg
         self.game_mode = game_mode
