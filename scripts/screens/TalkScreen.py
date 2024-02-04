@@ -1238,6 +1238,8 @@ class TalkScreen(Screens):
                     counter +=1
                     if counter > 40:
                         return ""
+                if random_cat1.ID == game.clan.your_cat.ID or random_cat1.ID == cat.ID or random_cat2.ID == game.clan.your_cat.ID or random_cat2.ID == cat.ID:
+                    return ""
                 text = text.replace("n_r1", str(random_cat1.name))
                 text = text.replace("n_r2", str(random_cat2.name))
             if "r_c" in text:
