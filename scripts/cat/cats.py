@@ -1035,7 +1035,7 @@ class Cat():
                     if kitty.ID not in game.clan.darkforest_cats:
                         continue
                 # guides aren't allowed here
-                if kitty == game.clan.instructor or  game.clan.demon:
+                if kitty == game.clan.instructor or game.clan.demon:
                     continue
                 else:
                     dead_relations.append(rel)
