@@ -1209,7 +1209,9 @@ class TalkScreen(Screens):
                 if mate1.outside or mate1.dead:
                     return ""
                 text = text.replace("t_m", str(mate1.name))
-
+            #their kit   
+           
+                
             #their kit-- apprentice
             if "t_ka" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
@@ -1228,7 +1230,6 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("t_kk", str(kit.name))
 
-            #their kit   
             if "t_k" in text:
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
@@ -1237,7 +1238,14 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("t_k", str(kit.name))
 
-
+            if "y_k" in text:
+                if game.clan.your_cat.inheritance.get_children() is None or len(game.clan.your_cat.inheritance.get_children()) == 0:
+                    return ""
+                kit = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_children()))
+                if kit.outside or kit.dead:
+                    return ""
+                                    
+                text = text.replace("y_k", str(kit.name))
         
 
             #random cats 1 and 2
@@ -1257,6 +1265,8 @@ class TalkScreen(Screens):
                 text = text.replace("n_r2", str(random_cat2.name))
 
                 #random cat
+                #this does not work in any other location or indent level. i dont know.
+                #just dont move it unless youve got a better way
                 if "r_c" in text:
 
                     random_cat = choice(self.get_living_cats())
@@ -1267,7 +1277,6 @@ class TalkScreen(Screens):
                         random_cat = choice(self.get_living_cats())
                         counter +=1
                     text = text.replace("r_c", str(random_cat.name))
-                
                
 
         except Exception as e:

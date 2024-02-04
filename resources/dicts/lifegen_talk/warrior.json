@@ -8,6 +8,20 @@
             "..."
         ]
     ],
+
+    "test_dialogue": [
+        [
+            "Any"
+        ],
+        [
+            "A random cat: r_c.",
+            "r_c again.",
+            "My kit is t_k, and yours is y_k.",
+            "t_k is nice. And so is y_k!"
+
+        ]
+    ],
+
     "dep_132": [
         [
             "newborn",

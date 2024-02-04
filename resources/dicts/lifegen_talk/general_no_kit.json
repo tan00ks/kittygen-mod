@@ -7021,8 +7021,7 @@
     ],
     "unabashed_general3": [
         [
-            "Unabashed",
-            "no_kit"
+            "any"
         ],
         [
             "Have you heard what people are saying about r_w and d_n?",
@@ -10115,9 +10114,9 @@
             "introspective"
         ],
         [
-            "I'm learning more about parenthood every day. t_k especially keeps things interesting.",
+            "I'm learning more about parenthood every day. t_kk especially keeps things interesting.",
             "It hasn't been an easy process. StarClan knows I've made mistakes. But, in the end, it's been worth it.",
-            "[t_c looks at t_k playing across the nursery, eyes pooled with love.]",
+            "[t_c looks at t_kk playing across the nursery, eyes pooled with love.]",
             "So, so worth it."
         ]
     ],
