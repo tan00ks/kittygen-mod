@@ -444,7 +444,7 @@ class Cat():
                 game.just_died.append(self.ID)
                 game.clan.leader_lives = 0
                 self.thought = 'Is surprised to find themselves walking the stars of Silverpelt'
-                if game.clan.followingsc == True:
+                if game.clan.followingsc is True:
                     text = 'They\'ve lost their last life and have travelled to StarClan.'
                 else:
                     text = 'They\'ve lost their last life and have travelled to the Dark Forest.'
@@ -468,7 +468,7 @@ class Cat():
 
         if not self.outside:
             Cat.dead_cats.append(self)
-            if game.clan.followingsc == False:
+            if game.clan.followingsc is False:
                 self.df = True
                 self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
             else:
@@ -1035,7 +1035,7 @@ class Cat():
                     if kitty.ID not in game.clan.darkforest_cats:
                         continue
                 # guides aren't allowed here
-                if kitty == game.clan.instructor or  game.clan.demon:
+                if kitty == game.clan.instructor or game.clan.demon:
                     continue
                 else:
                     dead_relations.append(rel)
@@ -1167,7 +1167,7 @@ class Cat():
                     continue
                 if "unknown_blessing" in tags:
                     continue
-                if "guide" in tags and giver_cat != game.clan.instructor:
+                if "guide" in tags and giver_cat != game.clan.instructor or game.clan.demon:
                     continue
                 if game.clan.age != 0 and "new_clan" in tags:
                     continue
@@ -2414,8 +2414,7 @@ class Cat():
                 trust = 0
                 if game.settings['random relation']:
                     if game.clan:
-                        if the_cat == game.clan.instructor:
-
+                        if the_cat == game.clan.instructor or game.clan.demon:
                             pass
                         elif randint(1, 20) == 1 and romantic_love < 1:
                             dislike = randint(10, 25)

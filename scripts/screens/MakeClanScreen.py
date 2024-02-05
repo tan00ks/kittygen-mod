@@ -1134,12 +1134,14 @@ class MakeClanScreen(Screens):
         self.tint=choice(["pink", "gray", "red", "orange", "black", "yellow", "purple", "blue"]) if random.randint(1,5) == 1 else None
         self.skin=choice(Pelt.skin_sprites)
         self.white_patches_tint=choice(["offwhite", "cream", "darkcream", "gray", "pink"]) if random.randint(1,5) == 1 else None
-        self.kitten_sprite=random.randint(0,2)
         self.reverse=False if random.randint(1,2) == 1 else True
         self.sex = random.choice(["male", "female"])
         self.personality = choice(['troublesome', 'lonesome', 'impulsive', 'bullying', 'attention-seeker', 'charming', 'daring', 'noisy', 'nervous', 'quiet', 'insecure', 'daydreamer', 'sweet', 'polite', 'know-it-all', 'bossy', 'disciplined', 'patient', 'manipulative', 'secretive', 'rebellious', 'grumpy', 'passionate', 'honest', 'leader-like', 'smug'])
         self.accessory = choice(Pelt.plant_accessories + Pelt.wild_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.plant2_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + Pelt.tail2_accessories) if random.randint(1,5) == 1 else None
         self.permanent_condition = choice(permanent_conditions) if random.randint(1,30) == 1 else None
+
+
+        self.kitten_sprite=random.randint(0,2)
         self.adolescent_pose = random.randint(0,2)
         self.adult_pose = random.randint(0,2)
         self.elder_pose = random.randint(0,2)
@@ -1704,10 +1706,10 @@ class MakeClanScreen(Screens):
                             self.scars.remove("NOPAW")
                         self.update_sprite()
                     else:
-                        chosen_condition = event.text
                         self.permanent_condition = event.text
                         if event.text == 'paralyzed':
                             self.paralyzed = True
+                            self.update_sprite()
                         else:
                             self.paralyzed = False
                         if event.text == 'born without a leg' and 'NOPAW' not in self.custom_cat.pelt.scars:
@@ -1771,7 +1773,7 @@ class MakeClanScreen(Screens):
                     self.your_cat.permanent_condition[self.permanent_condition]["moons_with"] = -1
                     self.your_cat.permanent_condition[self.permanent_condition]['born_with'] = True
                 if self.paralyzed and 'paralyzed' not in self.your_cat.permanent_condition:
-                    self.your_cat.get_permanent_condition("paralyzed")
+                    self.your_cat.get_permanent_condition('paralyzed')
                     self.your_cat.permanent_condition['paralyzed']["moons_until"] = 1
                     self.your_cat.permanent_condition['paralyzed']["moons_with"] = -1
                     self.your_cat.permanent_condition['paralyzed']['born_with'] = True
