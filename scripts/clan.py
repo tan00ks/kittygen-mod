@@ -175,6 +175,8 @@ class Clan():
         ]  # Stores ID's of faded cats, to ensure these IDs aren't reused.
         if (self_run_init_functions):
             self.post_initialization_functions()
+        self.disaster = ""
+        self.disaster_moon = 0
 
 
     # The clan couldn't save itself in time due to issues arising, for example, from this function: "if deputy is not None: self.deputy.status_change('deputy') -> game.clan.remove_med_cat(self)"
@@ -503,6 +505,8 @@ class Clan():
         clan_data["war"] = self.war
         clan_data['achievements'] = self.achievements
         clan_data['talks'] = self.talks
+        clan_data["disaster"] = self.disaster
+        clan_data["disaster_moon"] = self.disaster_moon
 
         self.save_herbs(game.clan)
         self.save_disaster(game.clan)
@@ -863,6 +867,11 @@ class Clan():
         if "talks" in clan_data:
             game.clan.talks = clan_data["talks"]
 
+        if "disaster" in clan_data:
+            game.clan.disaster = clan_data["disaster"]
+        
+        if "disaster_moon" in clan_data:
+            game.clan.disaster_moon = clan_data["disaster_moon"]
         # Return Version Info. 
         return {
             "version_name": clan_data.get("version_name"),

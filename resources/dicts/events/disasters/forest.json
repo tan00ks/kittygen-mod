@@ -1,5 +1,5 @@
-[
-    {
+{
+    "Great Blizzard": {
         "event": "Great Blizzard",
         "camp": [
             "any"
@@ -50,7 +50,7 @@
         ],
         "collateral_damage": {}
     },
-    {
+    "Drought": {
         "event": "Drought",
         "camp": [
             "any"
@@ -119,7 +119,7 @@
         ],
         "collateral_damage": {}
     },
-    {
+    "Wildfire": {
         "event": "Wildfire",
         "camp": [
             "any"
@@ -198,7 +198,7 @@
         ],
         "collateral_damage": {}
     },
-    {
+    "Terrible Cold": {
         "event": "Terrible Cold",
         "camp": [
             "any"
@@ -231,7 +231,7 @@
         "secondary_disasters": [],
         "collateral_damage": {}
     },
-    {
+    "Floods": {
         "event": "Floods",
         "camp": [
             "any"
@@ -280,7 +280,7 @@
         ],
         "collateral_damage": {}
     },
-    {
+    "Twoleg Invasion": {
         "event": "Twoleg Invasion",
         "camp": [
             "any"
@@ -324,7 +324,7 @@
         ],
         "collateral_damage": {}
     },
-    {
+    "Prey Sickness": {
         "event": "Prey Sickness",
         "camp": [
             "any"
@@ -354,7 +354,7 @@
         "secondary_disasters": [],
         "collateral_damage": {}
     },
-    {
+    "Horrible Storms": {
         "event": "Horrible Storms",
         "camp": [
             "any"
@@ -407,7 +407,7 @@
         ],
         "collateral_damage": {}
     },
-    {
+    "Famine": {
         "event": "Famine",
         "camp": [
             "any"
@@ -422,7 +422,9 @@
         "priority": "secondary",
         "duration": 3,
         "rarity": null,
-        "trigger_events": [],
+        "trigger_events": [
+            "The territory lacks prey."
+        ],
         "progress_events": {
             "moon1": [
                 "The Clan hunts and scrounges for any hint of possible food, but they never seem to find enough.",
@@ -443,7 +445,7 @@
         "secondary_disasters": [],
         "collateral_damage": {}
     },
-    {
+    "Barren Land": {
         "event": "Barren Land",
         "camp": [
             "any"
@@ -458,7 +460,9 @@
         "priority": "secondary",
         "duration": 3,
         "rarity": null,
-        "trigger_events": [],
+        "trigger_events": [
+            "The land is dry and barren."
+        ],
         "progress_events": {
             "moon1": [
                 "As the herb stores dwindle, reactions are divided. Those who dismiss the healing help of herbs strut, unconcerned, but wiser minds have already begun to worry.",
@@ -479,7 +483,7 @@
         "secondary_disasters": [],
         "collateral_damage": {}
     },
-    {
+    "Camp Destruction": {
         "event": "Camp Destruction",
         "camp": [
             "any"
@@ -494,7 +498,9 @@
         "priority": "secondary",
         "duration": 3,
         "rarity": null,
-        "trigger_events": [],
+        "trigger_events": [
+            "The camp is destroyed."
+        ],
         "progress_events": {
             "moon1": [
                 "It's both exhausting and heartbreaking, tearing down the battered remnants of what used to be a safe and whole home. But c_n grits their teeth and yowl encouragement to each other. Nothing will drive them from the forest, and they're determined to make this their home again.",
@@ -521,4 +527,4 @@
         "secondary_disasters": [],
         "collateral_damage": {}
     }
-]
+}

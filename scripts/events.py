@@ -128,6 +128,14 @@ class Events:
             self.handle_lost_cats_return()
 
         # Calling of "one_moon" functions.
+        resource_dir = "resources/dicts/events/disasters/"
+        disaster_text = {}
+        with open(f"{resource_dir}forest.json",
+                  encoding="ascii") as read_file:
+            disaster_text = ujson.loads(read_file.read())
+        if not game.clan.disaster and random.randint(1,20) == 1:
+            game.clan.disaster = random.choice(list(disaster_text.keys()))
+        self.handle_disaster()
         
         for cat in Cat.all_cats.copy().values():
             if not cat.outside or cat.dead:
@@ -2954,6 +2962,33 @@ class Events:
                 poor_little_meowmeow.die()
                 # this next bit is temporary until we can rework it
                 History.add_death(poor_little_meowmeow, 'This cat died after disaster struck the Clan.')
+
+    def handle_disaster(self):
+        if not game.clan.disaster:
+            return
+
+        resource_dir = "resources/dicts/events/disasters/"
+        disaster_text = {}
+        with open(f"{resource_dir}forest.json",
+                  encoding="ascii") as read_file:
+            disaster_text = ujson.loads(read_file.read())
+        
+        current_disaster = disaster_text.get(game.clan.disaster)
+        current_moon = game.clan.disaster_moon
+        if current_moon == 0:
+            event_string = random.choice(current_disaster["trigger_events"])
+            game.clan.disaster_moon += 1
+        elif current_moon < current_disaster["duration"]:
+            event_string = random.choice(current_disaster["progress_events"]["moon" + str(current_moon)])
+            game.clan.disaster_moon += 1
+        else:
+            event_string = random.choice(current_disaster["conclusion_events"])
+            game.clan.disaster_moon = 0
+            game.clan.disaster = ""
+        
+        event_string = ongoing_event_text_adjust(Cat, event_string)
+        game.cur_events_list.append(
+                        Single_Event(event_string, "alert"))
 
     def handle_illnesses_or_illness_deaths(self, cat):
         """ 
