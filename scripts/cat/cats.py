@@ -3036,6 +3036,8 @@ class Cat():
                 "paralyzed": self.pelt.paralyzed,
                 "no_kits": self.no_kits,
                 "exiled": self.exiled,
+                "no_retire": self.no_retire,
+                "no_mates": self.no_mates,
                 "pelt_name": self.pelt.name,
                 "pelt_color": self.pelt.colour,
                 "pelt_length": self.pelt.length,
