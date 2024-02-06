@@ -1217,7 +1217,7 @@ class TalkScreen(Screens):
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
                 kit = Cat.fetch_cat(choice(cat.inheritance.get_children()))
-                if kit.moons < 12 or kit.outside or kit.dead:
+                if kit.moons < 12 or kit.outside or kit.dead or kit.ID == game.clan.your_cat.ID:
                     return ""
                 text = text.replace("t_ka", str(kit.name))
 
@@ -1226,7 +1226,7 @@ class TalkScreen(Screens):
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
                 kit = Cat.fetch_cat(choice(cat.inheritance.get_children()))
-                if kit.moons >= 6 or kit.outside or kit.dead:
+                if kit.moons >= 6 or kit.outside or kit.dead or kit.ID == game.clan.your_cat.ID:
                     return ""
                 text = text.replace("t_kk", str(kit.name))
 
@@ -1234,7 +1234,7 @@ class TalkScreen(Screens):
                 if cat.inheritance.get_children() is None or len(cat.inheritance.get_children()) == 0:
                     return ""
                 kit = Cat.fetch_cat(choice(cat.inheritance.get_children()))
-                if kit.outside or kit.dead:
+                if kit.outside or kit.dead or kit.ID == game.clan.your_cat.ID:
                     return ""
                 text = text.replace("t_k", str(kit.name))
 
@@ -1242,7 +1242,7 @@ class TalkScreen(Screens):
                 if game.clan.your_cat.inheritance.get_children() is None or len(game.clan.your_cat.inheritance.get_children()) == 0:
                     return ""
                 kit = Cat.fetch_cat(choice(game.clan.your_cat.inheritance.get_children()))
-                if kit.outside or kit.dead:
+                if kit.outside or kit.dead or kit.ID == cat.ID:
                     return ""
                                     
                 text = text.replace("y_k", str(kit.name))

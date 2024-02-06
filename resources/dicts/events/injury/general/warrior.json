@@ -52,10 +52,10 @@
             "scar",
             "SIDE"
         ],
-        "event_text": "m_c came out worse for wear after a border skirmish with o_cClan.",
+        "event_text": "m_c came out worse for wear after a border skirmish with o_c.",
         "history_text": {
-            "scar": "m_c was scarred in a fight against o_cClan.",
-            "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after a battle with o_cClan."
+            "scar": "m_c was scarred in a fight against o_c.",
+            "reg_death": "m_c died from {PRONOUN/m_c/poss} wounds after a battle with o_c."
         }
     },
     {
