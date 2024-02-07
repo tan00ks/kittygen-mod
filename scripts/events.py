@@ -297,6 +297,8 @@ class Events:
                 elif game.clan.your_cat.moons == 119:
                     if not game.switches['window_open']:
                         RetireScreen('events screen')
+                    else:
+                        game.switches['windows_dict'].append('retire')
                 elif game.clan.your_cat.moons == 120 and game.clan.your_cat.status == 'elder':
                     self.generate_elder_ceremony()
                 elif game.clan.your_cat.status == 'elder':
@@ -1127,10 +1129,15 @@ class Events:
         if game.clan.leader:
             if checks[3] != game.clan.leader.ID and game.clan.your_cat.status == 'leader' and not game.switches['window_open']:
                 DeputyScreen('events screen')
+            elif checks[3] != game.clan.leader.ID and game.clan.your_cat.status == 'leader':
+                game.switches['windows_dict'].append('deputy')
+            
             
     def check_gain_kits(self, checks):
         if len(game.clan.your_cat.inheritance.get_blood_kits()) > checks[2] and not game.switches['window_open']:
             NameKitsWindow('events screen')
+        elif len(game.clan.your_cat.inheritance.get_blood_kits()) > checks[2]:
+            game.switches['windows_dict'].append('name kits')
             # self.checks[2] = len(game.clan.your_cat.inheritance.get_blood_kits())
             # insert_kits = []
             # for kit in game.clan.your_cat.inheritance.get_blood_kits():

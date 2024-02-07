@@ -413,7 +413,7 @@ def create_new_cat(Cat,
 
         # give em a collar if they got one
         if accessory:
-            new_cat.pelt.accessory = accessory
+            new_cat.pelt.accessories.append(accessory)
 
         # give apprentice aged cat a mentor
         if new_cat.age == 'adolescent':
@@ -508,7 +508,7 @@ def create_outside_cat(Cat, status, backstory, alive=True, thought=None):
                   gender=choice(['female', 'male']),
                   backstory=backstory)
     if status == 'kittypet':
-        new_cat.pelt.accessory = choice(Pelt.collars)
+        new_cat.pelt.accessories.append(choice(Pelt.collars))
     new_cat.outside = True
 
     if not alive:
@@ -1074,9 +1074,15 @@ def event_text_adjust(Cat,
         cat_dict["m_c"] = (str(cat.name), choice(cat.pronouns))
         cat_dict["p_l"] = cat_dict["m_c"]
     if "acc_plural" in text:
-        text = text.replace("acc_plural", str(ACC_DISPLAY[cat.pelt.accessory]["plural"]))
+        if cat.pelt.accessory and cat.pelt.accessory not in cat.pelt.accessories:
+            cat.pelt.accessories.append(cat.pelt.accessory)
+        acc = cat.pelt.accessories[-1]
+        text = text.replace("acc_plural", str(ACC_DISPLAY[acc]["plural"]))
     if "acc_singular" in text:
-        text = text.replace("acc_singular", str(ACC_DISPLAY[cat.pelt.accessory]["singular"]))
+        if cat.pelt.accessory and cat.pelt.accessory not in cat.pelt.accessories:
+            cat.pelt.accessories.append(cat.pelt.accessory)
+        acc = cat.pelt.accessories[-1]
+        text = text.replace("acc_singular", str(ACC_DISPLAY[acc]["singular"]))
 
     if murder_reveal:
         victim_cat = Cat.fetch_cat(victim)
