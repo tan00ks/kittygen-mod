@@ -135,6 +135,8 @@ class Events:
             disaster_text = ujson.loads(read_file.read())
         if not game.clan.disaster and random.randint(1,20) == 1:
             game.clan.disaster = random.choice(list(disaster_text.keys()))
+            while not disaster_text[game.clan.disaster]["trigger_events"]:
+                game.clan.disaster = random.choice(list(disaster_text.keys()))
         self.handle_disaster()
         
         for cat in Cat.all_cats.copy().values():

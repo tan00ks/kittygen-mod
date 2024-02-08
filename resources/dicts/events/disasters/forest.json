@@ -423,7 +423,6 @@
         "duration": 3,
         "rarity": null,
         "trigger_events": [
-            "The territory lacks prey."
         ],
         "progress_events": {
             "moon1": [
@@ -461,7 +460,6 @@
         "duration": 3,
         "rarity": null,
         "trigger_events": [
-            "The land is dry and barren."
         ],
         "progress_events": {
             "moon1": [
@@ -499,7 +497,6 @@
         "duration": 3,
         "rarity": null,
         "trigger_events": [
-            "The camp is destroyed."
         ],
         "progress_events": {
             "moon1": [
