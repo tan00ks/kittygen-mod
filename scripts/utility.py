@@ -491,7 +491,8 @@ def create_new_cat(Cat,
         if not new_cat.df:
             history.add_beginning(new_cat)
         else:
-            new_cat.dead_for = randint(100,200)
+            new_cat.dead_for = randint(90,200)
+            new_cat.status = status
      
 
         # create relationships

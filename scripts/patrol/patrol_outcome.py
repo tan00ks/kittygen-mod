@@ -983,8 +983,8 @@ class PatrolOutcome():
                 status = match.group(1)
             if match.group(1)== "dark forest cat":
             
-               status = choice(["elder", "apprentice", "warrior", "medicine cat apprentice", 
-                                "medicine cat", "deputy"])
+               status = choice(["elder", "elder", "apprentice", "apprentice", "warrior", "warrior", "medicine cat apprentice", 
+                                "medicine cat", "deputy", "deputy"])
                 
             break
                 
@@ -1034,7 +1034,7 @@ class PatrolOutcome():
         elif "clancat" in attribute_list:
             cat_type = "former Clancat"
         elif "newdfcat" in attribute_list:
-            cat_type = "Dark Forest " + status
+            cat_type = status
         else:
             cat_type = choice(['kittypet', 'loner', 'former Clancat'])
         
@@ -1052,7 +1052,7 @@ class PatrolOutcome():
             chosen_backstory = choice(["medicine_cat", "disgraced1"])
         elif status == "medicine cat":
             chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
-        elif status in ("apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice", "warrior", "medicine cat", "mediator", "leader", "deputy", "queen"):
+        elif status in ("apprentice", "mediator apprentice", "medicine cat","medicine cat apprentice", "queen's apprentice", "warrior", "leader", "deputy", "queen"):
             chosen_backstory = "damned"
         else:
             if cat_type == "former Clancat":

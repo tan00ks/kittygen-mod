@@ -302,7 +302,7 @@ class Thoughts():
         else:
             spec_dir = ""
 
-        if main_cat.df and status == "Dark Forest warior":
+        if main_cat.df and status == "Dark Forest warrior":
             status = 'df_warrior'
         elif status == "Dark Forest apprentice":
             status = "df_apprentice"

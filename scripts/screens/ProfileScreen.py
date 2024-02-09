@@ -1298,8 +1298,10 @@ class ProfileScreen(Screens):
             output += "<font color='#FF0000'>lost</font>"
         elif the_cat.exiled:
             output += "<font color='#FF0000'>exiled</font>"
-        elif the_cat.df and the_cat.dead:
-                output += "<font color='#FF0000' Dark Forest >" + the_cat.status + "</font>"
+        elif the_cat.df:
+                output += "<font color='#FF0000' >" + "Dark Forest "+ the_cat.status + "</font>"
+        elif the_cat.dead and not the_cat.df:
+            output += "<font color ='#7995FF'>" "StarClan " + the_cat.status + "</font>"
         else:
             output += the_cat.status
 
