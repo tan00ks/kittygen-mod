@@ -627,7 +627,7 @@ class Patrol():
             if contains_special_date_tag(patrol.tags):
                 if not special_date or special_date.patrol_tag not in patrol.tags:
                     continue
-
+                
 
             if not (patrol.min_cats <= len(self.patrol_cats) <= patrol.max_cats):
                 continue

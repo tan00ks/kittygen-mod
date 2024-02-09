@@ -71,6 +71,9 @@
                 "text": "You swerve around, just as a cat lunges from the shadows. You don't react quickly enough and they pin you down, hissing that you have a lot more training to do.",
                 "exp": 0,
                 "weight": 20,
+                "new_cat": [
+                    ["meeting", "newdfcat", "status:dark forest cat"]
+                ],
                 "injury": [
                     {
                         "cats": ["y_c"], 
@@ -85,6 +88,7 @@
                 "text": "You're not going to let someone sneak up on you. Stalking under the shadowy trees, you look for the source. You never see your attacker coming as they drop from the branches above and hiss that you need more training.",
                 "exp": 0,
                 "weight": 20,
+                
                 "injury": [
                     {
                         "cats": ["y_c"],

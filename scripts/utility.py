@@ -380,7 +380,6 @@ def create_new_cat(Cat,
             # now we make the cats
             if new_name:  # these cats get new names
                 if df: #generating a clancat name for DF cats
-                    backstory = "damned" if df else "redeemed"
                     new_cat = Cat(moons=age,
                                   status=status,
                                   gender=_gender,
@@ -488,7 +487,12 @@ def create_new_cat(Cat,
         created_cats.append(new_cat)
         game.clan.add_cat(new_cat)
         history = History()
-        history.add_beginning(new_cat)
+
+        if not new_cat.df:
+            history.add_beginning(new_cat)
+        else:
+            new_cat.dead_for = randint(100,200)
+     
 
         # create relationships
         new_cat.create_relationships_new_cat()
