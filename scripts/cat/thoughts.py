@@ -295,12 +295,24 @@ class Thoughts():
             spec_dir = "/alive_outside"
         elif main_cat.dead and not main_cat.outside and not main_cat.df:
             spec_dir = "/starclan"
-        elif main_cat.dead and not main_cat.outside and main_cat.df:
+        elif main_cat.dead and main_cat.df:
             spec_dir = "/darkforest"
-        elif main_cat.dead and main_cat.outside:
+        elif main_cat.dead and main_cat.outside and not main_cat.df:
             spec_dir = "/unknownresidence"
         else:
             spec_dir = ""
+
+        if main_cat.df and status == "Dark Forest warior":
+            status = 'df_warrior'
+        elif status == "Dark Forest apprentice":
+            status = "df_apprentice"
+        elif status == "Dark Forest medicine cat":
+            status = "df_medicinecat"
+        elif status == "Dark Forest medicine cat apprentice":
+            status = "df_medicinecat_apprentice"
+        elif status == "Dark Forest elder":
+            status = "df_elder"
+            thought = "whaaat"
 
         THOUGHTS = []
         # newborns only pull from their status thoughts. this is done for convenience

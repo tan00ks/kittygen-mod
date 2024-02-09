@@ -15,7 +15,9 @@ from scripts.clan import HERBS
 from scripts.utility import (
     change_clan_relations,
     change_clan_reputation,
-    change_relationship_values, create_new_cat,
+    change_relationship_values,
+    create_new_cat,
+
 )
 from scripts.game_structure.game_essentials import game
 from scripts.cat.skills import SkillPath
@@ -860,7 +862,10 @@ class PatrolOutcome():
             
             for cat in patrol.new_cats[-1]:
                 if cat.dead:
-                    results.append(f"{cat.name}'s ghost now wanders.")
+                    if cat.df:
+                        results.append(f"You have met {cat.name}.")
+                    else:
+                        results.append(f"{cat.name}'s ghost now wanders.")
                 elif cat.outside:
                     results.append(f"The patrol met {cat.name}.")
                 else:
@@ -913,7 +918,7 @@ class PatrolOutcome():
         in_patrol_cats = {
             "p_l": patrol.patrol_leader,
             "r_c": patrol.patrol_random_cat,
-            "y_c": game.clan.your_cat,
+            "y_c": game.clan.your_cat
         }
         if self.stat_cat:
             in_patrol_cats["s_c"] = self.stat_cat
@@ -966,6 +971,7 @@ class PatrolOutcome():
         
         # STATUS - must be handled before backstories. 
         status = None
+        
         for _tag in attribute_list:
             match = re.match(r"status:(.+)", _tag)
             if not match:
@@ -975,12 +981,21 @@ class PatrolOutcome():
                                   "mediator apprentice", "mediator", "medicine cat apprentice", 
                                   "medicine cat"):
                 status = match.group(1)
-                break
+            if match.group(1)== "dark forest cat":
+            
+               status = choice(["elder", "apprentice", "warrior", 
+                                "mediator apprentice", "mediator", "medicine cat apprentice", 
+                                "medicine cat"])
+                
+            break
+                
+           
         
         # SET AGE
         age = None
         for _tag in attribute_list:
             match = re.match(r"age:(.+)", _tag)
+            
             if not match:
                 continue
             
@@ -997,8 +1012,20 @@ class PatrolOutcome():
             if match.group(1) == "has_kits":
                 age = randint(14, 120)
                 break
-                
+
+        #getting an age for encountered DF cats
         
+        if "newdfcat" in  attribute_list:
+            cat_type = "df"
+            if status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
+                age = randint (6,12)
+            elif status in ["warrior", "medicine cat", "mediator", "leader", "deputy", "queen"]:
+                age = randint (12, 109)
+            else:
+                age = randint (109, 201)
+            thought = "mewwooww meeooww"
+                
+
         # CAT TYPES AND BACKGROUND
         if "kittypet" in attribute_list:
             cat_type = "kittypet"
@@ -1008,6 +1035,8 @@ class PatrolOutcome():
             cat_type = "loner"
         elif "clancat" in attribute_list:
             cat_type = "former Clancat"
+        elif "newdfcat" in attribute_list:
+            cat_type = "Dark Forest " + status
         else:
             cat_type = choice(['kittypet', 'loner', 'former Clancat'])
         
@@ -1050,7 +1079,10 @@ class PatrolOutcome():
         # MEETING - DETERMINE IF THIS IS AN OUTSIDE CAT
         outside = False
         if "meeting" in attribute_list:
-            outside = True
+            if "newdfcat" in attribute_list:
+                outside = False
+            else:
+                outside = True
             status = cat_type
             new_name = False
             thought = "Is wondering about the new cats they just met"
@@ -1060,6 +1092,13 @@ class PatrolOutcome():
         if "dead" in attribute_list:
             alive = False
             thought = "Explores a new starry world"
+        
+        df = False
+        if "newdfcat" in attribute_list:
+            alive = False
+            df = True
+            new_name = False
+            thought = "Is cross with the trainee they just met"
         
            
         # Now, it's time to generate the new cat
@@ -1078,6 +1117,7 @@ class PatrolOutcome():
                                 gender=gender,
                                 thought=thought,
                                 alive=alive,
+                                df=df,
                                 outside=outside,
                                 parent1=parent1.ID if parent1 else None,
                                 parent2=parent2.ID if parent2 else None  

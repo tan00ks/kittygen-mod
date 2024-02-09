@@ -277,6 +277,7 @@ def create_new_cat(Cat,
                    gender:str=None,
                    thought:str='Is looking around the camp with wonder',
                    alive:bool=True,
+                   df:bool=False,
                    outside:bool=False,
                    parent1:str=None,
                    parent2:str=None
@@ -390,6 +391,7 @@ def create_new_cat(Cat,
                                   prefix=name,
                                   status=status,
                                   gender=_gender,
+                                  df=df,
                                   backstory=backstory,
                                   parent1=parent1,
                                   parent2=parent2)
@@ -397,6 +399,7 @@ def create_new_cat(Cat,
                     new_cat = Cat(moons=age,
                                   status=status,
                                   gender=_gender,
+                                  df=df,
                                   backstory=backstory,
                                   parent1=parent1,
                                   parent2=parent2)
@@ -407,6 +410,7 @@ def create_new_cat(Cat,
                               suffix="",
                               status=status,
                               gender=_gender,
+                              df=df,
                               backstory=backstory,
                               parent1=parent1,
                               parent2=parent2)
@@ -465,6 +469,9 @@ def create_new_cat(Cat,
         if not alive:
             new_cat.die()
 
+        if df:
+            new_cat.df = True
+
         # newbie thought
         new_cat.thought = thought
 
@@ -496,17 +503,17 @@ def create_outside_cat(Cat, status, backstory, alive=True, thought=None):
         name = choice(names.names_dict["loner_names"])
     elif status in ['loner', 'rogue']:
         name = choice(names.names_dict["loner_names"] +
-                      names.names_dict["normal_prefixes"])
+                    names.names_dict["normal_prefixes"])
     elif status == 'former Clancat':
         name = choice(names.names_dict["normal_prefixes"])
         suffix = choice(names.names_dict["normal_suffixes"])
     else:
         name = choice(names.names_dict["loner_names"])
     new_cat = Cat(prefix=name,
-                  suffix=suffix,
-                  status=status,
-                  gender=choice(['female', 'male']),
-                  backstory=backstory)
+                suffix=suffix,
+                status=status,
+                gender=choice(['female', 'male']),
+                backstory=backstory)
     if status == 'kittypet':
         new_cat.pelt.accessories.append(choice(Pelt.collars))
     new_cat.outside = True
@@ -521,6 +528,7 @@ def create_outside_cat(Cat, status, backstory, alive=True, thought=None):
     # (this function will handle, that the cat only knows other outsiders)
     new_cat.create_relationships_new_cat()
     new_cat.create_inheritance_new_cat()
+
 
     game.clan.add_cat(new_cat)
     game.clan.add_to_outside(new_cat)
