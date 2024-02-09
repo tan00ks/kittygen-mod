@@ -983,9 +983,8 @@ class PatrolOutcome():
                 status = match.group(1)
             if match.group(1)== "dark forest cat":
             
-               status = choice(["elder", "apprentice", "warrior", 
-                                "mediator apprentice", "mediator", "medicine cat apprentice", 
-                                "medicine cat"])
+               status = choice(["elder", "apprentice", "warrior", "medicine cat apprentice", 
+                                "medicine cat", "deputy"])
                 
             break
                 
@@ -1023,7 +1022,6 @@ class PatrolOutcome():
                 age = randint (12, 109)
             else:
                 age = randint (109, 201)
-            thought = "mewwooww meeooww"
                 
 
         # CAT TYPES AND BACKGROUND
@@ -1054,6 +1052,8 @@ class PatrolOutcome():
             chosen_backstory = choice(["medicine_cat", "disgraced1"])
         elif status == "medicine cat":
             chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
+        elif status in ("apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice", "warrior", "medicine cat", "mediator", "leader", "deputy", "queen"):
+            chosen_backstory = "damned"
         else:
             if cat_type == "former Clancat":
                 x = "former_clancat"
@@ -1097,7 +1097,7 @@ class PatrolOutcome():
         if "newdfcat" in attribute_list:
             alive = False
             df = True
-            new_name = False
+            new_name = True
             thought = "Is cross with the trainee they just met"
         
            

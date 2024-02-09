@@ -379,6 +379,15 @@ def create_new_cat(Cat,
 
             # now we make the cats
             if new_name:  # these cats get new names
+                if df: #generating a clancat name for DF cats
+                    backstory = "damned" if df else "redeemed"
+                    new_cat = Cat(moons=age,
+                                  status=status,
+                                  gender=_gender,
+                                  backstory=backstory,
+                                  parent1=parent1,
+                                  parent2=parent2)
+                    
                 if choice([1, 2]) == 1:  # adding suffix to OG name
                     spaces = name.count(" ")
                     if spaces > 0:

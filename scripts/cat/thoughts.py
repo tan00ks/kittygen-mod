@@ -312,7 +312,13 @@ class Thoughts():
             status = "df_medicinecat_apprentice"
         elif status == "Dark Forest elder":
             status = "df_elder"
-            thought = "whaaat"
+        elif status == "Dark Forest deputy":
+            status = "df_deputy"
+        elif status == "Dark Forest queen":
+            status = "df_queen"
+        elif status == "Dark Forest queen's apprentice":
+            status = "df_queens_apprentice"
+
 
         THOUGHTS = []
         # newborns only pull from their status thoughts. this is done for convenience

@@ -112,7 +112,9 @@
     "clan_founder14": "This cat belonged to the original c_nClan, whose territory was lost in a war against rogues. Now, they've come to rebuild.",
     "clan_founder15": "This cat belonged to the original c_nClan, whose territory is now a twolegplace. Now, they've come to rebuild.",
     "clan_founder16": "This cat received a prophecy that the creation of c_nClan would lead to the downfall of the territories, and came to stop it from happening.",
-    "clan_founder17": "This cat came to fulfill their destiny of helping to found c_nClan after receiving a prophecy from StarClan."
+    "clan_founder17": "This cat came to fulfill their destiny of helping to found c_nClan after receiving a prophecy from StarClan.",
+    "damned": "This cat was damned to the Dark Forest for their crimes while alive.",
+    "redeemed": "This cat used to be a Dark Forest cat, but has been redeemed and hunts in StarClan."
   },
   "backstory_display": {
     "clan_founder_backstories": "Clan founder",
@@ -125,9 +127,14 @@
     "outsider_backstories": "formerly an outsider",
     "former_clancat_backstories": "originally from another Clan",
     "orphaned_backstories": "orphaned",
-    "abandoned_backstories": "abandoned"
+    "abandoned_backstories": "abandoned",
+    "df_cat_backstories": "ghost"
   },
   "backstory_categories": {
+    "df_cat_backstories": [
+      "damned",
+      "redeemed"
+    ],
     "clan_founder_backstories": [
       "clan_founder",
       "clan_founder1",
