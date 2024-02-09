@@ -1052,8 +1052,8 @@ class PatrolOutcome():
             chosen_backstory = choice(["medicine_cat", "disgraced1"])
         elif status == "medicine cat":
             chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
-        elif status in ("apprentice", "mediator apprentice", "medicine cat","medicine cat apprentice", "queen's apprentice", "warrior", "leader", "deputy", "queen"):
-            chosen_backstory = "damned"
+        elif status in ("apprentice", "mediator apprentice", "medicine cat","medicine cat apprentice", "queen's apprentice", "warrior", "leader", "deputy", "queen") and "newdfcat" in attribute_list:
+            chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         else:
             if cat_type == "former Clancat":
                 x = "former_clancat"

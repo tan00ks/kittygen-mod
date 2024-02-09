@@ -302,22 +302,22 @@ class Thoughts():
         else:
             spec_dir = ""
 
-        if main_cat.df and status == "Dark Forest warrior":
-            status = 'df_warrior'
-        elif status == "Dark Forest apprentice":
-            status = "df_apprentice"
-        elif status == "Dark Forest medicine cat":
-            status = "df_medicinecat"
-        elif status == "Dark Forest medicine cat apprentice":
-            status = "df_medicinecat_apprentice"
-        elif status == "Dark Forest elder":
-            status = "df_elder"
-        elif status == "Dark Forest deputy":
-            status = "df_deputy"
-        elif status == "Dark Forest queen":
-            status = "df_queen"
-        elif status == "Dark Forest queen's apprentice":
-            status = "df_queens_apprentice"
+        if main_cat.dead and main_cat.df and status == "warrior":
+            status = 'warrior'
+        elif status == "apprentice":
+            status = "apprentice"
+        elif status == "medicine cat":
+            status = "medicine_cat"
+        elif status == "medicine cat apprentice":
+            status = "medicine_cat_apprentice"
+        elif status == "elder":
+            status = "elder"
+        elif status == "deputy":
+            status = "deputy"
+        elif status == "queen":
+            status = "queen"
+        elif status == "queen's apprentice":
+            status = "queen_apprentice"
 
 
         THOUGHTS = []

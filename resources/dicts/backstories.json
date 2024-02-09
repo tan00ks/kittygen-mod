@@ -113,8 +113,13 @@
     "clan_founder15": "This cat belonged to the original c_nClan, whose territory is now a twolegplace. Now, they've come to rebuild.",
     "clan_founder16": "This cat received a prophecy that the creation of c_nClan would lead to the downfall of the territories, and came to stop it from happening.",
     "clan_founder17": "This cat came to fulfill their destiny of helping to found c_nClan after receiving a prophecy from StarClan.",
-    "damned": "This cat was damned to the Dark Forest for their crimes while alive.",
-    "redeemed": "This cat used to be a Dark Forest cat, but has been redeemed and hunts in StarClan now."
+    "dead1": "This cat died due to an illness outbreak.",
+    "dead2": "This cat was murdered long ago by an assailant on whom they continue to swear their revenge.",
+    "dead3": "This cat died peacefully, surrounded by loved ones.",
+    "dead4": "A horrific tragedy befell this cat, which led to their demise. They'd prefer not to speak of it.",
+    "dead5": "This cat was injured during a fight and died due to complications from their injuries.",
+    "dead6": "This cat had a lifelong illness that eventually took their life.",
+    "dead7": "This cat was executed by the Clan leader due to their crimes."
   },
   "backstory_display": {
     "clan_founder_backstories": "Clan founder",
@@ -128,12 +133,17 @@
     "former_clancat_backstories": "originally from another Clan",
     "orphaned_backstories": "orphaned",
     "abandoned_backstories": "abandoned",
-    "df_cat_backstories": "ghost"
+    "dead_cat_backstories": "ancient spirit"
   },
   "backstory_categories": {
-    "df_cat_backstories": [
-      "damned",
-      "redeemed"
+    "dead_cat_backstories": [
+      "dead1",
+      "dead2",
+      "dead3",
+      "dead4",
+      "dead5",
+      "dead6",
+      "dead7"
     ],
     "clan_founder_backstories": [
       "clan_founder",
