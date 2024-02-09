@@ -312,7 +312,7 @@ class ChooseRebornScreen(Screens):
                    self.selected_cat.skills.skill_string(short=True)
 
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
-                                                                                   scale(pygame.Rect((980, 325),
+                                                                                   scale(pygame.Rect((965, 325),
                                                                                                      (210, 250))),
                                                                                    object_id="#text_box_22_horizcenter_vertcenter_spacing_95",
                                                                                    manager=MANAGER)
