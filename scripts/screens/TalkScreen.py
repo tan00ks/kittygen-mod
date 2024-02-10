@@ -804,6 +804,8 @@ class TalkScreen(Screens):
             counter +=1
             if counter == 30:
                 possible_texts = None
+                cluster1, cluster2 = get_cluster(cat.personality.trait)
+                cluster3, cluster4 = get_cluster(you.personality.trait)
                 with open(f"{resource_dir}general.json", 'r') as read_file:
                     possible_texts = ujson.loads(read_file.read())
                     clusters_1 = f"{cluster1} "
