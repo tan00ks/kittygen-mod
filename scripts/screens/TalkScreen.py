@@ -50,12 +50,12 @@ class TalkScreen(Screens):
         self.possible_texts = {}
         self.chosen_text_key = ""
         self.choice_buttons = {}
+        self.text_choices = {}
+        self.option_bgs = {}
         self.current_scene = ""
         self.created_choice_buttons = False
         self.choicepanel = False
         self.textbox_graphic = None
-
-
 
 
     def screen_switches(self):
@@ -68,14 +68,14 @@ class TalkScreen(Screens):
         self.the_cat = Cat.all_cats.get(game.switches['cat'])
         self.profile_elements = {}
         self.clan_name_bg = pygame_gui.elements.UIImage(
-            scale(pygame.Rect((450, 875), (380, 70))),
+            scale(pygame.Rect((230, 875), (380, 70))),
             pygame.transform.scale(
                 image_cache.load_image(
                     "resources/images/clan_name_bg.png").convert_alpha(),
                 (500, 870)),
             manager=MANAGER)
         self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(str(self.the_cat.name),
-                                                                       scale(pygame.Rect((500, 870), (-1, 80))),
+                                                                       scale(pygame.Rect((300, 870), (-1, 80))),
                                                                           object_id="#text_box_34_horizcenter_light",
                                                                           manager=MANAGER)
 
@@ -114,14 +114,6 @@ class TalkScreen(Screens):
             )
         self.paw.visible = False
         
-        self.choice_panel = pygame_gui.elements.UIImage(
-                            scale(pygame.Rect((950, 630), (430, 330))),
-                            pygame.transform.scale(
-                            image_cache.load_image(
-                                "resources/images/choice_panel.png").convert_alpha(),
-                                (500, 870)),
-                            manager=MANAGER)
-        self.choice_panel.visible = False
 
     def exit_screen(self):
         self.text.kill()
@@ -144,9 +136,12 @@ class TalkScreen(Screens):
         for button in self.choice_buttons:
             self.choice_buttons[button].kill()
         self.choice_buttons = {}
-        if self.choicepanel is True:
-            self.choice_panel.kill()
-            del self.choice_panel
+        for option in self.text_choices:
+            self.text_choices[option].kill()
+        self.text_choices = {}
+        for option_bg in self.option_bgs:
+            self.option_bgs[option_bg].kill()
+        self.option_bgs = {}
 
     def update_camp_bg(self):
         light_dark = "light"
@@ -240,12 +235,15 @@ class TalkScreen(Screens):
             if event.key == pygame.K_ESCAPE:
                 self.change_screen('profile screen')
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                if self.text_index < len(self.texts) - 1:
-                    self.text_index += 1
-                    self.frame_index = 0
-            else:
-                self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
+            try:
+                if self.frame_index == len(self.text_frames[self.text_index]) - 1:
+                    if self.text_index < len(self.texts) - 1:
+                        self.text_index += 1
+                        self.frame_index = 0
+                else:
+                    self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
+            except:
+                pass
         return
     
     def get_cluster_list(self):
@@ -291,29 +289,55 @@ class TalkScreen(Screens):
         return chosen_text_intro
     
     def create_choice_buttons(self):
-        self.choice_panel.visible = True
+  
         
         y_pos = 0
         if f"{self.current_scene}_choices" not in self.possible_texts[self.chosen_text_key]:
             self.paw.visible = True
+
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
-            text = self.adjust_txt(text, self.the_cat)
-            if text:
-              button = pygame_gui.elements.UIButton(scale(pygame.Rect((1000, 670 + y_pos), (-1, 80))),
-                  text,
-                  manager=MANAGER
-              )
-              self.choice_buttons[c] = button
-              y_pos += 80
+            text = self.get_adjusted_txt([text], self.the_cat)
+            text = text[0]
+
+            #the background image for the text
+            option_bg = pygame_gui.elements.UIImage(scale(pygame.Rect((860, 855 + y_pos), (540, 70))),
+                                                            pygame.transform.scale(
+                                                                image_cache.load_image(
+                                                                    "resources/images/option_bg.png").convert_alpha(),
+                                                                (540, 60)), manager=MANAGER)
+            self.option_bgs[c] = option_bg
+
+            #the button for dialogue choices
+            button = UIImageButton(scale(pygame.Rect((780, 855 + y_pos), (68, 68))),
+                                        text = "",
+                                        object_id="#dialogue_choice_button", manager=MANAGER)
+            self.choice_buttons[c] = button
+            
+
+            #the text for dialogue choices
+            option = pygame_gui.elements.UITextBox(str(text),
+                                                            scale(pygame.Rect((870, 860 + y_pos), (540, 60))),
+                                                            object_id="#text_box_30_horizleft",
+                                                            manager=MANAGER)
+            self.text_choices[c] = option
+            
+
+           
+
+            
+            
+            y_pos -= 80
     
     def handle_choice(self, cat):
         for b in self.choice_buttons:
             self.choice_buttons[b].kill()
+        for b in self.text_choices:
+            self.text_choices[b].kill()
+        for b in self.option_bgs:
+            self.option_bgs[b].kill()
 
-        self.choice_panel.visible = False
-        self.choice_panel.kill()
     
         
 
@@ -409,7 +433,7 @@ class TalkScreen(Screens):
                 continue
             elif "young elder" in tags and cat.status == 'elder' and cat.moons >= 100:
                 continue
-            elif "no_kit" in tags and you.status in ['kitten', 'newborn']:
+            elif "no_kit" in tags and (you.status in ['kitten', 'newborn'] or cat.status in ['kitten', 'newborn']):
                 continue
             elif "newborn" in tags and you.moons != 0:
                 continue
@@ -673,11 +697,11 @@ class TalkScreen(Screens):
             if you.ID in cat.relationships:
                 if cat.relationships[you.ID].dislike < 30 and 'hate' in tags:
                     continue
-                if cat.relationships[you.ID].romantic_love < 20 and 'romantic_like' in tags:
+                if cat.relationships[you.ID].romantic_love < 15 and 'romantic_like' in tags:
                     continue
-                if cat.relationships[you.ID].platonic_like < 20 and 'platonic_like' in tags:
+                if cat.relationships[you.ID].platonic_like < 15 and 'platonic_like' in tags:
                     continue
-                if cat.relationships[you.ID].platonic_like < 50 and 'platonic_love' in tags:
+                if cat.relationships[you.ID].platonic_like < 40 and 'platonic_love' in tags:
                     continue
                 if cat.relationships[you.ID].jealousy < 5 and 'jealousy' in tags:
                     continue
@@ -770,6 +794,8 @@ class TalkScreen(Screens):
             tags = item["tags"] if "tags" in item else item[0]
             weights.append(len(tags))
         text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+        while text_chosen_key not in texts_list.keys():
+            text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
         text = texts_list[text_chosen_key][1]
         new_text = self.get_adjusted_txt(text, cat)
         counter = 0
@@ -895,26 +921,42 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 2:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    counter+=1
+                    if counter==30:
+                        return ""
                     alive_app = choice(alive_apps)
                 alive_apps.remove(alive_app)
                 text = text.replace("r_c1", str(alive_app.name))
                 if "r_c2" in text:
                     alive_app2 = choice(alive_apps)
+                    counter = 0
                     while alive_app2.ID == game.clan.your_cat.ID or alive_app2.ID == cat.ID:
                         alive_app2 = choice(alive_apps)
+                        counter+=1
+                        if counter==30:
+                            return ""
                     text = text.replace("r_c2", str(alive_app2.name))
                 if "r_c3" in text:
                     alive_app3 = choice(alive_apps)
+                    counter = 0
                     while alive_app3.ID == game.clan.your_cat.ID or alive_app3.ID == cat.ID:
                         alive_app3 = choice(alive_apps)
+                        counter+=1
+                        if counter==30:
+                            return ""
                     text = text.replace("r_c3", str(alive_app3.name))
             if "r_k" in text:
                 alive_kits = get_alive_kits(Cat)
                 if len(alive_kits) <= 1:
                     return ""
                 alive_kit = choice(alive_kits)
+                counter = 0
                 while alive_kit.ID == game.clan.your_cat.ID or alive_kit.ID == cat.ID:
+                    counter+=1
+                    if counter==30:
+                        return ""
                     alive_kit = choice(alive_kits)
                 text = text.replace("r_k", str(alive_kit.name))
             if "r_a" in text:
@@ -922,7 +964,11 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    counter+=1
+                    if counter == 30:
+                        return ""
                     alive_app = choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
             if "r_w1" in text:
@@ -930,18 +976,30 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 2:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat or alive_app.ID == cat.ID:
+                    counter+=1
+                    if counter == 30:
+                        return ""
                     alive_app = choice(alive_apps)
                 alive_apps.remove(alive_app)
                 text = text.replace("r_w1", str(alive_app.name))
                 if "r_w2" in text:
                     alive_app2 = choice(alive_apps)
+                    counter = 0
                     while alive_app2.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                         alive_app2 = choice(alive_apps)
+                        counter+=1
+                        if counter == 30:
+                            return ""
                     text = text.replace("r_w2", str(alive_app2.name))
                 if "r_w3" in text:
                     alive_app3 = choice(alive_apps)
+                    counter = 0
                     while alive_app3.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                        counter+=1
+                        if counter == 30:
+                            return ""
                         alive_app3 = choice(alive_apps)
                     text = text.replace("r_w3", str(alive_app3.name))
             if "r_w" in text:
@@ -949,7 +1007,11 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    counter+=1
+                    if counter == 30:
+                        return ""
                     alive_app = choice(alive_apps)
                 text = text.replace("r_w", str(alive_app.name))
             if "r_m" in text:
@@ -957,7 +1019,11 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    counter+=1
+                    if counter == 30:
+                        return ""
                     alive_app = choice(alive_apps)
                 text = text.replace("r_m", str(alive_app.name))
             if "r_d" in text:
@@ -965,7 +1031,11 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    counter+=1
+                    if counter == 30:
+                        return ""
                     alive_app = choice(alive_apps)
                 text = text.replace("r_d", str(alive_app.name))
             if "r_q" in text:
@@ -973,7 +1043,11 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    counter+=1
+                    if counter == 30:
+                        return ""
                     alive_app = choice(alive_apps)
                 text = text.replace("r_q", str(alive_app.name))
             if "r_e" in text:
@@ -981,24 +1055,36 @@ class TalkScreen(Screens):
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     alive_app = choice(alive_apps)
+                    counter+=1
+                    if counter==30:
+                        return ""
                 text = text.replace("r_e", str(alive_app.name))
             if "r_s" in text:
                 alive_apps = get_alive_cats(Cat)
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.is_ill():
                     alive_app = choice(alive_apps)
+                    counter+=1
+                    if counter == 30:
+                        return ""
                 text = text.replace("r_s", str(alive_app.name))
             if "r_i" in text:
                 alive_apps = get_alive_cats(Cat)
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.is_injured():
                     alive_app = choice(alive_apps)
+                    counter+=1
+                    if counter == 30:
+                        return ""
                 text = text.replace("r_i", str(alive_app.name))
             if "l_n" in text:
                 if game.clan.leader is None:
