@@ -721,7 +721,7 @@ class PatrolScreen(Screens):
         for the_cat in Cat.all_cats_list:
             if the_cat.ID == game.clan.your_cat.ID and the_cat.status not in [
                 'elder', 'kitten', 'mediator', 'mediator apprentice', "queen", "queen's apprentice", "newborn"
-            ] and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working():
+            ] and not the_cat.outside and the_cat not in self.current_patrol and not the_cat.not_working() and not the_cat.dead:
                 if "patrolled" not in game.switches:
                     game.switches['patrolled'] = []
                 if "1" not in game.switches['patrolled']:

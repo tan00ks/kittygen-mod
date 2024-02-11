@@ -244,6 +244,8 @@ class Screens():
         for button_id in disabled_buttons:
             if button_id in self.menu_buttons:
                 self.menu_buttons[button_id].disable()
+        
+        
 
     def menu_button_pressed(self, event):
         """This is a short-up to deal with menu button presses.

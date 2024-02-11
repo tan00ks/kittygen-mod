@@ -1,4 +1,4 @@
-from random import choice, choices
+from random import choice, choices, randint
 import pygame
 import ujson
 
@@ -371,7 +371,7 @@ class TalkScreen(Screens):
                 possible_texts3 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts3)
 
-        if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn']:
+        if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,2)==1:
             with open(f"{resource_dir}crush.json", 'r') as read_file:
                 possible_texts3 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts3)
