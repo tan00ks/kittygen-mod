@@ -176,7 +176,9 @@ class Clan():
         if (self_run_init_functions):
             self.post_initialization_functions()
         self.disaster = ""
+        self.second_disaster = ""
         self.disaster_moon = 0
+        self.second_disaster_moon = 0
 
 
     # The clan couldn't save itself in time due to issues arising, for example, from this function: "if deputy is not None: self.deputy.status_change('deputy') -> game.clan.remove_med_cat(self)"

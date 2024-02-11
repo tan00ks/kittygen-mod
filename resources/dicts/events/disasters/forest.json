@@ -22,8 +22,8 @@
         "conclusion_events": [
             "The dazzling light of the sun shines brightly on white, still snow. The blizzard has ended, though leaf-bare still continues."
         ],
-        "secondary_disasters": [
-            {
+        "secondary_disasters": {
+            "Barren Land": {
                 "disaster": "Barren Land",
                 "triggers_during": "during",
                 "chance": 5,
@@ -31,7 +31,7 @@
                     "The snow has hidden all plants and trails, everything that c_n has relied on. Herbs, favorite moss gathering spots, best cobweb collections, all of it has been obliterated by white, icy flakes."
                 ]
             },
-            {
+            "Famine": {
                 "disaster": "Famine",
                 "triggers_during": "during",
                 "chance": 5,
@@ -39,7 +39,7 @@
                     "No cat can smell any prey scent past the snow. There could be mice right under their paws, but no warrior of c_n can track them, and those lucky enough to see one, slip more often than not."
                 ]
             },
-            {
+            "Terrible Cold": {
                 "disaster": "Terrible Cold",
                 "triggers_during": "during",
                 "chance": 5,
@@ -47,8 +47,16 @@
                     "Any cat with a thin pelt can't seem to get warm with all the snow falling in the forest. Sneezing and coughing wake up many a cat in the muffled silence of the blizzard."
                 ]
             }
-        ],
-        "collateral_damage": {}
+        },
+        "collateral_damage": {
+            "injuries": ["frostbite", "shivering"],
+            "deaths": {
+                "death_text": "m_c froze to death during a harsh snowstorm.",
+                "history_text": {
+                    "reg_death": "m_c froze to death."
+                }
+            }
+        }
     },
     "Drought": {
         "event": "Drought",
@@ -85,8 +93,8 @@
             "The shade of the canopy, so often their only protection from the heat haunting their woods, now shelters c_n from a different sky. Rain patters off the leaves above them as the cats bow their heads in thanks. StarClan has heard their prayers, and the drought has broken.",
             "lead_name watches the clouds gather, trembling in anticipation and hope. When the skies open, the ground sucks away the water, as thirsty as the Clan that turns their heads towards the stars and lets the life-giving rain fill their throats."
         ],
-        "secondary_disasters": [
-            {
+        "secondary_disasters": {
+            "Barren Land": {
                 "disaster": "Barren Land",
                 "triggers_during": "during",
                 "chance": 1,
@@ -96,7 +104,7 @@
                     "The land, suffering under the heat of the drought, just can't support the normal plant life that should be growing under the forest canopy."
                 ]
             },
-            {
+            "Famine": {
                 "disaster": "Famine",
                 "triggers_during": "during",
                 "chance": 0,
@@ -106,7 +114,7 @@
                     "The forest is silent - silent like the depths of winter. But this is caused by heat, not cold. How will c_n cope, in what should be a season of plenty?"
                 ]
             },
-            {
+            "Wildfire": {
                 "disaster": "Wildfire",
                 "triggers_during": "during",
                 "chance": 0,
@@ -116,8 +124,16 @@
                     "The smoke reaches c_n first - but fire is hot on its heels. Their forest tinder-dry and dusty, c_n are forced to run before the flames, fleeing to the safety of the last scant water sources within the woods, warriors grabbing and hauling anyone who starts to fall behind."
                 ]
             }
-        ],
-        "collateral_damage": {}
+        },
+        "collateral_damage": {
+            "injuries": ["dehydrated"],
+            "deaths": {
+                "death_text": "m_c died from dehydration.",
+                "history_text": {
+                    "reg_death": "m_c died from dehydration."
+                }
+            }
+        }
     },
     "Wildfire": {
         "event": "Wildfire",
@@ -164,8 +180,8 @@
             "There's no one moment. But somehow, clawing their way step by step, c_n and their territory have recovered from the fire that raged through their forests.",
             "It's so strange, to think of the wildfire as something now distant from them, to think of kits hearing about it in the nursery or elders discussing it as a tale from their youth. But that's what happens, isn't it? Life moves on."
         ],
-        "secondary_disasters": [
-            {
+        "secondary_disasters": {
+            "Famine": {
                 "disaster": "Famine",
                 "triggers_during": "start",
                 "chance": 5,
@@ -175,7 +191,7 @@
                     "Cats' ribs are starting to show beneath their pelts. The forest, normally c_n's great protector, has little prey or life here after the wildfire."
                 ]
             },
-            {
+            "Camp Destruction": {
                 "disaster": "Camp Destruction",
                 "triggers_during": "start",
                 "chance": 10,
@@ -185,7 +201,7 @@
                     "What can c_n do, with nothing left? Their home is gone, eaten by the flames, and the Clan wavers with uncertainty. Do they rebuild, or move on?"
                 ]
             },
-            {
+            "Barren Land": {
                 "disaster": "Barren Land",
                 "triggers_during": "start",
                 "chance": 5,
@@ -195,8 +211,16 @@
                     "Not even the leaf litter survived the fire. Instead of plants and herbs and undergrowth, the forest offers only soot."
                 ]
             }
-        ],
-        "collateral_damage": {}
+        },
+        "collateral_damage": {
+            "injuries": ["burn", "severe burn"],
+            "deaths": {
+                "death_text": "m_c died from a wildfire.",
+                "history_text": {
+                    "reg_death": "m_c burned to death."
+                }
+            }
+        }
     },
     "Terrible Cold": {
         "event": "Terrible Cold",
@@ -229,7 +253,15 @@
             "As the cold loses its grip on their throats, the forest of c_n weeps with relief, trees oozing sap from their damaged trunks."
         ],
         "secondary_disasters": [],
-        "collateral_damage": {}
+        "collateral_damage": {
+            "injuries": ["shivering", "frostbite"],
+            "deaths": {
+                "death_text": "m_c froze to death in a terrible cold.",
+                "history_text": {
+                    "reg_death": "m_c froze to death."
+                }
+            }
+        }
     },
     "Floods": {
         "event": "Floods",
@@ -260,8 +292,8 @@
         "conclusion_events": [
             "As the days pass, the forest slowly dries more and more. Eventually the mud has disappears and the Clan can finally feel clean and safe once more."
         ],
-        "secondary_disasters": [
-            {
+        "secondary_disasters": {
+            "Barren Land": {
                 "disaster": "Barren Land",
                 "triggers_during": "during",
                 "chance": 1,
@@ -269,7 +301,7 @@
                     "The flood rips through the forest and leaves a muddy, dying mess behind it. The herbs the Clan depends upon will be scarce in this aftermath."
                 ]
             },
-            {
+            "Famine": {
                 "disaster": "Famine",
                 "triggers_during": "during",
                 "chance": 0,
@@ -277,8 +309,16 @@
                     "As the Clan tries to find food, they realise that the flood has left no living prey behind. The animals of the forest have either run away or drowned, their floating corpses hardly safe to eat."
                 ]
             }
-        ],
-        "collateral_damage": {}
+        },
+        "collateral_damage": {
+            "injuries": ["water in their lungs"],
+            "deaths": {
+                "death_text": "m_c drowned in the floods.",
+                "history_text": {
+                    "reg_death": "m_c drowned."
+                }
+            }
+        }
     },
     "Twoleg Invasion": {
         "event": "Twoleg Invasion",
@@ -303,8 +343,8 @@
         "conclusion_events": [
             "The last Twoleg left yesterday, leaving behind strange objects, but thankfully taking the large, scary things with them. It seems for the time being, life can go back to normal."
         ],
-        "secondary_disasters": [
-            {
+        "secondary_disasters": {
+            "Wildfire": {
                 "disaster": "Wildfire",
                 "triggers_during": "end",
                 "chance": 0,
@@ -313,7 +353,7 @@
                     "The Twolegs seem to enjoy gathering around large fires, much to the terror of the Clan.  Though the fires seem to be put out before the Twolegs leave, it's no surprise when some embers persist and the forest begins to go up in flames."
                 ]
             },
-            {
+            "Prey Sickness": {
                 "disaster": "Prey Sickness",
                 "triggers_during": "during",
                 "chance": 0,
@@ -321,7 +361,7 @@
                     "The objects the Twolegs bring smell so enticing, but the cats of c_n avoid them as much as possible. It only occurs to them that the prey they so rely on for food might not do the same when the first cats start getting sick."
                 ]
             }
-        ],
+        },
         "collateral_damage": {}
     },
     "Prey Sickness": {
@@ -379,8 +419,8 @@
         "conclusion_events": [
             "The sky is no longer at war with c_n. The yowling of wind and rain has lessened to a purr of a kitten, before disappearing entirely, leaving only the aftermath in its wake. Birdsong is heard in the trees of the forest once again."
         ],
-        "secondary_disasters": [
-            {
+        "secondary_disasters": {
+            "Floods": {
                 "disaster": "Floods",
                 "triggers_during": "during",
                 "chance": 0,
@@ -388,7 +428,7 @@
                     "The sky has brought with it swelling rivers that fight their embankments. Water flows freely without a path, and every cat has to keep their claws on the ground to keep themselves from floating away."
                 ]
             },
-            {
+            "Wildfire": {
                 "disaster": "Wildfire",
                 "triggers_during": "during",
                 "chance": 0,
@@ -396,7 +436,7 @@
                     "With all the rain, it should be impossible for a fire to start, but the sky doesn't care about possible. Lightning cracks across the sky, and like a clawstrike from above, slashes the top of an old tree, splitting it in half and lighting it on fire so hot not even the rains can put it out. It quickly begins to spread."
                 ]
             },
-            {
+            "Famine": {
                 "disaster": "Famine",
                 "triggers_during": "during",
                 "chance": 0,
@@ -404,7 +444,7 @@
                     "The world seems to have been washed out by the sky, no prey is to be found in c_n's territory, and every burrow they've found is only full of water. Lean days are ahead."
                 ]
             }
-        ],
+        },
         "collateral_damage": {}
     },
     "Famine": {
@@ -422,8 +462,7 @@
         "priority": "secondary",
         "duration": 3,
         "rarity": null,
-        "trigger_events": [
-        ],
+        "trigger_events": [],
         "progress_events": {
             "moon1": [
                 "The Clan hunts and scrounges for any hint of possible food, but they never seem to find enough.",
@@ -459,8 +498,7 @@
         "priority": "secondary",
         "duration": 3,
         "rarity": null,
-        "trigger_events": [
-        ],
+        "trigger_events": [],
         "progress_events": {
             "moon1": [
                 "As the herb stores dwindle, reactions are divided. Those who dismiss the healing help of herbs strut, unconcerned, but wiser minds have already begun to worry.",
@@ -496,8 +534,7 @@
         "priority": "secondary",
         "duration": 3,
         "rarity": null,
-        "trigger_events": [
-        ],
+        "trigger_events": [],
         "progress_events": {
             "moon1": [
                 "It's both exhausting and heartbreaking, tearing down the battered remnants of what used to be a safe and whole home. But c_n grits their teeth and yowl encouragement to each other. Nothing will drive them from the forest, and they're determined to make this their home again.",

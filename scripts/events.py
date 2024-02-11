@@ -133,7 +133,7 @@ class Events:
         with open(f"{resource_dir}forest.json",
                   encoding="ascii") as read_file:
             disaster_text = ujson.loads(read_file.read())
-        if not game.clan.disaster and random.randint(1,20) == 1:
+        if not game.clan.disaster and random.randint(1,1) == 1:
             game.clan.disaster = random.choice(list(disaster_text.keys()))
             while not disaster_text[game.clan.disaster]["trigger_events"]:
                 game.clan.disaster = random.choice(list(disaster_text.keys()))
@@ -2990,6 +2990,11 @@ class Events:
         elif current_moon < current_disaster["duration"]:
             event_string = random.choice(current_disaster["progress_events"]["moon" + str(current_moon)])
             game.clan.disaster_moon += 1
+            if random.randint(1,1) == 1 and not game.clan.second_disaster and current_disaster["secondary_disasters"]:
+                game.clan.second_disaster = random.choice(list(current_disaster["secondary_disasters"].keys()))
+                secondary_event_string = random.choice(current_disaster["secondary_disasters"][game.clan.second_disaster]["trigger_events"])
+                game.cur_events_list.append(
+                        Single_Event(secondary_event_string, "alert"))
         else:
             event_string = random.choice(current_disaster["conclusion_events"])
             game.clan.disaster_moon = 0
@@ -2997,6 +3002,28 @@ class Events:
         
         event_string = ongoing_event_text_adjust(Cat, event_string)
         game.cur_events_list.append(
+                        Single_Event(event_string, "alert"))
+        if game.clan.second_disaster:
+            self.handle_second_disaster()
+
+    def handle_second_disaster(self):
+        resource_dir = "resources/dicts/events/disasters/"
+        disaster_text = {}
+        with open(f"{resource_dir}forest.json",
+                  encoding="ascii") as read_file:
+            disaster_text = ujson.loads(read_file.read())
+        current_disaster = disaster_text.get(game.clan.second_disaster)
+        current_moon = game.clan.second_disaster_moon
+        if current_moon > 0 and current_moon < current_disaster["duration"]:
+            event_string = random.choice(current_disaster["progress_events"]["moon" + str(current_moon)])
+            game.clan.second_disaster_moon += 1
+            game.cur_events_list.append(
+                        Single_Event(event_string, "alert"))
+        elif current_moon == current_disaster["duration"]:
+            event_string = random.choice(current_disaster["conclusion_events"])
+            game.clan.second_disaster_moon = 0
+            game.clan.second_disaster = ""
+            game.cur_events_list.append(
                         Single_Event(event_string, "alert"))
 
     def handle_illnesses_or_illness_deaths(self, cat):
