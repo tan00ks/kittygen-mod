@@ -175,7 +175,8 @@ class Events:
             shaken_cats = []
             extra_event = None
             for ghost in Cat.dead_cats:
-                ghost_names.append(str(ghost.name))
+                if not ghost.df and ghost.dead_for < 1:
+                    ghost_names.append(str(ghost.name))
             insert = adjust_list_text(ghost_names)
 
             if len(Cat.dead_cats) > 1 and game.clan.game_mode != 'classic':
