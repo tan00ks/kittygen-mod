@@ -19,7 +19,7 @@
         "max_cats": 3,
         "min_max_status": {},
         "weight": 20,
-        "intro_text": "You wake up in a forest. Shadowy trees hang overhead, and you feel eyes on you despite not seeing anyone around.",
+        "intro_text": "You wake up in a forest. df_c Shadowy trees hang overhead, and you feel eyes on you despite not seeing anyone around.",
         "decline_text": "With a shake of your head, you manage to wake yourself up, sitting up in your nest with a gasp.",
         "chance_of_success": 45,
         "success_outcomes": [
@@ -71,9 +71,6 @@
                 "text": "You swerve around, just as a cat lunges from the shadows. You don't react quickly enough and they pin you down, hissing that you have a lot more training to do.",
                 "exp": 0,
                 "weight": 20,
-                "new_cat": [
-                    ["meeting", "newdfcat", "status:dark forest cat"]
-                ],
                 "injury": [
                     {
                         "cats": ["y_c"], 

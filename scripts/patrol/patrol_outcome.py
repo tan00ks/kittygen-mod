@@ -860,6 +860,12 @@ class PatrolOutcome():
             patrol.new_cats.append(self.__create_new_cat_block(i, attribute_list,  
                                                                patrol)) 
             
+
+            # code for df.json to meet a cat as a patrol outcome
+            # "new_cat": [
+            #         ["meeting", "newdfcat", "status:dark forest cat"]
+            #     ],
+            
             for cat in patrol.new_cats[-1]:
                 if cat.dead:
                     if cat.df:
@@ -1018,7 +1024,7 @@ class PatrolOutcome():
             cat_type = "df"
             if status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
                 age = randint (6,12)
-            elif status in ["warrior", "medicine cat", "mediator", "leader", "deputy", "queen"]:
+            elif status in ["warrior", "medicine cat", "mediator", "deputy", "queen"]:
                 age = randint (12, 109)
             else:
                 age = randint (109, 201)
@@ -1050,9 +1056,9 @@ class PatrolOutcome():
             chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
         elif status == "medicine cat" and cat_type == "former Clancat":
             chosen_backstory = choice(["medicine_cat", "disgraced1"])
-        elif status == "medicine cat":
+        elif status == "medicine cat" and not "newdfcat" in attribute_list:
             chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
-        elif status in ("apprentice", "mediator apprentice", "medicine cat","medicine cat apprentice", "queen's apprentice", "warrior", "leader", "deputy", "queen") and "newdfcat" in attribute_list:
+        elif status in ("apprentice", "mediator apprentice", "medicine cat apprentice", "medicine cat", "queen's apprentice", "warrior", "leader", "deputy", "queen", "elder") and "newdfcat" in attribute_list:
             chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         else:
             if cat_type == "former Clancat":
