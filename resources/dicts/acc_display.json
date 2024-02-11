@@ -1414,5 +1414,20 @@
     "default": "crab",
     "plural": "crab",
     "singular": "crab"
+  },
+  "CELESTIALCHIMES": {
+    "default": "celestial chimes",
+    "plural": "celestial chimes",
+    "singular": "celestial chimes"
+  },
+  "LUNARCHIMES": {
+    "default": "lunar chimes",
+    "plural": "lunar chimes",
+    "singular": "lunar chimes"
+  },
+  "STARCHIMES": {
+    "default": "star chimes",
+    "plural": "star chimes",
+    "singular": "star chimes"
   }
 }
