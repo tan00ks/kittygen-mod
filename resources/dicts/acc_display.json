@@ -1429,5 +1429,10 @@
     "default": "star chimes",
     "plural": "star chimes",
     "singular": "star chimes"
+  },
+  "SILVERLUNARCHIMES": {
+    "default": "silver lunar chimes",
+    "plural": "silver lunar chimes",
+    "singular": "silver lunar chimes"
   }
 }

@@ -569,7 +569,7 @@ class Sprites():
             self.make_group('tide', (a, 0), f'acc_crafted{i}')
 
         for a, i in enumerate([
-            "CELESTIALCHIMES", "STARCHIMES", "LUNARCHIMES"]):
+            "CELESTIALCHIMES", "STARCHIMES", "LUNARCHIMES", "SILVERLUNARCHIMES"]):
             self.make_group('chimes', (a, 0), f'acc_crafted{i}')
         
 # CREATE INSTANCE
