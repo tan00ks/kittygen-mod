@@ -32,9 +32,6 @@
             "text": "s_c swerves around, just as a cat lunges from the shadows and aims their claws at their pelt. They react faster than the attacker can, ducking the blow, before retailiating with a rake to their belly. s_c watches as they tumble to the ground from the attack. It seems they've learned a thing or two here.",
             "exp": 30,
             "weight": 20,
-            "new_cat": [
-                ["newdfcat", "status:kitten"]
-            ],
             "stat_trait": [
                 "ambitious",
                 "bloodthirsty",
