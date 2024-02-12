@@ -486,14 +486,15 @@ def create_new_cat(Cat,
             history.add_beginning(new_cat)
         else:
             new_cat.dead_for = randint(90,190)
+            new_cat.dead = True
             new_cat.status = status
      
 
         # create relationships
         new_cat.create_relationships_new_cat()
         # Note - we always update inheritance after the cats are generated, to
-        # allow us to add parents. 
-        #new_cat.create_inheritance_new_cat() 
+        # allow us to add parents.
+        #new_cat.create_inheritance_new_cat()
 
     return created_cats
 

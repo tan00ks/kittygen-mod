@@ -979,7 +979,7 @@ class PatrolOutcome():
             
             if match.group(1) in ("newborn", "kitten", "elder", "apprentice", "warrior", 
                                   "mediator apprentice", "mediator", "medicine cat apprentice", 
-                                  "medicine cat"):
+                                  "medicine cat", "deputy", "leader"):
                 status = match.group(1)
          
             break
@@ -1009,17 +1009,21 @@ class PatrolOutcome():
 
         #status + age for encountered DF cats
         
-        if "newdfcat" in attribute_list and status is None:
-            status = choice(["elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "kitten"])
-            
+        if "newdfcat" in attribute_list:
             if status is "kitten":
                 age = randint(1,5)
             elif status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
                 age = randint (6,11)
-            elif status in ["warrior", "medicine cat", "mediator", "deputy", "queen", "leader"]:
+            elif status in ["warrior", "medicine cat", "mediator", "queen"]:
                 age = randint (12, 119)
+            elif status in ["deputy", "leader"]:
+                age = randint(25,119)
             else:
                 age = randint (120, 201)
+                
+            if status is None:
+                status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen", "kitten", "leader"])
+            
                 
 
         # CAT TYPES AND BACKGROUND
@@ -1099,6 +1103,7 @@ class PatrolOutcome():
                 thought = "Was startled by a new trainee"
             else:
                 thought = "Is cross with the trainee they just met"
+            
         
            
         # Now, it's time to generate the new cat
