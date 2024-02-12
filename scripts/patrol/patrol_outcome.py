@@ -1009,8 +1009,8 @@ class PatrolOutcome():
 
         #status + age for encountered DF cats
         
-        if "newdfcat" in  attribute_list:
-            status = choice(["elder","elder","elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "kitten"])
+        if "newdfcat" in attribute_list and status is None:
+            status = choice(["elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "kitten"])
             
             if status is "kitten":
                 age = randint(1,5)
@@ -1044,13 +1044,13 @@ class PatrolOutcome():
                 status = "kitten"
         
         # CHOOSE DEFAULT BACKSTORY BASED ON CAT TYPE, STATUS.
-        if status in ("kitten", "newborn"):
+        if status in ("kitten", "newborn") and not "newdfcat" in attribute_list:
             chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
         elif status == "medicine cat" and cat_type == "former Clancat":
             chosen_backstory = choice(["medicine_cat", "disgraced1"])
         elif status == "medicine cat" and not "newdfcat" in attribute_list:
             chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
-        elif status in ("apprentice", "mediator", "mediator apprentice", "medicine cat apprentice", "medicine cat", "queen's apprentice", "warrior", "leader", "deputy", "queen", "queen's apprentice", "elder") and "newdfcat" in attribute_list:
+        elif status in ("kitten", "apprentice", "mediator", "mediator apprentice", "medicine cat apprentice", "medicine cat", "queen's apprentice", "warrior", "leader", "deputy", "queen", "queen's apprentice", "elder") and "newdfcat" in attribute_list:
             chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         else:
             if cat_type == "former Clancat":
@@ -1089,12 +1089,13 @@ class PatrolOutcome():
             thought = "Explores a new starry world"
         
         
+        # was the cat met on a df patrol?
         if "newdfcat" in attribute_list:
             alive = False
             outside = False
             df = True
             new_name = True
-            if status is "kitten":
+            if status == "kitten":
                 thought = "Was startled by a new trainee"
             else:
                 thought = "Is cross with the trainee they just met"

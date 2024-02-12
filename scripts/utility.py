@@ -379,8 +379,8 @@ def create_new_cat(Cat,
 
             # now we make the cats
             if new_name:  # these cats get new names
-
-                if choice([1, 2]) == 1 and not new_cat.df:  # adding suffix to OG name
+                    
+                if choice([1, 2]) == 1:  # adding suffix to OG name
                     spaces = name.count(" ")
                     if spaces > 0:
                         # make a list of the words within the name, then add the OG name back in the list
