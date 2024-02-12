@@ -33,7 +33,7 @@
             "exp": 30,
             "weight": 20,
             "new_cat": [
-                ["meeting", "newdfcat", "status:dark forest cat"]
+                ["newdfcat"]
             ],
             "stat_trait": [
                 "ambitious",
