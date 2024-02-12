@@ -1016,7 +1016,7 @@ class PatrolOutcome():
 
     #and age, dependant on status
                 
-            if status is "kitten":
+            if status in "kitten":
                 age = randint(1,5)
             elif status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
                 age = randint (6,11)
