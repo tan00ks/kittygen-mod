@@ -175,7 +175,7 @@ class Events:
             shaken_cats = []
             extra_event = None
             for ghost in Cat.dead_cats:
-                if not ghost.dead_for > 10:
+                if not ghost.dead_for > 1:
                     ghost_names.append(str(ghost.name))
                 else:
                     return # keeps encountered DF cats out of death events

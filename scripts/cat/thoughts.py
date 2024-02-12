@@ -324,6 +324,8 @@ class Thoughts():
             status = "deputy"
         elif status == "leader":
             status = "leader"
+        elif status == "kitten":
+            status = "kitten"
        
 
 

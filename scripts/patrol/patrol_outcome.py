@@ -1010,6 +1010,12 @@ class PatrolOutcome():
         #status + age for encountered DF cats
         
         if "newdfcat" in attribute_list:
+   # gives a random status if none was specified in the patrol             
+            if status is None:
+                status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
+
+    #and age, dependant on status
+                
             if status is "kitten":
                 age = randint(1,5)
             elif status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
@@ -1020,9 +1026,6 @@ class PatrolOutcome():
                 age = randint(25,119)
             else:
                 age = randint (120, 201)
-                
-            if status is None:
-                status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen", "kitten", "leader"])
             
                 
 
