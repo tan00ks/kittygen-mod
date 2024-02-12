@@ -92,8 +92,9 @@ class Clan():
                  game_mode='classic',
                  starting_members=[],
                  starting_season='Newleaf',
-                 followingsc=None,
-                 your_cat=None):
+                 followingsc=True,
+                 your_cat=None,
+                 self_run_init_functions = False):
         self.history = History()
         self.your_cat = your_cat
         if name == "":
@@ -101,24 +102,14 @@ class Clan():
         
         self.name = name
         self.leader = leader
-        if self.leader:
-            self.leader.status_change('leader')
-            self.clan_cats.append(self.leader.ID)
         self.leader_lives = 9
         self.leader_predecessors = 0
         self.deputy = deputy
-        if deputy is not None:
-            self.deputy.status_change('deputy')
-            self.clan_cats.append(self.deputy.ID)
         self.deputy_predecessors = 0
         self.medicine_cat = medicine_cat
         self.med_cat_list = []
         self.med_cat_predecessors = 0
-        if medicine_cat is not None:
-            self.clan_cats.append(self.medicine_cat.ID)
-            self.med_cat_list.append(self.medicine_cat.ID)
-            if medicine_cat.status != 'medicine cat':
-                Cat.all_cats[medicine_cat.ID].status_change('medicine cat')
+        
         self.med_cat_number = len(
             self.med_cat_list
         )  # Must do this after the medicine cat is added to the list.
@@ -127,10 +118,10 @@ class Clan():
         self.current_season = 'Newleaf'
         self.starting_season = starting_season
         self.instructor = None
-        # ^^ starclan guide 
+        # ^^ starclan guide
         self.demon = None
-        # ^^ dark forest guide 
-        self.followingsc = True
+        # ^^ dark forest guide
+        self.followingsc = followingsc
         self.biome = biome
         self.camp_bg = camp_bg
         self.game_mode = game_mode
@@ -182,7 +173,29 @@ class Clan():
 
         self.faded_ids = [
         ]  # Stores ID's of faded cats, to ensure these IDs aren't reused.
+        if (self_run_init_functions):
+            self.post_initialization_functions()
+        self.disaster = ""
+        self.second_disaster = ""
+        self.disaster_moon = 0
+        self.second_disaster_moon = 0
 
+
+    # The clan couldn't save itself in time due to issues arising, for example, from this function: "if deputy is not None: self.deputy.status_change('deputy') -> game.clan.remove_med_cat(self)"
+    def post_initialization_functions(self):
+        if self.deputy is not None:
+            self.deputy.status_change('deputy')
+            self.clan_cats.append(self.deputy.ID)
+
+        if self.leader:
+            self.leader.status_change('leader')
+            self.clan_cats.append(self.leader.ID)
+
+        if self.medicine_cat is not None:
+            self.clan_cats.append(self.medicine_cat.ID)
+            self.med_cat_list.append(self.medicine_cat.ID)
+            if self.medicine_cat.status != 'medicine cat':
+                Cat.all_cats[self.medicine_cat.ID].status_change('medicine cat')
     def create_clan(self):
         """
         This function is only called once a new clan is
@@ -494,6 +507,8 @@ class Clan():
         clan_data["war"] = self.war
         clan_data['achievements'] = self.achievements
         clan_data['talks'] = self.talks
+        clan_data["disaster"] = self.disaster
+        clan_data["disaster_moon"] = self.disaster_moon
 
         self.save_herbs(game.clan)
         self.save_disaster(game.clan)
@@ -613,7 +628,8 @@ class Clan():
                              Cat.all_cats.get(med_cat_info[0], None),
                              biome=general[2],
                              camp_bg=general[3],
-                             game_mode=general[7])
+                             game_mode=general[7], self_run_init_functions=False)
+            game.clan.post_initialization_functions()
             game.clan.reputation = general[8]
         elif len(general) == 8:
             if general[3] == 'None':
@@ -630,7 +646,9 @@ class Clan():
                 biome=general[2],
                 camp_bg=general[3],
                 game_mode=general[7],
+                self_run_init_functions=False
             )
+            game.clan.post_initialization_functions()
         elif len(general) == 7:
             if general[4] == 'None':
                 general[4] = 0
@@ -643,16 +661,21 @@ class Clan():
                 Cat.all_cats.get(med_cat_info[0], None),
                 biome=general[2],
                 camp_bg=general[3],
+                self_run_init_functions=False
             )
+            game.clan.post_initialization_functions()
         elif len(general) == 3:
             game.clan = Clan(general[0], Cat.all_cats[leader_info[0]],
                              Cat.all_cats.get(deputy_info[0], None),
                              Cat.all_cats.get(med_cat_info[0], None),
-                             general[2])
+                             general[2], self_run_init_functions=False)
+            game.clan.post_initialization_functions()
         else:
             game.clan = Clan(general[0], Cat.all_cats[leader_info[0]],
                              Cat.all_cats.get(deputy_info[0], None),
-                             Cat.all_cats.get(med_cat_info[0], None))
+                             Cat.all_cats.get(med_cat_info[0], None), 
+                             self_run_init_functions=False)
+            game.clan.post_initialization_functions()
         game.clan.age = int(general[1])
         if not game.config['lock_season']:
             game.clan.current_season = game.clan.seasons[game.clan.age % 12]
@@ -756,7 +779,8 @@ class Clan():
                          med_cat,
                          biome=clan_data["biome"],
                          camp_bg=clan_data["camp_bg"],
-                         game_mode=clan_data["gamemode"])
+                         game_mode=clan_data["gamemode"], self_run_init_functions=False)
+        game.clan.post_initialization_functions()
 
         game.clan.reputation = int(clan_data["reputation"])
 
@@ -845,6 +869,11 @@ class Clan():
         if "talks" in clan_data:
             game.clan.talks = clan_data["talks"]
 
+        if "disaster" in clan_data:
+            game.clan.disaster = clan_data["disaster"]
+        
+        if "disaster_moon" in clan_data:
+            game.clan.disaster_moon = clan_data["disaster_moon"]
         # Return Version Info. 
         return {
             "version_name": clan_data.get("version_name"),

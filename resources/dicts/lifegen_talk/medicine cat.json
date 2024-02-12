@@ -1817,11 +1817,11 @@
     "upstanding_medicinecat": [
         [
             "upstanding",
-	"Any"
+	        "Any"
 	
         ],
         [
-            "[You notice t_c trotting back into camp, returning from yet another heb gathering patrol.]",
+            "[You notice t_c trotting back into camp, returning from yet another herb gathering patrol.]",
 "[As much as you wish that they would take a break, you can't argue with the idea of a full herb store.]"
         ]
     ],
@@ -1829,8 +1829,8 @@
 "upstanding_medicinecat1": [
         [
             "upstanding",
-"no_kit",
-"platonic_like"
+            "no_kit",
+            "platonic_like"
 	
         ],
         [
@@ -1845,7 +1845,7 @@
 "upstanding_medicinecat2": [
         [
             "upstanding",
-"Any"
+            "Any"
 	
         ],
         [
@@ -1856,8 +1856,8 @@
 "upstanding_medicinecat3": [
         [
             "upstanding",
-"from_mentor",
-"insult"
+            "from_mentor",
+            "insult"
 	
         ],
         [
@@ -1868,9 +1868,9 @@
 "upstanding_medicinecat4": [
         [
            "upstanding",
-"from_mentor",
-"platonic_like",
-"neutral"
+            "from_mentor",
+            "platonic_like",
+            "neutral"
 	
         ],
         [

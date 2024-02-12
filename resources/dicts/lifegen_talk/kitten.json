@@ -2970,8 +2970,7 @@
     "stable_kit_younewborn_3": [
         [
             "newborn",
-            "random_cat",
-            "stable"
+            "random_cat"
         ],
         [
             "[t_c trots into the nursery and drops a mossball into the nest.]",
@@ -3005,7 +3004,7 @@
         [
             "Hello y_c! Welcome to c_nClan! It's so very nice to meet you!",
             "[They plop down next to you, forming the smallest loaf as they start to purr.]",
-            "I'm y_c! That over there is the Leader's Den, and that's the Warrior's Den, and-!",
+            "I'm t_c! That over there is the Leader's Den, and that's the Warrior's Den, and-!",
             "[r_w approaches, letting t_c know that you can't really hear them yet.]",
             "Oh, I don't mind repeating myself! We're gonna be denmates and so I gotta be a good role mobile!",
             "It's model? Whoops, hehehe."
