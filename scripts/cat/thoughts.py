@@ -312,12 +312,19 @@ class Thoughts():
             status = "medicine_cat_apprentice"
         elif status == "elder":
             status = "elder"
-        elif status == "deputy":
-            status = "deputy"
+        elif status == "mediator":
+            status = "mediator"
+        elif status == "mediator apprentice":
+            status = "mediator_apprentice"
         elif status == "queen":
             status = "queen"
         elif status == "queen's apprentice":
             status = "queen_apprentice"
+        elif status == "deputy":
+            status = "deputy"
+        elif status == "leader":
+            status = "leader"
+       
 
 
         THOUGHTS = []

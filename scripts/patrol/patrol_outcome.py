@@ -868,7 +868,7 @@ class PatrolOutcome():
             
             for cat in patrol.new_cats[-1]:
                 if cat.dead:
-                    if cat.df:
+                    if cat.df and cat.dead_for > 10:
                         results.append(f"You have met {cat.name}.")
                     else:
                         results.append(f"{cat.name}'s ghost now wanders.")
@@ -989,9 +989,10 @@ class PatrolOutcome():
                 status = match.group(1)
             if match.group(1)== "dark forest cat":
             
-               status = choice(["elder", "elder", "apprentice", "apprentice", "warrior", "warrior", "medicine cat apprentice", 
-                                "medicine cat", "deputy", "deputy"])
-                
+               status = choice(["elder", "apprentice", "warrior", 
+                                  "mediator apprentice", "mediator", "medicine cat apprentice", 
+                                  "medicine cat"])
+         
             break
                 
            
@@ -1023,8 +1024,8 @@ class PatrolOutcome():
         if "newdfcat" in  attribute_list:
             cat_type = "df"
             if status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
-                age = randint (6,12)
-            elif status in ["warrior", "medicine cat", "mediator", "deputy", "queen"]:
+                age = randint (6,11)
+            elif status in ["warrior", "medicine cat", "mediator", "deputy", "queen", "leader"]:
                 age = randint (12, 109)
             else:
                 age = randint (109, 201)
@@ -1085,13 +1086,15 @@ class PatrolOutcome():
         # MEETING - DETERMINE IF THIS IS AN OUTSIDE CAT
         outside = False
         if "meeting" in attribute_list:
+            df = False
             if "newdfcat" in attribute_list:
                 outside = False
+                thought = "what the fuhy"
             else:
                 outside = True
-            status = cat_type
-            new_name = False
-            thought = "Is wondering about the new cats they just met"
+                status = cat_type
+                new_name = False
+                thought = "Is wondering about the new cats they just met"
             
         # IS THE CAT DEAD?
         alive = True

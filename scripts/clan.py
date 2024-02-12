@@ -791,13 +791,6 @@ class Clan():
             "starting_season"] if "starting_season" in clan_data else 'Newleaf'
         get_current_season()
 
-        game.clan.leader_lives = leader_lives
-        game.clan.leader_predecessors = clan_data["leader_predecessors"]
-
-        game.clan.deputy_predecessors = clan_data["deputy_predecessors"]
-        game.clan.med_cat_predecessors = clan_data["med_cat_predecessors"]
-        game.clan.med_cat_number = clan_data["med_cat_number"]
-
         # Instructor Info
         if clan_data["instructor"] in Cat.all_cats:
             game.clan.instructor = Cat.all_cats[clan_data["instructor"]]
@@ -820,6 +813,13 @@ class Clan():
             game.clan.demon.dead = True
             game.clan.add_cat(game.clan.demon)
             game.clan.demon.df = True
+            
+        game.clan.leader_lives = leader_lives
+        game.clan.leader_predecessors = clan_data["leader_predecessors"]
+
+        game.clan.deputy_predecessors = clan_data["deputy_predecessors"]
+        game.clan.med_cat_predecessors = clan_data["med_cat_predecessors"]
+        game.clan.med_cat_number = clan_data["med_cat_number"]
 
         for name, relation, temper in zip(
                 clan_data["other_clans_names"].split(","),

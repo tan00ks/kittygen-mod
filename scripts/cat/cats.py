@@ -2081,7 +2081,7 @@ class Cat():
             print("Everything is terrible!! (new_mentor {new_mentor} is a Cat D:)")
             return
         # Check if cat can have a mentor
-        illegible_for_mentor = self.dead or self.outside or self.exiled or self.status not in ["apprentice",
+        illegible_for_mentor = self.dead or self.outside or self.exiled or self.dead_for > 1 or self.status not in ["apprentice",
                                                                                                "mediator apprentice",
                                                                                                "medicine cat apprentice",
                                                                                                "queen's apprentice"]

@@ -178,7 +178,7 @@ class Events:
                 if not ghost.dead_for > 10:
                     ghost_names.append(str(ghost.name))
                 else:
-                    return
+                    return # keeps encountered DF cats out of death events
             insert = adjust_list_text(ghost_names)
 
             if len(Cat.dead_cats) > 1 and game.clan.game_mode != 'classic':

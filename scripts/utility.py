@@ -427,10 +427,6 @@ def create_new_cat(Cat,
         if accessory:
             new_cat.pelt.accessories.append(accessory)
 
-        # give apprentice aged cat a mentor
-        if new_cat.age == 'adolescent':
-            new_cat.update_mentor()
-
         # Remove disabling scars, if they generated.
         not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 
                        'LEFTBLIND', 'BRIGHTHEART', 'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
@@ -479,6 +475,11 @@ def create_new_cat(Cat,
 
         if df:
             new_cat.df = True
+        else:
+        # give apprentice aged cat a mentor
+        # this is in a weird spot but DF cats were getting clancat mentors otherwise
+            if new_cat.age == 'adolescent':
+                new_cat.update_mentor()
 
         # newbie thought
         new_cat.thought = thought
@@ -491,7 +492,7 @@ def create_new_cat(Cat,
         if not new_cat.df:
             history.add_beginning(new_cat)
         else:
-            new_cat.dead_for = randint(90,200)
+            new_cat.dead_for = randint(90,190)
             new_cat.status = status
      
 
