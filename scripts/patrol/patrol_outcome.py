@@ -1051,15 +1051,17 @@ class PatrolOutcome():
                 status = "kitten"
         
         # CHOOSE DEFAULT BACKSTORY BASED ON CAT TYPE, STATUS.
-        if status in ("kitten", "newborn") and not "newdfcat" in attribute_list:
-            chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
-        elif status == "medicine cat" and cat_type == "former Clancat":
-            chosen_backstory = choice(["medicine_cat", "disgraced1"])
-        elif status == "medicine cat" and not "newdfcat" in attribute_list:
-            chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
-        elif status in ("kitten", "apprentice", "mediator", "mediator apprentice", "medicine cat apprentice", "medicine cat", "queen's apprentice", "warrior", "leader", "deputy", "queen", "queen's apprentice", "elder") and "newdfcat" in attribute_list:
-            chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
+        if "newdfcat" in attribute_list:
+            if status in ("kitten", "apprentice", "mediator", "mediator apprentice", "medicine cat apprentice", "medicine cat", "queen's apprentice", "warrior", "leader", "deputy", "queen", "queen's apprentice", "elder"):
+                    chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         else:
+            if status in ("kitten", "newborn"):
+                chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
+            if status == "medicine cat":
+                if cat_type == "former Clancat":
+                    chosen_backstory = choice(["medicine_cat", "disgraced1"])
+                else:
+                    chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
             if cat_type == "former Clancat":
                 x = "former_clancat"
             else:
@@ -1106,6 +1108,7 @@ class PatrolOutcome():
                 thought = "Was startled by a new trainee"
             else:
                 thought = "Is cross with the trainee they just met"
+            
             
         
            
