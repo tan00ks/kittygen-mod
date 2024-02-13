@@ -1010,7 +1010,7 @@ class PatrolOutcome():
         #status + age for encountered DF cats
         
         if "newdfcat" in attribute_list:
-   # gives a random status if none was specified in the patrol. kitten cannot be randomly chosen             
+   # gives a random status if none was specified in the patrol. kitten cannot be             
             if status is None:
                 status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
 
@@ -1125,6 +1125,7 @@ class PatrolOutcome():
                                 gender=gender,
                                 thought=thought,
                                 alive=alive,
+                                df=df,
                                 outside=outside,
                                 parent1=parent1.ID if parent1 else None,
                                 parent2=parent2.ID if parent2 else None  
