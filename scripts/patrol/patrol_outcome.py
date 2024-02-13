@@ -1111,6 +1111,7 @@ class PatrolOutcome():
            
         # Now, it's time to generate the new cat
         # This is a bit of a pain, but I can't re-write this function
+        
         new_cats = create_new_cat(Cat,
                                 Relationship,
                                 new_name=new_name,
@@ -1125,7 +1126,7 @@ class PatrolOutcome():
                                 gender=gender,
                                 thought=thought,
                                 alive=alive,
-                                df=df,
+                                df= True if "newdfcat" in attribute_list else False,
                                 outside=outside,
                                 parent1=parent1.ID if parent1 else None,
                                 parent2=parent2.ID if parent2 else None  

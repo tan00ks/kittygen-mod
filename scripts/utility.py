@@ -481,10 +481,9 @@ def create_new_cat(Cat,
         created_cats.append(new_cat)
         game.clan.add_cat(new_cat)
         history = History()
+        history.add_beginning(new_cat)
 
-        if not new_cat.df:
-            history.add_beginning(new_cat)
-        else:
+        if new_cat.df:
             new_cat.dead_for = randint(90,190)
             new_cat.dead = True
             new_cat.status = status
