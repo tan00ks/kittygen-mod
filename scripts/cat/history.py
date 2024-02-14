@@ -149,7 +149,7 @@ class History:
     # ---------------------------------------------------------------------------- #
 
     @staticmethod
-    def add_beginning(cat, clan_born=False):
+    def add_beginning(cat, df=False, clan_born=False):
         """
         adds joining age and moon info to the cat's history save
         :param cat: cat object
@@ -158,12 +158,20 @@ class History:
             return
         History.check_load(cat)
 
-        cat.history.beginning = {
-            "clan_born": clan_born,
-            "birth_season": game.clan.current_season if clan_born else None,
-            "age": cat.moons,
+        if cat.df is True:
+
+            cat.history.beginning = {
             "moon": game.clan.age
         }
+        else:
+            cat.history.beginning = {
+                "clan_born": clan_born,
+                "birth_season": game.clan.current_season if clan_born else None,
+                "age": cat.moons,
+                "moon": game.clan.age
+            }
+      
+            
 
     @staticmethod
     def add_mentor_facet_influence_strings(cat):

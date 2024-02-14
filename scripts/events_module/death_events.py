@@ -42,6 +42,11 @@ class Death_Events():
         # ---------------------------------------------------------------------------- #
         #                                  kill cats                                   #
         # ---------------------------------------------------------------------------- #
+
+        if cat.dead_for > 0 and cat.df is True:
+            print("df cat met")
+            
+
         try:
             death_cause = (random.choice(final_events))
         except IndexError:

@@ -24,7 +24,7 @@ import statistics
 from scripts.game_structure.game_essentials import game
 from scripts.housekeeping.version import get_version_info, SAVE_VERSION_NUMBER
 from scripts.utility import update_sprite, get_current_season, quit  # pylint: disable=redefined-builtin
-from scripts.cat.cats import Cat, cat_class
+from scripts.cat.cats import Cat, cat_class, BACKSTORIES
 from scripts.cat.pelts import Pelt
 from scripts.cat.names import names
 from scripts.clan_resources.freshkill import Freshkill_Pile, Nutrition
@@ -207,6 +207,7 @@ class Clan():
                               )
         self.instructor.dead = True
         self.instructor.dead_for = randint(20, 200)
+        self.instructor.backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         self.add_cat(self.instructor)
         self.add_to_starclan(self.instructor)
         self.all_clans = []
@@ -217,6 +218,7 @@ class Clan():
         self.demon.df = True
         self.demon.dead = True
         self.demon.dead_for = randint(20, 200)
+        self.demon.backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         self.add_cat(self.demon)
         self.add_to_darkforest(self.demon)
         self.all_clans = []
@@ -789,13 +791,6 @@ class Clan():
             "starting_season"] if "starting_season" in clan_data else 'Newleaf'
         get_current_season()
 
-        game.clan.leader_lives = leader_lives
-        game.clan.leader_predecessors = clan_data["leader_predecessors"]
-
-        game.clan.deputy_predecessors = clan_data["deputy_predecessors"]
-        game.clan.med_cat_predecessors = clan_data["med_cat_predecessors"]
-        game.clan.med_cat_number = clan_data["med_cat_number"]
-
         # Instructor Info
         if clan_data["instructor"] in Cat.all_cats:
             game.clan.instructor = Cat.all_cats[clan_data["instructor"]]
@@ -818,6 +813,13 @@ class Clan():
             game.clan.demon.dead = True
             game.clan.add_cat(game.clan.demon)
             game.clan.demon.df = True
+            
+        game.clan.leader_lives = leader_lives
+        game.clan.leader_predecessors = clan_data["leader_predecessors"]
+
+        game.clan.deputy_predecessors = clan_data["deputy_predecessors"]
+        game.clan.med_cat_predecessors = clan_data["med_cat_predecessors"]
+        game.clan.med_cat_number = clan_data["med_cat_number"]
 
         for name, relation, temper in zip(
                 clan_data["other_clans_names"].split(","),

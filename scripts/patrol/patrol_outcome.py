@@ -15,7 +15,9 @@ from scripts.clan import HERBS
 from scripts.utility import (
     change_clan_relations,
     change_clan_reputation,
-    change_relationship_values, create_new_cat,
+    change_relationship_values,
+    create_new_cat,
+
 )
 from scripts.game_structure.game_essentials import game
 from scripts.cat.skills import SkillPath
@@ -860,7 +862,10 @@ class PatrolOutcome():
             
             for cat in patrol.new_cats[-1]:
                 if cat.dead:
-                    results.append(f"{cat.name}'s ghost now wanders.")
+                    if cat.df and cat.dead_for > 10:
+                        results.append(f"You have met {cat.name}.")
+                    else:
+                        results.append(f"{cat.name}'s ghost now wanders.")
                 elif cat.outside:
                     results.append(f"The patrol met {cat.name}.")
                 else:
@@ -913,7 +918,7 @@ class PatrolOutcome():
         in_patrol_cats = {
             "p_l": patrol.patrol_leader,
             "r_c": patrol.patrol_random_cat,
-            "y_c": game.clan.your_cat,
+            "y_c": game.clan.your_cat
         }
         if self.stat_cat:
             in_patrol_cats["s_c"] = self.stat_cat
@@ -966,6 +971,7 @@ class PatrolOutcome():
         
         # STATUS - must be handled before backstories. 
         status = None
+        
         for _tag in attribute_list:
             match = re.match(r"status:(.+)", _tag)
             if not match:
@@ -973,14 +979,17 @@ class PatrolOutcome():
             
             if match.group(1) in ("newborn", "kitten", "elder", "apprentice", "warrior", 
                                   "mediator apprentice", "mediator", "medicine cat apprentice", 
-                                  "medicine cat"):
+                                  "medicine cat", "deputy", "leader"):
                 status = match.group(1)
-                break
+         
+            break
+                
         
         # SET AGE
         age = None
         for _tag in attribute_list:
             match = re.match(r"age:(.+)", _tag)
+            
             if not match:
                 continue
             
@@ -997,8 +1006,28 @@ class PatrolOutcome():
             if match.group(1) == "has_kits":
                 age = randint(14, 120)
                 break
-                
-        
+
+
+        #status + age for encountered DF cats
+            
+        if "newdfcat" in attribute_list:
+        # gives a random status if none was specified in the patrol. kitten cannot be chosen randomly
+            if status is None:
+                status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
+
+        #and age, dependant on status
+            if status in "kitten":
+                age = randint(1,5)
+            elif status in ["apprentice", "mediator apprentice", "medicine cat apprentice", "queen's apprentice"]:
+                age = randint (6,11)
+            elif status in ["warrior", "medicine cat", "mediator", "queen"]:
+                age = randint (12, 119)
+            elif status in ["deputy", "leader"]:
+                age = randint(25,119)
+            else:
+                age = randint (120, 201)
+            
+
         # CAT TYPES AND BACKGROUND
         if "kittypet" in attribute_list:
             cat_type = "kittypet"
@@ -1008,6 +1037,8 @@ class PatrolOutcome():
             cat_type = "loner"
         elif "clancat" in attribute_list:
             cat_type = "former Clancat"
+        elif "newdfcat" in attribute_list:
+            cat_type = status
         else:
             cat_type = choice(['kittypet', 'loner', 'former Clancat'])
         
@@ -1019,13 +1050,17 @@ class PatrolOutcome():
                 status = "kitten"
         
         # CHOOSE DEFAULT BACKSTORY BASED ON CAT TYPE, STATUS.
-        if status in ("kitten", "newborn"):
-            chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
-        elif status == "medicine cat" and cat_type == "former Clancat":
-            chosen_backstory = choice(["medicine_cat", "disgraced1"])
-        elif status == "medicine cat":
-            chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
+        if "newdfcat" in attribute_list:
+            if status in ("kitten", "apprentice", "mediator", "mediator apprentice", "medicine cat apprentice", "medicine cat", "queen's apprentice", "warrior", "leader", "deputy", "queen", "queen's apprentice", "elder"):
+                    chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         else:
+            if status in ("kitten", "newborn"):
+                chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
+            if status == "medicine cat":
+                if cat_type == "former Clancat":
+                    chosen_backstory = choice(["medicine_cat", "disgraced1"])
+                else:
+                    chosen_backstory = choice(["wandering_healer1", "wandering_healer2"])
             if cat_type == "former Clancat":
                 x = "former_clancat"
             else:
@@ -1061,9 +1096,24 @@ class PatrolOutcome():
             alive = False
             thought = "Explores a new starry world"
         
+        
+        # was the cat met on a df patrol?
+        if "newdfcat" in attribute_list:
+            alive = False
+            outside = False
+            df = True
+            new_name = True
+            if status == "kitten":
+                thought = "Was startled by a new trainee"
+            else:
+                thought = "Is cross with the trainee they just met"
+            
+            
+        
            
         # Now, it's time to generate the new cat
         # This is a bit of a pain, but I can't re-write this function
+        
         new_cats = create_new_cat(Cat,
                                 Relationship,
                                 new_name=new_name,
@@ -1078,6 +1128,7 @@ class PatrolOutcome():
                                 gender=gender,
                                 thought=thought,
                                 alive=alive,
+                                df= True if "newdfcat" in attribute_list else False,
                                 outside=outside,
                                 parent1=parent1.ID if parent1 else None,
                                 parent2=parent2.ID if parent2 else None  
@@ -1139,7 +1190,7 @@ class PatrolOutcome():
         return new_cats
                  
     def _handle_mentor_app(self, patrol:'Patrol') -> str:
-        """Handles mentor inflence on apprentices """
+        """Handles mentor influence on apprentices """
         for cat in patrol.patrol_cats:
             if Cat.fetch_cat(cat.mentor) in patrol.patrol_cats:
                 affect_personality = cat.personality.mentor_influence(Cat.fetch_cat(cat.mentor))

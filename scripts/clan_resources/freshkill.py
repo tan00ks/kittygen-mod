@@ -132,7 +132,8 @@ class Freshkill_Pile():
         pregnant_cats = [cat for cat in living_cats if "pregnant" in cat.injuries and cat.ID not in queen_dict.keys()]
 
         # all normal status cats calculation
-        needed_prey = sum([PREY_REQUIREMENT[cat.status] for cat in living_cats if cat.status not in ["newborn", "kitten"]])
+        # sorry this is so ugly with the DF statuses </3
+        needed_prey = sum([PREY_REQUIREMENT[cat.status] for cat in living_cats if cat.status not in ["newborn", "kitten", "Dark Forest elder", "Dark Forest apprentice", "Dark Forest warrior","Dark Forest medicine cat apprentice", "Dark Forest medicine cat", "Dark Forest queen", "Dark Forest queen's apprentice", "Dark Forest deputy"]])
         # increase the number for sick cats
         if game.clan and game.clan.game_mode == "cruel season":
             sick_cats = [cat for cat in living_cats if cat.not_working() and "pregnant" not in cat.injuries]

@@ -281,7 +281,11 @@ class EventsScreen(Screens):
                     self.display_events = self.misc_events
                     self.update_events_display()
             elif event.key == pygame.K_SPACE:
-                
+                if game.clan.your_cat.moons == 5 and game.clan.your_cat.status == 'kitten':
+                    PickPath('events screen')
+                elif (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled):
+                    DeathScreen('events screen')
+                    return
                 self.events_thread = self.loading_screen_start_work(events_class.one_moon)
 
     def screen_switches(self):
