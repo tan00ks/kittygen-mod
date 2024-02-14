@@ -299,7 +299,8 @@ class TalkScreen(Screens):
             return
         for c in self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"]:
             text = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][c]['text']
-            text = self.adjust_txt(text, self.the_cat)
+            text = self.get_adjusted_txt([text], self.the_cat)
+            text = text[0]
 
             #the background image for the text
             option_bg = pygame_gui.elements.UIImage(scale(pygame.Rect((860, 855 + y_pos), (540, 70))),
@@ -697,11 +698,11 @@ class TalkScreen(Screens):
             if you.ID in cat.relationships:
                 if cat.relationships[you.ID].dislike < 30 and 'hate' in tags:
                     continue
-                if cat.relationships[you.ID].romantic_love < 20 and 'romantic_like' in tags:
+                if cat.relationships[you.ID].romantic_love < 15 and 'romantic_like' in tags:
                     continue
-                if cat.relationships[you.ID].platonic_like < 20 and 'platonic_like' in tags:
+                if cat.relationships[you.ID].platonic_like < 15 and 'platonic_like' in tags:
                     continue
-                if cat.relationships[you.ID].platonic_like < 50 and 'platonic_love' in tags:
+                if cat.relationships[you.ID].platonic_like < 40 and 'platonic_love' in tags:
                     continue
                 if cat.relationships[you.ID].jealousy < 5 and 'jealousy' in tags:
                     continue
@@ -794,6 +795,8 @@ class TalkScreen(Screens):
             tags = item["tags"] if "tags" in item else item[0]
             weights.append(len(tags))
         text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
+        while text_chosen_key not in texts_list.keys():
+            text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
         text = texts_list[text_chosen_key][1]
         new_text = self.get_adjusted_txt(text, cat)
         counter = 0
