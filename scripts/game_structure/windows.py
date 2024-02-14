@@ -1789,7 +1789,7 @@ class ChangeCatToggles(UIWindow):
         self.checkboxes = {}
         
         # Prevent Fading
-        if self.the_cat == game.clan.instructor:
+        if self.the_cat == game.clan.instructor or game.clan.demon:
             box_type = "#checked_checkbox"
             tool_tip = "The afterlife guide can never fade."
         elif self.the_cat.prevent_fading:
@@ -1805,7 +1805,7 @@ class ChangeCatToggles(UIWindow):
                                                           object_id=box_type,
                                                           tool_tip_text=tool_tip)
         
-        if self.the_cat == game.clan.instructor:
+        if self.the_cat == game.clan.instructor or game.clan.demon:
             self.checkboxes["prevent_fading"].disable()
         
         

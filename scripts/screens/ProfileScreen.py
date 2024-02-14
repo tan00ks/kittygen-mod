@@ -1293,11 +1293,21 @@ class ProfileScreen(Screens):
         output = ""
 
         # STATUS
-        if the_cat.outside and not the_cat.exiled and the_cat.status not in ['kittypet', 'loner', 'rogue',
+        if the_cat.outside and not (the_cat.exiled or the_cat.df) and the_cat.status not in ['kittypet', 'loner', 'rogue',
                                                                              'former Clancat']:
             output += "<font color='#FF0000'>lost</font>"
         elif the_cat.exiled:
             output += "<font color='#FF0000'>exiled</font>"
+        elif the_cat.df:
+            if game.settings['dark mode']:
+                output += "<font color='#FF0000' >" + "Dark Forest "+ the_cat.status + "</font>"
+            else:
+                output += "<font color='#950000' >" + "Dark Forest "+ the_cat.status + "</font>"
+        elif the_cat.dead and not the_cat.df and not the_cat.outside:
+            if game.settings['dark mode']:
+                output += "<font color ='#7995FF'>" "StarClan " + the_cat.status + "</font>"
+            else:
+                output += "<font color ='#2B3DC3'>" "StarClan " + the_cat.status + "</font>"
         else:
             output += the_cat.status
 
@@ -1635,12 +1645,15 @@ class ProfileScreen(Screens):
 
         beginning = History.get_beginning(self.the_cat)
         if beginning:
-            if beginning['clan_born']:
-                text += " {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} born on Moon " + str(
-                    beginning['moon']) + " during " + str(beginning['birth_season']) + "."
+            if self.the_cat.df == False:
+                if beginning['clan_born']:
+                    text += " {PRONOUN/m_c/subject/CAP} {VERB/m_c/were/was} born on Moon " + str(
+                        beginning['moon']) + " during " + str(beginning['birth_season']) + "."
+                else:
+                    text += " {PRONOUN/m_c/subject/CAP} joined the Clan on Moon " + str(
+                        beginning['moon']) + " at the age of " + str(beginning['age']) + " Moons."
             else:
-                text += " {PRONOUN/m_c/subject/CAP} joined the Clan on Moon " + str(
-                    beginning['moon']) + " at the age of " + str(beginning['age']) + " Moons."
+                text += "<br>You met {PRONOUN/m_c/object} on Moon " + str(beginning['moon']) + "."
 
         text = process_text(text, cat_dict)
         if "o_c" in text:

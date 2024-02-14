@@ -277,6 +277,7 @@ def create_new_cat(Cat,
                    gender:str=None,
                    thought:str='Is looking around the camp with wonder',
                    alive:bool=True,
+                   df:bool=False,
                    outside:bool=False,
                    parent1:str=None,
                    parent2:str=None
@@ -378,6 +379,7 @@ def create_new_cat(Cat,
 
             # now we make the cats
             if new_name:  # these cats get new names
+                    
                 if choice([1, 2]) == 1:  # adding suffix to OG name
                     spaces = name.count(" ")
                     if spaces > 0:
@@ -390,6 +392,7 @@ def create_new_cat(Cat,
                                   prefix=name,
                                   status=status,
                                   gender=_gender,
+                                  df=df,
                                   backstory=backstory,
                                   parent1=parent1,
                                   parent2=parent2)
@@ -397,6 +400,7 @@ def create_new_cat(Cat,
                     new_cat = Cat(moons=age,
                                   status=status,
                                   gender=_gender,
+                                  df=df,
                                   backstory=backstory,
                                   parent1=parent1,
                                   parent2=parent2)
@@ -407,6 +411,7 @@ def create_new_cat(Cat,
                               suffix="",
                               status=status,
                               gender=_gender,
+                              df=df,
                               backstory=backstory,
                               parent1=parent1,
                               parent2=parent2)
@@ -414,10 +419,6 @@ def create_new_cat(Cat,
         # give em a collar if they got one
         if accessory:
             new_cat.pelt.accessories.append(accessory)
-
-        # give apprentice aged cat a mentor
-        if new_cat.age == 'adolescent':
-            new_cat.update_mentor()
 
         # Remove disabling scars, if they generated.
         not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 
@@ -465,6 +466,14 @@ def create_new_cat(Cat,
         if not alive:
             new_cat.die()
 
+        if df:
+            new_cat.df = True
+        else:
+        # give apprentice aged cat a mentor
+        # this is in a weird spot but DF cats were getting clancat mentors otherwise
+            if new_cat.age == 'adolescent':
+                new_cat.update_mentor()
+
         # newbie thought
         new_cat.thought = thought
 
@@ -474,11 +483,17 @@ def create_new_cat(Cat,
         history = History()
         history.add_beginning(new_cat)
 
+        if new_cat.df:
+            new_cat.dead_for = randint(90,190)
+            new_cat.dead = True
+            new_cat.status = status
+     
+
         # create relationships
         new_cat.create_relationships_new_cat()
         # Note - we always update inheritance after the cats are generated, to
-        # allow us to add parents. 
-        #new_cat.create_inheritance_new_cat() 
+        # allow us to add parents.
+        #new_cat.create_inheritance_new_cat()
 
     return created_cats
 
@@ -496,17 +511,17 @@ def create_outside_cat(Cat, status, backstory, alive=True, thought=None):
         name = choice(names.names_dict["loner_names"])
     elif status in ['loner', 'rogue']:
         name = choice(names.names_dict["loner_names"] +
-                      names.names_dict["normal_prefixes"])
+                    names.names_dict["normal_prefixes"])
     elif status == 'former Clancat':
         name = choice(names.names_dict["normal_prefixes"])
         suffix = choice(names.names_dict["normal_suffixes"])
     else:
         name = choice(names.names_dict["loner_names"])
     new_cat = Cat(prefix=name,
-                  suffix=suffix,
-                  status=status,
-                  gender=choice(['female', 'male']),
-                  backstory=backstory)
+                suffix=suffix,
+                status=status,
+                gender=choice(['female', 'male']),
+                backstory=backstory)
     if status == 'kittypet':
         new_cat.pelt.accessories.append(choice(Pelt.collars))
     new_cat.outside = True
@@ -521,6 +536,7 @@ def create_outside_cat(Cat, status, backstory, alive=True, thought=None):
     # (this function will handle, that the cat only knows other outsiders)
     new_cat.create_relationships_new_cat()
     new_cat.create_inheritance_new_cat()
+
 
     game.clan.add_cat(new_cat)
     game.clan.add_to_outside(new_cat)
@@ -848,6 +864,7 @@ def adjust_list_text(list_of_items):
     :param list_of_items: the list of items you want converted
     :return: the new string
     """
+
     if len(list_of_items) == 1:
         insert = f"{list_of_items[0]}"
     elif len(list_of_items) == 2:

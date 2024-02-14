@@ -288,9 +288,11 @@ class Cat():
 
         # backstory
         if self.backstory is None:
-            self.backstory = 'clanborn'
+           self.backstory = 'clanborn'
         else:
             self.backstory = self.backstory
+        
+        
         
 
 
@@ -466,7 +468,9 @@ class Cat():
         if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled) and body != None:
             self.grief(body)
 
-        if not self.outside:
+        if not self.outside and self.status not in ["loner", "kittypet", "rogue"]:
+            #^^ seems redundant but fixes a bug where, if following the DF before the mc 
+            # is born, and mc is not clanborn, their birth parent will be in both the DF and UR
             Cat.dead_cats.append(self)
             if game.clan.followingsc is False:
                 self.df = True
@@ -1167,7 +1171,7 @@ class Cat():
                     continue
                 if "unknown_blessing" in tags:
                     continue
-                if "guide" in tags and giver_cat != game.clan.instructor or game.clan.demon:
+                if "guide" in tags and giver_cat != (game.clan.instructor or game.clan.demon):
                     continue
                 if game.clan.age != 0 and "new_clan" in tags:
                     continue
@@ -2079,7 +2083,7 @@ class Cat():
             print("Everything is terrible!! (new_mentor {new_mentor} is a Cat D:)")
             return
         # Check if cat can have a mentor
-        illegible_for_mentor = self.dead or self.outside or self.exiled or self.status not in ["apprentice",
+        illegible_for_mentor = self.dead or self.outside or self.exiled or self.dead_for > 1 or self.status not in ["apprentice",
                                                                                                "mediator apprentice",
                                                                                                "medicine cat apprentice",
                                                                                                "queen's apprentice"]

@@ -627,6 +627,7 @@ class Patrol():
             if contains_special_date_tag(patrol.tags):
                 if not special_date or special_date.patrol_tag not in patrol.tags:
                     continue
+                
 
             if not (patrol.min_cats <= len(self.patrol_cats) <= patrol.max_cats):
                 continue
@@ -1106,6 +1107,8 @@ class Patrol():
             else:
                 names = ", ".join([str(x.name) for x in new_cats[:-1]]) +  f", and {new_cats[1].name}"
                 pronoun = Cat.default_pronouns[0] # They/them for muliple cats
+            
+
             
             replace_dict[f"n_c:{i}"] = (names, pronoun)
         
