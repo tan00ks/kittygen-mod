@@ -90,10 +90,13 @@ class EventsScreen(Screens):
             pass
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.timeskip_button and (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled) and not game.switches['continue_after_death']:
-                    DeathScreen('events screen')
-                    return
+                DeathScreen('events screen')
+                return
+            elif self.death_button and event.ui_element == self.death_button:
+                DeathScreen('events screen')
+                return
             if event.ui_element == self.timeskip_button and game.clan.your_cat.moons == 5 and game.clan.your_cat.status == 'kitten':
-                    PickPath('events screen')
+                PickPath('events screen')
             elif event.ui_element == self.you or ("you" in self.display_events_elements and event.ui_element == self.display_events_elements["you"]):
                 game.switches['cat'] = game.clan.your_cat.ID
                 self.change_screen("profile screen")
@@ -340,7 +343,7 @@ class EventsScreen(Screens):
         self.timeskip_button = UIImageButton(scale(pygame.Rect((620, 436), (360, 60))), "", object_id="#timeskip_button"
                                              , manager=MANAGER)
 
-        self.death_button = UIImageButton(scale(pygame.Rect((1020, 430), (68, 68))), "", object_id="#warrior"
+        self.death_button = UIImageButton(scale(pygame.Rect((1020, 430), (68, 68))), "", object_id="#warrior", tool_tip_text="Revive"
                                              , manager=MANAGER)
         self.death_button.hide()
 

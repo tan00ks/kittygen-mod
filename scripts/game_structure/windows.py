@@ -1361,7 +1361,7 @@ class PickPath(UIWindow):
                 
 class DeathScreen(UIWindow):
     def __init__(self, last_screen):
-        super().__init__(scale(pygame.Rect((500, 400), (750, 500))),
+        super().__init__(scale(pygame.Rect((400, 400), (950, 500))),
                          window_display_title='You have died',
                          object_id='#game_over_window',
                          resizable=False)
