@@ -61,6 +61,7 @@ class ChooseRebornScreen(Screens):
                     self.update_selected_cat()
 
                     self.change_cat(self.selected_cat)
+                    game.switches['continue_after_death'] = False
                     # self.update_buttons()
             elif event.ui_element == self.back_button:
                 self.change_screen('events screen')

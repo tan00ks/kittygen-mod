@@ -1401,13 +1401,21 @@ class DeathScreen(UIWindow):
             container=self,
             tool_tip_text='Revive'
         )
+
+        self.mediator_button3 = UIImageButton(
+            scale(pygame.Rect((670, 190), (150, 150))),
+            "",
+            object_id="#leader_ceremony_button",
+            container=self,
+            tool_tip_text='Continue'
+        )
         
 
         self.begin_anew_button.enable()
         self.mediator_button.enable()
         if game.clan.your_cat.revives < 5:
             self.mediator_button2.enable()
-
+        self.mediator_button3.enable()
 
     def process_event(self, event):
         super().process_event(event)
@@ -1417,20 +1425,24 @@ class DeathScreen(UIWindow):
                 game.last_screen_forupdate = None
                 game.switches['window_open'] = False
                 game.switches['cur_screen'] = 'start screen'
+                game.switches['continue_after_death'] = False
                 self.begin_anew_button.kill()
                 self.pick_path_message.kill()
                 self.mediator_button.kill()
                 self.mediator_button2.kill()
+                self.mediator_button3.kill()
                 self.kill()
                 game.all_screens['events screen'].exit_screen()
             elif event.ui_element == self.mediator_button:
                 game.last_screen_forupdate = None
                 game.switches['window_open'] = False
                 game.switches['cur_screen'] = "choose reborn screen"
+                game.switches['continue_after_death'] = False
                 self.begin_anew_button.kill()
                 self.pick_path_message.kill()
                 self.mediator_button.kill()
                 self.mediator_button2.kill()
+                self.mediator_button3.kill()
                 self.kill()
                 game.all_screens['events screen'].exit_screen()
             elif event.ui_element == self.mediator_button2:
@@ -1440,6 +1452,7 @@ class DeathScreen(UIWindow):
                 game.clan.your_cat.dead_for = 0
                 game.clan.your_cat.moons+=1
                 game.clan.your_cat.update_mentor()
+                game.switches['continue_after_death'] = False
                 if game.clan.your_cat.outside:
                     game.clan.add_to_clan(game.clan.your_cat)
                 if game.clan.your_cat.ID in game.clan.starclan_cats:
@@ -1461,6 +1474,18 @@ class DeathScreen(UIWindow):
                 self.pick_path_message.kill()
                 self.mediator_button.kill()
                 self.mediator_button2.kill()
+                self.mediator_button3.kill()
+                self.kill()
+            elif event.ui_element == self.mediator_button3:
+                game.last_screen_forupdate = None
+                game.switches['window_open'] = False
+                game.switches['cur_screen'] = "events screen"
+                game.switches['continue_after_death'] = True
+                self.begin_anew_button.kill()
+                self.pick_path_message.kill()
+                self.mediator_button.kill()
+                self.mediator_button2.kill()
+                self.mediator_button3.kill()
                 self.kill()
                 
 class DeputyScreen(UIWindow):

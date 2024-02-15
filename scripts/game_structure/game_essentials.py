@@ -139,6 +139,7 @@ class Game():
         'show_history_moons': False,
         'fps': 30,
         'windows_dict': [],
+        'continue_after_death': False
     }
     all_screens = {}
     cur_events = {}

@@ -767,6 +767,7 @@ class Events:
         game.cur_events_list.append(Single_Event(birth_txt))
         self.w_done = False
         game.clan.your_cat.age = "newborn"
+        game.switches['continue_after_death'] = False
         
     def get_living_cats(self):
         living_cats = []

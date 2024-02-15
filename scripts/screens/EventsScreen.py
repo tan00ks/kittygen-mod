@@ -45,6 +45,7 @@ class EventsScreen(Screens):
         self.events_list_box = None
         self.toggle_borders_button = None
         self.timeskip_button = None
+        self.death_button = None
         self.freshkill_pile_button = None
         self.events_frame = None
         self.clan_age = None
@@ -88,7 +89,7 @@ class EventsScreen(Screens):
         if game.switches['window_open']:
             pass
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
-            if event.ui_element == self.timeskip_button and (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled):
+            if event.ui_element == self.timeskip_button and (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled) and not game.switches['continue_after_death']:
                     DeathScreen('events screen')
                     return
             if event.ui_element == self.timeskip_button and game.clan.your_cat.moons == 5 and game.clan.your_cat.status == 'kitten':
@@ -339,6 +340,13 @@ class EventsScreen(Screens):
         self.timeskip_button = UIImageButton(scale(pygame.Rect((620, 436), (360, 60))), "", object_id="#timeskip_button"
                                              , manager=MANAGER)
 
+        self.death_button = UIImageButton(scale(pygame.Rect((1020, 430), (68, 68))), "", object_id="#warrior"
+                                             , manager=MANAGER)
+        self.death_button.hide()
+
+        if game.switches['continue_after_death']:
+            self.death_button.show()
+
         # Sets up the buttons to switch between the event types.
         self.all_events_button = UIImageButton(
             scale(pygame.Rect((120, 570), (300, 60))),
@@ -416,6 +424,8 @@ class EventsScreen(Screens):
 
         self.timeskip_button.kill()
         del self.timeskip_button
+        if self.death_button:
+            self.death_button.kill()
         if game.clan.game_mode != "classic":
             self.freshkill_pile_button.kill()
             del self.freshkill_pile_button
@@ -623,6 +633,11 @@ class EventsScreen(Screens):
         for ele in self.cat_profile_buttons:
             ele.kill()
         self.cat_profile_buttons = []
+
+        if game.switches['continue_after_death']:
+            self.death_button.show()
+        else:
+            self.death_button.hide()
 
         # In order to set-set the scroll-bar postion, we have to remake the scrolling container
         self.event_container.kill()
