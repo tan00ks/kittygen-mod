@@ -2996,6 +2996,7 @@ class Events:
             if random.randint(1,1) == 1 and not game.clan.second_disaster and current_disaster["secondary_disasters"]:
                 game.clan.second_disaster = random.choice(list(current_disaster["secondary_disasters"].keys()))
                 secondary_event_string = random.choice(current_disaster["secondary_disasters"][game.clan.second_disaster]["trigger_events"])
+                secondary_event_string = ongoing_event_text_adjust(Cat, secondary_event_string)
                 game.cur_events_list.append(
                         Single_Event(secondary_event_string, "alert"))
         else:
@@ -3019,6 +3020,7 @@ class Events:
         current_moon = game.clan.second_disaster_moon
         if current_moon > 0 and current_moon < current_disaster["duration"]:
             event_string = random.choice(current_disaster["progress_events"]["moon" + str(current_moon)])
+            event_string = ongoing_event_text_adjust(Cat, event_string)
             game.clan.second_disaster_moon += 1
             game.cur_events_list.append(
                         Single_Event(event_string, "alert"))
@@ -3026,6 +3028,7 @@ class Events:
             event_string = random.choice(current_disaster["conclusion_events"])
             game.clan.second_disaster_moon = 0
             game.clan.second_disaster = ""
+            event_string = ongoing_event_text_adjust(Cat, event_string)
             game.cur_events_list.append(
                         Single_Event(event_string, "alert"))
 
