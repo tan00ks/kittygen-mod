@@ -29,11 +29,11 @@
                 "weight": 20
             },
             {
-                "text": "A shadow shoots out of the trees, right towards s_c. But s_c is quick-- they spin around, ducking underneath their assailant and then jumping up to pin them to the ground. Claws on their attackers throat, they snarl, but the attacker just blinks up at them, looking amused. They compliment s_c on their skills, introduce themself, and remark that the two of them should train together sometime.",
+                "text": "A shadow shoots out of the trees, right towards you. But you're quick-- you spin around, ducking underneath your assailant and jumping up to pin them to the ground. Claws on your attackers throat, you snarl, but the attacker just blinks up at you, amused. They compliment you on your skills, introduce themself, and remark that the two of you should train together sometime.",
                 "exp": 30,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat"]
+                    ["newdfcat", "status:warrior"]
                 ],
                 "stat_trait": [
                     "ambitious",
@@ -49,7 +49,7 @@
                 "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
             },
             {
-                "text": "s_c swerves around, just as a cat lunges from the shadows and aims their claws at their pelt. They react faster than the attacker can, ducking the blow, before retailiating with a rake to their belly. s_c watches as they tumble to the ground from the attack. It seems they've learned a thing or two here.",
+                "text": "You swerve around, just as a cat lunges from the shadows and aims their claws at your pelt. You react faster than the attacker can, ducking the blow, before retailiating with a rake to their belly. You watch as they tumble to the ground from the attack. It seems you've learned a thing or two here.",
                 "exp": 30,
                 "weight": 20,
                 "stat_trait": [
@@ -350,7 +350,7 @@
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
-        "weight": 20,
+        "weight": 15,
         "intro_text": "You find a cat trapped in the Dark Forest during a dream. Stars glitter in their pelt, shimmering against the muck of the shadows. They're scared and don't know the way out.",
         "decline_text": "You reassure the cat that this is only a dream and they'll wake up soon, leaving them to find their own way.",
         "chance_of_success": 50,
