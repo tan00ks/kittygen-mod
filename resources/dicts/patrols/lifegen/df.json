@@ -28,23 +28,43 @@
                 "exp": 20,
                 "weight": 20
             },
-        {
-            "text": "s_c swerves around, just as a cat lunges from the shadows and aims their claws at their pelt. They react faster than the attacker can, ducking the blow, before retailiating with a rake to their belly. s_c watches as they tumble to the ground from the attack. It seems they've learned a thing or two here.",
-            "exp": 30,
-            "weight": 20,
-            "stat_trait": [
-                "ambitious",
-                "bloodthirsty",
-                "bold",
-                "confident",
-                "daring",
-                "fierce",
-                "vengeful",
-                "flexible",
-                "careful"
-            ],
-            "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
-        }
+            {
+                "text": "A shadow shoots out of the trees, right towards s_c. But s_c is quick-- they spin around, ducking underneath their assailant and then jumping up to pin them to the ground. Claws on their attackers throat, they snarl, but the attacker just blinks up at them, looking amused. They compliment s_c on their skills, introduce themself, and remark that the two of them should train together sometime.",
+                "exp": 30,
+                "weight": 5,
+                "new_cat": [
+                    ["newdfcat"]
+                ],
+                "stat_trait": [
+                    "ambitious",
+                    "bloodthirsty",
+                    "bold",
+                    "confident",
+                    "daring",
+                    "fierce",
+                    "vengeful",
+                    "flexible",
+                    "careful"
+                ],
+                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
+            },
+            {
+                "text": "s_c swerves around, just as a cat lunges from the shadows and aims their claws at their pelt. They react faster than the attacker can, ducking the blow, before retailiating with a rake to their belly. s_c watches as they tumble to the ground from the attack. It seems they've learned a thing or two here.",
+                "exp": 30,
+                "weight": 20,
+                "stat_trait": [
+                    "ambitious",
+                    "bloodthirsty",
+                    "bold",
+                    "confident",
+                    "daring",
+                    "fierce",
+                    "vengeful",
+                    "flexible",
+                    "careful"
+                ],
+                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
+            }
         ],
         "fail_outcomes": [
             {
@@ -149,6 +169,14 @@
                 "text": "You accept the training and, despite the harsh methods, manage to learn some valuable skills.",
                 "exp": 15,
                 "weight": 20
+            },
+            {
+                "text": "You accept the training, and the ghostly warrior is impressed that you can keep up with them.",
+                "exp": 15,
+                "weight": 5,
+                "new_cat": [
+                    ["newdfcat"]
+                ]
             }
         
         ],
@@ -265,6 +293,14 @@
                 "weight": 20
             },
             {
+                "text": "You step forward to explore, but a small Dark Forest cat bounds out of the shadows to stop you. They tell you that this place is dangerous, and that the truths hidden here are not for the eyes of living cats. They turn you away before you can get a good look, and you can feel their glowing eyes following you for the rest of the night.",
+                "exp": 5,
+                "weight": 40,
+                "new_cat": [
+                    ["newdfcat", "status:apprentice"]
+                ]
+            },
+            {
                 "text": "You decide to explore the area and manage to uncover hidden wisdom from past battles that might help your clan in the future. What luck!",
                 "exp": 30,
                 "weight": 20,
@@ -375,8 +411,22 @@
         "weight": 30,
         "intro_text": "While walking through the Dark Forest, you slip, falling into a river of inky black water.",
         "decline_text": "You gasp, waking up in your nest. That was a horrible dream.",
-        "chance_of_success": 60,
+        "chance_of_success": 70,
         "success_outcomes": [
+            {
+                "text": "You try to pull yourself up, but the inky depths are stronger than you. Your head slips under, and your limbs start to burn. Just as you decide to give in and accept your fate, you feel a tug from above and air hits your fur once more. All you can see of your saviour as you open your eyes is their ghostly hindquarters as they vanish into the shadows once more.",
+                "exp": 20,
+                "weight": 10
+            },
+
+            {
+                "text": "You try to pull yourself up, but the inky depths are stronger than you. Your head slips under, and your limbs start to burn. Just as you decide to give in and accept your fate, you feel a tug from above and air hits your fur once more. The cat lays you on solid ground once more, and when you open your eyes, they introduce themself with a smile.",
+                "exp": 20,
+                "weight": 5,
+                "new_cat": [
+                    ["newdfcat"]
+                ]
+            },
             {
                 "text": "You stay calm, holding your breath and treading water until you reach the surface again.",
                 "exp": 20,
@@ -931,6 +981,95 @@
                     "reg_death": "m_c died after being left for dead in the Dark Forest.",
                     "lead_death": "{VERB/m_c/were/was} left for dead in the Dark Forest "
                 }
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_og12",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border",
+            "new_cat"
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 1,
+        "max_cats": 3,
+        "min_max_status": {},
+        "weight": 20,
+        "intro_text": "Feeling curious one night, you venture into a far corner of the Dark Forest that you've never been to before. The air here is heavy and uninviting.",
+        "decline_text": "A twig snaps beneath your paws and you jump, instantly turning around to run for familiar territory.",
+        "chance_of_success": 40,
+        "success_outcomes": [
+            {
+                "text": "From behind a tree, you hear a small <i>psst</i>. You turn towards the noise, defensively, but sheathe your claws when you see a small kit wobble out into the open. They tell you that they're lost, and you lead the little kitten back into a more populated area of the Dark Forest, where they run up to a very thankful Dark Forest queen.",
+                "exp": 30,
+                "weight": 5,
+                "new_cat": [
+                    ["newdfcat", "status:kitten"]
+                ]
+            },
+            {
+                "text": "As you round a corner, you find a group of Dark Forest warriors sparring. You're nervous at first, but when they notice you, they invite you to train with them!",
+                "exp": 30,
+                "weight": 20
+            },
+            {
+                "text": "You wander through the new area uninterrupted. Though it's foggy and rotting, it still keeps your interest, and you have a good time exploring the abandoned corner of the forest.",
+                "exp": 30,
+                "weight": 30
+            },
+            {
+                "text": "You discover a hollow full of herbs. You wonder how they're even to grow here, but you don't question it as you pick a familiar one and create a poultice to soothe a scratch of yours from earlier in the night. When you wake up, the area is completely healed!",
+                "exp": 30,
+                "weight": 10
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "With your head to the ground, you don't notice the Dark Forest warrior attacking from above. They clamp your jaws shut with a paw as you try to scream and hiss a quick and malicious warning in your ear before letting you go. It seems that, next time, you may not be so lucky.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["battle_injury"],
+                        "scars": ["ONE"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred by a Dark Forest warrior.",
+                    "reg_death": "m_c was killed by a Dark Forest warrior.",
+                    "lead_death": "{VERB/m_c/were/was} killed by a Dark Forest warrior"
+                }
+            },
+            {
+                "text": "The area around you is grey and rotting. Just as you're about to turn back, the ground buckles beneath you and you fall into a sinkhole. You're luckily able to pull yourself out, but your legs still shake beneath you when you wake up.",
+                "exp": 20,
+                "weight": 20
+            },
+            {
+                "text": "Though you really hope to come across something interesting, the area seems abandoned and rotting. Maybe, if you come back later, you'll find something new.",
+                "exp": 0,
+                "weight": 40
+            },
+            {
+                "text": "You turn a corner to keep exploring, and your eyes land on a large group of Dark Forest cats in a huddle. Feeling unwelcome, you instantly turn to run, but the group has already noticed you. The ghostly warriors are on your heels in an instant, and the last thing you feel is a dozen pairs of claws tearing into your fur. When your clanmates find you in the morning, your nest is in tatters and your body cannot be salvaged.",
+                "exp": 0,
+                "weight": 3,
+                "dead_cats": ["y_c"],
+                "history_text": {
+                    "reg_death": "{VERB/m_c/were/was} murdered in the Dark Forest.",
+                    "lead_death": "{VERB/m_c/were/was} murdered in the Dark Forest."
+                }
+                
             }
         ]
     }

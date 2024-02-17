@@ -1106,7 +1106,7 @@ class PatrolOutcome():
             if status == "kitten":
                 thought = "Was startled by a new trainee"
             else:
-                thought = "Is cross with the trainee they just met"
+                thought = "Is curious about the trainee they just met"
             
             
         
