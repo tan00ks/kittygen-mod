@@ -175,8 +175,18 @@
                 "exp": 15,
                 "weight": 5,
                 "new_cat": [
-                    ["newdfcat"]
-                ]
+                    ["newdfcat", "status:warrior"]
+                ],
+                "stat_trait": [
+                    "ambitious",
+                    "bloodthirsty",
+                    "bold",
+                    "confident",
+                    "daring",
+                    "fierce",
+                    "vengeful"
+                ],
+                "stat_skill": ["FIGHTER,1", "SENSE,1"]
             }
         
         ],
@@ -350,10 +360,10 @@
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {},
-        "weight": 15,
+        "weight": 10,
         "intro_text": "You find a cat trapped in the Dark Forest during a dream. Stars glitter in their pelt, shimmering against the muck of the shadows. They're scared and don't know the way out.",
         "decline_text": "You reassure the cat that this is only a dream and they'll wake up soon, leaving them to find their own way.",
-        "chance_of_success": 50,
+        "chance_of_success": 30,
         "success_outcomes": [
             {
                 "text": "You guide the cat through the eerie forest, successfully leading them out. They wake up grateful for your help.",
@@ -364,7 +374,10 @@
             {
                 "text": "There's no need for them to be afraid. You coax them into joining you and your mentor. Although they are hesitant at first, you soon meet them on more and more nights, now confident with a pelt of muck.",
                 "exp": 20,
-                "weight": 20
+                "weight": 20,
+                "new_cat": [
+                    ["newdfcat", "oldstarclan"]
+                ]
             }
         ],
         "fail_outcomes": [
@@ -415,13 +428,13 @@
         "success_outcomes": [
             {
                 "text": "You try to pull yourself up, but the inky depths are stronger than you. Your head slips under, and your limbs start to burn. Just as you decide to give in and accept your fate, you feel a tug from above and air hits your fur once more. All you can see of your saviour as you open your eyes is their ghostly hindquarters as they vanish into the shadows once more.",
-                "exp": 20,
-                "weight": 10
+                "exp": 10,
+                "weight": 20
             },
 
             {
                 "text": "You try to pull yourself up, but the inky depths are stronger than you. Your head slips under, and your limbs start to burn. Just as you decide to give in and accept your fate, you feel a tug from above and air hits your fur once more. The cat lays you on solid ground once more, and when you open your eyes, they introduce themself with a smile.",
-                "exp": 20,
+                "exp": 10,
                 "weight": 5,
                 "new_cat": [
                     ["newdfcat"]

@@ -121,7 +121,10 @@
     "dead6": "This cat had a lifelong illness that eventually took their life.",
     "dead7": "This cat was executed by the Clan leader due to their crimes.",
     "dead8": "This cat can't remember how they died.",
-    "dead9": "This cat attempted to murder one of their clanmates, but was killed in the ensuing fight."
+    "dead9": "This cat attempted to murder one of their clanmates, but was killed in the ensuing fight.",
+    "oldstarclan1": "This cat snuck into StarClan when they died, but was discovered and exiled back to the Dark Forest after many years.",
+    "oldstarclan2": "This cat was originally from StarClan, but after getting lost in the Dark Forest one day, they were unable to find their way back. Now, they belong to the Place of No Stars, resenting their StarClan family who never came to find them.",
+    "oldstarclan3" : "This cat belonged to StarClan once, but got lost outside of StarClan territory one day and has been bitterly wandering the Dark Forest ever since."
   },
   "backstory_display": {
     "clan_founder_backstories": "Clan founder",
@@ -147,7 +150,10 @@
       "dead6",
       "dead7",
       "dead8",
-      "dead9"
+      "dead9",
+      "oldstarclan1",
+      "oldstarclan2",
+      "oldstarclan3"
     ],
     "clan_founder_backstories": [
       "clan_founder",
