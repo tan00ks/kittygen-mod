@@ -1104,7 +1104,6 @@ class PatrolOutcome():
         if "newdfcat" in attribute_list:
             alive = False
             outside = False
-            df = True
             new_name = True
             if "oldstarclan" in attribute_list:
                 thought ="Is having fun with their new Dark Forest friends"
