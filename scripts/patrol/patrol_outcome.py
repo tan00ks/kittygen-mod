@@ -1050,9 +1050,12 @@ class PatrolOutcome():
                 status = "kitten"
         
         # CHOOSE DEFAULT BACKSTORY BASED ON CAT TYPE, STATUS.
+                
         if "newdfcat" in attribute_list:
-            if status in ("kitten", "apprentice", "mediator", "mediator apprentice", "medicine cat apprentice", "medicine cat", "queen's apprentice", "warrior", "leader", "deputy", "queen", "queen's apprentice", "elder"):
-                    chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
+            if "oldstarclan" in attribute_list:
+                    chosen_backstory = choice(["oldstarclan1", "oldstarclan2", "oldstarclan3"])
+            else:
+                chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
         else:
             if status in ("kitten", "newborn"):
                 chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
@@ -1101,12 +1104,14 @@ class PatrolOutcome():
         if "newdfcat" in attribute_list:
             alive = False
             outside = False
-            df = True
             new_name = True
-            if status == "kitten":
-                thought = "Was startled by a new trainee"
-            else:
-                thought = "Is cross with the trainee they just met"
+            if "oldstarclan" in attribute_list:
+                thought ="Is having fun with their new Dark Forest friends"
+            else: 
+                if status == "kitten":
+                    thought = "Was startled by a new trainee"
+                else:
+                    thought = "Is curious about the trainee they just met"
             
             
         

@@ -251,13 +251,13 @@ class Pelt():
         self.skin = skin
 
     @staticmethod
-    def generate_new_pelt(gender:str, parents:tuple=(), age:str="adult"):
+    def generate_new_pelt(gender:str, parents:tuple=(), age:str="adult", dead_for=0):
         new_pelt = Pelt()
         
         pelt_white = new_pelt.init_pattern_color(parents, gender)
         new_pelt.init_white_patches(pelt_white, parents)
         new_pelt.init_sprite()
-        new_pelt.init_scars(age)
+        new_pelt.init_scars(age, dead_for)
         new_pelt.init_accessories(age)
         new_pelt.init_eyes(parents)
         new_pelt.init_pattern()
@@ -685,17 +685,20 @@ class Pelt():
         self.cat_sprites['young adult'] = self.cat_sprites['adult']
         self.cat_sprites['senior adult'] = self.cat_sprites['adult']
 
-    def init_scars(self, age):
+    def init_scars(self, age, dead_for):
         if age == "newborn":
             return
-        
-        if age in ['kitten', 'adolescent']:
-            scar_choice = random.randint(0, 50)
-        elif age in ['young adult', 'adult']:
-            scar_choice = random.randint(0, 20)
+        if dead_for > 10:
+            scar_choice = 1
         else:
-            scar_choice = random.randint(0, 15)
-            
+           
+            if age in ['kitten', 'adolescent']:
+                scar_choice = random.randint(0, 50)
+            elif age in ['young adult', 'adult']:
+                scar_choice = random.randint(0, 20)
+            else:
+                scar_choice = random.randint(0, 15)
+
         if scar_choice == 1:
             self.scars.append(choice([
                 choice(Pelt.scars1),
