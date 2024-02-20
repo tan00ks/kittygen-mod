@@ -116,7 +116,22 @@
     "apprentice introspective": [],
     "apprentice neurotic": [],
     "apprentice silly": [],
-    "apprentice stable": [],
+    "apprentice stable": [
+        "You hope this headache is short lived so you can get back to training. You've already been stuck in your nest long enough.",
+        "You groom your fur carefully hoping to impress your crush.",
+        "You show the kits how to build a little cat made of wood and mud, introducing a new toy to the nursery. Soon the queens are chasing you up on how to make them.",
+        "m_n is checking up about how you feel regarding your progress. A new trust is established between you and your mentor as you feel comfortable being honest in their presence.",
+        "You take the blame of an accident that resulted in r_a getting hurt despite the fact it wasn't your fault, they make sure to make it up to you later.",
+        "You find a strange twoleg object shaped like an egg with strange buttons on it. You and the other apprentices ponder the use of this strange device and its little character trapped behind the screen.",
+        "In order to prove a point to the kits that eating bugs is bad you eat one yourself and get really sick because of it. The kits now understand why they shouldn't eat bugs.",
+        "You and m_n have a leaf race at the nearby river. m_n comments how your antics make them feel like an apprentice again, the two of you grow closer thanks to this expierence.",
+        "You tag along with r_d to a meeting between c_nClan and o_cClan, it's a new expierence that you treasure. The mediator reminding you apprentices don't normally get this privilege. You intend to make the most of the expirence.",
+        "You help r_m with their garden, they give you a small bouquet as a thank you. You decide to use it to decorate the apprentice den, soon you and your denmates are planting your own garden to make the apprentice den look the best in c_nClan.",
+        "y_p cleans your nest while you're out training with m_n, you come back to the other apprentices snickering at you. You're embarrassed but can't help but feel warm at the actions of your parent.",
+        "With a cautious gaze, you watch as m_n talks with your parents. Anxiety tugs at your chest... Oh StarClan, what are they saying?",
+        "You leave some prey you caught in y_p's nest as a gift. Later they come up to you and gently rest their head on yours, you snuggle into their warm embrace."
+        
+    ],
     "apprentice sweet": [],
     "apprentice unabashed": [],
     "apprentice unlawful": [
@@ -124,6 +139,7 @@
     ],
     "apprentice rare": [
         "While hunting with r_a, you catch a squirrel and find a whole nest after looking in the tree they came from! You and r_a bring back plenty of prey.",
-        "You wonder if becoming a warrior is truly the path you are destined for."
+        "You wonder if becoming a warrior is truly the path you are destined for.",
+        "After an arguement between you and m_n, you find yourself crying yourself to sleep that night."
     ]
 }
