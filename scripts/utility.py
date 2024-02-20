@@ -438,7 +438,7 @@ def create_new_cat(Cat,
                         if scarchance == 1:
                             scar = choice(Pelt.scars3)
                             new_cat.pelt.scars.append(scar)
-                    scar2chance = randint(1,35)
+                    scar2chance = randint(1,50)
                     if scar2chance == 1:
                         scar = choice(Pelt.scars2)
                         new_cat.pelt.scars.append(scar)
@@ -488,9 +488,9 @@ def create_new_cat(Cat,
                         new_cat.permanent_condition[chosen_condition]["moons_until"] = -2
 
                     # assign scars
-                    if chosen_condition in ['lost a leg', 'born without a leg']:
+                    if chosen_condition in ['lost a leg', 'born without a leg'] and ('NOPAW') not in new_cat.pelt.scars:
                         new_cat.pelt.scars.append('NOPAW')
-                    elif chosen_condition in ['lost their tail', 'born without a tail']:
+                    elif chosen_condition in ['lost their tail', 'born without a tail'] and ('NOTAIL') not in new_cat.pelt.scars:
                         new_cat.pelt.scars.append("NOTAIL")
 
         if outside:
