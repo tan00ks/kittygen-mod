@@ -356,7 +356,7 @@ def create_new_cat(Cat,
             _gender = choice(['female', 'male'])
         else:
             _gender = gender
-
+    
         # other Clan cats, apps, and kittens (kittens and apps get indoctrinated lmao no old names for them)
         if other_clan or kit or litter or age < 12:
             new_cat = Cat(moons=age,
@@ -420,12 +420,44 @@ def create_new_cat(Cat,
         if accessory:
             new_cat.pelt.accessories.append(accessory)
 
-        # Remove disabling scars, if they generated.
-        not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 
-                       'LEFTBLIND', 'BRIGHTHEART', 'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
-        for scar in new_cat.pelt.scars:
-            if scar in not_allowed:
-                new_cat.pelt.scars.remove(scar)
+        if df:
+            if status != "kitten":
+                scarchance = randint(1,5)
+                if scarchance == 1 or 2 or 3:
+                    scar = choice(Pelt.scars1)
+                    new_cat.pelt.scars.append(scar)
+                    if new_cat.status in ["warrior", "deputy", "leader"]:
+                        scarchance = randint(1,2)
+                        if scarchance == 1:
+                            scar = choice(Pelt.scars3)
+                            new_cat.pelt.scars.append(scar)
+                    elif new_cat.status in ["medicine cat", "apprentice", 
+                    "elder", "medicine cat apprentice", "queen", "mediator", 
+                    "queen's apprentice", "mediator apprentice"]:
+                        scarchance = randint(1,8)
+                        if scarchance == 1:
+                            scar = choice(Pelt.scars3)
+                            new_cat.pelt.scars.append(scar)
+                    scar2chance = randint(1,50)
+                    if scar2chance == 1:
+                        scar = choice(Pelt.scars2)
+                        new_cat.pelt.scars.append(scar)
+            else:
+                scarchance = randint(1,2)
+                if scarchance == 1:
+                    scar = choice(Pelt.scars1)
+                    new_cat.pelt.scars.append(scar)
+            
+                
+                
+
+        # Remove disabling scars on living cats, if they generated.
+        if not df: 
+            not_allowed = ['NOPAW', 'NOTAIL', 'HALFTAIL', 'NOEAR', 'BOTHBLIND', 'RIGHTBLIND', 
+                        'LEFTBLIND', 'BRIGHTHEART', 'NOLEFTEAR', 'NORIGHTEAR', 'MANLEG']
+            for scar in new_cat.pelt.scars:
+                if scar in not_allowed:
+                    new_cat.pelt.scars.remove(scar)
 
         # chance to give the new cat a permanent condition, higher chance for found kits and litters
         if game.clan.game_mode != 'classic':
@@ -456,9 +488,9 @@ def create_new_cat(Cat,
                         new_cat.permanent_condition[chosen_condition]["moons_until"] = -2
 
                     # assign scars
-                    if chosen_condition in ['lost a leg', 'born without a leg']:
+                    if chosen_condition in ['lost a leg', 'born without a leg'] and ('NOPAW') not in new_cat.pelt.scars:
                         new_cat.pelt.scars.append('NOPAW')
-                    elif chosen_condition in ['lost their tail', 'born without a tail']:
+                    elif chosen_condition in ['lost their tail', 'born without a tail'] and ('NOTAIL') not in new_cat.pelt.scars:
                         new_cat.pelt.scars.append("NOTAIL")
 
         if outside:
