@@ -1790,6 +1790,7 @@ class Events:
             else:
                 cat.dead_for += 1
             self.handle_fading(cat)  # Deal with fading.
+            cat.talked_to = False
             return
 
         # all actions, which do not trigger an event display and

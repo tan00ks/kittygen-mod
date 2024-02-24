@@ -389,8 +389,9 @@ class ProfileScreen(Screens):
             elif "talk" in self.profile_elements and \
                     event.ui_element == self.profile_elements["talk"]:
                 self.the_cat.talked_to = True
-                self.the_cat.relationships[game.clan.your_cat.ID].platonic_like += randint(1,5)
-                game.clan.your_cat.relationships[self.the_cat.ID].platonic_like += randint(1,5)
+                if not self.the_cat.dead and not game.clan.your_cat.dead:
+                    self.the_cat.relationships[game.clan.your_cat.ID].platonic_like += randint(1,5)
+                    game.clan.your_cat.relationships[self.the_cat.ID].platonic_like += randint(1,5)
                 self.change_screen('talk screen')
             elif "insult" in self.profile_elements and \
                     event.ui_element == self.profile_elements["insult"]:
@@ -1010,6 +1011,17 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
+        elif self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.dead and game.clan.your_cat.dead:
+            self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(
+                    (726, 220), (68, 68))),
+                    "",
+                    object_id="#talk_button",
+                    tool_tip_text="Talk to this Cat", manager=MANAGER
+            )
+            if self.the_cat.talked_to:
+                self.profile_elements["talk"].disable()
+            else:
+                self.profile_elements["talk"].enable()
         if self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.dead and not self.the_cat.outside and not game.clan.your_cat.dead and not game.clan.your_cat.outside and not game.clan.your_cat.moons < 0:    
             if not self.the_cat.dead and not self.the_cat.outside and self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["insult"] = UIImageButton(scale(pygame.Rect(

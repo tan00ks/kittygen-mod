@@ -166,7 +166,10 @@ class TalkScreen(Screens):
 
         all_backgrounds = []
         for leaf in leaves:
+            
             platform_dir = f'{camp_bg_base_dir}/{biome}/{leaf}_{camp_nr}_{light_dark}.png'
+            if self.the_cat.dead:
+                platform_dir = "resources/images/starclanbg.png"
             all_backgrounds.append(platform_dir)
 
         self.newleaf_bg = pygame.transform.scale(
@@ -443,6 +446,20 @@ class TalkScreen(Screens):
                 continue
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
+
+            if "they_sc" in tags and cat.ID not in game.clan.starclan_cats:
+                continue
+            if "you_sc" in tags and you.ID not in game.clan.starclan_cats:
+                continue
+            if "they_sc" not in tags and cat.ID in game.clan.starclan_cats:
+                continue
+            if "you_sc" not in tags and you.ID in game.clan.starclan_cats:
+                continue
+                
+            if "they_df" in tags and not cat.df:
+                continue
+            if "you_df" in tags and not you.df:
+                continue
             
             roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
             if any(r in roles for r in tags):
@@ -552,6 +569,7 @@ class TalkScreen(Screens):
                 continue
             if "starving" not in cat.illnesses and "they_starving" in tags:
                 continue
+
             
             if any(i in ["you_ill", "you_injured"] for i in tags):
                 ill_injured = False
