@@ -439,7 +439,7 @@ class Cat():
         text = ""
         if self.status == 'leader':
             if game.clan.leader_lives > 0:
-                self.thought = 'Was startled to find themselves in Silverpelt for a moment... did they lose a life?'
+                self.thought = 'Was startled to find themself in Silverpelt for a moment... did they lose a life?'
                 return ""
             elif game.clan.leader_lives <= 0:
                 self.dead = True
@@ -453,7 +453,7 @@ class Cat():
         else:
             self.dead = True
             game.just_died.append(self.ID)
-            self.thought = 'Is surprised to find themselves walking the stars of Silverpelt'
+            self.thought = 'Is surprised to find themself walking the stars of Silverpelt'
 
         # Clear Relationships. 
         if self.ID != game.clan.your_cat.ID:
