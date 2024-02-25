@@ -11053,5 +11053,16 @@
             "If it is, I think that you'd probably be the favorite ...",
             "y_p always seemed to like you more."
         ]
+    ],
+    "starclan_general": [
+        [
+            "you_sc",
+            "they_sc",
+            "no_kit"
+        ],
+        [
+            "[t_c looks upon c_nClan worriedly.]",
+            "I wish I could warn them about what's coming."
+        ]
     ]
 }

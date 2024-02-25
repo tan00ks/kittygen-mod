@@ -3344,169 +3344,154 @@
     ],
     "kittten_condition": [
         [
-            "any"
-,"they_injured",
-"they_sick",
-"random_cat",
-"they_kitten"	
+            "any",
+            "they_injured",
+            "they_sick",
+            "random_cat",
+            "they_kitten"
         ],
         [
-           "*Cough* *Cough*",
-	"Oh ... y_c! Did you come to visit me on my special vacation in the medicine den?",
-	"r_m told me that, if I'm really good, they'll go out and get me a really special gift from the territory ...",
-	"I wonder what it'll be? Maybe a really cool feather? Ooh, or a twoleg thing!",
-	"I can't wait to see what it is."
+            "*Cough* *Cough*",
+            "Oh ... y_c! Did you come to visit me on my special vacation in the medicine den?",
+            "r_m told me that, if I'm really good, they'll go out and get me a really special gift from the territory ...",
+            "I wonder what it'll be? Maybe a really cool feather? Ooh, or a twoleg thing!",
+            "I can't wait to see what it is."
         ]
     ],
-
-"kittten_condition1": [
+    "kittten_condition1": [
         [
-            "any"
-,"they_injured",
-"they_sick",
-"random_cat",
-"they_kitten",
-"they_brooding",
-"they_neurotic",
-"they_introspective",
-"they_upstanding",
-"platonic_love"
+            "any",
+            "they_injured",
+            "they_sick",
+            "random_cat",
+            "they_kitten",
+            "they_brooding",
+            "they_neurotic",
+            "they_introspective",
+            "they_upstanding",
+            "platonic_love"
         ],
         [
-           "y_c ...?",
-	"I ... I might die, won't I?",
-	"Everyone keeps trying to tell me it's okay, but I'm not dumb. I know what's going on.",
-	"[t_c is quiet for a moment. Their eyes betray a pain and understanding far beyond their age.]",
-	"If I die ... Do you promise to still come and visit me? When I'm in the ground?",
-	"I don't wanna be lonely ..."
+            "y_c ...?",
+            "I ... I might die, won't I?",
+            "Everyone keeps trying to tell me it's okay, but I'm not dumb. I know what's going on.",
+            "[t_c is quiet for a moment. Their eyes betray a pain and understanding far beyond their age.]",
+            "If I die ... Do you promise to still come and visit me? When I'm in the ground?",
+            "I don't wanna be lonely ..."
         ]
     ],
-
-"kittten_condition2": [
+    "kittten_condition2": [
         [
-            "any"
-,"they_injured",
-"they_sick",
-"they_kitten"
+            "any",
+            "they_injured",
+            "they_sick",
+            "they_kitten"
         ],
         [
-           "Owie ...",
-	"What's going on ...?",
-	"Why does it hurt so bad ...?"
+            "Owie ...",
+            "What's going on ...?",
+            "Why does it hurt so bad ...?"
         ]
     ],
-
-"kittten_condition3": [
+    "kittten_condition3": [
         [
-            "any"
-,"they_injured",
-"they_sick",
-"they_kitten"
+            "any",
+            "they_injured",
+            "they_sick",
+            "they_kitten"
         ],
         [
-          "[t_c's little chest rises and falls, rises and falls ...]",
-	"[They look so small and helpless!]"
+            "[t_c's little chest rises and falls, rises and falls ...]",
+            "[They look so small and helpless!]"
         ]
     ],
-
-"kittten_condition4": [
+    "kittten_condition4": [
         [
-            "any"
-,"they_injured",
-"they_sick",
-"they_kitten",
-"from_your_kit",
-"adopted_kit"
+            "any",
+            "they_injured",
+            "they_sick",
+            "they_kitten",
+            "from_your_kit",
+            "adopted_kit"
         ],
         [
-          "I'm tired of staying in the medicine den, y_c. I wanna go home.",
-	"Why can't you take me home?"
+            "I'm tired of staying in the medicine den, y_c. I wanna go home.",
+            "Why can't you take me home?"
         ]
     ],
-
-"kittten_condition5": [
+    "kittten_condition5": [
         [
-            "any"
-,"they_injured",
-"they_sick",
-"they_kitten",
-"from_your_kit",
-"adopted_kit"
+            "any",
+            "they_injured",
+            "they_sick",
+            "they_kitten",
+            "from_your_kit",
+            "adopted_kit"
         ],
         [
-          "[Your little kit is hurting. They weakly blink their eyes open at you and give you a purr.]",
-	"*Cough* *Cough* y_c ...? You're here!",
-	"[You curl your body around their tiny frame, swearing not to move until they're better.]"
+            "[Your little kit is hurting. They weakly blink their eyes open at you and give you a purr.]",
+            "*Cough* *Cough* y_c ...? You're here!",
+            "[You curl your body around their tiny frame, swearing not to move until they're better.]"
         ]
     ],
     "upstanding_kit19": [
         [
             "upstanding",
-"warrior",
-"random_cat"
-	
+            "warrior",
+            "random_cat"
         ],
         [
-          "[While showing r_a a few battle moves, you spot t_c out of the corner of your eye, doing their best to copy you on unsteady paws.]"
+            "[While showing r_a a few battle moves, you spot t_c out of the corner of your eye, doing their best to copy you on unsteady paws.]"
         ]
     ],
-
-"upstanding_kit20": [
+    "upstanding_kit20": [
         [
             "upstanding",
-"warrior",
-"random_cat"
-	
+            "warrior",
+            "random_cat"
         ],
         [
-          "y_c! Can you make me an apprentice early? Please please pleeeeease! I'm more than ready, I swear!",
-"I'll do all of the apprentice jobs and work super duper hard, harder than any other apprentice!"
+            "y_c! Can you make me an apprentice early? Please please pleeeeease! I'm more than ready, I swear!",
+            "I'll do all of the apprentice jobs and work super duper hard, harder than any other apprentice!"
         ]
     ],
-
-"upstanding_kit21": [
+    "upstanding_kit21": [
         [
-           "upstanding",
-"elder",
-"platonic_like",
-"neutral"
-	
+            "upstanding",
+            "elder",
+            "platonic_like",
+            "neutral"
         ],
         [
-          "[You hear a small trill at the entrance of the den and look over to see t_c trotting in, dragging a squirrel by the scruff of it's neck.]",
-"[They wordlessly set the prey down at your paws and dip their head, turning to leave while you purr gratefully.]"
+            "[You hear a small trill at the entrance of the den and look over to see t_c trotting in, dragging a squirrel by the scruff of it's neck.]",
+            "[They wordlessly set the prey down at your paws and dip their head, turning to leave while you purr gratefully.]"
         ]
     ],
-
-"upstanding_kit22": [
+    "upstanding_kit22": [
         [
-           "upstanding",
-"they_younger",
-"murder",
-"respect"
-	
+            "upstanding",
+            "they_younger",
+            "murder",
+            "respect"
         ],
         [
-          "I-I looked up to you! How could you do such a thing?!"
+            "I-I looked up to you! How could you do such a thing?!"
         ]
     ],
-
-"upstanding_kit23": [
+    "upstanding_kit23": [
         [
-           "upstanding",
-"leader",
-"deputy",
-"you_upstanding",
-"platonic_like",
-"neutral",
-"respect"
-	
+            "upstanding",
+            "leader",
+            "deputy",
+            "you_upstanding",
+            "platonic_like",
+            "neutral",
+            "respect"
         ],
         [
-"Guess what! Guess what! Guest what!",
-"When I grow up, I want to be just like you!",
-"I want to be all noble-y and important and- and-... all the other good words!"
+            "Guess what! Guess what! Guest what!",
+            "When I grow up, I want to be just like you!",
+            "I want to be all noble-y and important and- and-... all the other good words!"
         ]
     ]
-
 }
