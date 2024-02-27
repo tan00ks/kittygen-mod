@@ -1687,8 +1687,8 @@ class MateScreen(UIWindow):
                     self.pick_path_message.kill()
                     self.mediator_button.kill()
                     self.kill()
-                    game.switches['new_mate'].relationships[game.clan.your_cat.ID].romantic_love -= 8
-                    game.clan.your_cat.relationships[game.switches['new_mate'].ID].comfortable -= 8
+                    game.switches['new_mate'].relationships[game.clan.your_cat.ID].romantic_love -= 10
+                    game.clan.your_cat.relationships[game.switches['new_mate'].ID].comfortable -= 10
                     game.switches['reject'] = True
             except:
                 print("error with mate screen")
