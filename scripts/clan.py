@@ -5,7 +5,7 @@ TODO: Docs
 
 
 """
-
+# testt
 # pylint: enable=line-too-long
 
 import random
@@ -222,6 +222,9 @@ class Clan():
         self.add_cat(self.demon)
         self.add_to_darkforest(self.demon)
         self.all_clans = []
+ 
+        if self.leader.status is not "leader":
+            self.leader.status_change('leader')
 
         key_copy = tuple(Cat.all_cats.keys())
         for i in key_copy:  # Going through all currently existing cats
