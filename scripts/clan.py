@@ -52,7 +52,8 @@ class Clan():
         "mediator",
         "queen",
         "general",
-        "exiled"
+        "exiled",
+        "former Clancat"
     ]
     
 

@@ -682,8 +682,8 @@ class History:
 
         cat.revealed += 1
         print ('KILLER:',cat.name," | VICTIM:",victim.name )
-        if cat.revealed > 0 and not cat.shunned:
-            cat.shunned = True
+        if cat.revealed > 0 and cat.shunned < 1:
+            cat.shunned = 1
             cat.thought = "Is upset that they have been shunned"
 
             for app in cat.apprentice:

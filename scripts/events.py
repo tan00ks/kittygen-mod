@@ -1805,15 +1805,17 @@ class Events:
         # Handle Mediator Events
         self.mediator_events(cat)
 
-        if cat.shunned:
-            self.exilemoons += 1
+        if cat.shunned > 0:
+            cat.shunned += 1
             exilechance = random.randint(1,15)
-
+            # Chance for a cat to be exiled, forgiven, or leave before the ten moon limit
             if exilechance == 1:
                 self.exile_or_forgive(cat)
             else:
-            # This is a max number of moons a cat can be shunned before the clan makes up their damn mind
-                if self.exilemoons == 10:
+            # Max number of moons a cat can be shunned before the clan makes up their damn mind
+            # Currently ten, but it was also roll if its set to more than that in a cat's save
+                if cat.shunned > 9:
+                    print("A decision has made about ", cat.name, "'s fate in the clan.")
                     self.exile_or_forgive(cat)
 
         # handle nutrition amount
@@ -2262,7 +2264,7 @@ class Events:
         promote cats and add to event list
         """
         # ceremony = []
-        if not cat.shunned:
+        if cat.shunned == 0:
             _ment = Cat.fetch_cat(cat.mentor) if cat.mentor else None # Grab current mentor, if they have one, before it's removed. 
             old_name = str(cat.name)
             cat.status_change(promoted_to)
@@ -3184,58 +3186,54 @@ class Events:
     
     def exile_or_forgive(self, cat):
         """ a shunned cat becoming exiled, or being forgiven"""
-        if cat.shunned:
+        if cat.shunned > 0:
+            involved_cats = []
             if cat.ID == game.clan.your_cat.ID:
-                forgive_chance = random.randint(1,2)
-                leave_chance = random.randint(1,10)
+                fate = random.choice([ 1, 2, 4, 5, 6, 10, 11])
+                # 5/7 chance of forgiveness, 1/7 chance for MC leaving or exile
             else:
-                if cat.moons > 30:
-                    forgive_chance = random.randint(1,10)
-                    leave_chance = random.randint(1,10)
+                if cat.moons > 40:
+                    fate = random.randint(1,15)
                 elif cat.moons > 12:
-                    forgive_chance = random.randint(1,8)
-                    leave_chance = random.randint(1,6)
+                    fate = random.randint(1,10)
                 elif cat.moons > 6:
-                    forgive_chance = random.randint(1,4)
-                    leave_chance = random.randint(1,8)
+                    fate = random.randint(1,6)
                 else:
-                    forgive_chance = random.randint(1,2)
-                    leave_chance = random.randint(1,100)
+                    fate = random.randint(1,3)
 
-            LF = random.randint(1,2)
-            involved_cats = [cat.ID]
-            if LF == 1:
-
-                
-                if forgive_chance == 1:
-                    cat.shunned = False
+                # these numbers are kind of crazy but i wanted to keep the one randint
+                if fate in [1, 2, 5, 10, 11]:
+                    cat.shunned = 0
                     text = random.choice([
                         f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}Clan, though some are quicker to forgive than others.",
                         f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])
                     game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
-                    print("A shunned cat has been forgiven!")
+                    print(cat.name, "has been forgiven!")
+
+                elif fate in [3, 4, 7, 12, 12]:
+                    cat.shunned = 0
+                    cat.outside = True
+                    cat.status = "former Clancat"
+                    game.clan.add_to_outside(cat)
+                    if cat.moons < 6:
+                        text = f"{cat.name} knows that they will never be able to forgive themselves for what they've done. In the night, while the queens are sleeping, they sneak out of camp while stifling their tears. They'll miss {game.clan.name}Clan, but they know that they'll be better off without a killer in their nursery."
+                    else:
+                        text = random.choice([
+                            f"{cat.name} knows they'll never be forgiven. Packing up their favourite feathers and stones from their nest, they slip out of camp in the night, sure that none of their Clanmates will mind the abscence.",
+                            f"Sick of being treated so poorly, {cat.name} leaves camp one day, not turning around to see if anyone has noticed, and vows never to come back."])
+                        game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
+                    print("A shunned cat has left the clan.")
+
                 else:
-                    cat.shunned = False
+                    cat.shunned = 0
                     Cat.exile(cat)
                     text = random.choice([
                         f"{game.clan.name}Clan has decided that they don't feel safe with {cat.name} around after what they did. {cat.name} has been exiled.",
                         f"{game.clan.leader.name} knows that {cat.name} does not plan to atone. They have been exiled from {game.clan.name}Clan for their crimes."])
                     game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
                     print("A shunned cat has been exiled.")
-
-            else:  
-                if leave_chance == 1:
-                    cat.shunned = False
-                    cat.outside = True
-                    cat.status = "former Clancat"
-                    game.clan.add_to_outside(cat)
-                    text = random.choice([
-                        f"{cat.name} knows they'll never be forgiven. Packing up their favourite feathers and stone from their nest, they slip out of camp in the night, sure that none of their Clanmates will mind the abscence.",
-                        f"Sick of being treated so poorly, {cat.name} leaves camp one day, not turning around to see if anyone has noticed, and vows never to come back."])
-                    game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
-                    print("A shunned cat has left the clan.")
         else:
-            pass
+            print("Tried exile_or_forgive() on a non-shunned cat ?")
 
     def coming_out(self, cat):
         """turnin' the kitties trans..."""

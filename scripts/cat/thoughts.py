@@ -343,13 +343,13 @@ class Thoughts():
                 GENTHOUGHTS = ujson.loads(read_file.read())
             SHUNNEDTHOUGHTS = []
             try:
-                if main_cat.shunned and not main_cat.dead:
+                if main_cat.shunned > 0 and not main_cat.dead:
                     with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
                         SHUNNEDTHOUGHTS = ujson.loads(read_file.read())
             except:
                 print ('Shunned thoughts could not be loaded.')
             
-            if main_cat.shunned:
+            if main_cat.shunned > 0:
                 loaded_thoughts = SHUNNEDTHOUGHTS
             else:
                 loaded_thoughts = THOUGHTS

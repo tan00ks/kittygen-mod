@@ -147,7 +147,7 @@ class Cat():
             self.dead = True
             self.outside = False
             self.exiled = False
-            self.shunned = False
+            self.shunned = 0
             self.inheritance = None # This should never be used, but just for safety
             if "df" in kwargs:
                 self.df = kwargs["df"]
@@ -199,7 +199,7 @@ class Cat():
         self.example = example
         self.dead = False
         self.exiled = False
-        self.shunned = False
+        self.shunned = 0
         self.outside = False
         self.dead_for = 0  # moons
         self.thought = ''
@@ -467,7 +467,7 @@ class Cat():
                 fetched_cat.update_mentor()
         self.update_mentor()
 
-        if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled) and body != None:
+        if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled) and body is not None:
             self.grief(body)
 
         if not self.outside and self.status not in ["loner", "kittypet", "rogue"]:
@@ -492,8 +492,8 @@ class Cat():
             self.thought = "Is fascinated by the new ghostly world they've stumbled into"
             game.clan.add_to_unknown(self)
         
-        if self.shunned:
-            self.shunned = False
+        if self.shunned > 0:
+            self.shunned = 0
 
         return text
 
@@ -2051,7 +2051,7 @@ class Cat():
         if 'apprentice' not in self.status:
             return False
         # Dead cats don't need mentors
-        if self.dead or self.outside or self.exiled or self.shunned:
+        if self.dead or self.outside or self.exiled or self.shunned > 0:
             return False
         return True
 
@@ -2088,7 +2088,7 @@ class Cat():
             print("Everything is terrible!! (new_mentor {new_mentor} is a Cat D:)")
             return
         # Check if cat can have a mentor
-        illegible_for_mentor = self.dead or self.outside or self.exiled or self.shunned or self.dead_for > 1 or self.status not in ["apprentice",
+        illegible_for_mentor = self.dead or self.outside or self.exiled or self.shunned > 0 or self.dead_for > 1 or self.status not in ["apprentice",
                                                                                                "mediator apprentice",
                                                                                                "medicine cat apprentice",
                                                                                                "queen's apprentice"]

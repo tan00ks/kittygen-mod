@@ -252,8 +252,7 @@ class Relation_Events():
         )
         if main_cat in cat_list:
             cat_list.remove(main_cat)
-        else:
-            print ('why wasnt the cat in the list man')
+        
         filtered_cat_list = []
         
         for inter_cat in cat_list:
