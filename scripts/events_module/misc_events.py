@@ -140,9 +140,9 @@ class MiscEvents():
             types.append("other_clans")
         if ceremony:
             types.append("ceremony")
-        if other_cat:
-            if "mu" + str(other_cat.name) in event_text:
-                return
+        # if other_cat and not reveal:
+        #     if "mu" + str(other_cat.name) in event_text:
+        #         return
         if "r_c" in event_text:
             print("r_c was found")
             print(event_text)
