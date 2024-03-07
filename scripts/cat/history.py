@@ -679,8 +679,9 @@ class History:
         victim = Cat.fetch_cat(victim)
         murder_history = History.get_murders(cat)
         victim_history = History.get_murders(victim)
+
         cat.revealed += 1
-        print ('KILLER:',cat.name,". VICTIM: ",victim.name )
+        print ('KILLER:',cat.name," | VICTIM:",victim.name )
         if cat.revealed > 0 and not cat.shunned:
             cat.shunned = True
             cat.thought = "Is upset that they have been shunned"

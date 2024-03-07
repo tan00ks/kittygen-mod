@@ -491,6 +491,9 @@ class Cat():
         else:
             self.thought = "Is fascinated by the new ghostly world they've stumbled into"
             game.clan.add_to_unknown(self)
+        
+        if self.shunned:
+            self.shunned = False
 
         return text
 
@@ -803,7 +806,7 @@ class Cat():
         """Updates trait and skill upon ceremony"""  
 
         if self.status in ["warrior", "medicine cat", "mediator", "queen"]:
-            # Give a couple doses of mentor inflence:
+            # Give a couple doses of mentor influence:
             if mentor:
                 max = randint(0, 2)
                 i = 0
