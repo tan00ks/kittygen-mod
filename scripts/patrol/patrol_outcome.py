@@ -1358,7 +1358,10 @@ class PatrolOutcome():
     def __handle_accs(self, cat: Cat, acc_list: str) -> str:
         print('accs handled')
 
-        acc_list = [x for x in acc_list if x in Pelt.plant_accessories + Pelt.plant2_accessories + Pelt.wild_accessories
+        acc_list = [x for x in acc_list if x in Pelt.plant_accessories + Pelt.plant2_accessories + Pelt.wild_accessories +\
+        Pelt.tail_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + \
+        Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + \
+        Pelt.tail2_accessories
                             and x not in cat.pelt.inventory]
 
         if not acc_list:
