@@ -612,7 +612,7 @@
             "notreveal",
             "other_cat"
         ],
-        "event_text": "r_c avoids m_c at all costs after accidentally witnessing mur_c's murder. r_c knows {PRONOUN/r_c/subject} can't keep it a secret but is terrified of what m_c might do.",
+        "event_text": "r_c avoids m_c at all costs after accidentally witnessing mur_c's murder. r_c knows {PRONOUN/r_c/subject} shouldn't keep it a secret but is terrified of what m_c might do.",
         "cat_trait": [
             "bloodthirsty"
         ]

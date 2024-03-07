@@ -3203,14 +3203,14 @@ class Events:
                     leave_chance = random.randint(1,100)
 
             LF = random.randint(1,2)
-
+            involved_cats = [cat.ID]
             if LF == 1:
 
-                involved_cats = [cat.ID]
+                
                 if forgive_chance == 1:
                     cat.shunned = False
                     text = random.choice([
-                        f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}, though some are quicker to forgive than others.",
+                        f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}Clan, though some are quicker to forgive than others.",
                         f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])
                     game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
                     print("A shunned cat has been forgiven!")
