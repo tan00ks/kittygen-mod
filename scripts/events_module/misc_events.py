@@ -90,6 +90,13 @@ class MiscEvents():
         elif "rel_up" in misc_event.tags:
             difference = 1
             change_clan_relations(other_clan, difference=difference)
+        
+        if "notreveal" in misc_event.tags:
+            reveal = False
+            print("murder reveal but the clan doesnt know")
+        if "notreveal" not in misc_event.tags and "murder_reveal" in misc_event.tags:
+            reveal = True
+            print('murder reveal to the whole clan')
 
         event_text = event_text_adjust(Cat, misc_event.event_text, cat, other_cat, other_clan_name, murder_reveal=reveal, victim=victim)
         

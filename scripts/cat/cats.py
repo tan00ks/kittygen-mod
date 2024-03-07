@@ -147,6 +147,7 @@ class Cat():
             self.dead = True
             self.outside = False
             self.exiled = False
+            self.shunned = False
             self.inheritance = None # This should never be used, but just for safety
             if "df" in kwargs:
                 self.df = kwargs["df"]
@@ -198,6 +199,7 @@ class Cat():
         self.example = example
         self.dead = False
         self.exiled = False
+        self.shunned = False
         self.outside = False
         self.dead_for = 0  # moons
         self.thought = ''
@@ -2046,7 +2048,7 @@ class Cat():
         if 'apprentice' not in self.status:
             return False
         # Dead cats don't need mentors
-        if self.dead or self.outside or self.exiled:
+        if self.dead or self.outside or self.exiled or self.shunned:
             return False
         return True
 
@@ -2083,7 +2085,7 @@ class Cat():
             print("Everything is terrible!! (new_mentor {new_mentor} is a Cat D:)")
             return
         # Check if cat can have a mentor
-        illegible_for_mentor = self.dead or self.outside or self.exiled or self.dead_for > 1 or self.status not in ["apprentice",
+        illegible_for_mentor = self.dead or self.outside or self.exiled or self.shunned or self.dead_for > 1 or self.status not in ["apprentice",
                                                                                                "mediator apprentice",
                                                                                                "medicine cat apprentice",
                                                                                                "queen's apprentice"]
@@ -3040,6 +3042,7 @@ class Cat():
                 "paralyzed": self.pelt.paralyzed,
                 "no_kits": self.no_kits,
                 "exiled": self.exiled,
+                "shunned": self.shunned,
                 "no_retire": self.no_retire,
                 "no_mates": self.no_mates,
                 "pelt_name": self.pelt.name,

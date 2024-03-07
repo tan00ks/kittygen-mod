@@ -60,13 +60,13 @@ class TalkScreen(Screens):
 
 
     def screen_switches(self):
+        self.the_cat = Cat.all_cats.get(game.switches['cat'])
         self.update_camp_bg()
         self.hide_menu_buttons()
         self.text_index = 0
         self.frame_index = 0
         self.choicepanel = False
         self.created_choice_buttons = False
-        self.the_cat = Cat.all_cats.get(game.switches['cat'])
         self.profile_elements = {}
         self.clan_name_bg = pygame_gui.elements.UIImage(
             scale(pygame.Rect((230, 875), (380, 70))),

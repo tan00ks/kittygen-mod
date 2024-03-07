@@ -1782,6 +1782,7 @@ class Events:
         -if the cat was not injured or ill, then they will do all of the above *and* trigger misc events, acc events,
         and new cat events
         """
+
         if cat.dead:
             
             cat.thoughts()
@@ -1792,13 +1793,20 @@ class Events:
             self.handle_fading(cat)  # Deal with fading.
             cat.talked_to = False
             return
+        
 
         # all actions, which do not trigger an event display and
         # are connected to cats are located in there
         cat.one_moon()
 
+
         # Handle Mediator Events
         self.mediator_events(cat)
+
+        if cat.shunned:
+            exilechance = random.randint(1,15)
+            if exilechance == 1:
+                self.exile_or_forgive(cat)
 
         # handle nutrition amount
         # (CARE: the cats has to be fed before - should be handled in "one_moon" function)
@@ -2790,6 +2798,8 @@ class Events:
         random_murder_chance = int(game.config["death_related"]["base_random_murder_chance"])
         random_murder_chance -= 0.5 * ((cat.personality.aggression) + (16 - cat.personality.stability))
 
+        
+
         # Check to see if random murder is triggered. If so, we allow targets to be anyone they have even the smallest amount
         # of dislike for
         if random.getrandbits(max(1, int(random_murder_chance))) == 1:
@@ -2884,6 +2894,7 @@ class Events:
                 
                 Death_Events.handle_deaths(Cat.fetch_cat(chosen_target.cat_to), cat, game.clan.war.get("at_war", False),
                                                 enemy_clan, alive_kits=get_alive_kits(Cat), murder=True)
+
 
     def handle_mass_extinctions(self, cat):  # pylint: disable=unused-argument
         """Affects random cats in the clan, no cat needs to be passed to this function."""
@@ -3159,6 +3170,38 @@ class Events:
                     Single_Event(event, "health", involved_cats))
                 # game.health_events_list.append(event)
                 break
+    
+    def exile_or_forgive(self, cat):
+        """ a shunned cat becoming exiled, or being forgiven"""
+        if cat.shunned:
+            if cat.moons > 30:
+                forgive_chance = random.randint(1,10)
+            elif cat.moons > 12:
+                forgive_chance = random.randint(1,8)
+            elif cat.moons > 6:
+                forgive_chance = random.randint(1,4)
+            else:
+                forgive_chance = random.randint(1,2)
+
+            involved_cats = [cat.ID]
+            if forgive_chance == 1:
+                cat.shunned = False
+                text = random.choice([
+                    f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}, though some are quicker to forgive than others."
+                    f"{game.clan.leader.name} "])
+                game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
+                print("A shunned cat has been forgiven!")
+            else:
+                
+                cat.shunned = False
+                Cat.exile(cat)
+                text = random.choice([
+                    f"{game.clan.name}Clan has decided that they don't feel safe with {cat.name} around after what they did. {cat.name} has been exiled.",
+                    f"{game.clan.leader.name} knows that {cat.name} does not plan to atone. They have been exiled from {game.clan.name}Clan for their crimes."])
+                game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
+                print("A shunned cat has been exiled.")
+        else:
+            pass
 
     def coming_out(self, cat):
         """turnin' the kitties trans..."""
