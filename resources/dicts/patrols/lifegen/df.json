@@ -63,7 +63,7 @@
                     "flexible",
                     "careful"
                 ],
-                "stat_skill": ["FIGHTER,1", "GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
+                "stat_skill": ["GUARDIAN,1", "INSIGHTFUL,1", "SENSE,1"]
             }
         ],
         "fail_outcomes": [
