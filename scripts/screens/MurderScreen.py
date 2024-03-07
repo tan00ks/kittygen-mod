@@ -354,7 +354,7 @@ class MurderScreen(Screens):
             punishment_chance = 1
         if punishment_chance == 1 or punishment_chance == 3:
             you.revealed = game.clan.age
-            you.get_ill("shunned")
+            # you.get_ill("shunned")
         if punishment_chance == 1:
             if accomplice and not accompliced:
                 a_s = randint(1,2)

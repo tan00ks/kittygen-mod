@@ -3204,9 +3204,12 @@ class Events:
                 # these numbers are kind of crazy but i wanted to keep the one randint
                 if fate in [1, 2, 5, 10, 11]:
                     cat.shunned = 0
-                    text = random.choice([
-                        f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}Clan, though some are quicker to forgive than others.",
-                        f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])
+                    if cat.ID == game.clan.your_cat.ID:
+                        text = f"A Clan meeting is called one day, and your clanmates vote to forgive you for what you did."
+                    else:
+                        text = random.choice([
+                            f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}Clan, though some are quicker to forgive than others.",
+                            f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])
                     game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
                     print(cat.name, "has been forgiven!")
 
@@ -3216,18 +3219,27 @@ class Events:
                     cat.status = "former Clancat"
                     game.clan.add_to_outside(cat)
                     if cat.moons < 6:
-                        text = f"{cat.name} knows that they will never be able to forgive themselves for what they've done. In the night, while the queens are sleeping, they sneak out of camp while stifling their tears. They'll miss {game.clan.name}Clan, but they know that they'll be better off without a killer in their nursery."
+                         if cat.ID == game.clan.your_cat.ID:
+                            text = f"You know that {game.clan.name}Clan would be better off without you. As fast as your little legs can carry you, you run out of camp one night, never to return."
+                        else: 
+                            text = f"{cat.name} knows that they will never be able to forgive themselves for what they've done. In the night, while the queens are sleeping, they sneak out of camp while stifling their tears. They'll miss {game.clan.name}Clan, but they know that they'll be better off without a killer in their nursery."
                     else:
-                        text = random.choice([
-                            f"{cat.name} knows they'll never be forgiven. Packing up their favourite feathers and stones from their nest, they slip out of camp in the night, sure that none of their Clanmates will mind the abscence.",
-                            f"Sick of being treated so poorly, {cat.name} leaves camp one day, not turning around to see if anyone has noticed, and vows never to come back."])
+                        if cat.ID == game.clan.your_cat.ID:
+                            text = f"After enduring endless disrespect from your clanmates, you've given up at seeking forgiveness. When you leave camp one morning, no one calls out after you, and you don't feel very sad that you'll never be back."
+                        else:
+                            text = random.choice([
+                                f"{cat.name} knows they'll never be forgiven. Packing up their favourite feathers and stones from their nest, they slip out of camp in the night, sure that none of their Clanmates will mind the abscence.",
+                                f"Sick of being treated so poorly, {cat.name} leaves camp one day, not turning around to see if anyone has noticed, and vows never to come back."])
                         game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
                     print("A shunned cat has left the clan.")
 
                 else:
                     cat.shunned = 0
                     Cat.exile(cat)
-                    text = random.choice([
+                    if cat.ID == game.clan.your_cat.ID:
+                        text = f"{game.clan.name}Clan has decided that they don't feel safe with you aroudn after what you did. You have been exiled."
+                    else:
+                        text = random.choice([
                         f"{game.clan.name}Clan has decided that they don't feel safe with {cat.name} around after what they did. {cat.name} has been exiled.",
                         f"{game.clan.leader.name} knows that {cat.name} does not plan to atone. They have been exiled from {game.clan.name}Clan for their crimes."])
                     game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
