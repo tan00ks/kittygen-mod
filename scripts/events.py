@@ -134,7 +134,7 @@ class Events:
         with open(f"{resource_dir}forest.json",
                   encoding="ascii") as read_file:
             disaster_text = ujson.loads(read_file.read())
-        if not game.clan.disaster and random.randint(1,1) == 1:
+        if not game.clan.disaster and random.randint(1,20) == 1:
             game.clan.disaster = random.choice(list(disaster_text.keys()))
             while not disaster_text[game.clan.disaster]["trigger_events"]:
                 game.clan.disaster = random.choice(list(disaster_text.keys()))
@@ -3019,7 +3019,7 @@ class Events:
         elif current_moon < current_disaster["duration"]:
             event_string = random.choice(current_disaster["progress_events"]["moon" + str(current_moon)])
             game.clan.disaster_moon += 1
-            if random.randint(1,1) == 1 and not game.clan.second_disaster and current_disaster["secondary_disasters"]:
+            if random.randint(1,30) == 1 and not game.clan.second_disaster and current_disaster["secondary_disasters"]:
                 game.clan.second_disaster = random.choice(list(current_disaster["secondary_disasters"].keys()))
                 secondary_event_string = random.choice(current_disaster["secondary_disasters"][game.clan.second_disaster]["trigger_events"])
                 secondary_event_string = ongoing_event_text_adjust(Cat, secondary_event_string)

@@ -225,7 +225,7 @@ class Clan():
         self.add_to_darkforest(self.demon)
         self.all_clans = []
  
-        if self.leader.status is not "leader":
+        if self.leader.status != "leader":
             self.leader.status_change('leader')
 
         key_copy = tuple(Cat.all_cats.keys())

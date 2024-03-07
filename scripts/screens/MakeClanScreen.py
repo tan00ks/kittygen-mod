@@ -1679,7 +1679,7 @@ class MakeClanScreen(Screens):
                 
                 if event.ui_element == self.elements['scars']:
                     if event.text == "None":
-                        self.scars = None
+                        self.scars = []
                     else:
                         self.scars = []
                         self.scars.append(event.text)
