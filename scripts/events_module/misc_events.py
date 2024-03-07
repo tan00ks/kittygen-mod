@@ -93,10 +93,16 @@ class MiscEvents():
         
         if "notreveal" in misc_event.tags:
             reveal = False
-            print("murder reveal but the clan doesnt know")
+            print("Witness was too afraid to tell the Clan.")
         if "notreveal" not in misc_event.tags and "murder_reveal" in misc_event.tags:
-            reveal = True
-            print('murder reveal to the whole clan')
+            nosnitch = random.randint(1,6)
+            if nosnitch == 1:
+                reveal = False
+                print ("Witness decided not to snitch.")
+            else:
+                reveal = True
+                print ("Witness told the Clan!")
+        
 
         event_text = event_text_adjust(Cat, misc_event.event_text, cat, other_cat, other_clan_name, murder_reveal=reveal, victim=victim)
         
@@ -137,6 +143,10 @@ class MiscEvents():
         same_text_events = [event for event in game.cur_events_list if event.text == event_text]
         if len(same_text_events) > 0:
             return
+        
+        if reveal:
+             event_text += " " + str(other_cat.name) + " has told the Clan about the truth they discovered."
+
 
         game.cur_events_list.append(Single_Event(event_text, types, involved_cats))
         if reveal and victim:
