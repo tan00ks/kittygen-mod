@@ -686,6 +686,9 @@ class History:
             cat.shunned = 1
             cat.thought = "Is upset that they have been shunned"
 
+            # if random.randint(1,4) == 1:
+            cat.get_injured("guilt")
+
             for app in cat.apprentice:
                 fetched_cat = Cat.fetch_cat(app)
                 if fetched_cat:

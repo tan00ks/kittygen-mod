@@ -1458,6 +1458,8 @@ class ProfileScreen(Screens):
                 output += 'recovering from birth!'
             elif "pregnant" in the_cat.injuries:
                 output += 'pregnant!'
+            elif "guilt" in the_cat.injuries:
+                output += "guilty!"
             else:
                 output += "injured!"
         elif the_cat.is_ill():
@@ -2201,6 +2203,8 @@ class ProfileScreen(Screens):
                 insert = 'has been recovering for'
             elif name == 'pregnant':
                 insert = 'has been pregnant for'
+            elif name == 'guilt':
+                insert = 'has been troubled for'
             
             if moons_with != 1:
                 text_list.append(f"{insert} {moons_with} moons")

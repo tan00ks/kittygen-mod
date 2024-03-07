@@ -323,6 +323,15 @@ class MurderScreen(Screens):
                 History.add_death(cat_to_murder, f"{you.name} and {accomplice.name} murdered this cat.")
                 History.add_murders(cat_to_murder, accomplice, True, f"{you.name} murdered this cat along with {accomplice.name}.")
                 History.add_murders(cat_to_murder, you, True, f"{you.name} murdered this cat with the help of {accomplice.name}.")
+                
+                accguiltchance = randint(1,2)
+                if accguiltchance == 1:
+                    accomplice.get_injured("guilt")
+
+                youguiltchance = randint(1,4)
+                if youguiltchance == 1:
+                    accomplice.get_injured("guilt")
+
             else:
                 game.cur_events_list.insert(1, Single_Event("You successfully murdered "+ str(cat_to_murder.name) + "."))
                 History.add_death(cat_to_murder, f"{you.name} murdered this cat.")
@@ -334,8 +343,17 @@ class MurderScreen(Screens):
                     History.add_death(cat_to_murder, f"{you.name} and {accomplice.name} murdered this cat.")
                     History.add_murders(cat_to_murder, you, True, f"{you.name} murdered this cat along with {accomplice.name}.")
                     History.add_murders(cat_to_murder, accomplice, True, f"{you.name} murdered this cat along with {accomplice.name}.")
-
                     game.cur_events_list.insert(1, Single_Event("You successfully murdered "+ str(cat_to_murder.name) + " along with " + str(accomplice.name) + ". It seems no one is aware of your actions."))
+
+                    accguiltchance = randint(1,4)
+                    if accguiltchance == 1:
+                        accomplice.get_injured("guilt")
+
+                    youguiltchance = randint(1,6)
+                    if youguiltchance == 1:
+                        accomplice.get_injured("guilt")
+
+
                 else:
                     History.add_death(cat_to_murder, f"{you.name} murdered this cat.")
                     History.add_murders(cat_to_murder, you, True, f"{you.name} murdered this cat.")
