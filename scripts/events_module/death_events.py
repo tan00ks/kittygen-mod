@@ -43,9 +43,7 @@ class Death_Events():
         #                                  kill cats                                   #
         # ---------------------------------------------------------------------------- #
 
-        if cat.dead_for > 0 and cat.df is True:
-            print("df cat met")
-            
+       
 
         try:
             death_cause = (random.choice(final_events))
@@ -156,6 +154,7 @@ class Death_Events():
                     other_cat.get_injured(tag)
                     #TODO: consider how best to handle history for this (aka fix it later cus i don't wanna rn ;-;
                     #  and it's not being used by any events yet anyways)
+
 
         # handle relationships with other clans
         if "rel_down" in death_cause.tags:

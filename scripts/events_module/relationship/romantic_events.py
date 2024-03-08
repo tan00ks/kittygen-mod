@@ -558,7 +558,7 @@ class Romantic_Events():
             return False, None
 
         alive_inclan_from_mates = [mate for mate in cat_from.mate if not cat_from.fetch_cat(mate).dead and not cat_from.fetch_cat(mate).outside]
-        alive_inclan_to_mates = [mate for mate in cat_to.mate if not cat_to.fetch_cat(mate).dead and not cat_to.fetch_cat(mate).outside]
+        alive_inclan_to_mates = [mate for mate in cat_to.mate if cat_to.fetch_cat(mate) is not None and not cat_to.fetch_cat(mate).dead and not cat_to.fetch_cat(mate).outside]
         poly = len(alive_inclan_from_mates) > 0 or len(alive_inclan_to_mates) > 0
 
         if poly and not Romantic_Events.current_mates_allow_new_mate(cat_from, cat_to):

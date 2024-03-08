@@ -44,6 +44,7 @@ class PatrolOutcome():
             dead_cats: List[str] = None,
             lost_cats: List[str] = None,
             injury: List[Dict] = None,
+            accessory: List[Dict] = None,
             history_reg_death: str = None,
             history_leader_death: str = None,
             history_scar: str = None,
@@ -69,6 +70,7 @@ class PatrolOutcome():
         self.dead_cats = dead_cats if dead_cats is not None else []
         self.lost_cats = lost_cats if lost_cats is not None else []
         self.injury = injury if injury is not None else []
+        self.accessory = accessory if accessory is not None else []
         self.history_reg_death = history_reg_death if history_reg_death is not None else \
                                  "m_c died on patrol."
         self.history_leader_death = history_leader_death if history_leader_death is not None else \
@@ -151,6 +153,7 @@ class PatrolOutcome():
                     can_have_stat=_d.get("can_have_stat"),
                     dead_cats=_d.get("dead_cats"),
                     injury=_d.get("injury"),
+                    accessory=_d.get("accessory"),
                     lost_cats=_d.get("lost_cats"),
                     history_leader_death=_d["history_text"].get("lead_death") if \
                                         isinstance(_d.get("history_text"), dict) else None,
@@ -181,6 +184,7 @@ class PatrolOutcome():
         
         # This order is important. 
         results.append(self._handle_new_cats(patrol))
+        results.append(self._handle_accessories(patrol))
         results.append(self._handle_death(patrol))
         results.append(self._handle_lost(patrol))
         results.append(self._handle_condition_and_scars(patrol))
@@ -570,6 +574,61 @@ class PatrolOutcome():
                     self.__handle_condition_history(_cat, give_injury, patrol, default_overide=True)
                     
                 
+        return " ".join(results)
+    
+    def _handle_accessories(self, patrol:'Patrol') -> str:
+        """ cats getting accessories """
+        
+        if not self.accessory:
+            return ""
+        
+        def gather_cat_objects(cat_list, patrol: 'Patrol') -> list:
+            out_set = set()
+            
+            for _cat in cat_list:
+                if _cat == "r_c":
+                    out_set.add(patrol.patrol_random_cat)
+                elif _cat == "p_l":
+                    out_set.add(patrol.patrol_leader)
+                elif _cat == "s_c":
+                    out_set.add(self.stat_cat)
+                elif _cat == "y_c":
+                    out_set.add(game.clan.your_cat)
+                elif _cat == "app1" and len(patrol.patrol_apprentices) >= 1:
+                    out_set.add(patrol.patrol_apprentices[0])
+                elif _cat == "app2" and len(patrol.patrol_apprentices) >= 2:
+                    out_set.add(patrol.patrol_apprentices[1])
+                elif _cat == "patrol":
+                    out_set.update(patrol.patrol_cats)
+                elif _cat == "multi":
+                    cat_num = random.randint(1, max(1, len(patrol.patrol_cats) - 1))
+                    out_set.update(random.sample(patrol.patrol_cats, cat_num))
+                elif _cat == "some_clan":
+                    clan_cats = [x for x in Cat.all_cats_list if not (x.dead or x.outside)]
+                    out_set.update(random.sample(clan_cats, k=min(len(clan_cats), choice([2, 3, 4]))))
+                elif re.match(r"n_c:[0-9]+", _cat):
+                    index = re.match(r"n_c:([0-9]+)", _cat).group(1)
+                    index = int(index)
+                    if index < len(patrol.new_cats):
+                        out_set.update(patrol.new_cats[index])
+                    
+                    
+            return list(out_set)
+        
+        results = []
+       
+        for block in self.accessory:
+            cats = gather_cat_objects(block.get("cats", ()), patrol)
+            accessory = block.get("accessory", ())
+            
+            if not (cats and accessory):
+                print(f"something is wrong with accessory - {block}")
+                continue
+
+            for _cat in cats:
+                if self.__handle_accs(_cat, accessory):
+                    results.append(f"{_cat.name} got an accessory!")
+
         return " ".join(results)
     
     def _handle_relationship_changes(self, patrol:'Patrol') -> str:
@@ -1295,5 +1354,20 @@ class PatrolOutcome():
             final_death_history = final_death_history.replace("o_c_n", str(patrol.other_clan.name))
         
         History.add_death(cat, death_text=final_death_history)
-        
-        
+    
+    def __handle_accs(self, cat: Cat, acc_list: str) -> str:
+        print('accs handled')
+
+        acc_list = [x for x in acc_list if x in Pelt.plant_accessories + Pelt.plant2_accessories + Pelt.wild_accessories +\
+        Pelt.tail_accessories + Pelt.collars + Pelt.flower_accessories + Pelt.snake_accessories + Pelt.smallAnimal_accessories + \
+        Pelt.deadInsect_accessories + Pelt.aliveInsect_accessories + Pelt.fruit_accessories + Pelt.crafted_accessories + \
+        Pelt.tail2_accessories
+                            and x not in cat.pelt.inventory]
+
+        if not acc_list:
+            return None
+
+        chosen_acc = choice(acc_list)
+        cat.pelt.accessories.append(chosen_acc)
+
+        return chosen_acc

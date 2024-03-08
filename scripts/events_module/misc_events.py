@@ -91,6 +91,23 @@ class MiscEvents():
         elif "rel_up" in misc_event.tags:
             difference = 1
             change_clan_relations(other_clan, difference=difference)
+        
+        if "notreveal" in misc_event.tags:
+            reveal = False
+            print("Witness was too afraid to tell the Clan.")
+        elif "definite_shun" in misc_event.tags:
+            reveal = True
+            print("Murderer confessed to the Clan.")
+        if "notreveal" not in misc_event.tags and "definite_shun" not in misc_event.tags and "murder_reveal" in misc_event.tags:
+            nosnitch = random.randint(1,6)
+            if nosnitch == 1:
+                reveal = False
+                print ("Witness decided not to snitch.")
+            else:
+                reveal = True
+                print ("Witness told the Clan!")
+
+        
 
         event_text = event_text_adjust(Cat, misc_event.event_text, cat, other_cat, other_clan_name, murder_reveal=reveal, victim=victim)
         
@@ -123,7 +140,7 @@ class MiscEvents():
             types.append("other_clans")
         if ceremony:
             types.append("ceremony")
-        if other_cat and reveal:
+        if other_cat and not reveal:
             if "mu" + str(other_cat.name) in event_text:
                 return
         if "r_c" in event_text:
@@ -137,6 +154,10 @@ class MiscEvents():
         same_text_events = [event for event in game.cur_events_list if event.text == event_text]
         if len(same_text_events) > 0:
             return
+        
+        if reveal and "definite_shun" not in misc_event.tags:
+             event_text += " " + str(other_cat.name) + " has told the Clan about the truth they discovered."
+
 
         game.cur_events_list.append(Single_Event(event_text, types, involved_cats))
         if reveal and victim:

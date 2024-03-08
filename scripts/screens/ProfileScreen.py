@@ -1322,6 +1322,8 @@ class ProfileScreen(Screens):
             output += "<font color='#FF0000'>lost</font>"
         elif the_cat.exiled:
             output += "<font color='#FF0000'>exiled</font>"
+        elif the_cat.shunned > 0 and not the_cat.dead:
+            output += "<font color='#FF0000'>shunned</font>"
         elif the_cat.df:
             if game.settings['dark mode']:
                 output += "<font color='#FF0000' >" + "Dark Forest "+ the_cat.status + "</font>"
@@ -1456,6 +1458,8 @@ class ProfileScreen(Screens):
                 output += 'recovering from birth!'
             elif "pregnant" in the_cat.injuries:
                 output += 'pregnant!'
+            elif "guilt" in the_cat.injuries:
+                output += "guilty!"
             else:
                 output += "injured!"
         elif the_cat.is_ill():
@@ -2199,6 +2203,8 @@ class ProfileScreen(Screens):
                 insert = 'has been recovering for'
             elif name == 'pregnant':
                 insert = 'has been pregnant for'
+            elif name == 'guilt':
+                insert = 'has been troubled for'
             
             if moons_with != 1:
                 text_list.append(f"{insert} {moons_with} moons")
