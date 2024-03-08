@@ -1140,7 +1140,6 @@ def event_text_adjust(Cat,
     victim_cat = Cat.fetch_cat(victim)
     if victim_cat and "mur_c" in text:
         text = text.replace("mur_c", str(victim_cat.name))
-        print("mur_c found:",victim_cat.name )
     
     if other_cat:
         if other_cat.pronouns:

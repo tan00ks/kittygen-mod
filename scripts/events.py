@@ -44,7 +44,6 @@ class Events:
     """
     all_events = {}
     game.switches['timeskip'] = False
-    exilemoons = 0
     new_cat_invited = False
     ceremony_accessory = False
     CEREMONY_TXT = None
@@ -3234,6 +3233,7 @@ class Events:
                 print("A shunned cat has left the clan.")
 
             else:
+                cat.shunned = 0
                 Cat.exile(cat)
                 if cat.ID == game.clan.your_cat.ID:
                     text = f"{game.clan.name}Clan has decided that they don't feel safe with you around after what you did. You have been exiled."
