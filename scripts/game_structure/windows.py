@@ -1667,10 +1667,7 @@ class MateScreen(UIWindow):
                 if event.ui_element == self.begin_anew_button:
                     game.last_screen_forupdate = None
                     game.switches['window_open'] = False
-                    # game.switch_screens = True
-                    
-                    game.switches['cur_screen'] = 'events screen'
-                    
+                    # game.switch_screens = True                    
                     self.begin_anew_button.kill()
                     self.pick_path_message.kill()
                     self.mediator_button.kill()
@@ -1681,7 +1678,6 @@ class MateScreen(UIWindow):
                 elif event.ui_element == self.mediator_button:
                     game.last_screen_forupdate = None
                     game.switches['window_open'] = False
-                    game.switches['cur_screen'] = "events screen"
                     # game.switch_screens = True
                     self.begin_anew_button.kill()
                     self.pick_path_message.kill()
@@ -1743,10 +1739,7 @@ class RetireScreen(UIWindow):
                 if event.ui_element == self.begin_anew_button:
                     game.last_screen_forupdate = None
                     game.switches['window_open'] = False
-                    # game.switch_screens = True
-                    
-                    game.switches['cur_screen'] = 'events screen'
-                    
+                    # game.switch_screens = True                    
                     self.begin_anew_button.kill()
                     self.pick_path_message.kill()
                     self.mediator_button.kill()
@@ -1756,7 +1749,6 @@ class RetireScreen(UIWindow):
                 elif event.ui_element == self.mediator_button:
                     game.last_screen_forupdate = None
                     game.switches['window_open'] = False
-                    game.switches['cur_screen'] = "events screen"
                     # game.switch_screens = True
                     self.begin_anew_button.kill()
                     self.pick_path_message.kill()
