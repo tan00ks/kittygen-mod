@@ -1795,15 +1795,6 @@ class Events:
             cat.talked_to = False
             return
         
-
-        # all actions, which do not trigger an event display and
-        # are connected to cats are located in there
-        cat.one_moon()
-
-
-        # Handle Mediator Events
-        self.mediator_events(cat)
-
         if cat.shunned > 0:
             cat.shunned += 1
             exilechance = random.randint(1,15)
@@ -1816,6 +1807,17 @@ class Events:
                 if cat.shunned > 9:
                     print("A decision has made about ", cat.name, "'s fate in the clan.")
                     self.exile_or_forgive(cat)
+        
+
+        # all actions, which do not trigger an event display and
+        # are connected to cats are located in there
+        cat.one_moon()
+
+
+        # Handle Mediator Events
+        self.mediator_events(cat)
+
+       
 
         # handle nutrition amount
         # (CARE: the cats has to be fed before - should be handled in "one_moon" function)
