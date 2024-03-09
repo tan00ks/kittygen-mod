@@ -134,7 +134,7 @@ class Events:
         with open(f"{resource_dir}forest.json",
                   encoding="ascii") as read_file:
             disaster_text = ujson.loads(read_file.read())
-        if not game.clan.disaster and random.randint(1,20) == 1:
+        if not game.clan.disaster and random.randint(1,50) == 1:
             game.clan.disaster = random.choice(list(disaster_text.keys()))
             while not disaster_text[game.clan.disaster]["trigger_events"]:
                 game.clan.disaster = random.choice(list(disaster_text.keys()))
@@ -326,7 +326,8 @@ class Events:
 
         elif game.clan.your_cat.dead and game.clan.your_cat.dead_for == 0:
             self.generate_death_event()
-        
+        elif game.clan.your_cat.dead:
+            self.generate_events()
         elif game.clan.your_cat.status == 'exiled':
             self.generate_exile_event()
         game.clan.murdered = False
@@ -779,6 +780,11 @@ class Events:
         
     def adjust_txt(self, text):
         try:
+            if "r_c_sc" in text:
+                alive_app = Cat.all_cats.get(random.choice(game.clan.starclan_cats))
+                while alive_app.ID == game.clan.your_cat.ID:
+                    Cat.all_cats.get(random.choice(game.clan.starclan_cats))
+                text = text.replace("r_c_sc", str(alive_app.name))
             if "r_c" in text:
                 alive_cats = self.get_living_cats()
                 alive_cat = random.choice(alive_cats)
@@ -943,10 +949,18 @@ class Events:
     
     def generate_events(self):
         resource_dir = "resources/dicts/events/lifegen_events/events/"
-        if game.clan.your_cat.status != 'newborn':
-            with open(f"{resource_dir}{game.clan.your_cat.status}.json",
-                    encoding="ascii") as read_file:
-                all_events = ujson.loads(read_file.read())
+        if game.clan.your_cat.dead and not game.clan.your_cat.df:
+            resource_dir = "resources/dicts/events/lifegen_events/events_dead_sc/"
+        elif game.clan.your_cat.dead and game.clan.your_cat.df:
+            resource_dir = "resources/dicts/events/lifegen_events/events_dead_df/"
+        
+        with open(f"{resource_dir}{game.clan.your_cat.status}.json",
+                encoding="ascii") as read_file:
+            all_events = ujson.loads(read_file.read())
+        
+        with open(f"{resource_dir}general.json",
+                encoding="ascii") as read_file:
+            general_events = ujson.loads(read_file.read())
 
         status = game.clan.your_cat.status
         if game.clan.your_cat.status == 'elder' and game.clan.your_cat.moons < 100:
@@ -955,7 +969,7 @@ class Events:
                   encoding="ascii") as read_file:
                 all_events = ujson.loads(read_file.read())
 
-        possible_events = all_events[f"{status} general"]
+        possible_events = all_events[f"{status} general"] + general_events["general general"]
 
         # Add old events
         if f"{status} old" in all_events:
@@ -964,9 +978,9 @@ class Events:
         cluster, second_cluster = get_cluster(game.clan.your_cat.personality.trait)
 
         if cluster:
-            possible_events = possible_events + all_events[f"{status} {cluster}"]
+            possible_events = possible_events + all_events[f"{status} {cluster}"] + general_events[f"general {cluster}"]
         if second_cluster:
-            possible_events = possible_events + all_events[f"{status} {second_cluster}"]
+            possible_events = possible_events + all_events[f"{status} {second_cluster}"] + general_events[f"general {second_cluster}"]
 
         for i in range(random.randint(0,5)):
             current_event = self.adjust_txt(random.choice(possible_events))

@@ -1,5 +1,8 @@
 {
-    "mediator general": [],
+    "mediator general": [
+        "In the Dark Forest, your job feels more needed than ever, as there is no shortage of disputes.",
+        "You watch an argument devolve into a full-blown fight, feeling too helpless to try and step in."
+    ],
     "mediator assertive": [],
     "mediator brooding": [],
     "mediator cool": [],
