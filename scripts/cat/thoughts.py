@@ -330,6 +330,7 @@ class Thoughts():
 
 
         THOUGHTS = []
+        noshunnedthoughts = False
         # newborns only pull from their status thoughts. this is done for convenience
         if main_cat.age == 'newborn' or main_cat.moons <= 0:
             with open(f"{base_path}{life_dir}{spec_dir}/newborn.json", 'r') as read_file:
@@ -347,9 +348,10 @@ class Thoughts():
                     with open(f"{base_path}{life_dir}{spec_dir}/shunned.json", 'r') as read_file:
                         SHUNNEDTHOUGHTS = ujson.loads(read_file.read())
             except:
+                noshunnedthoughts = True
                 print ('Shunned thoughts could not be loaded.')
             
-            if main_cat.shunned > 0:
+            if main_cat.shunned > 0 and not noshunnedthoughts:
                 loaded_thoughts = SHUNNEDTHOUGHTS
             else:
                 loaded_thoughts = THOUGHTS

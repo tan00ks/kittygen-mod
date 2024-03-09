@@ -942,6 +942,9 @@ class Events:
     
     def generate_events(self):
         resource_dir = "resources/dicts/events/lifegen_events/events/"
+
+        if game.clan.your_cat.status == "former Clancat":
+            status = "former_clancat"
         if game.clan.your_cat.status != 'newborn':
             with open(f"{resource_dir}{game.clan.your_cat.status}.json",
                     encoding="ascii") as read_file:
@@ -3228,7 +3231,7 @@ class Events:
                 if cat.moons < 6:
                     if cat.ID == game.clan.your_cat.ID:
                         text = f"You know that {game.clan.name}Clan would be better off without you. As fast as your little legs can carry you, you run out of camp one night, never to return."
-                    else: 
+                    else:
                         text = f"{cat.name} knows that they will never be able to forgive themselves for what they've done. In the night, while the queens are sleeping, they sneak out of camp while stifling their tears. They'll miss {game.clan.name}Clan, but they know that they'll be better off without a killer in their nursery."
                 else:
                     cat.shunned = 0
