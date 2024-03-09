@@ -513,6 +513,62 @@ class Cat():
             if fetched_cat:
                 fetched_cat.update_mentor()
         self.update_mentor()
+    # pylint: disable=f-string-without-interpolation
+    def exile_return(self):
+        """
+        Handles the exiled MC attempting to return to the Clan
+        """
+
+        you = game.clan.your_cat
+        if not you.exiled:
+            return
+        
+        if you.personality.trait in ["charismatic", "confident", "flexible", "witty", "loyal", "responsible", "faithful", "compassionate", "sincere", "sweet", "polite"]:
+            acceptchance = randint (1,10)
+            killchance = randint(1,40)
+        elif you.personality.trait in ["bloodthirsty", "sneaky", "manipulative", "strange", "rebellious", "troublesome", "stoic", "aloof", "cunning"]:
+            acceptchance = randint(1,30)
+            killchance = randint(1,20)
+        else:
+            acceptchance = randint(1,20)
+            killchance = randint(1,30)
+
+        event_text = f"You muster up your courage and turn to walk back home. At the {game.clan.name}Clan border, you sit and wait for a patrol. "
+        if acceptchance == 1:
+            event_text = event_text + f"The patrol is wary, but they agree to take you back to camp, and a Clan meeting is held. After much deliberation, it's decided that you will be allowed back home."
+            you.exiled = False
+            if you.moons > 119:
+                you.status_change("elder")
+            elif you.moons > 12:
+                you.status_change("warrior")
+            elif you.moons > 6:
+                you.status_change("apprentice")
+            else:
+                you.status_change("kitten")
+            you.thought = "Is happy to be home!"
+            Cat.add_to_clan(you)
+
+        elif killchance == 1:
+            event_text = event_text + f"The patrol immediately meets you with hostility, and when you ask to visit camp, the more vengeful among the group instantly attack you, spitting at you that you don't desevre to step foot on {game.clan.name}Clan's territory after what you did. As your vision begins to blur, the last thing you hear is a former Clanmate damning you to the Dark Forest."
+            Cat.die(you)
+        elif killchance in [2, 3, 4, 5, 6]:
+            event_text = event_text + choice ([ f"The patrol responds to your greeting with hisses and growls. Before you can even ask to head back to camp with them, a set of claws shoots towards you and you're met with the view of your blood hitting the grass. You don't have to be told twice-- you retreat back to your makeshift home.",
+            f"As soon as a patrol catches your eye, they erupt into hisses and yowls. You scramble to your paws, but you don't get away in time to avoid a fresh wound from an angry ex-clanmate. They scream after you that there will never be a place for you in {game.clan.name}Clan again."])
+
+            scar = choice(["ONE", "TWO", "THREE", "TAILSCAR", "SNOUT", "CHEEK", "SIDE", "THROAT", "TAILBASE", "BELLY",
+            "LEGBITE", "NECKBITE", "FACE", "MANLEG", "MANTAIL", "BRIDGE", "RIGHTBLIND", "LEFTBLIND",
+            "BOTHBLIND", "CATBITE", "HINDLEG", "BACK", "SCRATCHSIDE", "CATBITETWO", "FOUR"])
+
+            you.pelt.scars.append(scar if scar not in you.pelt.scars else None)
+            you.thought = "Licks their wounds"
+        else:
+            event_text = event_text + choice([ f"When one finally comes along, they meet you with wary eyes. A few of the more forthcoming members of the group share some Clan news, but when they turn to head back to camp, you're not invited, and the leader of the patrol lingers nearby until you turn to leave.",
+            f"Eventually, one finds you, but they aren't as happy to see you as you'd have liked. You share some pleasantries with a couple of kind patrol members, but the others stay silent and on edge. After a short talk, they turn to leave, making it clear that you're not to come with them.",
+            f"You wait for a long time. Eventually, you see the flicker of a bright pelt through the trees, but they quickly turn away, and as the sun starts to set, you reluctantly leave to find somewhere to sleep."])
+
+            you.thought = "Wants to try again"
+        game.cur_events_list.insert(0, Single_Event(event_text))
+
     
     def grief(self, body: bool):
         """

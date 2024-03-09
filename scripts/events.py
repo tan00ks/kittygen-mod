@@ -379,6 +379,7 @@ class Events:
         elif game.clan.your_cat.status == 'exiled':
             self.generate_exile_event()
         game.clan.murdered = False
+        game.clan.exile_return = False
         
         self.check_achievements()
         self.checks = [len(game.clan.your_cat.apprentice), len(game.clan.your_cat.mate), len(game.clan.your_cat.inheritance.get_blood_kits()), None]

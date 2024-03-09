@@ -130,6 +130,7 @@ class Clan():
         self.pregnancy_data = {}
         self.inheritance = {}
         self.murdered = False
+        self.exile_return = False
         self.achievements = []
         self.talks = []
         
@@ -467,7 +468,8 @@ class Clan():
             "version_commit": get_version_info().version_number,
             "source_build": get_version_info().is_source_build,
             "your_cat": self.your_cat.ID,
-            "murdered": self.murdered
+            "murdered": self.murdered,
+            "exile_return": self.exile_return
         }
 
         # LEADER DATA
