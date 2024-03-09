@@ -783,7 +783,7 @@ class Events:
             if "r_c_sc" in text:
                 alive_app = Cat.all_cats.get(random.choice(game.clan.starclan_cats))
                 while alive_app.ID == game.clan.your_cat.ID:
-                    Cat.all_cats.get(random.choice(game.clan.starclan_cats))
+                    alive_app = Cat.all_cats.get(random.choice(game.clan.starclan_cats))
                 text = text.replace("r_c_sc", str(alive_app.name))
             if "r_c" in text:
                 alive_cats = self.get_living_cats()

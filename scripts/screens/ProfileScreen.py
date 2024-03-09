@@ -415,6 +415,8 @@ class ProfileScreen(Screens):
                 self.change_screen('mediation screen')
             elif "queen" in self.profile_elements and event.ui_element == self.profile_elements["queen"]:
                 self.change_screen('queen screen')
+            elif "halfmoon" in self.profile_elements and event.ui_element == self.profile_elements["halfmoon"]:
+                self.change_screen('moonplace screen')
             elif event.ui_element == self.profile_elements["favourite_button"]:
                 self.the_cat.favourite = False
                 self.profile_elements["favourite_button"].hide()
@@ -1121,6 +1123,16 @@ class ProfileScreen(Screens):
             )
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["queen"].disable()
+        elif self.the_cat.status in ["medicine cat", "medicine cat apprentice"] and self.the_cat.ID == game.clan.your_cat.ID:
+            self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(
+                (746, 220), (68, 68))),
+                "",
+                object_id="#leader_ceremony_button", 
+                tool_tip_text= "Attend the half-moon gathering",
+                manager=MANAGER
+            )
+            if self.the_cat.dead or self.the_cat.outside:
+                self.profile_elements["halfmoon"].disable()
 
     def determine_previous_and_next_cat(self):
         """'Determines where the next and previous buttons point too."""

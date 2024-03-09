@@ -60,7 +60,7 @@ class MoonplaceScreen(Screens):
 
 
     def screen_switches(self):
-        self.the_cat = Cat.all_cats.get(game.switches['cat'])
+        self.the_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
         self.update_camp_bg()
         self.hide_menu_buttons()
         self.text_index = 0
@@ -194,9 +194,13 @@ class MoonplaceScreen(Screens):
         try:
             if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
                 self.profile_elements["cat_image"].hide()
+                self.clan_name_bg.hide()
+                self.profile_elements["cat_name"].hide()
                 # self.textbox_graphic.show()
             else:
                 self.profile_elements["cat_image"].show()
+                self.clan_name_bg.show()
+                self.profile_elements["cat_name"].show()
                 # self.textbox_graphic.hide()
         except:
             pass
@@ -356,30 +360,12 @@ class MoonplaceScreen(Screens):
 
     def load_texts(self, cat):
         you = game.clan.your_cat
-        resource_dir = "resources/dicts/lifegen_talk/"
+        resource_dir = "resources/dicts/events/lifegen_events/moonplace/moonplace.json"
         possible_texts = {}
-        with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
+        with open(f"{resource_dir}", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
 
-        with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
-            possible_texts.update(ujson.loads(read_file.read()))
-
-        if cat.status not in ['kitten', "newborn"] and you.status not in ['kitten', 'newborn']:
-            with open(f"{resource_dir}general_no_kit.json", 'r') as read_file:
-                possible_texts2 = ujson.loads(read_file.read())
-                possible_texts.update(possible_texts2)
-
-        if cat.status not in ['kitten', "newborn"] and you.status in ['kitten', 'newborn']:
-            with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
-                possible_texts3 = ujson.loads(read_file.read())
-                possible_texts.update(possible_texts3)
-
-        if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,2)==1:
-            with open(f"{resource_dir}crush.json", 'r') as read_file:
-                possible_texts3 = ujson.loads(read_file.read())
-                possible_texts.update(possible_texts3)
-
-        return self.filter_texts(cat, possible_texts)
+        return self.get_adjusted_txt(choice(possible_texts["intros"]["you_single_med"]) + choice(possible_texts["moonplace"]["starclan_general"]), cat)
 
 
     def filter_texts(self, cat, possible_texts):
