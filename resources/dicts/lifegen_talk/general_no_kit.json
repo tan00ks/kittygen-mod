@@ -1,4 +1,41 @@
 {
+    "shunned1": [
+        [
+            "Any",
+            "they_shunned"
+        ],
+        [
+            "...",
+            "... ...",
+            "You're not supposed to talk to me.",
+            "l_n will get mad."
+        ]
+    ],
+
+    "shunned2": [
+        [
+            "Any",
+            "you_shunned"
+        ],
+        [
+            "Hey... here.",
+            "[t_c covertly drops a mouse at your paws.]",
+            "If l_n saw me sneaking you extra prey, they'd be pretty mad... but you looked so hungry!",
+            "I won't tell if you won't, okay?"
+        ]
+    ],
+    "shunned3": [
+        [
+            "Any",
+            "both_shunned"
+        ],
+        [
+            "Do you think we'll ever be forgiven?",
+            "...",
+            "Maybe you will. I don't know about me..."
+        ]
+    ],
+    
     "assertive_leafbare": [
         [
             "Any",

@@ -432,6 +432,18 @@ class TalkScreen(Screens):
             if you.moons == 0 and "newborn" not in tags:
                 continue
 
+            
+
+            if "both_shunned" in tags:
+                if cat.shunned < 1 or you.shunned < 1:
+                    continue
+
+            elif you.shunned > 0 and "you_shunned" not in tags:
+                continue
+
+            elif cat.shunned > 0 and "they_shunned" not in tags:
+                continue
+
             # Status tags
             if you.status not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags and "newborn" not in tags:
                 continue

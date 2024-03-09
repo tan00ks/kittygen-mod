@@ -145,10 +145,10 @@ class Cat():
             self.pronouns = [self.default_pronouns[0].copy()]
             self.moons = moons
             self.dead_for = 0
+            self.shunned = 0
             self.dead = True
             self.outside = False
             self.exiled = False
-            self.shunned = 0
             self.inheritance = None # This should never be used, but just for safety
             if "df" in kwargs:
                 self.df = kwargs["df"]
@@ -200,9 +200,9 @@ class Cat():
         self.example = example
         self.dead = False
         self.exiled = False
-        self.shunned = 0
         self.outside = False
         self.dead_for = 0  # moons
+        self.shunned = 0 # moons
         self.thought = ''
         self.genderalign = None
         self.birth_cooldown = 0
@@ -3046,7 +3046,6 @@ class Cat():
                 "paralyzed": self.pelt.paralyzed,
                 "no_kits": self.no_kits,
                 "exiled": self.exiled,
-                "shunned": self.shunned,
                 "no_retire": self.no_retire,
                 "no_mates": self.no_mates,
                 "pelt_name": self.pelt.name,
@@ -3076,6 +3075,7 @@ class Cat():
                 "accessory": self.pelt.accessory,
                 "experience": self.experience,
                 "dead_moons": self.dead_for,
+                "shunned": self.shunned,
                 "current_apprentice": [appr for appr in self.apprentice],
                 "former_apprentices": [appr for appr in self.former_apprentices],
                 "df": self.df,
