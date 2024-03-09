@@ -331,7 +331,7 @@ class Thoughts():
 
         THOUGHTS = []
         # newborns only pull from their status thoughts. this is done for convenience
-        if main_cat.age == 'newborn':
+        if main_cat.age == 'newborn' or main_cat.moons <= 0:
             with open(f"{base_path}{life_dir}{spec_dir}/newborn.json", 'r') as read_file:
                 THOUGHTS = ujson.loads(read_file.read())
             loaded_thoughts = THOUGHTS

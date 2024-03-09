@@ -1,0 +1,26 @@
+{
+    "intros": {
+        "you_single_med": [
+            "You make the long trek to the moonplace. The stars are shining brightly today.",
+            "It's the half-moon and it's time for the medicine cats to gather."
+        ],
+        "you_app_mentor": [
+            "You follow m_n's lead as you make your way to the moonplace."
+        ],
+        "you_app_mentorless": [
+            "You follow the path that your ancestors have shown you until you reach the moonplace."
+        ],
+        "two_meds": [
+            "You and r_m represent your Clan at the half-moon gathering."
+        ],
+        "multi_meds": [
+            "You and the other medicine cats head to the moonplace, the stars shining brightly above you."
+        ]
+    },
+    "med_cat_greetings": {
+
+    },
+    "moonplace": {
+
+    }
+}

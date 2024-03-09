@@ -2093,6 +2093,13 @@ class Events:
             # apprentice a kitten to either med or warrior
             if cat.moons == cat_class.age_moons["adolescent"][0]:
                 if cat.status == 'kitten':
+
+                    # change personality facets
+                    cat.personality.aggression = min(max(cat.personality.aggression + (-1*cat.courage)%2, 0), 15)
+                    cat.personality.sociability = min(max(cat.personality.aggression + (-1*cat.compassion)%2, 0), 15)
+                    cat.personality.lawfulness = min(max(cat.personality.aggression + (-1*cat.intelligence)%2, 0), 15)
+                    cat.personality.stability = min(max(cat.personality.aggression + (-1*cat.empathy)%2, 0), 15)
+
                     med_cat_list = [i for i in Cat.all_cats_list if
                                     i.status in ["medicine cat", "medicine cat apprentice"] and not (
                                             i.dead or i.outside)]
