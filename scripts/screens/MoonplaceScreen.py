@@ -364,8 +364,9 @@ class MoonplaceScreen(Screens):
         possible_texts = {}
         with open(f"{resource_dir}", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
-
-        return self.get_adjusted_txt(choice(possible_texts["intros"]["you_single_med"]) + choice(possible_texts["moonplace"]["starclan_general"]), cat)
+        prophecy = ["I have a message for you.",
+                    "<u><b><i>Beings of two will march the land, bringing destruction where they stand.</i></b></u>"]
+        return self.get_adjusted_txt(choice(possible_texts["intros"]["you_single_med"]) + choice(possible_texts["moonplace"]["starclan_general"]) + prophecy, cat)
 
 
     def filter_texts(self, cat, possible_texts):
