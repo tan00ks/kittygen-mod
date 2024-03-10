@@ -653,7 +653,6 @@ class Pregnancy_Events():
             other_cat = None
         
         blood_parent = None
-         
         ##### SELECT BACKSTORY #####
         if cat and cat.gender == 'female':
             backstory = choice(['halfclan1', 'outsider_roots1'])

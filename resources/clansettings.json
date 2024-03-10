@@ -63,7 +63,7 @@
         "freshkill": [
             "Enable auto freshkill",
             "With this setting on, no cat will ever go hungry and hunting patrols will not be needed",
-            false
+            true
         ],
         
         "all accessories": [

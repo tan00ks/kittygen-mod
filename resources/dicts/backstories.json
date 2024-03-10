@@ -10,7 +10,7 @@
     "halfclan7": "One of this cat's parents is the medicine cat of another Clan, {PRONOUN/m_c/subject} {VERB/s_c/have/has} never met them.",
     "halfclan8": "One of this cat's parents is the medicine cat of another Clan, and {PRONOUN/m_c/subject} visit regularly.",
     "halfclan9": "One of this cat's parents is the leader of another Clan, and {PRONOUN/m_c/subject} visit regularly.",
-    "halfclan10": "One of this cat's parents is the leader of another Clan, and {PRONOUN/m_c/subject} visit regularly.",
+    "halfclan10": "One of this cat's parents is the deputy of another Clan, and {PRONOUN/m_c/subject} visit regularly.",
     "outsider_roots1": "This cat was born into the Clan, but one of {PRONOUN/m_c/poss} parents is an outsider that belongs to no Clan.",
     "outsider_roots2": "This cat was born outside the Clan, but came to live in the Clan with {PRONOUN/m_c/poss} parent at a young age.",
     "outsider_roots3": "This cat was born into the Clan, but one of {PRONOUN/m_c/poss} parents is a loner who {PRONOUN/m_c/subject} {VERB/s_c/have/has} never met.",
