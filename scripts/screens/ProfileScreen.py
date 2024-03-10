@@ -174,7 +174,7 @@ class ProfileScreen(Screens):
                 pass
             elif event.ui_element == self.exile_return_button:
                 game.clan.exile_return = True
-                Cat.exile_return(self)
+                Cat.return_home(self)
                 self.change_screen('events screen')
                 # self.exit_screen()
                 # game.switches['cur_screen'] = "events screen"
@@ -753,8 +753,11 @@ class ProfileScreen(Screens):
                                             object_id="#magnify_button",
                                             manager=MANAGER)
         
-        self.exile_return_button = UIImageButton(scale(pygame.Rect((670, 190), (250, 80))), "Return Home",
+        # self.exile_return_button = UIImageButton(scale(pygame.Rect((670, 210), (254, 56))), "Return Home",
+        #                                           object_id="#exile_return_button",  tool_tip_text='Ask your Clan for your nest back.', manager=MANAGER)
+        self.exile_return_button = UIImageButton(scale(pygame.Rect((746, 220), (68, 68))), "Return Home",
                                                   object_id="#exile_return_button",  tool_tip_text='Ask your Clan for your nest back.', manager=MANAGER)
+        
         self.relations_tab_button = UIImageButton(scale(pygame.Rect((96, 840), (352, 60))), "",
                                                   object_id="#relations_tab_button", manager=MANAGER)
         self.roles_tab_button = UIImageButton(scale(pygame.Rect((448, 840), (352, 60))), "",
@@ -1134,7 +1137,7 @@ class ProfileScreen(Screens):
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["queen"].disable()
 
-        if self.the_cat.exiled and self.the_cat.ID == game.clan.your_cat.ID and not self.the_cat.dead:
+        if (self.the_cat.outside) and self.the_cat.ID == game.clan.your_cat.ID and not self.the_cat.dead:
             self.exile_return_button.show()
             if game.clan.exile_return:
                 self.exile_return_button.disable()

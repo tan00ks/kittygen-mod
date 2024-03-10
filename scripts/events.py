@@ -1946,6 +1946,8 @@ class Events:
         if cat.is_ill() or cat.is_injured():
             return
 
+        Cat.handle_exile_returns(self)
+        
         self.invite_new_cats(cat)
         self.other_interactions(cat)
         self.gain_accessories(cat)

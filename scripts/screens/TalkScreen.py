@@ -432,7 +432,17 @@ class TalkScreen(Screens):
             if you.moons == 0 and "newborn" not in tags:
                 continue
 
-            
+            if "deaf" in cat.permanent_condition and "they_deaf" not in tags:
+                continue
+
+            if "blind" in cat.permanent_condition and "they_blind" not in tags:
+                continue
+
+            if "deaf" in you.permanent_condition and "you_deaf" not in tags:
+                continue
+
+            if "blind" in you.permanent_condition and "you_blind" not in tags:
+                continue
 
             if "both_shunned" in tags:
                 if cat.shunned < 1 or you.shunned < 1:

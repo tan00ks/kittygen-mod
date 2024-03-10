@@ -35,26 +35,6 @@ class NewCatEvents:
             other_clan = game.clan.all_clans[0]
             other_clan_name = f'{other_clan.name}Clan'
 
-        if NewCatEvents.has_exiled_cat():
-            if random.randint(1,2) == 1:
-                exiled_cat = NewCatEvents.select_exiled_cat()
-                exiled_cat = NewCatEvents.update_cat_properties(exiled_cat)
-                event_text = f"The entire Clan is shocked when {exiled_cat.name} shows up at the camp entrance. They asked to be let back into the Clan, "
-                allowchance = random.randint(1,2)
-                if allowchance == 1:
-                    event_text = event_text + f"and, after a Clan meeting is held, it's decided that they will be allowed back in."
-                    if exiled_cat.moons > 119:
-                        exiled_cat.status = "elder"
-                    elif exiled_cat.moons > 12:
-                        exiled_cat.status = "warrior"
-                    elif exiled_cat.moons > 6:
-                        exiled_cat.status = "apprentice"
-                    else:
-                        exiled_cat.status = "kitten"
-                else:
-                    event_text = event_text + f"but the more vengeful of {game.clan.name}Clan's members chase them out and leave them with a few scars to remember their past home by."
-                    exiled_cat.scars.append("SNOUT")
-        
         #Determine
         if NewCatEvents.has_outside_cat():
             if random.randint(1, 3) == 1:
