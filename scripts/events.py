@@ -587,6 +587,7 @@ class Events:
             possible_birth_types.remove(BirthType.ONE_PARENT)
             possible_birth_types.remove(BirthType.ONE_OUTSIDER_PARENT)
         birth_type = random.choice(possible_birth_types)
+        birth_type = BirthType.ONE_ADOPTIVE_PARENT
 
         def create_siblings(parent1, parent2, adoptive_parents):
             '''Creates siblings for your cat'''
@@ -646,6 +647,18 @@ class Events:
                                                 thought=thought,
                                                 age=random.randint(15,120),
                                                 outside=True)[0]
+                    parent2 = create_new_cat(Cat, Relationship,
+                                                status=random.choice(["loner", "kittypet"]),
+                                                alive=False,
+                                                thought=thought,
+                                                age=random.randint(15,120),
+                                                outside=True)[0]
+                    if not game.clan.clan_settings["same sex birth"]:
+                        if parent1.gender == parent2.gender:
+                            if parent1.gender == "female":
+                                parent1.gender = "male"
+                            else:
+                                parent1.gender = "female"
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parents = [adoptive_parent1.ID]
 
@@ -657,6 +670,18 @@ class Events:
                                                 thought=thought,
                                                 age=random.randint(15,120),
                                                 outside=True)[0]
+                    parent2 = create_new_cat(Cat, Relationship,
+                                                status=random.choice(["loner", "kittypet"]),
+                                                alive=False,
+                                                thought=thought,
+                                                age=random.randint(15,120),
+                                                outside=True)[0]
+                    if not game.clan.clan_settings["same sex birth"]:
+                        if parent1.gender == parent2.gender:
+                            if parent1.gender == "female":
+                                parent1.gender = "male"
+                            else:
+                                parent1.gender = "female"
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parent2 = pick_valid_parent(adoptive_parent1)
                     adoptive_parent1.set_mate(adoptive_parent2)
@@ -664,28 +689,32 @@ class Events:
 
                 elif birth_type == BirthType.ONE_OUTSIDER_PARENT:
                     parent1 = create_new_cat(Cat, Relationship,
-                                                status=random.choice(["loner", "kittypet"]),
-                                                alive=False,
+                                                status="warrior",
+                                                alive=True,
                                                 age=random.randint(15,120),
-                                                outside=True)[0]
+                                                outside=False)[0]
+                    parent1.backstory = random.choice(["loner1", "loner2", "loner4", "kittypet1", "kittypet2", "kittypet3", "kittypet4", "kittypet6", "rogue1", "rogue2", "rogue3", "rogue5", "rogue8", "refugee2", "refugee3", "refugee4"])
 
                 elif birth_type == BirthType.TWO_OUTSIDER_PARENTS:
                     parent1 = create_new_cat(Cat, Relationship,
-                                                status=random.choice(["loner", "kittypet"]),
-                                                alive=False,
+                                                status="warrior",
+                                                alive=True,
                                                 age=random.randint(15,120),
-                                                outside=True)[0]
+                                                outside=False)[0]
+                    parent1.backstory = random.choice(["loner1", "loner2", "loner4", "kittypet1", "kittypet2", "kittypet3", "kittypet4", "kittypet6", "rogue1", "rogue2", "rogue3", "rogue5", "rogue8", "refugee2", "refugee3", "refugee4"])
                     parent2 = create_new_cat(Cat, Relationship,
-                                                status=random.choice(["loner", "kittypet"]),
-                                                alive=False,
+                                                status="warrior",
+                                                alive=True,
                                                 age=parent1.moons + random.randint(1,5),
-                                                outside=True)[0]
+                                                outside=False)[0]
+                    parent2.backstory = random.choice(["loner1", "loner2", "loner4", "kittypet1", "kittypet2", "kittypet3", "kittypet4", "kittypet6", "rogue1", "rogue2", "rogue3", "rogue5", "rogue8", "refugee2", "refugee3", "refugee4"])
                     parent1.init_all_relationships()
                     parent2.init_all_relationships()
                     parent1.set_mate(parent2)
 
                 return birth_type, parent1, parent2, adoptive_parents
-            except AttributeError:
+            except Exception as e:
+                print(e)
                 birth_type = random.choice(list(BirthType))
                 get_parents(birth_type)
 
@@ -746,10 +775,20 @@ class Events:
                     replacements["insert_siblings"] = f"{siblings[0].name}, {siblings[1].name}, {siblings[2].name}, and {siblings[3].name}"
                 if num_siblings == 5:
                     replacements["insert_siblings"] = f"{siblings[0].name}, {siblings[1].name}, {siblings[2].name}, {siblings[3].name}, and {siblings[4].name}"
+            
             birth_txt = random.choice(self.b_txt[birth_value])
+            birth_txt = self.adjust_txt(birth_txt)
             for key, value in replacements.items():
                 birth_txt = birth_txt.replace(key, str(value))
-            birth_txt = self.adjust_txt(birth_txt)
+            MAX_ATTEMPTS = 10
+            if not birth_txt:
+                for _ in range(MAX_ATTEMPTS):
+                    for key, value in replacements.items():
+                        birth_txt = birth_txt.replace(key, str(value))
+                    birth_txt = self.adjust_txt(birth_txt)
+                    if birth_txt:
+                        break
+                
             game.cur_events_list.append(Single_Event(birth_txt))
 
         birth_type, parent1, parent2, adoptive_parents = get_parents(birth_type)
