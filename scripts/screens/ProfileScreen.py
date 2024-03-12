@@ -186,10 +186,15 @@ class ProfileScreen(Screens):
                     self.build_profile()
                     self.page = 0
                     if self.previous_page_button:
-                        self.previous_page_button.enable()
-                        self.next_page_button.enable()
-                        self.max_pages = math.ceil(len(self.the_cat.pelt.inventory)/18)
-                        # self.max_pages = math.ceil(len(self.search_inventory)/18)
+
+                        inventory_len = 0
+                        if self.search_bar.get_text() in ["", "search"]:
+                            inventory_len = len(self.the_cat.pelt.inventory)
+                        else:
+                            for ac in self.the_cat.pelt.inventory:
+                                if self.search_bar.get_text().lower() in ac.lower():
+                                    inventory_len+=1
+                        self.max_pages = math.ceil(inventory_len/18)
                         if self.page == 0 and self.max_pages == 1:
                             self.previous_page_button.disable()
                             self.next_page_button.disable()
@@ -214,7 +219,14 @@ class ProfileScreen(Screens):
                     if self.previous_page_button:
                         self.previous_page_button.enable()
                         self.next_page_button.enable()
-                        self.max_pages = math.ceil(len(self.the_cat.pelt.inventory)/18)
+                        inventory_len = 0
+                        if self.search_bar.get_text() in ["", "search"]:
+                            inventory_len = len(self.the_cat.pelt.inventory)
+                        else:
+                            for ac in self.the_cat.pelt.inventory:
+                                if self.search_bar.get_text().lower() in ac.lower():
+                                    inventory_len+=1
+                        self.max_pages = math.ceil(inventory_len/18)
                         if self.page == 0 and self.max_pages == 1:
                             self.previous_page_button.disable()
                             self.next_page_button.disable()
@@ -341,18 +353,24 @@ class ProfileScreen(Screens):
                     start_index = self.page * 18
                     end_index = start_index + 18
                     inventory_len = 0
+                    new_inv = []
                     if self.search_bar.get_text() in ["", "search"]:
                         inventory_len = len(cat.pelt.inventory)
+                        new_inv = cat.pelt.inventory
                     else:
                         for ac in cat.pelt.inventory:
                             if self.search_bar.get_text().lower() in ac.lower():
                                 inventory_len+=1
+                                new_inv.append(ac)
                     self.max_pages = math.ceil(inventory_len/18)
                     if self.max_pages == 1:
+                        self.previous_page_button.disable()
                         self.next_page_button.disable()
+                    if self.page == 0:
+                        self.previous_page_button.disable()
                     
                     if cat.pelt.inventory:
-                        for a, accessory in enumerate(cat.pelt.inventory[start_index:min(end_index, inventory_len + start_index)], start = start_index):
+                        for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len + start_index)], start = start_index):
                             if accessory in cat.pelt.accessories:
                                 self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
                             else:
@@ -690,51 +708,58 @@ class ProfileScreen(Screens):
                 start_index = self.page * 18
                 end_index = start_index + 18
                 inventory_len = 0
+                new_inv = []
                 if self.search_bar.get_text() in ["", "search"]:
                     inventory_len = len(cat.pelt.inventory)
+                    new_inv = cat.pelt.inventory
                 else:
                     for ac in cat.pelt.inventory:
                         if self.search_bar.get_text().lower() in ac.lower():
                             inventory_len+=1
+                            new_inv.append(ac)
                 self.max_pages = math.ceil(inventory_len/18)
                 if self.max_pages == 1:
+                    self.previous_page_button.disable()
                     self.next_page_button.disable()
+                if self.page == 0:
+                    self.previous_page_button.disable()
                 if cat.pelt.inventory:
-                    for a, accessory in enumerate(cat.pelt.inventory[start_index:min(end_index, inventory_len + start_index)], start = start_index):
+                    for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len + start_index)], start = start_index):
                         try:
-                            if accessory in cat.pelt.accessories:
-                                self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
-                            else:
-                                self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#blank_button")
-                            if accessory in cat.pelt.plant_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.wild_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_wild' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.collars:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['collars' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.flower_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_flower' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.plant2_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_plant2' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.snake_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_snake' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.smallAnimal_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_smallAnimal' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.deadInsect_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_deadInsect' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.aliveInsect_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_aliveInsect' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.fruit_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_fruit' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.crafted_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_crafted' + accessory + cat_sprite], manager=MANAGER)
-                            elif accessory in cat.pelt.tail2_accessories:
-                                self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_tail2' + accessory + cat_sprite], manager=MANAGER)
-                            pos_x += 120
-                            if pos_x >= 1100:
-                                pos_x = 0
-                                pos_y += 120
-                            i += 1
+                            if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
+                                if accessory in cat.pelt.accessories:
+                                    self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
+                                else:
+                                    self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#blank_button")
+                                if accessory in cat.pelt.plant_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_herbs' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.wild_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_wild' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.collars:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['collars' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.flower_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_flower' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.plant2_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_plant2' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.snake_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_snake' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.smallAnimal_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_smallAnimal' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.deadInsect_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_deadInsect' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.aliveInsect_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_aliveInsect' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.fruit_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_fruit' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.crafted_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_crafted' + accessory + cat_sprite], manager=MANAGER)
+                                elif accessory in cat.pelt.tail2_accessories:
+                                    self.cat_list_buttons["cat" + str(i)] = pygame_gui.elements.UIImage(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), sprites.sprites['acc_tail2' + accessory + cat_sprite], manager=MANAGER)
+                                pos_x += 120
+                                if pos_x >= 1100:
+                                    pos_x = 0
+                                    pos_y += 120
+                                i += 1
                         except:
                             continue
                 self.profile_elements["cat_image"].kill()
@@ -2300,7 +2325,6 @@ class ProfileScreen(Screens):
             self.previous_page_button = UIImageButton(scale(pygame.Rect((110, 1000), (68, 68))), "",
                                               object_id="#arrow_left_button"
                                               , manager=MANAGER)
-            self.previous_page_button.disable()
             self.next_page_button = UIImageButton(scale(pygame.Rect((1418, 1000), (68, 68))), "",
                                                   object_id="#arrow_right_button", manager=MANAGER)
             self.clear_accessories = UIImageButton(scale(pygame.Rect((1418, 1160), (68, 68))), "",
@@ -2368,17 +2392,24 @@ class ProfileScreen(Screens):
                 cat.pelt.inventory.append(acc)
 
         inventory_len = 0
+        new_inv = []
         if self.search_bar.get_text() in ["", "search"]:
             inventory_len = len(cat.pelt.inventory)
+            new_inv = cat.pelt.inventory
         else:
             for ac in cat.pelt.inventory:
                 if self.search_bar.get_text().lower() in ac.lower():
-                    inventory_len+=1        
+                    inventory_len+=1
+                    new_inv.append(ac)
         self.max_pages = math.ceil(inventory_len/18)
+        
         if self.max_pages == 1:
+            self.previous_page_button.disable()
             self.next_page_button.disable()
+        if self.page == 0:
+            self.previous_page_button.disable()
         if cat.pelt.inventory:
-            for a, accessory in enumerate(cat.pelt.inventory[start_index:min(end_index, inventory_len)], start = start_index):
+            for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len)], start = start_index):
                 try:
                     if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
                         if accessory in cat.pelt.accessories:
@@ -3012,11 +3043,38 @@ class ProfileScreen(Screens):
         if self.search_bar:
             if self.search_bar.is_focused and self.search_bar.get_text() == "search":
                 self.search_bar.set_text("")
-            if self.search_bar.get_text() != self.previous_search_text:
+                self.page = 0
+                if self.page == 0 and self.max_pages == 1:
+                    self.previous_page_button.disable()
+                    self.next_page_button.disable()
+                elif self.page == 0:
+                    self.previous_page_button.disable()
+                    self.next_page_button.enable()
+                elif self.page == self.max_pages - 1:
+                    self.previous_page_button.enable()
+                    self.next_page_button.disable()
+                else:
+                    self.previous_page_button.enable()
+                    self.next_page_button.enable()
+            elif self.search_bar.get_text() != self.previous_search_text:
+                self.page = 0
                 if self.cat_list_buttons:
                     for i in self.cat_list_buttons:
                         self.cat_list_buttons[i].kill()
                     for i in self.accessory_buttons:
                         self.accessory_buttons[i].kill()
                 self.open_accessories()
-            self.previous_search_text = self.search_bar.get_text()
+
+                if self.page == 0 and self.max_pages in [0, 1]:
+                    self.previous_page_button.disable()
+                    self.next_page_button.disable()
+                elif self.page == 0:
+                    self.previous_page_button.disable()
+                    self.next_page_button.enable()
+                elif self.page == self.max_pages - 1:
+                    self.previous_page_button.enable()
+                    self.next_page_button.disable()
+                else:
+                    self.previous_page_button.enable()
+                    self.next_page_button.enable()
+                self.previous_search_text = self.search_bar.get_text()

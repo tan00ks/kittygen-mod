@@ -416,9 +416,9 @@ def create_new_cat(Cat,
                               parent1=parent1,
                               parent2=parent2)
 
-        # give em a collar if they got one
-        if accessory:
-            new_cat.pelt.accessories.append(accessory)
+            # give em a collar if they got one
+            if accessory:
+                new_cat.pelt.accessories.append(accessory)
 
         if df:
             if status != "kitten":
