@@ -736,6 +736,17 @@ class Cat():
             fetched_cat = Cat.fetch_cat(app)
             if isinstance(fetched_cat, Cat):
                 fetched_cat.update_mentor()
+        
+        if "request apprentice" in game.switches and game.switches['request apprentice'] and self.mentor == game.clan.your_cat.ID:
+            if game.clan.your_cat.status == "queen":
+                self.status =  "queen's apprentice"
+            elif game.clan.your_cat.status == "mediator":
+                self.status = "mediator apprentice"
+            elif game.clan.your_cat.status == "medicine cat":
+                self.status = "medicine cat apprentice"
+            else:
+                self.status = "apprentice"
+            game.switches["request apprentice"] = False
 
         # If they have any apprentices, make sure they are still valid:
         if old_status == "medicine cat":
@@ -2086,13 +2097,14 @@ class Cat():
         """Takes mentor's ID as argument, mentor could just be set via this function."""
         # No !!
         if isinstance(new_mentor, Cat):
-            print("Everything is terrible!! (new_mentor {new_mentor} is a Cat D:)")
+            print(
+                "Everything is terrible!! (new_mentor {new_mentor} is a Cat D:)")
             return
         # Check if cat can have a mentor
         illegible_for_mentor = self.dead or self.outside or self.exiled or self.shunned > 0 or self.dead_for > 1 or self.status not in ["apprentice",
-                                                                                               "mediator apprentice",
-                                                                                               "medicine cat apprentice",
-                                                                                               "queen's apprentice"]
+                                                                                                                                        "mediator apprentice",
+                                                                                                                                        "medicine cat apprentice",
+                                                                                                                                        "queen's apprentice"]
         if illegible_for_mentor:
             self.__remove_mentor()
             return
@@ -2114,22 +2126,12 @@ class Cat():
             for cat in self.all_cats.values():
                 if self.is_valid_mentor(cat):
                     potential_mentors.append(cat)
-                    if not cat.apprentice and not cat.not_working(): 
+                    if not cat.apprentice and not cat.not_working():
                         priority_mentors.append(cat)
             # First try for a cat who currently has no apprentices and is working
             if 'request apprentice' in game.switches:
                 if game.switches['request apprentice']:
                     new_mentor = game.clan.your_cat
-                    try:
-                        if game.clan.your_cat.status in ["medicine cat", "mediator"]:
-                            self.status_change(game.clan.your_cat.status + " apprentice")
-                        elif game.clan.your_cat.status == "queen":
-                            self.status_change(game.clan.your_cat.status + "'s apprentice")
-                        else:
-                            self.status_change("apprentice")
-                    except:
-                        print("couldn't change status")
-                    game.switches['request apprentice'] = False
                 else:
                     if priority_mentors:  # length of list > 0
                         new_mentor = choice(priority_mentors)

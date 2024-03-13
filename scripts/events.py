@@ -144,11 +144,12 @@ class Events:
         with open(f"{resource_dir}forest.json",
                   encoding="ascii") as read_file:
             disaster_text = ujson.loads(read_file.read())
-        if not game.clan.disaster and random.randint(1,50) == 1:
+        if not game.clan.disaster and random.randint(1,1) == 1:
             game.clan.disaster = random.choice(list(disaster_text.keys()))
             while not disaster_text[game.clan.disaster]["trigger_events"]:
                 game.clan.disaster = random.choice(list(disaster_text.keys()))
-        self.handle_disaster()
+        if game.clan.disaster:
+            self.handle_disaster()
         
         for cat in Cat.all_cats.copy().values():
             if not cat.outside or cat.dead:
@@ -2542,7 +2543,7 @@ class Events:
 
             # # remove duplicates
             involved_cats = list(set(involved_cats))
-            if str(game.clan.your_cat.name) not in ceremony_text:
+            if cat.ID != game.clan.your_cat.ID and game.clan.your_cat.ID != cat.mentor:
                 game.cur_events_list.append(
                     Single_Event(f'{ceremony_text}', "ceremony", involved_cats))
             game.ceremony_events_list.append(f'{cat.name}{ceremony_text}')
@@ -3073,6 +3074,7 @@ class Events:
         elif current_moon < current_disaster["duration"]:
             event_string = random.choice(current_disaster["progress_events"]["moon" + str(current_moon)])
             game.clan.disaster_moon += 1
+            self.handle_disaster_impacts(current_disaster)
             if random.randint(1,30) == 1 and not game.clan.second_disaster and current_disaster["secondary_disasters"]:
                 game.clan.second_disaster = random.choice(list(current_disaster["secondary_disasters"].keys()))
                 secondary_event_string = random.choice(current_disaster["secondary_disasters"][game.clan.second_disaster]["trigger_events"])
@@ -3089,6 +3091,21 @@ class Events:
                         Single_Event(event_string, "alert"))
         if game.clan.second_disaster:
             self.handle_second_disaster()
+    
+    def handle_disaster_impacts(self, current_disaster):        
+        for i in range(random.randint(0,2)):
+            cat = Cat.all_cats.get(random.choice(game.clan.clan_cats))
+            if current_disaster["collateral_damage"]:
+                if random.randint(1,10) != 1:
+                    if "injuries" in current_disaster["collateral_damage"]:
+                        cat.get_injured(random.choice(current_disaster["collateral_damage"]["injuries"]))
+                else:
+                    if "deaths" in current_disaster["collateral_damage"]:
+                        History.add_death(cat, death_text=current_disaster["collateral_damage"]["deaths"]["history_text"]["reg_death"])
+                        cat.die()
+                        death_text = current_disaster["collateral_damage"]["deaths"]["death_text"].replace("m_c", str(cat.name))
+                        game.cur_events_list.append(
+                            Single_Event(death_text, "birth_death", cat.ID))
 
     def handle_second_disaster(self):
         resource_dir = "resources/dicts/events/disasters/"

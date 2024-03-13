@@ -362,7 +362,15 @@
                 ]
             }
         },
-        "collateral_damage": {}
+        "collateral_damage": {
+            "injuries": ["poisoned"],
+            "deaths": {
+                "death_text": "m_c was killed by a Twoleg monster.",
+                "history_text": {
+                    "reg_death": "m_c was killed by a Twoleg monster."
+                }
+            }
+        }
     },
     "Prey Sickness": {
         "event": "Prey Sickness",
@@ -392,7 +400,15 @@
             "Fresh-kill tastes a little better, a little brighter, like it's cleaner. While the Clan might be a little thinner than they used to be, it seems as if they can now eat anything they catch again - if they can catch it!"
         ],
         "secondary_disasters": [],
-        "collateral_damage": {}
+        "collateral_damage": {
+            "injuries": ["poisoned"],
+            "deaths": {
+                "death_text": "m_c died from eating sick prey.",
+                "history_text": {
+                    "reg_death": "m_c died from eating sick prey."
+                }
+            }
+        }
     },
     "Horrible Storms": {
         "event": "Horrible Storms",
@@ -481,7 +497,15 @@
             "The forest is once again humming with life, and slowly the Clan starts too as well, making up for the hard times with jokes and sharing tongues and basking together in the bright sun."
         ],
         "secondary_disasters": [],
-        "collateral_damage": {}
+        "collateral_damage": {
+            "injuries": ["starving"],
+            "deaths": {
+                "death_text": "m_c drowned in the floods.",
+                "history_text": {
+                    "reg_death": "m_c drowned."
+                }
+            }
+        }
     },
     "Barren Land": {
         "event": "Barren Land",
