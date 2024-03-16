@@ -1266,7 +1266,7 @@ class ProfileScreen(Screens):
                 else:
                     output += "others"
             else:
-                output += "parents: " + ", ".join([str(i.name) for i in all_parents])
+                output += "parents: " + ", ".join([str(i.name) for i in all_parents if i])
 
 
         # MOONS
