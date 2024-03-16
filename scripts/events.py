@@ -146,8 +146,10 @@ class Events:
             disaster_text = ujson.loads(read_file.read())
         if not game.clan.disaster and random.randint(1,1) == 1:
             game.clan.disaster = random.choice(list(disaster_text.keys()))
-            while not disaster_text[game.clan.disaster]["trigger_events"]:
+            current_disaster = disaster_text.get(game.clan.disaster)
+            while not disaster_text[game.clan.disaster]["trigger_events"] or (get_current_season() not in current_disaster["season"]):
                 game.clan.disaster = random.choice(list(disaster_text.keys()))
+                current_disaster = disaster_text.get(game.clan.disaster)
         if game.clan.disaster:
             self.handle_disaster()
         
@@ -3095,15 +3097,23 @@ class Events:
     def handle_disaster_impacts(self, current_disaster):        
         for i in range(random.randint(0,2)):
             cat = Cat.all_cats.get(random.choice(game.clan.clan_cats))
+            for j in range(20):
+                if cat.outside or cat.dead:
+                    cat = Cat.all_cats.get(random.choice(game.clan.clan_cats))
+                else:
+                    break
             if current_disaster["collateral_damage"]:
                 if random.randint(1,10) != 1:
                     if "injuries" in current_disaster["collateral_damage"]:
                         cat.get_injured(random.choice(current_disaster["collateral_damage"]["injuries"]))
                 else:
                     if "deaths" in current_disaster["collateral_damage"]:
-                        History.add_death(cat, death_text=current_disaster["collateral_damage"]["deaths"]["history_text"]["reg_death"])
+                        if cat.status == "leader":
+                            History.add_death(cat, death_text=current_disaster["collateral_damage"]["deaths"]["history_text"]["reg_death"][4:])
+                        else:
+                            History.add_death(cat, death_text=current_disaster["collateral_damage"]["deaths"]["history_text"]["reg_death"])
                         cat.die()
-                        death_text = current_disaster["collateral_damage"]["deaths"]["death_text"].replace("m_c", str(cat.name))
+                        death_text = random.choice(current_disaster["collateral_damage"]["deaths"]["death_text"]).replace("m_c", str(cat.name))
                         game.cur_events_list.append(
                             Single_Event(death_text, "birth_death", cat.ID))
 
