@@ -3103,6 +3103,17 @@ class Events:
                 else:
                     break
             if current_disaster["collateral_damage"]:
+                if random.randint(1,10) == 1:
+                    if "herb loss" in current_disaster["collateral_damage"]:
+                        herbs = game.clan.herbs.copy()
+                        for herb in herbs:
+                            adjust_by = random.choices([-3, -2, -1], [1, 2, 3],
+                                                    k=1)
+                            game.clan.herbs[herb] += adjust_by[0]
+                            if game.clan.herbs[herb] <= 0:
+                                game.clan.herbs.pop(herb)
+                    if "prey loss" in current_disaster["collateral_damage"]:
+                        game.clan.freshkill_pile.total_amount = game.clan.freshkill_pile.total_amount * 0.7
                 if random.randint(1,10) != 1:
                     if "injuries" in current_disaster["collateral_damage"]:
                         cat.get_injured(random.choice(current_disaster["collateral_damage"]["injuries"]))
