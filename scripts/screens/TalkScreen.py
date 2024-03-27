@@ -375,7 +375,7 @@ class TalkScreen(Screens):
                 possible_texts3 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts3)
 
-        if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,2)==1:
+        if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,3)==1:
             with open(f"{resource_dir}crush.json", 'r') as read_file:
                 possible_texts3 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts3)
@@ -699,7 +699,7 @@ class TalkScreen(Screens):
                     continue
 
             # If you have murdered someone and have been revealed
-            if "murder" in tags:
+            if "murder" in tags and you.shunned == 1:
                 if game.clan.your_cat.revealed:
                     if game.clan.your_cat.history:
                         if "is_murderer" in game.clan.your_cat.history.murder:
@@ -931,7 +931,7 @@ class TalkScreen(Screens):
                     return ""
                 crush = None
                 for c in self.get_living_cats():
-                    if c.ID == game.clan.your_cat.ID or c.ID == cat.ID:
+                    if c.ID == game.clan.your_cat.ID or c.ID == cat.ID or c.ID in cat.mate or c.ID in game.clan.your_cat.mate or c.age != game.clan.your_cat.age:
                         continue
                     relations = game.clan.your_cat.relationships.get(c.ID)
                     if not relations:
@@ -948,7 +948,7 @@ class TalkScreen(Screens):
                     return ""
                 crush = None
                 for c in self.get_living_cats():
-                    if c.ID == game.clan.your_cat.ID or c.ID == cat.ID:
+                    if c.ID == game.clan.your_cat.ID or c.ID == cat.ID or c.ID in cat.mate or c.ID in game.clan.your_cat.mate or c.age != cat.age:
                         continue
                     relations = cat.relationships.get(c.ID)
                     if not relations:
@@ -1179,7 +1179,7 @@ class TalkScreen(Screens):
                     return ""
                 sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
                 counter = 0
-                while sibling.moons != cat.moons or sibling.outside or sibling.dead:
+                while sibling.moons != cat.moons or sibling.outside or sibling.dead or sibling.ID == game.clan.your_cat.ID:
                     sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
                     counter+=1
                     if counter == 15:

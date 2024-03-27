@@ -416,9 +416,9 @@ def create_new_cat(Cat,
                               parent1=parent1,
                               parent2=parent2)
 
-        # give em a collar if they got one
-        if accessory:
-            new_cat.pelt.accessories.append(accessory)
+            # give em a collar if they got one
+            if accessory:
+                new_cat.pelt.accessories.append(accessory)
 
         if df:
             if status != "kitten":
@@ -1068,13 +1068,17 @@ def ongoing_event_text_adjust(Cat, text, clan=None, other_clan_name=None):
     cat_dict = {}
     if "lead_name" in text:
         kitty = Cat.fetch_cat(game.clan.leader)
-        cat_dict["lead_name"] = (str(kitty.name), choice(kitty.pronouns))
+        if kitty:
+            cat_dict["lead_name"] = (str(kitty.name), choice(kitty.pronouns))
     if "dep_name" in text:
         kitty = Cat.fetch_cat(game.clan.deputy)
-        cat_dict["dep_name"] = (str(kitty.name), choice(kitty.pronouns))
+        if kitty:
+            cat_dict["dep_name"] = (str(kitty.name), choice(kitty.pronouns))
     if "med_name" in text:
-        kitty = choice(get_med_cats(Cat, working=False))
-        cat_dict["med_name"] = (str(kitty.name), choice(kitty.pronouns))
+        kitty_list = get_med_cats(Cat, working=False)
+        kitty = choice(kitty_list) if kitty_list else None 
+        if kitty:
+            cat_dict["med_name"] = (str(kitty.name), choice(kitty.pronouns))
 
     if cat_dict:
         text = process_text(text, cat_dict)
