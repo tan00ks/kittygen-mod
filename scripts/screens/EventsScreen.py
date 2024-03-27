@@ -89,7 +89,7 @@ class EventsScreen(Screens):
         if game.switches['window_open']:
             pass
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
-            if event.ui_element == self.timeskip_button and (game.clan.your_cat.dead_for == 1 or game.clan.your_cat.exiled) and not game.switches['continue_after_death']:
+            if event.ui_element == self.timeskip_button and game.clan.your_cat.dead_for == 1 and not game.switches['continue_after_death']:
                 DeathScreen('events screen')
                 return
             elif self.death_button and event.ui_element == self.death_button:

@@ -107,6 +107,7 @@ class Death_Events():
                     involved_cats.append(other_cat.ID)
             else:
                 involved_cats.append(other_cat.ID)
+        
 
         # give history to cat if they die
         if cat.status == 'leader':

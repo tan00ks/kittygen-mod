@@ -158,6 +158,7 @@ class ProfileScreen(Screens):
         self.join_df_button = None
         self.exit_df_button = None
         self.accessories_tab_button = None
+        self.exile_return_button = None
         self.page = 0
         self.max_pages = 1
         self.clear_accessories = None
@@ -176,6 +177,12 @@ class ProfileScreen(Screens):
 
             if game.switches['window_open']:
                 pass
+            elif event.ui_element == self.exile_return_button:
+                game.clan.exile_return = True
+                Cat.return_home(self)
+                self.change_screen('events screen')
+                # self.exit_screen()
+                # game.switches['cur_screen'] = "events screen"
             elif event.ui_element == self.back_button:
                 self.close_current_tab()
                 self.change_screen(game.last_screen_forProfile)
@@ -791,6 +798,12 @@ class ProfileScreen(Screens):
         self.inspect_button = UIImageButton(scale(pygame.Rect((1482, 120),(68,68))), "",
                                             object_id="#magnify_button",
                                             manager=MANAGER)
+        
+        # self.exile_return_button = UIImageButton(scale(pygame.Rect((670, 210), (254, 56))), "Return Home",
+        #                                           object_id="#exile_return_button",  tool_tip_text='Ask your Clan for your nest back.', manager=MANAGER)
+        self.exile_return_button = UIImageButton(scale(pygame.Rect((746, 220), (68, 68))), "Return Home",
+                                                  object_id="#exile_return_button",  tool_tip_text='Ask your Clan for your nest back.', manager=MANAGER)
+        
         self.relations_tab_button = UIImageButton(scale(pygame.Rect((96, 840), (352, 60))), "",
                                                   object_id="#relations_tab_button", manager=MANAGER)
         self.roles_tab_button = UIImageButton(scale(pygame.Rect((448, 840), (352, 60))), "",
@@ -846,6 +859,8 @@ class ProfileScreen(Screens):
         self.back_button.kill()
         self.next_cat_button.kill()
         self.previous_cat_button.kill()
+        if self.exile_return_button:
+            self.exile_return_button.kill()
         self.relations_tab_button.kill()
         self.roles_tab_button.kill()
         self.personal_tab_button.kill()
@@ -1178,6 +1193,13 @@ class ProfileScreen(Screens):
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["halfmoon"].disable()
 
+        if (self.the_cat.outside) and self.the_cat.ID == game.clan.your_cat.ID and not self.the_cat.dead:
+            self.exile_return_button.show()
+            if game.clan.exile_return:
+                self.exile_return_button.disable()
+        else:
+            self.exile_return_button.hide()
+
     def determine_previous_and_next_cat(self):
         """'Determines where the next and previous buttons point too."""
 
@@ -1302,7 +1324,7 @@ class ProfileScreen(Screens):
                 else:
                     output += "others"
             else:
-                output += "parents: " + ", ".join([str(i.name) for i in all_parents])
+                output += "parents: " + ", ".join([str(i.name) for i in all_parents if i])
 
 
         # MOONS
@@ -1383,7 +1405,10 @@ class ProfileScreen(Screens):
         elif the_cat.exiled:
             output += "<font color='#FF0000'>exiled</font>"
         elif the_cat.shunned > 0 and not the_cat.dead:
-            output += "<font color='#FF0000'>shunned</font>"
+            if the_cat.status != "former Clancat":
+                output += "<font color='#FF0000'>shunned</font>"
+            else:
+                output += the_cat.status
         elif the_cat.df:
             if game.settings['dark mode']:
                 output += "<font color='#FF0000' >" + "Dark Forest "+ the_cat.status + "</font>"
@@ -2569,6 +2594,7 @@ class ProfileScreen(Screens):
             )
             if game.clan.murdered or game.clan.your_cat.moons == 0:
                 self.murder_cat_button.disable()
+                
             if game.clan.your_cat.joined_df:
                 self.exit_df_button = UIImageButton(
                 scale(pygame.Rect((1156, 1115), (344, 72))),

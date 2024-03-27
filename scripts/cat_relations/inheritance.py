@@ -498,7 +498,7 @@ class Inheritance():
         inter_parent_ids = self.get_parents(inter_cat)
         parents_cats = [self.cat.fetch_cat(c_id) for c_id in inter_parent_ids]
         parent_cats_names = [str(c.name) for c in parents_cats if c is not None]
-
+        
         for inter_parent_id in inter_parent_ids:
             if inter_parent_id in self.parents_siblings.keys():
                 rel_type = RelationType.BLOOD 

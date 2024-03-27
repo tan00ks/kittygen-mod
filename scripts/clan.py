@@ -130,6 +130,7 @@ class Clan():
         self.pregnancy_data = {}
         self.inheritance = {}
         self.murdered = False
+        self.exile_return = False
         self.achievements = []
         self.talks = []
         
@@ -460,6 +461,7 @@ class Clan():
             "instructor": self.instructor.ID,
             "demon": self.demon.ID,
             "reputation": self.reputation,
+            "following_starclan": self.followingsc, 
             "mediated": game.mediated,
             "starting_season": self.starting_season,
             "temperament": self.temperament,
@@ -467,7 +469,8 @@ class Clan():
             "version_commit": get_version_info().version_number,
             "source_build": get_version_info().is_source_build,
             "your_cat": self.your_cat.ID,
-            "murdered": self.murdered
+            "murdered": self.murdered,
+            "exile_return": self.exile_return
         }
 
         # LEADER DATA
@@ -789,6 +792,10 @@ class Clan():
                          game_mode=clan_data["gamemode"], self_run_init_functions=False)
         game.clan.post_initialization_functions()
 
+        if "following_starclan" in clan_data:
+            game.clan.followingsc = clan_data['following_starclan']
+        else:
+            game.clan.followingsc = True
         game.clan.reputation = int(clan_data["reputation"])
 
         game.clan.age = clan_data["clanage"]
@@ -818,7 +825,7 @@ class Clan():
             game.clan.demon.dead = True
             game.clan.add_cat(game.clan.demon)
             game.clan.demon.df = True
-            
+   
         game.clan.leader_lives = leader_lives
         game.clan.leader_predecessors = clan_data["leader_predecessors"]
 
