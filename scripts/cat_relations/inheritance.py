@@ -445,7 +445,7 @@ class Inheritance():
                 _c_adoptive = self.get_no_blood_parents(_c)
                 if inter_id in _c_parents:
                     parents_cats = [self.cat.fetch_cat(c_id) for c_id in _c_parents]
-                    parent_cats_names = [c.name for c in parents_cats]
+                    parent_cats_names = [str(c.name) for c in parents_cats]
                     kit_rel_type = RelationType.BLOOD if rel_type in BLOOD_RELATIVE_TYPES else RelationType.NOT_BLOOD
                     if inter_id in _c_adoptive:
                         kit_rel_type = RelationType.ADOPTIVE
