@@ -3361,7 +3361,7 @@ class Events:
                     text = random.choice([
                         f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}Clan, though some are quicker to forgive than others.",
                         f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])
-                game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
+                game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
                 print(cat.name, "has been forgiven!")
 
             elif fate in [3, 4, 7, 12, 12]:
@@ -3380,7 +3380,7 @@ class Events:
                         text = random.choice([
                             f"{cat.name} knows they'll never be forgiven. Packing up their favourite feathers and stones from their nest, they slip out of camp in the night, sure that none of their Clanmates will mind the abscence.",
                             f"Sick of being treated so poorly, {cat.name} leaves camp one day, not turning around to see if anyone has noticed, and vows never to come back."])
-                    game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
+                    game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
                     print("A shunned cat has left the clan.")
 
             else:
@@ -3392,7 +3392,7 @@ class Events:
                     text = random.choice([
                     f"{game.clan.name}Clan has decided that they don't feel safe with {cat.name} around after what they did. {cat.name} has been exiled.",
                     f"{game.clan.leader.name} knows that {cat.name} does not plan to atone. They have been exiled from {game.clan.name}Clan for their crimes."])
-                game.cur_events_list.append(Single_Event(text, "misc", involved_cats))
+                game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
                 print("A shunned cat has been exiled.")
         else:
             print("Tried exile_or_forgive() on a non-shunned cat ?")
