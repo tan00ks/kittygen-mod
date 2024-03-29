@@ -248,7 +248,7 @@ class Events:
         game.just_died.clear()
 
         for cat in Cat.all_cats.copy().values():
-            if cat.shunned > 0:
+            if cat.shunned == 1:
                 if cat.status == "leader":
                     string = f"Due to the cries of outrage form their Clan after the reveal of their crime, {game.clan.leader.name} has stepped down as leader of {game.clan.name}Clan."
                     if cat.moons < 120:
