@@ -49,7 +49,7 @@
             "Is assessing the apprentices",
             "Is making sure no apprentices are slacking off from training",
             "Is visiting r_c to make sure {PRONOUN/r_c/poss} mentor is treating {PRONOUN/r_c/object} well",
-            "Addressed r_c to not slack {PRONOUN/r_c/poss} trainings or {PRONOUN/r_c/subject]'ll tend to the elders ticks"
+            "Yowl at r_c to not slack during {PRONOUN/r_c/poss} training or {PRONOUN/r_c/subject)'ll tend to the elders ticks"
         ],
         "random_status_constraint": [
             "apprentice"
@@ -246,7 +246,7 @@
             "Is mouthing off the other cats that they weren't important enough to be the leader's commander",
             "Is being smug that one day {PRONOUN/m_c/subject} will lead the Clan",
             "Brags that StarClan choose {PRONOUN/m_c/object} as deputy because {PRONOUN/m_c/subject} were destined",
-            "Believes, with {PRONOUN/m_/c]poss} bright mind, c_n will thrive for generations",
+            "Believes c_n will thrive for generations when {PRONOUN/m_c/subject)(VERB/m_c/'s/'re) in charge",
             "Muzzle flashed red with a Clanmate bested {PRONOUN/m_c/object}",
             "Knows someday {PRONOUN/m_c/subject}'ll lead c_n better than previous leaders",
             "Can't wait to test out a strategy {PRONOUN/m_c/subject} made to capture more prey"

@@ -1279,7 +1279,7 @@
 			"Doesn't seem to enjoy hunting anymore",
 			"Is avoiding {PRONOUN/m_c/poss} Clanmates",
 			"Is startled after r_c snuck up behind {PRONOUN/m_c/object}",
-            "Is wide awake, trying not to have another nightmare visit {PRONOUNN/m_c/object}"
+            "Is wide awake, trying not to have another nightmare visit {PRONOUN/m_c/object}"
         ],
         "perm_conditions": {
             "m_c": [
