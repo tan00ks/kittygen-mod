@@ -897,6 +897,7 @@ class MakeClanScreen(Screens):
         """Opens the name clan screen"""
         
         self.clear_all_page()
+        
         self.elements["leader_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((580, 300), (400, 400))),
                                                                     pygame.transform.scale(
                                                                         self.your_cat.sprite,
@@ -921,6 +922,9 @@ class MakeClanScreen(Screens):
         self.elements["error"] = pygame_gui.elements.UITextBox("", scale(pygame.Rect((506, 1310), (596, -1))),
                                                                manager=MANAGER,
                                                                object_id="#default_dark", visible=False)
+        self.main_menu.kill()
+        self.main_menu = UIImageButton(scale(pygame.Rect((100, 100), (306, 60))), "", object_id="#main_menu_button"
+                                       , manager=MANAGER)
 
         self.elements['previous_step'] = UIImageButton(scale(pygame.Rect((506, 1290), (294, 60))), "",
                                                        object_id="#previous_step_button", manager=MANAGER)
