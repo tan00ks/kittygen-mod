@@ -61,6 +61,7 @@ class MoonplaceScreen(Screens):
 
     def screen_switches(self):
         self.the_cat = Cat.all_cats.get(choice(game.clan.starclan_cats))
+        game.switches["attended half-moon"] = True
         self.update_camp_bg()
         self.hide_menu_buttons()
         self.text_index = 0
@@ -364,8 +365,13 @@ class MoonplaceScreen(Screens):
         possible_texts = {}
         with open(f"{resource_dir}", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
-        prophecy = ["I have a message for you.",
-                    "<u><b><i>Beings of two will march the land, bringing destruction where they stand.</i></b></u>"]
+        prophecy = ["I have a message for you."]
+        resource_dir = "resources/dicts/events/lifegen_events/moonplace/prophecies.json"
+        possible_texts2 = {}
+        with open(f"{resource_dir}", 'r') as read_file:
+            possible_texts2 = ujson.loads(read_file.read())
+        game.switches["next_possible_disaster"] = choice(list(possible_texts2.keys()))
+        prophecy = prophecy + choice(possible_texts2[game.switches["next_possible_disaster"]]["text"])
         return self.get_adjusted_txt(choice(possible_texts["intros"]["you_single_med"]) + choice(possible_texts["moonplace"]["starclan_general"]) + prophecy, cat)
 
 

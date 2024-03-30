@@ -1187,10 +1187,12 @@ class ProfileScreen(Screens):
                 (746, 220), (68, 68))),
                 "",
                 object_id="#leader_ceremony_button", 
-                tool_tip_text= "Attend the half-moon gathering",
+                tool_tip_text= "You may attend the half-moon gathering every six moons",
                 manager=MANAGER
             )
-            if self.the_cat.dead or self.the_cat.outside:
+            if self.the_cat.dead or self.the_cat.outside or (game.clan.age % 6 != 0):
+                self.profile_elements["halfmoon"].disable()
+            elif "attended half-moon" in game.switches and game.switches["attended half-moon"]:
                 self.profile_elements["halfmoon"].disable()
 
         if (self.the_cat.outside) and self.the_cat.ID == game.clan.your_cat.ID and not self.the_cat.dead:

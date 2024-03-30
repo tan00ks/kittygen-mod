@@ -53,6 +53,7 @@ class StartScreen(Screens):
         self.warning_label_background = None
 
     def choose_random_menu(self, folder_path):
+        """This will choose a random menu to display from the menus folder."""
         files = os.listdir(folder_path)
         png_files = [file for file in files if file.endswith('.png')]
 
