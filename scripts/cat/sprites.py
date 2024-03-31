@@ -575,7 +575,7 @@ class Sprites():
             self.make_group('chimes', (a, 0), f'acc_crafted{i}')
 
         for a, i in enumerate([
-            "FIDDLEHEADS", "", "", ""]):
+            "FIDDLEHEADS", "LANTERNS", "HEARTCHARMS", "CHIMES"]):
             self.make_group('moipa', (a, 0), f'acc_crafted{i}')
         
 # CREATE INSTANCE
