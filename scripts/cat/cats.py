@@ -3,6 +3,7 @@ from random import choice, randint, sample, random, choices, getrandbits, randra
 from typing import Dict, List, Any
 import os.path
 import itertools
+import sys
 
 from .history import History
 from .skills import CatSkills
