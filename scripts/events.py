@@ -144,7 +144,7 @@ class Events:
         with open(f"{resource_dir}forest.json",
                   encoding="ascii") as read_file:
             disaster_text = ujson.loads(read_file.read())
-        if not game.clan.disaster and random.randint(1,1) == 1:
+        if not game.clan.disaster and random.randint(1,30) == 1:
             game.clan.disaster = random.choice(list(disaster_text.keys()))
             if "next_possible_disaster" in game.switches and game.switches["next_possible_disaster"]:
                 current_disaster =  disaster_text.get(game.switches["next_possible_disaster"])

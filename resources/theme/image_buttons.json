@@ -1720,6 +1720,23 @@
             }
         }
     },
+    "#play_select": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/play_select.png"
+            }
+        }
+    },
     "#remove_cat_button": {
         "prototype": "#image_button",
         "images": {
