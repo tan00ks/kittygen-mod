@@ -300,7 +300,7 @@ class EventsScreen(Screens):
             self.freshkill_pile_button =  UIImageButton(scale(pygame.Rect((1270, 210), (282, 60))), "", object_id="#freshkill_pile_button"
                                              , manager=MANAGER)
 
-        self.season = pygame_gui.elements.UITextBox(f'Current season: {game.clan.current_season}',
+        self.season = pygame_gui.elements.UITextBox(f'Season: {game.clan.current_season} - Clan Age: {game.clan.age} moons',
                                                     scale(pygame.Rect((600, 220), (400, 80))),
                                                     object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                     manager=MANAGER)
@@ -309,7 +309,7 @@ class EventsScreen(Screens):
                                                       object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                       manager=MANAGER)
         self.leaf = pygame_gui.elements.UITextBox("leafbare",
-                                                      scale(pygame.Rect((600, 340), (400, 80))),
+                                                      scale(pygame.Rect((400, 340), (800, 80))),
                                                       object_id=get_text_box_theme("#text_box_30_horizcenter"),
                                                       manager=MANAGER)
  
@@ -618,7 +618,7 @@ class EventsScreen(Screens):
 
     def update_events_display(self):
         
-        self.leaf.set_text(f'Current season: {game.clan.current_season}')
+        self.leaf.set_text(f'Season: {game.clan.current_season} - Clan Age: {game.clan.age}')
         self.season.set_text(str(game.clan.your_cat.name))
         if game.clan.your_cat.moons == -1:
             self.clan_age.set_text(f'Your age: Unborn')
