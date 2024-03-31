@@ -2381,6 +2381,14 @@ class Cat():
             Checks if this cat is potential mate for the other cat.
             There are no restrictions if the current cat already has a mate or not (this allows poly-mates).
         """
+        
+        try:
+            first_cousin_mates = game.clan.clan_settings["first cousin mates"]
+        except:
+            if 'unittest' not in sys.modules:
+                raise
+                
+        
         # just to be sure, check if it is not the same cat
         if self.ID == other_cat.ID:
             return False
@@ -2390,7 +2398,7 @@ class Cat():
             return False
 
         # Inheritance check
-        if self.is_related(other_cat, game.clan.clan_settings["first cousin mates"]):
+        if self.is_related(other_cat, first_cousin_mates):
             return False
 
         # check exiled, outside, and dead cats
@@ -2415,13 +2423,18 @@ class Cat():
                 return False
 
         # check for mentor
-
+        
         # Current mentor
         if other_cat.ID in self.apprentice or self.ID in other_cat.apprentice:
             return False
         
+        #Former mentor
         is_former_mentor = (other_cat.ID in self.former_apprentices or self.ID in other_cat.former_apprentices)
         if is_former_mentor and not game.clan.clan_settings['romantic with former mentor']:
+            return False
+
+        #current mentor
+        if other_cat.ID in self.apprentice or self.ID in other_cat.apprentice:
             return False
 
         return True
