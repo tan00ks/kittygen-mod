@@ -1887,6 +1887,20 @@
             "Something to say, y_c?",
             "[You mutter a quick 'no' before standing up to go lay on the other side of camp. It seems all of your training has become completely useless now.]"
         ]
-    ]
+    ],
+        
+    "stable_shunned_you_Apprentice_MedicineCat_02": [
+        [
+            "medicine cat apprentice",
+            "you_shunned",
+            "stable",
+            "they_medicine_cat"
+         ],
+        [
+            "I'll never trust you to heal me. Never again. You're a mockery of what medicine cats stand for. You were being trained to help! To be kind and a voice of StarClan! ",
+            "But you're not, you're a fraud. A foxhearted, merciless killer.",
+            "StarClan won't accept you now."
+         ]
+        ]
 
 }

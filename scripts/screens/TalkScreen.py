@@ -703,6 +703,26 @@ class TalkScreen(Screens):
 
             if you.shunned > 0 and cat.shunned > 0 and "both_shunned" not in tags:
                 continue
+
+            # PERMANENT CONDITIONS
+
+            if "deaf" in cat.illnesses and "they_deaf" not in tags:
+                continue
+            if "blind" in cat.illnesses and "they_blind" not in tags:
+                continue
+            if "deaf" in you.illnesses and "you_deaf" not in tags:
+                continue
+            if "blind" in you.illnesses and "you_blind" not in tags:
+                continue
+
+            if "they_deaf" in tags and "deaf" not in cat.illnesses:
+                continue
+            if "they_blind" in tags and "blind" not in cat.illnesses:
+                continue
+            if "you_deaf" in tags and "deaf" not in cat.illnesses:
+                continue
+            if "you_blind" in tags and "blind" not in cat.illnesses:
+                continue
             
             # Relationship conditions
             if you.ID in cat.relationships:
@@ -732,14 +752,7 @@ class TalkScreen(Screens):
 
             texts_list[talk_key] = talk
 
-            if "deaf" in cat.illnesses and "they_deaf" not in tags:
-                continue
-            if "blind" in cat.illnesses and "they_blind" not in tags:
-                continue
-            if "deaf" in you.illnesses and "you_deaf" not in tags:
-                continue
-            if "blind" in you.illnesses and "you_blind" not in tags:
-                continue
+            # to be added with the permacondition dialogue
 
         return self.choose_text(cat, texts_list)
         
