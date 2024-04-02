@@ -2401,5 +2401,43 @@
             "Oh love! You're so sweet! ... Thank you, I really needed that.",
             "I love you so much!"
         ]
+    },
+    "frommate_sh_J1": {
+        "tags": [
+            "From_mate",
+	        "they_shunned"
+        ],
+        "intro": [
+            "Oh, y_c…",
+            "[You slip out of the den one night and head for where t_c has been banished to sleep at the edge of camp. They’re asleep, and you chirp quietly to get their attention.]",
+            "[t_c’s eyes shoot open and they practically leap out of their nest. They turn both ways to check that no cats are watching, then rush forward to bury their head in your shoulder.]",
+            "No cat’s spoken to me all day… it sucks that you can only visit me at night.",
+            "[You give them an affectionate lick on their shoulder, telling them that this won’t last forever. They lift their head from your fur.]",
+            "I know, I know…",
+            "... Do you think you could slip away from the den tonight? It's so cold sleeping on my own out here…"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Maybe",
+                "next_scene": "shunnedmate_maybe"
+            },
+            "choice2": {
+                "text": "I don’t think so",
+                "next_scene": "shunnedmate_no"
+            }
+        },
+        "shunnedmate_maybe": [
+            "Really? Are you sure no one would notice?",
+            "[t_c butts their head into yours, purring so loudly that you couldn't give an answer even if you wanted to.]",
+            "Alright, let's go, then! I managed to sneak out for some extra moss today, so it'll be just as good as our old one!"
+                ],
+        "shunnedmate_no": [
+            "Aw….",
+            "No, no, I get it, you can't get in trouble like me…",
+            "Maybe you could wake up early and visit me before dawn, though?",
+            "[With a purr, you accept the compromise and but your head into theirs.]",
+            "Thank StarClan. I love you, y_c. I'll see you tomorrow."
+                ]
     }
+            
 }

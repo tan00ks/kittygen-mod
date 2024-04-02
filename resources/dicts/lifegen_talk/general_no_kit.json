@@ -11921,6 +11921,41 @@
             "y_p always seemed to like you more."
         ]
     ],
+    "general_sh_J2": [
+        [ 
+            "you_shunned",
+            "platonic_like",
+            "they_blind",
+            "trust",
+            "no_kit"
+        ],
+        [
+            "Hey, y_c",
+            "As you try to sleep at the edge of camp one night, you hear t_c's voice above the crickets. You open your eyes to see that they've got a clump of moss at their paws.",
+            "[They bat it towards you.]",
+            "For your nest! I'm sure it;s not as comfy out here as your old one.",
+            "[Before you're able to thank them, t_c slips back into the darkness of the camp.]"
+        ]
+    ],
+
+
+ "general_sh_J3": [
+        [
+            "Both_shunned",
+            "No_kit",
+            "leaf-bare"
+        ],
+        [
+            "Hey, y_c. How’re you feeling?",
+            "Hungry? Me too.",
+            "[t_c sits next to you and the both of you turn to look at the fresh-kill pile. You and t_c get last pick, and since there’s less to pick from in leaf-bare, you’re often left with nothing.]",
+            "[t_c scoffs as an apprentice sorts through the prey to make their choice.]",
+            "This is ridiculous. If we just left, we’d be able to hunt on our own, and we wouldn’t have to deal with this fox-dung.",
+            "What do you say, y_c? You and me? Becoming outsiders? Tonight? Tomorrow?",
+            "[You laugh, though you know t_c isn’t completely joking.]"
+        ]
+    ],
+
     "starclan_general": [
         [
             "you_sc",
