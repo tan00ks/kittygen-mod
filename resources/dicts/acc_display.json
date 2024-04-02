@@ -1434,5 +1434,25 @@
     "default": "silver lunar chimes",
     "plural": "silver lunar chimes",
     "singular": "silver lunar chimes"
+  },
+  "FIDDLEHEADS" :{
+    "default": "fiddleheads",
+    "plural": "fiddleheads",
+    "singular": "fiddleheads"
+  },
+  "LANTERNS": {
+    "default": "lanterns",
+    "plural": "lanterns",
+    "singular": "lanterns"
+  },
+  "HEARTCHARMS": {
+    "default": "heart charms",
+    "plural": "heart charms",
+    "singular": "heart charms"
+  },
+  "CHIMES": {
+    "default": "chimes",
+    "plural": "chimes",
+    "singular": "chimes"
   }
 }

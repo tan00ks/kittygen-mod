@@ -8,7 +8,6 @@
             "..."
         ]
     ],
-
     "dep_132": [
         [
             "newborn",
@@ -2405,6 +2404,34 @@
             "Hey y_c? About today's patrols...",
             "Could I be excused? Please?",
             "I'm just... feeling a bit burnt out right now."
+        ]
+    ],
+    "unabashed_warrior2": [
+        [
+            "no_kit",
+            "queen",
+            "queen's apprentice",
+            "unabashed",
+            "trust",
+            "random_cat"
+        ],
+        [
+            "Woah, woah, woah, what's going on?",
+            "[You drop r_k at t_c's paws, requesting they watch the kit for a bit.]",
+            "Isn't this supposed to be your job? I'm not some sort of kitsitting service!",
+            "[You insist you'll return soon, and without waiting for t_c to argue further, you dash off.]",
+            "Wait, y_c, don't leave me with this fuzzball!!"
+        ]
+    ],
+    "unabashed_warrior3": [
+        [
+            "no_kit",
+            "warrior",
+            "unabashed"
+        ],
+        [
+            "o_cClan's leader sure made a fool of themself at the last gathering, didn't they?",
+            "Leadership standards seem to be slipping these days."
         ]
     ]
 }

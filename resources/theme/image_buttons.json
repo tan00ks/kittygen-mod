@@ -1720,6 +1720,23 @@
             }
         }
     },
+    "#play_select": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/play_select.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/play_select.png"
+            }
+        }
+    },
     "#remove_cat_button": {
         "prototype": "#image_button",
         "images": {
@@ -4128,6 +4145,23 @@
             }
         }
     },
+    "#desert_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/desert.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/desert_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/desert_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/desert_unavaliable.png"
+            }
+        }
+    },
     "#birch_camp_tab": {
         "prototype": "#image_button",
         "images": {
@@ -4142,6 +4176,23 @@
             },
             "disabled_image": {
                 "path": "resources/images/buttons/birch_camp_unavailable.png"
+            }
+        }
+    },
+    "#tropical_island_tab": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/tropical_island.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/tropical_island_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/tropical_island_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/tropical_island_unavaliable.png"
             }
         }
     },

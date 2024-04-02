@@ -9,7 +9,6 @@
             "[They drop it at your feet, and give an encouraging nod...]",
             "..!",
             "[... before returning to their friends across camp.]"
-
         ]
     ],
     "deaf2": [
@@ -25,7 +24,6 @@
             "[But not t_c. They sit under a tree in the clearing, calmly watching the rain hit the ground in front of them. unaware of the loudly rumbling sky.]",
             " . . . ",
             "[You wish you could be as peaceful as them during such a harsh storm.]"
-
         ]
     ],
     "shunned1": [
@@ -42,7 +40,6 @@
             "l_n will get mad."
         ]
     ],
-
     "shunned2": [
         [
             "Any",
@@ -68,7 +65,6 @@
             "Maybe you will. I don't know about me..."
         ]
     ],
-    
     "assertive_leafbare": [
         [
             "Any",
@@ -2153,7 +2149,6 @@
             "they_deaf",
             "they_blind",
             "you_blind"
-            
         ],
         [
             "[t_c walks over to you and rests their head on your shoulder.]",
@@ -5042,9 +5037,9 @@
             "they_blind"
         ],
         [
-            "Anything happens to these kits, and I end you.",
-            "I'm serious. This job isn't a free pass. It isn't supposed to be fun",
-            "Take your duty seriously."
+            "The lives of c_nClan's most vulnerable are in your paws. Do you understand exactly what that means?",
+            "Being a queen's apprentice isn't a free pass. It isn't supposed to be fun.",
+            "Take your duty seriously. I'll be keeping a close eye on you."
         ]
     ],
     "broodingapp_toqueenapp13": [
@@ -11967,6 +11962,142 @@
         [
             "[t_c looks upon c_nClan worriedly.]",
             "I wish I could warn them about what's coming."
+        ]
+    ],
+    "brooding_mentor5": [
+        [
+            "apprentice",
+            "from_mentor",
+            "brooding"
+        ],
+        [
+            "Hello, y_c. Today, we are going to be practicing our scruff shake.",
+            "It's a serious tactic, so be sure to treat it as such. This is our Clanmates' lives and deaths, not a silly game.",
+            "[You try your best to heed t_c's words ...]",
+            "[... But you don't know how they don't crack even a hint of a smile when you're shaking them back and forth by the scruff.]"
+        ]
+    ],
+    "brooding_yougrief": [
+        [
+            "no_kit",
+            "brooding",
+            "you_grieving",
+            "dead_close"
+        ],
+        [
+            "[t_c quietly drops a flower at your paws.]",
+            "Um ... for d_c.",
+            "I'm sorry about what happened. They went too soon."
+        ]
+    ],
+    "brooding_yougrief1": [
+        [
+            "no_kit",
+            "brooding",
+            "introspective",
+            "sweet",
+            "you_grieving",
+            "dead_close"
+        ],
+        [
+            "I spoke with d_n and got your patrols covered for today, y_c.",
+            "Just stay in and rest. It's what d_c would want."
+        ]
+    ],
+    "unabashed_both_shunned1": [
+        [
+            "warrior",
+            "no_kit",
+            "unabashed",
+            "they_shunned",
+            "you_shunned",
+            "dislike"
+        ],
+        [
+            "You act like you're so much better than me.",
+            "Don't talk to me about blood on my paws when yours are just as red."
+        ]
+    ],
+    "unabashed_they_shunned1": [
+        [
+            "no_kit",
+            "they_shunned",
+            "unabashed"
+        ],
+        [
+            "I know you see me as evil, but why should I care what you think?",
+            "I did what I had to do."
+        ]
+    ],
+    "unabashed_you_shunned1": [
+        [
+            "no_kit",
+            "you_shunned",
+            "unabashed"
+        ],
+        [
+            "Do you sleep well at night?",
+            "Do you even know what a good night's sleep is?",
+            "Because I don't think you deserve one, not after what you did."
+        ]
+    ],
+    "unabashed_they_grieving1": [
+        [
+            "no_kit",
+            "unabashed",
+            "they_grieving"
+        ],
+        [
+            "Go away!",
+            "Can't you see I don't want your pity?"
+        ]
+    ],
+    "unabashed_leaffall2": [
+        [
+            "leaffall",
+            "unabashed"
+        ],
+        [
+            "I love leaffall. It's so colorful! Imagine if you had a pelt just as colorful as the trees; you'd be so much more pretty."
+        ]
+    ],
+    "unabashed_from_sibling": [
+        [
+            "no_kit",
+            "sibling",
+            "unabashed"
+        ],
+        [
+            "I've always known that you're t_p_negative's favorite kit; It's not even subtle.",
+            "[You try to assure t_c that it's not true.]",
+            "Oh, yes it is! You're their special little golden kitten.",
+            "[t_c pauses, and their expression begins to soften.]",
+            "But, I can't blame you, I just wish they would treat me the same way."
+        ]
+    ],
+    "unabashed_jealous4": [
+        [
+            "no_kit",
+            "deputy",
+            "unabashed",
+            "dislike",
+            "jealousy"
+        ],
+        [
+            "Well, well, if it isn't the big timer.",
+            "l_n must have been scraping the bottom of the warrior's den when they picked you."
+        ]
+    ],
+    "unabashed_general5": [
+        [
+            "no_kit",
+            "unabashed"
+        ],
+        [
+            "Every gathering feels like the same old song and dance.",
+            "First, each Clan reports that the prey is running well, then we all exchange a few fake pleasantries, and then it's all over. Talk about boring.",
+            "It doesn't help that once things finally start to get interesting, StarClan has to go and cloud up the sky.",
+            "I swear It's like they don't want us to have any fun!"
         ]
     ]
 }
