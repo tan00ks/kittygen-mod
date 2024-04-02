@@ -72,11 +72,6 @@
             ],
             [
                 "A watchful eye lurks in the rain, beware this cat and their pain."
-            ],
-            [
-                "[t_c sees r_c drenched with blood as they return to camp.]",
-                "[Shocked at their appearance, t_c approaches them, preparing to ask what happened before the red stains abruptly vanish from their fur.]",
-                "[Taken aback by the sudden vision, t_c pads away inconspicuously, pondering what they had just witnessed.]"
             ]
         ]
     },
@@ -247,9 +242,15 @@
     },
     "Prey Sickness": {
         "text": [
-            ["With delirious groans and fangs of foam, those who were once friend shall now be known as foe."],
-            ["Poison in the stomach, undetected and dangerous."],
-            ["The one who hunts becomes the hunted through invisible lies and deception masked behind good fortune."]
+            [
+                "With delirious groans and fangs of foam, those who were once friend shall now be known as foe."
+            ],
+            [
+                "Poison in the stomach, undetected and dangerous."
+            ],
+            [
+                "The one who hunts becomes the hunted through invisible lies and deception masked behind good fortune."
+            ]
         ]
     },
     "Contaminated Water": {

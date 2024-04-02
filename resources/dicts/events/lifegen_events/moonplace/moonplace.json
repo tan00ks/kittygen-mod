@@ -23,7 +23,8 @@
     "moonplace": {
         "starclan_general": [
             ["[You and the other medicine cats settle around the gathering place. You open your eyes to find yourself in StarClan's hunting grounds.]",
-            "Welcome, y_c."]
+            "Welcome, y_c.",
+            "I have a message for you."]
         ]
     }
 }
