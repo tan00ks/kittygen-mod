@@ -2128,6 +2128,23 @@
             }
         }
     },
+    "#continue_main_button": {
+        "prototype": "#image_button",
+        "images": {
+            "normal_image": {
+                "path": "resources/images/buttons/continue_main.png"
+            },
+            "hovered_image": {
+                "path": "resources/images/buttons/continue_main_hover.png"
+            },
+            "selected_image": {
+                "path": "resources/images/buttons/continue_main_hover.png"
+            },
+            "disabled_image": {
+                "path": "resources/images/buttons/continue_main_unavailable.png"
+            }
+        }
+    },
     "#continue_button": {
         "prototype": "#image_button",
         "images": {
