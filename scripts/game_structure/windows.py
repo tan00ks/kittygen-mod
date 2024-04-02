@@ -1361,7 +1361,7 @@ class PickPath(UIWindow):
                 
 class DeathScreen(UIWindow):
     def __init__(self, last_screen):
-        super().__init__(scale(pygame.Rect((400, 400), (950, 500))),
+        super().__init__(scale(pygame.Rect((400, 400), (780, 500))),
                          window_display_title='You have died',
                          object_id='#game_over_window',
                          resizable=False)
@@ -1378,15 +1378,15 @@ class DeathScreen(UIWindow):
         )
 
         self.begin_anew_button = UIImageButton(
-            scale(pygame.Rect((130, 190), (150, 150))),
+            scale(pygame.Rect((130, 140), (150, 150))),
             "",
             object_id="#random_dice_button",
             container=self,
-            tool_tip_text='Start anew'
+            tool_tip_text='Start a new Clan'
         )
         
         self.mediator_button = UIImageButton(
-            scale(pygame.Rect((310, 190), (150, 150))),
+            scale(pygame.Rect((310, 140), (150, 150))),
             "",
             object_id="#unknown_residence_button",
             container=self,
@@ -1395,7 +1395,7 @@ class DeathScreen(UIWindow):
         )
         
         self.mediator_button2 = UIImageButton(
-            scale(pygame.Rect((490, 190), (150, 150))),
+            scale(pygame.Rect((490, 140), (150, 150))),
             "",
             object_id="#leader_ceremony_button",
             container=self,
@@ -1403,11 +1403,10 @@ class DeathScreen(UIWindow):
         )
 
         self.mediator_button3 = UIImageButton(
-            scale(pygame.Rect((670, 190), (150, 150))),
+            scale(pygame.Rect((130, 330), (498, 96))),
             "",
-            object_id="#leader_ceremony_button",
+            object_id="#continue_dead_button",
             container=self,
-            tool_tip_text='Continue'
         )
         
 

@@ -1414,7 +1414,7 @@ class ProfileScreen(Screens):
             output += "<font color='#FF0000'>exiled</font>"
         elif the_cat.shunned > 0 and not the_cat.dead:
             if the_cat.status != "former Clancat":
-                output += "<font color='#FF0000'> shunned </font>"
+                output += "<font color='#FF0000'>shunned</font>"
             else:
                 output += the_cat.status
         elif the_cat.df:
