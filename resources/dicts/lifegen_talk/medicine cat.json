@@ -378,7 +378,6 @@
             "Lesson learned. Don't talk with herbs in the mouth."
         ]
     ],
-   
     "assertive_elder_2": [
         [
             "medicine cat",
@@ -1817,67 +1816,57 @@
     "upstanding_medicinecat": [
         [
             "upstanding",
-	        "Any"
-	
+            "Any"
         ],
         [
             "[You notice t_c trotting back into camp, returning from yet another herb gathering patrol.]",
-"[As much as you wish that they would take a break, you can't argue with the idea of a full herb store.]"
+            "[As much as you wish that they would take a break, you can't argue with the idea of a full herb store.]"
         ]
     ],
-
-"upstanding_medicinecat1": [
+    "upstanding_medicinecat1": [
         [
             "upstanding",
             "no_kit",
             "platonic_like"
-	
         ],
         [
             "[t_c is practically a whirlwind of herbs and fur as they try to juggle taking inventory, organizing herbs, tending to patients, and more daily tasks at the same time.]",
-"WOAH! Sorry y_c, almost ran into you there! Are you alright? Do you need anything?",
-"You want to help? Oh no, it's fine! I have this all under control, trust me.",
-"You... insist. Well, if you're sure... I do have some herbs that need to be thrown out. You can just toss them out of camp by the entrance and I can swing by and pick them up later. It's the pile just outside the entrance of the medicine den.",
-"Thanks."
+            "WOAH! Sorry y_c, almost ran into you there! Are you alright? Do you need anything?",
+            "You want to help? Oh no, it's fine! I have this all under control, trust me.",
+            "You... insist. Well, if you're sure... I do have some herbs that need to be thrown out. You can just toss them out of camp by the entrance and I can swing by and pick them up later. It's the pile just outside the entrance of the medicine den.",
+            "Thanks."
         ]
     ],
-
-"upstanding_medicinecat2": [
+    "upstanding_medicinecat2": [
         [
             "upstanding",
             "Any"
-	
         ],
         [
-          "[It's easy to see how intimidating t_c can often be. Just a single glare can discourage even the most mischievous apprentice from pulling a prank!]"
+            "[It's easy to see how intimidating t_c can often be. Just a single glare can discourage even the most mischievous apprentice from pulling a prank!]"
         ]
     ],
-
-"upstanding_medicinecat3": [
+    "upstanding_medicinecat3": [
         [
             "upstanding",
             "from_mentor",
             "insult"
-	
         ],
         [
-          "Looks like someone is one step closer to missing out on the upcoming Gathering."
+            "Looks like someone is one step closer to missing out on the upcoming Gathering."
         ]
     ],
-
-"upstanding_medicinecat4": [
+    "upstanding_medicinecat4": [
         [
-           "upstanding",
+            "upstanding",
             "from_mentor",
             "platonic_like",
             "neutral"
-	
         ],
         [
-          "[While the rest of the clan is fast asleep in their nests, you are woken up by a paw poking you in the side.]",
-"Rise and shine y_c! C'mon, up! Up! Up! Let's go! I want to try and get an early start on today's lesson.",
-"[t_c is certainly an excellent mentor, there's no doubt about that. However, as you sleepily follow them out of camp, you wish that they were slightly less enthusiastic when it comes to training.]"
+            "[While the rest of the clan is fast asleep in their nests, you are woken up by a paw poking you in the side.]",
+            "Rise and shine y_c! C'mon, up! Up! Up! Let's go! I want to try and get an early start on today's lesson.",
+            "[t_c is certainly an excellent mentor, there's no doubt about that. However, as you sleepily follow them out of camp, you wish that they were slightly less enthusiastic when it comes to training.]"
         ]
     ]
-
 }

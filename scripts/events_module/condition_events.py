@@ -161,7 +161,7 @@ class Condition_Events():
             return triggered
 
         involved_cats = [cat.ID]
-
+        injury_event = None
         # handle if the current cat is already injured
         if cat.is_injured() and game.clan.game_mode != 'classic':
             for injury in cat.injuries:
@@ -280,10 +280,11 @@ class Condition_Events():
                 pos_rel_event = ["romantic", "platonic", "neg_dislike", "respect", "comfort", "neg_jealousy", "trust"]
                 neg_rel_event = ["neg_romantic", "neg_platonic", "dislike", "neg_respect", "neg_comfort", "jealousy", "neg_trust"]
                 effect = ""
-                if any(tag in injury_event.tags for tag in pos_rel_event):
-                    effect = " (positive effect)"
-                elif any(tag in injury_event.tags for tag in neg_rel_event):
-                    effect = " (negative effect)"
+                if injury_event:
+                    if any(tag in injury_event.tags for tag in pos_rel_event):
+                        effect = " (positive effect)"
+                    elif any(tag in injury_event.tags for tag in neg_rel_event):
+                        effect = " (negative effect)"
 
                 log_text = text + effect
 

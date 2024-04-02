@@ -151,7 +151,9 @@ class Sprites():
 
             "tide",
 
-            "chimes"
+            "chimes",
+
+            "moipa"
 
         ]:
             if 'lineart' in x and game.config['fun']['april_fools']:
@@ -571,6 +573,10 @@ class Sprites():
         for a, i in enumerate([
             "CELESTIALCHIMES", "STARCHIMES", "LUNARCHIMES", "SILVERLUNARCHIMES"]):
             self.make_group('chimes', (a, 0), f'acc_crafted{i}')
+
+        for a, i in enumerate([
+            "FIDDLEHEADS", "LANTERNS", "HEARTCHARMS", "CHIMES"]):
+            self.make_group('moipa', (a, 0), f'acc_crafted{i}')
         
 # CREATE INSTANCE
 sprites = Sprites()

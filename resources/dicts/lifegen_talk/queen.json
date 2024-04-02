@@ -1772,5 +1772,16 @@
             "Oh, sure thing, I can bring everyone in the nursery over for storytime! Thank you, it's very kind of you to do this.",
             "You stay right there, I'll be back in a few moments!"
         ]
+    ],
+    "unabashed_queen1": [
+        [
+            "unabashed",
+            "no_kit",
+            "dislike"
+        ],
+        [
+            "[t_c overhears you talking to one of the kits, and pulls you to the side.]",
+            "You shouldn't lie to the kits, y_c, you know. Telling the truth is good for them; when you lie to them, you're going to teach them that they can't trust their clanmates."
+        ]
     ]
 }

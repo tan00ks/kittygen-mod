@@ -1233,5 +1233,37 @@
         "elder place": [[[680, 1030], "xy"], [[540, 1130], "xy"],
                         [[850, 1100], "xy"], [[470, 1250], "xy"],
                         [[950, 1250], "xy"]]
+    },
+    "Plainscamp5": {
+        "leader den": [750, 205],
+        "medicine den": [190, 310],
+        "nursery": [1240, 400],
+        "clearing": [730, 510],
+        "apprentice den": [200, 785],
+        "warrior den": [1180, 830],
+        "elder den": [858, 980],
+        "leader place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "medicine place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "nursery place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "clearing place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "apprentice place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "warrior place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "elder place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]]
+    },
+    "Beachcamp4": {
+        "leader den": [750, 205],
+        "medicine den": [190, 310],
+        "nursery": [1240, 400],
+        "clearing": [730, 510],
+        "apprentice den": [200, 785],
+        "warrior den": [1180, 830],
+        "elder den": [858, 980],
+        "leader place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "medicine place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "nursery place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "clearing place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "apprentice place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "warrior place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]],
+        "elder place": [[[0, 0], "xy"], [[0, 0], "xy"], [[0, 0], "xy"]]
     }
 }

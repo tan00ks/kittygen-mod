@@ -171,7 +171,6 @@
             "You do you, y_c, and I'll do me. Freedom of thought. That's what life's really all about."
         ]
     },
-
     "rumor": {
         "tags": [
             "no_kit",
@@ -182,7 +181,7 @@
             "random_cat"
         ],
         "intro": [
-             "Psst, y_c. I heard a rumor that n_r1 totally has a crush on n_r2. Isn't that crazy?"
+            "Psst, y_c. I heard a rumor that n_r1 totally has a crush on n_r2. Isn't that crazy?"
         ],
         "intro_choices": {
             "choice1": {
@@ -1879,7 +1878,7 @@
             "[They look back at tm_n with a resentful gaze.]"
         ]
     },
-   "neurotic_kit_": {
+    "neurotic_kit_": {
         "tags": [
             "any",
             "random_cat",
