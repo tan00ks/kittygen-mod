@@ -11925,10 +11925,10 @@
             "no_kit"
         ],
         [
-            "Hey, y_c",
-            "As you try to sleep at the edge of camp one night, you hear t_c's voice above the crickets. You open your eyes to see that they've got a clump of moss at their paws.",
+            "Psst, y_c.",
+            "[As you try to sleep at the edge of camp one night, you hear t_c's voice above the crickets. You open your eyes to see that they've got a clump of moss at their paws.]",
             "[They bat it towards you.]",
-            "For your nest! I'm sure it;s not as comfy out here as your old one.",
+            "For your nest! I'm sure it's not as comfy out here as your old one.",
             "[Before you're able to thank them, t_c slips back into the darkness of the camp.]"
         ]
     ],
@@ -11936,18 +11936,61 @@
 
  "general_sh_J3": [
         [
-            "Both_shunned",
+            "both_shunned",
             "No_kit",
             "leaf-bare"
         ],
         [
-            "Hey, y_c. How’re you feeling?",
+            "Hey, y_c. How're you feeling?",
             "Hungry? Me too.",
-            "[t_c sits next to you and the both of you turn to look at the fresh-kill pile. You and t_c get last pick, and since there’s less to pick from in leaf-bare, you’re often left with nothing.]",
+            "[t_c sits next to you and the both of you turn to look at the fresh-kill pile. You and t_c get last pick, and since there's less to pick from in leaf-bare, you're often left with nothing.]",
             "[t_c scoffs as an apprentice sorts through the prey to make their choice.]",
-            "This is ridiculous. If we just left, we’d be able to hunt on our own, and we wouldn’t have to deal with this fox-dung.",
+            "This is ridiculous. If we just left, we'd be able to hunt on our own, and we wouldn't have to deal with this fox-dung.",
             "What do you say, y_c? You and me? Becoming outsiders? Tonight? Tomorrow?",
-            "[You laugh, though you know t_c isn’t completely joking.]"
+            "[You laugh, though you know t_c isn't completely joking.]"
+        ]
+    ],
+    
+
+    "general_sh_J4": [
+        [
+            "they_shunned",
+            "No_kit"
+        ],
+        [
+            "[t_c makes sad eye contact with you across camp.]"
+        ]
+    ],
+
+    "general_sh_J5": [
+        [
+            "they_shunned",
+            "No_kit",
+            "warrior",
+            "apprentice",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "elder",
+            "they_blind"
+        ],
+        [
+            "[You watch t_c slink out of the shadows and make a break for the freshly-stocked freshkill pile in the clearing.]",
+            "[r_w, standing nearby, notices them and tackles them before they can take the juiciest bird from the top.]",
+            "Oh, come on! I haven't eaten since yesterday morning! How am I meant to live if I can't leave camp OR eat the food in it?!",
+            "[The warrior just hisses as t_c retreats to their nest at the edge of camp.]",
+            "[You feel bad. Maybe you'll slip them a mouse later when no one is looking.]"
+        ]
+    ],
+    "general_sh_J6": [
+        [
+            "both_shunned",
+            "No_kit"
+        ],
+        [
+            "Anything new, y_c?",
+            "No? Shunned life is just as mind-numbing as ever?",
+            "Yeah, me too."
         ]
     ],
 

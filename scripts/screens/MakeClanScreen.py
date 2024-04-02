@@ -36,7 +36,7 @@ class MakeClanScreen(Screens):
         pygame.image.load("resources/images/bg_preview_border.png").convert_alpha(), (466, 416))
     
     your_name_img = pygame.transform.scale(pygame.image.load(
-        'resources/images/pick_clan_screen/Your name screen.png').convert_alpha(), (1600, 1400))
+        'resources/images/pick_clan_screen/Your_name_screen.png').convert_alpha(), (1600, 1400))
     your_name_txt1 = pygame.transform.scale(pygame.image.load(
         'resources/images/pick_clan_screen/your name text1.png').convert_alpha(), (796, 52))
     your_name_txt2 = pygame.transform.scale(pygame.image.load(

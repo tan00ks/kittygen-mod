@@ -1,6 +1,6 @@
 {
     "#game_over_window": {
-        "prototype": "#window_base_theme"
+        "prototype": "#game_over_window"
     },
     "#save_check_window": {
         "prototype": "#window_base_theme"

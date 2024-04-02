@@ -574,16 +574,6 @@ class TalkScreen(Screens):
 
                 if not ill_injured:
                     continue 
-
-
-            if cat.shunned > 0 and "they_shunned" not in tags:
-                continue
-
-            if you.shunned > 0 and "you_shunned" not in tags:
-                continue
-
-            if you.shunned > 0 or cat.shunned > 0 and "both_shunned" not in tags:
-                continue
             
             # Relationships
             # Family tags:
@@ -704,6 +694,15 @@ class TalkScreen(Screens):
             if "both_shunned" in tags:
                 if cat.shunned == 0 or you.shunned == 0:
                     continue
+
+            if cat.shunned > 0 and you.shunned == 0 and "they_shunned" not in tags:
+                continue
+
+            if you.shunned > 0 and cat.shunned == 0 and "you_shunned" not in tags:
+                continue
+
+            if you.shunned > 0 and cat.shunned > 0 and "both_shunned" not in tags:
+                continue
             
             # Relationship conditions
             if you.ID in cat.relationships:
