@@ -1034,9 +1034,7 @@ class Events:
 
         if game.clan.your_cat.status == "former Clancat":
             status = "former_clancat"
-        if game.clan.your_cat.status != 'newborn':
-            # if game.clan.your_cat.status == "former Clancat":
-            #     game.clan.your_cat.status = "former_clancat"
+        if game.clan.your_cat.status != 'newborn' or (game.clan.your_cat.status == "newborn" and game.clan.your_cat.dead):
             with open(f"{resource_dir}{game.clan.your_cat.status}.json",
                     encoding="ascii") as read_file:
                 all_events = ujson.loads(read_file.read())
