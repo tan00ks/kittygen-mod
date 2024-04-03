@@ -2,7 +2,7 @@
     "deaf1": [
         [
             "Any",
-            "you_deaf"
+            "only_you_deaf"
         ],
         [
             "[t_c waves at you with a smile, trotting towards you from across camp with a small bird in their jaws.]",
@@ -14,7 +14,7 @@
     "deaf2": [
         [
             "Any",
-            "they_deaf",
+            "only_they_deaf",
             "Newleaf",
             "Greenleaf",
             "Leafbare"
@@ -12011,7 +12011,7 @@
     "youdeaf_sh_J8": [
         [
             "you_shunned",
-            "you_deaf",
+            "only_you_deaf",
             "no_kit"
         ],
         [
@@ -12023,10 +12023,10 @@
         ]
     ],
 
-    "theydeaf_sh_J9": [
+    "youdeaf_sh_J9": [
         [
             "they_shunned",
-            "you_deaf",
+            "only_you_deaf",
             "no_kit"
         ],
         [
@@ -12041,7 +12041,7 @@
     "bothshunned_sh_J11": [
         [
             "both_shunned",
-            "they_deaf"
+            "only_you_deaf"
         ],
         [
             "... ... .."
@@ -12051,7 +12051,7 @@
     "bothshunned_sh_J12": [
         [
             "both_shunned",
-            "you_deaf"
+            "only_you_deaf"
         ],
         [
             "... ... .."
@@ -12061,8 +12061,8 @@
     "bothshunned_sh_J13": [
         [
             "both_shunned",
-            "you_deaf",
-            "they_deaf"
+            "only_you_deaf",
+            "only_they_deaf"
         ],
         [
             "... ... .."
@@ -12077,6 +12077,65 @@
             "What?",
             "Seriously, you're talking to me?",
             "So you're not just evil, but stupid, too."
+        ]
+    ],
+    "general_sh_J15": [
+        [
+            "Any",
+            "you_shunned"
+        ],
+        [
+            "You're not supposed to be talking to anyone."
+        ]
+    ],
+    "general_sh_J16": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "they_deaf",
+            "you_blind",
+            "you_deaf"
+        ],
+        [
+            "[t_c is ignoring you.]"
+        ]
+    ],
+    "general_sh_J17": [
+        [
+            "Any",
+            "you_shunned"
+        ],
+        [
+            "[t_c glances around as you speak, as if looking for what the source of the noise could possibly be, all while avoiding your direction entirely.]"
+        ]
+    ],
+    "general_sh_J18": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "they_deaf",
+            "you_blind",
+            "you_deaf"
+        ],
+        [
+            "[t_c gets up and walks away as you approach.]"
+        ]
+    ],
+    "general_sh_J19": [
+        [
+            "Any",
+            "you_shunned",
+            "they_warrior",
+            "they_deputy",
+            "they_leader",
+            "they_apprentice"
+        ],
+        [
+            "[You say hello to t_c as they come back from a hunting patrol with a shrew in their mouth.]",
+            "[They roll their eyes, and speak around the prey.]",
+            "Never mind, y_c. It's not for you."
         ]
     ],
 
@@ -12593,5 +12652,5 @@
             "[t_c sighs heavily and yells at the apprentices, their voice cutting through the air as they scold them. They turn around to you, ears flat and snout wrinkled.]",
             "Don't thank me. As much as I hate to say it, you're our Clanmate and you deserve respect regardless of your actions. And despite my own personal opinions."
             ]
-        ]  
+        ]
 }

@@ -47,8 +47,19 @@ class Cat():
         'senior': game.config["cat_ages"]["senior"]
     }
 
+    all_cats: Dict[str, Cat] = {}  # ID: object
+    outside_cats: Dict[str, Cat] = {}  # cats outside the clan
+    id_iter = itertools.count()
+
+    all_cats_list: List[Cat] = []
+    ordered_cat_list: List[Cat] = []
+
     # This in is in reverse order: top of the list at the bottom
+    shunned_cats = [cat for cat in all_cats_list if cat.shunned > 0]
+    shunned_cat = [cat for cat in shunned_cats]
+
     rank_sort_order = [
+        shunned_cat,
         "newborn",
         "kitten",
         "queen's apprentice",
@@ -104,13 +115,6 @@ class Cat():
             "conju": 2
         }
     ]
-
-    all_cats: Dict[str, Cat] = {}  # ID: object
-    outside_cats: Dict[str, Cat] = {}  # cats outside the clan
-    id_iter = itertools.count()
-
-    all_cats_list: List[Cat] = []
-    ordered_cat_list: List[Cat] = []
 
     grief_strings = {}
 
