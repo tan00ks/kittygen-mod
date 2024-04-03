@@ -37,6 +37,8 @@ class MakeClanScreen(Screens):
     
     your_name_img = pygame.transform.scale(pygame.image.load(
         'resources/images/pick_clan_screen/Your name screen.png').convert_alpha(), (1600, 1400))
+    your_name_img_dark = pygame.transform.scale(pygame.image.load(
+        'resources/images/pick_clan_screen/Your name screen darkmode.png').convert_alpha(), (1600, 1400))
     your_name_txt1 = pygame.transform.scale(pygame.image.load(
         'resources/images/pick_clan_screen/your name text1.png').convert_alpha(), (796, 52))
     your_name_txt2 = pygame.transform.scale(pygame.image.load(
@@ -906,9 +908,13 @@ class MakeClanScreen(Screens):
                                                                     pygame.transform.scale(
                                                                         self.your_cat.sprite,
                                                                         (200, 200)), manager=MANAGER)
+        if game.settings["dark mode"]:
+            self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 0), (1600, 1400))),
+                                                                    MakeClanScreen.your_name_img_dark, manager=MANAGER)
+        else:
+            self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 0), (1600, 1400))),
+                                                                    MakeClanScreen.your_name_img, manager=MANAGER)
 
-        self.elements['background'] = pygame_gui.elements.UIImage(scale(pygame.Rect((0, 0), (1600, 1400))),
-                                                                  MakeClanScreen.your_name_img, manager=MANAGER)
         self.elements['text1'] = pygame_gui.elements.UIImage(scale(pygame.Rect((520, 730), (796, 52))),
                                                                   MakeClanScreen.your_name_txt1, manager=MANAGER)
         self.elements['text2'] = pygame_gui.elements.UIImage(scale(pygame.Rect((520, 790), (536, 52))),

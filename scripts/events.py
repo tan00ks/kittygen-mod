@@ -154,7 +154,7 @@ class Events:
             while not current_disaster or not disaster_text[game.clan.disaster]["trigger_events"] or (get_current_season() not in current_disaster["season"]):
                 game.clan.disaster = random.choice(list(disaster_text.keys()))
                 current_disaster = disaster_text.get(game.clan.disaster)
-        if game.clan.disaster:
+        if game.clan.disaster and game.clan.disaster != "":
             if "next_possible_disaster" in game.switches and game.clan.disaster == game.switches["next_possible_disaster"]:
                 game.switches["next_possible_disaster"] = None
             self.handle_disaster()
