@@ -309,6 +309,11 @@ class MoonplaceScreen(Screens):
         possible_texts = {}
         with open(f"{resource_dir}", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
+
+        if randint(1,2) == 1:
+            # No message
+            return self.get_adjusted_txt(choice(possible_texts["intros"][med_type]) + choice(possible_texts["moonplace"]["starclan_no_message"]), cat)
+
         resource_dir = "resources/dicts/events/lifegen_events/moonplace/prophecies.json"
         possible_texts2 = {}
         with open(f"{resource_dir}", 'r') as read_file:
