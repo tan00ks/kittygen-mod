@@ -167,9 +167,13 @@ class TalkScreen(Screens):
         all_backgrounds = []
         for leaf in leaves:
 
-            platform_dir = f'{camp_bg_base_dir}/{biome}/{leaf}_{camp_nr}_{light_dark}.png'
-            if self.the_cat.dead:
+            platform_dir = ""
+            if self.the_cat.dead and not self.the_cat.df:
                 platform_dir = "resources/images/starclanbg.png"
+            elif self.the_cat.dead and self.the_cat.df:
+                platform_dir = "resources/images/darkforestbg.png"
+            else:
+                platform_dir = f'{camp_bg_base_dir}/{biome}/{leaf}_{camp_nr}_{light_dark}.png'
             all_backgrounds.append(platform_dir)
 
         self.newleaf_bg = pygame.transform.scale(
