@@ -1756,7 +1756,7 @@
                 "path": "resources/images/buttons/alive_select_hover.png"
             },
             "disabled_image": {
-                "path": "resources/images/buttons/alive_select_unavailable.png"
+                "path": "resources/images/buttons/alive_select_unavaliable.png"
             }
         }
     },
@@ -1773,7 +1773,7 @@
                 "path": "resources/images/buttons/dead_select_hover.png"
             },
             "disabled_image": {
-                "path": "resources/images/buttons/dead_select_unavailable.png"
+                "path": "resources/images/buttons/dead_select_unavaliable.png"
             }
         }
     },

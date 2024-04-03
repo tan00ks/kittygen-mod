@@ -1047,11 +1047,11 @@ class Events:
         elif game.clan.your_cat.dead and game.clan.your_cat.df:
             resource_dir = "resources/dicts/events/lifegen_events/events_dead_df/"
           
-        if game.clan.your_cat.status == "former Clancat":
-            status = "former_clancat"
+        # if game.clan.your_cat.status == "former Clancat":
+        #     status = "former_clancat"
         if game.clan.your_cat.status != 'newborn':
-            if game.clan.your_cat.status == "former Clancat":
-                game.clan.your_cat.status = "former_clancat"
+            # if game.clan.your_cat.status == "former Clancat":
+            #     game.clan.your_cat.status = "former_clancat"
             with open(f"{resource_dir}{game.clan.your_cat.status}.json",
                     encoding="ascii") as read_file:
                 all_events = ujson.loads(read_file.read())
@@ -1066,8 +1066,12 @@ class Events:
             with open(f"{resource_dir}{status}.json",
                   encoding="ascii") as read_file:
                 all_events = ujson.loads(read_file.read())
-
-        possible_events = all_events[f"{status} general"] + general_events["general general"]
+        possible_events = []
+        try:
+            possible_events = all_events[f"{status} general"]
+        except:
+            pass
+        possible_events += general_events["general general"]
 
         # Add old events
         if f"{status} old" in all_events:
