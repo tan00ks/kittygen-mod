@@ -303,12 +303,16 @@ class MoonplaceScreen(Screens):
 
     def load_texts(self, cat):
         you = game.clan.your_cat
-        med_type = self.get_med_type(you)
 
         resource_dir = "resources/dicts/events/lifegen_events/moonplace/moonplace.json"
         possible_texts = {}
         with open(f"{resource_dir}", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
+
+        if you.status in ["apprentice", "queen's apprentice", "mediator apprentice"]:
+            return self.get_adjusted_txt(choice(possible_texts["apprentice_halfmoon"]), cat)
+
+        med_type = self.get_med_type(you)
 
         if randint(1,2) == 1:
             # No message

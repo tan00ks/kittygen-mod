@@ -96,7 +96,8 @@ class Events:
         # 1 = reg patrol 2 = lifegen patrol 3 = df patrol 4 = date
         game.switches['patrolled'] = []
         game.switches['window_open'] = False
-        game.switches["attended half-moon"] = False
+        if game.clan.your_cat.status == "medicine cat apprentice":
+            game.switches["attended half-moon"] = False
         
         if any(
                 str(cat.status) in {
@@ -144,7 +145,7 @@ class Events:
         with open(f"{resource_dir}forest.json",
                   encoding="ascii") as read_file:
             disaster_text = ujson.loads(read_file.read())
-        if not game.clan.disaster and random.randint(1,30) == 1:
+        if not game.clan.disaster and random.randint(1,50) == 1:
             game.clan.disaster = random.choice(list(disaster_text.keys()))
             if "next_possible_disaster" in game.switches and game.switches["next_possible_disaster"]:
                 current_disaster =  disaster_text.get(game.switches["next_possible_disaster"])
@@ -3170,7 +3171,7 @@ class Events:
                     return
             if current_disaster["collateral_damage"]:
                 if random.randint(1,10) == 1:
-                    if "herb loss" in current_disaster["collateral_damage"]:
+                    if random.randint(1,5) == 1:
                         herbs = game.clan.herbs.copy()
                         for herb in herbs:
                             adjust_by = random.choices([-3, -2, -1], [1, 2, 3],
@@ -3178,7 +3179,7 @@ class Events:
                             game.clan.herbs[herb] += adjust_by[0]
                             if game.clan.herbs[herb] <= 0:
                                 game.clan.herbs.pop(herb)
-                    if "prey loss" in current_disaster["collateral_damage"]:
+                    if random.randint(1,5) == 1:
                         game.clan.freshkill_pile.total_amount = game.clan.freshkill_pile.total_amount * 0.7
                 if random.randint(1,10) != 1:
                     if "injuries" in current_disaster["collateral_damage"]:

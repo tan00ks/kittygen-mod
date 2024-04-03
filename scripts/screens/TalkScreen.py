@@ -448,10 +448,16 @@ class TalkScreen(Screens):
                 if cat.shunned < 1 or you.shunned < 1:
                     continue
 
-            elif you.shunned > 0 and "you_shunned" not in tags:
+            if you.shunned > 0 and ("you_shunned" not in tags or "murder" not in tags):
                 continue
 
-            elif cat.shunned > 0 and "they_shunned" not in tags:
+            if cat.shunned > 0 and ("they_shunned" not in tags or "murder" not in tags):
+                continue
+
+            if you.shunned == 0 and ("you_shunned" in tags or "murder" in tags):
+                continue
+
+            if cat.shunned == 0 and ("they_shunned" in tags or "murder" in tags):
                 continue
 
             # Status tags
