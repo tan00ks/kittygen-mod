@@ -6,7 +6,7 @@ from scripts.utility import scale
 
 from .Screens import Screens
 
-from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors
+from scripts.utility import get_med_cats, generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
@@ -287,20 +287,44 @@ class MoonplaceScreen(Screens):
             random_cat = Cat.all_cats.get(choice(game.clan.clan_cats))
         return random_cat
 
+    def get_med_type(self, you):
+        med_type = "you_single_med"
+
+        if you.status == "medicine cat apprentice" and not you.mentor:
+            med_type = "you_app_mentorless"
+        elif you.status == "medicine cat apprentice":
+            med_type = "you_app_mentor"
+        elif you.status == "medicine cat" and len(get_med_cats(Cat, working=False)) == 2:
+            med_type = "two_meds"
+        elif you.status == "medicine cat" and len(get_med_cats(Cat, working=False)) > 2:
+            med_type = "multi_meds"
+
+        return med_type
 
     def load_texts(self, cat):
         you = game.clan.your_cat
+
         resource_dir = "resources/dicts/events/lifegen_events/moonplace/moonplace.json"
         possible_texts = {}
         with open(f"{resource_dir}", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
+
+        if you.status in ["apprentice", "queen's apprentice", "mediator apprentice"]:
+            return self.get_adjusted_txt(choice(possible_texts["apprentice_halfmoon"]), cat)
+
+        med_type = self.get_med_type(you)
+
+        if randint(1,2) == 1:
+            # No message
+            return self.get_adjusted_txt(choice(possible_texts["intros"][med_type]) + choice(possible_texts["moonplace"]["starclan_no_message"]), cat)
+
         resource_dir = "resources/dicts/events/lifegen_events/moonplace/prophecies.json"
         possible_texts2 = {}
         with open(f"{resource_dir}", 'r') as read_file:
             possible_texts2 = ujson.loads(read_file.read())
         game.switches["next_possible_disaster"] = choice(list(possible_texts2.keys()))
         prophecy = choice(possible_texts2[game.switches["next_possible_disaster"]]["text"])
-        return self.get_adjusted_txt(choice(possible_texts["intros"]["you_single_med"]) + choice(possible_texts["moonplace"]["starclan_general"]) + prophecy, cat)
+        return self.get_adjusted_txt(choice(possible_texts["intros"][med_type]) + choice(possible_texts["moonplace"]["starclan_general"]) + prophecy, cat)
 
 
     def get_adjusted_txt(self, text, cat):
