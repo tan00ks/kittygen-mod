@@ -1902,7 +1902,6 @@ class Events:
             # Max number of moons a cat can be shunned before the clan makes up their damn mind
             # Currently ten, but it was also roll if its set to more than that in a cat's save
                 if cat.shunned > 9:
-                    print("A decision has made about ", cat.name, "'s fate in the clan.")
                     self.exile_or_forgive(cat)
         
 
@@ -3354,12 +3353,14 @@ class Events:
                         f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])
                 
                 if cat.moons < 6:
-                    cat.status_change('kitten')
-                elif cat.moons < 13:
-                    cat.status_change('warrior')
-                elif cat.moons < 120:  
-                    cat.status_change('warrior')
-                else:
+                    pass
+                elif cat.moons < 13 and cat.status == 'kitten':
+                    cat.status_change('apprentice')
+                elif cat.moons < 119:
+                    pass
+                    # apprentices can keep that status eve if they come out of a shun older,
+                    # like they still have some trainign to catch up on
+                elif cat.moons > 119 and cat.status != 'elder':
                     cat.status_change('elder')
 
 
