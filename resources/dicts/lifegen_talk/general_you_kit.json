@@ -2068,5 +2068,229 @@
             "[t_c scoffs at you.]",
             "... What a waste of prey."
         ]
+    ],
+    "youkit_sh_J14": [
+        [
+            "both_shunned",
+            "kitten",
+            "they_kitten"
+        ],
+        [
+            "We did a lot of bad stuff, didn't we?",
+            "I'm sorry.",
+            "..."
+        ]
+    ],
+    "youkit_sh_J15": [
+        [
+            "they_shunned",
+            "kitten",
+            "they_kitten"
+        ],
+        [
+            "I'm sorry."
+        ]
+    ],
+    "youkit_sh_J16": [
+        [
+            "you_shunned",
+            "kitten",
+            "they_kitten"
+        ],
+        [
+            "Wait, what did you do?",
+            "r_q told me not to talk to you because you did something bad, but they won't tell me.",
+            "Will you tell me?",
+            "No?",
+            "Oh. Well, I'm sure they're overreacting."
+        ]
+    ],
+
+    "youkit_sh_J17": [
+        [
+            "both_shunned",
+            "they_older",
+            "kitten"
+        ],
+        [
+            "Hm? What's that?",
+            "Oh, yeah, they'll definitely let you back into the Clan. You're so small.",
+            "Me? Maybe not.",
+            "Oh, I'll be okay, don't be sad!"
+        ]
+    ],
+    "youkit_sh_J18": [
+        [
+            "they_shunned",
+            "they_older",
+            "kitten"
+        ],
+        [
+            "Didn't the queens tell you not to talk to me?",
+            "Well, they should have, if they didn't.",
+            "Go talk to r_c instead."
+        ]
+    ],
+    "youkit_sh_J19": [
+        [
+            "you_shunned",
+            "they_older",
+            "kitten"
+        ],
+        [
+            "I pray you'll grow up to know the error of your ways."
+        ]
+    ],
+    "youkit_sh_J20": [
+        [
+            "both_shunned",
+            "they_deaf",
+            "you_deaf",
+            "kitten",
+            "they_kitten"
+        ],
+        [
+            "[Sitting with t_c in your nest outside of the nursery, you're growing bored.]",
+            "[You bat at their tail, but they're too sad to play along.]",
+            ". . ."
+        ]
+    ],
+    "youkit_sh_J21": [
+        [
+            "they_shunned",
+            "kitten",
+            "they_deaf",
+            "you_deaf",
+            "they_kitten"
+        ],
+        [
+            "[You watch t_c idly pass a moss-ball from paw to paw at the edge of camp.]",
+            "[How many hours have they been doing this for?]",
+            "[You wish you could be so easily entertained, while also wishing that l_n would allow you to play with them.]"
+        ]
+    ],
+    "youkit_sh_J22": [
+        [
+            "you_shunned",
+            "kitten",
+            "they_deaf",
+            "you_deaf",
+            "they_kitten"
+        ],
+        [
+            "[Ever since you were shunned, t_c has seemed more on edge.]",
+            "[Unable to listen for danger, their neck must be tired from all of the wildly lookign around.]",
+            " !! ",
+            "[They jump anytime they see you.]"
+        ]
+    ],
+
+    "youkit_sh_J23": [
+        [
+            "both_shunned",
+            "they_older",
+            "they_deaf",
+            "kitten"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youkit_sh_J24": [
+        [
+            "they_shunned",
+            "they_older",
+            "they_deaf",
+            "kitten"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youkit_sh_J25": [
+        [
+            "you_shunned",
+            "they_older",
+            "they_deaf",
+            "kitten"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "stable_shunned_you_Kit_01": [
+        [
+            "you_shunned",
+            "stable",
+            "kitten"
+         ],
+        [
+            "How could someone so young be so cruel?"
+         ]
+        ],
+        
+    "stable_shunned_you_Kit_02": [
+        [
+            "you_shunned",
+            "stable",
+            "kitten"
+         ],
+        [
+            "We failed you, little one."
+         ]
+        ],
+        
+    "stable_shunned_you_Kit_03": [
+        [
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind",
+            "kitten"
+         ],
+        [
+            "The cats in the Dark Forest have found their host. Evil runs through your blood!",
+            "If it were my choice, I'd have you killed for your sins.",
+            "Cats like you were born rotten. And you will continue to die from the inside out as you grow. I cannot allow that to happen!"
+         ]
+        ],
+        
+    "stable_shunned_you_Kit_04": [
+        [
+            "you_shunned",
+            "stable",
+            "kitten"
+         ],
+        [
+            "[As you stir in your sleep, you smell someone familiar invading the private space of the nursery where you are supervised by the queens.]",
+            "[You blink, your vision blurry only to see a looming shadow overhead.]",
+            "... ... ...",
+            "[Is that t_c? They stand above you, claws unsheathed, their pelt protected by the night. You let out a startled cry as they lunge towards you.]",
+            "[The nursery comes to life as queens awaken to your yowling. r_q leaps at t_c and pushes them out of the den. You watch fearfully.]",
+            "[t_c scrambles to their paws, blood leaking down their shoulder where the queen attacked them. The commotion wakes the rest of the camp, concerned cats emerging from their dens.]",
+            "You! You Dark Forest spawn! This was all YOU!",
+            "[They lift their head to the stars and scream to the Clan.]",
+            "We lost a clanmate! To a kit, nonetheless! And yet we stand here and protect the killer?! EVIL WILL SPREAD!",
+            "Make no mistake! They killed once, they'll kill again! And I <b>won't</b> let that happen!",
+            "[r_q tells t_c to go to the medicine den and stay there. The Clan will not harm you. t_c shows brief confusion before hissing their response.]",
+            "Just know, you can't protect them forever! One day, when you're not there, I will banish this evil myself! I don't care if blood stains my paws. Because at least I'll know StarClan will forgive me. They will never forgive you.",
+            "[A chill wracks through your body as you meet t_c's cold and heartless stare. They no longer have the warmth that they once had. Since your actions, you begin to wonder...]",
+            "[Maybe that cat you killed wasn't the only one who died that day.]"
+         ]
+        ],
+        
+    "stable_shunned_you_Kit_05": [
+        [
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind",
+            "kitten"
+         ],
+        [
+            "I wish it wasn't you.",
+            "Any cat, but you.",
+            "I'm so sorry, y_c."
+         ]
     ]
 }

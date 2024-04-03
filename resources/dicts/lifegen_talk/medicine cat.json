@@ -1866,7 +1866,41 @@
         [
             "[While the rest of the clan is fast asleep in their nests, you are woken up by a paw poking you in the side.]",
             "Rise and shine y_c! C'mon, up! Up! Up! Let's go! I want to try and get an early start on today's lesson.",
+            "[t_c is certainly an excellent mentor, there's no doubt about that. However, as you sleepily follow them out of camp, you wish that they were slightly less enthusiastic when it comes to training.]",
+            "[While the rest of the clan is fast asleep in their nests, you are woken up by a paw poking you in the side.]",
+            "Rise and shine y_c! C'mon, up! Up! Up! Let's go! I want to try and get an early start on today's lesson.",
             "[t_c is certainly an excellent mentor, there's no doubt about that. However, as you sleepily follow them out of camp, you wish that they were slightly less enthusiastic when it comes to training.]"
         ]
-    ]
+    ],
+    "general_sh_J4": [
+        [
+            "you_shunned",
+            "No_kit",
+            "they_medicine_cat",
+            "they_medicine_cat_apprentice"
+
+        ],
+        [
+            "[t_c is having a conversation with a warrior nearby about herbs.]",
+            "[They say something wrong, and you slowly lift your head from your paws, wondering if they'd appreciate the correction.]",
+            "[However, they notice the movement and turn to you, looking disgusted.]",
+            "Something to say, y_c?",
+            "[You mutter a quick 'no' before standing up to go lay on the other side of camp. It seems all of your training has become completely useless now.]"
+        ]
+    ],
+        
+    "stable_shunned_you_Apprentice_MedicineCat_02": [
+        [
+            "medicine cat apprentice",
+            "you_shunned",
+            "stable",
+            "they_medicine_cat"
+         ],
+        [
+            "I'll never trust you to heal me. Never again. You're a mockery of what medicine cats stand for. You were being trained to help! To be kind and a voice of StarClan! ",
+            "But you're not, you're a fraud. A foxhearted, merciless killer.",
+            "StarClan won't accept you now."
+         ]
+        ]
+
 }

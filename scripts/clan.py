@@ -53,7 +53,15 @@ class Clan():
         "queen",
         "general",
         "exiled",
-        "former Clancat"
+        "former Clancat",
+        "shunned leader",
+        "shunned deputy",
+        "shunned medicine cat",
+        "shunned mediator",
+        "shunned queen",
+        "shunned apprentice",
+        "shunned warrior",
+        "shunned kitten"
     ]
     
 
@@ -1256,6 +1264,7 @@ class Clan():
 
 
 class OtherClan():
+
     """
     TODO: DOCS
     """

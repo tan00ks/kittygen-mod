@@ -681,7 +681,6 @@ class History:
         victim_history = History.get_murders(victim)
 
         cat.revealed += 1
-        print ('KILLER:',cat.name," | VICTIM:",victim.name )
         if cat.revealed > 0 and cat.shunned < 1:
             cat.shunned = 1
             cat.thought = "Is upset that they have been shunned"

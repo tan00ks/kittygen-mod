@@ -2400,5 +2400,74 @@
             "Oh love! You're so sweet! ... Thank you, I really needed that.",
             "I love you so much!"
         ]
-    }
+    },
+    "frommate_sh_J1": {
+        "tags": [
+            "From_mate",
+	        "they_shunned"
+        ],
+        "intro": [
+            "Oh, y_c…",
+            "[You slip out of the den one night and head for where t_c has been banished to sleep at the edge of camp. They're asleep, and you chirp quietly to get their attention.]",
+            "[t_c's eyes shoot open and they practically leap out of their nest. They turn both ways to check that no cats are watching, then rush forward to bury their head in your shoulder.]",
+            "No cat's spoken to me all day… it sucks that you can only visit me at night.",
+            "[You give them an affectionate lick on their shoulder, telling them that this won't last forever. They lift their head from your fur.]",
+            "I know, I know…",
+            "... Do you think you could slip away from the den tonight? It's so cold sleeping on my own out here…"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Maybe",
+                "next_scene": "shunnedmate_maybe"
+            },
+            "choice2": {
+                "text": "I don't think so",
+                "next_scene": "shunnedmate_no"
+            }
+        },
+        "shunnedmate_maybe": [
+            "Really? Are you sure no one would notice?",
+            "[t_c butts their head into yours, purring so loudly that you couldn't give an answer even if you wanted to.]",
+            "Alright, let's go, then! I managed to sneak out for some extra moss today, so it'll be just as good as our old one!"
+                ],
+        "shunnedmate_no": [
+            "Aw….",
+            "No, no, I get it, you can't get in trouble like me…",
+            "Maybe you could wake up early and visit me before dawn, though?",
+            "[With a purr, you accept the compromise and but your head into theirs.]",
+            "Thank StarClan. I love you, y_c. I'll see you tomorrow."
+                ]
+    },
+    "theydeaf_sh_J10": {
+        "tags": [
+            "they_shunned",
+            "they_deaf"
+        ],
+        "intro": [
+            "[t_c is deep in a sign conversation with r_c across camp.]",
+            "[They're making all sorts of gestures with their paws, whiskers and tail that are too quick for you to pick up at this distance, but r_c is having no trouble responding.]",
+            "[r_c isn't supposed to be speaking with shunned cats.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Stop them",
+                "next_scene": "shunnedtalk_stop"
+            },
+            "choice2": {
+                "text": "Let them be",
+                "next_scene": "shunnedtalk_allow"
+            }
+        },
+        "shunnedtalk_stop": [
+            "[You call out to r_c, reminding them that they shouldn't be interacting with shunned cats.]",
+            "[When r_c jumps and quickly retreats at your warning, t_c looks confused. They glance around a bit before their eyes land on you.]",
+            "... ... ...",
+            "[They dip their head in apology.]"
+            ],
+        "shunnedtalk_allow": [
+            "[Though it's against the rules, you don't want to interrupt such a passionate conversation.]",
+            "..!",
+            "[r_c appears to have said something funny! You hope that no one else interrupts.]"
+                ]
+        }
 }
