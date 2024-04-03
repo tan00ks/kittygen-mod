@@ -3054,5 +3054,22 @@
             "[In the end, t_c's face comes out untouched ... though, the maneuver did leave many of their vital organs unprotected.]",
             "[Seems they don't exactly have their priorities in order.]"
         ]
+    ],
+    "strange_DF_H3": [
+        [
+            "strange",
+            "you_df",
+            "they_df",
+            "apprentice"
+        ],
+        [
+            "Hey, y_c, do you wanna sneak out? You know, to the border.",
+            "I wanna see what it looks like! Is it a wall of goop, an untouchable border made of stars? Maybe Starclan cats patrol the area and chase us away.",
+            "... What?",
+            "[You tell t_c there is no point-- they already know what the border looks like: void of life.]",
+            "We don't know that until we see it ourselves! Ugh, fine. I'll go myself.",
+            "[t_c prances away with a huff, no cat bothering to stop their strange curiosity. But, before they can even step a paw away from the den, they falter and look out to the darkness.]",
+            "[It really is nothing but an empty void of black goo.]"
+        ]
     ]
 }

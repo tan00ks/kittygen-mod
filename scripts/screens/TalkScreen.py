@@ -699,6 +699,14 @@ class TalkScreen(Screens):
                 if you.ID in cat.mate:
                     continue
 
+            if "clan_has_kits" in tags:
+                clan_has_kits = False
+                for c in Cat.all_cats_list:
+                    if c.status == "kitten" and not c.dead and not c.outside:
+                        clan_has_kits = True
+                if not clan_has_kits:
+                    continue
+
             if "they_older" in tags:
                 if you.age == cat.age or cat.moons < you.moons:
                     continue

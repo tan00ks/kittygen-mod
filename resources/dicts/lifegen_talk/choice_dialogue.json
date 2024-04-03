@@ -2404,7 +2404,7 @@
     "frommate_sh_J1": {
         "tags": [
             "From_mate",
-	        "they_shunned"
+            "they_shunned"
         ],
         "intro": [
             "Oh, y_c…",
@@ -2429,14 +2429,14 @@
             "Really? Are you sure no one would notice?",
             "[t_c butts their head into yours, purring so loudly that you couldn't give an answer even if you wanted to.]",
             "Alright, let's go, then! I managed to sneak out for some extra moss today, so it'll be just as good as our old one!"
-                ],
+        ],
         "shunnedmate_no": [
             "Aw….",
             "No, no, I get it, you can't get in trouble like me…",
             "Maybe you could wake up early and visit me before dawn, though?",
             "[With a purr, you accept the compromise and but your head into theirs.]",
             "Thank StarClan. I love you, y_c. I'll see you tomorrow."
-                ]
+        ]
     },
     "theydeaf_sh_J10": {
         "tags": [
@@ -2463,11 +2463,11 @@
             "[When r_c jumps and quickly retreats at your warning, t_c looks confused. They glance around a bit before their eyes land on you.]",
             "... ... ...",
             "[They dip their head in apology.]"
-            ],
+        ],
         "shunnedtalk_allow": [
             "[Though it's against the rules, you don't want to interrupt such a passionate conversation.]",
             "..!",
             "[r_c appears to have said something funny! You hope that no one else interrupts.]"
-                ]
-        }
+        ]
+    }
 }
