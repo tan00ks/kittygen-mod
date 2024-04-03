@@ -4032,6 +4032,29 @@
             }
         }
     },
+    "#half_moon_button":
+    {
+        "prototype": "#image_button",
+        "images":
+        {
+            "normal_image":
+            {
+                "path": "resources/images/buttons/halfmoon_meeting.png"
+            },
+            "hovered_image":
+            {
+                "path": "resources/images/buttons/halfmoon_meeting_hover.png"
+            },
+            "selected_image":
+            {
+                "path": "resources/images/buttons/halfmoon_meeting_hover.png"
+            },
+            "disabled_image":
+            {
+                "path":"resources/images/buttons/halfmoon_meeting_unavaliable.png"
+            }
+        }
+    },
     "#talk_button":
     {
         "prototype": "#image_button",
