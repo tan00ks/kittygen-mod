@@ -12,7 +12,10 @@
     "medicine cat apprentice introspective": [],
     "medicine cat apprentice neurotic": [],
     "medicine cat apprentice silly": [],
-    "medicine cat apprentice stable": [],
+    "medicine cat apprentice stable": [
+        "You try to educate the StarClan kits on different types of herbs despite the fact they'll never have a use for the knowledge.",
+        "You beg a medicine cat in StarClan to continue your training."
+    ],
     "medicine cat apprentice sweet": [],
     "medicine cat apprentice unabashed": [],
     "medicine cat apprentice unlawful": [],

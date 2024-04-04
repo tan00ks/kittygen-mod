@@ -17,7 +17,14 @@
     "kitten introspective": [],
     "kitten neurotic": [],
     "kitten silly": [],
-    "kitten stable": [],
+    "kitten stable": [
+        "You wish you had a chance to prove yourself... StarClan had other plans.",
+        "You question what the warriors mean when they say you were too young.",
+        "A queen of StarClan grooms your fur and gives you as many cuddles as you want.",
+        "You wonder where you went wrong...",
+        "You accidentally stumble off a cloud after playing a game with another kitten. They watch you fall slowly from the sky only to fall down with you. You both drift back down to the ground, then excitedly begin to climb into the air once more.",
+        "You ponder what games you could play in StarClan."
+    ],
     "kitten sweet": [],
     "kitten unabashed": [],
     "kitten unlawful": [],

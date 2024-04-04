@@ -101,7 +101,6 @@
     ],
     "medi2": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -1479,6 +1478,15 @@
             "...a game? Hmmm... competition could make them argue more.",
             "...unless I scare them into cooperating... Oh, that's perfect. Thanks, y_c!",
             "[You have a feeling that r_c and r_c2 are in for a world of terror. Hopefully t_c won't tell them who gave them the idea.]"
+        ]
+    ],
+    "stable_Mediator_Gen_01": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "If you need someone to talk to, y_c, please don't be afraid to chase me up. It's my duty to help all those I can. I understand sometimes it's hard to ask for help, but if you're struggling- even with something small. I'm always here to help."
         ]
     ]
 }

@@ -213,7 +213,6 @@
     },
     "caught_intheact": {
         "tags": [
-            
             "dislike",
             "no_kit",
             "you_shunned"
@@ -2469,8 +2468,8 @@
             "[Though it's against the rules, you don't want to interrupt such a passionate conversation.]",
             "..!",
             "[r_c appears to have said something funny! You hope that no one else interrupts.]"
-                ]
-        },
+        ]
+    },
     "kitten_sh_J20": {
         "tags": [
             "you_shunned",
@@ -2495,7 +2494,7 @@
             "O- oh... what was it?",
             "Actually, n-no, don't tell me... I'll just ask t_p.",
             "[t_c turns to run for the nursery.]"
-            ],
+        ],
         "somethingbad_no": [
             "Oh! I knew it! I knew you'd never do something bad, y_c!",
             "Well, if no one wants to be your friend, I'll be your friend! Want to play some moss-ball?",
@@ -2503,42 +2502,176 @@
             "[But you offer to come back and play while they're asleep.]",
             "Oh, okay! Yes, let's play tonight! I won't tell anyone, promise.",
             "See you tonight!"
-                ]
-        },
-        "leader_sh_J21": {
-            "tags": [
-                "both_shunned",
-                "they_leader",
-                "any",
-                "warrior",
-                "deputy",
-                "elder",
-                "apprentice"
-            ],
-            "intro": [
-                "Do you think I'll get to be leader again one day?"
-            ],
-            "intro_choices": {
-                "choice1": {
-                    "text": "Yes",
-                    "next_scene": "leaderagain_yes"
-                },
-                "choice2": {
-                    "text": "No",
-                    "next_scene": "leaderagain_no"
-                }
+        ]
+    },
+    "leader_sh_J21": {
+        "tags": [
+            "both_shunned",
+            "they_leader",
+            "any",
+            "warrior",
+            "deputy",
+            "elder",
+            "apprentice"
+        ],
+        "intro": [
+            "Do you think I'll get to be leader again one day?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Yes",
+                "next_scene": "leaderagain_yes"
             },
-            "leaderagain_yes": [
-                "Aha, I knew you believed in me!",
-                "When I become leader again, you can be my deputy, huh?",
-                "c_nClan will regret pushing us to the side...",
-                "[t_C has an odd glint in their eyes... Maybe you shouldn't be encouraging this.]"
-                ],
-            "leaderagain_no": [
-                "Really? But didn't I do a good job?",
-                "Yeah, I guess that's not really why I got kicked in the first place...",
-                "Whatever. I'll be leader again, you don't have to help me.",
-                "Way to lose your shot at deputy."
-                    ]
+            "choice2": {
+                "text": "No",
+                "next_scene": "leaderagain_no"
             }
+        },
+        "leaderagain_yes": [
+            "Aha, I knew you believed in me!",
+            "When I become leader again, you can be my deputy, huh?",
+            "c_nClan will regret pushing us to the side...",
+            "[t_C has an odd glint in their eyes... Maybe you shouldn't be encouraging this.]"
+        ],
+        "leaderagain_no": [
+            "Really? But didn't I do a good job?",
+            "Yeah, I guess that's not really why I got kicked in the first place...",
+            "Whatever. I'll be leader again, you don't have to help me.",
+            "Way to lose your shot at deputy."
+        ]
+    },
+    "Stablewarrior_interaction1_Any": {
+        "tags": [
+            "Any",
+            "stable"
+        ],
+        "intro": [
+            "[t_c marches through the camp and nods at you, their gaze locked and brows knitted together deep in thought.]",
+            "y_c, have you seen d_n? I need to report a twoleg sighting near the northern borders."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "No, I haven't seen them.",
+                "next_scene": "ReportFail"
+            },
+            "choice2": {
+                "text": "Yes, I think they're at the medicine den.",
+                "next_scene": "ReportFound"
+            }
+        },
+        "ReportFail": [
+            "Mouse-dung!",
+            "[Your ears bend back slightly at their harsh tone.]",
+            "I'm sorry y_c, I didn't mean to yell... I'm just worried, StarClan knows how dangerous twolegs can be. Thank you for your honesty, I'll keep asking around. Hopefully, I can find them. Get back to me if you see d_n.",
+            "[You watch as t_c bounds off to ask more cats around camp, their stress evident in every step... Maybe you should help them?]"
+        ],
+        "ReportFail_choices": {
+            "choice1": {
+                "text": "[Yes, you should help them!]",
+                "next_scene": "YouHelp"
+            },
+            "choice2": {
+                "text": "[No, t_c will manage.]",
+                "next_scene": "NoHelp"
+            }
+        },
+        "YouHelp": [
+            "[t_c needs your help, this is an urgent matter that requires your assistance, for the sake of the clan! You get off your paws and begin to question the cats around you. Some more helpful than others.]",
+            "[After endless rounds of asking your clanmates, t_c approaches you out of break and tired. Much to their surprise, you look the same.]",
+            "Thank you for helping me, y_c. Looks like some others are also asking around. You should see r_m, they're like a kitten with a mossball. StarClan, where is d_n? It's like they just up and disappeared-",
+            "[As if on cue, d_n enters the camp with a mouse in their jaw, beside them is l_n who looks relaxed until they see the utter disarray the camp is in.]",
+            "[Warriors running left and right, the kits in a panic, apprentices unsure what to do, elders and queens trying to settle the kits, medicine cats trying to gather the warriors and the poor mediators who are trying to settle the camp.]",
+            "[A voice cuts through the crowd as l_n yells above the chaos, their gaze narrows as they demand to know the meaning of this mess. All eyes fall onto t_c and you...]",
+            "l_n, d_n, while I was out on patrol I saw twolegs near the territory and came back to camp to find you to organize a plan. I thought just taking a patrol to follow them without approval was wrong and unfortunately, in my attempt to find you...",
+            "[At the news of the threat, l_n immediately drops their prey and barks orders. They call for the warriors and ask t_c to lead the way. Within seconds order is restored and the brave patrol leaps to action.]",
+            "[You wait patiently for a while and when they finally return, you are given the nod of approval from d_n and l_n. Your chest swells with pride and your mind flourishes with a new memory that you and t_c will forever share.]"
+        ],
+        "NoHelp": [
+            "[No, t_c will be okay... You hope so at least. Maybe your laziness is the real threat here.]"
+        ],
+        "ReportFound": [
+            "Thank you so much y_c! I'll pass on a good word, see you later!",
+            "[t_c bolts off towards the medicine den, almost crashing through the front entrance. You can hear the murmurs from the inside.]",
+            "[Shortly afterward the voices die down and d_n leaps from the den. They begin to shout orders as they call for warriors, t_c following them closely behind.]",
+            "[The warriors soon follow in hot pursuit behind d_n, t_c included. As they run with the patrol they turn to face you, the gleam in their eyes is full of with a million thank yous.]",
+            "[Hopefully they keep the territory safe, maybe while they're at it, keep their end of the deal and tell d_n of your assistance.]"
+        ]
+    },
+    "Stablewarrior_interaction2_Any": {
+        "tags": [
+            "Any",
+            "platonic_like",
+            "platonic_love",
+            "stable"
+        ],
+        "intro": [
+            "G'day y_c, how you doing? You look really relaxed there- actually, what are you doing???",
+            "[You look down and can't help but give an awkward smile. That's a great question actually... You find yourself stretched out next to the medicine den, your head on the floor and your rear in the air.]",
+            "[You're laying on your back with your paws in the air, your tail partly tangled amongst your legs... It doesn't feel uncomfortable, in fact quite the opposite.]",
+            "Uh... Hello? StarClan hasn't claimed you yet y_c, what are you- pft- I'm sorry it's just so... Oh my I can't-",
+            "[t_c explodes into a fit of giggles as you stare at them upside down with big buggy eyes.]"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "It's actually really comfortable t_c, you should try it!",
+                "next_scene": "LayDownBeStupid"
+            },
+            "choice2": {
+                "text": "I actually have no idea, but it's sorta comfortable...",
+                "next_scene": "NowYouLackConfidence"
+            },
+            "choice3": {
+                "text": "Please don't laugh!",
+                "next_scene": "JudgementApproaches"
+            }
+        },
+        "LayDownBeStupid": [
+            "Oh- really? You sound pretty confident in that statement, y'know what? Why not, I mean, I'm talking to you so it's not like I have much dignity to lose anyway.",
+            "[They flop down next to you and position themselves to match your pose. Silence hangs in the air for a second as they think to themselves, eyes fixated on the sky as their brain formulates an opinion.]",
+            "I hate the fact that you're right. This is actually really comfortable... Cheers to that y_c.",
+            "[You both lay down together and have a light-hearted talk, both smiling and giggling. You both couldn't care less how your clanmates stare at you. They just don't get it.]",
+            "Ha! Don't pay attention to them y_c, they're just jealous of our coolness! They'll never admit it, but I have no doubt when some of our clanmates are alone, they'll try it themselves.",
+            "[You snicker at the thought knowing that t_c is absolutely right, some of your clanmates will absolutely be trying this out later.]"
+        ],
+        "NowYouLackConfidence": [
+            "Judging by the lack of confidence in your statement, I'm going to leave you to it. I mean, have fun, but...",
+            "[t_c can't seem to stop giggling and eventually once they gain control, they stare at you for a moment longer.]",
+            "Keep doing you y_c, I just don't think it's for me."
+        ],
+        "JudgementApproaches": [
+            "I'M SORRY! It's just- PFT!!!!",
+            "HAHAHAHAHA!!!",
+            "[Your ears feel red hot from the embarrassment, but also you can't help but scowl at this warrior.]",
+            "[Wasn't t_c supposed to be this respected and renowned warrior of the clan? Apparently not- they're just as weird as you.]"
+        ]
+    },
+    "Stablewarrior_interaction3_Any": {
+        "tags": [
+            "Any",
+            "stable"
+        ],
+        "intro": [
+            "Good morning y_c, looking sharp today. I'm going out this morning for the hunting patrol, is there anything in particular you'd like me to grab?",
+            "I've just been asking around was all, some of the warriors indicated that the vole supply was low, others said they wanted more fish. Just asking for opinions, I like to make sure cats have their favourites."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Vole and fish sounds good!",
+                "next_scene": "VoleandFish"
+            },
+            "choice2": {
+                "text": "I really like robin!",
+                "next_scene": "AnotherThingToTheList"
+            }
+        },
+        "VoleandFish": [
+            "Really? Alright. Are you sure you don't have a request? It's no trouble really, I have all day.",
+            "['Nope, that will be just fine!']",
+            "Right then, I'll get going, I'll let you get first pick once I'm back."
+        ],
+        "AnotherThingToTheList": [
+            "Robin? Okay! Sounds good, I actually really like Robin myself so this is a treat! I personally cannot stand vole. Fish sometimes, but vole? GAH!",
+            "It's a horrendous little creature that's just bone and fat, there's no meat, no flavour. You have taste, thus, you have my respect. I'll be back before moonrise, y_c, see ya!"
+        ]
     }
+}

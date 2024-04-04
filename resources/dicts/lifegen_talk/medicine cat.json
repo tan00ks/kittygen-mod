@@ -2000,5 +2000,42 @@
             "I have already told you-- you're not welcome here! Your attitude has gotten you in enough trouble in this den.",
             "I have already made up my mind. Leave before I make you!"
         ]
+    ],
+    "stable_Medicine_Cat_Gen_01": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "So sorry, y_c. Could we have that private session tomorrow? Something's come up and I have to re-organize the medicine den.",
+            "... Despite the fact that was r_m's job... What am I going to do with them?"
+        ]
+    ],
+    "stable_Medicine_Cat_Gen_02": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "[t_c has been commenting on how thorn injuries are happening more frequently due to the recent rain. So they've been held up in the medicine den brainstorming a solution.]",
+            "HAHA! YES! FINALLY! IT WORKS!",
+            "[A loud voice booms from the medicine den. The entire camp freezing in place, a couple of cats jumping out of their skin.]",
+            "[t_c struts out of the medicine den, ferns wrapped around their paws and legs. The toes just poking out, but with a wooden base at the bottom.]",
+            "With this, we won't have to worry about those thorn bushes, we could even use these to properly protect ourselves when we uproot them!",
+            "Oh... Sorry for the outburst everyon-",
+            "[The warriors begin to fiercely cheer in joy! One even stating that they were saved! l_n laughs and congratulates t_c]",
+            "Thank you! Thank you everyone! So, we'll need more made and more materials, who's with me?",
+            "[The clan roars louder, warriors seeking the list of materials to go searching. Mediators asking for instructions on how to build, queens asking on whether it was possible to have mini ones for the kits.]",
+            "Looking pretty eager there, y_c, c'mon! Let's get to work? You're helping aren't you? Great! Let's do this!"
+        ]
+    ],
+    "stable_Medicine_Cat_Gen_03": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "Please move, y_c. I've got no time to get distracted. Please go somewhere else so you don't disturb my work. It's nothing personal."
+        ]
     ]
 }

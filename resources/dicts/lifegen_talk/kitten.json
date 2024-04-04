@@ -50,7 +50,6 @@
     ],
     "kit_121": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -60,7 +59,6 @@
     ],
     "kit_129": [
         [
-            
             "Any",
             "random_cat",
             "you_shunned"
@@ -1906,7 +1904,6 @@
         [
             "any",
             "neurotic",
-            
             "you_shunned"
         ],
         [
@@ -3579,8 +3576,8 @@
         ],
         [
             "[t_c just stares up at you for a moment before waddling away towards the nursery.]"
-]
-        ],
+        ]
+    ],
     "starclan_kit1": [
         [
             "you_sc",
@@ -3616,14 +3613,13 @@
             "...StarClan's supposed to be fair. That's what everyone said. So they were lying...?",
             "[You shake your head, telling t_c that most cats really did believe that, and it helped them get through the day to think that everything happens for a reason, but at the end of the day, good things happen to bad cats, and bad things happen to good cats, and nobody knows why, not even StarClan.]",
             "[t_c presses against you, tears brimming their eyes, and before you know it, you're bringing them into a tight embrace. At least, even through all this, you have each other.]"
-
         ]
     ],
     "starclankit_default1": [
         [
             "they_sc",
             "you_sc",
-            "they_kitten"
+            "any"
         ],
         [
             "It's fun being up here and all, but when can we go back to c_nClan?",
@@ -3635,11 +3631,36 @@
         [
             "they_sc",
             "you_sc",
-            "they_kitten"
+            "any"
         ],
         [
             "The moss-balls here are so sparkly!",
             "Come play with me, y_c!"
+        ]
+    ],
+    "sc_kit_kit": [
+        [
+            "they_sc",
+            "you_sc",
+            "kitten"
+        ],
+        [
+            "Ever wish you could see what you look like if you got to grow old?",
+            "I know I do!"
+        ]
+    ],
+    "sc_kit_kit_littermates": [
+        [
+            "they_sc",
+            "you_sc",
+            "kitten",
+            "littermate"
+        ],
+        [
+            "Ever wish you could see what you look like if you got to grow old?",
+            "I bet you'd look UGLY!",
+            "[You let out an insulted squeak, and throw yourself at your sibling.]",
+            "[The two of you roll around on the starry grounds, giggling.]"
         ]
     ]
 }

@@ -181,7 +181,6 @@
     ],
     "dep_32": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -191,7 +190,6 @@
     ],
     "dep_1": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -201,7 +199,6 @@
     ],
     "dep_2": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -211,7 +208,6 @@
     ],
     "dep_3": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -221,7 +217,6 @@
     ],
     "dep_4": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -231,7 +226,6 @@
     ],
     "dep_5": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -241,7 +235,6 @@
     ],
     "dep_6": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -251,7 +244,6 @@
     ],
     "dep_7": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -261,7 +253,6 @@
     ],
     "dep_8": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -271,7 +262,6 @@
     ],
     "dep_9": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -281,7 +271,6 @@
     ],
     "dep_10": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -2129,7 +2118,7 @@
             "[You feel like you're going to be sick.]"
         ]
     ],
-    "deputyshunned_J2":[
+    "deputyshunned_J2": [
         [
             "they_shunned",
             "any"
@@ -2137,6 +2126,18 @@
         [
             "I'm not your deputy anymore.",
             "You have no reason to talk to me."
+        ]
+    ],
+    "stable_Deputy_Gen_01": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "[d_n watches over the nursery next to the queens. They sigh heavily then lift their chin proudly. Some day, those kittens may look up to them as leader.]",
+            "[You couldn't imagine how that pressure would feel, a crushing weight on your shoulders. The fear of failure and mistakes, how that could lead to one, if not all the lives of those kits.]",
+            "[You smile confidently as the light bounces off their fur. You know that it won't happen, you know d_n is a good leader, a true spirit, and a just warrior. They'll be fine in whatever happens next.]",
+            "[You look to l_n, who couldn't look more prouder.]"
         ]
     ]
 }

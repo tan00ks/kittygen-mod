@@ -114,7 +114,6 @@
     ],
     "assertive_murder4_2": [
         [
-            
             "kitten",
             "assertive",
             "from_parent",
@@ -1468,7 +1467,6 @@
     "unabashed_murder": [
         [
             "Unabashed",
-            
             "any",
             "you_shunned"
         ],
@@ -1480,7 +1478,6 @@
     "unabashed_murder1": [
         [
             "Unabashed",
-            
             "any",
             "you_shunned"
         ],
@@ -2410,6 +2407,18 @@
             "You're from the Dark Forest, aren't you? What are you doing so far from... home?",
             "[Their expression seems conflicted.]",
             "You're just a kit. You don't deserve to be in that place."
+        ]
+    ],
+    "sc_sc_kit": [
+        [
+            "they_sc",
+            "you_sc",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "[t_c smiles at you as they pass.]",
+            "Hello, y_c!"
         ]
     ]
 }
