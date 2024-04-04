@@ -53,15 +53,7 @@ class Clan():
         "queen",
         "general",
         "exiled",
-        "former Clancat",
-        "shunned leader",
-        "shunned deputy",
-        "shunned medicine cat",
-        "shunned mediator",
-        "shunned queen",
-        "shunned apprentice",
-        "shunned warrior",
-        "shunned kitten"
+        "former Clancat"
     ]
     
 

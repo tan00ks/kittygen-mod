@@ -971,7 +971,7 @@ class Events:
             if "l_n" in text:
                 if game.clan.leader is None:
                     return ""
-                if game.clan.leader.dead or game.clan.leader.outside:
+                if game.clan.leader.dead or game.clan.leader.outside or game.clan.leader.shunned > 0:
                     return ""
                 text = text.replace("l_n", str(game.clan.leader.name))
             if "d_n" in text:
@@ -2126,10 +2126,12 @@ class Events:
         if game.clan.leader:
             leader_dead = game.clan.leader.dead
             leader_outside = game.clan.leader.outside
+            leader_shunned = game.clan.leader.shunned > 0
         else:
             leader_dead = True
             # If leader is None, treat them as dead (since they are dead - and faded away.)
             leader_outside = True
+            leader_shunned = True
 
         # If a Clan deputy exists, and the leader is dead,
         #  outside, or doesn't exist, make the deputy leader.
@@ -2137,21 +2139,32 @@ class Events:
             if game.clan.deputy is not None and \
                     not game.clan.deputy.dead and \
                     not game.clan.deputy.outside and \
-                    (leader_dead or leader_outside):
+                    game.clan.deputy.shunned == 0 and \
+                    (leader_dead or leader_outside or leader_shunned):
                 game.clan.new_leader(game.clan.deputy)
                 game.clan.leader_lives = 9
                 text = ''
+                shunnedleader = cat.name if cat.shunned > 0 and cat.status == 'leader' and not cat.outside or cat.dead else None
+                if leader_shunned:
+                    shuntext = f"After {shunnedleader}'s shun, the Clan's deputy has had to step up earlier than they expected. "
+                else:
+                    shuntext = ""
+
                 if game.clan.deputy.personality.trait == 'bloodthirsty':
                     text = f'{game.clan.deputy.name} has become the new leader. ' \
                            f'They stare down at their Clanmates with unsheathed claws, ' \
                            f'promising a new era for the Clans.'
                 else:
                     c = random.choice([1, 2, 3])
+                    if game.clan.biome == 'Forest':
+                        moonplace = 'Moongrove'
+                    else:
+                        moonplace = 'Moonfalls'
                     if c == 1:
                         text = str(game.clan.deputy.name.prefix) + str(
                             game.clan.deputy.name.suffix) + \
                                ' has been promoted to the new leader of the Clan. ' \
-                               'They travel immediately to the Moonstone to get their ' \
+                               f'They travel immediately to the {moonplace} to get their ' \
                                'nine lives and are hailed by their new name, ' + \
                                str(game.clan.deputy.name) + '.'
                     elif c == 2:
@@ -2169,8 +2182,9 @@ class Events:
                 # game.ceremony_events_list.append(text)
                 text += f"\nVisit {game.clan.deputy.name}'s " \
                         "profile to see their full leader ceremony."
+                event = shuntext + text
                 game.cur_events_list.append(
-                    Single_Event(text, "ceremony", game.clan.deputy.ID))
+                    Single_Event(event, "ceremony", game.clan.deputy.ID))
                 self.ceremony_accessory = True
                 self.gain_accessories(cat)
                 game.clan.deputy = None
@@ -2503,7 +2517,7 @@ class Events:
                 # Gather for leader ---------------------------------------------------------
 
                 tags = []
-                if game.clan.leader and not game.clan.leader.dead and not game.clan.leader.outside:
+                if game.clan.leader and not game.clan.leader.dead and not game.clan.leader.outside and game.clan.leader.shunned == 0:
                     tags.append("yes_leader")
                 else:
                     tags.append("no_leader")
@@ -3484,6 +3498,7 @@ class Events:
             else:
                 leader_dead = True
                 leader_outside = True
+                leader_shunned = True
 
 
             if leader_dead or leader_outside or leader_shunned:
@@ -3510,7 +3525,7 @@ class Events:
 
                     # Gather deputy and leader status, for determination of the text.
                     if game.clan.leader:
-                        if game.clan.leader.dead or game.clan.leader.outside:
+                        if game.clan.leader.dead or game.clan.leader.outside or game.clan.leader.shunned >0:
                             leader_status = "not_here"
                         else:
                             leader_status = "here"
@@ -3518,7 +3533,7 @@ class Events:
                         leader_status = "not_here"
 
                     if game.clan.deputy:
-                        if game.clan.deputy.dead or game.clan.deputy.outside:
+                        if game.clan.deputy.dead or game.clan.deputy.outside or game.clan.deputy.shunned > 0:
                             deputy_status = "not_here"
                         else:
                             deputy_status = "here"
