@@ -1387,7 +1387,7 @@
         [
             "upstanding",
             "no_kit",
-            "platonice_like",
+            "platonic_like",
             "random_cat"
         ],
         [
@@ -1420,7 +1420,8 @@
         [
             "upstanding",
             "from_mentor",
-            "insult"
+            "insult",
+            "any"
         ],
         [
             "Looks like someone is one step closer to missing out on the upcoming Gathering."
@@ -1431,7 +1432,8 @@
             "upstanding",
             "from_mentor",
             "platonic_like",
-            "neutral"
+            "neutral",
+            "any"
         ],
         [
             "[While the rest of the clan is fast asleep in their nests, you are woken up by a paw poking you in the side.]",
