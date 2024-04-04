@@ -50,8 +50,9 @@
     ],
     "kit_121": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Uh, sorry! The queens told me to stay away from you."
@@ -59,9 +60,10 @@
     ],
     "kit_129": [
         [
-            "murder",
+            
             "Any",
-            "random_cat"
+            "random_cat",
+            "you_shunned"
         ],
         [
             "r_c says you have a secret... Can you tell me? Please?"
@@ -1904,7 +1906,8 @@
         [
             "any",
             "neurotic",
-            "murder"
+            
+            "you_shunned"
         ],
         [
             "[As soon as t_c notices you approach, they squeal in fear and race away.]"
@@ -3471,8 +3474,9 @@
         [
             "upstanding",
             "they_younger",
-            "murder",
-            "respect"
+            
+            "respect",
+            "you_shunned"
         ],
         [
             "I-I looked up to you! How could you do such a thing?!"
@@ -3548,6 +3552,32 @@
             "Can I sleep with you tonight, at least? r_k said they'll try to cover for me if a queen wakes up...",
             "[You know it's a bad idea, but how could you say no to such a cute little furball?]",
             "[You quickly fall back asleep with t_c contently kneading their paws into your fur.]"
+        ]
+    ],
+    "kitinsult_sh_J30": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "insult"
+        ],
+        [
+            "r_c said I shouldn't listen to you."
+        ]
+    ],
+    "kitinsult_sh_J31": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "insult",
+            "they_deaf",
+            "you_deaf"
+        ],
+        [
+            "[t_c just stares up at you for a moment before waddling away towards the nursery.]"
         ]
     ]
 }

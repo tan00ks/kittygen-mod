@@ -55,7 +55,7 @@ class Cat():
     ordered_cat_list: List[Cat] = []
 
     # This in is in reverse order: top of the list at the bottom
-    shunned_cats = [cat for cat in all_cats_list if cat.shunned > 0]
+    shunned_cats = [cat for cat in all_cats if cat.shunned > 0]
     shunned_cat = [cat for cat in shunned_cats]
 
     rank_sort_order = [

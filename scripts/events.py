@@ -258,7 +258,10 @@ class Events:
             if cat.shunned == 1:
                 if cat.status == "leader":
                     string = f"Due to the cries of outrage from their Clan after the reveal of their crime, {game.clan.leader.name} has stepped down as leader of {game.clan.name}Clan."
-
+                    cat.specsuffix_hidden = True
+                    game.clan.leader_lives = 1
+                    # ^^ to keep the leader status for dialogue but take away "star".
+                    # they can also only die once now
                     game.cur_events_list.insert(0, Single_Event(string, "alert"))
 
                 elif cat.status == "deputy":
@@ -2605,7 +2608,6 @@ class Events:
                     Single_Event(f'{ceremony_text}', "ceremony", involved_cats))
             game.ceremony_events_list.append(f'{cat.name}{ceremony_text}')
         else:
-            print("tried to promote shunned cat")
             return
 
     def gain_accessories(self, cat):
@@ -3351,29 +3353,51 @@ class Events:
             if fate in [1, 2, 5, 10, 11]:
                 cat.shunned = 0
                 if cat.ID == game.clan.your_cat.ID:
-                    text = f"A Clan meeting is called one day, and your clanmates vote to forgive you for what you did."
+                    text = "A Clan meeting is called one day, and your clanmates vote to forgive you for what you did."
                 else:
                     text = random.choice([
                         f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}Clan, though some are quicker to forgive than others.",
-                        f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])
+                        f"{game.clan.leader.name} has chosen to lift the shun on {cat.name}, but will be watching them closely."])\
+
+                # Do they get their job back?
+                if cat.status in ['medicine cat', 'deputy', 'mediator', 'queen']:
                 
-                if cat.moons < 6:
-                    pass
-                elif cat.moons < 13 and cat.status == 'kitten':
-                    cat.status_change('apprentice')
-                elif cat.moons < 119:
-                    pass
-                    # apprentices can keep that status eve if they come out of a shun older,
-                    # like they still have some trainign to catch up on
-                elif cat.moons > 119 and cat.status != 'elder':
-                    cat.status_change('elder')
+                    if random.randint(1,2) == 1:
+                        if cat.ID == game.clan.your_cat.ID:
+                            text = text + f" You have shown that you can be trusted and will rejoin the Clan as a {cat.status}."
+                        else:
+                            text = text + f" They have shown that they can be trusted and will rejoin the Clan as a {cat.status}."
+                    
+                    else:
+                        if cat.moons < 119:
+                            newstatus = 'warrior'
+                        else:
+                            newstatus = 'elder'
+                        if cat.ID == game.clan.your_cat.ID:
+                            text = text + f" You will not be allowed to be a {cat.status} and will instead rejoin the Clan as a {newstatus}."
+                        else:
+                            text = text + f" They will not be allowed to be a {cat.status} and will instead rejoin the Clan as a {newstatus}."
+                        
+                        cat.status = newstatus
+                
+                elif cat.status == 'leader':
+                    if random.randint(1,4) == 1:
+                        text = text + "cn_Clan will once more look to them for guidance."
+                        cat.specsuffix_hidden = False
+                    else:
+                        text = text + "They will not return as the Clan's leader."
+                        if cat.moons < 119:
+                            cat.status = 'warrior'
+                        else:
+                            cat.status = 'elder'
+
 
 
                 game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
-                print(cat.name, "has been forgiven!")
 
-            elif fate in [3, 4, 7, 12, 12]:
+            elif fate in [3, 4, 7, 12]:
                 cat.outside = True
+                cat.shunned = 0
                 cat.status = "former Clancat"
                 game.clan.add_to_outside(cat)
                 if cat.moons < 6:
@@ -3383,13 +3407,12 @@ class Events:
                         text = f"{cat.name} knows that they will never be able to forgive themselves for what they've done. In the night, while the queens are sleeping, they sneak out of camp while stifling their tears. They'll miss {game.clan.name}Clan, but they know that they'll be better off without a killer in their nursery."
                 else:
                     if cat.ID == game.clan.your_cat.ID:
-                        text = f"After enduring endless disrespect from your clanmates, you've given up at seeking forgiveness. When you leave camp one morning, no one calls out after you, and you don't feel very sad that you'll never be back."
+                        text = "After enduring endless disrespect from your clanmates, you've given up at seeking forgiveness. When you leave camp one morning, no one calls out after you, and you don't feel very sad that you'll never be back."
                     else:
                         text = random.choice([
                             f"{cat.name} knows they'll never be forgiven. Packing up their favourite feathers and stones from their nest, they slip out of camp in the night, sure that none of their Clanmates will mind the abscence.",
                             f"Sick of being treated so poorly, {cat.name} leaves camp one day, not turning around to see if anyone has noticed, and vows never to come back."])
                     game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
-                    print("A shunned cat has left the clan.")
 
             else:
                 cat.shunned = 0
@@ -3401,7 +3424,6 @@ class Events:
                     f"{game.clan.name}Clan has decided that they don't feel safe with {cat.name} around after what they did. {cat.name} has been exiled.",
                     f"{game.clan.leader.name} knows that {cat.name} does not plan to atone. They have been exiled from {game.clan.name}Clan for their crimes."])
                 game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
-                print("A shunned cat has been exiled.")
 
     def coming_out(self, cat):
         """turnin' the kitties trans..."""
@@ -3446,7 +3468,7 @@ class Events:
         """ Checks if a new leader need to be promoted, and promotes them, if needed.  """
         # check for leader
         if game.clan.leader:
-            leader_invalid = game.clan.leader.dead or game.clan.leader.outside
+            leader_invalid = game.clan.leader.dead or game.clan.leader.outside or game.clan.leader.shunned > 0
         else:
             leader_invalid = True
 
@@ -3458,11 +3480,13 @@ class Events:
             if game.clan.leader:
                 leader_dead = game.clan.leader.dead
                 leader_outside = game.clan.leader.outside
+                leader_shunned = game.clan.leader.shunned > 0
             else:
                 leader_dead = True
                 leader_outside = True
 
-            if leader_dead or leader_outside:
+
+            if leader_dead or leader_outside or leader_shunned:
                 game.cur_events_list.insert(
                     0, Single_Event(f"{game.clan.name}Clan has no leader!", "alert"))
 

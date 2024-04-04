@@ -213,9 +213,10 @@
     },
     "caught_intheact": {
         "tags": [
-            "murder",
+            
             "dislike",
-            "no_kit"
+            "no_kit",
+            "you_shunned"
         ],
         "intro": [
             "You killed them, didn't you?"

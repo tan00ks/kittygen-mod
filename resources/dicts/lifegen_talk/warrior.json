@@ -2383,15 +2383,16 @@
     "upstanding_warrior19": [
         [
             "upstanding",
-            "murder",
+            
             "apprentice",
             "warrior",
             "neutral",
             "dislike",
-            "hate"
+            "hate",
+            "you_shunned"
         ],
         [
-            "[t_c flat out refuses to let you join their patrol.]",
+            "[t_c shoves you away as you try to join their patrol.]",
             "No way am I patrolling with a fox-hearted murderer!"
         ]
     ],

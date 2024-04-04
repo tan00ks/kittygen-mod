@@ -181,8 +181,9 @@
     ],
     "dep_32": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Stay far from me, murderer."
@@ -190,8 +191,9 @@
     ],
     "dep_1": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "I can't look at you the same way anymore."
@@ -199,8 +201,9 @@
     ],
     "dep_2": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "How do you live with yourself after what you've done?"
@@ -208,8 +211,9 @@
     ],
     "dep_3": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Every time I see your face, I'm reminded of the life you took."
@@ -217,8 +221,9 @@
     ],
     "dep_4": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "You may think you got away with it, but I'll never forget."
@@ -226,8 +231,9 @@
     ],
     "dep_5": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "I hope one day your conscience catches up with you."
@@ -235,8 +241,9 @@
     ],
     "dep_6": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "The guilt must eat at you every single day."
@@ -244,8 +251,9 @@
     ],
     "dep_7": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "You may have fooled everyone else, but not me."
@@ -253,8 +261,9 @@
     ],
     "dep_8": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "I can't trust someone capable of such an act."
@@ -262,8 +271,9 @@
     ],
     "dep_9": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "You're a walking reminder of the darkness that exists."
@@ -271,8 +281,9 @@
     ],
     "dep_10": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Your secret is safe with me, but don't expect my forgiveness."

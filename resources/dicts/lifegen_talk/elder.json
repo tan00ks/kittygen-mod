@@ -1,8 +1,9 @@
 {
     "warrior_22193": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Your paws... they reek of blood."
@@ -34,8 +35,9 @@
     ],
     "elder_1": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Your eyes hold the weight of a life taken."
@@ -55,8 +57,9 @@
     ],
     "elder_10": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "The cats of StarClan. I can see them. They shudder in the wake of your transgression."
