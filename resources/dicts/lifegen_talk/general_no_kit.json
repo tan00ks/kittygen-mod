@@ -12772,5 +12772,45 @@
             "[You quickly step away from the border, heart quickening as t_c smiles brightly, too brightly. Yes... it's fake and forced, something to charm you to take their paw.]",
             "Hm. I guess Starclan cats aren't as forgiving and kind as they say."
         ]
+    ],
+    "general_df": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "What do you want? Huh?"
+        ]
+    ],
+    "general_sc": [
+        [
+            "they_sc",
+            "any"
+        ],
+        [
+            "Hello, y_c.",
+            "It's not your time yet."
+        ]
+    ],
+    "sc_kit_df2": [
+        [
+            "they_df",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c hisses at you, teeth bared.]"
+        ]
+    ],
+    "sc_any": [
+        [
+            "they_sc",
+            "you_df",
+            "any"
+        ],
+        [
+            "[t_c looks at you, eyes narrowed.]",
+            "You know you aren't welcome here, y_c."
+        ]
     ]
 }

@@ -1080,7 +1080,7 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
-        elif (self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.dead and game.clan.your_cat.dead) or (self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.dead and (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST))):
+        elif (self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.dead and game.clan.your_cat.dead) or (self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.dead and (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST))) or (self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.dead and self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) or self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) or self.the_cat.skills.meets_skill_requirement(SkillPath.GHOST)):
             if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(
                     (726, 220), (68, 68))),

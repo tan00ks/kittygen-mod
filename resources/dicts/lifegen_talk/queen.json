@@ -1797,5 +1797,19 @@
             "But it's so strange... The Dark Forest really messes with your mind, out here.",
             "I can't help but wonder if there even is a kitten at all."
         ]
+    ],
+    "Df_queen_kitten": [
+        [
+            "they_df",
+            "you_sc",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "[t_c appears from the darkness, a snarl on their lips before they notice you.]",
+            "[Their expression softens somewhat.]",
+            "This is no place for a kit like you, y_c. Head back to StarClan before it's too late.",
+            "[The former queen turns around, heading back into the darkness."
+        ]
     ]
 }

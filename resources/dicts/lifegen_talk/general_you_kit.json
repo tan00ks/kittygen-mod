@@ -2371,5 +2371,42 @@
             "What, y_c? Don't look at me like that. Of course, I'm not going to question your motives.",
             "... Well..."
         ]
+    ],
+    "sc_kit_df": [
+        [
+            "they_df",
+            "kitten",
+            "newborn",
+            "you_sc"
+        ],
+        [
+            "You don't belong here, kit. Scram!"
+        ]
+    ],
+    "sc_kit_df2": [
+        [
+            "they_df",
+            "you_sc",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "[t_c hisses at you, teeth bared.]"
+        ]
+    ],
+    "sc_df_kit": [
+        [
+            "they_sc",
+            "you_df",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "[t_c steps forward and you bound closer to them, curious about the shiny sparkles embedded in their pelt.]",
+            "[They stop suddenly.]",
+            "You're from the Dark Forest, aren't you? What are you doing so far from... home?",
+            "[Their expression seems conflicted.]",
+            "You're just a kit. You don't deserve to be in that place."
+        ]
     ]
 }
