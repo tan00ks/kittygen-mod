@@ -50,8 +50,9 @@
     ],
     "kit_121": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Uh, sorry! The queens told me to stay away from you."
@@ -59,9 +60,10 @@
     ],
     "kit_129": [
         [
-            "murder",
+            
             "Any",
-            "random_cat"
+            "random_cat",
+            "you_shunned"
         ],
         [
             "r_c says you have a secret... Can you tell me? Please?"
@@ -1904,7 +1906,8 @@
         [
             "any",
             "neurotic",
-            "murder"
+            
+            "you_shunned"
         ],
         [
             "[As soon as t_c notices you approach, they squeal in fear and race away.]"
@@ -3471,8 +3474,8 @@
         [
             "upstanding",
             "they_younger",
-            "murder",
             "respect",
+            "you_shunned",
             "any"
         ],
         [
@@ -3490,38 +3493,94 @@
             "respect"
         ],
         [
-            "Guess what! Guess what! Guest what!",
+            "Guess what! Guess what! Guess what!",
             "When I grow up, I want to be just like you!",
             "I want to be all noble-y and important and- and-... all the other good words!"
         ]
     ],
-    "bothshunned_sh_J14": [
+    "kitten_sh_J14": [
         [
             "both_shunned",
-            "kitten"
+            "kitten",
+            "any"
         ],
         [
-            "... ... .."
+            "Are we bad cats?",
+            "[You don't have an answer. When you fail to reply, t_c looks sad.]",
+            "I know we are... r_c said so...",
+            "But will they forgive us, one day, do you think?",
+            "[You just nod. t_c looks a little bit happier at that.]"
         ]
     ],
-    "bothshunned_sh_J15": [
+    "kitten_sh_J15": [
         [
-            "both_shunned",
-            "kitten"
+            "you_shunned",
+            "kitten",
+            "any"
         ],
         [
-            "... ... .."
+            "[t_c yelps when they see you approach and turns tail to sprint for the nursery.]"
         ]
     ],
-    "bothshunned_sh_J16": [
+    "kitten_sh_J16": [
         [
-            "both_shunned",
-            "kitten"
+            "they_shunned",
+            "kitten",
+            "any"
         ],
         [
-            "... ... .."
+            "[You feel awful for the poor kit. What they did was probably an accident, yet they're still being punished.]",
+            "y_c, do you hate me?",
+            "[You tell them no, you could never hate such a cute little kit.]",
+            "Thank you. t_l said they hated me... they didn't mean it, did they?",
+            "You'll all forgive me, won't you?"
         ]
     ],
+    "kitten_sh_J17": [
+        [
+            "you_shunned",
+            "kitten",
+            "from_your_kit",
+            "any",
+            "they_blind"
+        ],
+        [
+            "[You hear a weak <i>mew</i> from camp as you try to sleep one night.]",
+            "[You open your eyes to see t_c approaching from the direction of the nursery. Surprised, you ask why they're here.]",
+            "I miss you, y_c! The queens all say that you're a bad cat, but I don't believe them! Can you please come back?",
+            "[Tearfully, they collapse into your fur and you wrap a paw around them, licking their head to soothe them.]",
+            "[It's only now that you consider that the cat you killed... was also somebody's baby.]",
+            "Can I sleep with you tonight, at least? r_k said they'll try to cover for me if a queen wakes up...",
+            "[You know it's a bad idea, but how could you say no to such a cute little furball?]",
+            "[You quickly fall back asleep with t_c contently kneading their paws into your fur.]"
+        ]
+    ],
+    "kitinsult_sh_J30": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "insult"
+        ],
+        [
+            "r_c said I shouldn't listen to you."
+        ]
+    ],
+    "kitinsult_sh_J31": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "insult",
+            "they_deaf",
+            "you_deaf"
+        ],
+        [
+            "[t_c just stares up at you for a moment before waddling away towards the nursery.]"
+]
+        ],
     "starclan_kit1": [
         [
             "you_sc",
@@ -3557,6 +3616,30 @@
             "...StarClan's supposed to be fair. That's what everyone said. So they were lying…?",
             "[You shake your head, telling t_c that most cats really did believe that, and it helped them get through the day to think that everything happens for a reason, but at the end of the day, good things happen to bad cats, and bad things happen to good cats, and nobody knows why, not even StarClan.]",
             "[t_c presses against you, tears brimming their eyes, and before you know it, you're bringing them into a tight embrace. At least, even through all this, you have each other.]"
+
+        ]
+    ],
+    "starclankit_default1": [
+        [
+            "they_sc",
+            "you_sc",
+            "they_kitten"
+        ],
+        [
+            "It's fun being up here and all, but when can we go back to c_nClan?",
+            "t_p misses me. I heard them say it.",
+            "I miss them too."
+        ]
+    ],
+    "starclankit_default2": [
+        [
+            "they_sc",
+            "you_sc",
+            "they_kitten"
+        ],
+        [
+            "The moss-balls here are so sparkly!",
+            "Come play with me, y_c!"
         ]
     ]
 }

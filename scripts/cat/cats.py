@@ -47,7 +47,16 @@ class Cat():
         'senior': game.config["cat_ages"]["senior"]
     }
 
+    all_cats: Dict[str, Cat] = {}  # ID: object
+    outside_cats: Dict[str, Cat] = {}  # cats outside the clan
+    id_iter = itertools.count()
+
+    all_cats_list: List[Cat] = []
+    ordered_cat_list: List[Cat] = []
+
     # This in is in reverse order: top of the list at the bottom
+    
+
     rank_sort_order = [
         "newborn",
         "kitten",
@@ -104,13 +113,6 @@ class Cat():
             "conju": 2
         }
     ]
-
-    all_cats: Dict[str, Cat] = {}  # ID: object
-    outside_cats: Dict[str, Cat] = {}  # cats outside the clan
-    id_iter = itertools.count()
-
-    all_cats_list: List[Cat] = []
-    ordered_cat_list: List[Cat] = []
 
     grief_strings = {}
 
@@ -479,9 +481,10 @@ class Cat():
             if game.clan.followingsc is False:
                 self.df = True
                 self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
+                game.clan.add_to_darkforest(self)
             else:
                 self.thought = 'Is surprised to find themselves walking the stars of Silverpelt'
-                game.clan.add_to_darkforest(self)
+                
             if self.history:
                 if self.history.murder:
                     if "is_murderer" in self.history.murder:
@@ -489,6 +492,14 @@ class Cat():
                             self.df = True
                             self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
                             game.clan.add_to_darkforest(self)
+
+            if self.shunned > 0 and self.revealed > 1:
+                self.df = True
+                self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
+                game.clan.add_to_darkforest(self)
+            elif self.shunned > 0 and self.revealed == 1:
+                self.thought = "Is shocked they made it into StarClan"
+                game.clan.add_to_starclan(self)
             
         else:
             self.thought = "Is fascinated by the new ghostly world they've stumbled into"
@@ -3161,7 +3172,7 @@ class Cat():
 
     @staticmethod
     def rank_order(cat: Cat):
-        if cat.status in Cat.rank_sort_order:
+        if cat.status in Cat.rank_sort_order and cat.shunned == 0:
             return Cat.rank_sort_order.index(cat.status)
         else:
             return 0

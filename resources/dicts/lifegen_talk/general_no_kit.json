@@ -2,7 +2,8 @@
     "deaf1": [
         [
             "Any",
-            "you_deaf"
+            "only_you_deaf",
+            "notyet"
         ],
         [
             "[t_c waves at you with a smile, trotting towards you from across camp with a small bird in their jaws.]",
@@ -14,10 +15,11 @@
     "deaf2": [
         [
             "Any",
-            "they_deaf",
+            "only_they_deaf",
             "Newleaf",
             "Greenleaf",
-            "Leafbare"
+            "Leafbare",
+            "notyet"
         ],
         [
             "[During a harsh thunderstorm, kits and warriors alike hide in their dens, flinching at the thunderclaps above,]",
@@ -882,10 +884,12 @@
     ],
     "assertive_murder": [
         [
-            "murder",
+            
             "assertive",
             "no_kit",
-            "you_blind"
+            "you_blind",
+            "they_blind",
+            "you_shunned"
         ],
         [
             "You! You worthless piece of fox-dung, I'll kill you!",
@@ -894,12 +898,13 @@
     ],
     "assertive_murder1": [
         [
-            "murder",
+            
             "assertive",
             "no_kit",
             "dislike",
             "they_blind",
-            "you_blind"
+            "you_blind",
+            "you_shunned"
         ],
         [
             "You! I knew there was something wrong with you, I just knew it! But did anyone listen?"
@@ -907,12 +912,13 @@
     ],
     "assertive_murder2": [
         [
-            "murder",
+            
             "assertive",
             "no_kit",
             "brooding",
             "unlawful",
-            "you_blind"
+            "you_blind",
+            "you_shunned"
         ],
         [
             "Get out of my sight, before I make you!"
@@ -920,7 +926,7 @@
     ],
     "assertive_murder3": [
         [
-            "murder",
+            
             "assertive",
             "platonic_like",
             "romantic_like",
@@ -931,7 +937,8 @@
             "upstanding",
             "brooding",
             "sweet",
-            "they_blind"
+            "they_blind",
+            "you_shunned"
         ],
         [
             "How ... How could you?",
@@ -941,14 +948,15 @@
     ],
     "assertive_murder4": [
         [
-            "murder",
+            
             "assertive",
             "platonic_love",
             "romantic_like",
             "trust",
             "comfort",
             "no_kit",
-            "you_blind"
+            "you_blind",
+            "you_shunned"
         ],
         [
             "Heh ... you're a real snake, you know that?",
@@ -8021,7 +8029,8 @@
             "Introspective",
             "cold",
             "righteous",
-            "Murder"
+            
+            "you_shunned"
         ],
         [
             "[t_c bristles as you approach, glaring.]",
@@ -8034,8 +8043,9 @@
             "Any",
             "Introspective",
             "lonesome",
-            "murder",
-            "they_deaf"
+            
+            "they_deaf",
+            "you_shunned"
         ],
         [
             "[t_c's fur spikes up as you approach them, and they quickly rush away, clearly afraid of your presence.]"
@@ -8060,7 +8070,8 @@
             "Any",
             "Introspective",
             "wise",
-            "murder"
+            
+            "you_shunned"
         ],
         [
             "[t_c lets out a long-suffering sigh at the sight of you.]",
@@ -10428,7 +10439,7 @@
         [
             "Any",
             "silly",
-            "murder",
+            
             "random_cat",
             "from_parent",
             "they_blind",
@@ -12004,8 +12015,9 @@
     "youdeaf_sh_J8": [
         [
             "you_shunned",
-            "you_deaf",
-            "no_kit"
+            "only_you_deaf",
+            "no_kit",
+            "notyet"
         ],
         [
             "[As you approach the fresh-kill pile at the end of the day, every other cat's belly full, t_c shoots you a harsh look.]",
@@ -12015,11 +12027,13 @@
             "[You're not sure whether to be upset or relieved that you can't hear all of the gossip.]"
         ]
     ],
-    "theydeaf_sh_J9": [
+
+    "youdeaf_sh_J9": [
         [
             "they_shunned",
-            "you_deaf",
-            "no_kit"
+            "only_you_deaf",
+            "no_kit",
+            "notyet"
         ],
         [
             "[An annoyed t_c is calling out to any cat that passes them. Do they think that they'll be able to annoy the Clan into forgiving them?]",
@@ -12033,7 +12047,8 @@
         [
             "any",
             "both_shunned",
-            "they_deaf"
+            "only_you_deaf",
+            "notyet"
         ],
         [
             "... ... .."
@@ -12043,7 +12058,8 @@
         [
             "any",
             "both_shunned",
-            "you_deaf"
+            "only_you_deaf",
+            "notyet"
         ],
         [
             "... ... .."
@@ -12053,8 +12069,9 @@
         [
             "any",
             "both_shunned",
-            "you_deaf",
-            "they_deaf"
+            "only_you_deaf",
+            "only_they_deaf",
+            "notyet"
         ],
         [
             "... ... .."
@@ -12071,6 +12088,120 @@
             "So you're not just evil, but stupid, too."
         ]
     ],
+    "general_sh_J15": [
+        [
+            "Any",
+            "you_shunned"
+        ],
+        [
+            "You're not supposed to be talking to anyone."
+        ]
+    ],
+    "general_sh_J16": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "they_deaf",
+            "you_blind",
+            "you_deaf"
+        ],
+        [
+            "[t_c is ignoring you.]"
+        ]
+    ],
+    "general_sh_J17": [
+        [
+            "Any",
+            "you_shunned"
+        ],
+        [
+            "[t_c glances around as you speak, as if looking for what the source of the noise could possibly be, all while avoiding your direction entirely.]"
+        ]
+    ],
+    "general_sh_J18": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "they_deaf",
+            "you_blind",
+            "you_deaf"
+        ],
+        [
+            "[t_c gets up and walks away as you approach.]"
+        ]
+    ],
+    "general_sh_J19": [
+        [
+            "Any",
+            "you_shunned",
+            "they_warrior",
+            "they_deputy",
+            "they_leader",
+            "they_apprentice"
+        ],
+        [
+            "[You say hello to t_c as they come back from a hunting patrol with a shrew in their mouth.]",
+            "[They roll their eyes, and speak around the prey.]",
+            "Never mind, y_c. It's not for you."
+        ]
+    ],
+    "general_sh_J21": [
+        [
+            "Any",
+            "you_shunned",
+            "from_parent",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Oh, darling...",
+            "Did I go wrong somewhere? Can you please tell me?"
+        ]
+    ],
+
+    "general_sh_J22": [
+        [
+            "Any",
+            "you_shunned",
+            "from_parent",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "I can't believe this. My own kit. Shunned for murder.",
+            "No, no, that's not an invitation to hug me. I'm just as angry with you as everyone else."
+        ]
+    ],
+    "insult_sh_J23": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "insult"
+        ],
+        [
+            "Your words mean nothing. No part of me could ever be worse than you."
+        ]
+    ],
+
+    "insult_sh_J24": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "insult",
+            "they_deaf",
+            "you_deaf"
+        ],
+        [
+            "[t_c just stares at you. They don't look upset-- just unamused.]"
+        ]
+    ],
+
     "starclan_general": [
         [
             "you_sc",
@@ -12487,12 +12618,8 @@
             "medicine cat apprentice",
             "you_shunned",
             "stable",
-            "warrior",
-            "elder",
-            "deputy",
-            "queen",
-            "mediator",
-            "they_blind"
+            "they_blind",
+            "you_blind"
         ],
         [
             "I pray that StarClan helps you however they can. That somehow this act was just a response to immense stress. You are training to be a medicine cat; someone who deals with more than what I could imagine.",
@@ -12510,9 +12637,10 @@
         [
             "StarClan blessed you with a holy tongue to be used for good. Instead you twist it for evil.",
             "If it were up to me, I'd claw it out and throw it into the river. No one wants to hear your voice. Not ever again."
-        ]
-    ],
-    "stable_shunned_you_Mediator_02": [
+            ]
+        ],
+        
+    "stable_shunned_you_Apprentice_Mediator_02": [
         [
             "mediator",
             "you_shunned",
@@ -12525,9 +12653,10 @@
             "You're a mediator, one who is supposed to divert others from violence. But instead you manipulate your position and your youth to take advantage of others. Of course- it's so clear.",
             "Those who speak the most diligently are those who howl deceit.",
             "Your lies won't work on me, fox-heart."
-        ]
-    ],
-    "stable_shunned_you_Mediator_03": [
+            ]
+        ],
+        
+    "stable_shunned_you_Apprentice_Mediator_03": [
         [
             "mediator",
             "you_shunned",
@@ -12566,251 +12695,443 @@
             "[You keep your gaze low as the other apprentices screech in your ears. The warriors don't do anything about it. l_n couldn't care less- to them, it's like it's not even happening. No one is even watching- except for t_c]",
             "[t_c sighs heavily and yells at the apprentices, their voice cutting through the air as they scold them. They turn around to you, ears flat and snout wrinkled.]",
             "Don't thank me. As much as I hate to say it, you're our Clanmate and you deserve respect regardless of your actions. And despite my own personal opinions."
-        ]
-    ],
-    "general_sh_H7": [
+            ]
+        ],
+    "stable_shunned_you_Apprentice_Queen_01": [
         [
-            "any",
-            "you_shunned"
+            "queen's apprentice",
+            "you_shunned",
+            "stable"
         ],
         [
-            "You always gave me a bad feeling.",
-            "I should have followed my instincts instead of giving you a chance."
-        ]
-    ],
-    "strange_sh_H5": [
+            "You vermin! You little fox-hearted killer! Get away from the kits!",
+            "[Before you can even react, t_c grabs you by the scruff of the neck and throws you into the camp clearing. m_n tries to soothe the situation, claiming that you're under supervision.]",
+            "Oh, shut it! I don't want to hear anything from you, m_n, you're clearly a failure of a mentor!",
+            "[Hearing the commotion from across camp, l_n steps in and orders t_c to stand down.]",
+            "Stay out of this l_n! You're the leader! Protector of c_nClan, and you dare to let y_c stand in a position where they play an essential role in educating our young?! No... This will not stand.",
+            "Sometimes cats don't get second chances, sometimes, cats don't deserve them. I urge you to think carefully. I will not be responsible for the death of a kit. I refuse to see red in the nursery.",
+            "And so should everyone here. I beg of you, do something about this. Please, l_n, m_n, don't come to this killer's rescue. They don't deserve it."
+            ]
+        ],
+
+    "stable_shunned_you_Apprentice_Queen_02": [
         [
-            "strange",
-            "they_shunned",
-            "platonic_like",
-            "any"
+            "queen's apprentice",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
         ],
         [
-            "I can't help but wonder what you think of me since I was shunned.",
-            "[t_c whispers from the shadows, their fur raised and eyes burning. From how they hid themself, t_c looks like they're about to attack. Yet, t_c's claws aren't even sheathed.]",
-            "I used to think we were friends, you know? I very much thought so. But then after all this... inconvenience, you left me.",
-            "y_c knows where to find me when they want to be friends again, yes?",
-            "[t_c flashes a unsettling smile in your direction before they back out of sight.]"
+            "y_c, how about you go and leave the kits to me?",
+            "Don't look so offended. Simply put, I don't trust you with them. I don't want you near them. Neither does anyone else.",
+            "Have you actually seen them since the incident? It looks like they haven't slept or eaten in days.",
+            "And that's all because of you. At least do them right for once by staying far away.",
+            "No. Don't even dare to talk back. Just get out."
+        ]
+        ],
+
+    "stable_shunned_you_Apprentice_Queen_03": [
+        [
+            "queen's apprentice",
+            "you_shunned",
+            "stable"
+        ],
+        [
+            "y_c, hey, I've been meaning to ask, was this old thing yours by chance? A little birdie told me that this was your favourite toy as a kit, and the queens needed to fix it up all the time because it kept breaking..?",
+            "[t_c holds a little stick cat, made of twigs, leaves and moss. It's incredibly fragile, and yes-- this was your favourite toy as a kitten. You try to reach up only for them to hold it away.]",
+            "Well, that answers my question.",
+            "[t_c smashes it against the ground of the nursery. You shriek and scramble to pick up the fragments. Tears begin to flow as you sob, t_c standing coldly above you.]",
+            "Believe it or not, y_c, I'm not normally like this. In fact, I think you're the first cat to ever get such a reaction out of me. Sucks, doesn't it?",
+            "[They turn to walk out of the den. A low chuckle rumbles from them while you shake with sobs on the ground. You can hear curious clanmates from outside getting closer and you shrink into yourself-- they can't see you like this.]",
+            "Oh I wonder how it must feel to lose something you care about to a cruel cat. How unfair that is.",
+            "I can only begin to imagine."
+        ]
+        ],
+
+    "stable_shunned_you_Apprentice_Queen_04": [
+        [
+            "queen's apprentice",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "I think I know why you chose this path. So others will turn out exactly like you.",
+            "If that's the case, c_nClan is doomed. But I doubt it will get to that stage. There are unpredictable cats in this clan with more guts than me, y_c.",
+            "I'd watch my back if I were you."
+        ]
+        ],
+
+    "stable_shunned_you_Apprentice_Queen_05": [
+        [
+            "queen's apprentice",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "y_c, I seriously don't know what happened to your nest. I swear! It got torn up again! Torn to shreds, wow, just like last night. Funny! Well not funny for you. Hope it doesn't happen again tomorrow.",
+            "And the medicine cats are all out of bedding. I think all the warriors and apprentices are busy, so they can't help you. Sorrows, prayers.",
+            "And would you look at that, the moon is up, nearly time for bed! Guess that means you'll be sleeping on the dirt again y_c. That means you'll have to get up super early tomorrow to go get more moss too!",
+            "It's almost like one action leads to another. That one missing bed can cause this much pain, this much distrust and this much work to even try and rebuild.",
+            "Don't look so scared y_c, I can guarantee it will happen again.",
+            "I think you'll get used to it."
         ]
     ],
-    "strange_sh_H13": [
+    "stable_shunned_you_Warrior_01": [
         [
-            "strange",
-            "they_shunned",
             "warrior",
-            "they_older"
-        ],
+            "you_shunned",
+            "stable",
+            "they_older",
+            "they_blind",
+            "you_blind"
+         ],
         [
-            "Hello, y_c.",
-            "[t_c comes out of no where, their paw steps quiet and deliberate as they sneak up on you just on the border of camp.]",
-            "You've been busy lately, yes? Too busy for poor, old me. Shame.",
-            "I just want to have some fun!",
-            "[t_c smiles wide, baring their canines in your direction. When it doesn't get a reaction, they hum in fake disappointment and lean closer into your personal space.]",
-            "I just need some fun. But everyone is so busy and standoffish lately... I wonder why?",
-            "[t_c cackles and prances off in the direction they came.]",
-            "[Of course, t_c would be the type of cat to deliberately remind others they're shunned.]"
-        ]
-    ],
-    "strange_sh_H14": [
-        [
-            "strange",
-            "they_shunned",
-            "newleaf",
-            "they_formerlykittypet",
-            "they_outsiderroots",
-            "any"
-        ],
-        [
-            "Hello, y_c.",
-            "Newleaf has been a joy, hasn't it?",
-            "[t_c's expression is unreadable and unmoving as they wait. For what, you have no idea.]",
-            "Yes, Newleaf is a great time for the crows to come out.",
-            "Did you know twolegs called a bunch of crows a murder? It's really fitting, isn't it.",
-            "Yes...",
-            "[The echo of crows 'laughing' is heard in the distance. t_c's ear twitches and their expression brightens.]",
-            "Very fitting."
-        ]
-    ],
-    "strange_sh_H2": [
-        [
-            "any",
-            "strange",
-            "both_shunned"
-        ],
-        [
-            "[t_c looks at you from across the camp with a blank stare. Their head tilts ever-so-slightly, eyes unwavering as the cats around them go about their day.]",
-            "[Then, with a hint of a grin, t_c gives you a knowing look. You can't help but feel unnerved as the fur across your back stands on end.]"
-        ]
-    ],
-    "strange_sh_H6": [
-        [
-            "any",
-            "strange",
-            "both_shunned",
-            "platonic_like"
-        ],
-        [
-            "Just between the two of us... crowsfood is awful.",
-            "[t_c lays their head on their paws, and moves the crowsfood side to side with their nose.]",
-            "Okay, sure, I killed a few cats, whatever. But a cat can't get a good meal afterward? Rude.",
-            "l_n used to praise me all the time, shield me from the rain, let me sneak into the leader's den... and now they don't even bother.",
-            "[t_c huffs and sits up, pushing their lousy crowsfood in your direction.]",
-            "Sometimes I think I made a mistake. Maybe... maybe I did."
-        ]
-    ],
-    "starclan_general1": [
-        [
-            "you_sc",
-            "they_sc",
-            "any"
-        ],
-        [
-            "When I was still living, I always thought that StarClan cats were wise and all-knowing.",
-            "I assumed that once I died, I would magically have all the answers.",
-            "But now that I'm here, I realize I'm still as clueless as when I was alive."
-        ]
-    ],
-    "darkforest_general1": [
-        [
-            "you_df",
-            "they_df",
-            "warrior",
-            "deputy",
-            "mediator",
-            "medicine cat",
-            "platonic_love"
-        ],
-        [
-            "Do you believe we can make it out of this?",
-            "I mean... Would StarClan ever take back their decision, or are they too cowardly to admit they can make mistakes?",
-            "[t_c's eyes narrow, their gaze turning thoughtful.]",
-            "I don't belong here, and neither do you.",
-            "[You have no response, unable to find the words to agree or disagree.]",
-            "[All you can do is entwine your tail with t_c's, hoping your silent solidarity will suffice.]"
-        ]
-    ],
-    "general_DF_H1": [
-        [
-            "they_DF",
-            "you_df",
-            "platonic_like",
-            "romantic_like",
-            "any"
-        ],
-        [
-            "[t_c is busy trying to get the muck off their paws, growing frustrated once the black goo only spreads across their fur instead.]",
-            "[You don't have the heart to tell them it'll never get off. Not as long as they're in the Dark Forest.]"
-        ]
-    ],
-    "general_DF_H2": [
-        [
-            "they_df",
-            "you_df",
-            "dislike",
-            "any"
-        ],
-        [
-            "[t_c is busy trying to get the muck off their paws, growing frustrated once the black goo only spreads across their fur instead.]",
-            "[You snark that it'll never come off, not as long as they're in the Dark Forest.]",
-            "Oh, bug off! Don't look all smug.",
             "...",
-            "We're all in the same situation.",
-            "[You grow quiet. You know they're right.]"
-        ]
-    ],
-    "DF_newborn_H1": [
+            "I always thought you were too good with those claws... I had hoped I was wrong.",
+            "Why did you have to prove me right?"
+         ]
+        ],
+        
+    "stable_shunned_you_Warrior_02": [
         [
-            "you_df",
-            "they_df",
-            "newborn"
+            "warrior",
+            "you_shunned",
+            "stable",
+            "they_blind"
+         ],
+        [
+            "[Tired of sleeping at the edge of camp, one night, you poke your nose back into the warriors den to see most of your former denmates still awake.]",
+            "[They don't look angry to see you. A few cats begin to step forward, chuckling about 'payback' and 'punishment'.",
+            "Your fur bristles but before one can lunge, t_c skids in front of you and hisses at the attackers. The other cats begin to snarl.]",
+            "[They question why t_c is defending you, why they dare step forward. t_c snaps at them, the other cats fleeing.]",
+            "Before you say anything, y_c, I'm doing this because if someone hurts you, they're no better. I won't bring myself down to your level and I'll try and prevent my Clanmates from doing the same.",
+            "Don't get the wrong idea. I wasn't defending you, to be honest, I think you deserve far worse than what you're being dealt. But that's in StarClan's paws. Not mine."
+         ]
+        ],
+        
+    "stable_shunned_you_Warrior_03": [
+        [
+            "warrior",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
+         ],
+        [
+            "Can you hunt yet? No? Mousedung. Well, that's fine. Make yourself useful and sort through the freshkill pile, find what crowfood and what isn't. Once you're done, give the freshkill to the elders and kits.",
+            "You can keep the crowfood for yourself."
+         ]
+        ],
+        
+    "stable_shunned_you_Warrior_04": [
+        [
+            "warrior",
+            "you_shunned",
+            "stable",
+            "they_older",
+            "they_blind",
+            "you_blind"
+         ],
+        [
+            "You really think that's a smart idea? Sitting next to me?",
+            "You're not the only one who knows a thing or two on how to silence others you have a distaste for.",
+            "If you've got any sense you'll abide by my warning and move your flank."
+         ]
+        ],
+        
+    "stable_shunned_you_Warrior_05": [
+        [
+            "warrior",
+            "you_shunned",
+            "stable",
+            "they_older",
+            "they_blind",
+            "you_blind"
+         ],
+        [
+            "A respectable warrior of c_nClan my flank.",
+            "Go find someone else to bother-- that's if any of our Clanmates will welcome the company of bloody paws."
+         ]
+        ],
+    "stable_shunned_you_MedicineCat_01": [
+        [
+            "medicine cat",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
         ],
         [
-            "Oh, y_c. I am so sorry you ended up here, with us. In this disgusting forest.",
-            "I can only hope... I can only hope Starclan forgives you.",
-            "You don't deserve to be here."
-        ]
-    ],
-    "DF_newborn_H2": [
+            "I suppose that with the power to heal, there is also the power to kill...",
+            "Doesn't make it right, however. I will never understand why StarClan chose you."
+         ]
+        ],
+            
+    "stable_shunned_you_MedicineCat_02": [
         [
-            "you_df",
-            "they_df",
-            "newborn"
+            "medicine cat",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
         ],
         [
-            "A newborn? Here?",
-            "You must be unlucky."
-        ]
-    ],
-    "strange_DF_H1": [
+            "StarClan trusted you. I doubt they still do. Do tell me, was it an omen? A prophecy perhaps? Do you have anything to use to defend yourself, anything at all?",
+            "Shut it. I wasn't actually asking. I don't want to hear anything from you.",
+            "You're nothing but a coward, a cat that shields themself behind a layer of protection in the form of our ancestors. Just saying that out loud- Ha... It only makes me hate you even more."
+         ]
+        ],
+            
+    "stable_shunned_you_MedicineCat_03": [
         [
-            "strange",
-            "you_DF",
-            "they_DF",
-            "any"
+            "medicine cat",
+            "you_shunned",
+            "stable"
+         ],
+        [
+            "I thought I just saw a massive dog tear up your garden. You should go check it out. It certainly wasn't me.",
+            "[Before you can answer they're already walking away. Concerned, you run to check your herbs.]",
+            "[Everything is torn up and ripped. The other medicine cat gardens are untouched, but in yours, nothing's left but roots and soil.]"
+         ]
+        ],
+            
+    "stable_shunned_you_MedicineCat_04": [
+        [
+            "medicine cat",
+            "you_shunned",
+            "stable",
+            "they_ill",
+            "they_injured",
+            "they_blind",
+            "you_blind"
+         ],
+        [
+            "No! Get me another medicine cat! I will not be served by them.",
+            "Yes, you, y_c! Get your filthy paws away from me."
+         ]
+        ],
+            
+    "stable_shunned_you_MedicineCat_05": [
+        [
+            "medicine cat",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
         ],
         [
-            "Sometimes, I feel like the muck is talking to me.",
-            "[You make a face and say they're being ridiculous-- muck can't talk.]",
-            "Oh but, y_c, the whispers and voices say otherwise. They're always talking to me. Giving me thoughts that are not my own.",
-            "You haven't experienced that? Such a shame, I enjoy the little friends in my head."
-        ]
-    ],
-    "strange_DF_H2": [
+            "Those paws were meant to heal, not hurt."
+         ]
+        ],
+
+    "stable_shunned_you_Mediator_01": [
+            [
+            "mediator",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
+            ],
         [
-            "strange",
-            "they_df",
-            "you_sc",
-            "any"
+            "After everything you've done, it makes me wonder, what other lies are there? What have you been telling our enemies? What danger have you put us in?"
+            ]
+        ],
+            
+            
+    "stable_shunned_you_Mediator_02": [
+            [
+            "mediator",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
+            ],
+            [
+            "You don't get to solve my problems."
+            ]
+        ],
+            
+            
+    "stable_shunned_you_Mediator_03": [
+        [
+            "mediator",
+            "you_shunned",
+            "stable",
+            "they_blind",
+            "you_blind"
+            ],
+        [
+            "Words of wisdom, ha! Don't make me laugh.",
+            "[They flick their paw across your snout and walk away.]"
+            ]
+        ],
+            
+            
+    "stable_shunned_you_Mediator_04": [
+            [
+            "mediator",
+            "you_shunned",
+            "stable",
+            "platonic_like",
+            "they_blind",
+            "you_blind"
+            ],
+        [
+            "How did a cat like you go through with it? Since I've known you you have always complained about how much you hated violence.",
+            "...",
+            "You're a liar and a coward y_c."
+            ]
+        ],
+            
+            
+    "stable_shunned_you_Mediator_05": [
+            [
+            "mediator",
+            "you_shunned",
+            "stable",
+            "they_older",
+            "they_blind",
+            "you_blind"
+            ],
+        [
+            "You're someone who always has the answers, at least that's what you preach. What gives you the right to act so high and mighty, to insert yourself into everyone's lives?",
+            "Only to take it all away. You're like that one story, don't you remember? You used to tell it all the time.",
+            "About how every time a snake shed his skin, he pretended that he was someone different. And all the other snakes believed him until they found the shed skin buried beneath the silver stone.",
+            "Turns out he'd been lying for moons about who he truly was, every skin a different life. At first it was little things. He was smart, funny and your best friend who had been secretly stolen by twolegs and abandoned.",
+            "Then he became a snake who was rich, who was the prettiest in all the land. A single father with twenty baby snakes who all died tragically in a magical sinkhole that disappeared the next day.",
+            "When the other snakes learnt the truth, when they found his shed skins they lured him out onto the thunderpath. Saying that this was the punishment for his lies, his lack of honesty his downfall.",
+            "The moral was, if I remember correctly, your lies catch up with you eventually and that you can't hide who you truly are.",
+            "Well, we found your snake skins y_c, StarClan knows what will happen now."
+             ]
+        ],
+    "stable_shunned_you_Queen_01": [
+        [
+            "queen",
+            "you_shunned",
+            "stable"
+            ],
+        [
+            "Trusting you to raise kits was the worst mistake your mentor ever made.",
+            "They must be ashamed. Ashamed that all that effort poured into a soulless cat like you."
+            ]
+        ],
+            
+    "stable_shunned_you_Queen_02": [
+        [
+            "queen",
+            "you_shunned",
+            "stable",
+            "you_assertive",
+            "you_brooding",
+            "you_daring"
+            ],
+        [
+            "[You carry a few paw crafted toys for the kits towards the nursery but are stopped as you try to enter. d_n snatches the toys and hands them to the mediators to inspect. t_c watches from a distance and scoffs.]",
+            "[You march up to them and yell. They seem rather unfazed by your outburst. You demand to know why they dare to scoff at you.]",
+            "I'm amused is all. All your hard work is just gone like that. You know what I think?",
+            "I think being a queen is the role worthy of the most respect. I believe firmly, you, well, not <i>you</i>, but the queens work the hardest out of all of us.",
+            "But you threw that all away and you will never regain that trust. You will never be held up to the same standard, not in my eyes- certainly not in theirs.",
+            "[They gesture to the deputy and other queens who usher the kits back inside. Your eyes fall upon your paw crafted work- crushed and crumbled.]",
+            "Like I said, you'll never regain what you lost. The queens will never see you the same. In fact, I'd wager that no cat would ever trust you with their kits again.",
+            "You've lost, y_c."
+            ]
+        ],
+        
+    "stable_shunned_you_Queen_03": [
+        [
+            "queen",
+            "you_shunned",
+            "stable"
+            ],
+        [
+            "[You sit off to the side of the nursery, your back turned. t_c sits with the kits and begins to sing a familiar song- it sounds like your song... The one you would always sing... But this is different.]",
+            "[Their tone is cold. You don't dare turn around, but you can feel their gaze lock onto you instead of the kits. It's your song. t_c is singing this for you...]",
+            "Little Red Robin better watch out~ She better watch out for the crocodile snout~ You see it there? Faint as a hair, if you approach those bubbles, your fate's unfair.",
+            "Little Red Robin! Not over there! There is where it stares. Big yellow eyes and a jaw of teeth, one quick snap and red rain leaks.",
+            "Sprinkle, sprinkle, down, down- down far down. Little Red Robin you're nothing but a snack now.",
+            "The water's supposed to be blue, not red! It's not meant to be red, Little Red Robin~ Oh what a trap you're caught in. Little Red Robin this is all your fault, your fault, your fault! You should have listened to your mother, Little Red Robin!",
+            "Moral of the story, Little Red Robin, listen to the warnings that they give you. Listen because it's right beneath you!",
+            "I can hear you calling, I can hear you screaming, chirping! I can hear your muffled cry, Little Red Robin~ But you're gone now, but you're dead now. Had plenty of warnings to watch out for the crocodile!",
+            "Now you're eaten, now you're rotten~ Little Red Robin now been gotten.",
+            "You should have listened, listen to your mother speak, listen to your father squeal. Did you not hear your brothers and sisters calling out to you?!",
+            "Little Red robin! Little Red Robin! Little Red Robin! Let's watch her drown! Go, go far down. Let's watch her drown with a mister crocodile!",
+            "You're an arrogant fool, selfish, narrow-minded, heartless, brainless, cruel and unreliable- I can hear you Little Red Robin, why did you do it? Little Red Robin?"
+            ]
+        ],
+            
+    "stable_shunned_you_Queen_04": [
+        [
+            "queen",
+            "you_shunned",
+            "stable"
+            ],
+        [
+            "The kits don't want to see you right now. I'll take care of them.",
+            "They deserve a proper role model.",
+            "Not some washed up mouse bile."
+            ]
+        ],
+            
+    "stable_shunned_you_Queen_05": [
+        [
+            "queen",
+            "you_shunned",
+            "stable"
+            ],
+        [
+            "You're not a kit, you don't need me to coddle you and wish you good dreams. Suck it up and be quiet, those nightmares surely aren't a problem for a killer like you. No one wants to see or hear your crocodile tears."
+            ]
+    ],
+
+    "general_sh_J23": [
+        [
+            "Any",
+            "they_shunned"
         ],
         [
-            "[Sometimes, if the stars shift just right, the border between Starclan and the Dark Forest becomes slightly see-through. Only most curious cats are daring enough to peek.]",
-            "Well, well, well! If it isn't y_c.",
-            "[t_c's muck-covered face pops through the border, their tail wagging in annoyance. Yet... their expression is happy, joyful even.]",
-            "I haven't seen you in ages! Or has it been centuries? Time doesn't show in the Dark Forest, haha. It's a shame, I always loved watching the sun touch the clouds.",
-            "I do miss it, y_c...",
-            "Would you help an old friend out? I only want to see the sun...",
-            "[You quickly step away from the border, heart quickening as t_c smiles brightly, too brightly. Yes... it's fake and forced, something to charm you to take their paw.]",
-            "Hm. I guess Starclan cats aren't as forgiving and kind as they say."
+            "[t_c is sharpening their claws on a tree.]",
+            "[It's a bit unsettling.]"
         ]
     ],
-    "general_df": [
+
+    "general_sh_J24": [
         [
-            "they_df",
-            "any"
+            "Any",
+            "they_shunned"
         ],
         [
-            "What do you want? Huh?"
+            "[t_c is sharpening their claws on a tree.]",
+            "[It's a bit unsettling.]"
         ]
     ],
-    "general_sc": [
+
+    "general_sh_J25": [
+        [
+            "Any",
+            "they_shunned"
+        ],
+        [
+            "Zzzz...",
+            "[t_c is sleeping.]",
+            "[They don't seem to do much else these days.]"
+        ]
+    ],
+    "starclan_default": [
         [
             "they_sc",
-            "any"
+            "you_sc"
         ],
         [
-            "Hello, y_c.",
-            "It's not your time yet."
-        ]
-    ],
-    "sc_kit_df2": [
-        [
-            "they_df",
-            "you_sc",
-            "any"
-        ],
-        [
-            "[t_c hisses at you, teeth bared.]"
-        ]
-    ],
-    "sc_any": [
-        [
-            "they_sc",
-            "you_df",
-            "any"
-        ],
-        [
-            "[t_c looks at you, eyes narrowed.]",
-            "You know you aren't welcome here, y_c."
+            "Do you miss being in c_nClan?",
+            "I don't, personally. Too much drama.",
+            "Up here, though? It's easy. I like that.",
+            "What? You like the challenge?",
+            "Hmph. Strange."
         ]
     ]
 }

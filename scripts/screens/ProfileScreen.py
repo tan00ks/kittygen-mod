@@ -1217,7 +1217,7 @@ class ProfileScreen(Screens):
                 tool_tip_text= "You may visit the Moonplace once during your apprenticeship.",
                 manager=MANAGER
             )
-            if self.the_cat.dead or self.the_cat.outside:
+            if self.the_cat.dead or self.the_cat.outside or self.the_cat.shunned > 0:
                 self.profile_elements["halfmoon"].disable()
             elif "attended half-moon" in game.switches and game.switches["attended half-moon"]:
                 self.profile_elements["halfmoon"].disable()
@@ -1435,7 +1435,7 @@ class ProfileScreen(Screens):
             output += "<font color='#FF0000'>exiled</font>"
         elif the_cat.shunned > 0 and not the_cat.dead:
             if the_cat.status != "former Clancat":
-                output += "<font color='#FF0000'>shunned</font>"
+                output += "<font color='#FF0000'>shunned " + the_cat.status + "</font>"
             else:
                 output += the_cat.status
         elif the_cat.df:

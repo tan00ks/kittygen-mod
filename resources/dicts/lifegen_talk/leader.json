@@ -19,8 +19,9 @@
     ],
     "leader_4d": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "... Do you ever feel guilty?"
@@ -113,8 +114,9 @@
     ],
     "leader_4": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "I never thought one of my own would stoop so low."
@@ -122,8 +124,9 @@
     ],
     "leader_5": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Your loyalty to our Clan is forever tarnished."
@@ -131,8 +134,9 @@
     ],
     "leader_6": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "The blood of your victim stains your paws, and it will haunt you."
@@ -140,8 +144,9 @@
     ],
     "leader_7": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "You have broken the code that binds us together as warriors."
@@ -149,8 +154,9 @@
     ],
     "leader_8": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "Your actions have brought shame upon our entire Clan."
@@ -158,8 +164,9 @@
     ],
     "leader_9": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "You will never be able to wash away the guilt that will follow you."
@@ -167,8 +174,9 @@
     ],
     "leader_10": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "In the eyes of StarClan, you are a murderer."
@@ -1925,6 +1933,17 @@
             "I weaved flowers into the Elder's Den to spruce it up a little.",
             "It's a little project I've been doing with the apprentices and kits of the clan. We're decorating!",
             "I just felt, after all the service you all have provided, that you deserved it first and foremost."
+        ]
+    ],
+    "leadershunned_J1":[
+        [
+            "they_shunned",
+            "any"
+        ],
+        [
+            "[t_c looks at you sadly as you approach.]",
+            "What? I'm not your leader anymore, remember?",
+            "Whatever it is, go ask l_n."
         ]
     ]
 }

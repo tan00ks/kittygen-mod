@@ -213,9 +213,10 @@
     },
     "caught_intheact": {
         "tags": [
-            "murder",
+            
             "dislike",
-            "no_kit"
+            "no_kit",
+            "you_shunned"
         ],
         "intro": [
             "You killed them, didn't you?"
@@ -2441,7 +2442,7 @@
     "theydeaf_sh_J10": {
         "tags": [
             "they_shunned",
-            "they_deaf"
+            "only_they_deaf"
         ],
         "intro": [
             "[t_c is deep in a sign conversation with r_c across camp.]",
@@ -2468,6 +2469,76 @@
             "[Though it's against the rules, you don't want to interrupt such a passionate conversation.]",
             "..!",
             "[r_c appears to have said something funny! You hope that no one else interrupts.]"
-        ]
+                ]
+        },
+    "kitten_sh_J20": {
+        "tags": [
+            "you_shunned",
+            "they_kitten",
+            "any"
+        ],
+        "intro": [
+            "y_c! r_c told me you did something bad, and that's why no one wants to be your friend.",
+            "Did you? Did you do something bad?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Yes",
+                "next_scene": "somethingbad_yes"
+            },
+            "choice2": {
+                "text": "No",
+                "next_scene": "somethingbad_no"
+            }
+        },
+        "somethingbad_yes": [
+            "O- oh... what was it?",
+            "Actually, n-no, don't tell me... I'll just ask t_p.",
+            "[t_c turns to run for the nursery.]"
+            ],
+        "somethingbad_no": [
+            "Oh! I knew it! I knew you'd never do something bad, y_c!",
+            "Well, if no one wants to be your friend, I'll be your friend! Want to play some moss-ball?",
+            "[You tell them that the queens probably wouldn't want that, since they don't like you.]",
+            "[But you offer to come back and play while they're asleep.]",
+            "Oh, okay! Yes, let's play tonight! I won't tell anyone, promise.",
+            "See you tonight!"
+                ]
+        },
+        "leader_sh_J21": {
+            "tags": [
+                "both_shunned",
+                "they_leader",
+                "any",
+                "warrior",
+                "deputy",
+                "elder",
+                "apprentice"
+            ],
+            "intro": [
+                "Do you think I'll get to be leader again one day?"
+            ],
+            "intro_choices": {
+                "choice1": {
+                    "text": "Yes",
+                    "next_scene": "leaderagain_yes"
+                },
+                "choice2": {
+                    "text": "No",
+                    "next_scene": "leaderagain_no"
+                }
+            },
+            "leaderagain_yes": [
+                "Aha, I knew you believed in me!",
+                "When I become leader again, you can be my deputy, huh?",
+                "c_nClan will regret pushing us to the side...",
+                "[t_C has an odd glint in their eyes... Maybe you shouldn't be encouraging this.]"
+                ],
+            "leaderagain_no": [
+                "Really? But didn't I do a good job?",
+                "Yeah, I guess that's not really why I got kicked in the first place...",
+                "Whatever. I'll be leader again, you don't have to help me.",
+                "Way to lose your shot at deputy."
+                    ]
+            }
     }
-}

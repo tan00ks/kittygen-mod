@@ -221,12 +221,13 @@
     ],
     "app_28": [
         [
-            "murder",
+            
             "Any",
             "assertive",
             "brooding",
             "unlawful",
-            "cool"
+            "cool",
+            "you_shunned"
         ],
         [
             "You're a foxhearted monster! I can't believe I trusted you."
@@ -234,8 +235,9 @@
     ],
     "app_293": [
         [
-            "murder",
-            "Any"
+            
+            "Any",
+            "you_shunned"
         ],
         [
             "How can you live with yourself?"
@@ -243,10 +245,11 @@
     ],
     "app_29c": [
         [
-            "murder",
+            
             "Any",
             "neurotic",
-            "introspective"
+            "introspective",
+            "you_shunned"
         ],
         [
             "D-don't come any closer."
@@ -254,11 +257,12 @@
     ],
     "app_29": [
         [
-            "murder",
+            
             "Any",
             "stable",
             "assertive",
-            "brooding"
+            "brooding",
+            "you_shunned"
         ],
         [
             "You'll pay for what you've done!"

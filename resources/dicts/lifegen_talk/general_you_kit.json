@@ -114,10 +114,11 @@
     ],
     "assertive_murder4_2": [
         [
-            "murder",
+            
             "kitten",
             "assertive",
-            "from_parent"
+            "from_parent",
+            "you_shunned"
         ],
         [
             "y_c, I ... why wouldn't you tell me?",
@@ -1467,8 +1468,9 @@
     "unabashed_murder": [
         [
             "Unabashed",
-            "Murder",
-            "any"
+            
+            "any",
+            "you_shunned"
         ],
         [
             "How could you, you little, fox-hearted piece of dung?",
@@ -1478,8 +1480,9 @@
     "unabashed_murder1": [
         [
             "Unabashed",
-            "Murder",
-            "any"
+            
+            "any",
+            "you_shunned"
         ],
         [
             "Stay away from me, you murderer! I don't want anything to do with you!"
