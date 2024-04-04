@@ -3349,7 +3349,7 @@
         [
             "any",
             "they_injured",
-            "they_sick",
+            "they_ill",
             "random_cat",
             "they_kitten"
         ],
@@ -3365,13 +3365,13 @@
         [
             "any",
             "they_injured",
-            "they_sick",
+            "they_ill",
             "random_cat",
             "they_kitten",
-            "they_brooding",
-            "they_neurotic",
-            "they_introspective",
-            "they_upstanding",
+            "brooding",
+            "neurotic",
+            "introspective",
+            "upstanding",
             "platonic_love"
         ],
         [
@@ -3387,7 +3387,7 @@
         [
             "any",
             "they_injured",
-            "they_sick",
+            "they_ill",
             "they_kitten"
         ],
         [
@@ -3400,7 +3400,7 @@
         [
             "any",
             "they_injured",
-            "they_sick",
+            "they_ill",
             "they_kitten"
         ],
         [
@@ -3412,10 +3412,10 @@
         [
             "any",
             "they_injured",
-            "they_sick",
+            "they_ill",
             "they_kitten",
             "from_your_kit",
-            "adopted_kit"
+            "from_adopted_kit"
         ],
         [
             "I'm tired of staying in the medicine den, y_c. I wanna go home.",
@@ -3426,10 +3426,10 @@
         [
             "any",
             "they_injured",
-            "they_sick",
+            "they_ill",
             "they_kitten",
             "from_your_kit",
-            "adopted_kit"
+            "from_adopted_kit"
         ],
         [
             "[Your little kit is hurting. They weakly blink their eyes open at you and give you a purr.]",
@@ -3474,9 +3474,15 @@
         [
             "upstanding",
             "they_younger",
+<<<<<<< HEAD
             
             "respect",
             "you_shunned"
+=======
+            "murder",
+            "respect",
+            "any"
+>>>>>>> fa0c26485193e57ea2470bf6bdbefdb6e295bf6b
         ],
         [
             "I-I looked up to you! How could you do such a thing?!"
@@ -3554,6 +3560,7 @@
             "[You quickly fall back asleep with t_c contently kneading their paws into your fur.]"
         ]
     ],
+<<<<<<< HEAD
     "kitinsult_sh_J30": [
         [
             "Any",
@@ -3578,6 +3585,43 @@
         ],
         [
             "[t_c just stares up at you for a moment before waddling away towards the nursery.]"
+=======
+    "starclan_kit1": [
+        [
+            "you_sc",
+            "they_sc",
+            "they_df",
+            "queen"
+        ],
+        [
+            "[While on a leisurely stroll you find yourself close to the Dark Forest border.]",
+            "[You're about to turn away when something in the corner of your eye catches your attention.]",
+            "I just want to play!",
+            "[You spot t_c sitting right at the border, their tiny mewl echos into the darkness while they stare longingly ahead.]",
+            "[Without hesitation, you rush over to grab the kit and ask what they think they're doing.]",
+            "I'm trying to see if the Dark Forest cats want to play with me!",
+            "[With a horrified look, you explain how dangerous that is.]",
+            "But... But I already gave them my moss-ball.",
+            "[No 'buts.' You're about to carry t_c away when something hits your leg.]",
+            "[Looking down, your hackles raise when you see that a moss-ball had rolled out of the muck.]",
+            "See! I knew they'd pass it back!"
+        ]
+    ],
+    "darkforest_general2": [
+        [
+            "you_df",
+            "they_df",
+            "queen"
+        ],
+        [
+            "y_c?... Do I deserve to be here? Am I- was I- a bad kit?",
+            "[You sigh, searching deep inside you to find the strength to handle this question. After a prolonged pause, you answer that not everything is black and white; no cat can be just good or bad. We all make mistakes.]",
+            "Then why am I here? Why are any of us here? That's not fair!",
+            "[You swallow a lump in your throat and explain bitterly that nothing is fair, not in life and certainly not in the afterlife.]",
+            "...StarClan's supposed to be fair. That's what everyone said. So they were lying…?",
+            "[You shake your head, telling t_c that most cats really did believe that, and it helped them get through the day to think that everything happens for a reason, but at the end of the day, good things happen to bad cats, and bad things happen to good cats, and nobody knows why, not even StarClan.]",
+            "[t_c presses against you, tears brimming their eyes, and before you know it, you're bringing them into a tight embrace. At least, even through all this, you have each other.]"
+>>>>>>> fa0c26485193e57ea2470bf6bdbefdb6e295bf6b
         ]
     ]
 }

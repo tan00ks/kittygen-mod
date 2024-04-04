@@ -2113,14 +2113,13 @@
             "[They've even planned to come and see you later for a story!]"
         ]
     ],
-        
     "stable_shunned_you_Apprentice_MedicineCat_04": [
         [
             "medicine cat apprentice",
             "you_shunned",
             "stable",
             "they_deputy"
-         ],
+        ],
         [
             "[t_c escorts you to pick up a piece of freshkill from the pile. Their gaze is full of silent hate. They walk with you back to the medicine den, just as r_c is leaving it.]",
             "[You sit down and look over the den, something smells... off. You notice an odd smell coming from your nest and cautiously peel back the moss.]",
@@ -2128,6 +2127,6 @@
             "What is that?",
             "[d_n looks horrified, they immediately jump out of the den to track r_c down. You swallow the lump in your throat.]",
             "[You feel like you're going to be sick.]"
-         ]
         ]
+    ]
 }
