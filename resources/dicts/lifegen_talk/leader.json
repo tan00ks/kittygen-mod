@@ -1934,5 +1934,16 @@
             "It's a little project I've been doing with the apprentices and kits of the clan. We're decorating!",
             "I just felt, after all the service you all have provided, that you deserved it first and foremost."
         ]
+    ],
+    "leadershunned_J1":[
+        [
+            "they_shunned",
+            "any"
+        ],
+        [
+            "[t_c looks at you sadly as you approach.]",
+            "What? I'm not your leader anymore, remember?",
+            "Whatever it is, go ask l_n."
+        ]
     ]
 }
