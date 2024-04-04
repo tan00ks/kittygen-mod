@@ -55,11 +55,9 @@ class Cat():
     ordered_cat_list: List[Cat] = []
 
     # This in is in reverse order: top of the list at the bottom
-    shunned_cats = [cat for cat in all_cats if cat.shunned > 0]
-    shunned_cat = [cat for cat in shunned_cats]
+    
 
     rank_sort_order = [
-        shunned_cat,
         "newborn",
         "kitten",
         "queen's apprentice",
@@ -3165,7 +3163,7 @@ class Cat():
 
     @staticmethod
     def rank_order(cat: Cat):
-        if cat.status in Cat.rank_sort_order:
+        if cat.status in Cat.rank_sort_order and cat.shunned == 0:
             return Cat.rank_sort_order.index(cat.status)
         else:
             return 0
