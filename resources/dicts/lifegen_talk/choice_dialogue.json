@@ -512,6 +512,89 @@
             "Whatever the case, I know what they are ... Glad to know you do, too."
         ]
     },
+    "assertive_gensib1": {
+        "tags": [
+            "no_kit",
+            "assertive",
+            "upstanding",
+            "random_cat",
+            "non-related",
+            "they_sameage",
+            "platonic_love"
+        ],
+        "intro": [
+            "*Sigh* I feel like t_s is upset about something, but they won't tell me what it is. Is there something I'm missing?",
+            "I've been looking out for them my whole life. I know it's not my job, but I just can't help myself. ",
+            "What's the point of strength if you can't use it to protect the ones you love?",
+            "I don't know ... What do you think, y_c?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "You should talk to t_s!",
+                "next_scene": "talk"
+            },
+            "choice2": {
+                "text": "You should give t_s some space.",
+                "next_scene": "give_space"
+            },
+            "choice3": {
+                "text": "I don't know.",
+                "next_scene": "dont_know"
+            }
+        },
+        "talk": [
+            "Ah, I dunno ... I've never really been good at the whole 'talking about feelings' stuff.",
+            "Jokes and lectures, sure, but actual feelings? *Shudder* They terrify me.",
+            "But, if you really think it's best ...",
+            "I'll give it a shot. Thanks, y_c.",
+            "[Later that night, you see the two siblings take a private walk out onto the territory.]",
+            "[You don't know what exactly goes on, but they return to camp with their tails entwined, clearly having grown a lot closer.]"
+        ],
+        "give_space": [
+            "Maybe you're right. But it just kills me to know they might have some problem I can't fix.",
+            "I just hope they know that they can come to me with anything.",
+            "They're my sibling. Nothing matters more than that."
+        ],
+        "dont_know": [
+            "*Sigh* That's fair. Sorry to bother you with all this family stuff.",
+            "Thanks for being a listening ear, y_c."
+        ]
+    },
+    "assertive_gensib2": {
+        "tags": [
+            "no_kit",
+            "assertive",
+            "unlawful",
+            "brooding",
+            "random_cat",
+            "non-related"
+        ],
+        "intro": [
+            "[t_c strides up to you, tail lashing in challenge.]",
+            "Word around camp is that you've been picking on t_s. Is it true?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "What are you talking about?",
+                "next_scene": "what_talk"
+            },
+            "choice2": {
+                "text": "Yep.",
+                "next_scene": "yep"
+            }
+        },
+        "what_talk": [
+            "You mean ... it isn't true?",
+            "Ah ... Sorry, y_c. I probably shouldn't have accused you like that.",
+            "It's just that the thought of anyone bullying my sibling got me so mad, I couldn't think straight!",
+            "Let me know if you hear anything like that going on, could you? Next time, I won't back down so easily."
+        ],
+        "yep": [
+            "[t_c curls their lip into a snarl.]",
+            "Anyone who bullies my family has got me to answer to.",
+            "Don't let me catch you doing anything like that again. If I do, then you'll really be sorry."
+        ]
+    },
     "assertive_gen3": {
         "tags": [
             "no_kit",
