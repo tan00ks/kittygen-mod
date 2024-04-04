@@ -12618,12 +12618,8 @@
             "medicine cat apprentice",
             "you_shunned",
             "stable",
-            "warrior",
-            "elder",
-            "deputy",
-            "queen",
-            "mediator",
-            "they_blind"
+            "they_blind",
+            "you_blind"
         ],
         [
             "I pray that StarClan helps you however they can. That somehow this act was just a response to immense stress. You are training to be a medicine cat; someone who deals with more than what I could imagine.",
@@ -12810,7 +12806,8 @@
          ],
         [
             "[Tired of sleeping at the edge of camp, one night, you poke your nose back into the warriors den to see most of your former denmates still awake.]",
-            "[They don't look angry to see you. A few cats begin to step forward, chuckling about 'payback' and 'punishment'. Your fur bristles but before one can lunge, t_c skids in front of you and hisses at the attackers. The other cats begin to snarl.]",
+            "[They don't look angry to see you. A few cats begin to step forward, chuckling about 'payback' and 'punishment'.",
+            "Your fur bristles but before one can lunge, t_c skids in front of you and hisses at the attackers. The other cats begin to snarl.]",
             "[They question why t_c is defending you, why they dare step forward. t_c snaps at them, the other cats fleeing.]",
             "Before you say anything, y_c, I'm doing this because if someone hurts you, they're no better. I won't bring myself down to your level and I'll try and prevent my Clanmates from doing the same.",
             "Don't get the wrong idea. I wasn't defending you, to be honest, I think you deserve far worse than what you're being dealt. But that's in StarClan's paws. Not mine."
@@ -13089,5 +13086,52 @@
         [
             "You're not a kit, you don't need me to coddle you and wish you good dreams. Suck it up and be quiet, those nightmares surely aren't a problem for a killer like you. No one wants to see or hear your crocodile tears."
             ]
-    ]        
+    ],
+
+    "general_sh_J23": [
+        [
+            "Any",
+            "they_shunned"
+        ],
+        [
+            "[t_c is sharpening their claws on a tree.]",
+            "[It's a bit unsettling.]"
+        ]
+    ],
+
+    "general_sh_J24": [
+        [
+            "Any",
+            "they_shunned"
+        ],
+        [
+            "[t_c is sharpening their claws on a tree.]",
+            "[It's a bit unsettling.]"
+        ]
+    ],
+
+    "general_sh_J25": [
+        [
+            "Any",
+            "they_shunned"
+        ],
+        [
+            "Zzzz...",
+            "[t_c is sleeping.]",
+            "[They don't seem to do much else these days.]"
+        ]
+    ],
+    "starclan_default": [
+        [
+            "they_sc",
+            "you_sc"
+        ],
+        [
+            "Do you miss being in c_nClan?",
+            "I don't, personally. Too much drama.",
+            "Up here, though? It's easy. I like that.",
+            "What? You like the challenge?",
+            "Hmph. Strange."
+        ]
+    ]
 }

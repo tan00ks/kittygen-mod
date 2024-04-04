@@ -3474,15 +3474,9 @@
         [
             "upstanding",
             "they_younger",
-<<<<<<< HEAD
-            
             "respect",
-            "you_shunned"
-=======
-            "murder",
-            "respect",
+            "you_shunned",
             "any"
->>>>>>> fa0c26485193e57ea2470bf6bdbefdb6e295bf6b
         ],
         [
             "I-I looked up to you! How could you do such a thing?!"
@@ -3547,11 +3541,12 @@
             "you_shunned",
             "kitten",
             "from_your_kit",
-            "any"
+            "any",
+            "they_blind"
         ],
         [
             "[You hear a weak <i>mew</i> from camp as you try to sleep one night.]",
-            "[You open your eyes to see t_c approaching from the direction of the nursery. Surprised, you ask why they're hear.]",
+            "[You open your eyes to see t_c approaching from the direction of the nursery. Surprised, you ask why they're here.]",
             "I miss you, y_c! The queens all say that you're a bad cat, but I don't believe them! Can you please come back?",
             "[Tearfully, they collapse into your fur and you wrap a paw around them, licking their head to soothe them.]",
             "[It's only now that you consider that the cat you killed... was also somebody's baby.]",
@@ -3560,7 +3555,6 @@
             "[You quickly fall back asleep with t_c contently kneading their paws into your fur.]"
         ]
     ],
-<<<<<<< HEAD
     "kitinsult_sh_J30": [
         [
             "Any",
@@ -3585,7 +3579,8 @@
         ],
         [
             "[t_c just stares up at you for a moment before waddling away towards the nursery.]"
-=======
+]
+        ],
     "starclan_kit1": [
         [
             "you_sc",
@@ -3621,7 +3616,30 @@
             "...StarClan's supposed to be fair. That's what everyone said. So they were lying…?",
             "[You shake your head, telling t_c that most cats really did believe that, and it helped them get through the day to think that everything happens for a reason, but at the end of the day, good things happen to bad cats, and bad things happen to good cats, and nobody knows why, not even StarClan.]",
             "[t_c presses against you, tears brimming their eyes, and before you know it, you're bringing them into a tight embrace. At least, even through all this, you have each other.]"
->>>>>>> fa0c26485193e57ea2470bf6bdbefdb6e295bf6b
+
+        ]
+    ],
+    "starclankit_default1": [
+        [
+            "they_sc",
+            "you_sc",
+            "they_kitten"
+        ],
+        [
+            "It's fun being up here and all, but when can we go back to c_nClan?",
+            "t_p misses me. I heard them say it.",
+            "I miss them too."
+        ]
+    ],
+    "starclankit_default2": [
+        [
+            "they_sc",
+            "you_sc",
+            "they_kitten"
+        ],
+        [
+            "The moss-balls here are so sparkly!",
+            "Come play with me, y_c!"
         ]
     ]
 }

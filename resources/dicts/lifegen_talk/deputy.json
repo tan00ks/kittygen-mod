@@ -2128,5 +2128,15 @@
             "[d_n looks horrified, they immediately jump out of the den to track r_c down. You swallow the lump in your throat.]",
             "[You feel like you're going to be sick.]"
         ]
+    ],
+    "deputyshunned_J2":[
+        [
+            "they_shunned",
+            "any"
+        ],
+        [
+            "I'm not your deputy anymore.",
+            "You have no reason to talk to me."
+        ]
     ]
 }

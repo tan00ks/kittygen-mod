@@ -481,9 +481,10 @@ class Cat():
             if game.clan.followingsc is False:
                 self.df = True
                 self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
+                game.clan.add_to_darkforest(self)
             else:
                 self.thought = 'Is surprised to find themselves walking the stars of Silverpelt'
-                game.clan.add_to_darkforest(self)
+                
             if self.history:
                 if self.history.murder:
                     if "is_murderer" in self.history.murder:
@@ -491,6 +492,14 @@ class Cat():
                             self.df = True
                             self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
                             game.clan.add_to_darkforest(self)
+
+            if self.shunned > 0 and self.revealed > 1:
+                self.df = True
+                self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
+                game.clan.add_to_darkforest(self)
+            elif self.shunned > 0 and self.revealed == 1:
+                self.thought = "Is shocked they made it into StarClan"
+                game.clan.add_to_starclan(self)
             
         else:
             self.thought = "Is fascinated by the new ghostly world they've stumbled into"
