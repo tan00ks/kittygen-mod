@@ -9459,6 +9459,38 @@
             "[For just one cat, they sure to manage to take up a lot of space!]"
         ]
     ],
+    "assertive_gensib": [
+	[
+		"Any",
+		"assertive",
+		"random_cat",
+		"non-related"
+	],
+	[
+		"[t_c is following t_l around camp, chattering more than ten squirrels combined.]",
+		"... And then, r_c told me that I had to pull the thorn out! And I was like, 'Why don't you do it, genius?'",
+		"[You certainly wouldn't want to be in t_l's position, having to listen to t_c's constant chattering all day long.]",
+		"[... Though, t_c's sibling doesn't seem to mind.]",
+		"[On second thought, maybe having a cat who loves you enough to bore you with every mundane detail of their life wouldn't be so bad.]"
+	]
+	],
+
+"assertive_gensib2": [
+	[
+		"Any",
+		"assertive",
+		"upstanding",
+		"random_cat",
+		"non-related"
+	],
+	[
+		"[t_c has got t_s pinned into a headlock, gloating over them with a mischievous grin.]",
+		"Still the best in the family! Hehehe!",
+		"[Just when you're about to intervene, t_s whirls around and kicks t_c square in the chest.]",
+		"[t_c quickly rebounds and chases their sibling across camp, laughing like crazy in spite of their tussle ... or maybe because of it?]",
+		"[Guess fighting is just how t_c expresses their familial love.]"
+	]
+	],
     "assertive_gen1": [
         [
             "Any",
