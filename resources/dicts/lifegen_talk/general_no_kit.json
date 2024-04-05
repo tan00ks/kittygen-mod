@@ -10824,6 +10824,21 @@
             "Maybe it's a good thing the kits don't play it anymore."
         ]
     ],
+	"gen_inlaws": [
+        [
+            "no_kit",
+            "platonic_like",
+            "random_cat",
+            "from_mate",
+            "they_blind"	
+        ],
+        [
+            "You and t_l should get to know each other better sometime.",
+            "You're a part of our family now, after all!",
+            "Just think about it for me, m'kay? It'd just be so great if the two most important cats in my life were friends."
+        ]
+    ],
+	
     "about_kit": [
         [
             "no_kit",
