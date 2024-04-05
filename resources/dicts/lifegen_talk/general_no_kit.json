@@ -81,25 +81,34 @@
             "Must ... escape ... camp ..."
         ]
     ],
-    "assertive_deadclose1": [
+       "assertivewarrior_mediatorapp1": [
         [
-            "medicine cat",
-            "medicine cat apprentice",
+            "mediator apprentice",
+            "mediator",
+            "random_cat",
             "assertive",
-            "cool",
-            "they_grieving",
-            "dead_close",
-            "they_blind",
-            "you_blind"
+            "unabashed"
         ],
         [
-            "Hey, uh ...",
-            "You can talk to StarClan cats, right?",
-            "Have you, uh ... heard anything from d_c?",
-            "Sorry. That's probably a mouse-brained question. I know it doesn't work like that.",
-            "But, if you ever do hear from them ... tell them that, uh ...",
-            "I'm sorry. And I'll keep their nest warm. And they better be saving a spot for me up in StarClan, or else I'll have to come up there myself and teach them a lesson!",
-            "... Thanks."
+            "Oh no you don't, y_c. Don't even try to convince me to make nice with r_c - it's not gonna happen. They totally stole the last fish from the freshkill pile! Don't they know that it's my favorite?",
+            "Okay, okay ... if you insist, I guess I can try talking to them again.",
+            "But don't try to get me to watch my tongue. If someone's acting like a stupid piece of fox-dung, I'm gonna call them a stupid piece of fox-dung!!!"
+        ]
+    ],
+    "assertivewarrior_mediatorapp3": [
+        [
+            "mediator apprentice",
+            "mediator",
+            "assertive",
+            "random_cat",
+            "silly",
+            "unlawful",
+            "cool"
+        ],
+        [
+            "Look, I know I can be reckless and headstrong and foolish and stubborn ...",
+            "But I didn't mean to steal r_c's catch! Seriously! And now they're acting all huffy about it ...",
+            "Any chance you could help me talk it out with them?"
         ]
     ],
      "assertive_mentor2": [
