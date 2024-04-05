@@ -6945,10 +6945,13 @@
             "Well, I do hope it only gets better! Keep your chin up, there's always more to look forward to, see you around!"
         ]
     ],
-    "stable_2_2": [
+  
+
+   "stable_2_2": [
         [
             "Any",
             "stable",
+            "sweet",
             "random_cat",
             "they_blind"
         ],
@@ -6961,7 +6964,8 @@
     "stable_3_2": [
         [
             "warrior",
-            "stable"
+            "stable",
+            "sweet"
         ],
         [
             "y_c, how was the patrol? You look a little tired.",
@@ -6973,6 +6977,8 @@
         [
             "Any",
             "stable",
+            "upstanding",
+            "introspective",
             "random_cat",
             "they_blind"
         ],
@@ -6986,6 +6992,7 @@
         [
             "Any",
             "stable",
+            "sweet",
             "you_injured"
         ],
         [
@@ -7010,6 +7017,8 @@
         [
             "Any",
             "stable",
+            "platonic_like",
+            "introspective",
             "no_kit",
             "they_grieving",
             "they_blind"
@@ -7027,6 +7036,7 @@
         [
             "Any",
             "stable",
+            "upstanding",
             "they_blind",
             "they_deaf"
         ],
@@ -7054,6 +7064,7 @@
         [
             "Any",
             "stable",
+            "introspective",
             "you_grieving",
             "no_kit",
             "they_blind"
@@ -7734,11 +7745,16 @@
             "Busy. Sorry."
         ]
     ],
+  
     "stable_mate_1": [
         [
             "from_mate",
             "Any",
             "stable",
+            "silly",
+            "assertive",
+            "cool",
+            "unabashed",
             "you_pregnant",
             "you_blind"
         ],
@@ -7756,7 +7772,10 @@
             "from_mate",
             "Any",
             "you_pregnant",
-            "stable"
+            "stable",
+            "cool",
+            "assertive",
+            "unabashed"
         ],
         [
             "Good morning Love, are you feeling better today? Goodness, you're looking a little tired. But, it'll be so worth it, I hope one of our little puffballs has your eyes.",
@@ -7770,7 +7789,10 @@
             "from_mate",
             "Any",
             "they_pregnant",
-            "stable"
+            "stable",
+            "silly",
+            "assertive",
+            "sweet"
         ],
         [
             "y_c, looking sharp as always Love, loving the way you've groomed your fur today. I wonder if you'll teach out kittens that technique, maybe we'll pass down it down through the family.",
@@ -7785,11 +7807,13 @@
             "from_mate",
             "Any",
             "they_pregnant",
+            "unabashed",
+            "sweet",
             "stable"
         ],
         [
-            "I'm so sorry dear that I can't go for our evening walks tonight- I just feel so sore... I love these little furballs, well I will when I meet them.",
-            "y_c, can you imagine the whole family going on walks. It's a nice thought, though they'll probably have to be at least a few moons old...",
+            "I'm so sorry dear that I can't go for our evening walks tonight- I just feel so sore... I love these little furballs! Well, I will when I meet them.",
+            "y_c, can you imagine the whole family going on walks? It's a nice thought, though they'll probably have to be at least a few moons old...",
             "Maybe when they're really young we can put them on our backs and they can see the territory that way.",
             "They'll giggle and squeal with laughter and you will look so dashing during the sunset.",
             "I will compliment my wonderful, beautiful and ever so perfect mate how strong they are and how loving they are to the kits.",
@@ -7804,6 +7828,8 @@
             "you_ill",
             "random_cat",
             "stable",
+            "assertive",
+            "cool",
             "you_blind"
         ],
         [
@@ -7820,6 +7846,7 @@
             "they_ill",
             "they_injured",
             "stable",
+            "neurotic",
             "they_blind"
         ],
         [
@@ -7837,6 +7864,9 @@
             "they_ill",
             "they_injured",
             "stable",
+            "introspective",
+            "neurotic",
+            "sweet",
             "they_blind"
         ],
         [
@@ -7863,8 +7893,7 @@
             "from_mate",
             "Any",
             "you_grieving",
-            "dead_close",
-            "stable"
+            "dead_close"
         ],
         [
             "[You've hidden yourself away in your den, the loss of d_c has torn you apart. Your claws cling to the moss of your nest, you want to scream and shout- but yet your voice wavers...]",
@@ -7883,10 +7912,11 @@
             "they_grieving",
             "dead_close",
             "stable",
+            "unabashed",
             "they_blind"
         ],
         [
-            "I can't believe they're gone... I knew it was to happen someday, but not yet, not like this... It was too soon... d_c, why? Why... Why did you have to go?",
+            "I can't believe they're gone... I knew it was going to happen someday, but not yet, not like this... It was too soon... d_c, why? Why... Why did you have to go?",
             "[You rest your head on their shoulder as t_c weeps. You both stand before d_c's grave. The rest of the clan has already left the vigil, leaving the two of you alone.]",
             "[You know t_c prefers to not dive too deeply into these things, but you can tell they're glad you're here.]",
             "Love, what will I do without d_c?......."
@@ -7897,17 +7927,21 @@
             "from_mate",
             "Any",
             "stable",
+            "introspective",
             "they_blind"
         ],
         [
-            "Love, I'm back, so sorry for keeping you waiting, now come on let's go. The weather looks lovely this afternoon, our walk today should be quite pleasant."
+            "Love, I'm back, so sorry for keeping you waiting. Now, come on, let's go! The weather looks lovely this afternoon, so our walk today should be quite pleasant."
         ]
     ],
     "stable_mate_47": [
         [
             "from_mate",
             "Any",
-            "stable"
+            "stable",
+            "sweet",
+            "cool",
+            "neurotic"
         ],
         [
             "My Love, I was meaning to ask, what have you done with your claws as of recently? They're looking absolutely magnificent today!",
@@ -7918,7 +7952,11 @@
         [
             "from_mate",
             "Any",
-            "stable"
+            "stable",
+            "assertive",
+            "unlawful",
+            "neurotic",
+            "silly"
         ],
         [
             "[You sit happily in the sun in the clearing, you watch as cats go about their day. t_c sits beside you, following your line of sight. They chuckle to themselves as they point to a group of kittens playing across the clearing.]",
@@ -7932,6 +7970,8 @@
             "from_mate",
             "Any",
             "stable",
+            "neurotic",
+            "introspective",
             "they_blind"
         ],
         [
@@ -7947,11 +7987,15 @@
             "from_mate",
             "Any",
             "stable",
+            "brooding",
+            "neurotic",
             "they_blind"
         ],
         [
-            "Ever since I met you, y_c, my life has been perfect. But, one day, I fear- no I dread the fact that it will end... I can't imagine my life without you and the thought of you being just out of my grasp terrifies me. It destroys me.",
-            "y_c, know this, I will fight, I will do whatever I can to protect you. That's a promise. I can't stand the thought of losing you and I'll make sure I'll do whatever I can to keep you safe, to keep you here with me.",
+            "Ever since I met you, y_c, my life has been perfect.",
+            "But, one day, I fear - No, I dread the fact that it will end someday...",
+            "I can't imagine my life without you and the thought of you being just out of my grasp terrifies me. It destroys me.",
+            "y_c, know this: I will fight, I will do whatever I can to protect you. That's a promise. I can't stand the thought of losing you and I'll make sure I'll do whatever I can to keep you safe, to keep you here with me.",
             "Nothing will tear us apart, not even StarClan itself."
         ]
     ],
@@ -7960,7 +8004,8 @@
             "from_mate",
             "warrior",
             "you_pregnant",
-            "stable"
+            "stable",
+            "neurotic"
         ],
         [
             "Look at you, darling! As gorgeous as ever! You know what, I think you could take down a fox carrying our kits. You really are the strongest cat I know."
@@ -7971,7 +8016,9 @@
             "from_mate",
             "warrior",
             "they_pregnant",
-            "stable"
+            "stable",
+            "assertive",
+            "silly"
         ],
         [
             "I tell you this, Love, when I'm out of here, the whole of the territory will feel my wrath. I'm looking forward to having these kits, don't get me wrong- but, argh! I just wish they didn't slow me down...",
@@ -12384,6 +12431,9 @@
             "Any",
             "you_shunned",
             "stable",
+            "upstanding",
+            "assertive",
+            "unabashed",
             "you_blind",
             "they_blind"
         ],
@@ -12397,7 +12447,9 @@
         [
             "Any",
             "you_shunned",
-            "stable"
+            "stable",
+            "introspective",
+            "neurotic"
         ],
         [
             "[t_c meets your gaze from across the camp, tensing their jaw as you both lock eyes. Their lip slowly curls back into a snarl.]",
@@ -12407,7 +12459,7 @@
             "... ...",
             "... ... ...",
             "[t_c's eyes flash with a suppressed hatred- something you would never expect from them.]",
-            "If you strike me down as you did our Clanmate- mark my words, y_c, I will drag you down with me."
+            "If try to you strike me down as you did our Clanmate- mark my words, y_c, I will drag you down with me."
         ]
     ],
     "stable_shunned_you_03": [
@@ -12415,6 +12467,7 @@
             "Any",
             "you_shunned",
             "stable",
+            "introspective",
             "they_blind",
             "you_blind"
         ],
@@ -12428,7 +12481,6 @@
         [
             "Any",
             "you_shunned",
-            "stable",
             "they_blind",
             "you_blind"
         ],
@@ -12442,6 +12494,8 @@
             "Any",
             "you_shunned",
             "stable",
+            "sweet",
+            "introspective",
             "they_blind",
             "you_blind"
         ],
@@ -12457,11 +12511,13 @@
             "Any",
             "you_shunned",
             "stable",
+            "introspective",
+            "neurotic",
             "they_blind",
             "you_blind"
         ],
         [
-            "Do c_nClan a favour and fade away.",
+            "Do c_nClan a favour and leave.",
             "No one wants you here.",
             "...",
             "Not anymore."
@@ -12486,6 +12542,7 @@
             "Any",
             "you_shunned",
             "stable",
+            "brooding",
             "they_blind",
             "you_blind"
         ],
@@ -12511,6 +12568,7 @@
             "Any",
             "you_shunned",
             "stable",
+            "introspective",
             "they_blind",
             "you_blind"
         ],
@@ -12527,6 +12585,7 @@
             "apprentice",
             "you_shunned",
             "stable",
+            "introspective",
             "they_older",
             "no_kit",
             "you_blind"
@@ -12541,8 +12600,12 @@
     "stable_shunned_you_Apprentice_02": [
         [
             "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
             "you_shunned",
             "stable",
+            "introspective",
             "they_older",
             "no_kit",
             "they_blind",
@@ -12558,8 +12621,12 @@
     "stable_shunned_you_Apprentice_03": [
         [
             "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
             "you_shunned",
             "stable",
+            "unabashed",
             "they_older",
             "no_kit",
             "they_blind",
@@ -12574,6 +12641,11 @@
     "stable_shunned_you_Apprentice_04": [
         [
             "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "sweet",
+            "introspective",
             "you_shunned",
             "stable",
             "they_older",
@@ -12591,8 +12663,12 @@
     "stable_shunned_you_Apprentice_05": [
         [
             "apprentice",
+            "medicine cat apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
             "you_shunned",
             "stable",
+            "introspective",
             "they_older",
             "no_kit",
             "they_blind",
@@ -12610,6 +12686,10 @@
             "medicine cat apprentice",
             "you_shunned",
             "stable",
+            "neurotic",
+            "unabashed",
+            "assertive",
+            "unlawful",
             "they_blind",
             "you_blind"
         ],
@@ -12623,7 +12703,9 @@
         [
             "medicine cat apprentice",
             "you_shunned",
-            "stable"
+            "stable",
+            "brooding",
+            "upstanding"
         ],
         [
             "m_n has spent endless nights teaching you everything you know. Yet you take their knowledge, take their skills and use them for evil.",
@@ -12654,7 +12736,7 @@
         ],
         [
             "StarClan blessed you with a holy tongue to be used for good. Instead you twist it for evil.",
-            "If it were up to me, I'd claw it out and throw it into the river. No one wants to hear your voice. Not ever again."
+            "If it were up to me, I'd take that tongue and throw it into the river. No one wants to hear your voice. Not ever again."
         ]
     ],
     "stable_shunned_you_Apprentice_Mediator_02": [
@@ -12662,6 +12744,7 @@
             "mediator",
             "you_shunned",
             "stable",
+            "introspective",
             "they_older",
             "they_blind",
             "you_blind"
@@ -12681,7 +12764,7 @@
             "you_blind"
         ],
         [
-            "M_n deserves someone better than you. You prey on those who are at their lowest. That's something I cannot forgive. Not now, not ever.",
+            "m_n deserves someone better than you. You prey on those who are at their lowest. That's something I cannot forgive. Not now, not ever.",
             "You were a mediator, to be someone with skills of speech, to help... But you- I can't do this. Just get away from me."
         ]
     ],
@@ -12725,7 +12808,7 @@
             "Oh, shut it! I don't want to hear anything from you, m_n, you're clearly a failure of a mentor!",
             "[Hearing the commotion from across camp, l_n steps in and orders t_c to stand down.]",
             "Stay out of this l_n! You're the leader! Protector of c_nClan, and you dare to let y_c stand in a position where they play an essential role in educating our young?! No... This will not stand.",
-            "Sometimes cats don't get second chances, sometimes, cats don't deserve them. I urge you to think carefully. I will not be responsible for the death of a kit. I refuse to see red in the nursery.",
+            "Sometimes cats don't get second chances. Sometimes, cats don't deserve them. I urge you to think carefully. I will not be responsible for the death of a kit. I refuse to see red in the nursery.",
             "And so should everyone here. I beg of you, do something about this. Please, l_n, m_n, don't come to this killer's rescue. They don't deserve it."
         ]
     ],
@@ -12734,6 +12817,8 @@
             "queen's apprentice",
             "you_shunned",
             "stable",
+            "introspective",
+            "unabashed",
             "they_blind",
             "you_blind"
         ],
@@ -12749,7 +12834,8 @@
         [
             "queen's apprentice",
             "you_shunned",
-            "stable"
+            "stable",
+            "dislike"
         ],
         [
             "y_c, hey, I've been meaning to ask, was this old thing yours by chance? A little birdie told me that this was your favourite toy as a kit, and the queens needed to fix it up all the time because it kept breaking..?",
@@ -12767,6 +12853,9 @@
             "queen's apprentice",
             "you_shunned",
             "stable",
+            "silly",
+            "cool",
+            "unlawful",
             "they_blind",
             "you_blind"
         ],
@@ -12778,9 +12867,12 @@
     ],
     "stable_shunned_you_Apprentice_Queen_05": [
         [
-            "queen's apprentice",
             "you_shunned",
             "stable",
+            "silly",
+            "unlawful",
+            "assertive",
+            "cool",
             "they_blind",
             "you_blind"
         ],
@@ -12798,6 +12890,8 @@
             "warrior",
             "you_shunned",
             "stable",
+            "introspective",
+            "brooding",
             "they_older",
             "they_blind",
             "you_blind"
@@ -12813,12 +12907,14 @@
             "warrior",
             "you_shunned",
             "stable",
+            "upstanding",
+            "introspective",
             "they_blind"
         ],
         [
             "[Tired of sleeping at the edge of camp, one night, you poke your nose back into the warriors den to see most of your former denmates still awake.]",
             "[They don't look angry to see you. A few cats begin to step forward, chuckling about 'payback' and 'punishment'.",
-            "Your fur bristles but before one can lunge, t_c skids in front of you and hisses at the attackers. The other cats begin to snarl.]",
+            "[Your fur bristles but before one can lunge, t_c skids in front of you and hisses at the attackers. The other cats begin to snarl.]",
             "[They question why t_c is defending you, why they dare step forward. t_c snaps at them, the other cats fleeing.]",
             "Before you say anything, y_c, I'm doing this because if someone hurts you, they're no better. I won't bring myself down to your level and I'll try and prevent my Clanmates from doing the same.",
             "Don't get the wrong idea. I wasn't defending you, to be honest, I think you deserve far worse than what you're being dealt. But that's in StarClan's paws. Not mine."
@@ -12829,6 +12925,9 @@
             "warrior",
             "you_shunned",
             "stable",
+            "upstanding",
+            "unabashed",
+            "neurotic",
             "they_blind",
             "you_blind"
         ],
@@ -12842,6 +12941,9 @@
             "warrior",
             "you_shunned",
             "stable",
+            "brooding",
+            "assertive",
+            "unlawful",
             "they_older",
             "they_blind",
             "you_blind"
@@ -12857,12 +12959,16 @@
             "warrior",
             "you_shunned",
             "stable",
+            "assertive",
+            "cool",
+            "brooding",
+            "upstanding",
             "they_older",
             "they_blind",
             "you_blind"
         ],
         [
-            "A respectable warrior of c_nClan my flank.",
+            "A respectable warrior of c_nClan, my flank.",
             "Go find someone else to bother-- that's if any of our Clanmates will welcome the company of bloody paws."
         ]
     ],
@@ -12871,6 +12977,7 @@
             "medicine cat",
             "you_shunned",
             "stable",
+            "introspective",
             "they_blind",
             "you_blind"
         ],
@@ -12884,11 +12991,12 @@
             "medicine cat",
             "you_shunned",
             "stable",
+            "introspective",
             "they_blind",
             "you_blind"
         ],
         [
-            "StarClan trusted you. I doubt they still do. Do tell me, was it an omen? A prophecy perhaps? Do you have anything to use to defend yourself, anything at all?",
+            "StarClan trusted you. I doubt they still do. Do tell me, was it an omen? A prophecy, perhaps? Do you have anything to use to defend yourself, anything at all?",
             "Shut it. I wasn't actually asking. I don't want to hear anything from you.",
             "You're nothing but a coward, a cat that shields themself behind a layer of protection in the form of our ancestors. Just saying that out loud- Ha... It only makes me hate you even more."
         ]
@@ -12897,7 +13005,11 @@
         [
             "medicine cat",
             "you_shunned",
-            "stable"
+            "stable",
+            "unlawful",
+            "silly",
+            "brooding",
+            "upstanding"
         ],
         [
             "I thought I just saw a massive dog tear up your garden. You should go check it out. It certainly wasn't me.",
@@ -12910,6 +13022,8 @@
             "medicine cat",
             "you_shunned",
             "stable",
+            "neurotic",
+            "upstanding",
             "they_ill",
             "they_injured",
             "they_blind",
@@ -12924,7 +13038,6 @@
         [
             "medicine cat",
             "you_shunned",
-            "stable",
             "they_blind",
             "you_blind"
         ],
@@ -12937,6 +13050,8 @@
             "mediator",
             "you_shunned",
             "stable",
+            "neurotic",
+            "introspective",
             "they_blind",
             "you_blind"
         ],
@@ -12961,6 +13076,9 @@
             "mediator",
             "you_shunned",
             "stable",
+            "assertive",
+            "cool",
+            "unabashed",
             "they_blind",
             "you_blind"
         ],
@@ -12974,6 +13092,10 @@
             "mediator",
             "you_shunned",
             "stable",
+            "you_neurotic",
+            "you_sweet",
+            "you_stable",
+            "you_introspective",
             "platonic_like",
             "they_blind",
             "you_blind"
@@ -12989,6 +13111,7 @@
             "mediator",
             "you_shunned",
             "stable",
+            "introspective",
             "they_older",
             "they_blind",
             "you_blind"
@@ -13012,7 +13135,7 @@
         ],
         [
             "Trusting you to raise kits was the worst mistake your mentor ever made.",
-            "They must be ashamed. Ashamed that all that effort poured into a soulless cat like you."
+            "They must be ashamed. Ashamed that all that effort was poured into a soulless cat like you."
         ]
     ],
     "stable_shunned_you_Queen_02": [
@@ -13020,6 +13143,7 @@
             "queen",
             "you_shunned",
             "stable",
+            "introspective",
             "you_assertive",
             "you_brooding",
             "you_daring"
@@ -13039,14 +13163,15 @@
         [
             "queen",
             "you_shunned",
-            "stable"
+            "stable",
+            "hate"
         ],
         [
             "[You sit off to the side of the nursery, your back turned. t_c sits with the kits and begins to sing a familiar song- it sounds like your song... The one you would always sing... But this is different.]",
             "[Their tone is cold. You don't dare turn around, but you can feel their gaze lock onto you instead of the kits. It's your song. t_c is singing this for you...]",
             "Little Red Robin better watch out~ She better watch out for the crocodile snout~ You see it there? Faint as a hair, if you approach those bubbles, your fate's unfair.",
             "Little Red Robin! Not over there! There is where it stares. Big yellow eyes and a jaw of teeth, one quick snap and red rain leaks.",
-            "Sprinkle, sprinkle, down, down- down far down. Little Red Robin you're nothing but a snack now.",
+            "Sprinkle, sprinkle, down, down- down far down. Little Red Robin, you're nothing but a snack now.",
             "The water's supposed to be blue, not red! It's not meant to be red, Little Red Robin~ Oh what a trap you're caught in. Little Red Robin this is all your fault, your fault, your fault! You should have listened to your mother, Little Red Robin!",
             "Moral of the story, Little Red Robin, listen to the warnings that they give you. Listen because it's right beneath you!",
             "I can hear you calling, I can hear you screaming, chirping! I can hear your muffled cry, Little Red Robin~ But you're gone now, but you're dead now. Had plenty of warnings to watch out for the crocodile!",
@@ -13060,7 +13185,10 @@
         [
             "queen",
             "you_shunned",
-            "stable"
+            "stable",
+            "upstanding",
+            "unabashed",
+            "brooding"
         ],
         [
             "The kits don't want to see you right now. I'll take care of them.",
@@ -13072,10 +13200,12 @@
         [
             "queen",
             "you_shunned",
-            "stable"
+            "stable",
+            "brooding"
         ],
         [
-            "You're not a kit, you don't need me to coddle you and wish you good dreams. Suck it up and be quiet, those nightmares surely aren't a problem for a killer like you. No one wants to see or hear your crocodile tears."
+            "You're not a kit, you don't need me to coddle you and wish you good dreams.",
+            "Suck it up and be quiet. Those nightmares surely aren't a problem for a killer like you. No one wants to see or hear your crocodile tears."
         ]
     ],
     "general_sh_J23": [
