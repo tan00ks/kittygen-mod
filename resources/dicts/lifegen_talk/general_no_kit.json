@@ -1586,7 +1586,7 @@
 	    [
 		    "Would you look at that? It's snowing.",
 		    "[You ask t_c where snow comes from, and their whole face lights up.]",
-		    "Oh, that's a wonderful question! I have a few theories – personally, I think that, when it gets cold, the water inside the clouds freezes.",
+		    "Oh, that's a wonderful question! I have a few theories - personally, I think that, when it gets cold, the water inside the clouds freezes.",
 		    "Then, because frozen water is heavier than non-frozen water, the clouds can't carry the weight, and it snows.",
 		    "But then, why is snow soft and fluffy, like fur, and not hard and sharp, like ice? And why does it sometimes rain in leafbare?",
 		    "Ah ... I'm sorry. I'm rambling.",
@@ -1602,11 +1602,11 @@
             "you_blind"
         ],
         [
-            "y_c, good morning. It’s nice to see you.",
-            "It seems Leafbare has finally left us, I can feel the chill in the air starting to dissipate. It’s nice.",
-            "I’m looking forward to seeing the birds again, and the nice flowers that appear that smell wonderful.",
+            "y_c, good morning. It's nice to see you.",
+            "It seems Leafbare has finally left us, I can feel the chill in the air starting to dissipate. It's nice.",
+            "I'm looking forward to seeing the birds again, and the nice flowers that appear that smell wonderful.",
             "Just... seeing live plants will be utterly wonderful, a great change of pace.",
-            "I love the snow of Leafbare, but Newleaf’s flowers make the territory a lovely place to be."
+            "I love the snow of Leafbare, but Newleaf's flowers make the territory a lovely place to be."
         ]
     ],
 
@@ -1623,10 +1623,10 @@
             "you_deaf"
         ],
         [
-            "y_c, hello. The weather’s lovely today.",
-            "I saw some dandelions had sprouted this morning, and I’ve been wandering about looking at all the new flowers.",
-            "They’re beautiful, all different shades and shapes and smells, like c_nClan, I suppose.",
-            "... huh? Yeah, I know, I should be hunting. I can hunt and look at flowers at the same time, y_c, don’t you worry about me."
+            "y_c, hello. The weather's lovely today.",
+            "I saw some dandelions had sprouted this morning, and I've been wandering about looking at all the new flowers.",
+            "They're beautiful, all different shades and shapes and smells, like c_nClan, I suppose.",
+            "... huh? Yeah, I know, I should be hunting. I can hunt and look at flowers at the same time, y_c, don't you worry about me."
             ]
         ],
 
@@ -1639,8 +1639,8 @@
         ],
         [
             "Oh, y_c. Are you busy?",
-            "Yeah, since it’s now newleaf, I thought I’d go see how much prey we’ll have for the coming several moons.",
-            "... Huh? Hunting as well, but primarily to watch. You don’t want to catch prey when they’re too young when you can grab them when they’re older and feed more cats with the catch.",
+            "Yeah, since it's now newleaf, I thought I'd go see how much prey we'll have for the coming several moons.",
+            "... Huh? Hunting as well, but primarily to watch. You don't want to catch prey when they're too young when you can grab them when they're older and feed more cats with the catch.",
             "Patience is a virtue, y_c!"
         ]
     ],
@@ -1683,7 +1683,7 @@
             "any",
             "introspective",
             "newleaf"
-        ]
+        ],
         [
             "You know, I really like newleaf, y_c.", 
             "[You turn to look at t_c.]",
@@ -1702,9 +1702,9 @@
 		],
 		[
 			"[You look over and see a giant pile of leaves, with kittens playing around it.]",
-			"Good morning, y_c. Nice weather, isn’t it?",
+			"Good morning, y_c. Nice weather, isn't it?",
 			"[... t_c? What in StarClan?]",
-			"Listen, I might as well. The kittens wanted to have fun, and I’m just sitting here. Might as well get buried by leaves.",
+			"Listen, I might as well. The kittens wanted to have fun, and I'm just sitting here. Might as well get buried by leaves.",
 			"[Since t_c seems unbothered, you leaf them to it.]"
 		]
 	],
@@ -1717,11 +1717,11 @@
 			"random_cat"
 		],
 		[
-			"Good morning, y_c. It’s lovely to see you.",
-			"Yes, I’m okay, just trying to sweep these leaves away from the nursery. The kits love playing with them, but they get in the way.",
+			"Good morning, y_c. It's lovely to see you.",
+			"Yes, I'm okay, just trying to sweep these leaves away from the nursery. The kits love playing with them, but they get in the way.",
 			"Not to mention you have to worry about-",
 			"[You look over to see a kitten with a leaf in their mouth.]",
-			"Oh, r_k, No! Get that out your mouth, you don’t know what kind of bird’s been sitting on that!",
+			"Oh, r_k, No! Get that out your mouth, you don't know what kind of bird's been sitting on that!",
 			"[t_c sprints over and negotiates the leaf out of their mouth.]"
 		]
 	],
@@ -1748,7 +1748,7 @@
 		[
 			"... y_c. Hello.",
 			"I am feeling quite alright today, though I suppose I am feeling the first hint of a chill. Leafbare isn't that far away from us now, unfortunately.",
-			"It'll be difficult, especially to keep the clan fed. I know we can do it, though. We always have done so before.",
+			"It'll be difficult, especially to keep the clan fed. I know we can do it, though. We always have done so before."
 		]
 	],
 
@@ -2697,10 +2697,10 @@
 		"trust"
         ],
         [
-        	"Oh, y_c, I don’t understand why they assigned me an apprentice. Of all the cats in this clan, they choose *me* to apprentice t_a.",
+        	"Oh, y_c, I don't understand why they assigned me an apprentice. Of all the cats in this clan, they choose *me* to apprentice t_a.",
 		"[t_c groans and hides their muzzle in their paws.]",
-		"What if they fail because I didn’t train them properly? I’m not mentor material! I can barely take care of myself sometimes. Oh, they’re so going to fail...",
-		"[t_c doesn’t seem to be fit for any more conversation.]"
+		"What if they fail because I didn't train them properly? I'm not mentor material! I can barely take care of myself sometimes. Oh, they're so going to fail...",
+		"[t_c doesn't seem to be fit for any more conversation.]"
         ]
     ],
 

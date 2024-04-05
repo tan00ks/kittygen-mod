@@ -646,7 +646,6 @@
             "Maybe you can still make it to the medicine den if you hurry!"
         ]
     ],
-
     "assertive_queensapp_4": [
         [
             "kitten",
@@ -1201,7 +1200,6 @@
             "Little y_c. I wonder what type of cat you'll become one day."
         ]
     ],
-    
     "cool_queen_1": [
         [
             "Any",
@@ -1209,29 +1207,27 @@
             "neutral",
             "clan_has_kits",
             "random_cat"
-         ],
+        ],
         [
             "[t_c stumbles out of the nursery, leaving the ear-piercing sounds of mewling kits behind them.]",
             "[Exhausted, they almost run right into you.]",
-            "Oh, sorry, r_c. I didn’t see you there.",
-            "I haven’t had a good night’s sleep in, like, a moon. Do you think anyone will notice if I sneak into the warrior’s den tonight?",
-            "[You open your mouth to offer your opinion, or to tell them that they got your name wrong, but the sleepy queen has already brushed past you to head for the warrior’s den.]",
+            "Oh, sorry, r_c. I didn't see you there.",
+            "I haven't had a good night's sleep in, like, a moon. Do you think anyone will notice if I sneak into the warrior's den tonight?",
+            "[You open your mouth to offer your opinion, or to tell them that they got your name wrong, but the sleepy queen has already brushed past you to head for the warrior's den.]",
             "[Sweet dreams, t_c!]"
         ]
     ],
-
-
     "cool_queen_2": [
         [
-        "Any",
-        "Cool",
-        "clan_has_kits",
-        "random_cat"
-         ],
+            "Any",
+            "Cool",
+            "clan_has_kits",
+            "random_cat"
+        ],
         [
             "[t_c is laying in front of the nursery, calmly washing their paws.]",
             "[r_k is with them, wrestling their tail as if it were a feisty snake. As the tiny kit keeps fighting their battle, t_c looks up and catches your eye with a smile.]",
-            "Could you get me that sparrow from the top of the fresh-kill pile? I might be here a while.",
+            "Could you get me that sparrow from the top of the fresh-kill pile? I might be here a while."
         ]
     ],
     "upstanding_queen": [
