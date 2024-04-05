@@ -2625,8 +2625,9 @@
     },
     "Stablewarrior_interaction1_Any": {
         "tags": [
-            "Any",
-            "stable"
+            "they_warrior",
+            "stable",
+            "no_kit"
         ],
         "intro": [
             "[t_c marches through the camp and nods at you, their gaze locked and brows knitted together deep in thought.]",
@@ -2683,6 +2684,7 @@
     "Stablewarrior_interaction2_Any": {
         "tags": [
             "Any",
+            "they_warrior",
             "platonic_like",
             "platonic_love",
             "stable"
@@ -2731,6 +2733,7 @@
     "Stablewarrior_interaction3_Any": {
         "tags": [
             "Any",
+            "they_warrior",
             "stable"
         ],
         "intro": [
