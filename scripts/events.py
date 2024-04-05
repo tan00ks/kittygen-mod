@@ -369,11 +369,13 @@ class Events:
             
             if game.clan.your_cat.moons >= 12:
                 self.check_leader(self.checks)
-                self.check_gain_app(self.checks)
+                if game.clan.your_cat.shunned == 0:
+                    self.check_gain_app(self.checks)
                 self.check_gain_mate(self.checks)
                 self.check_gain_kits(self.checks)
                 self.generate_mate_events()
-                self.check_retire()
+                if game.clan.your_cat.shunned == 0:
+                    self.check_retire()
 
             if random.randint(1,15) == 1:
                 self.gain_acc()
@@ -3553,7 +3555,6 @@ class Events:
                             # No additional involved cats
                         else:
                             if game.clan.deputy:
-                                print('game clan deputy')
                                 if game.clan.deputy.outside or game.clan.deputy.dead:
                                     previous_deputy_mention = random.choice([
                                         f"They know that {game.clan.deputy.name} would approve.",
