@@ -1517,6 +1517,30 @@
             "I'm genuinely glad for them, the day is ours for the taking, and I'm glad everyone's ready for it."
         ]
     ],
+    "introspective_7": [
+	[
+		"Any",
+		"introspective"
+	],
+	[
+		"Hmm ...",
+		"[t_c is sitting in the middle of camp, seemingly lost in thought.]"
+	]
+],
+
+
+"introspective_8": [
+	[
+		"any",
+		"introspective"
+	],
+	[
+		"Hm? Oh, hello, y_c.",
+		"What was I thinking about? Oh, nothing in particular.",
+		"Just the nature of the warrior code, the meaning of existence, the purpose of our lives, the origin of the cosmos ...",
+		"... Trivial stuff like that."
+	]
+	],
     "Introspective_to_app": [
         [
             "Apprentice",
@@ -1562,6 +1586,124 @@
             "Oh? You think that I'll get in anyways? That-Thank you."
         ]
     ],
+
+    "introspective_leafbare_6": [
+	    [
+		    "any",
+		    "introspective"
+	    ],
+	    [
+		    "Would you look at that? It's snowing.",
+		    "[You ask t_c where snow comes from, and their whole face lights up.]",
+		    "Oh, that's a wonderful question! I have a few theories – personally, I think that, when it gets cold, the water inside the clouds freezes.",
+		    "Then, because frozen water is heavier than non-frozen water, the clouds can't carry the weight, and it snows.",
+		    "But then, why is snow soft and fluffy, like fur, and not hard and sharp, like ice? And why does it sometimes rain in leafbare?",
+		    "Ah ... I'm sorry. I'm rambling.",
+		    "The weather is just so fascinating!"
+	    ]
+	],
+
+    "introspective_newleaf": [
+        [
+            "any",
+            "introspective",
+            "newleaf",
+            "you_blind"
+        ],
+        [
+            "y_c, good morning. It’s nice to see you.",
+            "It seems Leafbare has finally left us, I can feel the chill in the air starting to dissipate. It’s nice.",
+            "I’m looking forward to seeing the birds again, and the nice flowers that appear that smell wonderful.",
+            "Just... seeing live plants will be utterly wonderful, a great change of pace.",
+            "I love the snow of Leafbare, but Newleaf’s flowers make the territory a lovely place to be."
+        ]
+    ],
+
+    "introspective_newleaf_1": [
+        [
+            "any",
+            "they_warrior",
+            "they_deputy",
+            "they_leader",
+            "they_apprentice",
+            "introspective",
+            "newleaf",
+            "you_blind",
+            "you_deaf"
+        ],
+        [
+            "y_c, hello. The weather’s lovely today.",
+            "I saw some dandelions had sprouted this morning, and I’ve been wandering about looking at all the new flowers.",
+            "They’re beautiful, all different shades and shapes and smells, like c_nClan, I suppose.",
+            "... huh? Yeah, I know, I should be hunting. I can hunt and look at flowers at the same time, y_c, don’t you worry about me."
+            ]
+        ],
+
+    "introspective_newleaf_2": [
+        [
+            "any",
+            "introspective",
+            "newleaf",
+            "you_blind"
+        ],
+        [
+            "Oh, y_c. Are you busy?",
+            "Yeah, since it’s now newleaf, I thought I’d go see how much prey we’ll have for the coming several moons.",
+            "... Huh? Hunting as well, but primarily to watch. You don’t want to catch prey when they’re too young when you can grab them when they’re older and feed more cats with the catch.",
+            "Patience is a virtue, y_c!"
+        ]
+    ],
+
+    "introspective_newleaf_3": [
+        [
+            "any",
+            "introspective",
+            "newleaf",
+            "you_blind",
+            "you_deaf",
+            "they_blind"
+        ],
+        [
+            "I'm so glad that newleaf is here. It seems like it's been forever since I've been able to stand on grass.",
+            "Being able to walk around without getting cold paws is wonderful, and the sun shining more means that we're able to keep warm.",
+            "And with that, I don't have to stay in camp all the time. Which I'm very much enjoying."
+        ]
+    ],
+
+    "introspective_newleaf_4": [
+        [
+            "any",
+            "introspective",
+            "newleaf",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Hey, y_c. I wouldn't advise getting in the water, it's still really cold.",
+            "... No. I didn't get out of there, I stuck my paw in.",
+            "I assumed because it's a bit warmer on the ground, it'd be warmer in the water as well. My hypothesis was disproven, unfortunately.",
+            "I suppose this is why it's best to check the water, rather than throw yourself into it.",
+            "[You feel slightly judged.]"
+        ]
+    ],
+
+    "introspective_newleaf_5": [
+        [
+            "any",
+            "introspective",
+            "newleaf"
+        ]
+        [
+            "You know, I really like newleaf, y_c.", 
+            "[You turn to look at t_c.]",
+            "You get the benefits of both greenleaf and leafbare. You get the warmth of greenleaf, and the general sounds of life to appreciate.",
+            "But you also get the benefits of Leafbare, there's a lot less twolegs generally shuffling about, making themselves a problem.",
+            "It's also cooler, so we don't have to worry about intense heat burning the ground and the water disappearing.",
+            "... Yes, I know I say that about all the different parts of the year. But it's true every time I say it, at least to me."
+        ]
+    ],
+
+
     "introspective_to_MedApp": [
         [
             "Medicine Cat Apprentice",
