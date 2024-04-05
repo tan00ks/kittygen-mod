@@ -462,19 +462,12 @@ class TalkScreen(Screens):
                 continue
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
-
+            
+            if "they_sc" in tags:
+                pass
             if not any(t in tags for t in ["they_sc", "they_df"]) and cat.dead:
                 continue
             if not any(t in tags for t in ["you_sc", "you_df"]) and you.dead:
-                continue
-
-            if "they_sc" in tags and cat.ID not in game.clan.starclan_cats:
-                continue
-            if "you_sc" in tags and you.ID not in game.clan.starclan_cats:
-                continue
-            if "they_sc" not in tags and cat.ID in game.clan.starclan_cats:
-                continue
-            if "you_sc" not in tags and you.ID in game.clan.starclan_cats:
                 continue
 
             if "they_df" in tags and not cat.df:
