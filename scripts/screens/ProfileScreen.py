@@ -1080,29 +1080,25 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
-        elif game.clan.your_cat.moons >= 0 and ((self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.dead and game.clan.your_cat.dead) or (self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.dead and (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST))) or (self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.dead and self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) or self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) or self.the_cat.skills.meets_skill_requirement(SkillPath.GHOST))):
-            if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
-                self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(
-                    (726, 220), (68, 68))),
-                    "",
-                    object_id="#talk_button",
-                    tool_tip_text="Talk to this Cat", manager=MANAGER
-                )
+        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID:
+            cat_dead_conditions = self.the_cat.dead and (game.clan.your_cat.dead or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST))
+            cat_alive_skills_condition = not self.the_cat.dead and (self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) or self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) or self.the_cat.skills.meets_skill_requirement(SkillPath.GHOST))
+            
+            if cat_dead_conditions or cat_alive_skills_condition:
+                if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
+                    button_position = (726, 220)
+                else:
+                    button_position = (662, 220)
+                
+                self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(button_position, (68, 68))),
+                                                            "",
+                                                            object_id="#talk_button",
+                                                            tool_tip_text="Talk to this Cat", manager=MANAGER)
                 if self.the_cat.talked_to:
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
-            else:
-                self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(
-                    (662, 220), (68, 68))),
-                    "",
-                    object_id="#talk_button",
-                    tool_tip_text="Talk to this Cat", manager=MANAGER
-                )
-                if self.the_cat.talked_to:
-                    self.profile_elements["talk"].disable()
-                else:
-                    self.profile_elements["talk"].enable()
+
         if self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.dead and not self.the_cat.outside and not game.clan.your_cat.dead and not game.clan.your_cat.outside and not game.clan.your_cat.moons < 0:
             if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["insult"] = UIImageButton(scale(pygame.Rect(
@@ -1200,7 +1196,7 @@ class ProfileScreen(Screens):
                 self.profile_elements["halfmoon"].disable()
             elif "attended half-moon" in game.switches and game.switches["attended half-moon"]:
                 self.profile_elements["halfmoon"].disable()
-        if self.the_cat.status in ["queen's apprentice", "mediator apprentice", "apprentice"] and self.the_cat.ID == game.clan.your_cat.ID:
+        elif self.the_cat.status in ["queen's apprentice", "mediator apprentice", "apprentice"] and self.the_cat.ID == game.clan.your_cat.ID:
             if self.the_cat.status == "apprentice":
                 self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(
                     (746, 220), (68, 68))),
