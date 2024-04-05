@@ -634,7 +634,6 @@ class Events:
             possible_birth_types.remove(BirthType.ONE_PARENT)
             possible_birth_types.remove(BirthType.ONE_OUTSIDER_PARENT)
         birth_type = random.choice(possible_birth_types)
-        birth_type = BirthType.ONE_ADOPTIVE_PARENT
 
         def create_siblings(parent1, parent2, adoptive_parents):
             '''Creates siblings for your cat'''

@@ -1471,6 +1471,36 @@
             "[For their brooding and stoic demeanor, t_c's touch is surprisingly gentle ...]"
         ]
     ],
+    "Necrotic_med_cat_1": [
+        [
+            "Random_cat",
+            "neurotic",
+            "Any"
+        ],
+        [
+            "[t_c seems a bit too focused on hurriedly making medicine to have a conversation right now.]",
+	        "[Best to leave them alone to their work.]"
+        ]
+    ],
+
+    "Necrotic_med_cat_2": [
+        [
+            "Random_cat",
+            "necrotic",
+            "Any",
+	        "Leafbare",
+	        "Leaffall"
+        ],
+        [
+            "[You say something to t_c but they don't seem to realize.]",
+	        "What, huh? Oh, sorry y_c, but I'm really busy right now.",
+	        "c_nclan is always so sick during these seasons. I'm stressed out trying to get last-minute herbs and remedies prepared.",
+	        "[t_c looks guilty, but they continue their work.]"
+        ]
+    ],
+
+
+
     "sweet_meddie_2": [
         [
             "kitten",
