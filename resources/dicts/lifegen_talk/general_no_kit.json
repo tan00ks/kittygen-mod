@@ -1701,7 +1701,79 @@
             "It's also cooler, so we don't have to worry about intense heat burning the ground and the water disappearing.",
             "... Yes, I know I say that about all the different parts of the year. But it's true every time I say it, at least to me."
         ]
-    ],
+    ],	
+	
+	"introspective_leaffall": [
+		[
+			"any",
+			"introspective",
+			"leaffall"
+		],
+		[
+			"[You look over and see a giant pile of leaves, with kittens playing around it.]",
+			"Good morning, y_c. Nice weather, isn’t it?",
+			"[... t_c? What in StarClan?]",
+			"Listen, I might as well. The kittens wanted to have fun, and I’m just sitting here. Might as well get buried by leaves.",
+			"[Since t_c seems unbothered, you leaf them to it.]"
+		]
+	],
+	
+	"introspective_queen_leaffall": [
+		[
+			"any",
+			"introspective",
+			"leaffall",
+			"random_cat"
+		],
+		[
+			"Good morning, y_c. It’s lovely to see you.",
+			"Yes, I’m okay, just trying to sweep these leaves away from the nursery. The kits love playing with them, but they get in the way.",
+			"Not to mention you have to worry about-",
+			"[You look over to see a kitten with a leaf in their mouth.]",
+			"Oh, r_k, No! Get that out your mouth, you don’t know what kind of bird’s been sitting on that!",
+			"[t_c sprints over and negotiates the leaf out of their mouth.]"
+		]
+	],
+
+		"introspective_kit_leaffall": [
+		[
+			"they_kitten",
+			"introspective",
+			"leaffall"
+		],
+		[
+			"I wonder why all the leaves fall down in leaffall. Are they tired from holding onto the trees for so long?",
+			"Or maybe the trees are tired of holding the leaves and are just letting them plummet?",
+			"... I hope I'm not a leaf."
+		]
+	],
+
+	"introspective_leaffall_1": [
+		[
+			"any", 
+			"introspective",
+			"leaffall"
+		],
+		[
+			"... y_c. Hello.",
+			"I am feeling quite alright today, though I suppose I am feeling the first hint of a chill. Leafbare isn't that far away from us now, unfortunately.",
+			"It'll be difficult, especially to keep the clan fed. I know we can do it, though. We always have done so before.",
+		]
+	],
+
+	"introspective_leaffall_2": [
+		[
+			"any",
+			"introspective",
+			"leaffall"
+		],
+		[
+			"[t_c is standing next to some leaves, pushing their paw into them.]",
+			"... crunch those leaves, t_c...",
+			"[ ... ]",
+			"[You don't really want to embarrass them, so you leave them to it.]"
+		]
+	],
 
 
     "introspective_to_MedApp": [
