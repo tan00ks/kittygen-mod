@@ -196,35 +196,31 @@ class TalkScreen(Screens):
             elif game.clan.current_season == 'Leaf-fall':
                 screen.blit(self.leaffall_bg, (0, 0))
         now = pygame.time.get_ticks()
-        try:
+        if self.texts:
             if self.texts[self.text_index][0] == "[" and self.texts[self.text_index][-1] == "]":
                 self.profile_elements["cat_image"].hide()
                 # self.textbox_graphic.show()
             else:
                 self.profile_elements["cat_image"].show()
                 # self.textbox_graphic.hide()
-        except:
-            pass
+
         if self.text_index < len(self.text_frames):
             if now >= self.next_frame_time and self.frame_index < len(self.text_frames[self.text_index]) - 1:
                 self.frame_index += 1
                 self.next_frame_time = now + self.typing_delay
-        try:
-            if self.text_index == len(self.text_frames) - 1:
-                if self.frame_index == len(self.text_frames[self.text_index]) - 1:
-                    if self.text_type != "choices":
-                        self.paw.visible = True
-                    if not self.created_choice_buttons and self.text_type == "choices":
-                        self.create_choice_buttons()
-                        self.created_choice_buttons = True
-        except:
-            pass
+        if self.text_index == len(self.text_frames) - 1:
+            if self.frame_index == len(self.text_frames[self.text_index]) - 1:
+                if self.text_type != "choices":
+                    self.paw.visible = True
+                if not self.created_choice_buttons and self.text_type == "choices":
+                    self.create_choice_buttons()
+                    self.created_choice_buttons = True
+
 
         # Always render the current frame
-        try:
+        if self.text_frames:
             self.text.html_text = self.text_frames[self.text_index][self.frame_index]
-        except:
-            pass
+
         self.text.rebuild()
         self.clock.tick(60)
 
@@ -242,16 +238,15 @@ class TalkScreen(Screens):
         elif event.type == pygame.KEYDOWN and game.settings['keybinds']:
             if event.key == pygame.K_ESCAPE:
                 self.change_screen('profile screen')
-        elif event.type == pygame.MOUSEBUTTONDOWN:
-            try:
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if self.text_frames:
                 if self.frame_index == len(self.text_frames[self.text_index]) - 1:
                     if self.text_index < len(self.texts) - 1:
                         self.text_index += 1
                         self.frame_index = 0
                 else:
                     self.frame_index = len(self.text_frames[self.text_index]) - 1  # Go to the last frame
-            except:
-                pass
+            
         return
 
     def get_cluster_list(self):
@@ -346,13 +341,13 @@ class TalkScreen(Screens):
         for b in self.option_bgs:
             self.option_bgs[b].kill()
 
-
-
-
         self.choice_buttons = {}
         chosen_text = self.possible_texts[self.chosen_text_key][self.current_scene]
-        chosen_text = self.get_adjusted_txt(chosen_text, cat)
-        self.texts = chosen_text
+        chosen_text2 = self.get_adjusted_txt(chosen_text, cat)
+        if chosen_text2:
+            self.texts = chosen_text2
+        else:
+            self.texts = chosen_text
         self.text_frames = [[text[:i+1] for i in range(len(text))] for text in chosen_text]
         self.text_index = 0
         self.frame_index = 0

@@ -329,5 +329,5 @@
 	},
 	"lock_season": false, 
 	"comment": "Forces the season to be locked at the Clan's starting_season",
-	"debug_ensure_dialogue": ""
+	"debug_ensure_dialogue": "stable_4"
 }

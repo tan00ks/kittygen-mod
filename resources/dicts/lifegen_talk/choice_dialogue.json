@@ -320,7 +320,8 @@
         "tags": [
             "no_kit",
             "stable",
-            "random_cat"
+            "random_cat",
+            "clan_has_kits"
         ],
         "intro": [
             "Why are kits so difficult...",
