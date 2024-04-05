@@ -1384,7 +1384,7 @@
             "sweet"
         ],
         [
-            "-t_c lets out a soft yawn, stretching as you tug at their tail for attention-",
+            "[t_c lets out a soft yawn, stretching as you tug at their tail for attention]",
             "Oh, good evening, y_c! What is it that you need, littlest one?",
             "You had a nightmare...? Come here, tell me all about it... You don't ever need to worry, c_nClan will always keep you safe."
         ]
@@ -1421,7 +1421,8 @@
         [
             "Ah, y_c! You're filthy! Is everything alright?? Nothing happened, did it?",
             "Oh, it's just from training? I see... m_n is filthy too?",
-            "-t_c begins to gently laugh- Well, you both can go get your hindquarters cleaned!"
+            "[t_c begins to gently laugh.]",
+            "Well, you both can go get your hindquarters cleaned!"
         ]
     ],
     "sweet_queen_6": [

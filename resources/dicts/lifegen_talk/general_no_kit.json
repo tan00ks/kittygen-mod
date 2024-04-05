@@ -923,12 +923,7 @@
     ],
     "assertive_murder3": [
         [
-            "assertive",
-            "platonic_like",
-            "romantic_like",
-            "trust",
-            "comfort",
-            "no_kit",
+            "platonic_love",
             "stable",
             "upstanding",
             "brooding",
@@ -944,11 +939,7 @@
     ],
     "assertive_murder4": [
         [
-            "assertive",
             "platonic_love",
-            "romantic_like",
-            "trust",
-            "comfort",
             "no_kit",
             "you_blind",
             "you_shunned"
@@ -2437,11 +2428,11 @@
         [
             "any",
             "introspective",
-            "respect"
+            "from_mate"
         ],
         [
             "Oh, good morning, it's lovely to see you.",
-            "I'm fine, it's just... Well you must have had a very eventful sleep. Would you like to share tongues before you go?",
+            "I'm fine, it's just... Well, you must have had a very eventful sleep. Would you like to share tongues before you go?",
             "I wouldn't want you walking around looking any less than your best, it's what you deserve after all."
         ]
     ],
