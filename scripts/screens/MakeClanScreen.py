@@ -5,6 +5,7 @@ import random
 from .Screens import Screens
 
 from scripts.utility import get_text_box_theme, scale, generate_sprite
+from scripts.housekeeping.version import get_version_info
 from scripts.clan import Clan
 from scripts.cat.cats import create_example_cats, Cat, Personality
 from scripts.cat.pelts import Pelt
@@ -920,6 +921,26 @@ class MakeClanScreen(Screens):
         self.elements['text2'] = pygame_gui.elements.UIImage(scale(pygame.Rect((520, 790), (536, 52))),
                                                                   MakeClanScreen.your_name_txt2, manager=MANAGER)
         self.elements['background'].disable()
+
+        self.elements["version_background"] = UIImageButton(scale(pygame.Rect((1450, 1344), (1400, 55))), "", object_id="blank_button", manager=MANAGER)
+        self.elements["version_background"].disable()
+
+        if game.settings['fullscreen']:
+            version_number = pygame_gui.elements.UILabel(
+                pygame.Rect((1500, 1350), (-1, -1)), get_version_info().version_number[0:8],
+                object_id="#default_dark")
+            # Adjust position
+            version_number.set_position(
+                (1600 - version_number.get_relative_rect()[2] - 8,
+                1400 - version_number.get_relative_rect()[3]))
+        else:
+            version_number = pygame_gui.elements.UILabel(
+                pygame.Rect((700, 650), (-1, -1)), get_version_info().version_number[0:8],
+                object_id="#default_dark")
+            # Adjust position
+            version_number.set_position(
+                (800 - version_number.get_relative_rect()[2] - 8,
+                700 - version_number.get_relative_rect()[3]))
 
         self.refresh_cat_images_and_info2()
         
