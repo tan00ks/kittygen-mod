@@ -94,18 +94,14 @@ class MiscEvents():
         
         if "notreveal" in misc_event.tags:
             reveal = False
-            print("Witness was too afraid to tell the Clan.")
         elif "definite_shun" in misc_event.tags:
             reveal = True
-            print("Murderer confessed to the Clan.")
         if "notreveal" not in misc_event.tags and "definite_shun" not in misc_event.tags and "murder_reveal" in misc_event.tags:
-            nosnitch = random.randint(1,2) # 6
+            nosnitch = random.randint(1,6) 
             if nosnitch == 1:
                 reveal = False
-                # print ("Witness decided not to snitch.")
             else:
                 reveal = True
-                # print ("Witness told the Clan!")
 
         
 
