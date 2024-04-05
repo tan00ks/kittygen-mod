@@ -1509,29 +1509,27 @@
         ]
     ],
     "introspective_7": [
-	[
-		"Any",
-		"introspective"
-	],
-	[
-		"Hmm ...",
-		"[t_c is sitting in the middle of camp, seemingly lost in thought.]"
-	]
-],
-
-
-"introspective_8": [
-	[
-		"any",
-		"introspective"
-	],
-	[
-		"Hm? Oh, hello, y_c.",
-		"What was I thinking about? Oh, nothing in particular.",
-		"Just the nature of the warrior code, the meaning of existence, the purpose of our lives, the origin of the cosmos ...",
-		"... Trivial stuff like that."
-	]
-	],
+        [
+            "Any",
+            "introspective"
+        ],
+        [
+            "Hmm ...",
+            "[t_c is sitting in the middle of camp, seemingly lost in thought.]"
+        ]
+    ],
+    "introspective_8": [
+        [
+            "any",
+            "introspective"
+        ],
+        [
+            "Hm? Oh, hello, y_c.",
+            "What was I thinking about? Oh, nothing in particular.",
+            "Just the nature of the warrior code, the meaning of existence, the purpose of our lives, the origin of the cosmos ...",
+            "... Trivial stuff like that."
+        ]
+    ],
     "Introspective_to_app": [
         [
             "Apprentice",
@@ -1577,23 +1575,21 @@
             "Oh? You think that I'll get in anyways? That-Thank you."
         ]
     ],
-
     "introspective_leafbare_6": [
-	    [
-		    "any",
-		    "introspective"
-	    ],
-	    [
-		    "Would you look at that? It's snowing.",
-		    "[You ask t_c where snow comes from, and their whole face lights up.]",
-		    "Oh, that's a wonderful question! I have a few theories - personally, I think that, when it gets cold, the water inside the clouds freezes.",
-		    "Then, because frozen water is heavier than non-frozen water, the clouds can't carry the weight, and it snows.",
-		    "But then, why is snow soft and fluffy, like fur, and not hard and sharp, like ice? And why does it sometimes rain in leafbare?",
-		    "Ah ... I'm sorry. I'm rambling.",
-		    "The weather is just so fascinating!"
-	    ]
-	],
-
+        [
+            "any",
+            "introspective"
+        ],
+        [
+            "Would you look at that? It's snowing.",
+            "[You ask t_c where snow comes from, and their whole face lights up.]",
+            "Oh, that's a wonderful question! I have a few theories - personally, I think that, when it gets cold, the water inside the clouds freezes.",
+            "Then, because frozen water is heavier than non-frozen water, the clouds can't carry the weight, and it snows.",
+            "But then, why is snow soft and fluffy, like fur, and not hard and sharp, like ice? And why does it sometimes rain in leafbare?",
+            "Ah ... I'm sorry. I'm rambling.",
+            "The weather is just so fascinating!"
+        ]
+    ],
     "introspective_newleaf": [
         [
             "any",
@@ -1609,7 +1605,6 @@
             "I love the snow of Leafbare, but Newleaf's flowers make the territory a lovely place to be."
         ]
     ],
-
     "introspective_newleaf_1": [
         [
             "any",
@@ -1627,9 +1622,8 @@
             "I saw some dandelions had sprouted this morning, and I've been wandering about looking at all the new flowers.",
             "They're beautiful, all different shades and shapes and smells, like c_nClan, I suppose.",
             "... huh? Yeah, I know, I should be hunting. I can hunt and look at flowers at the same time, y_c, don't you worry about me."
-            ]
-        ],
-
+        ]
+    ],
     "introspective_newleaf_2": [
         [
             "any",
@@ -1644,7 +1638,6 @@
             "Patience is a virtue, y_c!"
         ]
     ],
-
     "introspective_newleaf_3": [
         [
             "any",
@@ -1660,7 +1653,6 @@
             "And with that, I don't have to stay in camp all the time. Which I'm very much enjoying."
         ]
     ],
-
     "introspective_newleaf_4": [
         [
             "any",
@@ -1677,7 +1669,6 @@
             "[You feel slightly judged.]"
         ]
     ],
-
     "introspective_newleaf_5": [
         [
             "any",
@@ -1685,88 +1676,81 @@
             "newleaf"
         ],
         [
-            "You know, I really like newleaf, y_c.", 
+            "You know, I really like newleaf, y_c.",
             "[You turn to look at t_c.]",
             "You get the benefits of both greenleaf and leafbare. You get the warmth of greenleaf, and the general sounds of life to appreciate.",
             "But you also get the benefits of Leafbare, there's a lot less twolegs generally shuffling about, making themselves a problem.",
             "It's also cooler, so we don't have to worry about intense heat burning the ground and the water disappearing.",
             "... Yes, I know I say that about all the different parts of the year. But it's true every time I say it, at least to me."
         ]
-    ],	
-	
-	"introspective_leaffall": [
-		[
-			"any",
-			"introspective",
-			"leaffall"
-		],
-		[
-			"[You look over and see a giant pile of leaves, with kittens playing around it.]",
-			"Good morning, y_c. Nice weather, isn't it?",
-			"[... t_c? What in StarClan?]",
-			"Listen, I might as well. The kittens wanted to have fun, and I'm just sitting here. Might as well get buried by leaves.",
-			"[Since t_c seems unbothered, you leaf them to it.]"
-		]
-	],
-	
-	"introspective_queen_leaffall": [
-		[
-			"any",
-			"introspective",
-			"leaffall",
-			"random_cat"
-		],
-		[
-			"Good morning, y_c. It's lovely to see you.",
-			"Yes, I'm okay, just trying to sweep these leaves away from the nursery. The kits love playing with them, but they get in the way.",
-			"Not to mention you have to worry about-",
-			"[You look over to see a kitten with a leaf in their mouth.]",
-			"Oh, r_k, No! Get that out your mouth, you don't know what kind of bird's been sitting on that!",
-			"[t_c sprints over and negotiates the leaf out of their mouth.]"
-		]
-	],
-
-		"introspective_kit_leaffall": [
-		[
-			"they_kitten",
-			"introspective",
-			"leaffall"
-		],
-		[
-			"I wonder why all the leaves fall down in leaffall. Are they tired from holding onto the trees for so long?",
-			"Or maybe the trees are tired of holding the leaves and are just letting them plummet?",
-			"... I hope I'm not a leaf."
-		]
-	],
-
-	"introspective_leaffall_1": [
-		[
-			"any", 
-			"introspective",
-			"leaffall"
-		],
-		[
-			"... y_c. Hello.",
-			"I am feeling quite alright today, though I suppose I am feeling the first hint of a chill. Leafbare isn't that far away from us now, unfortunately.",
-			"It'll be difficult, especially to keep the clan fed. I know we can do it, though. We always have done so before."
-		]
-	],
-
-	"introspective_leaffall_2": [
-		[
-			"any",
-			"introspective",
-			"leaffall"
-		],
-		[
-			"[t_c is standing next to some leaves, pushing their paw into them.]",
-			"... crunch those leaves, t_c...",
-			"[ ... ]",
-			"[You don't really want to embarrass them, so you leave them to it.]"
-		]
-	],
-
-
+    ],
+    "introspective_leaffall": [
+        [
+            "any",
+            "introspective",
+            "leaffall"
+        ],
+        [
+            "[You look over and see a giant pile of leaves, with kittens playing around it.]",
+            "Good morning, y_c. Nice weather, isn't it?",
+            "[... t_c? What in StarClan?]",
+            "Listen, I might as well. The kittens wanted to have fun, and I'm just sitting here. Might as well get buried by leaves.",
+            "[Since t_c seems unbothered, you leaf them to it.]"
+        ]
+    ],
+    "introspective_queen_leaffall": [
+        [
+            "any",
+            "introspective",
+            "leaffall",
+            "random_cat"
+        ],
+        [
+            "Good morning, y_c. It's lovely to see you.",
+            "Yes, I'm okay, just trying to sweep these leaves away from the nursery. The kits love playing with them, but they get in the way.",
+            "Not to mention you have to worry about-",
+            "[You look over to see a kitten with a leaf in their mouth.]",
+            "Oh, r_k, No! Get that out your mouth, you don't know what kind of bird's been sitting on that!",
+            "[t_c sprints over and negotiates the leaf out of their mouth.]"
+        ]
+    ],
+    "introspective_kit_leaffall": [
+        [
+            "they_kitten",
+            "introspective",
+            "leaffall"
+        ],
+        [
+            "I wonder why all the leaves fall down in leaffall. Are they tired from holding onto the trees for so long?",
+            "Or maybe the trees are tired of holding the leaves and are just letting them plummet?",
+            "... I hope I'm not a leaf."
+        ]
+    ],
+    "introspective_leaffall_1": [
+        [
+            "any",
+            "introspective",
+            "leaffall"
+        ],
+        [
+            "... y_c. Hello.",
+            "I am feeling quite alright today, though I suppose I am feeling the first hint of a chill. Leafbare isn't that far away from us now, unfortunately.",
+            "It'll be difficult, especially to keep the clan fed. I know we can do it, though. We always have done so before."
+        ]
+    ],
+    "introspective_leaffall_2": [
+        [
+            "any",
+            "introspective",
+            "leaffall"
+        ],
+        [
+            "[t_c is standing next to some leaves, pushing their paw into them.]",
+            "... crunch those leaves, t_c...",
+            "[ ... ]",
+            "[You don't really want to embarrass them, so you leave them to it.]"
+        ]
+    ],
     "introspective_to_MedApp": [
         [
             "Medicine Cat Apprentice",
@@ -2688,36 +2672,34 @@
             "Um, do you need something from me?"
         ]
     ],
-	"necrotic_gen8": [
+    "necrotic_gen8": [
         [
-		"no_kit",
-		"random_cat",
-		"neurotic",
-		"they_younger",
-		"trust"
+            "no_kit",
+            "random_cat",
+            "neurotic",
+            "they_younger",
+            "trust"
         ],
         [
-        	"Oh, y_c, I don't understand why they assigned me an apprentice. Of all the cats in this clan, they choose *me* to apprentice t_a.",
-		"[t_c groans and hides their muzzle in their paws.]",
-		"What if they fail because I didn't train them properly? I'm not mentor material! I can barely take care of myself sometimes. Oh, they're so going to fail...",
-		"[t_c doesn't seem to be fit for any more conversation.]"
+            "Oh, y_c, I don't understand why they assigned me an apprentice. Of all the cats in this clan, they choose *me* to apprentice t_a.",
+            "[t_c groans and hides their muzzle in their paws.]",
+            "What if they fail because I didn't train them properly? I'm not mentor material! I can barely take care of myself sometimes. Oh, they're so going to fail...",
+            "[t_c doesn't seem to be fit for any more conversation.]"
         ]
     ],
-
-	"neurotic_parent": [
-	[
-		"no_kit",
-		"neurotic",
-		"from_parent",
-		"adoptive_parent"
-	],
-	[
-		"What do you mean you've been assigned to a solo patrol near the border?!",
-		"Nope, no way. That is way too dangerous. There are big dogs out there on the territory! And flash floods! And what if you encounter a gang of bloodthirsty rogues?",
-		"I'm telling l_n to switch you to a training patrol right now! It will be much safer that way."
-	]
-	],
-
+    "neurotic_parent": [
+        [
+            "no_kit",
+            "neurotic",
+            "from_parent",
+            "adoptive_parent"
+        ],
+        [
+            "What do you mean you've been assigned to a solo patrol near the border?!",
+            "Nope, no way. That is way too dangerous. There are big dogs out there on the territory! And flash floods! And what if you encounter a gang of bloodthirsty rogues?",
+            "I'm telling l_n to switch you to a training patrol right now! It will be much safer that way."
+        ]
+    ],
     "neurotic_2": [
         [
             "Any",
@@ -7180,9 +7162,7 @@
             "Well, I do hope it only gets better! Keep your chin up, there's always more to look forward to, see you around!"
         ]
     ],
-  
-
-   "stable_2_2": [
+    "stable_2_2": [
         [
             "Any",
             "stable",
@@ -7980,7 +7960,6 @@
             "Busy. Sorry."
         ]
     ],
-  
     "stable_mate_1": [
         [
             "from_mate",
@@ -10824,13 +10803,13 @@
             "Maybe it's a good thing the kits don't play it anymore."
         ]
     ],
-	"gen_inlaws": [
+    "gen_inlaws": [
         [
             "no_kit",
             "platonic_like",
             "random_cat",
             "from_mate",
-            "they_blind"	
+            "they_blind"
         ],
         [
             "You and t_l should get to know each other better sometime.",
@@ -10838,7 +10817,6 @@
             "Just think about it for me, m'kay? It'd just be so great if the two most important cats in my life were friends."
         ]
     ],
-	
     "about_kit": [
         [
             "no_kit",
@@ -13574,6 +13552,603 @@
             "Up here, though? It's easy. I like that.",
             "What? You like the challenge?",
             "Hmph. Strange."
+        ]
+    ],
+    "sc_1": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c is grooming their pelt, sending stardust scattering across the grass with every rasp of their tongue.]"
+        ]
+    ],
+    "sc_2": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c peers down at their loved ones in c_nClan with a warm expression on their face.]",
+            "I'm so proud of how far the Clan has come."
+        ]
+    ],
+    "sc_3": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c stares down at c_nClan with a worried expression.]",
+            "There are Twolegs at the edge of the territory ...",
+            "Maybe we should speak with r_m about sending the living cats a warning."
+        ]
+    ],
+    "sc_4": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "A gathering is approaching.",
+            "Let's hope the living cats know to behave themselves. Or else we might have to intervene."
+        ]
+    ],
+    "sc_5": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "The half-moon meeting is coming up soon, isn't it?",
+            "I'm hoping I'll get to go see r_m this time. It's been a while."
+        ]
+    ],
+    "sc_6": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "The clan has faced a lot this moon. They make me proud.",
+            "What about you? Are you proud of their choices?"
+        ]
+    ],
+    "sc_7": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c watches r_a struggling with their training from the edge of StarClan's territory.]",
+            "Sometimes I wish we could do more. Why do we only get to send vague omens and prophecies?",
+            "[They lash their tail out of frustration.]"
+        ]
+    ],
+    "sc_8": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c watches r_c worriedly.]",
+            "We need to keep an eye on this one."
+        ]
+    ],
+    "sc_9": [
+        [
+            "they_sc",
+            "you_sc",
+            "any",
+            "they_medicine_cat"
+        ],
+        [
+            "[t_c stands vigil over a sick member of the Clan, their expression one of deep concern.]",
+            "May StarClan-",
+            "[They stop their prayer part way.]",
+            "... May your path to recovery be swift."
+        ]
+    ],
+    "sc_10": [
+        [
+            "they_sc",
+            "you_sc",
+            "any"
+        ],
+        [
+            "It's always Greenleaf here, haven't you noticed, y_c?",
+            "I love it, but at the same time, I miss the snow."
+        ]
+    ],
+    "sc_11": [
+        [
+            "they_sc",
+            "you_sc",
+            "any",
+            "from_mate"
+        ],
+        [
+            "What would you like to do today, love?",
+            "After all, we have eternity to kill."
+        ]
+    ],
+    "sc_living_1": [
+        [
+            "they_sc",
+            "any"
+        ],
+        [
+            "[t_c walks with you, their steps leaving no trace on the ground.]"
+        ]
+    ],
+    "sc_living_2": [
+        [
+            "they_sc",
+            "any"
+        ],
+        [
+            "[t_c appears before you, their fur shimmering with starlight, a gentle smile on their face.]",
+            "Evening, young one. The stars are bright tonight, aren't they? Always a good sign."
+        ]
+    ],
+    "sc_living_3": [
+        [
+            "they_sc",
+            "any"
+        ],
+        [
+            "You've been pushing yourself hard. Don't give me that look. I've been watching.",
+            "Take it easy, okay? Don't forget that even the strongest warriors need rest."
+        ]
+    ],
+    "sc_living_4": [
+        [
+            "they_sc",
+            "any"
+        ],
+        [
+            "Dear y_c.",
+            "You're doing a wonderful job."
+        ]
+    ],
+    "sc_living_5": [
+        [
+            "they_sc",
+            "any"
+        ],
+        [
+            "[t_c startles when you approach them.]",
+            "You know, normally cats aren't able to see us without going to the Moonplace...",
+            "It's strange that you have this ability."
+        ]
+    ],
+    "sc_living_6": [
+        [
+            "they_sc",
+            "leader"
+        ],
+        [
+            "[It's been a stressful moon. Tensions with the other clans have been rising, rogues have been spotted near the edge of the territory, and you haven't had a moment to yourself since everything had gotten so hectic.]",
+            "[One night, you feel a gentle nudge to your shoulder. It's t_c. Their silhouette blends with the stars, and their voice is soft.]",
+            "Take a moment, breathe. The world won't fall apart if you stop to look at the stars. We're here, with you."
+        ]
+    ],
+    "sc_living_7": [
+        [
+            "they_sc",
+            "from_your_mate",
+            "any"
+        ],
+        [
+            "[t_c nudges you playfully, their spirit light and teasing.]",
+            "Try not to trip over your own paws today, alright?"
+        ]
+    ],
+    "sc_living_8": [
+        [
+            "they_sc",
+            "no_kit",
+            "war"
+        ],
+        [
+            "[t_c sits down with a sigh, looking almost alive under the moon's glow.]",
+            "Remember when the biggest worry was just a border skirmish? Seems like moons ago."
+        ]
+    ],
+    "sc_living_9": [
+        [
+            "they_sc",
+            "any",
+            "newleaf"
+        ],
+        [
+            "[You notice t_c out of the corner of your eye, lounging under a tree. None of your clanmates seem to see them.]",
+            "Oh, y_c.",
+            "Don't mind me. Just visiting...",
+            "[They turn their gaze to the clouds.]",
+            "Take a deep breath. Smell that? Fresh rain on the way. Always loved that smell."
+        ]
+    ],
+    "sc_living_10": [
+        [
+            "they_sc",
+            "elder",
+            "they_elder"
+        ],
+        [
+            "[t_c's eyes follow a group of apprentices with a chuckle.]",
+            "Apprentices these days seem to have more energy than sense."
+        ]
+    ],
+    "dfsc_1": [
+        [
+            "they_sc",
+            "you_df",
+            "Any"
+        ],
+        [
+            "[StarClan cats pass by the thickly woven border, only slight glimmers of stars visible through the gaps. One of them catches your eye.]",
+            "Y_c? You shouldn't be so close to the border.",
+            "[They back off when you take a swipe at the brambles.]"
+        ]
+    ],
+    "dfsc_2": [
+        [
+            "they_sc",
+            "you_df",
+            "Any",
+            "they_adult"
+        ],
+        [
+            "[As you try to make out your reflection in a puddle of muck, you see a bright sparkle behind you. You whip around to see a StarClan cat.]",
+            "[You ask them what they're doing here.]",
+            "Checking up on you lot. Making sure you're still contained.",
+            "If you're checking that puddle to see what you look like, I can tell you that myself.",
+            "You look sad."
+        ]
+    ],
+    "dfsc_3": [
+        [
+            "they_sc",
+            "you_df",
+            "Any",
+            "They_adult",
+            "kitten"
+        ],
+        [
+            "Oh, darling kit...",
+            "I'm sorry you ended up here."
+        ]
+    ],
+    "dfsc_4": [
+        [
+            "they_sc",
+            "you_df",
+            "no_kit"
+        ],
+        [
+            "Do you remember the warmth of the sun?",
+            "[t_c's voice is laced with a mocking sadness, their starlit eyes twinkling with derision.]",
+            "Ah, but what does it matter? I know you don't. You'll never feel it again."
+        ]
+    ],
+    "dfsc_5": [
+        [
+            "they_sc",
+            "you_df",
+            "no_kit"
+        ],
+        [
+            "How does it feel to be the villain in all of the nursery stories?"
+        ]
+    ],
+    "dfsc_6": [
+        [
+            "they_sc",
+            "you_df",
+            "Any"
+        ],
+        [
+            "[t_c's form shimmers faintly, the sadness in their eyes mirroring the pain in your own.]",
+            "I'm sorry, y_c. The silence without them is deafening, isn't it?"
+        ]
+    ],
+    "dfsc_7": [
+        [
+            "they_sc",
+            "you_df",
+            "Any"
+        ],
+        [
+            "[t_c doesn't acknowledge you.]"
+        ]
+    ],
+    "dfsc_8": [
+        [
+            "they_sc",
+            "you_df",
+            "no_kit"
+        ],
+        [
+            "[t_c watches you on the border of StarClan and the Dark Forest. They sit, their tail neatly wrapped around their paws.]",
+            "You've lost more than most, y_c. I only hope that you'll get time to learn from your mistakes."
+        ]
+    ],
+    "dfsc_9": [
+        [
+            "they_sc",
+            "you_df",
+            "leader"
+        ],
+        [
+            "[t_c's stance is aggressive, their starlit form seeming to tower over you.]",
+            "Your ambitions have led you here, to a place where not even the stars can reach.",
+            "Was it worth it, to gain the world but lose your soul?"
+        ]
+    ],
+    "dfsc_10": [
+        [
+            "they_sc",
+            "you_df",
+            "Any",
+            "from_your_mate"
+        ],
+        [
+            "I... I'm sorry, y_c.",
+            "We can't be talking anymore. You made your choice."
+        ]
+    ],
+    "scdf_1": [
+        [
+            "they_df",
+            "you_sc",
+            "Any"
+        ],
+        [
+            "[A paw shoots out at you from underneath a weaker part of the bramble Dark Forest border.]",
+            "Hey! Toss me a mouse, will you? We're starving over here!",
+            "[You tell them that you can't do that.]",
+            "Come on! Just one! You guys have everything!",
+            "[The paw's claws unsheathe and it starts to swipe towards you with more fervour.]",
+            "Are you listening to me? StarClan cat!",
+            "[Unsettled, you turn to leave before the cat can reach you. You'll have to find someone to mend this border.]"
+        ]
+    ],
+    "scdf_2": [
+        [
+            "they_df",
+            "you_sc",
+            "Any"
+        ],
+        [
+            "Is that a StarClan cat?",
+            "Enjoying your afterlife, watching us suffer?"
+        ]
+    ],
+    "scdf_3": [
+        [
+            "they_df",
+            "you_sc",
+            "Any",
+            "you_blind"
+        ],
+        [
+            "Buzz off. Your stars hurt my eyes."
+        ]
+    ],
+    "scdf_4": [
+        [
+            "they_df",
+            "you_sc",
+            "Any",
+            "They_kitten",
+            "they_blind"
+        ],
+        [
+            "[You feel sad to see a kit in the Dark Forest.]",
+            "[But as you notice the zeal with which they tear up the grass around them, you start to realise why they might be here.]"
+        ]
+    ],
+    "scdf_5": [
+        [
+            "they_df",
+            "you_sc",
+            "no_kit"
+        ],
+        [
+            "[You feel the chilling presence of t_c as they near you, their voice cold and mocking.]",
+            "So, the noble warriors of StarClan come to visit. Do you miss the thrill of the battle, or have you grown soft amidst your stars?"
+        ]
+    ],
+    "scdf_6": [
+        [
+            "they_df",
+            "you_sc",
+            "Any"
+        ],
+        [
+            "[t_c doesn't acknowledge you.]"
+        ]
+    ],
+    "scdf_7": [
+        [
+            "they_df",
+            "you_sc",
+            "Any"
+        ],
+        [
+            "[t_c is on the border between StarClan and the Dark Forest. You watch them curiously.]",
+            "[They reach out a paw to step onto the starry ground, but quickly pull back as if burned.]"
+        ]
+    ],
+    "scdf_8": [
+        [
+            "they_df",
+            "you_sc",
+            "Any"
+        ],
+        [
+            "Half of you StarClan cats don't even belong there!",
+            "[t_c snarls, their teeth bared.]"
+        ]
+    ],
+    "scdf_9": [
+        [
+            "they_df",
+            "you_sc",
+            "Any"
+        ],
+        [
+            "Something big is coming. Just wait, y_c."
+        ]
+    ],
+    "scdf_10": [
+        [
+            "they_df",
+            "you_sc",
+            "Any"
+        ],
+        [
+            "[The air grows colder as t_c approaches, their disdain for you evident.]",
+            "Look at you, draped in starlight, pretending to be pure. We both know that dirt clings to all paws, don't we?"
+        ]
+    ],
+    "df_1": [
+        [
+            "they_df",
+            "you_df",
+            "Any",
+            "they_older"
+        ],
+        [
+            "What'd you just say? You're hungry?",
+            "Grow up. We're all hungry."
+        ]
+    ],
+    "df_2": [
+        [
+            "they_df",
+            "you_df",
+            "Any"
+        ],
+        [
+            "Hey! Wanna go battle training?",
+            "Of course you do. What could you possibly be busy with?"
+        ]
+    ],
+    "df_3": [
+        [
+            "they_df",
+            "you_df",
+            "Any"
+        ],
+        [
+            "[While you're picking your way through the dead undergrowth, t_c drops down from a spindly tree next to you.]",
+            "Graah!! Did I scare you?",
+            "Come on. I scared you a <i>little</i>. Be honest.",
+            "[You admit that, okay, maybe you jumped a little.]",
+            "Aha! I knew it.",
+            "Now scram. I wanna try it on someone else."
+        ]
+    ],
+    "df_4": [
+        [
+            "they_df",
+            "you_df",
+            "Any",
+            "they_kitten"
+        ],
+        [
+            "[t_c is sharpening their little claws on a tree.]"
+        ]
+    ],
+    "df_04": [
+        [
+            "they_df",
+            "you_df",
+            "Any",
+            "they_kitten"
+        ],
+        [
+            "It's really dark here...",
+            "Does the sun ever come up, y_c?",
+            "[No, you tell them. Maybe one day.]",
+            "Oh. Okay.",
+            "Well, I'll just wait for it, then. Want to wait with me?"
+        ]
+    ],
+    "df_5": [
+        [
+            "they_df",
+            "you_df",
+            "Any"
+        ],
+        [
+            "StarClan clings to the warrior code like a kit to its mother.",
+            "They'll never get to understand real freedom like we do"
+        ]
+    ],
+    "df_6": [
+        [
+            "they_df",
+            "you_df",
+            "Any"
+        ],
+        [
+            "[t_c is casually flicking pebbles into a dark, seemingly bottomless pond.]",
+            "Ever think about what's at the bottom of this thing?"
+        ]
+    ],
+    "df_7": [
+        [
+            "they_df",
+            "you_df",
+            "Any"
+        ],
+        [
+            "StarClan thinks they can outsmart us, but we're always one step ahead.",
+            "Don't underestimate them. For every move they make, we'll counter with three of our own."
+        ]
+    ],
+    "df_8": [
+        [
+            "they_df",
+            "you_df",
+            "Any"
+        ],
+        [
+            "[While trudging through the murky, dark terrain, t_c nudges you with a dark grin.]",
+            "Think StarClan's watching us now? Scared, do you reckon?",
+            "If they are, let's give them a good show. They ought to know that the Dark Forest still thrives."
+        ]
+    ],
+    "df_9": [
+        [
+            "they_df",
+            "you_df",
+            "no_kit"
+        ],
+        [
+            "It's about time that you get your own Dark Forest trainee."
+        ]
+    ],
+    "df_10": [
+        [
+            "they_df",
+            "you_df",
+            "Any"
+        ],
+        [
+            "This place... it's not so bad, once you get used to it.",
+            "[t_c is trying to convince themselves, but both of you know that it isn't true.]"
         ]
     ]
 }
