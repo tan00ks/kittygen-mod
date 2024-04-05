@@ -3283,7 +3283,7 @@
     "kit_grief": [
         [
             "any",
-            "they_greiving",
+            "they_grieving",
             "dead_close",
             "they_kitten"
         ],
@@ -3296,7 +3296,7 @@
     "kit_grief1": [
         [
             "any",
-            "they_greiving",
+            "they_grieving",
             "dead_close",
             "they_kitten"
         ],
@@ -3310,7 +3310,7 @@
     "kit_grief2": [
         [
             "any",
-            "they_greiving",
+            "they_grieving",
             "dead_close",
             "they_kitten",
             "random_cat",
@@ -3330,7 +3330,7 @@
     "kit_grief3": [
         [
             "any",
-            "they_greiving",
+            "they_grieving",
             "dead_close",
             "they_kitten",
             "neurotic",

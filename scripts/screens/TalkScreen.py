@@ -941,6 +941,38 @@ class TalkScreen(Screens):
                 alive_cat = choice(alive_cats)
             text = [t1.replace("r_c", str(alive_cat.name)) for t1 in text]
 
+        t_l_found = False
+        for i in range(len(text)):
+            if "t_l" in text[i]:
+                t_l_found = True
+        if t_l_found:
+            if len(cat.inheritance.get_siblings()) == 0:
+                    return ""
+            sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
+            counter = 0
+            while sibling.moons != cat.moons or sibling.outside or sibling.dead or sibling.ID == game.clan.your_cat.ID:
+                sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
+                counter+=1
+                if counter == 15:
+                    return ""
+            text = [t1.replace("t_l", str(sibling.name)) for t1 in text]
+
+        t_s_found = False
+        for i in range(len(text)):
+            if "t_s" in text[i]:
+                t_s_found = True
+        if t_s_found:
+            if len(cat.inheritance.get_siblings()) == 0:
+                    return ""
+            sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
+            counter = 0
+            while sibling.outside or sibling.dead or sibling.ID == game.clan.your_cat.ID:
+                sibling = Cat.fetch_cat(choice(cat.inheritance.get_siblings()))
+                counter+=1
+                if counter == 15:
+                    return ""
+            text = [t1.replace("t_s", str(sibling.name)) for t1 in text]
+
         if "grief stricken" in cat.illnesses:
             try:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
