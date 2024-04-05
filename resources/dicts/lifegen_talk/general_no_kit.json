@@ -13121,6 +13121,88 @@
             "[They don't seem to do much else these days.]"
         ]
     ],
+
+    "grieving_sh_J26": [
+        [
+            "Any",
+            "they_shunned",
+            "they_grieving"
+        ],
+        [
+            "[t_c is laying on the ground, completely still, the shallow rising and falling of their chest the only indicator that they're still alive.]",
+            "You've never seen a cat look so sad before."
+        ]
+    ],
+    
+    "grieving_sh_J27": [
+        [
+            "Any",
+            "they_shunned",
+            "you_grieving"
+        ],
+        [
+            "H-hey... I'm sorry for your loss...",
+            "[You feel a pang of anger in your chest. How dare a murderer say that to you?]"
+        ]
+    ],
+    
+    "grieving_sh_J28": [
+        [
+            "Any",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "[t_c avoids looking at you completely.]"
+        ]
+    ],
+    
+    "grieving_sh_J29": [
+        [
+            "Any",
+            "you_shunned",
+            "they_grieving"
+        ],
+        [
+            "Go away!",
+            "I don't want your sympathy, murderer! You clearly have no idea what I'm going through."
+        ]
+    ],
+    
+    "grieving_sh_J30": [
+        [
+            "Any",
+            "both_shunned",
+            "they_grieving"
+        ],
+        [
+            "Sigh..."
+        ]
+    ],
+
+    "grieving_sh_J31": [
+        [
+            "Any",
+            "both_shunned",
+            "you_grieving"
+        ],
+        [
+            "[t_c just sits near you, not attempting to speak.]"
+        ]
+    ],
+    
+    "grieving_sh_J32": [
+        [
+            "Any",
+            "both_shunned",
+            "you_grieving",
+            "they_grieving"
+        ],
+        [
+            "[The air is thick with sadness as you lay near t_c.]"
+        ]
+    ],
+
     "starclan_default": [
         [
             "they_sc",

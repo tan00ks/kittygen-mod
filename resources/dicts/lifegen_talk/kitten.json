@@ -3501,7 +3501,7 @@
     "kitten_sh_J14": [
         [
             "both_shunned",
-            "kitten",
+            "they_kitten",
             "any"
         ],
         [
@@ -3515,7 +3515,7 @@
     "kitten_sh_J15": [
         [
             "you_shunned",
-            "kitten",
+            "they_kitten",
             "any"
         ],
         [
@@ -3525,7 +3525,7 @@
     "kitten_sh_J16": [
         [
             "they_shunned",
-            "kitten",
+            "they_kitten",
             "any"
         ],
         [
@@ -3539,7 +3539,7 @@
     "kitten_sh_J17": [
         [
             "you_shunned",
-            "kitten",
+            "they_kitten",
             "from_your_kit",
             "any",
             "they_blind"
@@ -3553,6 +3553,16 @@
             "Can I sleep with you tonight, at least? r_k said they'll try to cover for me if a queen wakes up...",
             "[You know it's a bad idea, but how could you say no to such a cute little furball?]",
             "[You quickly fall back asleep with t_c contently kneading their paws into your fur.]"
+        ]
+    ],
+    "kitten_sh_J18": [
+        [
+            "they_shunned",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "[t_c is playing moss-ball all alone.]"
         ]
     ],
     "kitinsult_sh_J30": [
@@ -3640,6 +3650,93 @@
         [
             "The moss-balls here are so sparkly!",
             "Come play with me, y_c!"
+        ]
+    ],
+    "grieving_sh_J33": [
+        [
+            "Any",
+            "they_shunned",
+            "they_grieving",
+            "they_kitten"
+        ],
+        [
+            "[t_c is laying on the ground, completely still, the shallow rising and falling of their chest the only indicator that they're still alive.]",
+            "You've never seen a cat look so sad before."
+        ]
+    ],
+    
+    "grieving_sh_J34": [
+        [
+            "Any",
+            "they_shunned",
+            "you_grieving",
+            "they_kitten"
+        ],
+        [
+            "H-hey, are you sad? I'm sad, too.",
+            "[You tell them about the very different reasons the both of you are sad.]",
+            "I'm sorry..."
+        ]
+    ],
+    
+    "grieving_sh_J35": [
+        [
+            "Any",
+            "you_shunned",
+            "you_grieving",
+            "they_kitten"
+        ],
+        [
+            "[t_c avoids looking at you completely.]"
+        ]
+    ],
+    
+    "grieving_sh_J36": [
+        [
+            "Any",
+            "you_shunned",
+            "they_grieving",
+            "they_kitten"
+        ],
+        [
+            "[t_c starts to cry when you get close.]"
+        ]
+    ],
+    
+    "grieving_sh_J37": [
+        [
+            "Any",
+            "both_shunned",
+            "they_grieving",
+            "they_kitten"
+        ],
+        [
+            "Sigh..."
+        ]
+    ],
+
+    "grieving_sh_J38": [
+        [
+            "Any",
+            "both_shunned",
+            "you_grieving",
+            "they_kitten"
+        ],
+        [
+            "[t_c just sits near you, not attempting to speak.]"
+        ]
+    ],
+    
+    "grieving_sh_J39": [
+        [
+            "Any",
+            "both_shunned",
+            "you_grieving",
+            "they_grieving",
+            "they_kitten"
+        ],
+        [
+            "[The air is thick with sadness as you lay near t_c.]"
         ]
     ]
 }

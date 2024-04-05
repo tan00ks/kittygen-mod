@@ -2411,5 +2411,92 @@
             "[Their expression seems conflicted.]",
             "You're just a kit. You don't deserve to be in that place."
         ]
+    ],
+
+    "grieving_sh_J26": [
+        [
+            "Any",
+            "they_shunned",
+            "they_grieving",
+            "kitten"
+        ],
+        [
+            "[t_c is laying on the ground, completely still, the shallow rising and falling of their chest the only indicator that they're still alive.]",
+            "You've never seen a cat look so sad before."
+        ]
+    ],
+    
+    "grieving_sh_J27": [
+        [
+            "Any",
+            "they_shunned",
+            "you_grieving",
+            "kitten"
+        ],
+        [
+            "H-hey, kit... I'm sorry for your loss...",
+            "[r_q told you that t_c is a bad cat. Though they're being nice, you get up and run back to the nursery.]"
+        ]
+    ],
+    
+    "grieving_sh_J28": [
+        [
+            "Any",
+            "you_shunned",
+            "you_grieving",
+            "kitten"
+        ],
+        [
+            "[t_c avoids looking at you completely.]"
+        ]
+    ],
+    
+    "grieving_sh_J29": [
+        [
+            "Any",
+            "you_shunned",
+            "they_grieving",
+            "kitten"
+        ],
+        [
+            "[t_c bursts into tears when they see you.]"
+        ]
+    ],
+    
+    "grieving_sh_J30": [
+        [
+            "Any",
+            "both_shunned",
+            "they_grieving",
+            "kitten"
+        ],
+        [
+            "Sigh..."
+        ]
+    ],
+
+    "grieving_sh_J31": [
+        [
+            "Any",
+            "both_shunned",
+            "you_grieving",
+            "kitten"
+        ],
+        [
+            "[t_c just sits near you, not attempting to speak.]"
+        ]
+    ],
+    
+    "grieving_sh_J32": [
+        [
+            "Any",
+            "both_shunned",
+            "you_grieving",
+            "they_grieving",
+            "kitten"
+        ],
+        [
+            "[The air is thick with sadness as you lay near t_c.]"
+        ]
     ]
 }
