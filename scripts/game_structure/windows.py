@@ -1660,7 +1660,6 @@ class MateScreen(UIWindow):
 
     def process_event(self, event):
         super().process_event(event)
-
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             try:
                 if event.ui_element == self.begin_anew_button:

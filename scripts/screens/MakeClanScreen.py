@@ -991,7 +991,7 @@ class MakeClanScreen(Screens):
                                                 object_id="#random_dice_button"
                                                 , manager=MANAGER)
 
-        self.elements["error"] = pygame_gui.elements.UITextBox("", scale(pygame.Rect((506, 1310), (596, -1))),
+        self.elements["error"] = pygame_gui.elements.UITextBox("", scale(pygame.Rect((506, 1340), (596, -1))),
                                                                manager=MANAGER,
                                                                object_id="#default_dark", visible=False)
 

@@ -69,7 +69,7 @@ class EventsScreen(Screens):
 
     def handle_event(self, event):
         if game.switches['window_open']:
-            pass
+            return
         elif event.type == pygame_gui.UI_BUTTON_ON_HOVERED:
             try:
                 if event.ui_element == self.ceremonies_events_button and self.ceremony_alert:
@@ -86,8 +86,6 @@ class EventsScreen(Screens):
                     self.misc_alert.kill()
             except:
                 print("too much button pressing!")
-        if game.switches['window_open']:
-            pass
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.timeskip_button and game.clan.your_cat.dead_for == 1 and not game.switches['continue_after_death']:
                 DeathScreen('events screen')

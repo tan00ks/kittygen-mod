@@ -794,6 +794,7 @@ class Events:
                 if adoptive_parents:
                     c.adoptive_parents = adoptive_parents
                 c.create_inheritance_new_cat()
+                c.init_all_relationships()
             
         def handle_birth_event(birth_type, parent1, parent2, adoptive_parents, siblings):
             replacements = {}
@@ -846,6 +847,26 @@ class Events:
             parent1.get_injured("recovering from birth")
         elif parent2 and not parent2.dead and parent2.gender == "female":
             parent2.get_injured("recovering from birth")
+        adoptive_parents_cats = []
+        for c in adoptive_parents:
+            adoptive_parents_cats.append(Cat.fetch_cat(c))
+        for c in [parent1, parent2] + adoptive_parents_cats:
+            for s in siblings + [game.clan.your_cat]:
+                if s and c and not c.dead and not c.outside:
+                    y = random.randrange(0, 20)
+                    start_relation = Relationship(c, s, False, True)
+                    start_relation.platonic_like += 30 + y
+                    start_relation.comfortable = 10 + y
+                    start_relation.admiration = 15 + y
+                    start_relation.trust = 10 + y
+                    c.relationships[s.ID] = start_relation
+                    y = random.randrange(0, 20)
+                    start_relation = Relationship(s, c, False, True)
+                    start_relation.platonic_like += 30 + y
+                    start_relation.comfortable = 10 + y
+                    start_relation.admiration = 15 + y
+                    start_relation.trust = 10 + y
+                    s.relationships[c.ID] = start_relation
         game.clan.your_cat.w_done = False
         game.clan.your_cat.age = "newborn"
         game.switches['continue_after_death'] = False
