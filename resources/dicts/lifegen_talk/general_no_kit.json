@@ -128,6 +128,80 @@
             "You're turning into a fine member of c_nClan already."
         ]
     ],
+     "assertive_apprentice6": [
+        [
+            "no_kit",
+            "platonic_like",
+            "assertive",
+            "silly",
+            "random_cat",
+            "they_sameage"
+        ],
+        [
+            "y_c. Buddy. Best friend. We've GOTTA TRY this. r_c told me that if you eat three mice, one rabbit, and howl at the moon, you get magic powers!",
+            "What? It's totally real, they wouldn't lie to me like that! I prommissseee."
+        ]
+    ],
+      "assertive_app2": [
+        [
+            "Any",
+            "assertive",
+            "unabashed",
+            "neutral",
+            "they_younger"
+        ],
+        [
+            "Whoa, lookout! Incoming!!!",
+            "[t_c is in hot pursuit of a mouse - right in the middle of camp! They skid to a halt inches from your face, destroying the pile of moss you were gathering for your nest.]",
+            "*Huff* *Huff* Sorry about that! Say, did you see which way the mouse went?",
+            "I swear, those little buggers are getting braver by the day ... And stupider, too. How long does it think it's gonna last in a clanful of cats?",
+            "Er, sorry about your moss. Did you need help cleaning it up?",
+            "[t_c clumsily attempts to reorganize the pile, breaking several pieces in the process.]",
+            "There! Good as new ... kinda. Heh. Sorry, again.",
+            "Be on the lookout for that mouse for me, will ya? Come find me if you see it again."
+        ]
+    ],
+    "assertive_1": [
+        [
+            "Any",
+            "assertive",
+            "cool",
+            "they_clanfounder",
+            "they_clanborn",
+            "they_outsiderroots",
+            "they_half-Clan",
+            "they_orphaned",
+            "they_abandoned",
+            "newleaf",
+            "greenleaf",
+            "leaffall"
+        ],
+        [
+            "Hey there, y_c! Not bad weather today, hm?",
+            "Sun on my pelt, wind in my fur ... Could you imagine being a kittypet and having to be cooped up in a twoleg nest all day? I think I would go crazy!",
+            "Just another reason why it's great to be a clan cat."
+        ]
+    ],
+    "assertive_6": [
+        [
+            "Any",
+            "dislike",
+            "you_brooding",
+            "you_sweet",
+            "you_upstanding",
+            "you_introspective",
+            "you_neurotic",
+            "you_stable",
+            "assertive",
+            "cool",
+            "unlawful",
+            "silly"
+        ],
+        [
+            "*Sigh*. Hey, y_c. Come to ruin the fun again?",
+            "Whatever. I'm going to go do something actually exciting. Don't wait up."
+        ]
+    ],
     "assertive_jealous1": [
         [
             "Any",
@@ -293,6 +367,19 @@
             "What the - the thrush is totally missing! But I was saving it for us!",
             "That's it! I will not rest until the cat who did this is hunted down ... AND BROUGHT TO JUSTICE!!!",
             "[You and t_c dissolve into a fit of giggles.]"
+        ]
+    ],
+     "assertive_tomedapp33": [
+        [
+            "mediator",
+            "mediator apprentice",
+            "assertive",
+            "random_cat"
+        ],
+        [
+            "Let me guess. You've come to patch things up between me and r_c, 'cause of the fight we had earlier. That right?",
+            "I'll save you a few words - it's not gonna happen. Why's it always me that's gotta be in the wrong, huh? Why not force them to apologize?",
+            "Go find somebody else's problem to fix."
         ]
     ],
     "assertive_parent4": [
