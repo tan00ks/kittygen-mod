@@ -3738,6 +3738,45 @@
             "I know I do!"
         ]
     ],
+    "df_4": [
+        [
+            "they_df",
+            "you_df",
+            "Any",
+            "they_kitten"
+        ],
+        [
+            "[t_c is sharpening their little claws on a tree.]"
+        ]
+    ],
+    "df_04": [
+        [
+            "they_df",
+            "you_df",
+            "Any",
+            "they_kitten"
+        ],
+        [
+            "It's really dark here...",
+            "Does the sun ever come up, y_c?",
+            "[No, you tell them. Maybe one day.]",
+            "Oh. Okay.",
+            "Well, I'll just wait for it, then. Want to wait with me?"
+        ]
+    ],
+    "scdf_4": [
+        [
+            "they_df",
+            "you_sc",
+            "Any",
+            "They_kitten",
+            "they_blind"
+        ],
+        [
+            "[You feel sad to see a kit in the Dark Forest.]",
+            "[But as you notice the zeal with which they tear up the grass around them, you start to realise why they might be here.]"
+        ]
+    ],
     "sc_kit_kit_littermates": [
         [
             "they_sc",
@@ -3750,6 +3789,18 @@
             "I bet you'd look UGLY!",
             "[You let out an insulted squeak, and throw yourself at your sibling.]",
             "[The two of you roll around on the starry grounds, giggling.]"
+        ]
+    ],
+    "introspective_kit_leaffall": [
+        [
+            "any",
+            "introspective",
+            "leaffall"
+        ],
+        [
+            "I wonder why all the leaves fall down in leaffall. Are they tired from holding onto the trees for so long?",
+            "Or maybe the trees are tired of holding the leaves and are just letting them plummet?",
+            "... I hope I'm not a leaf."
         ]
     ]
 }

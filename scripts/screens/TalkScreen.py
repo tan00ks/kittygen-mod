@@ -462,19 +462,12 @@ class TalkScreen(Screens):
                 continue
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
-
+            
+            if "they_sc" in tags:
+                pass
             if not any(t in tags for t in ["they_sc", "they_df"]) and cat.dead:
                 continue
             if not any(t in tags for t in ["you_sc", "you_df"]) and you.dead:
-                continue
-
-            if "they_sc" in tags and cat.ID not in game.clan.starclan_cats:
-                continue
-            if "you_sc" in tags and you.ID not in game.clan.starclan_cats:
-                continue
-            if "they_sc" not in tags and cat.ID in game.clan.starclan_cats:
-                continue
-            if "you_sc" not in tags and you.ID in game.clan.starclan_cats:
                 continue
 
             if "they_df" in tags and not cat.df:
@@ -845,7 +838,7 @@ class TalkScreen(Screens):
             game.clan.talks.clear()
 
         weights2 = []
-        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit"]
+        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving"]
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
             num_fam_mentor_tags = 1
