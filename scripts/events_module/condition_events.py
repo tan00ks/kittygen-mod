@@ -819,7 +819,7 @@ class Condition_Events():
                                 Single_Event(event, "ceremony", retire_involved))
                     elif not game.switches['window_open']:
                         RetireScreen('events screen')
-                    elif game.switches['window_open']:
+                    elif game.switches['window_open'] and 'retire' not in game.switches['windows_dict']:
                         game.switches['windows_dict'].append('retire')
 
                             
