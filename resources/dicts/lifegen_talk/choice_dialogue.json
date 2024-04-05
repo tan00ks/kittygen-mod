@@ -320,7 +320,8 @@
         "tags": [
             "no_kit",
             "stable",
-            "random_cat"
+            "random_cat",
+            "clan_has_kits"
         ],
         "intro": [
             "Why are kits so difficult...",
@@ -2625,8 +2626,10 @@
     },
     "Stablewarrior_interaction1_Any": {
         "tags": [
-            "Any",
-            "stable"
+            "they_warrior",
+            "stable",
+            "upstanding",
+            "no_kit"
         ],
         "intro": [
             "[t_c marches through the camp and nods at you, their gaze locked and brows knitted together deep in thought.]",
@@ -2665,9 +2668,11 @@
             "[As if on cue, d_n enters the camp with a mouse in their jaw, beside them is l_n who looks relaxed until they see the utter disarray the camp is in.]",
             "[Warriors running left and right, the kits in a panic, apprentices unsure what to do, elders and queens trying to settle the kits, medicine cats trying to gather the warriors and the poor mediators who are trying to settle the camp.]",
             "[A voice cuts through the crowd as l_n yells above the chaos, their gaze narrows as they demand to know the meaning of this mess. All eyes fall onto t_c and you...]",
-            "l_n, d_n, while I was out on patrol I saw twolegs near the territory and came back to camp to find you to organize a plan. I thought just taking a patrol to follow them without approval was wrong and unfortunately, in my attempt to find you...",
+            "l_n, d_n, while I was out on patrol I saw twolegs near the territory and came back to camp to find you to organize a plan.",
+            "I thought just taking a patrol to follow them without approval was wrong and unfortunately, in my attempt to find you...",
             "[At the news of the threat, l_n immediately drops their prey and barks orders. They call for the warriors and ask t_c to lead the way. Within seconds order is restored and the brave patrol leaps to action.]",
-            "[You wait patiently for a while and when they finally return, you are given the nod of approval from d_n and l_n. Your chest swells with pride and your mind flourishes with a new memory that you and t_c will forever share.]"
+            "[You wait patiently for a while and when they finally return, you are given the nod of approval from d_n and l_n.]",
+            "[Your chest swells with pride and your mind flourishes with a new memory that you and t_c will forever share.]"
         ],
         "NoHelp": [
             "[No, t_c will be okay... You hope so at least. Maybe your laziness is the real threat here.]"
@@ -2683,6 +2688,7 @@
     "Stablewarrior_interaction2_Any": {
         "tags": [
             "Any",
+            "they_warrior",
             "platonic_like",
             "platonic_love",
             "stable"
@@ -2731,6 +2737,7 @@
     "Stablewarrior_interaction3_Any": {
         "tags": [
             "Any",
+            "they_warrior",
             "stable"
         ],
         "intro": [
