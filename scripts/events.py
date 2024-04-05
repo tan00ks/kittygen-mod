@@ -3395,6 +3395,9 @@ class Events:
                             text = text + f" They will not be allowed to be a {cat.status} and will instead rejoin the Clan as a {newstatus}."
                         
                         cat.status = newstatus
+
+                elif cat.status == 'kitten' and cat.moons > 5:
+                    self.generate_app_ceremony()
                 
                 elif cat.status == 'leader':
                     if random.randint(1,4) == 1:
@@ -3414,7 +3417,6 @@ class Events:
 
             elif fate in [3, 4, 7, 12]:
                 cat.outside = True
-                cat.shunned = 0
                 cat.status = "former Clancat"
                 game.clan.add_to_outside(cat)
                 if cat.moons < 6:
@@ -3513,6 +3515,7 @@ class Events:
         if (not game.clan.deputy or game.clan.deputy.dead or game.clan.deputy.shunned > 0
                 or game.clan.deputy.outside or game.clan.deputy.status == "elder"):
             if game.clan.clan_settings['deputy']:
+                text = ""
 
                 # This determines all the cats who are eligible to be deputy.
                 possible_deputies = list(
@@ -3551,6 +3554,7 @@ class Events:
                             # No additional involved cats
                         else:
                             if game.clan.deputy:
+                                print('game clan deputy')
                                 if game.clan.deputy.outside or game.clan.deputy.dead:
                                     previous_deputy_mention = random.choice([
                                         f"They know that {game.clan.deputy.name} would approve.",
@@ -3560,6 +3564,10 @@ class Events:
                                     ])
                                 elif game.clan.deputy.shunned > 0:
                                     previous_deputy_mention = f"Since {game.clan.deputy.name}'s crime was revealed, a new cat must be chosen to take their place."
+                                
+
+                                else:
+                                    text = "whoooaa"
                                 involved_cats.append(game.clan.deputy.ID)
 
                                 if game.clan.deputy.outside or game.clan.deputy.dead:
@@ -3572,7 +3580,9 @@ class Events:
                                         f"as deputy."
 
                             else:
-                                previous_deputy_mention = ""
+                                text = f"{game.clan.leader.name} chooses " \
+                                        f"{random_cat.name} to be their " \
+                                        f"new deputy. "
 
                             involved_cats.append(game.clan.leader.ID)
                     elif leader_status == "not_here" and deputy_status == "here":
@@ -3610,6 +3620,7 @@ class Events:
                         text = f"{random_cat.name} becomes deputy. "
                 else:
                     # If there are no possible deputies, choose someone else, with special text.
+
                     all_warriors = list(
                         filter(
                             lambda x: not x.dead and not x.outside and x.status
@@ -3623,10 +3634,8 @@ class Events:
 
                     else:
                         # Is there are no warriors at all, no one is named deputy.
-                        game.cur_events_list.append(
-                            Single_Event(
-                                "There are no cats fit to become deputy. ",
-                                "ceremony"))
+                           
+                        text = "There are no cats fit to become deputy. "
                         return
 
                 random_cat.status_change("deputy")
