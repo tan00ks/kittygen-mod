@@ -9673,6 +9673,24 @@
             "[You and y_l fake gag at their affection, but secretly, you think it's sort of sweet how well your parents get along!]"
         ]
     ],
+     "assertive_trust_2": [
+        [
+            "no_kit",
+            "assertive",
+            "platonic_love",
+            "silly",
+            "unlawful",
+            "unabashed",
+            "introspective"
+        ],
+        [
+            "y_c, I swear, sometimes it's like we're trapped here.",
+            "We never chose to be c_nClan cats, it's just something we were born into ... what if we would've been happier as loners? Or rogues?",
+            "No one to tell us what to do or where to go or what to think ... just free to be ourselves, and do whatever we please.",
+            "It's a great, big world out there, and I want to experience everything it has to offer! But instead, we're stuck here inside the territory, not allowed to venture out, not allowed to question.",
+            "Sometimes I think I'm the only one in the whole clan that's like this ... Do you ever feel the same way?"
+        ]
+    ],
     "assertive_gen": [
         [
             "Any",
