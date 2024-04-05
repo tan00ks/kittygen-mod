@@ -923,12 +923,7 @@
     ],
     "assertive_murder3": [
         [
-            "assertive",
-            "platonic_like",
-            "romantic_like",
-            "trust",
-            "comfort",
-            "no_kit",
+            "platonic_love",
             "stable",
             "upstanding",
             "brooding",
@@ -944,11 +939,7 @@
     ],
     "assertive_murder4": [
         [
-            "assertive",
             "platonic_love",
-            "romantic_like",
-            "trust",
-            "comfort",
             "no_kit",
             "you_blind",
             "you_shunned"
