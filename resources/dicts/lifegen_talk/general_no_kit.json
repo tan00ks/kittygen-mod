@@ -2697,6 +2697,20 @@
             "Um, do you need something from me?"
         ]
     ],
+	"neurotic_parent": [
+	[
+		"no_kit",
+		"neurotic",
+		"from_parent",
+		"adoptive_parent"
+	],
+	[
+		"What do you mean you've been assigned to a solo patrol near the border?!",
+		"Nope, no way. That is way too dangerous. There are big dogs out there on the territory! And flash floods! And what if you encounter a gang of bloodthirsty rogues?",
+		"I'm telling l_n to switch you to a training patrol right now! It will be much safer that way."
+	]
+	],
+
     "neurotic_2": [
         [
             "Any",
