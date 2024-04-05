@@ -928,7 +928,7 @@ class MakeClanScreen(Screens):
         if game.settings['fullscreen']:
             version_number = pygame_gui.elements.UILabel(
                 pygame.Rect((1500, 1350), (-1, -1)), get_version_info().version_number[0:8],
-                object_id="#default_dark")
+                object_id=get_text_box_theme())
             # Adjust position
             version_number.set_position(
                 (1600 - version_number.get_relative_rect()[2] - 8,
@@ -936,7 +936,7 @@ class MakeClanScreen(Screens):
         else:
             version_number = pygame_gui.elements.UILabel(
                 pygame.Rect((700, 650), (-1, -1)), get_version_info().version_number[0:8],
-                object_id="#default_dark")
+                object_id=get_text_box_theme())
             # Adjust position
             version_number.set_position(
                 (800 - version_number.get_relative_rect()[2] - 8,
