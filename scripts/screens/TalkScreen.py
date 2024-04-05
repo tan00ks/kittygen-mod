@@ -608,13 +608,14 @@ class TalkScreen(Screens):
                     for injury in you.injuries:
                         if you.injuries[injury]['severity'] != 'minor':
                             ill_injured = True
+
                 if not ill_injured:
                     continue
 
             if any(i in ["they_ill", "they_injured"] for i in tags):
                 ill_injured = False
 
-                if cat.is_ill() and "they_ill" in tags and "grief stricken" not in cat.illnesses:
+                if cat.is_ill() and "they_ill" in tags and "grief stricken" not in cat.illnesses and "guilty" not in cat.illnesses:
                     for illness in cat.illnesses:
                         if cat.illnesses[illness]['severity'] != 'minor':
                             ill_injured = True
@@ -625,6 +626,7 @@ class TalkScreen(Screens):
 
                 if not ill_injured:
                     continue
+
 
             # Relationships
             # Family tags:
@@ -761,6 +763,9 @@ class TalkScreen(Screens):
                 continue
 
             if you.shunned > 0 and cat.shunned > 0 and "both_shunned" not in tags:
+                continue
+
+            if "guilty" in tags and "guilt" not in cat.illnesses:
                 continue
 
             # PERMANENT CONDITIONS

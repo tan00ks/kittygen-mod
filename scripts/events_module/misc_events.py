@@ -99,13 +99,13 @@ class MiscEvents():
             reveal = True
             print("Murderer confessed to the Clan.")
         if "notreveal" not in misc_event.tags and "definite_shun" not in misc_event.tags and "murder_reveal" in misc_event.tags:
-            nosnitch = random.randint(1,6)
+            nosnitch = random.randint(1,2) # 6
             if nosnitch == 1:
                 reveal = False
-                # print ("Witness decided not to snitch.")
+                print ("Witness decided not to snitch.")
             else:
                 reveal = True
-                # print ("Witness told the Clan!")
+                print ("Witness told the Clan!")
 
         
 
@@ -156,7 +156,9 @@ class MiscEvents():
             return
         
         if reveal and "definite_shun" not in misc_event.tags:
-             event_text += " " + str(other_cat.name) + " has told the Clan about the truth they discovered."
+            event_text += " " + str(other_cat.name) + " has told the Clan about the truth they discovered."
+        elif not reveal and "murder_reveal" in misc_event.tags:
+            event_text += " " + str(other_cat.name) + " has decided to keep their secret."
 
 
         game.cur_events_list.append(Single_Event(event_text, types, involved_cats))

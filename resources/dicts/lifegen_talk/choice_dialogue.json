@@ -329,22 +329,22 @@
         ],
         "intro_choices": {
             "choice1": {
-                "text": "[Help]",
-                "next_scene": "help"
-            },
-            "choice2": {
                 "text": "[Don't Help]",
                 "next_scene": "dont_help"
+            },
+            "choice2": {
+                "text": "[Help]",
+                "next_scene": "help"
             }
         },
+        "dont_help": [
+            "[You leave to go take care of your own business right as t_c is tackled by a horde of kittens.]",
+            "Ack - it's fine! Totally holding it together!"
+        ],
         "help": [
             "Wait, you'll help? Really? Hehe, thank you! It really means a lot-",
             "HEY! r_k, NO! Don't touch that!",
             "[Seems the two of you have your paws full ...]"
-        ],
-        "dont_help": [
-            "[You leave to go take care of your own business right as t_c is tackled by a horde of kittens.]",
-            "Ack - it's fine! Totally holding it together!"
         ]
     },
     "app_292": {
