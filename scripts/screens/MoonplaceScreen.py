@@ -233,11 +233,6 @@ class MoonplaceScreen(Screens):
         if event.type == pygame_gui.UI_BUTTON_START_PRESS:
             if event.ui_element == self.back_button:
                 self.change_screen('profile screen')
-            else:
-                for key, button in self.choice_buttons.items():
-                    if event.ui_element == button and self.chosen_text_key:
-                        self.current_scene = self.possible_texts[self.chosen_text_key][f"{self.current_scene}_choices"][key]["next_scene"]
-                        self.handle_choice(self.the_cat)
         elif event.type == pygame.KEYDOWN and game.settings['keybinds']:
             if event.key == pygame.K_ESCAPE:
                 self.change_screen('profile screen')

@@ -1031,7 +1031,6 @@ class Events:
             resource_dir = "resources/dicts/events/lifegen_events/events_dead_sc/"
         elif game.clan.your_cat.dead and game.clan.your_cat.df:
             resource_dir = "resources/dicts/events/lifegen_events/events_dead_df/"
-
         if game.clan.your_cat.shunned > 0:
             resource_dir = "resources/dicts/events/lifegen_events/shunned/"
 
@@ -1049,9 +1048,9 @@ class Events:
         status = game.clan.your_cat.status
         if game.clan.your_cat.status == 'elder' and game.clan.your_cat.moons < 100:
             status = "young elder"
-            with open(f"{resource_dir}{status}.json",
-                  encoding="ascii") as read_file:
+            with open(f"{resource_dir}{status}.json", encoding="ascii") as read_file:
                 all_events = ujson.loads(read_file.read())
+
         possible_events = []
         try:
             possible_events = all_events[f"{status} general"]

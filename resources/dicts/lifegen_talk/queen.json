@@ -1811,5 +1811,16 @@
             "This is no place for a kit like you, y_c. Head back to StarClan before it's too late.",
             "[The former queen turns around, heading back into the darkness."
         ]
+    ],
+    "stable_Queen_Gen_01": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "I swear these kits are going to be the death of me...",
+            "[r_k rolls around onto t_c's paw playfully. They look up with big buggy eyes. t_c's gaze softens.]",
+            "And I honestly think I wouldn't change it for the world. I know that might be hard for some cats to understand, y_c. But I cannot put into words how thankful I am that I wake up and do this job every day."
+        ]
     ]
 }

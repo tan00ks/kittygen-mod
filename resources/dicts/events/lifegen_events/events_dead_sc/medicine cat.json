@@ -10,7 +10,10 @@
     "medicine cat introspective": [],
     "medicine cat neurotic": [],
     "medicine cat silly": [],
-    "medicine cat stable": [],
+    "medicine cat stable": [
+        "You ponder the need to practise your skills given your circumstance.",
+        "You help the herbs grow with a single touch of your blessed starry paw."
+    ],
     "medicine cat sweet": [],
     "medicine cat unabashed": [],
     "medicine cat unlawful": [],

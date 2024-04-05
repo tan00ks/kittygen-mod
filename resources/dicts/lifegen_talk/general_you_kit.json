@@ -114,7 +114,6 @@
     ],
     "assertive_murder4_2": [
         [
-            
             "kitten",
             "assertive",
             "from_parent",
@@ -1468,7 +1467,6 @@
     "unabashed_murder": [
         [
             "Unabashed",
-            
             "any",
             "you_shunned"
         ],
@@ -1480,7 +1478,6 @@
     "unabashed_murder1": [
         [
             "Unabashed",
-            
             "any",
             "you_shunned"
         ],
@@ -2497,6 +2494,18 @@
         ],
         [
             "[The air is thick with sadness as you lay near t_c.]"
+
+    "sc_sc_kit": [
+        [
+            "they_sc",
+            "you_sc",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "[t_c smiles at you as they pass.]",
+            "Hello, y_c!"
+
         ]
     ]
 }

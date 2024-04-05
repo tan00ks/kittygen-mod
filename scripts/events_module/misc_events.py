@@ -102,10 +102,10 @@ class MiscEvents():
             nosnitch = random.randint(1,6)
             if nosnitch == 1:
                 reveal = False
-                print ("Witness decided not to snitch.")
+                # print ("Witness decided not to snitch.")
             else:
                 reveal = True
-                print ("Witness told the Clan!")
+                # print ("Witness told the Clan!")
 
         
 

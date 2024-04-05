@@ -19,7 +19,6 @@
     ],
     "leader_4d": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -114,7 +113,6 @@
     ],
     "leader_4": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -124,7 +122,6 @@
     ],
     "leader_5": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -134,7 +131,6 @@
     ],
     "leader_6": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -144,7 +140,6 @@
     ],
     "leader_7": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -154,7 +149,6 @@
     ],
     "leader_8": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -164,7 +158,6 @@
     ],
     "leader_9": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -174,7 +167,6 @@
     ],
     "leader_10": [
         [
-            
             "Any",
             "you_shunned"
         ],
@@ -1935,7 +1927,7 @@
             "I just felt, after all the service you all have provided, that you deserved it first and foremost."
         ]
     ],
-    "leadershunned_J1":[
+    "leadershunned_J1": [
         [
             "they_shunned",
             "any"
@@ -1944,6 +1936,19 @@
             "[t_c looks at you sadly as you approach.]",
             "What? I'm not your leader anymore, remember?",
             "Whatever it is, go ask l_n."
+        ]
+    ],
+    "stable_Leader_Gen_01": [
+        [
+            "Any",
+            "stable"
+        ],
+        [
+            "Deep breaths, t_c, deep breaths- You'll be okay. You can do this! Just go out there and tell them- it will be okay! It will be fine, it will be- GAH!",
+            "[You poke your head into the leader's den and stare at a bewildered t_c. They blink a couple of times, a silence looms in the air.]",
+            "You scared me, y_c! Please remember to meow or something before you come in. Sorry, I'm just nervous. I have an announcement I need to make at the gathering. But, I'm not looking forward to it.",
+            "o_cClan has once again, overstepped some boundaries, and look- I'm not one to shudder in fear when facing other leaders- but... The deputy just became leader. And are proving to be a rather big problem. No-",
+            "No I'm sorry, I shouldn't be discussing this out loud. I just- I just want to guarantee the safety of c_nClan. No matter what."
         ]
     ]
 }
