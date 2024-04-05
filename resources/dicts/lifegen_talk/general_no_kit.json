@@ -2697,6 +2697,22 @@
             "Um, do you need something from me?"
         ]
     ],
+	"necrotic_gen8": [
+        [
+		"no_kit",
+		"random_cat",
+		"neurotic",
+		"they_younger",
+		"trust"
+        ],
+        [
+        	"Oh, y_c, I don’t understand why they assigned me an apprentice. Of all the cats in this clan, they choose *me* to apprentice t_a.",
+		"[t_c groans and hides their muzzle in their paws.]",
+		"What if they fail because I didn’t train them properly? I’m not mentor material! I can barely take care of myself sometimes. Oh, they’re so going to fail...",
+		"[t_c doesn’t seem to be fit for any more conversation.]"
+        ]
+    ],
+
 	"neurotic_parent": [
 	[
 		"no_kit",
