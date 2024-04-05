@@ -128,21 +128,6 @@
             "[Could they really have been your kit in the nursery a few moons ago?]"
         ]
     ],
-    "assertive_tokit5": [
-        [
-            "kitten",
-            "dislike",
-            "assertive",
-            "cool",
-            "unlawful",
-            "non-related"
-        ],
-        [
-            "Hey, mouse-brain! Watch where you're going!",
-            "Wait, I recognize you. You're one of the new kits, right? Shouldn't you be in the nursery?",
-            "Hmph. Whatever. Just stay outta the real warriors' way, before someone squishes you."
-        ]
-    ],
     "assertive_15": [
         [
             "elder",
@@ -1712,18 +1697,6 @@
             "[You look over to see a kitten with a leaf in their mouth.]",
             "Oh, r_k, No! Get that out your mouth, you don't know what kind of bird's been sitting on that!",
             "[t_c sprints over and negotiates the leaf out of their mouth.]"
-        ]
-    ],
-    "introspective_kit_leaffall": [
-        [
-            "they_kitten",
-            "introspective",
-            "leaffall"
-        ],
-        [
-            "I wonder why all the leaves fall down in leaffall. Are they tired from holding onto the trees for so long?",
-            "Or maybe the trees are tired of holding the leaves and are just letting them plummet?",
-            "... I hope I'm not a leaf."
         ]
     ],
     "introspective_leaffall_1": [
@@ -12296,19 +12269,7 @@
             "Yeah, me too."
         ]
     ],
-    "general_sh_J7": [
-        [
-            "you_shunned",
-            "kitten"
-        ],
-        [
-            "Um, um...",
-            "[t_c glances around quickly as you approach.]",
-            "r_q!",
-            "[At t_c's call, a queen rushes from the nursery and scoops the little kit up, flashing you a dirty look as they head back inside.]",
-            "[You just wanted to speak with somecat who didn't understand the situation, but it seems there are none.]"
-        ]
-    ],
+
     "youdeaf_sh_J8": [
         [
             "you_shunned",
@@ -13815,19 +13776,6 @@
             "You look sad."
         ]
     ],
-    "dfsc_3": [
-        [
-            "they_sc",
-            "you_df",
-            "Any",
-            "They_adult",
-            "kitten"
-        ],
-        [
-            "Oh, darling kit...",
-            "I'm sorry you ended up here."
-        ]
-    ],
     "dfsc_4": [
         [
             "they_sc",
@@ -13944,19 +13892,6 @@
             "Buzz off. Your stars hurt my eyes."
         ]
     ],
-    "scdf_4": [
-        [
-            "they_df",
-            "you_sc",
-            "Any",
-            "They_kitten",
-            "they_blind"
-        ],
-        [
-            "[You feel sad to see a kit in the Dark Forest.]",
-            "[But as you notice the zeal with which they tear up the grass around them, you start to realise why they might be here.]"
-        ]
-    ],
     "scdf_5": [
         [
             "they_df",
@@ -14057,32 +13992,6 @@
             "[You admit that, okay, maybe you jumped a little.]",
             "Aha! I knew it.",
             "Now scram. I wanna try it on someone else."
-        ]
-    ],
-    "df_4": [
-        [
-            "they_df",
-            "you_df",
-            "Any",
-            "they_kitten"
-        ],
-        [
-            "[t_c is sharpening their little claws on a tree.]"
-        ]
-    ],
-    "df_04": [
-        [
-            "they_df",
-            "you_df",
-            "Any",
-            "they_kitten"
-        ],
-        [
-            "It's really dark here...",
-            "Does the sun ever come up, y_c?",
-            "[No, you tell them. Maybe one day.]",
-            "Oh. Okay.",
-            "Well, I'll just wait for it, then. Want to wait with me?"
         ]
     ],
     "df_5": [

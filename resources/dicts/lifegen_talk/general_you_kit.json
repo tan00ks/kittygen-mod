@@ -2499,5 +2499,47 @@
             "[t_c smiles at you as they pass.]",
             "Hello, y_c!"
         ]
+    ],
+    "dfsc_3": [
+        [
+            "they_sc",
+            "you_df",
+            "Any",
+            "They_adult",
+            "kitten"
+        ],
+        [
+            "Oh, darling kit...",
+            "I'm sorry you ended up here."
+        ]
+    ],
+    "general_sh_J7": [
+        [
+            "you_shunned",
+            "kitten",
+            "any"
+        ],
+        [
+            "Um, um...",
+            "[t_c glances around quickly as you approach.]",
+            "r_q!",
+            "[At t_c's call, a queen rushes from the nursery and scoops the little kit up, flashing you a dirty look as they head back inside.]",
+            "[You just wanted to speak with somecat who didn't understand the situation, but it seems there are none.]"
+        ]
+    ],
+    "assertive_tokit5": [
+        [
+            "kitten",
+            "dislike",
+            "assertive",
+            "cool",
+            "unlawful",
+            "non-related"
+        ],
+        [
+            "Hey, mouse-brain! Watch where you're going!",
+            "Wait, I recognize you. You're one of the new kits, right? Shouldn't you be in the nursery?",
+            "Hmph. Whatever. Just stay outta the real warriors' way, before someone squishes you."
+        ]
     ]
 }
