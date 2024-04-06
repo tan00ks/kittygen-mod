@@ -2296,7 +2296,7 @@ class Cat():
         if potential_mentor.moons <= 0:
             return False
         
-        if game.clan.your_cat and game.clan.age == 0 and potential_mentor.ID == game.clan.your_cat.ID:
+        if game.clan and game.clan.your_cat and game.clan.age == 0 and potential_mentor.ID == game.clan.your_cat.ID:
             return False
 
         # If not an app, don't need a mentor
