@@ -3865,6 +3865,17 @@
             "newborn"
         ],
         [
+            "Who are you?",
+            "You don't smell like you're from c_nClan!"
+        ]
+    ],
+    "df_they_living": [
+        [
+            "you_df",
+            "kitten",
+            "newborn"
+        ],
+        [
             "W-who are you?",
             "You don't smell like you're from c_nClan!"
         ]

@@ -14659,5 +14659,43 @@
             "Are you afraid of fading away?",
             "Don't worry, y_c. I'll always remember you!"
         ]
+    ],
+    "df_they_living": [
+        [
+            "you_df",
+            "any"
+        ],
+        [
+            "Heh, getting tired of eating crowfood and sleeping in muck?",
+            "[You wonder if t_c seeks you out just to taunt you.]"
+        ]
+    ],
+    "df_they_living2": [
+        [
+            "you_df",
+            "any"
+        ],
+        [
+            "You better teach me something cool today, y_c.",
+            "[You roll your eyes at the Dark Forest trainee.]"
+        ]
+    ],
+    "df_they_living3": [
+        [
+            "you_df",
+            "any"
+        ],
+        [
+            "Ugh, go away."
+        ]
+    ],
+    "df_they_living4": [
+        [
+            "you_df",
+            "any"
+        ],
+        [
+            "What do you want?"
+        ]
     ]
 }
