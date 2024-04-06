@@ -81,7 +81,7 @@
             "Must ... escape ... camp ..."
         ]
     ],
-       "assertivewarrior_mediatorapp1": [
+    "assertivewarrior_mediatorapp01": [
         [
             "mediator apprentice",
             "mediator",
@@ -111,7 +111,7 @@
             "Any chance you could help me talk it out with them?"
         ]
     ],
-     "assertive_mentor2": [
+    "assertive_mentor2": [
         [
             "any",
             "assertive",
@@ -128,7 +128,7 @@
             "You're turning into a fine member of c_nClan already."
         ]
     ],
-     "assertive_apprentice6": [
+    "assertive_apprentice6": [
         [
             "no_kit",
             "platonic_like",
@@ -142,7 +142,7 @@
             "What? It's totally real, they wouldn't lie to me like that! I prommissseee."
         ]
     ],
-      "assertive_app2": [
+    "assertive_app2": [
         [
             "Any",
             "assertive",
@@ -202,7 +202,7 @@
             "Whatever. I'm going to go do something actually exciting. Don't wait up."
         ]
     ],
-    "assertive_jealous1": [
+    "assertive_jealous01": [
         [
             "Any",
             "sibling",
@@ -369,7 +369,7 @@
             "[You and t_c dissolve into a fit of giggles.]"
         ]
     ],
-     "assertive_tomedapp33": [
+    "assertive_tomedapp33": [
         [
             "mediator",
             "mediator apprentice",
@@ -382,9 +382,9 @@
             "Go find somebody else's problem to fix."
         ]
     ],
-    "assertive_parent4": [
+    "assertive_parent04": [
         [
-            "any"
+            "any",
             "assertive",
             "dislike",
             "cool",
@@ -399,7 +399,7 @@
             "Seriously, I don't know any other parent who bothers their grown kit this much!"
         ]
     ],
-    "assertive_jealous1_2": [
+    "assertive_jealous01_2": [
         [
             "no_kit",
             "assertive",
@@ -9982,7 +9982,7 @@
             "[You and y_l fake gag at their affection, but secretly, you think it's sort of sweet how well your parents get along!]"
         ]
     ],
-     "assertive_trust_2": [
+    "assertive_trust_2": [
         [
             "no_kit",
             "assertive",
@@ -12596,7 +12596,6 @@
             "Yeah, me too."
         ]
     ],
-
     "youdeaf_sh_J8": [
         [
             "you_shunned",
@@ -14385,6 +14384,101 @@
         [
             "This place... it's not so bad, once you get used to it.",
             "[t_c is trying to convince themselves, but both of you know that it isn't true.]"
+        ]
+    ],
+    "df_living_2": [
+        [
+            "they_df",
+            "no_kit"
+        ],
+        [
+            "Do you still pray to StarClan, y_c?",
+            "[t_c moves forward until you feel their foul breath on your face.]",
+            "Know that they won't do anything for you."
+        ]
+    ],
+    "df_living_3": [
+        [
+            "they_df",
+            "no_kit"
+        ],
+        [
+            "[t_c's gaze lingers on you, a smirk playing at the edges of their mouth.]",
+            "So you've come to visit the Dark Forest. Seeking power, or just lost, little Clan cat?"
+        ]
+    ],
+    "df_living_4": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "Hi!",
+            "Nice to see you, y_c!",
+            "[They wave their tail, then head back into the darkness.]",
+            "[You stop to wonder why t_c is in the Dark Forest, or if you're better off not knowing.]"
+        ]
+    ],
+    "df_living_5": [
+        [
+            "they_df",
+            "no_kit"
+        ],
+        [
+            "[t_c hisses at you.]",
+            "Come any closer, and I'll show you a real warrior's strength."
+        ]
+    ],
+    "df_living_6": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "[t_c looks at you with a surprisingly friendly smirk.]",
+            "Oh, don't look so scared. We're not all out here to haunt your dreams.",
+            "Some of us just like the quiet. It's not all doom and gloom around here. Well, maybe just a little."
+        ]
+    ],
+    "df_living_7": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "What's it like, in c_nClan nowadays? Everything still running smoothly?",
+            "[t_c tries to act indifferent. But you can tell there's a noticeable longing in their gaze.]"
+        ]
+    ],
+    "df_living_8": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "[You find t_c at the edge of the territory, a wavering, shadowy form that's barely noticeable against the undergrowth.]",
+            "[They curl their tail around their paws and sigh deeply.]",
+            "[You decide to leave them alone.]"
+        ]
+    ],
+    "df_living_9": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "Still talking to us, Clan cat?",
+            "I wonder... Where does your true loyalty lie?"
+        ]
+    ],
+    "df_living_10": [
+        [
+            "they_df",
+            "no_kit"
+        ],
+        [
+            "Just say the word, and you can join us, y_c.",
+            "We can give you everything you ever wished for, and more."
         ]
     ]
 }

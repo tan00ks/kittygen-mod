@@ -3726,7 +3726,9 @@
             "they_kitten"
         ],
         [
-            "[The air is thick with sadness as you lay near t_c.]"]],
+            "[The air is thick with sadness as you lay near t_c.]"
+        ]
+    ],
     "sc_kit_kit": [
         [
             "they_sc",
@@ -3801,6 +3803,18 @@
             "I wonder why all the leaves fall down in leaffall. Are they tired from holding onto the trees for so long?",
             "Or maybe the trees are tired of holding the leaves and are just letting them plummet?",
             "... I hope I'm not a leaf."
+        ]
+    ],
+    "df_living_1": [
+        [
+            "they_df",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "Hi, y_c. Want to see something cool?",
+            "[t_c shows you an advanced battle move that even grown warriors struggle with.]",
+            "Hehe, I can teach you if you want!"
         ]
     ]
 }

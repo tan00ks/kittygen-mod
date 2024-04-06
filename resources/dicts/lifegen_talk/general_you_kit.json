@@ -44,7 +44,7 @@
             "*Whisper* Even though, between you and me, we both know you could totally destroy them. Hehehe!"
         ]
     ],
-      "assertive_5": [
+    "assertive_5": [
         [
             "kitten",
             "dislike",
@@ -2559,8 +2559,9 @@
             "kitten"
         ],
         [
-            "[The air is thick with sadness as you lay near t_c.]"]],
-
+            "[The air is thick with sadness as you lay near t_c.]"
+        ]
+    ],
     "sc_sc_kit": [
         [
             "they_sc",
@@ -2613,6 +2614,17 @@
             "Hey, mouse-brain! Watch where you're going!",
             "Wait, I recognize you. You're one of the new kits, right? Shouldn't you be in the nursery?",
             "Hmph. Whatever. Just stay outta the real warriors' way, before someone squishes you."
+        ]
+    ],
+    "sc_to_kit": [
+        [
+            "they_sc",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "Hi, y_c.",
+            "You... you really shouldn't be here. Not until you're older, okay? Much older."
         ]
     ]
 }
