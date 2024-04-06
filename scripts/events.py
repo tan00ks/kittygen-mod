@@ -1047,6 +1047,8 @@ class Events:
 
         if game.clan.your_cat.status == "former Clancat":
             status = "former_clancat"
+        
+        all_events = {}
         if game.clan.your_cat.status != 'newborn' or (game.clan.your_cat.status == "newborn" and game.clan.your_cat.dead):
             with open(f"{resource_dir}{game.clan.your_cat.status}.json",
                     encoding="ascii") as read_file:
@@ -1070,6 +1072,8 @@ class Events:
         possible_events += general_events["general general"]
 
         # Add old events
+        if not all_events:
+            return 
         if f"{status} old" in all_events:
             possible_events = possible_events + all_events[f"{status} old"]
 

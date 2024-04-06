@@ -1458,8 +1458,11 @@ class DeathScreen(UIWindow):
                     game.clan.starclan_cats.remove(game.clan.your_cat.ID)
                 if game.clan.your_cat.ID in game.clan.darkforest_cats:
                     game.clan.darkforest_cats.remove(game.clan.your_cat.ID)
-                if game.clan.your_cat.moons >= 6 and "kit" in str(game.clan.your_cat.name):
-                    game.clan.your_cat.status_change(game.clan.your_cat.status)
+                you = game.clan.your_cat
+                if you.moons == 0 and you.status != "newborn":
+                    you.status = 'newborn'
+                elif you.moons < 6 and you.status != "kitten":
+                    you.status = "kitten"
 
                 game.clan.your_cat.thought = "Is surprised to find themselves back in the Clan"
                 game.last_screen_forupdate = None
