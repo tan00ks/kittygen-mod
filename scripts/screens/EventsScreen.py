@@ -345,9 +345,6 @@ class EventsScreen(Screens):
                                              , manager=MANAGER)
         self.death_button.hide()
 
-        if game.clan.your_cat.dead:
-            game.switches['continue_after_death'] = True
-
         if game.switches['continue_after_death']:
             self.death_button.show()
 
