@@ -14618,5 +14618,46 @@
             "Anyways ... I'm gonna go now.",
             "[t_c dashes back to their group of friends, who giggle and gossip, no doubt picking apart every word you said.]"
         ]
+    ],
+    "sc_they_living1": [
+        [
+            "you_sc",
+            "any"
+        ],
+        [
+            "y_c!",
+            "[t_c appears out of nowhere, startling you.]",
+            "Oops, sorry! Are you busy?"
+        ]
+    ],
+    "sc_they_living2": [
+        [
+            "you_sc",
+            "any"
+        ],
+        [
+            "I feel like something bad's coming, y_c.",
+            "Send us a sign, will you?"
+        ]
+    ],
+    "sc_they_living3": [
+        [
+            "you_sc",
+            "any"
+        ],
+        [
+            "What's it like in StarClan?",
+            "It must be nice to have constant prey and sunshine..."
+        ]
+    ],
+    "sc_they_living4": [
+        [
+            "you_sc",
+            "any"
+        ],
+        [
+            "Are you afraid of fading away?",
+            "Don't worry, y_c. I'll always remember you!"
+        ]
     ]
 }
