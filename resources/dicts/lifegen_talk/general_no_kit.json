@@ -1217,6 +1217,7 @@
     ],
     "assertive_murder3": [
         [
+            "any",
             "platonic_love",
             "stable",
             "upstanding",
@@ -2974,7 +2975,7 @@
             "no_kit",
             "neurotic",
             "from_parent",
-            "adoptive_parent"
+            "adopted_parent"
         ],
         [
             "What do you mean you've been assigned to a solo patrol near the border?!",
@@ -13389,7 +13390,8 @@
             "assertive",
             "cool",
             "they_blind",
-            "you_blind"
+            "you_blind",
+            "any"
         ],
         [
             "y_c, I seriously don't know what happened to your nest. I swear! It got torn up again! Torn to shreds, wow, just like last night. Funny! Well not funny for you. Hope it doesn't happen again tomorrow.",
@@ -13831,7 +13833,8 @@
     "starclan_default": [
         [
             "they_sc",
-            "you_sc"
+            "you_sc",
+            "any"
         ],
         [
             "Do you miss being in c_nClan?",

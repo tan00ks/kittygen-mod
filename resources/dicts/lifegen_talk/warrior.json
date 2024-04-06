@@ -2537,7 +2537,7 @@
         [
             "newborn",
             "sibling",
-            "half-sibling",
+            "half sibling",
             "stable"
         ],
         [
@@ -2548,7 +2548,7 @@
         [
             "newborn",
             "sibling",
-            "half-sibling",
+            "half sibling",
             "stable"
         ],
         [
@@ -2560,7 +2560,7 @@
     "stable_warriortoNEWBORN_8": [
         [
             "newborn",
-            "half-sibling",
+            "half sibling",
             "stable"
         ],
         [
@@ -3010,7 +3010,7 @@
         [
             "Kitten",
             "sibling",
-            "half-sibling",
+            "half sibling",
             "stable"
         ],
         [
@@ -3024,7 +3024,7 @@
         [
             "Kitten",
             "sibling",
-            "half-sibling",
+            "half sibling",
             "stable"
         ],
         [
@@ -3040,7 +3040,7 @@
         [
             "Kitten",
             "sibling",
-            "half-sibling",
+            "half sibling",
             "stable"
         ],
         [
