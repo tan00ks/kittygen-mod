@@ -327,42 +327,31 @@ class Events:
         with open(f"{resource_dir}events.json",
                   encoding="ascii") as read_file:
             self.c_txt = ujson.loads(read_file.read())
-        with open(f"{resource_dir}events_distrust.json",
-                  encoding="ascii") as read_file:
-            self.e_txt = ujson.loads(read_file.read())
         with open(f"{resource_dir}df.json",
                   encoding="ascii") as read_file:
             self.df_txt = ujson.loads(read_file.read())
         if not game.clan.your_cat.dead and game.clan.your_cat.status != 'exiled':
-            if game.clan.your_cat.revealed != 0 and game.clan.age - 3 <= game.clan.your_cat.revealed and game.clan.your_cat.moons != 0 and game.clan.your_cat.moons != 6 and not (game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator'] and not game.clan.your_cat.w_done) and not game.clan.your_cat.moons == 120:
-                for i in range(random.randint(0,2)):
-                    distrust_events = self.e_txt[game.clan.your_cat.status]
-                    distrust_events = distrust_events + self.e_txt['general']
-                    d_e = Single_Event(random.choice(distrust_events))
-                    if d_e not in game.cur_events_list:
-                        game.cur_events_list.append(d_e)
-            else:
-                if game.clan.your_cat.moons == 0:
-                    self.generate_birth_event()
-                elif game.clan.your_cat.moons < 6:
-                    self.generate_events() 
-                elif game.clan.your_cat.moons == 6:
-                    self.generate_app_ceremony()
-                elif game.clan.your_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
-                    self.generate_events()
-                elif game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator', "queen"] and not game.clan.your_cat.w_done:
-                    self.generate_ceremony()
-                elif game.clan.your_cat.status != 'elder' and game.clan.your_cat.moons != 119:
-                    self.generate_events()
-                elif game.clan.your_cat.moons == 119:
-                    if not game.switches['window_open']:
-                        RetireScreen('events screen')
-                    else:
-                        game.switches['windows_dict'].append('retire')
-                elif game.clan.your_cat.moons == 120 and game.clan.your_cat.status == 'elder':
-                    self.generate_elder_ceremony()
-                elif game.clan.your_cat.status == 'elder':
-                    self.generate_events()
+            if game.clan.your_cat.moons == 0:
+                self.generate_birth_event()
+            elif game.clan.your_cat.moons < 6:
+                self.generate_events() 
+            elif game.clan.your_cat.moons == 6:
+                self.generate_app_ceremony()
+            elif game.clan.your_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+                self.generate_events()
+            elif game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator', "queen"] and not game.clan.your_cat.w_done:
+                self.generate_ceremony()
+            elif game.clan.your_cat.status != 'elder' and game.clan.your_cat.moons != 119:
+                self.generate_events()
+            elif game.clan.your_cat.moons == 119:
+                if not game.switches['window_open']:
+                    RetireScreen('events screen')
+                else:
+                    game.switches['windows_dict'].append('retire')
+            elif game.clan.your_cat.moons == 120 and game.clan.your_cat.status == 'elder':
+                self.generate_elder_ceremony()
+            elif game.clan.your_cat.status == 'elder':
+                self.generate_events()
             
             if game.clan.your_cat.joined_df:
                 self.generate_df_events()

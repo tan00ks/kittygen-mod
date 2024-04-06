@@ -638,7 +638,7 @@ class EventsScreen(Screens):
             ele.kill()
         self.cat_profile_buttons = []
 
-        if game.switches['continue_after_death']:
+        if game.switches['continue_after_death'] and game.clan.your_cat.moons >= 0:
             self.death_button.show()
         else:
             self.death_button.hide()
