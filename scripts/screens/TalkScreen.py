@@ -424,7 +424,6 @@ class TalkScreen(Screens):
             for i in range(len(tags)):
                 tags[i] = tags[i].lower()
 
-
             if "insult" in tags:
                 continue
 
@@ -455,7 +454,7 @@ class TalkScreen(Screens):
                 continue
             elif "no_kit" in tags and (you.status in ['kitten', 'newborn'] or cat.status in ['kitten', 'newborn']):
                 continue
-            elif "newborn" in tags and you.moons != 0:
+            elif "newborn" in tags and "kitten" not in tags and you.moons != 0:
                 continue
 
             if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice", "kitten", "newborn"]:
@@ -463,8 +462,6 @@ class TalkScreen(Screens):
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
             
-            if "they_sc" in tags:
-                pass
             if not any(t in tags for t in ["they_sc", "they_df"]) and cat.dead:
                 continue
             if not any(t in tags for t in ["you_sc", "you_df"]) and you.dead:

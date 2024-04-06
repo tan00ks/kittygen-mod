@@ -2626,5 +2626,44 @@
             "Hi, y_c.",
             "You... you really shouldn't be here. Not until you're older, okay? Much older."
         ]
+    ],
+    "sc_kit": [
+        [
+            "they_sc",
+            "they_adult",
+            "you_sc",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "I'm sorry... y_c.",
+            "I'm sorry you didn't get more time."
+        ]
+    ],
+    "sc_kit2": [
+        [
+            "they_sc",
+            "you_sc",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "In StarClan, little one, our job is very important.",
+            "We need to watch over those we left behind.",
+            "Do you understand?"
+        ]
+    ],
+    "sc_kit3": [
+        [
+            "they_sc",
+            "you_sc",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "In StarClan, little one, our job is very important.",
+            "We need to watch over those we left behind.",
+            "Do you understand?"
+        ]
     ]
 }
