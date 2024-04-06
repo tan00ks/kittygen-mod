@@ -471,6 +471,10 @@ class TalkScreen(Screens):
                 continue
             if "you_df" in tags and not you.df:
                 continue
+            if "they_sc" in tags and cat.df:
+                continue
+            if "you_sc" in tags and you.df:
+                continue
 
             roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
             if any(r in roles for r in tags):
