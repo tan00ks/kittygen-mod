@@ -382,44 +382,6 @@
             "Thanks for the help, y_c!"
         ]
     },
-    "brooding_jealous": {
-        "tags": [
-            "no_kit",
-            "jealousy",
-            "they_clanborn",
-            "they_clanfounder",
-            "you_outsiderroots",
-            "you_halfclan",
-            "you_orphaned",
-            "you_abandoned",
-            "random_cat",
-            "they_sameage"
-        ],
-        "intro": [
-            "[t_c walks up to you, tail lashing wildly.]",
-            "y_c, I don't know how you manage it, but I'm not surprised you have to cheat in our training sessions.",
-            "It makes sense you can't naturally compare to a clanborn cat, but it doesn't mean you can show me up in front of d_n, and especially not l_n!"
-        ],
-        "intro_choices": {
-            "choice1": {
-                "text": "[Defend yourself]",
-                "next_scene": "defend_yourself"
-            },
-            "choice2": {
-                "text": "[Say nothing]",
-                "next_scene": "say_nothing"
-            }
-        },
-        "defend_yourself": [
-            "[You hurl every insult you can imagine at t_c. You even make up some that didn't exist previously.]",
-            "Oh yeah? Well you're a - uh ... Gah! You're not even worth the mental energy!",
-            "[t_c runs off, tail between their legs. What a mouse-brain!]"
-        ],
-        "say_nothing": [
-            "[t_c sneers at you one last time before stalking off without giving you a chance to reply.]",
-            "[You feel weirdly proud of yourself for not having stooped down to their level.]"
-        ]
-    },
     "gen_mate1": {
         "tags": [
             "no_kit"
