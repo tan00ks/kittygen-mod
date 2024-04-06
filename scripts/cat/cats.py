@@ -582,9 +582,10 @@ class Cat():
             return
         
         murder_history = History.get_murders(you)
-        # if murder_history:
-        #     if 'is_murderer' in murder_history:
-        num_victims = len(murder_history["is_murderer"])
+        num_victims = 0
+        if murder_history:
+            if 'is_murderer' in murder_history:
+                num_victims = len(murder_history["is_murderer"])
 
         nice = you.personality.trait in ["charismatic", "confident", "flexible", "witty", "loyal", "responsible", "faithful", "compassionate", "sincere", "sweet", "polite"]
         naughty = you.personality.trait in ["bloodthirsty", "sneaky", "manipulative", "strange", "rebellious", "troublesome", "stoic", "aloof", "cunning"]
