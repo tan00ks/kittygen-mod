@@ -14480,5 +14480,143 @@
             "Just say the word, and you can join us, y_c.",
             "We can give you everything you ever wished for, and more."
         ]
+    ],
+    "they_shunned_1": [
+        [
+            "no_kit",
+            "they_shunned",
+            "unlawful",
+            "cool",
+            "assertive",
+            "brooding",
+            "unabashed",
+            "upstanding"
+        ],
+        [
+            "Everyone loves to moralize, act like they're the nicest cat around, like they're incapable of understanding why I've done what I've done. Ha! What a laugh.",
+            "What none of you know is that you're just one mistake, one slip up, one bad day away from being down here in the gutter, right next to me.",
+            "Not so nice to think about, is it?"
+        ]
+    ],
+    "they_shunned_2": [
+        [
+            "no_kit",
+            "they_shunned",
+            "neurotic",
+            "introspective"
+        ],
+        [
+            "[t_c paces around their corner of camp, increasingly thin and jumpy, eyes darting.]",
+            "[How could such a wimpy little cat be capable of such an atrocious act?]"
+        ]
+    ],
+    "they_shunned_3": [
+        [
+            "no_kit",
+            "they_shunned",
+            "from_parent"
+        ],
+        [
+            "[The weight of t_c's crime presses heavily on your heart.]",
+            "[What if you end up just like them?]"
+        ]
+    ],
+    "you_shunned_1": [
+        [
+            "any",
+            "you_shunned",
+            "platonic_love"
+        ],
+        [
+            "Wow ... You've really done it this time, huh, y_c?",
+            "[t_c laughs bitterly. You've always loved making them laugh. It's what you used to live and die for.]",
+            "[Will t_c ever feel safe enough to laugh around you again?]"
+        ]
+    ],
+    "you_shunned_111": [
+        [
+            "any",
+            "you_shunned",
+            "platonic_love"
+        ],
+        [
+            "[t_c comes and finds you at the edge of camp one day.]",
+            "[You expect another tongue lashing or demeaning lecture, but to your surprise, they actually press their pelt into yours, leaning all their weight against your side.]",
+            "I know it's wrong, and I know you're a monster, but ...",
+            "... I miss you so much sometimes.",
+            "Can we just pretend, for one night, like none of this madness ever happened?",
+            "We can talk about our days, just like we used to.",
+            "I'll go first. My day was good.",
+            "What about yours?"
+        ]
+    ],
+    "you_shunned_112": [
+        [
+            "any",
+            "you_shunned",
+            "from_mate"
+        ],
+        [
+            "Do you remember that night when you first confessed your feelings to me?",
+            "In that moment, suddenly, everything in the entire world seemed to click into place.",
+            "Now, you're a murderer. And all of it is ruined forever.",
+            "Is my life some kind of sick joke?"
+        ]
+    ],
+    "you_shunned_113": [
+        [
+            "any",
+            "you_shunned",
+            "from_mate"
+        ],
+        [
+            "We had an entire life together. A future together. But you chose to throw it all away.",
+            "And for what? Power? Revenge?",
+            "Are these things really more important to you than I am?"
+        ]
+    ],
+    "you_shunned_2": [
+        [
+            "any",
+            "you_shunned",
+            "unlawful",
+            "random_cat"
+        ],
+        [
+            "Word to the wise, if you wanna get away with it next time, you should pick me as an accomplice.",
+            "... In case l_n is listening, that was a joke."
+        ]
+    ],
+    "you_shunned_3": [
+        [
+            "any",
+            "you_shunned",
+            "they_apprentice",
+            "random_cat"
+        ],
+        [
+            "[The apprentices observe you from across the camp, wide-eyed, then dash off in a flurry of whispers.]",
+            "[No doubt they're about to concoct another ridiculous rumor about the nature of your crime.]"
+        ]
+    ],
+    "you_shunned_4": [
+        [
+            "any",
+            "you_shunned",
+            "they_younger",
+            "silly",
+            "cool",
+            "assertive",
+            "unabashed"
+        ],
+        [
+            "[t_c is joking around with their friends in the clearing.]",
+            "Last one to the training grounds gets fed to y_c!",
+            "Oh, uh ... y_c ... Hello.",
+            "No, I wasn't talking about you, why do you ask?",
+            "Oh, that? Uh, just a bit of dark humor. Everyone in camp is doing it.",
+            "Anyways ... I'm gonna go now.",
+            "[t_c dashes back to their group of friends, who giggle and gossip, no doubt picking apart every word you said.]"
+        ]
     ]
 }

@@ -2726,5 +2726,35 @@
             "Robin? Okay! Sounds good, I actually really like Robin myself so this is a treat! I personally cannot stand vole. Fish sometimes, but vole? GAH!",
             "It's a horrendous little creature that's just bone and fat, there's no meat, no flavour. You have taste, thus, you have my respect. I'll be back before moonrise, y_c, see ya!"
         ]
+    },
+    "shunned_choice": {
+        "tags": [
+            "you_shunned",
+            "platonic_love"
+        ],
+        "intro": [
+            "Be completely honest ... Did they deserve it?"
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "Yes.",
+                "next_scene": "deserved"
+            },
+            "choice2": {
+                "text": "No.",
+                "next_scene": "undeserved"
+            }
+        },
+        "deserved": [
+            "[t_c pauses for a moment, completely still and silent, then ...]",
+            "... Okay.",
+            "I believe you.",
+            "When I said I would stick by you through thick and thin, you'd better believe that I meant it."
+        ],
+        "undeserved": [
+            "...",
+            "[t_c pauses for a moment, completely still and silent, then turns around and leaves without another word.]",
+            "[The sting of their disappointment is sharper than a thousand claws.]"
+        ]
     }
 }

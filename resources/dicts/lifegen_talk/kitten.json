@@ -3816,5 +3816,46 @@
             "[t_c shows you an advanced battle move that even grown warriors struggle with.]",
             "Hehe, I can teach you if you want!"
         ]
+    ],
+    "you_shunned_7": [
+        [
+            "any",
+            "you_shunned",
+            "they_kitten",
+            "platonic_like"
+        ],
+        [
+            "Don't worry, y_c, I'm sure you'll be out of time-out in no time.",
+            "Then we can play together again!"
+        ]
+    ],
+    "you_shunned_5": [
+        [
+            "any",
+            "you_shunned",
+            "they_kitten",
+            "platonic_love",
+            "random_cat"
+        ],
+        [
+            "[t_c dashes out of the nursery and clings to your leg as the hapless queens shout after them.]",
+            "I don't care what anyone says. You're not taking y_c away from me!",
+            "[They kick and scream as the queens pull them away. r_q shoots you an extra dirty look, just for good measure.]"
+        ]
+    ],
+    "you_shunned_6": [
+        [
+            "any",
+            "you_shunned",
+            "they_kitten",
+            "platonic_like",
+            "random_cat"
+        ],
+        [
+            "I heard that you messed up bad, and did something mean.",
+            "But, it's okay! I mess things up all the time.",
+            "Like, once, I accidentally stepped on r_k's favorite stick and I broke it. The queens got so mad at me!",
+            "I'm sure whatever you did can't be as bad as that ... right?"
+        ]
     ]
 }
