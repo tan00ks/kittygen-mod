@@ -326,11 +326,6 @@ class TalkScreen(Screens):
                                                             manager=MANAGER)
             self.text_choices[c] = option
 
-
-
-
-
-
             y_pos -= 80
 
     def handle_choice(self, cat):
@@ -344,11 +339,8 @@ class TalkScreen(Screens):
         self.choice_buttons = {}
         chosen_text = self.possible_texts[self.chosen_text_key][self.current_scene]
         chosen_text2 = self.get_adjusted_txt(chosen_text, cat)
-        if chosen_text2:
-            self.texts = chosen_text2
-        else:
-            self.texts = chosen_text
-        self.text_frames = [[text[:i+1] for i in range(len(text))] for text in chosen_text]
+        self.texts = chosen_text2
+        self.text_frames = [[text[:i+1] for i in range(len(text))] for text in chosen_text2]
         self.text_index = 0
         self.frame_index = 0
         self.created_choice_buttons = False
@@ -869,6 +861,16 @@ class TalkScreen(Screens):
             text_chosen_key = choices(list(texts_list.keys()), weights=weights2, k=1)[0]
             text = texts_list[text_chosen_key]["intro"] if "intro" in texts_list[text_chosen_key] else texts_list[text_chosen_key][1]
             new_text = self.get_adjusted_txt(text, cat)
+
+            if "intro" in texts_list[text_chosen_key]:
+                for choice_key in texts_list[text_chosen_key].keys():
+                    choice_text = texts_list[text_chosen_key][choice_key]
+                    if isinstance(choice_text, list) and choice_key != "tags":
+                        choice_text = self.get_adjusted_txt(choice_text, cat)
+                        if not choice_text:
+                            new_text = ""
+                            break
+
 
             if text_chosen_key not in game.clan.talks and new_text:
                 game.clan.talks.append(text_chosen_key)
