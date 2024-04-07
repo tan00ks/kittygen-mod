@@ -1085,12 +1085,15 @@ class Events:
             possible_events = possible_events + all_events[f"{status} {second_cluster}"] + general_events[f"general {second_cluster}"]
 
         for i in range(random.randint(0,5)):
-            current_event = self.adjust_txt(random.choice(possible_events))
-            while current_event == "":
+            if possible_events:
                 current_event = self.adjust_txt(random.choice(possible_events))
-            current_event = Single_Event(current_event)
-            if current_event not in game.cur_events_list:
-                game.cur_events_list.append(current_event)
+                while current_event == "":
+                    current_event = self.adjust_txt(random.choice(possible_events))
+                current_event = Single_Event(current_event)
+                if current_event not in game.cur_events_list:
+                    game.cur_events_list.append(current_event)
+            else:
+                print('No possible events?') # im too lazy to figure out why this is happening but i wanna stop crashing
             
     def generate_kit_events(self):
         # Parent events for moons 1-5

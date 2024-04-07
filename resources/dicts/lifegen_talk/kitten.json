@@ -3862,7 +3862,8 @@
         [
             "you_sc",
             "kitten",
-            "newborn"
+            "newborn",
+            "any"
         ],
         [
             "Who are you?",
@@ -3873,11 +3874,144 @@
         [
             "you_df",
             "kitten",
-            "newborn"
+            "newborn",
+            "any"
         ],
         [
             "W-who are you?",
             "You don't smell like you're from c_nClan!"
+        ]
+    ],
+    "sckit": [
+        [
+            "they_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "Hi there!",
+            "What are you doing here? You're not staying here forever, are you?",
+            "You still have a lot to do for c_nClan, trust me."
+        ]
+    ],
+    "dfkit": [
+        [
+            "they_df",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "Hi, Clan cat!",
+            "You probably shouldn't be here. It's really scary.",
+            "Me? I'm fine! I'm super strong. Nothing scares me.",
+            "Nothing..."
+        ]
+    ],
+    "sckit3": [
+        [
+            "they_sc",
+            "you_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "y_c, come play with me!",
+            "And don't say you don't have the time. We have forever!"
+        ]
+    ],
+    "dfkit3": [
+        [
+            "they_df",
+            "you_df",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "[t_c is tearing clumps of dirt form the ground beneath them. You ask why,]",
+            "This place sucks. I'm trying to destroy it.",
+            "I want to go live with the starry cats.",
+            "[Decide to join them. Maybe you two can dig far enough that you end up someplace new.]"
+        ]
+    ],
+    "sckit2": [
+        [
+            "they_sc",
+            "you_df",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "[t_c runs away when they see you.]"
+        ]
+    ],
+    "dfkit2": [
+        [
+            "they_df",
+            "you_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "Your stars are so shiny!",
+            "They're so pretty. I wish I had some pretty stars."
+        ]
+    ],
+    "sckit4": [
+        [
+            "you_df",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "[t_c runs away when they see you.]"
+        ]
+    ],
+    "dfkit4": [
+        [
+            "you_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "Your stars are so shiny!",
+            "They're so pretty. I wish I had some pretty stars."
+        ]
+    ],
+    "sckit5": [
+        [
+            "they_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "Whoa! There you are! The queens were telling me about you.",
+            "They say you're super duper special for being able to talk to us.",
+            "I'm glad you're super duper special. You're fun to talk to!",
+            "Wanna come play with me? They have these really sparkly leaves, here, they'd look great in your fur!",
+            "[You follow t_c deeper into StarClan territory as they ramble the whole way about their favourite parts of it.]",
+            "[It's adorable. You can't wait to join them here one day!]"
+        ]
+    ],
+    "sckit6": [
+        [
+            "they_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "You guys sure thank StarClan a lot!",
+            "I'm not sure what we did, but you're welcome!"
+        ]
+    ],
+    "sckit7": [
+        [
+            "they_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "It's really nice up here, but I miss the nursery.",
+            "How is it? Has it changed? Is my nest still there?"
         ]
     ]
 }

@@ -1079,5 +1079,41 @@
             "[r_q sees you staring and steps in front of t_c to block your view.]",
             "[You sigh. It won't be long before someone lets them know.]"
         ]
+    ],
+    "starclannewborn": [
+        [
+            "they_sc",
+            "newborn"
+        ],
+        [
+            "[t_c limply bats at the stars glimmering around them.]"
+        ]
+    ],
+    "dfnewborn": [
+        [
+            "they_df",
+            "newborn"
+        ],
+        [
+            "[t_c yowls as you come near, their little voice shaking.]"
+        ]
+    ],
+    "youstarclannewborn": [
+        [
+            "you_sc",
+            "newborn"
+        ],
+        [
+            "[t_c looks confused.]"
+        ]
+    ],
+    "youdfnewborn": [
+        [
+            "you_df",
+            "newborn"
+        ],
+        [
+            "[t_c looks confused.]"
+        ]
     ]
 }
