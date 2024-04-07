@@ -1452,12 +1452,14 @@ class DeathScreen(UIWindow):
                 game.clan.your_cat.moons+=1
                 game.clan.your_cat.update_mentor()
                 game.switches['continue_after_death'] = False
-                if game.clan.your_cat.outside:
-                    game.clan.add_to_clan(game.clan.your_cat)
+                # if game.clan.your_cat.outside:
+                #     game.clan.add_to_clan(game.clan.your_cat)
                 if game.clan.your_cat.ID in game.clan.starclan_cats:
                     game.clan.starclan_cats.remove(game.clan.your_cat.ID)
                 if game.clan.your_cat.ID in game.clan.darkforest_cats:
                     game.clan.darkforest_cats.remove(game.clan.your_cat.ID)
+                if game.clan.your_cat.ID in game.clan.unknown_cats:
+                    game.clan.unknown_cats.remove(game.clan.your_cat.ID)
                 you = game.clan.your_cat
                 if you.moons == 0 and you.status != "newborn":
                     you.status = 'newborn'

@@ -578,7 +578,7 @@ class Cat():
         """
 
         you = game.clan.your_cat
-        if not you.exiled:
+        if not you.outside:
             return
         
         murder_history = History.get_murders(you)
@@ -592,7 +592,7 @@ class Cat():
 
         if you.exiled:
 
-            if num_victims <= 0:
+            if num_victims == 0:
                 acceptchance = randint (1,4)
                 killchance = randint(1,40)
             
@@ -653,7 +653,7 @@ class Cat():
         elif you.status in ["loner", "rogue", "kittypet", "former Clancat"]:
         # can only be former clancat rn but this is just to cover bases 4 the future
             
-            if num_victims <= 0:
+            if num_victims == 0:
                 acceptchance = randint (1,3)
                 killchance = randint(1,50)
             
@@ -713,7 +713,8 @@ class Cat():
 
         if you.exiled:
             event_text = f"You muster up your courage and turn to walk back home, hoping that your Clanmates will be able to forgive you. At the {game.clan.name}Clan border, you sit and wait for a patrol. <br>"
-        else:
+
+        elif you.outside:
             event_text = f"You're ready to return home-- you're sure of it. You hope that your Clanmates will take you back in as you head for the {game.clan.name}Clan border to wait for a patrol. <br> "
         if acceptchance == 1:
             event_text = event_text + f"When one finally comes, they're wary, but they agree to take you back to camp, and a Clan meeting is held. After much deliberation, it's decided that you will be allowed back home."
@@ -727,11 +728,25 @@ class Cat():
             else:
                 you.status_change("kitten")
             you.thought = "Is happy to be home!"
+
+            if you.exiled:
+                you.exiled = False
+                
             Cat.add_to_clan(you)
 
         elif killchance == 1:
             event_text = event_text + f"The patrol immediately meets you with hostility, and when you ask to visit camp, the more vengeful among the group instantly attack you, spitting at you that you don't desevre to step foot on {game.clan.name}Clan's territory after what you did. As your vision begins to blur, the last thing you hear is a former Clanmate damning you to the Dark Forest."
             Cat.die(you)
+            if you.moons > 119:
+                you.status_change("elder")
+            elif you.moons > 12:
+                you.status_change("warrior")
+            elif you.moons > 6:
+                you.status_change("apprentice")
+            else:
+                you.status_change("kitten")
+            if you.exiled:
+                you.exiled = False
         elif killchance in [2, 3, 4, 5, 6]:
             event_text = event_text + choice ([ f"The patrol responds to your greeting with hisses and growls. Before you can even ask to head back to camp with them, a set of claws shoots towards you and you're met with the view of your blood hitting the grass. You don't have to be told twice-- you retreat back to your makeshift home.",
             f"As soon as a patrol catches your eye, they erupt into hisses and yowls. You scramble to your paws, but you don't get away in time to avoid a fresh wound from an angry ex-clanmate. They scream after you that there will never be a place for you in {game.clan.name}Clan again."])
