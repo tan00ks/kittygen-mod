@@ -244,6 +244,7 @@ class Clan():
                     self.demon \
                     and not_found:
                 Cat.all_cats[i].example = True
+                print(f"3: removed {i}")
                 self.remove_cat(Cat.all_cats[i].ID)
 
         # give thoughts,actions and relationships to cats

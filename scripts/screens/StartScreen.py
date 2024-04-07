@@ -345,6 +345,7 @@ class StartScreen(Screens):
             for x in key_copy:
                 if x not in game.clan.clan_cats:
                     game.clan.remove_cat(x)
+                    print("1: removed" + str(x))
 
         # LOAD settings
         game.load_settings()
