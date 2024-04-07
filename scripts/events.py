@@ -623,6 +623,7 @@ class Events:
             possible_birth_types.remove(BirthType.ONE_PARENT)
             possible_birth_types.remove(BirthType.ONE_OUTSIDER_PARENT)
         birth_type = random.choice(possible_birth_types)
+        birth_type = BirthType.TWO_ADOPTIVE_PARENTS
 
         def create_siblings(parent1, parent2, adoptive_parents):
             '''Creates siblings for your cat'''
@@ -718,6 +719,9 @@ class Events:
                                 parent1.gender = "female"
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parent2 = pick_valid_parent(adoptive_parent1)
+                    if not adoptive_parent2:
+                        game.clan.remove_cat(parent1)
+                        game.clan.remove_cat(parent2)
                     adoptive_parent1.set_mate(adoptive_parent2)
                     adoptive_parents = [adoptive_parent1.ID, adoptive_parent2.ID]
 
@@ -3414,7 +3418,7 @@ class Events:
                         else:
                             text = text + f" They will not be allowed to be a {cat.status} and will instead rejoin the Clan as a {newstatus}."
                         
-                        cat.status = newstatus
+                        cat.status_change(newstatus)
 
                 elif cat.status == 'kitten' and cat.moons > 5:
                     self.generate_app_ceremony()
@@ -3433,7 +3437,7 @@ class Events:
 
 
 
-                game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
+                game.cur_events_list.insert(0, Single_Event(text, "alert", involved_cats))
 
             elif fate in [3, 4, 7, 12]:
                 cat.outside = True
@@ -3451,7 +3455,7 @@ class Events:
                         text = random.choice([
                             f"{cat.name} knows they'll never be forgiven. Packing up their favourite feathers and stones from their nest, they slip out of camp in the night, sure that none of their Clanmates will mind the abscence.",
                             f"Sick of being treated so poorly, {cat.name} leaves camp one day, not turning around to see if anyone has noticed, and vows never to come back."])
-                    game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
+                    game.cur_events_list.insert(0, Single_Event(text, "alert", involved_cats))
 
             else:
                 cat.shunned = 0
@@ -3462,7 +3466,7 @@ class Events:
                     text = random.choice([
                     f"{game.clan.name}Clan has decided that they don't feel safe with {cat.name} around after what they did. {cat.name} has been exiled.",
                     f"{game.clan.leader.name} knows that {cat.name} does not plan to atone. They have been exiled from {game.clan.name}Clan for their crimes."])
-                game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
+                game.cur_events_list.insert(0, Single_Event(text, "alert", involved_cats))
 
     def coming_out(self, cat):
         """turnin' the kitties trans..."""
