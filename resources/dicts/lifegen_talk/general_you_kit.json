@@ -2627,6 +2627,19 @@
             "You... you really shouldn't be here. Not until you're older, okay? Much older."
         ]
     ],
+    "df_to_kit": [
+        [
+            "they_df",
+            "kitten",
+            "newborn",
+            "they_older"
+        ],
+        [
+            "[t_c almost steps on you.]",
+            "Kit? What are you doing here?",
+            "You need to leave. Quickly."
+        ]
+    ],
     "sc_kit": [
         [
             "they_sc",
