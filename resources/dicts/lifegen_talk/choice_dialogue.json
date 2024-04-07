@@ -632,11 +632,9 @@
     },
     "assertivekit_1": {
         "tags": [
-            "no_kit",
-            "assertive",
-            "platonic_like",
             "random_cat",
-            "they_kitten"
+            "they_kitten",
+            "any"
         ],
         "intro": [
             "y_c! y_c! Gimme a badger ride, c'mon, pleeease?",
@@ -2393,7 +2391,7 @@
     "upstanding_choice5": {
         "tags": [
             "upstanding",
-            "no_kit",
+            "any",
             "they_kitten"
         ],
         "intro": [
