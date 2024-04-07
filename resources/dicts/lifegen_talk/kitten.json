@@ -3901,5 +3901,15 @@
             "[You ask t_c what they mean.]",
             "Well, we all appear as stars to c_nClan cats, right?"
         ]
+    ],
+    "sc_kitten3": [
+        [
+            "any",
+            "they_sc"
+        ],
+        [
+            "I wish I had more time with c_nClan...",
+            "Make sure you enjoy it while you can, okay y_c?"
+        ]
     ]
 }
