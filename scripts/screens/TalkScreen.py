@@ -822,10 +822,20 @@ class TalkScreen(Screens):
                 if cluster4:
                     clusters_2 += f"and {cluster4}"
                 try:
+                    add_on = ""
+                    add_on2 = ""
+                    if you.dead and you.df:
+                        add_on = " df"
+                    elif you.dead and not you.df:
+                        add_on = " sc"
+                    if cat.dead and cat.df:
+                        add_on2 = " df"
+                    elif cat.dead and not cat.df:
+                        add_on2 = " sc"
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
-                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status)
-                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status + add_on)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status + add_on)
                 except Exception as e:
                     print(e)
             texts_list['general'] = possible_texts['general']
@@ -1222,6 +1232,119 @@ class TalkScreen(Screens):
                 if game.clan.deputy.dead or game.clan.deputy.outside or game.clan.deputy.ID == game.clan.your_cat.ID or game.clan.deputy.ID == cat.ID:
                     return ""
                 text = text.replace("d_n", str(game.clan.deputy.name))
+
+            if "rsh_c" in text:
+                random_cat = choice(self.get_living_cats())
+                counter = 0
+                while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID or not random_cat.shunned:
+                    if counter == 30:
+                        return ""
+                    random_cat = choice(self.get_living_cats())
+                    counter +=1
+                text = text.replace("rsh_c", str(random_cat.name))
+            if "rsh_k" in text:
+                alive_kits = get_alive_kits(Cat)
+                if len(alive_kits) < 1:
+                    return ""
+                alive_kit = choice(alive_kits)
+                counter = 0
+                while alive_kit.ID == game.clan.your_cat.ID or alive_kit.ID == cat.ID or not alive_kit.shunned:
+                    alive_kit = choice(alive_kits)
+                    counter+=1
+                    if counter == 30:
+                        return ""
+                text = text.replace("rsh_k", str(alive_kit.name))
+            if "rsh_a" in text:
+                alive_apps = get_alive_apps(Cat)
+                if len(alive_apps) < 1:
+                    return ""
+                alive_app = choice(alive_apps)
+                counter = 0
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.shunned:
+                    counter+=1
+                    if counter == 30:
+                        return ""
+                    alive_app = choice(alive_apps)
+                text = text.replace("rsh_a", str(alive_app.name))
+            if "rsh_w" in text:
+                alive_apps = get_alive_warriors(Cat)
+                if len(alive_apps) < 1:
+                    return ""
+                alive_app = choice(alive_apps)
+                counter = 0
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.shunned:
+                    counter+=1
+                    if counter == 30:
+                        return ""
+                    alive_app = choice(alive_apps)
+                text = text.replace("rsh_w", str(alive_app.name))
+            if "rsh_m" in text:
+                alive_apps = get_alive_meds(Cat)
+                if len(alive_apps) < 1:
+                    return ""
+                alive_app = choice(alive_apps)
+                counter = 0
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.shunned:
+                    counter+=1
+                    if counter == 30:
+                        return ""
+                    alive_app = choice(alive_apps)
+                text = text.replace("rsh_m", str(alive_app.name))
+            if "rsh_d" in text:
+                alive_apps = get_alive_mediators(Cat)
+                if len(alive_apps) < 1:
+                    return ""
+                alive_app = choice(alive_apps)
+                counter = 0
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.shunned:
+                    counter+=1
+                    if counter == 30:
+                        return ""
+                    alive_app = choice(alive_apps)
+                text = text.replace("rsh_d", str(alive_app.name))
+            if "rsh_q" in text:
+                alive_apps = get_alive_queens(Cat)
+                if len(alive_apps) < 1:
+                    return ""
+                alive_app = choice(alive_apps)
+                counter = 0
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.shunned:
+                    counter+=1
+                    if counter == 30:
+                        return ""
+                    alive_app = choice(alive_apps)
+                text = text.replace("rsh_q", str(alive_app.name))
+            if "rsh_e" in text:
+                alive_apps = get_alive_elders(Cat)
+                if len(alive_apps) < 1:
+                    return ""
+                alive_app = choice(alive_apps)
+                counter = 0
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID or not alive_app.shunned:
+                    alive_app = choice(alive_apps)
+                    counter+=1
+                    if counter==30:
+                        return ""
+                text = text.replace("rsh_e", str(alive_app.name))
+            if "sh_d" in text:
+                random_cat = choice(self.get_living_cats())
+                counter = 0
+                while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID or random_cat.status != "deputy" or not random_cat.shunned >0:
+                    if counter == 30:
+                        return ""
+                    random_cat = choice(self.get_living_cats())
+                    counter +=1
+                text = text.replace("sh_d", str(random_cat.name))
+            if "sh_l" in text:
+                random_cat = choice(self.get_living_cats())
+                counter = 0
+                while random_cat.ID == game.clan.your_cat.ID or random_cat.ID == cat.ID or random_cat.status != "leader" or not random_cat.shunned >0:
+                    if counter == 30:
+                        return ""
+                    random_cat = choice(self.get_living_cats())
+                    counter +=1
+                text = text.replace("sh_l", str(random_cat.name))
+
             if "y_s" in text:
                 if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
                     return ""
@@ -1240,6 +1363,13 @@ class TalkScreen(Screens):
                 if len(game.clan.your_cat.apprentice) == 0:
                     return ""
                 text = text.replace("y_a", str(Cat.fetch_cat(choice(game.clan.your_cat.apprentice)).name))
+            if "t_a" in text:
+                if len(cat.apprentice) == 0:
+                    return ""
+                their_app = Cat.fetch_cat(choice(cat.apprentice))
+                if their_app.ID == game.clan.your_cat.ID:
+                    return ""
+                text = text.replace("t_a", str(Cat.fetch_cat(choice(cat.apprentice)).name))
             if "y_l" in text:
                 if len(game.clan.your_cat.inheritance.get_siblings()) == 0:
                     return ""

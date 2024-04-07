@@ -1080,12 +1080,12 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
-        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.ID not in game.clan.unknown_cats:
+        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.ID not in game.clan.unknown_cats and not self.the_cat.outside and not game.clan.your_cat.outside:
             cat_dead_conditions = self.the_cat.dead and (game.clan.your_cat.dead or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) or game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST))
             cat_alive_skills_condition = not self.the_cat.dead and (self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) or self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) or self.the_cat.skills.meets_skill_requirement(SkillPath.GHOST))
             
             if cat_dead_conditions or cat_alive_skills_condition:
-                if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
+                if self.the_cat.status not in ['mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                     button_position = (726, 220)
                 else:
                     button_position = (662, 220)

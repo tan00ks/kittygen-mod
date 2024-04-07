@@ -671,33 +671,11 @@ class Events:
                 elif birth_type == BirthType.TWO_PARENTS:
                     parent1 = pick_valid_parent()
                     parent2 = pick_valid_parent(parent1)
-
                     parent1.set_mate(parent2)
 
                 elif birth_type == BirthType.ONE_ADOPTIVE_PARENT:
-                    thought = f"Is glad that kits are safe"
-                    parent1 = create_new_cat(Cat, Relationship,
-                                                status=random.choice(["loner", "kittypet"]),
-                                                alive=False,
-                                                thought=thought,
-                                                age=random.randint(15,120),
-                                                outside=True)[0]
-                    parent2 = create_new_cat(Cat, Relationship,
-                                                status=random.choice(["loner", "kittypet"]),
-                                                alive=False,
-                                                thought=thought,
-                                                age=random.randint(15,120),
-                                                outside=True)[0]
-                    if not game.clan.clan_settings["same sex birth"]:
-                        if parent1.gender == parent2.gender:
-                            if parent1.gender == "female":
-                                parent1.gender = "male"
-                            else:
-                                parent1.gender = "female"
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parents = [adoptive_parent1.ID]
-
-                elif birth_type == BirthType.TWO_ADOPTIVE_PARENTS:
                     thought = f"Is glad that kits are safe"
                     parent1 = create_new_cat(Cat, Relationship,
                                                 status=random.choice(["loner", "kittypet"]),
@@ -717,10 +695,32 @@ class Events:
                                 parent1.gender = "male"
                             else:
                                 parent1.gender = "female"
+                
+
+                elif birth_type == BirthType.TWO_ADOPTIVE_PARENTS:
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parent2 = pick_valid_parent(adoptive_parent1)
                     adoptive_parent1.set_mate(adoptive_parent2)
                     adoptive_parents = [adoptive_parent1.ID, adoptive_parent2.ID]
+                    thought = f"Is glad that kits are safe"
+                    parent1 = create_new_cat(Cat, Relationship,
+                                                status=random.choice(["loner", "kittypet"]),
+                                                alive=False,
+                                                thought=thought,
+                                                age=random.randint(15,120),
+                                                outside=True)[0]
+                    parent2 = create_new_cat(Cat, Relationship,
+                                                status=random.choice(["loner", "kittypet"]),
+                                                alive=False,
+                                                thought=thought,
+                                                age=random.randint(15,120),
+                                                outside=True)[0]
+                    if not game.clan.clan_settings["same sex birth"]:
+                        if parent1.gender == parent2.gender:
+                            if parent1.gender == "female":
+                                parent1.gender = "male"
+                            else:
+                                parent1.gender = "female"
 
                 elif birth_type == BirthType.ONE_OUTSIDER_PARENT:
                     parent1 = create_new_cat(Cat, Relationship,
@@ -3418,7 +3418,7 @@ class Events:
                         else:
                             text = text + f" They will not be allowed to be a {cat.status} and will instead rejoin the Clan as a {newstatus}."
                         
-                        cat.status = newstatus
+                        cat.status_change(newstatus)
 
                 elif cat.status == 'kitten' and cat.moons > 5:
                     self.generate_app_ceremony()
@@ -3444,7 +3444,7 @@ class Events:
 
 
 
-                game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
+                game.cur_events_list.insert(0, Single_Event(text, "alert", involved_cats))
 
             elif fate in [3, 4, 7, 12]:
                 cat.outside = True
@@ -3462,7 +3462,7 @@ class Events:
                         text = random.choice([
                             f"{cat.name} knows they'll never be forgiven. Packing up their favourite feathers and stones from their nest, they slip out of camp in the night, sure that none of their Clanmates will mind the abscence.",
                             f"Sick of being treated so poorly, {cat.name} leaves camp one day, not turning around to see if anyone has noticed, and vows never to come back."])
-                    game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
+                    game.cur_events_list.insert(0, Single_Event(text, "alert", involved_cats))
 
             else:
                 cat.shunned = 0
@@ -3473,7 +3473,7 @@ class Events:
                     text = random.choice([
                     f"{game.clan.name}Clan has decided that they don't feel safe with {cat.name} around after what they did. {cat.name} has been exiled.",
                     f"{game.clan.leader.name} knows that {cat.name} does not plan to atone. They have been exiled from {game.clan.name}Clan for their crimes."])
-                game.cur_events_list.insert(0, Single_Event(text, "misc", involved_cats))
+                game.cur_events_list.insert(0, Single_Event(text, "alert", involved_cats))
 
     def coming_out(self, cat):
         """turnin' the kitties trans..."""

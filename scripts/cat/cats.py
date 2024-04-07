@@ -589,7 +589,8 @@ class Cat():
 
         nice = you.personality.trait in ["charismatic", "confident", "flexible", "witty", "loyal", "responsible", "faithful", "compassionate", "sincere", "sweet", "polite"]
         naughty = you.personality.trait in ["bloodthirsty", "sneaky", "manipulative", "strange", "rebellious", "troublesome", "stoic", "aloof", "cunning"]
-
+        acceptchance = randint(1,5)
+        killchance = randint(1,50)
         if you.exiled:
 
             if num_victims == 0:
@@ -652,9 +653,8 @@ class Cat():
 
         elif you.status in ["loner", "rogue", "kittypet", "former Clancat"]:
         # can only be former clancat rn but this is just to cover bases 4 the future
-            
             if num_victims == 0:
-                acceptchance = randint (1,3)
+                acceptchance = randint(1,3)
                 killchance = randint(1,50)
             
             elif num_victims == 1: # one victim
@@ -735,7 +735,7 @@ class Cat():
             Cat.add_to_clan(you)
 
         elif killchance == 1:
-            event_text = event_text + f"The patrol immediately meets you with hostility, and when you ask to visit camp, the more vengeful among the group instantly attack you, spitting at you that you don't desevre to step foot on {game.clan.name}Clan's territory after what you did. As your vision begins to blur, the last thing you hear is a former Clanmate damning you to the Dark Forest."
+            event_text = event_text + f"The patrol immediately meets you with hostility, and when you ask to visit camp, the more vengeful among the group instantly attack you, spitting at you that you don't deserve to step foot on {game.clan.name}Clan's territory after what you did. As your vision begins to blur, the last thing you hear is a former Clanmate damning you to the Dark Forest."
             Cat.die(you)
             if you.moons > 119:
                 you.status_change("elder")
