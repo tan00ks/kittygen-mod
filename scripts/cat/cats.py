@@ -474,7 +474,7 @@ class Cat():
         if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled) and body is not None:
             self.grief(body)
 
-        if not self.outside and self.status not in ["loner", "kittypet", "rogue"]:
+        if not self.outside and self.status not in ["loner", "kittypet", "rogue", "former Clancat"]:
             #^^ seems redundant but fixes a bug where, if following the DF before the mc 
             # is born, and mc is not clanborn, their birth parent will be in both the DF and UR
             Cat.dead_cats.append(self)
