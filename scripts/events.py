@@ -671,7 +671,6 @@ class Events:
                 elif birth_type == BirthType.TWO_PARENTS:
                     parent1 = pick_valid_parent()
                     parent2 = pick_valid_parent(parent1)
-
                     parent1.set_mate(parent2)
 
                 elif birth_type == BirthType.ONE_ADOPTIVE_PARENT:
