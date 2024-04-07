@@ -623,7 +623,6 @@ class Events:
             possible_birth_types.remove(BirthType.ONE_PARENT)
             possible_birth_types.remove(BirthType.ONE_OUTSIDER_PARENT)
         birth_type = random.choice(possible_birth_types)
-        birth_type = BirthType.TWO_ADOPTIVE_PARENTS
 
         def create_siblings(parent1, parent2, adoptive_parents):
             '''Creates siblings for your cat'''
@@ -675,29 +674,8 @@ class Events:
                     parent1.set_mate(parent2)
 
                 elif birth_type == BirthType.ONE_ADOPTIVE_PARENT:
-                    thought = f"Is glad that kits are safe"
-                    parent1 = create_new_cat(Cat, Relationship,
-                                                status=random.choice(["loner", "kittypet"]),
-                                                alive=False,
-                                                thought=thought,
-                                                age=random.randint(15,120),
-                                                outside=True)[0]
-                    parent2 = create_new_cat(Cat, Relationship,
-                                                status=random.choice(["loner", "kittypet"]),
-                                                alive=False,
-                                                thought=thought,
-                                                age=random.randint(15,120),
-                                                outside=True)[0]
-                    if not game.clan.clan_settings["same sex birth"]:
-                        if parent1.gender == parent2.gender:
-                            if parent1.gender == "female":
-                                parent1.gender = "male"
-                            else:
-                                parent1.gender = "female"
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parents = [adoptive_parent1.ID]
-
-                elif birth_type == BirthType.TWO_ADOPTIVE_PARENTS:
                     thought = f"Is glad that kits are safe"
                     parent1 = create_new_cat(Cat, Relationship,
                                                 status=random.choice(["loner", "kittypet"]),
@@ -717,13 +695,32 @@ class Events:
                                 parent1.gender = "male"
                             else:
                                 parent1.gender = "female"
+                
+
+                elif birth_type == BirthType.TWO_ADOPTIVE_PARENTS:
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parent2 = pick_valid_parent(adoptive_parent1)
-                    if not adoptive_parent2:
-                        game.clan.remove_cat(parent1)
-                        game.clan.remove_cat(parent2)
                     adoptive_parent1.set_mate(adoptive_parent2)
                     adoptive_parents = [adoptive_parent1.ID, adoptive_parent2.ID]
+                    thought = f"Is glad that kits are safe"
+                    parent1 = create_new_cat(Cat, Relationship,
+                                                status=random.choice(["loner", "kittypet"]),
+                                                alive=False,
+                                                thought=thought,
+                                                age=random.randint(15,120),
+                                                outside=True)[0]
+                    parent2 = create_new_cat(Cat, Relationship,
+                                                status=random.choice(["loner", "kittypet"]),
+                                                alive=False,
+                                                thought=thought,
+                                                age=random.randint(15,120),
+                                                outside=True)[0]
+                    if not game.clan.clan_settings["same sex birth"]:
+                        if parent1.gender == parent2.gender:
+                            if parent1.gender == "female":
+                                parent1.gender = "male"
+                            else:
+                                parent1.gender = "female"
 
                 elif birth_type == BirthType.ONE_OUTSIDER_PARENT:
                     parent1 = create_new_cat(Cat, Relationship,
