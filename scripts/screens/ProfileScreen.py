@@ -2666,6 +2666,10 @@ class ProfileScreen(Screens):
 
     def update_disabled_buttons_and_text(self):
         """Sets which tab buttons should be disabled. This is run when the cat is switched. """
+        if self.the_cat.moons == 0:
+            self.accessories_tab_button.disable()
+        else:
+            self.accessories_tab_button.enable()
         if self.open_tab is None:
             pass
         elif self.open_tab == 'relations':

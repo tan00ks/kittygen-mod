@@ -3368,6 +3368,10 @@ class Events:
     
     def exile_or_forgive(self, cat):
         """ a shunned cat becoming exiled, or being forgiven"""
+        resource_dir = "resources/dicts/events/lifegen_events/"
+        with open(f"{resource_dir}ceremonies.json",
+                  encoding="ascii") as read_file:
+            self.b_txt = ujson.loads(read_file.read())
         if cat.shunned > 2:
             involved_cats = []
             if game.clan.your_cat.ID == cat.ID:
