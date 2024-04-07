@@ -233,7 +233,7 @@ class Clan():
         for i in key_copy:  # Going through all currently existing cats
             # cat_class is a Cat-object
             not_found = True
-            for x in self.starting_members:
+            for x in [self.leader, self.deputy, self.medicine_cat] + self.starting_members:
                 if Cat.all_cats[i] == x:
                     self.add_cat(Cat.all_cats[i])
                     not_found = False
