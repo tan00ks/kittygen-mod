@@ -1308,7 +1308,7 @@ class Cat():
                     if kitty.ID not in game.clan.darkforest_cats:
                         continue
                 # guides aren't allowed here
-                if kitty == game.clan.instructor or game.clan.demon:
+                if kitty == game.clan.instructor or kitty == game.clan.demon:
                     continue
                 else:
                     dead_relations.append(rel)
@@ -1440,7 +1440,7 @@ class Cat():
                     continue
                 if "unknown_blessing" in tags:
                     continue
-                if "guide" in tags and giver_cat != (game.clan.instructor or game.clan.demon):
+                if "guide" in tags and giver_cat != game.clan.instructor and giver_cat != game.clan.demon:
                     continue
                 if game.clan.age != 0 and "new_clan" in tags:
                     continue
@@ -2694,7 +2694,7 @@ class Cat():
                 trust = 0
                 if game.settings['random relation']:
                     if game.clan:
-                        if the_cat == game.clan.instructor or game.clan.demon:
+                        if the_cat == game.clan.instructor or the_cat == game.clan.demon:
                             pass
                         elif randint(1, 20) == 1 and romantic_love < 1:
                             dislike = randint(10, 25)

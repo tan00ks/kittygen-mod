@@ -749,11 +749,9 @@ class Events:
 
                 return birth_type, parent1, parent2, adoptive_parents
             except Exception as e:
-                print("Error in birth event" + str(e))
                 birth_type = random.choice(list(BirthType))
-                get_parents(birth_type)
+                return get_parents(birth_type)
 
-            return birth_type, None, None, []
 
 
         def handle_backstory(siblings):

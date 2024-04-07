@@ -321,7 +321,7 @@
             "... What does that mean?"
         ]
     ],
-    "assertivekit_1": [
+    "assertivekit_01": [
         [
             "no_kit",
             "assertive"
@@ -4012,6 +4012,37 @@
         [
             "It's really nice up here, but I miss the nursery.",
             "How is it? Has it changed? Is my nest still there?"
+]],
+    "sc_sc_kittens": [
+        [
+            "kitten",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "Hi, y_c! Wanna play?"
+        ]
+    ],
+    "sc_kitten2": [
+        [
+            "any",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "I bet I'm a brighter star than you are!",
+            "[You ask t_c what they mean.]",
+            "Well, we all appear as stars to c_nClan cats, right?"
+        ]
+    ],
+    "sc_kitten3": [
+        [
+            "any",
+            "they_sc"
+        ],
+        [
+            "I wish I had more time with c_nClan...",
+            "Make sure you enjoy it while you can, okay y_c?"
         ]
     ]
 }

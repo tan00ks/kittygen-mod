@@ -1114,7 +1114,7 @@ class PatrolOutcome():
             if "oldstarclan" in attribute_list:
                     chosen_backstory = choice(["oldstarclan1", "oldstarclan2", "oldstarclan3"])
             else:
-                chosen_backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
+                chosen_backstory = choice(BACKSTORIES["backstory_categories"]["df_backstories"])
         else:
             if status in ("kitten", "newborn"):
                 chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
