@@ -822,10 +822,20 @@ class TalkScreen(Screens):
                 if cluster4:
                     clusters_2 += f"and {cluster4}"
                 try:
+                    add_on = ""
+                    add_on2 = ""
+                    if you.dead and you.df:
+                        add_on = " df"
+                    elif you.dead and not you.df:
+                        add_on = " sc"
+                    if cat.dead and cat.df:
+                        add_on2 = " df"
+                    elif cat.dead and not cat.df:
+                        add_on2 = " sc"
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
-                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status)
-                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status + add_on)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status + add_on)
                 except Exception as e:
                     print(e)
             texts_list['general'] = possible_texts['general']
