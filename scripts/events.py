@@ -1036,18 +1036,19 @@ class Events:
     
     def generate_events(self):
         resource_dir = "resources/dicts/events/lifegen_events/events/"
-        if game.clan.your_cat.dead and not game.clan.your_cat.df:
-            resource_dir = "resources/dicts/events/lifegen_events/events_dead_sc/"
-        elif game.clan.your_cat.dead and game.clan.your_cat.df:
-            resource_dir = "resources/dicts/events/lifegen_events/events_dead_df/"
-        if game.clan.your_cat.shunned > 0:
+        
+        if game.clan.your_cat.dead:
+            if not game.clan.your_cat.df and not game.clan.your_cat.outside:
+                resource_dir = "resources/dicts/events/lifegen_events/events_dead_sc/"
+            elif game.clan.your_cat.df and not game.clan.your_cat.outside:
+                resource_dir = "resources/dicts/events/lifegen_events/events_dead_df/"
+
+        elif game.clan.your_cat.shunned > 0 and not game.clan.your_cat.outside and not game.clan.your_cat.dead:
             resource_dir = "resources/dicts/events/lifegen_events/shunned/"
 
-        if game.clan.your_cat.status == "former Clancat":
-            status = "former_clancat"
         
         all_events = {}
-        if game.clan.your_cat.status != 'newborn' or (game.clan.your_cat.status == "newborn" and game.clan.your_cat.dead):
+        if game.clan.your_cat.status != 'exiled' and game.clan.your_cat.status != 'newborn' or (game.clan.your_cat.status == "newborn" and game.clan.your_cat.dead):
             with open(f"{resource_dir}{game.clan.your_cat.status}.json",
                     encoding="ascii") as read_file:
                 all_events = ujson.loads(read_file.read())
