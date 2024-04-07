@@ -475,7 +475,7 @@ class Cat():
             self.grief(body)
 
         if not self.outside and self.status not in ["loner", "kittypet", "rogue", "former Clancat"]:
-            #^^ seems redundant but fixes a bug where, if following the DF before the mc 
+            #^^ seems redundant but fixes a bug where, if following the DF before the mc
             # is born, and mc is not clanborn, their birth parent will be in both the DF and UR
             Cat.dead_cats.append(self)
             if game.clan.followingsc is False:
