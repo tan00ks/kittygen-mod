@@ -143,7 +143,9 @@
     "former_clancat_backstories": "originally from another Clan",
     "orphaned_backstories": "orphaned",
     "abandoned_backstories": "abandoned",
-    "dead_cat_backstories": "ancient spirit"
+    "dead_cat_backstories": "ancient spirit",
+    "starclan_backstories": "ancient spirit",
+    "df_backstories": "ancient spirit"
   },
   "backstory_categories": {
     "dead_cat_backstories": [

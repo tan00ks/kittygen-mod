@@ -3879,5 +3879,27 @@
             "W-who are you?",
             "You don't smell like you're from c_nClan!"
         ]
+    ],
+    "sc_sc_kittens": [
+        [
+            "kitten",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "Hi, y_c! Wanna play?"
+        ]
+    ],
+    "sc_kitten2": [
+        [
+            "any",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "I bet I'm a brighter star than you are!",
+            "[You ask t_c what they mean.]",
+            "Well, we all appear as stars to c_nClan cats, right?"
+        ]
     ]
 }
