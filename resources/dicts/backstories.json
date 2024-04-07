@@ -153,12 +153,17 @@
       "dead4",
       "dead5",
       "dead6",
-      "dead7",
       "dead8",
-      "dead9",
       "dead10",
       "dead11",
-      "dead12",
+      "dead12"
+    ],
+    "starclan_backstories": [
+
+    ],
+    "df_backstories": [
+      "dead7",
+      "dead9",
       "dead13",
       "dead14",
       "oldstarclan1",

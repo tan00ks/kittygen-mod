@@ -221,7 +221,7 @@ class Clan():
         self.demon.df = True
         self.demon.dead = True
         self.demon.dead_for = randint(20, 200)
-        self.demon.backstory = choice(BACKSTORIES["backstory_categories"]["dead_cat_backstories"])
+        self.demon.backstory = choice(BACKSTORIES["backstory_categories"]["df_backstories"])
         self.add_cat(self.demon)
         self.add_to_darkforest(self.demon)
         self.all_clans = []
