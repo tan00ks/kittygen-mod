@@ -198,7 +198,7 @@ class Events:
                 if not ghost.dead_for > 1:
                     ghost_names.append(str(ghost.name))
                 else:
-                    return # keeps encountered DF cats out of death events
+                    continue # keeps encountered DF cats out of death events
             insert = adjust_list_text(ghost_names)
 
             if len(Cat.dead_cats) > 1 and game.clan.game_mode != 'classic':
@@ -313,7 +313,7 @@ class Events:
         new_list = []
         other_list = []
         for i in game.cur_events_list:
-            if str(game.clan.your_cat.name) in i.text or "alert" in i.types and i not in new_list:
+            if (str(game.clan.your_cat.name) in i.text or "alert" in i.types) and i not in new_list:
                 new_list.append(i)
             elif i not in other_list and i not in new_list:
                 other_list.append(i)
