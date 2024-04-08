@@ -2678,5 +2678,111 @@
             "We need to watch over those we left behind.",
             "Do you understand?"
         ]
+    ],
+    "dead_yougrieving1": [
+        [
+            "they_sc",
+            "kitten",
+            "you_grieving",
+            "dead_close",
+            "they_adult"
+        ],
+        [
+            "Rest, little one. You've been through a lot of stress.",
+            "d_c is watching over you, and we're both very excited to see who you grow up to be."
+        ]
+    ],
+    "dead_yougrieving2": [
+        [
+            "they_sc",
+            "kitten",
+            "you_grieving",
+            "dead_close",
+            "they_kitten"
+        ],
+        [
+            "You look sad, y_c. Are you okay?",
+            "Aw. Well, do you want me to sit with you?",
+            "[t_c presses their pelt against yours. While their sparkly fur holds no warmth, you still appreciate their presence.]"
+        ]
+    ],
+    "dead_yougrieving3": [
+        [
+            "they_sc",
+            "kitten",
+            "you_grieving",
+            "dead_close"
+        ],
+        [
+            "[You're having a bad day today. t_c comforts you, their starry tongue rasping over your head until you fall asleep.]"
+        ]
+    ],
+    "dead_yougrieving4": [
+        [
+            "they_df",
+            "kitten",
+            "you_grieving",
+            "dead_close",
+            "they_adult"
+        ],
+        [
+            "Boo!",
+            "Oh, you're no fun. Are you too sad to be scared?",
+            "Fine. I'll come back later."
+        ]
+    ],
+    "dead_yougrieving5": [
+        [
+            "they_df",
+            "kitten",
+            "you_grieving",
+            "dead_close",
+            "they_kitten"
+        ],
+        [
+            "[t_c plays whatever games you want all day to distract you from your sadness.]",
+            "[They might be a Dark Forest cat, but they're very nice!]"
+        ]
+    ],
+    "dead_yougrieving6": [
+        [
+            "they_df",
+            "kitten",
+            "you_grieving",
+            "dead_close"
+        ],
+        [
+            "[When t_c sees how upset you are, they recede into the shadows.]"
+        ]
+    ],
+    "dead_yougrieving7": [
+        [
+            "they_df",
+            "kitten",
+            "you_grieving",
+            "dead_close",
+            "they_kitten",
+            "grievingthem"
+        ],
+        [
+            "I miss you too, y_c!",
+            "You don't wanna come join me here, though, trust me.",
+            "Just stay in the Clan. It'll be easier for us to visit this way!"
+        ]
+    ],
+    "dead_yougrieving8": [
+        [
+            "they_sc",
+            "kitten",
+            "you_grieving",
+            "dead_close",
+            "grievingthem"
+        ],
+        [
+            "y_c! I can actually talk to you!",
+            "You must be super special.",
+            "You already look bigger than the last time I saw you. I can't believe you're growing up without me!",
+            "No, no, I'm not mad. It's just... strange."
+        ]
     ]
 }

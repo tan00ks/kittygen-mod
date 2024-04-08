@@ -330,7 +330,7 @@ class Events:
         with open(f"{resource_dir}df.json",
                   encoding="ascii") as read_file:
             self.df_txt = ujson.loads(read_file.read())
-        if not game.clan.your_cat.dead and game.clan.your_cat.status != 'exiled':
+        if not game.clan.your_cat.dead and game.clan.your_cat.status != 'exiled' and not game.clan.your_cat.outside:
             if game.clan.your_cat.moons == 0:
                 self.generate_birth_event()
             elif game.clan.your_cat.moons < 6:
@@ -657,7 +657,7 @@ class Events:
                 parent2 = None
                 adoptive_parents = []
                 if birth_type == BirthType.NO_PARENTS:
-                    thought = f"Is glad that kits are safe"
+                    thought = f"Is glad that their kits are safe"
                     parent1 = create_new_cat(Cat, Relationship,
                                                 status=random.choice(["loner", "kittypet"]),
                                                 alive=False,
@@ -676,7 +676,7 @@ class Events:
                 elif birth_type == BirthType.ONE_ADOPTIVE_PARENT:
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parents = [adoptive_parent1.ID]
-                    thought = f"Is glad that kits are safe"
+                    thought = f"Is glad that their kits are safe"
                     parent1 = create_new_cat(Cat, Relationship,
                                                 status=random.choice(["loner", "kittypet"]),
                                                 alive=False,
@@ -702,7 +702,7 @@ class Events:
                     adoptive_parent2 = pick_valid_parent(adoptive_parent1)
                     adoptive_parent1.set_mate(adoptive_parent2)
                     adoptive_parents = [adoptive_parent1.ID, adoptive_parent2.ID]
-                    thought = f"Is glad that kits are safe"
+                    thought = f"Is glad that their kits are safe"
                     parent1 = create_new_cat(Cat, Relationship,
                                                 status=random.choice(["loner", "kittypet"]),
                                                 alive=False,
