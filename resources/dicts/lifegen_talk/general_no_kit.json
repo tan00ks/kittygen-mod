@@ -14841,5 +14841,54 @@
             "Whoa, a living cat? What do you need from me?",
             "You don't seem to be doing too well... You probably shouldn't be talking to any of us."
         ]
+    ],
+    "dead_youshunned1":
+    [
+        [
+            "they_df",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "Clanmates ignoring you, huh?",
+            "Get used to it. That's just a little taste fo what you're in for when you get here."
+        ]
+    ],
+    "dead_youshunned2":
+    [
+        [
+            "they_sc",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "How could someone with such a gift... turn out to be so evil?",
+            "No, I don't want to talk to you anymore. Find a Dark Forest cat to spend your time with."
+        ]
+    ],
+    "dead_youshunned3":
+    [
+        [
+            "they_df",
+            "you_shunned",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "[t_c laughs.]",
+            "Having a bad moon, huh?"
+        ]
+    ],
+    "dead_youshunned4":
+    [
+        [
+            "they_sc",
+            "you_shunned",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "You poor thing..."
+        ]
     ]
 }
