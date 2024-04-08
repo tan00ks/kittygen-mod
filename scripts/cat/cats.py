@@ -1570,9 +1570,6 @@ class Cat():
 
     def one_moon(self):
         """Handles a moon skip for an alive cat. """
-        if self.status == "kitten" and self.moons > 5:
-            print("something's wrong")
-        
         old_age = self.age
         self.moons += 1
         if self.moons == 1 and self.status == "newborn":

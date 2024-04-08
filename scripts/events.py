@@ -1117,21 +1117,24 @@ class Events:
                             break
 
     def generate_app_ceremony(self):
-        game.clan.your_cat.status_change(game.clan.your_cat.status)
-        ceremony_txt = ""
-        if game.clan.your_cat.mentor:
-            ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony'])
-        else:
-            ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony no mentor'])
-        ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
-        ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
         try:
-            ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+            game.clan.your_cat.status_change(game.clan.your_cat.status)
+            ceremony_txt = ""
+            if game.clan.your_cat.mentor:
+                ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony'])
+            else:
+                ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony no mentor'])
+            ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
+            ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
+            try:
+                ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+            except:
+                ceremony_txt = ceremony_txt.replace('c_l', "a cat")
+            if game.clan.your_cat.mentor:
+                ceremony_txt = ceremony_txt.replace('m_n', str(Cat.all_cats[game.clan.your_cat.mentor].name))
+            game.cur_events_list.append(Single_Event(ceremony_txt))
         except:
-            ceremony_txt = ceremony_txt.replace('c_l', "a cat")
-        if game.clan.your_cat.mentor:
-            ceremony_txt = ceremony_txt.replace('m_n', str(Cat.all_cats[game.clan.your_cat.mentor].name))
-        game.cur_events_list.append(Single_Event(ceremony_txt))
+            print("ERROR with app ceremony")
                 
     def generate_ceremony(self):
         if game.clan.your_cat.former_mentor:

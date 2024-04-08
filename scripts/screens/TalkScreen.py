@@ -849,10 +849,18 @@ class TalkScreen(Screens):
                         add_on = " df"
                     elif you.dead and not you.df:
                         add_on = " sc"
+                    if "grief stricken" in you.illnesses:
+                        add_on += " g"
+                    if you.shunned > 0:
+                        add_on += " sh"
                     if cat.dead and cat.df:
                         add_on2 = " df"
                     elif cat.dead and not cat.df:
                         add_on2 = " sc"
+                    if "grief stricken" in cat.illnesses:
+                        add_on2 += " g"
+                    if you.shunned > 0:
+                        add_on2 += " sh"
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status + add_on)
