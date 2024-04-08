@@ -4013,7 +4013,8 @@
         [
             "It's really nice up here, but I miss the nursery.",
             "How is it? Has it changed? Is my nest still there?"
-]],
+        ]
+    ],
     "sc_sc_kittens": [
         [
             "kitten",
@@ -4094,6 +4095,41 @@
         [
             "y_c! Are you really here? The queens told me you went to StarClan!",
             "S-so, why do you look so scary?"
+        ]
+    ],
+    "sc_sc_kitten_1": [
+        [
+            "they_sc",
+            "you_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "We have an eternity to play together!"
+        ]
+    ],
+    "sc_sc_kitten_2": [
+        [
+            "they_sc",
+            "you_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "[t_c gazes down at their tiny paws.]",
+            "Do you think t_p remembers me?"
+        ]
+    ],
+    "sc_sc_kitten_3": [
+        [
+            "they_sc",
+            "you_sc",
+            "they_kitten",
+            "any"
+        ],
+        [
+            "[Brimming with energy, t_c bounces around you, their eyes alight.]",
+            "There's so much to see here! Have you explored all of it? Can you show me your favorite place?"
         ]
     ]
 }
