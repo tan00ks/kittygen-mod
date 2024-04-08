@@ -619,8 +619,12 @@ class MurderScreen(Screens):
                     (270, 270)), manager=MANAGER)
 
             info = self.selected_cat.status + "\n" + \
-                   self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n" + \
-                   self.selected_cat.skills.skill_string(short=True)
+                   self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n"
+
+            if self.selected_cat.moons < 6:
+                info += "???"
+            else:
+                info += self.selected_cat.skills.skill_string(short=True)
             
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
                                                                                    scale(pygame.Rect((540, 325),
@@ -728,8 +732,12 @@ class MurderScreen(Screens):
                     (300, 300)), manager=MANAGER)
 
             info = self.selected_cat.status + "\n" + \
-                   self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n" + \
-                   self.selected_cat.skills.skill_string(short=True)
+                   self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n"
+            
+            if self.selected_cat.moons < 6:
+                info += "???"
+            else:
+                info += self.selected_cat.skills.skill_string(short=True)
             
             self.selected_details["selected_info"] = pygame_gui.elements.UITextBox(info,
                                                                                    scale(pygame.Rect((540, 325),

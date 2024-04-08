@@ -526,9 +526,9 @@ class TalkScreen(Screens):
                 if not has_role:
                     continue
 
-            if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
+            if "they_grieving" not in tags and "grief stricken" in cat.illnesses and not cat.dead:
                 continue
-            if "they_grieving" in tags and "grief stricken" not in cat.illnesses:
+            if "they_grieving" in tags and "grief stricken" not in cat.illnesses and not cat.dead:
                 continue
 
             # Cluster tags
@@ -595,7 +595,7 @@ class TalkScreen(Screens):
             if "they_pregnant" in tags and "pregnant" not in cat.injuries:
                 continue
 
-            if "grief stricken" not in you.illnesses and "you_grieving" in tags:
+            if "grief stricken" not in you.illnesses and "you_grieving" in tags and not you.dead:
                 continue
 
             if "starving" not in you.illnesses and "you_starving" in tags:
@@ -849,10 +849,18 @@ class TalkScreen(Screens):
                         add_on = " df"
                     elif you.dead and not you.df:
                         add_on = " sc"
+                    if "grief stricken" in you.illnesses:
+                        add_on += " g"
+                    if you.shunned > 0:
+                        add_on += " sh"
                     if cat.dead and cat.df:
                         add_on2 = " df"
                     elif cat.dead and not cat.df:
                         add_on2 = " sc"
+                    if "grief stricken" in cat.illnesses:
+                        add_on2 += " g"
+                    if you.shunned > 0:
+                        add_on2 += " sh"
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status + add_on)
@@ -919,7 +927,29 @@ class TalkScreen(Screens):
         text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
         while text_chosen_key not in texts_list.keys():
             text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
-        text = texts_list[text_chosen_key][1]
+        try:
+            text = texts_list[text_chosen_key][1]
+        except:
+            possible_texts = None
+            cluster1, cluster2 = get_cluster(cat.personality.trait)
+            cluster3, cluster4 = get_cluster(you.personality.trait)
+            with open(f"{resource_dir}general.json", 'r') as read_file:
+                possible_texts = ujson.loads(read_file.read())
+                clusters_1 = f"{cluster1} "
+                if cluster2:
+                    clusters_1 += f"and {cluster2}"
+                clusters_2 = f"{cluster3} "
+                if cluster4:
+                    clusters_2 += f"and {cluster4}"
+                try:
+                    possible_texts['general'][1][0].replace("c_1", clusters_1)
+                    possible_texts['general'][1][0].replace("c_2", clusters_2)
+                    possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
+                    possible_texts['general'][1][0].replace("r_2", cat.status)
+                except Exception as e:
+                    print(e)
+
+            return possible_texts['general'][1]
         new_text = self.get_adjusted_txt(text, cat)
         counter = 0
         while not new_text:
@@ -1464,17 +1494,20 @@ class TalkScreen(Screens):
             if "y_m" in text:
                 if game.clan.your_cat.mate is None or len(game.clan.your_cat.mate) == 0 or cat.ID in game.clan.your_cat.mate:
                     return ""
-                text = text.replace("y_m", str(Cat.fetch_cat(choice(game.clan.your_cat.mate)).name))
+                mate = Cat.fetch_cat(choice(game.clan.your_cat.mate))
+                if mate.dead or mate.outside:
+                    return ""
+                text = text.replace("y_m", str(mate.name))
             if "t_mn" in text:
                 if cat.mentor is None:
                     return ""
                 text = text.replace("t_mn", str(Cat.fetch_cat(cat.mentor).name))
             if "tm_n" in text:
-                if cat.mentor is None:
+                if cat.mentor is None or cat.mentor == game.clan.your_cat.ID:
                     return ""
                 text = text.replace("tm_n", str(Cat.fetch_cat(cat.mentor).name))
             if "m_n" in text:
-                if game.clan.your_cat.mentor is None:
+                if game.clan.your_cat.mentor is None or game.clan.your_cat.mentor == cat.ID:
                     return ""
                 text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
             if "o_c" in text:

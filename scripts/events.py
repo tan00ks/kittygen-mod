@@ -198,7 +198,7 @@ class Events:
                 if not ghost.dead_for > 1:
                     ghost_names.append(str(ghost.name))
                 else:
-                    return # keeps encountered DF cats out of death events
+                    continue # keeps encountered DF cats out of death events
             insert = adjust_list_text(ghost_names)
 
             if len(Cat.dead_cats) > 1 and game.clan.game_mode != 'classic':
@@ -313,7 +313,7 @@ class Events:
         new_list = []
         other_list = []
         for i in game.cur_events_list:
-            if str(game.clan.your_cat.name) in i.text or "alert" in i.types and i not in new_list:
+            if (str(game.clan.your_cat.name) in i.text or "alert" in i.types) and i not in new_list:
                 new_list.append(i)
             elif i not in other_list and i not in new_list:
                 other_list.append(i)
@@ -1118,21 +1118,24 @@ class Events:
                             break
 
     def generate_app_ceremony(self):
-        game.clan.your_cat.status_change(game.clan.your_cat.status)
-        ceremony_txt = ""
-        if game.clan.your_cat.mentor:
-            ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony'])
-        else:
-            ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony no mentor'])
-        ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
-        ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
         try:
-            ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+            game.clan.your_cat.status_change(game.clan.your_cat.status)
+            ceremony_txt = ""
+            if game.clan.your_cat.mentor:
+                ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony'])
+            else:
+                ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony no mentor'])
+            ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
+            ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
+            try:
+                ceremony_txt = ceremony_txt.replace('c_l', str(game.clan.leader.name))
+            except:
+                ceremony_txt = ceremony_txt.replace('c_l', "a cat")
+            if game.clan.your_cat.mentor:
+                ceremony_txt = ceremony_txt.replace('m_n', str(Cat.all_cats[game.clan.your_cat.mentor].name))
+            game.cur_events_list.append(Single_Event(ceremony_txt))
         except:
-            ceremony_txt = ceremony_txt.replace('c_l', "a cat")
-        if game.clan.your_cat.mentor:
-            ceremony_txt = ceremony_txt.replace('m_n', str(Cat.all_cats[game.clan.your_cat.mentor].name))
-        game.cur_events_list.append(Single_Event(ceremony_txt))
+            print("ERROR with app ceremony")
                 
     def generate_ceremony(self):
         if game.clan.your_cat.former_mentor:
@@ -3391,6 +3394,9 @@ class Events:
             # these numbers are kind of crazy but i wanted to keep the one randint
             if fate in [1, 2, 5, 6, 10, 11]:
                 cat.shunned = 0
+                cat.exiled = False
+                cat.outside = False
+                cat.add_to_clan()
                 if cat.ID == game.clan.your_cat.ID:
                     text = "A Clan meeting is called one day, and your clanmates vote to forgive you for what you did."
                 else:
@@ -3439,9 +3445,9 @@ class Events:
                         else:
                             text = text + " They will not return as the Clan's leader."
                         if cat.moons < 119:
-                            cat.status = 'warrior'
+                            cat.status_change('warrior')
                         else:
-                            cat.status = 'elder'
+                            cat.status_change('elder')
 
 
 
