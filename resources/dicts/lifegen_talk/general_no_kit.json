@@ -14841,5 +14841,70 @@
             "Whoa, a living cat? What do you need from me?",
             "You don't seem to be doing too well... You probably shouldn't be talking to any of us."
         ]
+    ],
+    "sc_living_kitten": [
+        [
+            "you_sc",
+            "any"
+        ],
+        [
+            "Is it true that some StarClan cats are powerful enough to make the moon cover the sun?"
+        ]
+    ],
+    "shunned_sc": [
+        [
+            "you_sc",
+            "any",
+            "they_shunned"
+        ],
+        [
+            "I've made some mistakes, I admit it.",
+            "But do I deserve this? I don't!",
+            "Ah, you wouldn't understand..."
+        ]
+    ],
+    "shunned_df": [
+        [
+            "you_df",
+            "any",
+            "they_shunned"
+        ],
+        [
+            "I've made some mistakes, I admit it.",
+            "But do I deserve this? I don't!",
+            "You would know, wouldn't you, y_c?"
+        ]
+    ],
+    "they_shunned_grieving": [
+        [
+            "any",
+            "they_shunned",
+            "they_grieving"
+        ],
+        [
+            "No one deserves what I'm being put through."
+        ]
+    ],
+    "they_shunned_grieving2": [
+        [
+            "any",
+            "they_shunned",
+            "they_grieving",
+            "you_sc"
+        ],
+        [
+            "No one deserves what I'm being put through."
+        ]
+    ],
+    "they_shunned_grieving3": [
+        [
+            "any",
+            "they_shunned",
+            "they_grieving",
+            "you_df"
+        ],
+        [
+            "No one deserves what I'm being put through."
+        ]
     ]
 }

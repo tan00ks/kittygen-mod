@@ -526,9 +526,9 @@ class TalkScreen(Screens):
                 if not has_role:
                     continue
 
-            if "they_grieving" not in tags and "grief stricken" in cat.illnesses:
+            if "they_grieving" not in tags and "grief stricken" in cat.illnesses and not cat.dead:
                 continue
-            if "they_grieving" in tags and "grief stricken" not in cat.illnesses:
+            if "they_grieving" in tags and "grief stricken" not in cat.illnesses and not cat.dead:
                 continue
 
             # Cluster tags
@@ -595,7 +595,7 @@ class TalkScreen(Screens):
             if "they_pregnant" in tags and "pregnant" not in cat.injuries:
                 continue
 
-            if "grief stricken" not in you.illnesses and "you_grieving" in tags:
+            if "grief stricken" not in you.illnesses and "you_grieving" in tags and not you.dead:
                 continue
 
             if "starving" not in you.illnesses and "you_starving" in tags:
@@ -1470,11 +1470,11 @@ class TalkScreen(Screens):
                     return ""
                 text = text.replace("t_mn", str(Cat.fetch_cat(cat.mentor).name))
             if "tm_n" in text:
-                if cat.mentor is None:
+                if cat.mentor is None or cat.mentor == game.clan.your_cat.ID:
                     return ""
                 text = text.replace("tm_n", str(Cat.fetch_cat(cat.mentor).name))
             if "m_n" in text:
-                if game.clan.your_cat.mentor is None:
+                if game.clan.your_cat.mentor is None or game.clan.your_cat.mentor == cat.ID:
                     return ""
                 text = text.replace("m_n", str(Cat.fetch_cat(game.clan.your_cat.mentor).name))
             if "o_c" in text:

@@ -169,8 +169,6 @@ class Cat():
             self.set_faded()  # Sets the faded sprite and faded tag (self.faded = True)
 
             return
-        
-   
 
         self.generate_events = GenerateEvents()
 
@@ -294,13 +292,9 @@ class Cat():
 
         # backstory
         if self.backstory is None:
-           self.backstory = 'clanborn'
+            self.backstory = 'clanborn'
         else:
             self.backstory = self.backstory
-        
-        
-        
-
 
         # sex!?!??!?!?!??!?!?!?!??
         if self.gender is None:
