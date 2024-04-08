@@ -3390,6 +3390,9 @@ class Events:
             # these numbers are kind of crazy but i wanted to keep the one randint
             if fate in [1, 2, 5, 6, 10, 11]:
                 cat.shunned = 0
+                cat.exiled = False
+                cat.outside = False
+                cat.add_to_clan()
                 if cat.ID == game.clan.your_cat.ID:
                     text = "A Clan meeting is called one day, and your clanmates vote to forgive you for what you did."
                 else:
