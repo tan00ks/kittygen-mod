@@ -856,7 +856,7 @@ class TalkScreen(Screens):
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status + add_on)
-                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status + add_on)
+                    possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_2", cat.status + add_on2)
                 except Exception as e:
                     print(e)
             texts_list['general'] = possible_texts['general']
