@@ -2788,7 +2788,8 @@
     "sc_living_kitten": [
         [
             "you_sc",
-            "any"
+            "any",
+            "newborn"
         ],
         [
             "Is it true that some StarClan cats are powerful enough to make the moon cover the sun?"
@@ -2798,6 +2799,7 @@
         [
             "you_sc",
             "any",
+            "newborn",
             "they_shunned"
         ],
         [
@@ -2822,7 +2824,8 @@
         [
             "any",
             "they_shunned",
-            "they_grieving"
+            "they_grieving",
+            "newborn"
         ],
         [
             "No one deserves what I'm being put through."
@@ -2833,7 +2836,8 @@
             "any",
             "they_shunned",
             "they_grieving",
-            "you_sc"
+            "you_sc",
+            "newborn"
         ],
         [
             "No one deserves what I'm being put through."
@@ -2844,10 +2848,69 @@
             "any",
             "they_shunned",
             "they_grieving",
-            "you_df"
+            "you_df",
+            "newborn"
         ],
         [
             "No one deserves what I'm being put through."
+        ]
+    ],
+    "sc_newborn": [
+        [
+            "newborn",
+            "you_sc"
+        ],
+        [
+            "You should still be in c_nClan's nursery, surrounded by soft moss and feathers."
+        ]
+    ],
+    "df_newborn": [
+        [
+            "newborn",
+            "you_df"
+        ],
+        [
+            "You should still be in c_nClan's nursery, surrounded by soft moss and feathers."
+        ]
+    ],
+    "sc_newborn2": [
+        [
+            "newborn",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "You should still be in c_nClan's nursery, surrounded by soft moss and feathers."
+        ]
+    ],
+    "df_newborn2": [
+        [
+            "newborn",
+            "you_df",
+            "they_sc"
+        ],
+        [
+            "You should still be in c_nClan's nursery, surrounded by soft moss and feathers."
+        ]
+    ],
+    "sc_newborn3": [
+        [
+            "newborn",
+            "you_sc",
+            "they_df"
+        ],
+        [
+            "You should still be in c_nClan's nursery, surrounded by soft moss and feathers."
+        ]
+    ],
+    "df_newborn3": [
+        [
+            "newborn",
+            "you_df",
+            "they_df"
+        ],
+        [
+            "You should still be in c_nClan's nursery, surrounded by soft moss and feathers."
         ]
     ]
 }
