@@ -927,7 +927,29 @@ class TalkScreen(Screens):
         text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
         while text_chosen_key not in texts_list.keys():
             text_chosen_key = choices(list(texts_list.keys()), weights=weights, k=1)[0]
-        text = texts_list[text_chosen_key][1]
+        try:
+            text = texts_list[text_chosen_key][1]
+        except:
+            possible_texts = None
+            cluster1, cluster2 = get_cluster(cat.personality.trait)
+            cluster3, cluster4 = get_cluster(you.personality.trait)
+            with open(f"{resource_dir}general.json", 'r') as read_file:
+                possible_texts = ujson.loads(read_file.read())
+                clusters_1 = f"{cluster1} "
+                if cluster2:
+                    clusters_1 += f"and {cluster2}"
+                clusters_2 = f"{cluster3} "
+                if cluster4:
+                    clusters_2 += f"and {cluster4}"
+                try:
+                    possible_texts['general'][1][0].replace("c_1", clusters_1)
+                    possible_texts['general'][1][0].replace("c_2", clusters_2)
+                    possible_texts['general'][1][0].replace("r_1", game.clan.your_cat.status)
+                    possible_texts['general'][1][0].replace("r_2", cat.status)
+                except Exception as e:
+                    print(e)
+
+            return possible_texts['general'][1]
         new_text = self.get_adjusted_txt(text, cat)
         counter = 0
         while not new_text:

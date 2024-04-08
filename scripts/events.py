@@ -3444,9 +3444,9 @@ class Events:
                         else:
                             text = text + " They will not return as the Clan's leader."
                         if cat.moons < 119:
-                            cat.status = 'warrior'
+                            cat.status_change('warrior')
                         else:
-                            cat.status = 'elder'
+                            cat.status_change('elder')
 
 
 
