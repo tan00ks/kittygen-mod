@@ -14662,6 +14662,18 @@
             "Don't worry, y_c. I'll always remember you!"
         ]
     ],
+    "sc_they_living5": [
+        [
+            "you_sc",
+            "from_mate",
+            "any"
+        ],
+        [
+            "Hello, dear! You're looking very sparkly today.",
+            "Yes, of course that's a compliment! I can't wait to be as sparkly as you one day.",
+            "Oh, don't worry. I'll wait a little bit longer, love."
+        ]
+    ],
     "df_they_living": [
         [
             "you_df",
@@ -14698,6 +14710,136 @@
         ],
         [
             "What do you want?"
+        ]
+    ],
+    "df_they_living5": [
+        [
+            "you_df",
+            "from_mate",
+            "any"
+        ],
+        [
+            "Hello, darling!",
+            "You know, it hurts me to see you like this...",
+            "But, at the same time, the red goop brings out the colour in your eyes.",
+            "You're beautiful in any state of being."
+        ]
+    ],
+    "dead_theygrievingyou1": [
+        [
+            "you_sc",
+            "grievingyou",
+            "they_grieving",
+            "any"
+        ],
+        [
+            "y_c?",
+            "Is it really you? y_c?",
+            "Oh, I miss you so much, y_c, but...",
+            "I don't think I'm ready to join you yet. I thought I was, for a little bit, but...",
+            "I'll be there one day, okay? Please wait for me until then."
+        ]
+    ],
+    "dead_theygrievingyou2": [
+        [
+            "you_df",
+            "grievingyou",
+            "they_grieving",
+            "any"
+        ],
+        [
+            "[t_c jumps when they see you.]",
+            "Oh, my goodness, y_c?!",
+            "You... you look awful... You look like you're starving!",
+            "You can't really be a Dark Forest cat... Please tell me I'm seeing things."
+        ]
+    ],
+    "dead_theygrieving1": [
+        [
+            "you_sc",
+            "they_grieving",
+            "any"
+        ],
+        [
+            "[t_c blinks at you slowly.]",
+            "Oh, hello...",
+            "Is d_c with you? Are you coming to take me to them?",
+            "No? Oh...",
+            "Well, could you tell them to visit me when they can?"
+        ]
+    ],
+    "dead_theygrieving2": [
+        [
+            "you_df",
+            "they_grieving",
+            "any"
+        ],
+        [
+            "Wah! A Dark Forest Cat?",
+            "What are you doing here? You don't have d_c with you, do you? Surely they're in StarClan...",
+            "Oh, okay, good. That's... good.",
+            "[Despite their words, t_c seems disappointed.]"
+        ]
+    ],
+    "dead_theygrieving3": [
+        [
+            "you_df",
+            "you_sc",
+            "they_grieving",
+            "any"
+        ],
+        [
+            "Please, if you're not d_c, just go away..."
+        ]
+    ],
+    "dead_yougrieving1": [
+        [
+            "they_sc",
+            "grievingthem",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "y_c! I've missed you a lot.",
+            "I know you're upset, but you wan't join me up here. Not yet."
+        ]
+    ],
+    "dead_yougrieving2": [
+        [
+            "they_df",
+            "grievingthem",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "y_c! I miss you.",
+            "But I'd never wish for you to join me here. Not ever.",
+            "Maybe, one day, we can speak with each other through the StarClan border.",
+            "But for now, this is just fine.",
+            "How is the Clan?"
+        ]
+    ],
+    "dead_yougrieving3": [
+        [
+            "they_sc",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "Hello, y_c.",
+            "Don't worry, I'm not asking you to join me in the stars. Not yet.",
+            "d_c is ready to see you again, but only when it's your time."
+        ]
+    ],
+    "dead_yougrieving4": [
+        [
+            "they_df",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "Whoa, a living cat? What do you need from me?",
+            "You don't seem to be doing too well... You probably shouldn't be talking to any of us."
         ]
     ]
 }

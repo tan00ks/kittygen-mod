@@ -4045,5 +4045,55 @@
             "I wish I had more time with c_nClan...",
             "Make sure you enjoy it while you can, okay y_c?"
         ]
+    ],
+    "dead_theygrieving4": [
+        [
+            "any",
+            "you_sc",
+            "they_kitten",
+            "they_grieving"
+        ],
+        [
+            "A StarClan cat? Are you taking me too? Where's d_c?",
+            "No? Oh. Well, can you get d_c for me? I want to see them. Please."
+        ]
+    ],
+    "dead_theygrieving5": [
+        [
+            "any",
+            "you_df",
+            "they_kitten",
+            "they_grieving"
+        ],
+        [
+            "[t_c doesn't look scared of you at all. Maybe they're too sad to feel fear.]"
+        ]
+    ],
+    "dead_theygrieving6": [
+        [
+            "any",
+            "you_sc",
+            "they_kitten",
+            "they_grieving",
+            "grievingyou"
+        ],
+        [
+            "y_c!",
+            "[t_c bursts into tears and collapses into your starry fur.]",
+            "I miss you, y_c! Can you please come back? Please?"
+        ]
+    ],
+    "dead_theygrieving7": [
+        [
+            "any",
+            "you_df",
+            "they_kitten",
+            "they_grieving",
+            "grievingyou"
+        ],
+        [
+            "y_c! Are you really here? The queens told me you went to StarClan!",
+            "S-so, why do you look so scary?"
+        ]
     ]
 }

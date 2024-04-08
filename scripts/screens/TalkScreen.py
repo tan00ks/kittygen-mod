@@ -473,6 +473,27 @@ class TalkScreen(Screens):
             if "you_sc" in tags and you.df:
                 continue
 
+            if "grief stricken" in cat.illnesses:
+                dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
+                if "grievingyou" in tags:
+                    if dead_cat.name != game.clan.your_cat.name:
+                        continue
+                else:
+                    if dead_cat.name == game.clan.your_cat.name:
+                        continue
+
+            if "grief stricken" in you.illnesses:
+                dead_cat = Cat.all_cats.get(you.illnesses['grief stricken'].get("grief_cat"))
+                if "grievingthem" in tags:
+                    if dead_cat.name == cat.name:
+                        print ('You are grieving the death of this cat.')
+                        
+                    if dead_cat.name != cat.name:
+                        continue
+                else:
+                    if dead_cat.name == cat.name:
+                        continue
+
             roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
             if any(r in roles for r in tags):
                 has_role = False
@@ -984,10 +1005,15 @@ class TalkScreen(Screens):
                     return ""
             text = [t1.replace("t_s", str(sibling.name)) for t1 in text]
 
+        
+
+
         if "grief stricken" in cat.illnesses:
             try:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
                 text = [t1.replace("d_c", str(dead_cat.name)) for t1 in text]
+
+
             except:
                 return ""
         elif "grief stricken" in you.illnesses:

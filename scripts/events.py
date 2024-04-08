@@ -330,25 +330,25 @@ class Events:
         with open(f"{resource_dir}df.json",
                   encoding="ascii") as read_file:
             self.df_txt = ujson.loads(read_file.read())
-        if not game.clan.your_cat.dead and game.clan.your_cat.status != 'exiled':
+        if not game.clan.your_cat.dead and game.clan.your_cat.status != 'exiled' and not game.clan.your_cat.outside:
             if game.clan.your_cat.moons == 0:
                 self.generate_birth_event()
             elif game.clan.your_cat.moons < 6:
                 self.generate_events() 
-            elif game.clan.your_cat.moons == 6:
+            elif game.clan.your_cat.moons == 6 and game.clan.your_cat.shunned == 0:
                 self.generate_app_ceremony()
             elif game.clan.your_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 self.generate_events()
-            elif game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator', "queen"] and not game.clan.your_cat.w_done:
+            elif game.clan.your_cat.status in ['warrior', 'medicine cat', 'mediator', "queen"] and not game.clan.your_cat.w_done and game.clan.your_cat.shunned == 0:
                 self.generate_ceremony()
             elif game.clan.your_cat.status != 'elder' and game.clan.your_cat.moons != 119:
                 self.generate_events()
-            elif game.clan.your_cat.moons == 119:
+            elif game.clan.your_cat.moons == 119 and not game.clan.your_cat.outside and game.clan.your_cat.shunned == 0:
                 if not game.switches['window_open']:
                     RetireScreen('events screen')
                 else:
                     game.switches['windows_dict'].append('retire')
-            elif game.clan.your_cat.moons == 120 and game.clan.your_cat.status == 'elder':
+            elif game.clan.your_cat.moons == 120 and game.clan.your_cat.status == 'elder' and game.clan.your_cat.shunned == 0:
                 self.generate_elder_ceremony()
             elif game.clan.your_cat.status == 'elder':
                 self.generate_events()
@@ -657,7 +657,7 @@ class Events:
                 parent2 = None
                 adoptive_parents = []
                 if birth_type == BirthType.NO_PARENTS:
-                    thought = f"Is glad that kits are safe"
+                    thought = f"Is glad that their kits are safe"
                     parent1 = create_new_cat(Cat, Relationship,
                                                 status=random.choice(["loner", "kittypet"]),
                                                 alive=False,
@@ -676,7 +676,7 @@ class Events:
                 elif birth_type == BirthType.ONE_ADOPTIVE_PARENT:
                     adoptive_parent1 = pick_valid_parent()
                     adoptive_parents = [adoptive_parent1.ID]
-                    thought = f"Is glad that kits are safe"
+                    thought = f"Is glad that their kits are safe"
                     parent1 = create_new_cat(Cat, Relationship,
                                                 status=random.choice(["loner", "kittypet"]),
                                                 alive=False,
@@ -702,7 +702,7 @@ class Events:
                     adoptive_parent2 = pick_valid_parent(adoptive_parent1)
                     adoptive_parent1.set_mate(adoptive_parent2)
                     adoptive_parents = [adoptive_parent1.ID, adoptive_parent2.ID]
-                    thought = f"Is glad that kits are safe"
+                    thought = f"Is glad that their kits are safe"
                     parent1 = create_new_cat(Cat, Relationship,
                                                 status=random.choice(["loner", "kittypet"]),
                                                 alive=False,
@@ -1916,15 +1916,16 @@ class Events:
         
         if cat.shunned > 0 and cat.status != "former Clancat":
             cat.shunned += 1
-            exilechance = random.randint(1,15)
-            # Chance for a cat to be exiled, forgiven, or leave before the ten moon limit
-            if exilechance == 1:
-                self.exile_or_forgive(cat)
-            else:
-            # Max number of moons a cat can be shunned before the clan makes up their damn mind
-            # Currently ten, but it was also roll if its set to more than that in a cat's save
-                if cat.shunned > 9:
+            if cat.shunned >3:
+                exilechance = random.randint(1,15)
+                # Chance for a cat to be exiled, forgiven, or leave before the ten moon limit
+                if exilechance == 1:
                     self.exile_or_forgive(cat)
+                else:
+                # Max number of moons a cat can be shunned before the clan makes up their damn mind
+                # Currently ten, but it was also roll if its set to more than that in a cat's save
+                    if cat.shunned > 9:
+                        self.exile_or_forgive(cat)
         
         if cat.status == 'leader' and cat.shunned > 0 and cat.name.specsuffix_hidden is False:
             cat.name.specsuffix_hidden = True
@@ -3387,7 +3388,7 @@ class Events:
                     fate = random.randint(1,3)
 
             # these numbers are kind of crazy but i wanted to keep the one randint
-            if fate in [1, 2, 5, 10, 11]:
+            if fate in [1, 2, 5, 6, 10, 11]:
                 cat.shunned = 0
                 if cat.ID == game.clan.your_cat.ID:
                     text = "A Clan meeting is called one day, and your clanmates vote to forgive you for what you did."
@@ -3404,7 +3405,9 @@ class Events:
                             text = text + f" You have shown that you can be trusted and will rejoin the Clan as a {cat.status}."
                         else:
                             text = text + f" They have shown that they can be trusted and will rejoin the Clan as a {cat.status}."
-                    
+
+                        if cat.status == 'deputy':
+                            game.clan.deputy.status_change('warrior')
                     else:
                         if cat.moons < 119:
                             newstatus = 'warrior'
@@ -3422,11 +3425,18 @@ class Events:
                 
                 elif cat.status == 'leader':
                     if random.randint(1,4) == 1:
-                        text = text + " c_nClan will once more look to them for guidance."
+                        if cat.ID == game.clan.your_cat.ID:
+                            text = text + " c_nClan will once more look to you for guidance."
+                        else:
+                            text = text + " c_nClan will once more look to them for guidance."
                         cat.specsuffix_hidden = False
+                        game.clan.deputy.statuc_change('warrior')
                         game.clan.leader.status_change('deputy')
                     else:
-                        text = text + " They will not return as the Clan's leader."
+                        if cat.ID == game.clan.your_cat.ID:
+                            text = text + " You will not return as the Clan's leader."
+                        else:
+                            text = text + " They will not return as the Clan's leader."
                         if cat.moons < 119:
                             cat.status = 'warrior'
                         else:
