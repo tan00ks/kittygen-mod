@@ -1990,10 +1990,11 @@ class Events:
             cat.relationship_interaction()
             cat.thoughts()
             return
-
-        self.handle_apprentice_EX(cat)  # This must be before perform_ceremonies!
-        # this HAS TO be before the cat.is_disabled() so that disabled kits can choose a med cat or mediator position
-        self.perform_ceremonies(cat)
+        
+        if not cat.outside and not cat.exiled:
+            self.handle_apprentice_EX(cat)  # This must be before perform_ceremonies!
+            # this HAS TO be before the cat.is_disabled() so that disabled kits can choose a med cat or mediator position
+            self.perform_ceremonies(cat)
         cat.skills.progress_skill(cat) # This must be done after ceremonies. 
 
         # check for death/reveal/risks/retire caused by permanent conditions
@@ -2043,6 +2044,12 @@ class Events:
                 return
 
         self.handle_murder(cat)
+
+        if cat.status == 'deputy' and cat.ID != game.clan.your_cat.ID and game.clan.your_cat.status == 'deputy' and not game.clan.your_cat.dead:
+            cat.status = 'warrior'
+
+            if game.clan.deputy.ID != game.clan.your_cat.ID:
+                game.clan.deputy = game.clan.your_cat
 
         game.switches['skip_conditions'].clear()
 
@@ -2171,7 +2178,10 @@ class Events:
                 game.clan.leader_lives = 9
                 text = ''
                 shunnedleader = cat.name if cat.shunned > 0 and cat.status == 'leader' and not cat.outside or cat.dead else None
-                if leader_shunned:
+
+                if cat.outside and not (cat.exiled or cat.df) and cat.status not in ['kittypet', 'loner', 'rogue','former Clancat']:
+                    shuntext = ""
+                elif leader_shunned and shunnedleader:
                     shuntext = f"After {shunnedleader}'s shun, the Clan's deputy has had to step up earlier than they expected. "
                 else:
                     shuntext = ""

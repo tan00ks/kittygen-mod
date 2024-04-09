@@ -3055,5 +3055,43 @@
         [
             ""
         ]
+    ],
+    "revived_grievingyou1": [
+        [
+            "they_grieving",
+            "grievingyou",
+            "any"
+        ],
+        [
+            "I've... I've gone so mad that I'm hallucinating y_c...",
+            "Oh, StarClan...",
+            "[t_c stumbles away from you and towards the medicine den.]"
+        ]
+    ],
+    "revived_grievingyou2": [
+        [
+            "they_grieving",
+            "grievingyou",
+            "any"
+        ],
+        [
+            "[t_c stares at you, dumbfounded, for a long time.]",
+            "I... how... y_c...",
+            "They told me you were dead.",
+            "How are you here now?"
+        ]
+    ],
+    "revived_grievingyou3": [
+        [
+            "they_grieving",
+            "grievingyou",
+            "any"
+        ],
+        [
+            "...",
+            "... ... ...",
+            "... ... ... ... ...",
+            "r_m has some explaining to do."
+        ]
     ]
 }

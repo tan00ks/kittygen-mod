@@ -154,7 +154,7 @@
             "Whoa, lookout! Incoming!!!",
             "[t_c is in hot pursuit of a mouse - right in the middle of camp! They skid to a halt inches from your face, destroying the pile of moss you were gathering for your nest.]",
             "*Huff* *Huff* Sorry about that! Say, did you see which way the mouse went?",
-            "I swear, those little buggers are getting braver by the day ... And stupider, too. How long does it think it's gonna last in a clanful of cats?",
+            "I swear, those little things are getting braver by the day ... And stupider, too. How long does it think it's gonna last in a clanful of cats?",
             "Er, sorry about your moss. Did you need help cleaning it up?",
             "[t_c clumsily attempts to reorganize the pile, breaking several pieces in the process.]",
             "There! Good as new ... kinda. Heh. Sorry, again.",
@@ -4314,7 +4314,7 @@
             "they_blind"
         ],
         [
-            "Leave me alone ..."
+            "Leave me alone..."
         ]
     ],
     "theygrief_7": [
