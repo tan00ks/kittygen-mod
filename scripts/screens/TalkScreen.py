@@ -466,6 +466,9 @@ class TalkScreen(Screens):
             if any(t in tags for t in ["you_sc", "you_df"]) and not you.dead:
                 continue
 
+            if "you_dftrainee" in tags and not you.joined_df:
+                continue
+
             if "they_df" in tags and not cat.df:
                 continue
             if "you_df" in tags and not you.df:

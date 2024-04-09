@@ -14966,5 +14966,43 @@
             "Leave me alone...",
             "Please."
         ]
+    ],
+    "dftrainee1": [
+        [
+            "they_df",
+            "you_dftrainee",
+            "any",
+            "they_adult"
+        ],
+        [
+            "Boo!",
+            "Heh, didn't think you'd see me while you were awake, did ya?",
+            "You coming back to train tonight?",
+            "... Good. See you there."
+        ]
+    ],
+    "dftrainee2": [
+        [
+            "they_df",
+            "you_dftrainee",
+            "any",
+            "they_adult",
+            "you_injured"
+        ],
+        [
+            "Hey, what gives?",
+            "Do you think <i>we</i> stop training just because of a little scratch?",
+            "Tch. Whatever. Come find me when you've grown a spine."
+        ]
+    ],
+    "dftrainee3": [
+        [
+            "you_dftrainee",
+            "any"
+        ],
+        [
+            "Do you... get a lot of sleep, y_c?",
+            "You always look exhausted."
+        ]
     ]
 }

@@ -3201,5 +3201,29 @@
             "['We're in this together. And we'll figure it out. Please don't stress yourself over this, it's a good thing to think about and perfectly normal to be worried. If you really need to talk to someone about these concerns, how about we talk to a queen?']",
             "Yeah... Yeah, that sounds good. We'll be okay. We'll work this out. Thank you for everything, y_c."
         ]
+    ],
+    "dftrainee_warrior1": [
+        [
+            "you_dftrainee",
+            "they_df",
+            "they_warrior",
+            "warrior"
+        ],
+        [
+            "Hey! Pay attention!",
+            "[t_c catches you with a claw across the muzzle when your mind wanders during training.]"
+        ]
+    ],
+    "dftrainee_warrior2": [
+        [
+            "you_dftrainee",
+            "they_df",
+            "they_warrior",
+            "warrior"
+        ],
+        [
+            "Do any of your Clanmates know you're here?",
+            "Okay... just let me know if they do. We'll have to take care of them."
+        ]
     ]
 }

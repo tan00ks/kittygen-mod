@@ -2045,7 +2045,7 @@ class Events:
 
         self.handle_murder(cat)
 
-        if cat.status == 'deputy' and cat.ID != game.clan.your_cat.ID and game.clan.your_cat.status == 'deputy' and not game.clan.your_cat.dead:
+        if cat.status == 'deputy' and cat.ID != game.clan.your_cat.ID and game.clan.your_cat.status == 'deputy' and not game.clan.your_cat.dead and not (game.clan.your_cat.outside or game.clan.your_cat.exiled):
             cat.status = 'warrior'
 
             if game.clan.deputy.ID != game.clan.your_cat.ID:
