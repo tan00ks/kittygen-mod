@@ -350,8 +350,10 @@ class TalkScreen(Screens):
         you = game.clan.your_cat
         resource_dir = "resources/dicts/lifegen_talk/"
         possible_texts = {}
-        with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
-            possible_texts = ujson.loads(read_file.read())
+
+        if cat.status not in ['loner', 'rogue', 'former Clancat', 'kittypet', 'exiled']:
+            with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
+                possible_texts = ujson.loads(read_file.read())
 
         with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
             possible_texts.update(ujson.loads(read_file.read()))

@@ -2245,13 +2245,14 @@
         [
             "you_shunned",
             "kitten",
-            "they_deaf",
+            "only_they_deaf",
             "you_deaf",
-            "they_kitten"
+            "they_kitten",
+            "notyet"
         ],
         [
             "[Ever since you were shunned, t_c has seemed more on edge.]",
-            "[Unable to listen for danger, their neck must be tired from all of the wildly lookign around.]",
+            "[Unable to listen for danger, their neck must be tired from all of the wildly looking around.]",
             " !! ",
             "[They jump anytime they see you.]"
         ]
@@ -2287,6 +2288,50 @@
         ],
         [
             "... ... ..."
+        ]
+    ],
+    "youkit_sh_J26": [
+        [
+            "you_shunned",
+            "they_sc",
+            "kitten"
+        ],
+        [
+            "You're so gifted, little one. I hope you don't continue to use it for evil."
+        ]
+    ],
+    "youkit_sh_J27": [
+        [
+            "you_shunned",
+            "they_df",
+            "kitten"
+        ],
+        [
+            "You're doing well."
+        ]
+    ],
+    "youkit_sh_J28": [
+        [
+            "you_shunned",
+            "they_sc",
+            "you_grieving",
+            "kitten"
+        ],
+        [
+            "Oh, goodness...",
+            "I can see you're very troubled, little kit. Redemption is waiting for you."
+        ]
+    ],
+    "youkit_sh_J29": [
+        [
+            "you_shunned",
+            "they_df",
+            "you_grieving",
+            "kitten"
+        ],
+        [
+            "Yikes, bad moon, huh?",
+            "Chin up, kit. You're doing well."
         ]
     ],
     "stable_shunned_you_Kit_01": [
