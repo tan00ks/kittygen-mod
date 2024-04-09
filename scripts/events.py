@@ -3463,8 +3463,10 @@ class Events:
                         else:
                             text = text + " c_nClan will once more look to them for guidance."
                         cat.specsuffix_hidden = False
-                        game.clan.deputy.status_change('warrior')
-                        game.clan.leader.status_change('deputy')
+                        if game.clan.deputy:
+                            game.clan.deputy.status_change('warrior')
+                        if game.clan.leader:
+                            game.clan.leader.status_change('deputy')
                         cat.status_change('leader')
                         cat.name.status = cat.status
                     else:
