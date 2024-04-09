@@ -1081,8 +1081,11 @@ class ProfileScreen(Screens):
                 else:
                     self.profile_elements["talk"].enable()
         elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.ID not in game.clan.unknown_cats and not self.the_cat.outside and not game.clan.your_cat.outside:
+        
             cat_dead_condition_sc = self.the_cat.dead and not self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) and game.clan.your_cat.moons >=6))
-            cat_dead_condition_df = self.the_cat.dead and self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) and game.clan.your_cat.moons >=6))
+            
+            cat_dead_condition_df = self.the_cat.dead and self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) and game.clan.your_cat.moons >=6) or game.clan.your_cat.joined_df)
+
             cat_dead_conditions = cat_dead_condition_sc or cat_dead_condition_df
 
             cat_alive_condition_sc = game.clan.your_cat.dead and not game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) and self.the_cat.moons >= 6))
