@@ -1813,7 +1813,7 @@ class Events:
                     else:
                         self.ceremony(x, "warrior")
                 elif x.status in ["kitten", "newborn"] and x.moons >= 6:
-                    self.ceremony(x, "apprentice") 
+                    self.ceremony(x, "apprentice")
             else:
                 if x.moons == 0:
                     x.status = 'newborn'
@@ -2647,8 +2647,7 @@ class Events:
                 game.cur_events_list.append(
                     Single_Event(f'{ceremony_text}', "ceremony", involved_cats))
             game.ceremony_events_list.append(f'{cat.name}{ceremony_text}')
-        else:
-            return
+
 
     def gain_accessories(self, cat):
         """
@@ -3429,8 +3428,33 @@ class Events:
                         
                         cat.status_change(newstatus)
 
-                elif cat.status == 'kitten' and cat.moons > 5:
-                    self.generate_app_ceremony()
+                elif cat.status != "leader":
+                    if cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"]:
+                        if cat.moons >= 30:
+                            if cat.status == "medicine cat apprentice":
+                                self.ceremony(cat, "medicine cat")
+                            elif cat.status == "mediator apprentice":
+                                self.ceremony(cat, "mediator")
+                            elif cat.status == "queen's apprentice":
+                                self.ceremony(cat, "queen")
+                            else:
+                                self.ceremony(cat, "warrior")
+                        else:
+                            cat.name.status = cat.status
+                    elif cat.status in ["kitten", "newborn"] and cat.moons >= 6:
+                        self.ceremony(cat, "apprentice") 
+                        cat.name.status = cat.status
+                    else:
+                        if cat.moons == 0:
+                            cat.status = 'newborn'
+                        elif cat.moons < 6:
+                            cat.status = "kitten"
+                        elif cat.moons < 12:
+                            cat.status_change('apprentice')
+                        elif cat.moons < 120:
+                            cat.status_change('warrior')
+                        else:
+                            cat.status_change('elder')   
                 
                 elif cat.status == 'leader':
                     if random.randint(1,4) == 1:
@@ -3439,8 +3463,10 @@ class Events:
                         else:
                             text = text + " c_nClan will once more look to them for guidance."
                         cat.specsuffix_hidden = False
-                        game.clan.deputy.statuc_change('warrior')
+                        game.clan.deputy.status_change('warrior')
                         game.clan.leader.status_change('deputy')
+                        cat.status_change('leader')
+                        cat.name.status = cat.status
                     else:
                         if cat.ID == game.clan.your_cat.ID:
                             text = text + " You will not return as the Clan's leader."
@@ -3450,7 +3476,6 @@ class Events:
                             cat.status_change('warrior')
                         else:
                             cat.status_change('elder')
-
 
 
                 game.cur_events_list.insert(0, Single_Event(text, "alert", involved_cats))
