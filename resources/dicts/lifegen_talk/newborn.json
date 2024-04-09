@@ -1153,5 +1153,245 @@
         [
             "[t_c looks confused.]"
         ]
+    ],
+    "newborn_1_sc": [
+        [
+            "Any",
+            "they_sc",
+            "you_sc"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_2_sc": [
+        [
+            "Any",
+            "they_sc",
+            "you_sc"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_3_sc": [
+        [
+            "Any",
+            "they_sc",
+            "you_sc"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_4_sc": [
+        [
+            "Any",
+            "they_sc",
+            "you_sc"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_5_sc": [
+        [
+            "Any",
+            "they_sc",
+            "you_sc"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_6_sc": [
+        [
+            "Any",
+            "they_sc",
+            "you_sc"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_1_df": [
+        [
+            "Any",
+            "they_df",
+            "you_df"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_2_df": [
+        [
+            "Any",
+            "they_df",
+            "you_df"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_3_df": [
+        [
+            "Any",
+            "they_df",
+            "you_df"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_4_df": [
+        [
+            "Any",
+            "they_df",
+            "you_df"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_5_df": [
+        [
+            "Any",
+            "they_df",
+            "you_df"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_6_df": [
+        [
+            "Any",
+            "they_df",
+            "you_df"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_1_scdf": [
+        [
+            "Any",
+            "they_sc",
+            "you_df"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_2_scdf": [
+        [
+            "Any",
+            "they_sc",
+            "you_df"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_3_scdf": [
+        [
+            "Any",
+            "they_sc",
+            "you_df"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_4_scdf": [
+        [
+            "Any",
+            "they_sc",
+            "you_df"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_5_scdf": [
+        [
+            "Any",
+            "they_sc",
+            "you_df"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_6_scdf": [
+        [
+            "Any",
+            "they_sc",
+            "you_sc"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_1_dfsc": [
+        [
+            "Any",
+            "they_df",
+            "you_sc"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_2_dfsc": [
+        [
+            "Any",
+            "they_df",
+            "you_sc"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_3_dfsc": [
+        [
+            "Any",
+            "they_df",
+            "you_sc"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_4_dfsc": [
+        [
+            "Any",
+            "they_df",
+            "you_sc"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_5_dfsc": [
+        [
+            "Any",
+            "they_df",
+            "you_sc"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_6_dfsc": [
+        [
+            "Any",
+            "they_df",
+            "you_sc"
+        ],
+        [
+            "Grr..."
+        ]
     ]
 }
