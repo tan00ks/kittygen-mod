@@ -2957,5 +2957,103 @@
         [
             "You should still be in c_nClan's nursery, surrounded by soft moss and feathers."
         ]
+    ],
+    "dead_parent1": [
+        [
+            "they_sc",
+            "from_parent",
+            "from_adopted_parent",
+            "kitten"
+        ],
+        [
+            "Oh, y_c, I can't believe you can see me!",
+            "I miss you, honey. I'm sorry I had to leave so soon.",
+            "I'll always be here, watching you grow."
+        ]
+    ],
+    "dead_parent2": [
+        [
+            "they_sc",
+            "from_parent",
+            "from_adopted_parent",
+            "kitten"
+        ],
+        [
+            "Are you worried about your apprentice ceremony, honey?",
+            "Don't worry. You'll do great.",
+            "Who do you want as a mentor? Maybe I'll send l_n a sign about it.",
+            "Oh, hush, that's not cheating! I just want my baby to get the best possible education."
+        ]
+    ],
+    "dead_parent3": [
+        [
+            "they_sc",
+            "from_parent",
+            "kitten"
+        ],
+        [
+            "Hey there, y_c!",
+            "Oh, you look so much bigger than the last time I saw you.",
+            "How is y_p treating you? Well, I hope. Or shall I send thorn into their nest tonight?",
+            "Kidding, kidding..."
+        ]
+    ],
+    "dead_parent4": [
+        [
+            "they_sc",
+            "from_parent",
+            "from_adopted_parent",
+            "kitten"
+        ],
+        [
+            "You're growing so fast.",
+            "Just don't grow too fast, okay?"
+        ]
+    ],
+    "dead_parent5": [
+        [
+            "they_df",
+            "from_parent",
+            "from_adopted_parent",
+            "kitten"
+        ],
+        [
+            "Hey, kid! How's it going in c_nClan?",
+            "If anyone ever gives you trouble, just let me know. I'll give them a good haunting for you."
+        ]
+    ],
+    "dead_parent6": [
+        [
+            "they_df",
+            "from_parent",
+            "from_adopted_parent",
+            "kitten"
+        ],
+        [
+            "Don't get too close to the other Dark Forest cats, okay?",
+            "The other cats here are very bad cats. But I'm not. I'll keep you safe."
+        ]
+    ],
+    "dead_parent7": [
+        [
+            "they_df",
+            "from_parent",
+            "from_adopted_parent",
+            "kitten"
+        ],
+        [
+            ""
+        ]
+    ],
+    "dead_parent8": [
+        [
+            "they_df",
+            "from_parent",
+            "from_adopted_parent",
+            "kitten"
+        ],
+        [
+            ""
+        ]
     ]
 }
