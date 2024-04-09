@@ -14955,5 +14955,16 @@
         [
             "No one deserves what I'm being put through."
         ]
+    ],
+    "grieving_neruotic": [
+        [
+            "any",
+            "they_grieving",
+            "upstanding"
+        ],
+        [
+            "Leave me alone...",
+            "Please."
+        ]
     ]
 }
