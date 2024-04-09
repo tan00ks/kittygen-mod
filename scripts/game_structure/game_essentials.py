@@ -482,7 +482,6 @@ class Game():
 
             # Remove the cat from the active cats lists
             self.clan.remove_cat(cat)
-            print("2: removed" + str(x))
 
         game.cat_to_fade = []
 
