@@ -502,6 +502,9 @@ class Cat():
         if self.shunned > 0:
             self.shunned = 0
 
+        if self.exiled:
+            self.status = 'former Clancat'
+
         return text
 
     def exile(self):
