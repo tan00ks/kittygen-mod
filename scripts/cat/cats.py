@@ -522,9 +522,10 @@ class Cat():
             if fetched_cat:
                 fetched_cat.update_mentor()
         self.update_mentor()
+
 # pylint: disable=f-string-without-interpolation
     def handle_exile_returns(self):
-        """ exiled cats returnin"""
+        """outside cats returnin"""
        
             
         exiled_cats = [cat for cat in Cat.all_cats.values() if cat.exiled and not cat.dead]
@@ -571,7 +572,7 @@ class Cat():
 
     def return_home(self):
         """
-        Handles the exiled MC attempting to return to the Clan
+        Handles the outside MC attempting to return to the Clan
         """
 
         you = game.clan.your_cat
