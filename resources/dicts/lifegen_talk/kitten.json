@@ -3859,6 +3859,18 @@
             "I'm sure whatever you did can't be as bad as that ... right?"
         ]
     ],
+    "you_shunned_8": [
+        [
+            "you_shunned",
+            "they_kitten",
+            "kitten"
+        ],
+        [
+            "Hey, y_c!",
+            "r_c told me that no one should be friends with you because you made a bad mistake.",
+            "I'll still be your friend, though! Just don't tell r_c about it, okay?"
+        ]
+    ],
     "starclan_they_living": [
         [
             "you_sc",
