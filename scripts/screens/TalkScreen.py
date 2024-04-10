@@ -469,6 +469,9 @@ class TalkScreen(Screens):
             if "you_dftrainee" in tags and not you.joined_df:
                 continue
 
+            if "they_dftrainee" in tags and not cat.joined_df:
+                continue
+
             if "they_df" in tags and not cat.df:
                 continue
             if "you_df" in tags and not you.df:
