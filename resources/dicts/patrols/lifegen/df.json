@@ -16,7 +16,7 @@
         ],
         "patrol_art": "df_default",
         "min_cats": 1,
-        "max_cats": 3,
+        "max_cats": 1,
         "min_max_status": {},
         "weight": 20,
         "intro_text": "You wake up in a forest. Shadowy trees hang overhead, and you feel eyes on you despite not seeing anyone around.",
@@ -564,7 +564,8 @@
         ],
         "tags": [
             "border",
-            "non_lethal"
+            "non_lethal",
+            "fellowtrainee"
         ],
         "patrol_art": "df_friendly",
         "min_cats": 2,
@@ -812,7 +813,8 @@
         ],
         "tags": [
             "border",
-            "convince_rc"
+            "convince_rc",
+            "fellowtrainee"
         ],
         "patrol_art": "df_friendly",
         "min_cats": 2,
@@ -882,7 +884,8 @@
         ],
         "tags": [
             "border",
-            "convince_rc"
+            "convince_rc",
+            "fellowtrainee"
         ],
         "patrol_art": "df_default",
         "min_cats": 2,
@@ -1176,7 +1179,8 @@
         ],
         "tags": [
             "border",
-            "new_cat"
+            "new_cat",
+            "fellowtrainee"
         ],
         "patrol_art": "df_default",
         "min_cats": 2,

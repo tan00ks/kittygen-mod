@@ -14851,7 +14851,7 @@
         ],
         [
             "Clanmates ignoring you, huh?",
-            "Get used to it. That's just a little taste fo what you're in for when you get here."
+            "Get used to it. That's just a little taste of what you're in for when you get here."
         ]
     ],
     "dead_youshunned2":
@@ -14889,6 +14889,63 @@
         ],
         [
             "You poor thing..."
+        ]
+    ],
+    "dead_youshunned5":
+    [
+        [
+            "they_df",
+            "you_shunned",
+            "any",
+            "they_older"
+        ],
+        [
+            "You're doing a good job down there.",
+            "That cat was asking for it. I'd have killed the rest of them too, if I were you.",
+            "c_nClan is full of mouse-hearts these days.",
+            "Not you, though!"
+        ]
+    ],
+    "dead_youshunned6":
+    [
+        [
+            "they_df",
+            "you_shunned",
+            "medicine cat apprentice",
+            "apprentice",
+            "mediator apprentice",
+            "queen's apprentice",
+            "they_older"
+        ],
+        [
+            "Wait, so, they really made you stop your training because you killed one cat?",
+            "That's ridiculous.",
+            "You're strong. They need you. They'll come around."
+        ]
+    ],
+    "dead_youshunned7":
+    [
+        [
+            "they_df",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "It's more fun here than it is in the waking world, isn't it?",
+            "Aah, don't lie! I see it in your eyes!"
+        ]
+    ],
+    "dead_youshunned8":
+    [
+        [
+            "they_df",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "You really killed another cat?",
+            "Huh. Maybe you're not as mouse-hearted as I thought.",
+            "No, you're still a mouse-heart, just... not as big of one."
         ]
     ],
     "sc_living_kitten": [

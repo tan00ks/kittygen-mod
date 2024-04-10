@@ -653,6 +653,7 @@ class Patrol():
                     continue
                 elif game.clan.your_cat.status != "kitten" and "kit_only" in patrol.tags:
                     continue
+
             if game.current_screen == "patrol screen":
                 if "bloodthirsty_only" in patrol.tags:
                     if Cat.all_cats.get(game.clan.your_cat.mentor).personality.trait != "bloodthirsty":
@@ -664,6 +665,7 @@ class Patrol():
                 if "df" in patrol.tags:
                     if not game.clan.your_cat.joined_df:
                         continue
+                    
             #  correct button check
             if game.current_screen == 'patrol screen2':
                 if patrol_type == "general":
@@ -679,6 +681,19 @@ class Patrol():
                         continue
                     elif 'herb_gathering' not in patrol.types and patrol_type == 'med':
                         continue
+
+            if len(self.patrol_cats) > 1:
+                
+                other_cat = self.patrol_cats[1]
+                
+                if not other_cat.joined_df:
+                    if "fellowtrainee" in patrol.tags:
+                        continue
+                
+                else:
+                    if "fellowtrainee" not in patrol.tags:
+                        continue
+
 
             # cruel season tag check
             if "cruel_season" in patrol.tags:
