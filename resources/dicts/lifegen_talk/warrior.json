@@ -962,7 +962,7 @@
             "Whoa, lookout! Incoming!!!",
             "[t_c is in hot pursuit of a mouse - right in the middle of camp! They skid to a halt inches from your face, destroying the pile of moss you were gathering for your nest.]",
             "*Huff* *Huff* Sorry about that! Say, did you see which way the mouse went?",
-            "I swear, those little buggers are getting braver by the day ... And stupider, too. How long does it think it's gonna last in a clanful of cats?",
+            "I swear, those little things are getting braver by the day ... And stupider, too. How long does it think it's gonna last in a clanful of cats?",
             "Er, sorry about your moss. Did you need help cleaning it up?",
             "[t_c clumsily attempts to reorganize the pile, breaking several pieces in the process.]",
             "There! Good as new ... kinda. Heh. Sorry, again.",
@@ -3201,6 +3201,30 @@
             "['There's no such thing as a perfect parent and that's okay. What's important is that we learn from our mistakes. This is between us, raising our kits- It's our job. Not just mine, not just yours.']",
             "['We're in this together. And we'll figure it out. Please don't stress yourself over this, it's a good thing to think about and perfectly normal to be worried. If you really need to talk to someone about these concerns, how about we talk to a queen?']",
             "Yeah... Yeah, that sounds good. We'll be okay. We'll work this out. Thank you for everything, y_c."
+        ]
+    ],
+    "dftrainee_warrior1": [
+        [
+            "you_dftrainee",
+            "they_df",
+            "they_warrior",
+            "warrior"
+        ],
+        [
+            "Hey! Pay attention!",
+            "[t_c catches you with a claw across the muzzle when your mind wanders during training.]"
+        ]
+    ],
+    "dftrainee_warrior2": [
+        [
+            "you_dftrainee",
+            "they_df",
+            "they_warrior",
+            "warrior"
+        ],
+        [
+            "Do any of your Clanmates know you're here?",
+            "Okay... just let me know if they do. We'll have to take care of them."
         ]
     ]
 }

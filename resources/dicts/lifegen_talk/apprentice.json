@@ -2842,5 +2842,22 @@
             "[t_c prances away with a huff, no cat bothering to stop their strange curiosity. But, before they can even step a paw away from the den, they falter and look out to the darkness.]",
             "[It really is nothing but an empty void of black goo.]"
         ]
+    ],
+    "dftrainee_app": [
+        [
+            "they_df",
+            "you_dftrainee",
+            "any",
+            "they_app",
+            "apprentice",
+            "mediator apprentice",
+            "queen's apprentice"
+        ],
+        [
+            "Hey, y_c! Come train with me!",
+            "Hm? What do you mean 'why'? You're way more fun than the other Dark Forest cats. Like, by a long shot.",
+            "They're all so miserable. They don't see the fun in this place like you and me.",
+            "Now, come on! I found a super sturdy tree we can practice climbing!"
+        ]
     ]
 }
