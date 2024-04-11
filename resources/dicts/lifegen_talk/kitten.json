@@ -4441,6 +4441,52 @@
             "Did I do something wrong?"
         ]
     ],
+    "murderedthemkit3": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_shunned"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit4": [
+        [
+            "murderedthem",
+            "any",
+            "they_df",
+            "you_shunned"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit5": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit6": [
+        [
+            "murderedthem",
+            "any",
+            "they_df",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
     "kitmurderedyou1": [
         [
             "murderedyou",

@@ -15084,6 +15084,56 @@
             "We were supposed to be Clanmates."
         ]
     ],
+    "murderedthem3": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_shunned"
+        ],
+        [
+            "I hope they exile you.",
+            "I'd say I hope they kill you, but I don't want you up here with me."
+        ]
+    ],
+    "murderedthem4": [
+        [
+            "murderedthem",
+            "any",
+            "they_df",
+            "you_shunned"
+        ],
+        [
+            "I hope they exile you.",
+            "I'd say I hope they kill you, but I don't want you up here with me."
+        ]
+    ],
+    "murderedthem5": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "I hope they exile you.",
+            "I'd say I hope they kill you, but I don't want you up here with me."
+        ]
+    ],
+    "murderedthem6": [
+        [
+            "murderedthem",
+            "any",
+            "they_df",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "I hope they exile you.",
+            "I'd say I hope they kill you, but I don't want you up here with me."
+        ]
+    ],
     "murderedyou1": [
         [
             "murderedyou",

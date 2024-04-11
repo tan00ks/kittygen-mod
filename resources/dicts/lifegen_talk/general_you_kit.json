@@ -3114,6 +3114,52 @@
             "What an evil little thing."
         ]
     ],
+    "kitmurderedthem3": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_shunned"
+        ],
+        [
+            "What an evil little thing."
+        ]
+    ],
+    "kitmurderedthem4": [
+        [
+            "murderedthem",
+            "any",
+            "they_df",
+            "you_shunned"
+        ],
+        [
+            "What an evil little thing."
+        ]
+    ],
+    "kitmurderedthem5": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "What an evil little thing."
+        ]
+    ],
+    "kitmurderedthem6": [
+        [
+            "murderedthem",
+            "any",
+            "they_df",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "What an evil little thing."
+        ]
+    ],
     "murderedyoukit1": [
         [
             "murderedyou",
