@@ -15061,5 +15061,116 @@
             "Do you... get a lot of sleep, y_c?",
             "You always look exhausted."
         ]
+    ],
+    "murderedthem1": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc"
+        ],
+        [
+            "Don't talk to me, traitor.",
+            "We were supposed to be Clanmates."
+        ]
+    ],
+    "murderedthem2": [
+        [
+            "murderedthem",
+            "any",
+            "they_df"
+        ],
+        [
+            "Don't talk to me, traitor.",
+            "We were supposed to be Clanmates."
+        ]
+    ],
+    "murderedyou1": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc"
+        ],
+        [
+            "Oh, yikes, I'm still going to have to deal with you after death?"
+        ]
+    ],
+    "murderedyou2": [
+        [
+            "murderedyou",
+            "any",
+            "you_df"
+        ],
+        [
+            "Oh, yikes, I'm still going to have to deal with you after death?"
+        ]
+    ],
+    "murderedyou3": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_df"
+        ],
+        [
+            "How did you make it into StarClan?",
+            "You deserved what happened to you and more.",
+            "If I could kill you again, I would."
+        ]
+    ],
+    "murderedyou4": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_df"
+        ],
+        [
+            "Oh, don't look so scared.",
+            "I can't kill you again."
+        ]
+    ],
+    "murderedyou5": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_sc"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyou6": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyou7": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_grieving"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyou8": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_grieving"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
     ]
 }

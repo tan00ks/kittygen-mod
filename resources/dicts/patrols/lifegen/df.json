@@ -791,6 +791,12 @@
                 "exp": 20,
                 "weight": 10,
                 "dead_cats": ["r_c"],
+                "murder": [
+                    {
+                        "murderer": ["y_c"],
+                        "victim": ["r_c"]
+                    }
+                ],
                 "history_text": {
                     "reg_death": "m_c was murdered by in the Dark Forest.",
                     "lead_death": "murdered in the Dark Forest"
@@ -998,7 +1004,7 @@
         ]
     },
     {
-        "patrol_id": "life_df_og12",
+        "patrol_id": "life_df_J1",
         "biome": [
             "Any"
         ],
@@ -1086,7 +1092,7 @@
         ]
     }, 
     {
-        "patrol_id": "life_df_og13",
+        "patrol_id": "life_df_J2",
         "biome": [
             "Any"
         ],
@@ -1167,7 +1173,7 @@
         ]
     },
     {
-        "patrol_id": "life_df_og14",
+        "patrol_id": "life_df_J3",
         "biome": [
             "Any"
         ],
@@ -1254,6 +1260,153 @@
                 "exp": 20,
                 "weight": 5,
                 "dead_cats": ["r_c"]
+            }
+        ]
+    },
+    {
+        "patrol_id": "life_df_J4",
+        "biome": [
+            "Any"
+        ],
+        "season": [
+            "Any"
+        ],
+        "types": [
+            "df"
+        ],
+        "tags": [
+            "border",
+            "new_cat",
+            "fellowtrainee"
+        ],
+        "patrol_art": "df_default",
+        "min_cats": 2,
+        "max_cats": 2,
+        "min_max_status": {},
+        "weight": 10,
+        "intro_text": "After managing to sneak away a brutal group training session, you've managed to find one of the only drinkable water sources in the entire Dark Forest. Just as you start to lift your head from the puddle, a cat tackles you from the side, knocking the air from your lungs. r_c pins you to the ground, looking startled to see you but not backing down.",
+        "decline_text": "You freeze in fear and r_c takes pity. They toss you aside and you instantly sprint away. The water can be all theirs.",
+        "chance_of_success": 30,
+        "success_outcomes": [
+            {
+                "text": "Taking advantage of r_c's surprise, you launch them into the water and run. You hear them calling out after you, but you don't dare return.",
+                "exp": 20,
+                "weight": 20
+            },
+            {
+                "text": "When they see who you are, r_c jumps off of you, apologising profusely and stating that they just wanted to defend their watering hole. They decide that you can share it, so long as you don't tell anyone else.",
+                "exp": 20,
+                "weight": 10,
+                "relationships": [
+                    {
+                        "cats_to": ["y_c"],
+                        "cats_from": ["r_c"],
+                        "mutual": false,
+                        "values": ["trust", "comfort"],
+                        "amount": 15
+                    }
+                ]
+            }
+        ],
+        "fail_outcomes": [
+            {
+                "text": "r_c gives you a good scratch before you can wriggle away, and your fresh wound is sore in the morning.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [ 
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["claw-wound"],
+                        "scars": ["FACE"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred by a Clanmate in the Dark Forest.",
+                    "reg_death": "m_c was killed by a Clanmate in the Dark Forest.",
+                    "lead_death": "{VERB/m_c/were/was} killed by a Clanmate in the Dark Forest."
+                }
+            },
+            {
+                "text": "The shock is enough to startle you awake, and when you see r_c the next morning, they avoid your gaze completely.",
+                "exp": 0,
+                "weight": 30,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["dislike"],
+                        "amount": 10
+                    }
+                ]
+            }
+        ],
+        "antag_fail_outcomes": [
+            {
+                "text": "You think that fighting back will be easy, but r_c is a fair match. They know this terrain better than you, and they take advantage of your lack of knowledge to leave you with a nasty injury.",
+                "exp": 0,
+                "weight": 20,
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["big_bite_injury"]
+                    }
+                ]
+            },
+            {
+                "text":"You know you should fight back, but you're equally surprised to see them as r_c is to see you. They're able to get over their shock quicker, though, and they quickly shove you into the water. A paw lands on the back of your head, driving your muzzle into the wet sand. You fight and scream, but you can't reach them. It must be by some grace of StarClan that you manage to startle awake just as your vision starts to flicker.",
+                "exp": 0,
+                "weight": 20,
+                "relationships": [
+                    {
+                        "cats_to": ["patrol"],
+                        "cats_from": ["patrol"],
+                        "mutual": true,
+                        "values": ["trust", "platonic_love"],
+                        "amount": -20
+                    }
+                ],
+                "injury": [
+                    {
+                        "cats": ["y_c"],
+                        "injuries": ["water in their lungs"]
+                    }
+                ]
+            }
+        ],
+        "antag_success_outcomes": [
+            {
+                "text": "While r_c is shocked by the sight of you, you shoot a paw towards their throat. Claws sunk into their neck, you yank them to the ground next to you and take off before they have a chance to react.",
+                "exp": 30,
+                "weight": 30,
+                "injury": [
+                    {
+                        "cats": ["r_c"],
+                        "injuries": ["claw-wound"],
+                        "scars": ["THROAT"]
+                    }
+                ],
+                "history_text": {
+                    "scar": "m_c was scarred by a Dark Forest warrior.",
+                    "reg_death": "m_c was killed by a Dark Forest warrior.",
+                    "lead_death": "{VERB/m_c/were/was} killed by a Dark Forest warrior."
+                }
+            },
+            {
+                "text": "Angry that r_c was able to catch you off-guard, and knowing that you can't risk them knowing that you train here, you know there's only one way to take care of the situation. You're stronger than your Clanmate-- you know it. Taking advantage of their surprise upon seeing you, you quickly overpower them and sink your teeth into their throat. When the Clan wakes up tomorrow, no one can explain the gorey scene left in r_c's nest.",
+                "exp": 40,
+                "weight": 10,
+                "dead_cats": ["r_c"],
+                "murder": [
+                    {
+                        "murderer": ["y_c"],
+                        "victim": ["r_c"]
+                    }
+                ],
+                "history_text": {
+                    "reg_death": "m_c was killed in a fight with a Clanmate in the Dark Forest.",
+                    "lead_death": "died in a fight with a Clanmate in the Dark Forest."
+                }
             }
         ]
     }

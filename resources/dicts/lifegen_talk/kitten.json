@@ -3940,10 +3940,10 @@
             "any"
         ],
         [
-            "[t_c is tearing clumps of dirt form the ground beneath them. You ask why,]",
-            "This place sucks. I'm trying to destroy it.",
+            "[t_c is tearing clumps of dirt from the ground beneath them. You ask why.]",
+            "This place sucks! I'm trying to destroy it.",
             "I want to go live with the starry cats.",
-            "[Decide to join them. Maybe you two can dig far enough that you end up someplace new.]"
+            "[You decide to join them. Maybe you two can dig far enough that you end up someplace new.]"
         ]
     ],
     "sckit2": [
@@ -4419,6 +4419,116 @@
         [
             "It's not fair! It's not fair!",
             "Make them pay, y_c!"
+        ]
+    ],
+    "murderedthemkit1": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit2": [
+        [
+            "murderedthem",
+            "any",
+            "they_df"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "kitmurderedyou1": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc"
+        ],
+        [
+            "Wait, you're still here?",
+            "[Startled, t_c rushes away to the nursery]"
+        ]
+    ],
+    "kitmurderedyou2": [
+        [
+            "murderedyou",
+            "any",
+            "you_df"
+        ],
+        [
+            "Wait, you're still here?",
+            "[Startled, t_c rushes away to the nursery]"
+        ]
+    ],
+    "kitmurderedyou3": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_df"
+        ],
+        [
+            "Hi, y_c.",
+            "Are you still mad at me?"
+        ]
+    ],
+    "kitmurderedyou4": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_df"
+        ],
+        [
+            "Hi, y_c.",
+            "Are you still mad at me?"
+        ]
+    ],
+    "kitmurderedyou5": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_sc"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "kitmurderedyou6": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyoukit7": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_grieving"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyoukit8": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_grieving"
+        ],
+        [
+            "I'm sorry. I really am."
         ]
     ]
 }

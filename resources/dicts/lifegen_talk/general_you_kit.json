@@ -3093,5 +3093,119 @@
             "... ... ... ... ...",
             "r_m has some explaining to do."
         ]
+    ],
+    "kitmurderedthem1": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc"
+        ],
+        [
+            "What an evil little thing."
+        ]
+    ],
+    "kitmurderedthem2": [
+        [
+            "murderedthem",
+            "any",
+            "they_df"
+        ],
+        [
+            "What an evil little thing."
+        ]
+    ],
+    "murderedyoukit1": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc"
+        ],
+        [
+            "Oh, hey, y_c...",
+            "You should... go play somewhere else.",
+            "[It seems that t_c doesn't want to confront what they'd done.]"
+        ]
+    ],
+    "murderedyoukit2": [
+        [
+            "murderedyou",
+            "any",
+            "you_df"
+        ],
+        [
+            "Oh, hey, y_c...",
+            "You should... go play somewhere else.",
+            "[It seems that t_c doesn't want to confront what they'd done.]"
+        ]
+    ],
+    "murderedyoukit3": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_df"
+        ],
+        [
+            "Oh, hey, y_c...",
+            "You should... go play somewhere else.",
+            "[It seems that t_c doesn't want to confront what they'd done.]"
+        ]
+    ],
+    "murderedyoukit4": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_df"
+        ],
+        [
+            "Oh, hey, y_c...",
+            "You should... go play somewhere else.",
+            "[It seems that t_c doesn't want to confront what they'd done.]"
+        ]
+    ],
+    "murderedyoukit5": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_sc"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyoukit6": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyoukit7": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_grieving"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyoukit8": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_grieving"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
     ]
 }

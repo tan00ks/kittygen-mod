@@ -481,6 +481,30 @@ class TalkScreen(Screens):
             if "you_sc" in tags and you.df:
                 continue
 
+            murdered_them = False
+            for murder_event in you.history.murder["is_murderer"]:
+                if cat.ID == murder_event.get("victim"):
+                    murdered_them = True
+                    break
+
+            if murdered_them and "murderedthem" not in tags:
+                continue
+
+            if "murderedthem" in tags and not murdered_them:
+                continue
+
+            murdered_you = False
+            for murder_event in cat.history.murder["is_murderer"]:
+                if you.ID == murder_event.get("victim"):
+                    murdered_you = True
+                    break
+
+            if murdered_you and "murderedyou" not in tags:
+                continue
+
+            if "murderedyou" in tags and not murdered_you:
+                continue
+
             if "grief stricken" in cat.illnesses:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
                 if "grievingyou" in tags:
