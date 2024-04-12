@@ -482,10 +482,12 @@ class TalkScreen(Screens):
                 continue
 
             murdered_them = False
-            for murder_event in you.history.murder["is_murderer"]:
-                if cat.ID == murder_event.get("victim"):
-                    murdered_them = True
-                    break
+            if you.history:
+                if you.history.murder:
+                    for murder_event in you.history.murder["is_murderer"]:
+                        if cat.ID == murder_event.get("victim"):
+                            murdered_them = True
+                            break
 
             if murdered_them and "murderedthem" not in tags:
                 continue
@@ -494,10 +496,12 @@ class TalkScreen(Screens):
                 continue
 
             murdered_you = False
-            for murder_event in cat.history.murder["is_murderer"]:
-                if you.ID == murder_event.get("victim"):
-                    murdered_you = True
-                    break
+            if cat.history:
+                if cat.history.murder:
+                    for murder_event in cat.history.murder["is_murderer"]:
+                        if you.ID == murder_event.get("victim"):
+                            murdered_you = True
+                            break
 
             if murdered_you and "murderedyou" not in tags:
                 continue
@@ -517,14 +521,38 @@ class TalkScreen(Screens):
             if "grief stricken" in you.illnesses:
                 dead_cat = Cat.all_cats.get(you.illnesses['grief stricken'].get("grief_cat"))
                 if "grievingthem" in tags:
-                    if dead_cat.name == cat.name:
-                        print ('You are grieving the death of this cat.')
-                        
                     if dead_cat.name != cat.name:
                         continue
                 else:
                     if dead_cat.name == cat.name:
                         continue
+            
+            # FORGIVEN TAGS
+
+            # if you.history:
+            #     if you.history.murder:
+            #         if "is_murderer" in you.history.murder:
+            #             youmurders = len(you.history.murder["is_murderer"])
+            #             if you.moons > you.revealed + 12: # 12 moons after being "forgiven" you can get reg dialogue again
+            #                 if youmurders > 0 and you.shunned == 0 and "you_forgiven" not in tags:
+            #                     continue
+            # if cat.history:
+            #     if cat.history.murder:
+            #         if "is_murderer" in cat.history.murder:
+            #             catmurders = len(cat.history.murder["is_murderer"])
+            #             if cat.moons > cat.revealed + 12:
+            #                 if catmurders > 0 and cat.shunned == 0 and "they_forgiven" not in tags:
+            #                     continue
+
+            # if "you_forgiven" in tags and (you.shunned > 0 or youmurders == 0):
+            #     continue
+
+            # if "they_forgiven" in tags and (cat.shunned > 0 or catmurders == 0):
+            #     continue
+
+            if "you_forgiven" in tags or "they_forgiven" in tags:
+                continue
+
 
             roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
             if any(r in roles for r in tags):

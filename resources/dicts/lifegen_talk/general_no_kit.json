@@ -15222,5 +15222,14 @@
         [
             "I'm sorry. I really am."
         ]
+    ],
+    "youforgiven1": [
+        [
+            "you_forgiven",
+            "any"
+        ],
+        [
+            "Don't think the Clan will forget what you did."
+        ]
     ]
 }
