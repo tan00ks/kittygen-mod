@@ -433,7 +433,7 @@ class MurderScreen(Screens):
             a_n = str(accomplice.name)
             kit_punishment = [f"{a_n} is assigned counseling by the Clan's medicine cat to help them understand the severity of their actions and to guide them to make better decisions in the future.",
                             f"{a_n} is to be kept in the nursery under the watchful eye of the queens at all times until they become an apprentice."]
-            gen_punishment = [f"{a_n} is assigned counseling by the Clan's medicine cat to help them understand the severity of your actions and to guide them to make better decisions in the future.",
+            gen_punishment = [f"{a_n} is assigned counseling by the Clan's medicine cat to help them understand the severity of their actions and to guide them to make better decisions in the future.",
                                 f"{a_n} is required to take meals last and is forced to sleep in a separate den away from their clanmates.",
                                 f"{a_n} is assigned to several moons of tasks that include cleaning out nests, checking elders for ticks, and other chores alongside their normal duties.",
                                 f"{a_n} is assigned a mentor who will better educate them about the Warrior Code and the sacredness of life."]
