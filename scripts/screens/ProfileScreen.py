@@ -430,7 +430,7 @@ class ProfileScreen(Screens):
             elif "talk" in self.profile_elements and \
                     event.ui_element == self.profile_elements["talk"]:
                 self.the_cat.talked_to = True
-                if not self.the_cat.dead and not game.clan.your_cat.dead:
+                if not self.the_cat.dead and not game.clan.your_cat.dead and game.clan.your_cat.ID in self.the_cat.relationships and self.the_cat.ID in game.clan.your_cat.relationships:
                     self.the_cat.relationships[game.clan.your_cat.ID].platonic_like += randint(1,5)
                     game.clan.your_cat.relationships[self.the_cat.ID].platonic_like += randint(1,5)
                 self.change_screen('talk screen')
@@ -645,7 +645,7 @@ class ProfileScreen(Screens):
                 self.fav_tab.show()
                 self.not_fav_tab.hide()
             elif event.ui_element == self.save_text:
-                self.user_notes = sub(r"[^A-Za-z0-9<->/.()*'&#!?,| ]+", "", self.notes_entry.get_text())
+                self.user_notes = sub(r"[^A-Za-z0-9<->/.()*'&#!?,| _+=@~:;[]{}%$^`]+", "", self.notes_entry.get_text())
                 self.save_user_notes()
                 self.editing_notes = False
                 self.update_disabled_buttons_and_text()
@@ -1080,16 +1080,18 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
-        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.ID not in game.clan.unknown_cats and not self.the_cat.outside and not game.clan.your_cat.outside:
+        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.outside and not game.clan.your_cat.outside:
         
-            cat_dead_condition_sc = self.the_cat.dead and not self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) and game.clan.your_cat.moons >=6) or self.the_cat.joined_df)
+            cat_dead_condition_sc = self.the_cat.dead and not self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) and game.clan.your_cat.moons >=6))
             cat_dead_condition_df = self.the_cat.dead and self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) and game.clan.your_cat.moons >=6) or game.clan.your_cat.joined_df)
+            cat_dead_condition_ur = self.the_cat.dead and self.the_cat.ID in game.clan.unknown_cats and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST) and game.clan.your_cat.moons >=6))
 
-            cat_dead_conditions = cat_dead_condition_sc or cat_dead_condition_df
+            cat_dead_conditions = cat_dead_condition_sc or cat_dead_condition_df or cat_dead_condition_ur
 
             cat_alive_condition_sc = game.clan.your_cat.dead and not game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) and self.the_cat.moons >= 6))
-            cat_alive_condition_df = game.clan.your_cat.dead and game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) and self.the_cat.moons >= 6))
-            cat_alive_skills_condition = cat_alive_condition_sc or cat_alive_condition_df
+            cat_alive_condition_df = game.clan.your_cat.dead and game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) and self.the_cat.moons >= 6) or self.the_cat.joined_df)
+            cat_alive_condition_ur = game.clan.your_cat.dead and game.clan.your_cat.ID in game.clan.unknown_cats and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.GHOST) and self.the_cat.moons >= 6))
+            cat_alive_skills_condition = cat_alive_condition_sc or cat_alive_condition_df or cat_alive_condition_ur
             
             if cat_dead_conditions or cat_alive_skills_condition:
                 if self.the_cat.status not in ['mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
@@ -2166,8 +2168,7 @@ class ProfileScreen(Screens):
                     if not moons:
                         name_list.append(name)
                     else:
-                        name_list.append(name + f" (Moon {str(victim_names[name])})")
-
+                        name_list.append(f"{name} (Moon {victim_names[name][0]})")
 
                 if len(name_list) == 1:
                     victim_text = f"{self.the_cat.name} murdered {name_list[0]}."

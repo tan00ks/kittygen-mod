@@ -2380,7 +2380,7 @@ class Cat():
                         priority_mentors.append(cat)
             # First try for a cat who currently has no apprentices and is working
             if 'request apprentice' in game.switches:
-                if game.switches['request apprentice']:
+                if game.switches['request apprentice'] and self.moons == 6:
                     new_mentor = game.clan.your_cat
                 else:
                     if priority_mentors:  # length of list > 0
