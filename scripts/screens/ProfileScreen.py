@@ -1080,16 +1080,18 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
-        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and self.the_cat.ID not in game.clan.unknown_cats and not self.the_cat.outside and not game.clan.your_cat.outside:
+        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.outside and not game.clan.your_cat.outside:
         
-            cat_dead_condition_sc = self.the_cat.dead and not self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) and game.clan.your_cat.moons >=6) or self.the_cat.joined_df)
+            cat_dead_condition_sc = self.the_cat.dead and not self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) and game.clan.your_cat.moons >=6))
             cat_dead_condition_df = self.the_cat.dead and self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) and game.clan.your_cat.moons >=6) or game.clan.your_cat.joined_df)
+            cat_dead_condition_ur = self.the_cat.dead and self.the_cat.ID in game.clan.unknown_cats and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST) and game.clan.your_cat.moons >=6))
 
-            cat_dead_conditions = cat_dead_condition_sc or cat_dead_condition_df
+            cat_dead_conditions = cat_dead_condition_sc or cat_dead_condition_df or cat_dead_condition_ur
 
             cat_alive_condition_sc = game.clan.your_cat.dead and not game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) and self.the_cat.moons >= 6))
-            cat_alive_condition_df = game.clan.your_cat.dead and game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) and self.the_cat.moons >= 6))
-            cat_alive_skills_condition = cat_alive_condition_sc or cat_alive_condition_df
+            cat_alive_condition_df = game.clan.your_cat.dead and game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) and self.the_cat.moons >= 6) or self.the_cat.joined_df)
+            cat_alive_condition_ur = game.clan.your_cat.dead and game.clan.your_cat.ID in game.clan.unknown_cats and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.GHOST) and self.the_cat.moons >= 6))
+            cat_alive_skills_condition = cat_alive_condition_sc or cat_alive_condition_df or cat_alive_condition_ur
             
             if cat_dead_conditions or cat_alive_skills_condition:
                 if self.the_cat.status not in ['mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
