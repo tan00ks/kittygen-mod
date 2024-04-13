@@ -1388,6 +1388,7 @@ class Events:
                 r_clanmate = Cat.all_cats.get(random.choice(game.clan.clan_cats))
             
             r_clanmate.joined_df = True
+            r_clanmate.update_df_mentor()
             evt_txt = random.choice(self.df_txt["clanmate"]).replace("c_m", str(r_clanmate.name))
             evt = Single_Event(evt_txt)
             if evt not in game.cur_events_list:
