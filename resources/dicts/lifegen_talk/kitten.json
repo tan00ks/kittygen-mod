@@ -4421,7 +4421,7 @@
             "Make them pay, y_c!"
         ]
     ],
-    "murderedthemkit1": [
+    "murderedthemkit_J1": [
         [
             "murderedthem",
             "any",
@@ -4431,7 +4431,7 @@
             "Did I do something wrong?"
         ]
     ],
-    "murderedthemkit2": [
+    "murderedthemkit_J2": [
         [
             "murderedthem",
             "any",
@@ -4441,7 +4441,7 @@
             "Did I do something wrong?"
         ]
     ],
-    "murderedthemkit3": [
+    "murderedthemkit_J3": [
         [
             "murderedthem",
             "any",
@@ -4452,7 +4452,7 @@
             "Did I do something wrong?"
         ]
     ],
-    "murderedthemkit4": [
+    "murderedthemkit_J4": [
         [
             "murderedthem",
             "any",
@@ -4463,7 +4463,7 @@
             "Did I do something wrong?"
         ]
     ],
-    "murderedthemkit5": [
+    "murderedthemkit_J5": [
         [
             "murderedthem",
             "any",
@@ -4475,7 +4475,7 @@
             "Did I do something wrong?"
         ]
     ],
-    "murderedthemkit6": [
+    "murderedthemkit_J6": [
         [
             "murderedthem",
             "any",
@@ -4487,7 +4487,64 @@
             "Did I do something wrong?"
         ]
     ],
-    "kitmurderedyou1": [
+    "murderedthemkit_J7": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "littermate"
+        ],
+        [
+            "We were supposed to grow up together!",
+            "Why did you do that to me, y_c?"
+        ]
+    ],
+    "murderedthemkit_J8": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "littermate",
+            "you_shunned"
+        ],
+        [
+            "We were supposed to grow up together!",
+            "Why did you do that to me, y_c?"
+        ]
+    ],
+    "murderedthemkit_J9": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "littermate",
+            "you_shunned"
+        ],
+        [
+            "I wish we could've played together some more...",
+            "I guess you didn't really want to, though."
+        ]
+    ],
+    "murderedthemkit_J10": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "littermate",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        [
+            "I've been here a really long time...",
+            "Does y_p still miss me?"
+        ]
+    ],
+    "kitmurderedyou_J1": [
         [
             "murderedyou",
             "any",
@@ -4498,7 +4555,7 @@
             "[Startled, t_c rushes away to the nursery]"
         ]
     ],
-    "kitmurderedyou2": [
+    "kitmurderedyou_J2": [
         [
             "murderedyou",
             "any",
@@ -4509,7 +4566,7 @@
             "[Startled, t_c rushes away to the nursery]"
         ]
     ],
-    "kitmurderedyou3": [
+    "kitmurderedyou_J3": [
         [
             "murderedyou",
             "any",
@@ -4521,7 +4578,7 @@
             "Are you still mad at me?"
         ]
     ],
-    "kitmurderedyou4": [
+    "kitmurderedyou_J4": [
         [
             "murderedyou",
             "any",
@@ -4533,7 +4590,7 @@
             "Are you still mad at me?"
         ]
     ],
-    "kitmurderedyou5": [
+    "kitmurderedyou_J5": [
         [
             "murderedyou",
             "any",
@@ -4544,7 +4601,7 @@
             "I'm sorry. I really am."
         ]
     ],
-    "kitmurderedyou6": [
+    "kitmurderedyou_J6": [
         [
             "murderedyou",
             "any",
@@ -4555,7 +4612,7 @@
             "I'm sorry. I really am."
         ]
     ],
-    "murderedyoukit7": [
+    "murderedyoukit_J7": [
         [
             "murderedyou",
             "any",
@@ -4566,7 +4623,7 @@
             "I'm sorry. I really am."
         ]
     ],
-    "murderedyoukit8": [
+    "murderedyoukit_J8": [
         [
             "murderedyou",
             "any",

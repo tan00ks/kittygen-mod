@@ -15024,7 +15024,7 @@
             "Please."
         ]
     ],
-    "dftrainee1": [
+    "dftrainee_J1": [
         [
             "they_df",
             "you_dftrainee",
@@ -15038,7 +15038,7 @@
             "... Good. See you there."
         ]
     ],
-    "dftrainee2": [
+    "dftrainee_J2": [
         [
             "they_df",
             "you_dftrainee",
@@ -15052,7 +15052,7 @@
             "Tch. Whatever. Come find me when you've grown a spine."
         ]
     ],
-    "dftrainee3": [
+    "dftrainee_J3": [
         [
             "you_dftrainee",
             "any"
@@ -15062,7 +15062,7 @@
             "You always look exhausted."
         ]
     ],
-    "murderedthem1": [
+    "murderedthem_J1": [
         [
             "murderedthem",
             "any",
@@ -15073,7 +15073,7 @@
             "We were supposed to be Clanmates."
         ]
     ],
-    "murderedthem2": [
+    "murderedthem_J2": [
         [
             "murderedthem",
             "any",
@@ -15084,7 +15084,7 @@
             "We were supposed to be Clanmates."
         ]
     ],
-    "murderedthem3": [
+    "murderedthem_J3": [
         [
             "murderedthem",
             "any",
@@ -15096,7 +15096,7 @@
             "I'd say I hope they kill you, but I don't want you up here with me."
         ]
     ],
-    "murderedthem4": [
+    "murderedthem_J4": [
         [
             "murderedthem",
             "any",
@@ -15108,7 +15108,7 @@
             "I'd say I hope they kill you, but I don't want you up here with me."
         ]
     ],
-    "murderedthem5": [
+    "murderedthem_J5": [
         [
             "murderedthem",
             "any",
@@ -15121,7 +15121,7 @@
             "I'd say I hope they kill you, but I don't want you up here with me."
         ]
     ],
-    "murderedthem6": [
+    "murderedthem_J6": [
         [
             "murderedthem",
             "any",
@@ -15134,7 +15134,28 @@
             "I'd say I hope they kill you, but I don't want you up here with me."
         ]
     ],
-    "murderedyou1": [
+    "murderedthem_J7": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_forgiven"
+        ],
+        [
+            "I don't care if the Clan has forgiven you. I never will."
+        ]
+    ],
+    "murderedthem_J8": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc"
+        ],
+        [
+            "Get away from me, murderer! Don't you think you've put me through enough?"
+        ]
+    ],
+    "murderedyou_J1": [
         [
             "murderedyou",
             "any",
@@ -15144,7 +15165,7 @@
             "Oh, yikes, I'm still going to have to deal with you after death?"
         ]
     ],
-    "murderedyou2": [
+    "murderedyou_J2": [
         [
             "murderedyou",
             "any",
@@ -15154,7 +15175,7 @@
             "Oh, yikes, I'm still going to have to deal with you after death?"
         ]
     ],
-    "murderedyou3": [
+    "murderedyou_J3": [
         [
             "murderedyou",
             "any",
@@ -15167,7 +15188,7 @@
             "If I could kill you again, I would."
         ]
     ],
-    "murderedyou4": [
+    "murderedyou_J4": [
         [
             "murderedyou",
             "any",
@@ -15179,7 +15200,7 @@
             "I can't kill you again."
         ]
     ],
-    "murderedyou5": [
+    "murderedyou_J5": [
         [
             "murderedyou",
             "any",
@@ -15190,7 +15211,7 @@
             "I'm sorry. I really am."
         ]
     ],
-    "murderedyou6": [
+    "murderedyou_J6": [
         [
             "murderedyou",
             "any",
@@ -15201,7 +15222,7 @@
             "I'm sorry. I really am."
         ]
     ],
-    "murderedyou7": [
+    "murderedyou_J7": [
         [
             "murderedyou",
             "any",
@@ -15212,7 +15233,7 @@
             "I'm sorry. I really am."
         ]
     ],
-    "murderedyou8": [
+    "murderedyou_J8": [
         [
             "murderedyou",
             "any",
@@ -15223,13 +15244,68 @@
             "I'm sorry. I really am."
         ]
     ],
-    "youforgiven1": [
+    "youforgiven_J1": [
         [
             "you_forgiven",
             "any"
         ],
         [
             "Don't think the Clan will forget what you did."
+        ]
+    ],
+    "youforgiven_J2": [
+        [
+            "you_forgiven",
+            "any",
+            "sweet"
+        ],
+        [
+            "Oh, I'm so glad I get to talk to you again, y_c!",
+            "Have you been on a hunting patrol yet? Wanna go right now?",
+            "Yes! Let's go! I'm glad to have you back in the Clan."
+        ]
+    ],
+    "youforgiven_J3": [
+        [
+            "you_forgiven",
+            "any"
+        ],
+        [
+            "[Though you've been forgiven by the Clan, t_c still doesn't seem to trust you.]",
+            "What? Am I staring?",
+            "Sorry. Wouldn't want to be next on your list..."
+        ]
+    ],
+    "youforgiven_J4": [
+        [
+            "you_forgiven",
+            "they_forgiven",
+            "any"
+        ],
+        [
+            "[t_c is one of the only cats in the Clan that treats you normally. You're glad you have a cat who understands what you're going through.]",
+            "These cats are so dramatic.",
+            "Don't worry, they're forget soon enough and life will be back to normal.",
+            "[They seem to be trying to convince themselves of this fact just as much as you.]"
+        ]
+    ],
+    "they_forgiven_J1": [
+        [
+            "they_forgiven",
+            "any"
+        ],
+        [
+            "Hey there, y_c? How's your day been?",
+            "[t_c is being extra friendly ever since their shun was lifted.]"
+        ]
+    ],
+    "they_forgiven_J2": [
+        [
+            "they_forgiven",
+            "any"
+        ],
+        [
+            "Sometimes, I miss being shunned. More cats left me alone."
         ]
     ]
 }

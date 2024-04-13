@@ -529,28 +529,30 @@ class TalkScreen(Screens):
             
             # FORGIVEN TAGS
 
-            # if you.history:
-            #     if you.history.murder:
-            #         if "is_murderer" in you.history.murder:
-            #             youmurders = len(you.history.murder["is_murderer"])
-            #             if you.moons > you.revealed + 12: # 12 moons after being "forgiven" you can get reg dialogue again
-            #                 if youmurders > 0 and you.shunned == 0 and "you_forgiven" not in tags:
-            #                     continue
-            # if cat.history:
-            #     if cat.history.murder:
-            #         if "is_murderer" in cat.history.murder:
-            #             catmurders = len(cat.history.murder["is_murderer"])
-            #             if cat.moons > cat.revealed + 12:
-            #                 if catmurders > 0 and cat.shunned == 0 and "they_forgiven" not in tags:
-            #                     continue
+            youreforgiven = False
+            theyreforgiven = False
 
-            # if "you_forgiven" in tags and (you.shunned > 0 or youmurders == 0):
-            #     continue
+            if you.moons < you.revealed + 10: # after ten moons, 100% regular dialogue returns
+                if you.history:
+                    if you.history.murder:
+                        if "is_murderer" in you.history.murder:
+                            if len(you.history.murder["is_murderer"]) > 0 and you.shunned == 0 and "you_forgiven" not in tags:
+                                continue
+                            else:
+                                youreforgiven = True
+            if cat.moons < cat.revealed + 10:
+                if cat.history:
+                    if cat.history.murder:
+                        if "is_murderer" in cat.history.murder:
+                            if len(cat.history.murder["is_murderer"]) > 0 and cat.shunned == 0 and "they_forgiven" not in tags:
+                                continue
+                            else:
+                                theyreforgiven = True
+            
+            if "you_forgiven" in tags and (you.shunned > 0 or not youreforgiven):
+                continue
 
-            # if "they_forgiven" in tags and (cat.shunned > 0 or catmurders == 0):
-            #     continue
-
-            if "you_forgiven" in tags or "they_forgiven" in tags:
+            if "they_forgiven" in tags and (cat.shunned > 0 or not theyreforgiven):
                 continue
 
 
@@ -935,7 +937,7 @@ class TalkScreen(Screens):
             game.clan.talks.clear()
 
         weights2 = []
-        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving"]
+        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving", "you_forgiven", "they_forgiven"]
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
             num_fam_mentor_tags = 1

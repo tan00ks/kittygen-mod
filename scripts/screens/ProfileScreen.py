@@ -1245,8 +1245,8 @@ class ProfileScreen(Screens):
         else:
             self.exile_return_button.hide()
 
-        if self.the_cat.shunned == 0 and self.the_cat.revealed > 0 and not self.the_cat.outside and not self.the_cat.exiled:
-            print("This cat has been forgiven for murder.")
+        # if self.the_cat.shunned == 0 and self.the_cat.revealed > 0 and not self.the_cat.outside and not self.the_cat.exiled:
+        #     print("This cat has been forgiven for murder.")
 
     def determine_previous_and_next_cat(self):
         """'Determines where the next and previous buttons point too."""

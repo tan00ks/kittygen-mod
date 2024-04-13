@@ -356,7 +356,7 @@ class Patrol():
             elif clan_hostile:
                 possible_patrols.extend(self.generate_patrol_events(self.OTHER_CLAN_HOSTILE))
 
-        if game.current_screen == 'patrol screen2' or game.current_screen =='patrol screen3' or game.current_screen =='patrol screen4':
+        if game.current_screen == 'patrol screen' or game.current_screen == 'patrol screen2' or game.current_screen =='patrol screen3' or game.current_screen =='patrol screen4':
             final_patrols, final_romance_patrols = self.get_filtered_patrols(possible_patrols, biome, current_season,
                                                                             patrol_type)
 
@@ -615,9 +615,10 @@ class Patrol():
 
         # makes sure that it grabs patrols in the correct biomes, season, with the correct number of cats
         for patrol in possible_patrols:
+
             if not self._check_constraints(patrol):
                 continue
-            
+
             # Don't check for repeat patrols if ensure_patrol_id is being used. 
             if not isinstance(game.config["patrol_generation"]["debug_ensure_patrol_id"], str) and \
                     patrol.patrol_id in self.used_patrols:
@@ -649,15 +650,26 @@ class Patrol():
             if current_season not in patrol.season and "Any" not in patrol.season:
                 continue
             if game.current_screen == 'patrol screen':
+
                 if game.clan.your_cat.status == "kitten" and "kit_only" not in patrol.tags:
                     continue
                 elif game.clan.your_cat.status != "kitten" and "kit_only" in patrol.tags:
                     continue
 
-            if game.current_screen == "patrol screen":
+                if game.clan.your_cat.shunned == 0:
+                    if "shunned" in patrol.tags:
+                        continue
+                elif game.clan.your_cat.shunned > 0:
+                    if "shunned" not in patrol.tags:
+                        print('not shunned patrol')
+                        continue
+                    else:
+                        print('shunned patrol')
+
                 if "bloodthirsty_only" in patrol.tags:
                     if Cat.all_cats.get(game.clan.your_cat.mentor).personality.trait != "bloodthirsty":
                         continue
+
             if game.current_screen == 'patrol screen4':
                 if "you_med" in patrol.tags:
                     if game.clan.your_cat.status != 'medicine cat':
@@ -682,17 +694,18 @@ class Patrol():
                     elif 'herb_gathering' not in patrol.types and patrol_type == 'med':
                         continue
 
-            if len(self.patrol_cats) > 1:
-                
-                other_cat = self.patrol_cats[1]
-                
-                if not other_cat.joined_df:
-                    if "fellowtrainee" in patrol.tags:
-                        continue
-                
-                else:
-                    if "fellowtrainee" not in patrol.tags:
-                        continue
+            if "df" in patrol.types:
+                if len(self.patrol_cats) > 1:
+                    
+                    other_cat = self.patrol_cats[1]
+                    
+                    if not other_cat.joined_df:
+                        if "fellowtrainee" in patrol.tags: 
+                            continue
+                    
+                    else:
+                        if "fellowtrainee" not in patrol.tags:
+                            continue
 
 
             # cruel season tag check
@@ -704,7 +717,7 @@ class Patrol():
                 romantic_patrols.append(patrol)
             else:
                 filtered_patrols.append(patrol)
-
+        
         # make sure the hunting patrols are balanced
         if patrol_type == 'hunting':
             filtered_patrols = self.balance_hunting(filtered_patrols)
