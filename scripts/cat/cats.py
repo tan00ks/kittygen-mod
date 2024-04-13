@@ -2408,7 +2408,7 @@ class Cat():
 
         priority_mentors = []
         for c in potential_mentors: 
-            if c.moons > self.moons and len(self.df_apprentices) == 0:
+            if len(self.df_apprentices) == 0:
                 priority_mentors.append(c)
 
         if priority_mentors:
