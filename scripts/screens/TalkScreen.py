@@ -1185,7 +1185,7 @@ class TalkScreen(Screens):
                 if "r_w2" in text:
                     alive_app2 = choice(alive_apps)
                     counter = 0
-                    while alive_app2.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    while alive_app2.ID == game.clan.your_cat.ID or alive_app2.ID == cat.ID:
                         alive_app2 = choice(alive_apps)
                         counter+=1
                         if counter == 30:
