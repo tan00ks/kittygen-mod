@@ -96,7 +96,7 @@ class Events:
         # 1 = reg patrol 2 = lifegen patrol 3 = df patrol 4 = date
         game.switches['patrolled'] = []
         game.switches['window_open'] = False
-        if game.clan.your_cat.status == "medicine cat apprentice":
+        if game.clan.your_cat.status == "medicine cat apprentice" or game.clan.your_cat.status == "medicine cat":
             game.switches["attended half-moon"] = False
         
         if any(

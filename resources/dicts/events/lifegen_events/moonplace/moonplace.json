@@ -29,7 +29,14 @@
             ]
         ]
     },
-    "med_cat_greetings": {},
+    "med_cat_greetings": {
+        "general_greeting_one_med": [
+            "[o_c_m from o_cn greets you warmly.]"
+        ],
+        "general_greeting_multi_med": [
+            "[o_c_m from o_cn greet you warmly.]"
+        ]
+    },
     "moonplace": {
         "starclan_general": [
             [
