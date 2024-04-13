@@ -805,7 +805,7 @@ class MoonplaceScreen(Screens):
         return text
     
     def handle_other_med(self):
-        if "other_med" not in game.switches and "other_med_clan" not in game.switches and "last_visited_moonplace" not in game.switches:
+        if "other_med" not in game.switches:
             game.switches["other_med"] = []
             game.switches["other_med_clan"] = []
             game.switches["last_visited_moonplace"] = game.clan.age
@@ -820,6 +820,11 @@ class MoonplaceScreen(Screens):
                 game.switches["other_med"].append(other_clan_meds)
                 game.switches["other_med_clan"].append(clan_name)
         else:
+            if "other_med_clan" not in game.switches:
+                game.switches['other_med_clan'] = []
+                for clan_name in game.clan.all_clans:
+                    game.switches["other_med_clan"].append(clan_name)
+
             for i in range(len(game.switches["other_med_clan"])):
                 for cat_name in game.switches["other_med"][i]:
                     if cat_name.status == "medicine cat apprentice":
@@ -833,8 +838,6 @@ class MoonplaceScreen(Screens):
                 if len(clan_meds) < 3:
                     if randint(1, 5) == 1:
                         clan_meds.append(Name(status = "medicine cat apprentice"))
-
-
 
     def randomly_remove_string(self, lists_of_strings):
         for sublist in lists_of_strings:

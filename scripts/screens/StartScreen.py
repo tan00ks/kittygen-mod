@@ -340,12 +340,5 @@ class StartScreen(Screens):
 
             self.closebtn.show()
 
-        if game.clan is not None:
-            key_copy = tuple(Cat.all_cats.keys())
-            for x in key_copy:
-                if x not in game.clan.clan_cats:
-                    game.clan.remove_cat(x)
-                    print("1: removed" + str(x))
-
         # LOAD settings
         game.load_settings()

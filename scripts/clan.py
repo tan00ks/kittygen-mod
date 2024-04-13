@@ -30,6 +30,7 @@ from scripts.cat.names import names
 from scripts.clan_resources.freshkill import Freshkill_Pile, Nutrition
 from scripts.cat.sprites import sprites
 from sys import exit  # pylint: disable=redefined-builtin
+from scripts.cat.names import Name
 
 
 class Clan():
@@ -263,6 +264,8 @@ class Clan():
         number_other_clans = randint(3, 5)
         for _ in range(number_other_clans):
             self.all_clans.append(OtherClan())
+        if 'other_med' in game.switches:
+            del game.switches['other_med']
         self.save_clan()
         game.save_clanlist(self.name)
         game.switches['clan_list'] = game.read_clans()
@@ -519,6 +522,15 @@ class Clan():
         clan_data['talks'] = self.talks
         clan_data["disaster"] = self.disaster
         clan_data["disaster_moon"] = self.disaster_moon
+
+        if "other_med" in game.switches:
+            other_med = []
+            for other_clan in game.switches["other_med"]:
+                cats = []
+                for c in other_clan:
+                    cats.append(c.prefix + "," + c.suffix + "," + c.status)
+                other_med.append(cats)
+            clan_data["other_med"] = other_med
 
         self.save_herbs(game.clan)
         self.save_disaster(game.clan)
@@ -888,6 +900,18 @@ class Clan():
         
         if "disaster_moon" in clan_data:
             game.clan.disaster_moon = clan_data["disaster_moon"]
+
+        if "other_med" in clan_data:
+            other_med = []
+            for c in clan_data["other_med"]:
+                other_clan_meds = []
+                for other_clan_med in c:
+                    other_clan_med = other_clan_med.split(",")
+                    n = Name(status = other_clan_med[2], prefix = other_clan_med[0], suffix = other_clan_med[1])
+                    other_clan_meds.append(n)
+                other_med.append(other_clan_meds)
+            game.switches["other_med"] = other_med
+
         # Return Version Info. 
         return {
             "version_name": clan_data.get("version_name"),
