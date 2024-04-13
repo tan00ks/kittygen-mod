@@ -2974,6 +2974,9 @@ class Events:
 
         if cat.age in ["kitten", "newborn"]:
             return
+
+        if cat.ID == game.clan.your_cat.ID:
+            return
         
         # if this cat is unstable and aggressive, we lower the random murder chance
         random_murder_chance = int(game.config["death_related"]["base_random_murder_chance"])
