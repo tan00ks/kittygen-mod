@@ -509,9 +509,9 @@ class PatrolOutcome():
             victim_ob = gather_cat_objects(victim, patrol)
             
             # Remove any "None" that might have snuck in
-            if None in cats_from_ob:
+            if None in murderer_ob:
                 murderer_ob.remove(None)
-            if None in cats_to_ob:
+            if None in victim_ob:
                 victim_ob.remove(None)
           
     def _handle_condition_and_scars(self, patrol:'Patrol') -> str:
