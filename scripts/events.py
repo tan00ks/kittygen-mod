@@ -872,8 +872,12 @@ class Events:
         try:
             if "r_c_sc" in text:
                 alive_app = Cat.all_cats.get(random.choice(game.clan.starclan_cats))
+                counter = 0
                 while alive_app.ID == game.clan.your_cat.ID:
+                    if counter == 15:
+                        return ""
                     alive_app = Cat.all_cats.get(random.choice(game.clan.starclan_cats))
+                    counter+=1
                 text = text.replace("r_c_sc", str(alive_app.name))
             if "r_c" in text:
                 alive_cats = self.get_living_cats()
@@ -1384,6 +1388,7 @@ class Events:
                 r_clanmate = Cat.all_cats.get(random.choice(game.clan.clan_cats))
             
             r_clanmate.joined_df = True
+            r_clanmate.update_df_mentor()
             evt_txt = random.choice(self.df_txt["clanmate"]).replace("c_m", str(r_clanmate.name))
             evt = Single_Event(evt_txt)
             if evt not in game.cur_events_list:

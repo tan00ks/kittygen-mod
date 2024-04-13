@@ -233,6 +233,8 @@ class Cat():
         self.intelligence = 0
         self.empathy = 0
         self.did_activity = False
+        self.df_mentor = None
+        self.df_apprentices = []
         
         self.prevent_fading = False  # Prevents a cat from fading.
         self.faded_offspring = []  # Stores of a list of faded offspring, for family page purposes.
@@ -2393,6 +2395,30 @@ class Cat():
                 new_mentor = choice(potential_mentors)
             if new_mentor:
                 self.__add_mentor(new_mentor.ID)
+    
+    def update_df_mentor(self):
+        """Handles giving clan members df mentors"""
+        if not self.joined_df or self.dead or self.df_mentor:
+            return
+        
+        potential_mentors = []
+        for c in Cat.all_cats_list:
+            if c.dead and c.df and c.moons >= 6 and self.ID != c.ID:
+                potential_mentors.append(c)
+
+        priority_mentors = []
+        for c in potential_mentors: 
+            if len(self.df_apprentices) == 0:
+                priority_mentors.append(c)
+
+        if priority_mentors:
+            df_mentor = choice(priority_mentors)
+            self.df_mentor = df_mentor.ID
+            df_mentor.df_apprentices.append(self.ID)
+        elif potential_mentors:
+            df_mentor = choice(potential_mentors)
+            self.df_mentor = df_mentor.ID
+            df_mentor.df_apprentices.append(self.ID)
 
     # ---------------------------------------------------------------------------- #
     #                                 relationships                                #
@@ -3362,7 +3388,9 @@ class Cat():
                 "compassion": self.compassion if self.compassion else 0,
                 "intelligence": self.intelligence if self.intelligence else 0,
                 "empathy": self.empathy if self.empathy else 0,
-                "did_activity": self.did_activity if self.did_activity else False
+                "did_activity": self.did_activity if self.did_activity else False,
+                "df_mentor": self.df_mentor if self.df_mentor else None,
+                "df_apprentices": self.df_apprentices if self.df_apprentices else []
             }
 
 

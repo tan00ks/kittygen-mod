@@ -581,10 +581,20 @@ class ProfileScreen(Screens):
                 self.change_screen('murder screen')
             elif event.ui_element == self.join_df_button:
                 game.clan.your_cat.joined_df = True
+                game.clan.your_cat.update_df_mentor()
                 self.join_df_button.disable()
+                self.clear_profile()
+                self.build_profile()
             elif event.ui_element == self.exit_df_button:
                 game.clan.your_cat.joined_df = False
+                try:
+                    Cat.all_cats[game.clan.your_cat.df_mentor].df_apprentices.remove(game.clan.your_cat.ID)
+                except:
+                    print("ERROR: removing df apprentice")
+                game.clan.your_cat.df_mentor = None
                 self.exit_df_button.disable()
+                self.clear_profile()
+                self.build_profile()
             elif event.ui_element == self.affair_button:
                 self.change_screen('affair screen')
             elif event.ui_element == self.exile_cat_button:
@@ -1479,6 +1489,11 @@ class ProfileScreen(Screens):
             mentor_ob = Cat.fetch_cat(the_cat.mentor)
             if mentor_ob:
                 output += "mentor: " + str(mentor_ob.name) + "\n"
+        
+        if the_cat.df_mentor and not the_cat.dead:
+            mentor_ob = Cat.fetch_cat(the_cat.df_mentor)
+            if mentor_ob:
+                output += "dark forest mentor: " + str(mentor_ob.name) + "\n"
 
         # CURRENT APPRENTICES
         # Optional - only shows up if the cat has an apprentice currently
@@ -1514,6 +1529,19 @@ class ProfileScreen(Screens):
 
             # NEWLINE ----------
             output += "\n"
+        
+        if the_cat.df_apprentices and the_cat.dead:
+            app_count = len(the_cat.df_apprentices)
+            if app_count == 1 and Cat.fetch_cat(the_cat.df_apprentices[0]) and not Cat.fetch_cat(the_cat.df_apprentices[0]).dead:
+                output += 'dark forest apprentice: ' + str(Cat.fetch_cat(the_cat.df_apprentices[0]).name)
+
+                # NEWLINE ----------
+                output += "\n"
+            elif app_count > 1:
+                output += 'dark forest apprentices: ' + ", ".join([str(Cat.fetch_cat(i).name) for i in the_cat.df_apprentices if Cat.fetch_cat(i) and not Cat.fetch_cat(i).dead])
+
+                # NEWLINE ----------
+                output += "\n"
 
         # CHARACTER TRAIT
         output += the_cat.personality.trait

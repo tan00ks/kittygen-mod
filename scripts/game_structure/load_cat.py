@@ -192,6 +192,8 @@ def json_load():
             new_cat.empathy = cat["empathy"] if "empathy" in cat else 0
             new_cat.compassion = cat["compassion"] if "compassion" in cat else 0
             new_cat.did_activity = cat["did_activity"] if "did_activity" in cat else False
+            new_cat.df_mentor = cat["df_mentor"] if "df_mentor" in cat else None
+            new_cat.df_apprentices = cat["df_apprentices"] if "df_apprentices" in cat else []
             if "died_by" in cat or "scar_event" in cat or "mentor_influence" in cat:
                 new_cat.convert_history(
                     cat["died_by"] if "died_by" in cat else [],
