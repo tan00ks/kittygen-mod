@@ -442,7 +442,7 @@ class TalkScreen(Screens):
             #     continue
 
             # Status tags
-            if you.status not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags and "newborn" not in tags:
+            if you.status not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags:
                 continue
             elif "young elder" in tags and cat.status == 'elder' and cat.moons >= 100:
                 continue
