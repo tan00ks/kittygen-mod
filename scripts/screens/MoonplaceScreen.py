@@ -393,6 +393,16 @@ class MoonplaceScreen(Screens):
 
     def adjust_txt(self, text, cat):
         try:
+            if "moonplace" in text or "Moonplace" in text:
+                moonplace_dict = {
+                        "Beach": "Mooncove",
+                        "Mountainous": "Moonfalls",
+                        "Forest": "Moonhollow",
+                        "Plains": "Moongrove"
+                    }
+                moonplace = moonplace_dict.get(game.clan.biome, "Moonplace")
+                text = text.replace("moonplace", moonplace)
+                text = text.replace("Moonplace", moonplace)
             if "your_crush" in text:
                 if len(game.clan.your_cat.mate) > 0 or game.clan.your_cat.no_mates:
                     return ""

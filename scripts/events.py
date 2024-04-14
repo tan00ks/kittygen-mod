@@ -2197,10 +2197,13 @@ class Events:
                            f'promising a new era for the Clans.'
                 else:
                     c = random.choice([1, 2, 3])
-                    if game.clan.biome == 'Forest':
-                        moonplace = 'Moongrove'
-                    else:
-                        moonplace = 'Moonfalls'
+                    moonplace_dict = {
+                        "Beach": "Mooncove",
+                        "Mountainous": "Moonfalls",
+                        "Forest": "Moonhollow",
+                        "Plains": "Moongrove"
+                    }
+                    moonplace = moonplace_dict.get(game.clan.biome, "Moonplace")
                     if c == 1:
                         text = str(game.clan.deputy.name.prefix) + str(
                             game.clan.deputy.name.suffix) + \
