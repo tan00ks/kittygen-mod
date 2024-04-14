@@ -3253,5 +3253,151 @@
         [
             "I'm sorry. I really am."
         ]
+    ],
+    "youforgiven_J1": [
+        [
+            "you_forgiven",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J2": [
+        [
+            "you_forgiven",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J3": [
+        [
+            "you_forgiven",
+            "they_forgiven",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J4": [
+        [
+            "you_forgiven",
+            "they_shunned",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J5": [
+        [
+            "you_forgiven",
+            "they_sc",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J6": [
+        [
+            "you_forgiven",
+            "they_df",
+            "any"
+        ],
+        [
+            ""
+        ]
+    ],
+    "youforgiven_J7": [
+        [
+            "you_forgiven",
+            "they_sc",
+            "murderedthem",
+            "any"
+        ],
+        [
+            "Are you still angry at me, little kit?"
+        ]
+    ],
+    "youforgiven_J8": [
+        [
+            "you_forgiven",
+            "they_df",
+            "murderedthem",
+            "any"
+        ],
+        [
+            "I can't believe I was damned here by a little kit.",
+            "You'd better go on to be the geatest leader c_nClan has ever known so my death wasn't for nothing."
+        ]
+    ],
+    "they_forgiven_J1": [
+        [
+            "they_forgiven",
+            "any",
+            "they_older"
+        ],
+        [
+            "Hi there, y_c!",
+            "[The queens told you you don't need to be scared of t_c anymore, but you still kind of are.]",
+            "Hm? What's wrong?",
+            "Oh. Still a bit scared? Well, I don't blame you, but... we all make mistakes, right?"
+        ]
+    ],
+    "they_forgiven_J2": [
+        [
+            "they_forgiven",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "they_forgiven_J3": [
+        [
+            "they_forgiven",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J4": [
+        [
+            "they_forgiven",
+            "you_df",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J5": [
+        [
+            "they_forgiven",
+            "you_df",
+            "murderedyou",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J6": [
+        [
+            "they_forgiven",
+            "you_sc",
+            "murderedyou",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
     ]
 }

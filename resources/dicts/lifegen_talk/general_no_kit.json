@@ -15289,6 +15289,61 @@
             "[They seem to be trying to convince themselves of this fact just as much as you.]"
         ]
     ],
+    "youforgiven_J5": [
+        [
+            "you_forgiven",
+            "they_shunned",
+            "any"
+        ],
+        [
+            "Goodness, y_c, how did you get through this?!",
+            "No cat will sit within five tail-lengths of me, let alone talk to me. Except you, of course.",
+            "How did you get the Clan to forgive you? If I'm not allowed to work again soon, I might lose my mind."
+        ]
+    ],
+    "youforgiven_J6": [
+        [
+            "you_forgiven",
+            "they_sc",
+            "any"
+        ],
+        [
+            "I'm glad that c_nClan has given you another chance. Use it wisely."
+        ]
+    ],
+    "youforgiven_J7": [
+        [
+            "you_forgiven",
+            "they_df",
+            "any"
+        ],
+        [
+            "So, c_nClan let you back in, did they?",
+            "You're not done, though, are you? That's no fun."
+        ]
+    ],
+    "youforgiven_J8": [
+        [
+            "you_forgiven",
+            "they_sc",
+            "murderedthem",
+            "any"
+        ],
+        [
+            "Letting you back in will be the hugest mistake c_nClan will ever make."
+        ]
+    ],
+    "youforgiven_J9": [
+        [
+            "you_forgiven",
+            "they_df",
+            "murderedthem",
+            "any"
+        ],
+        [
+            "Letting you back in will be the hugest mistake c_nClan will ever make."
+        ]
+    ],
     "they_forgiven_J1": [
         [
             "they_forgiven",
@@ -15306,6 +15361,60 @@
         ],
         [
             "Sometimes, I miss being shunned. More cats left me alone."
+        ]
+    ],
+    "they_forgiven_J3": [
+        [
+            "they_forgiven",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "[Though they're not allowed to talk to you, t_c flashes you a sympathetic look from across the camp.]",
+            "[They must know exactly what you're going through, having been shunned in the past.]",
+            "[But they seem perfectly fine now. You hope your fate will be similar.]"
+        ]
+    ],
+    "they_forgiven_J4": [
+        [
+            "they_forgiven",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J5": [
+        [
+            "they_forgiven",
+            "you_df",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J6": [
+        [
+            "they_forgiven",
+            "you_df",
+            "murderedyou",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J7": [
+        [
+            "they_forgiven",
+            "you_sc",
+            "murderedyou",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
         ]
     ]
 }

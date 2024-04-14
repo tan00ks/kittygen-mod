@@ -536,7 +536,7 @@ class TalkScreen(Screens):
                 if you.history:
                     if you.history.murder:
                         if "is_murderer" in you.history.murder:
-                            if len(you.history.murder["is_murderer"]) > 0 and you.shunned == 0 and "you_forgiven" not in tags:
+                            if len(you.history.murder["is_murderer"]) > 0 and you.shunned == 0 and not you.dead and "you_forgiven" not in tags:
                                 continue
                             else:
                                 youreforgiven = True
@@ -544,7 +544,7 @@ class TalkScreen(Screens):
                 if cat.history:
                     if cat.history.murder:
                         if "is_murderer" in cat.history.murder:
-                            if len(cat.history.murder["is_murderer"]) > 0 and cat.shunned == 0 and "they_forgiven" not in tags:
+                            if len(cat.history.murder["is_murderer"]) > 0 and cat.shunned == 0 and not cat.dead and  "they_forgiven" not in tags:
                                 continue
                             else:
                                 theyreforgiven = True

@@ -4633,5 +4633,146 @@
         [
             "I'm sorry. I really am."
         ]
+    ],
+    "youforgiven_J1": [
+        [
+            "you_forgiven",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J2": [
+        [
+            "you_forgiven",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J3": [
+        [
+            "you_forgiven",
+            "they_forgiven",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J4": [
+        [
+            "you_forgiven",
+            "they_shunned",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J5": [
+        [
+            "you_forgiven",
+            "they_sc",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J6": [
+        [
+            "you_forgiven",
+            "they_df",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J7": [
+        [
+            "you_forgiven",
+            "they_sc",
+            "murderedthem",
+            "any"
+        ],
+        [
+            "Letting you back in will be the hugest mistake c_nClan will ever make."
+        ]
+    ],
+    "youforgiven_J8": [
+        [
+            "you_forgiven",
+            "they_df",
+            "murderedthem",
+            "any"
+        ],
+        [
+            "Letting you back in will be the hugest mistake c_nClan will ever make."
+        ]
+    ],
+    "they_forgiven_J1": [
+        [
+            "they_forgiven",
+            "any"
+        ],
+        [
+            ""
+        ]
+    ],
+    "they_forgiven_J2": [
+        [
+            "they_forgiven",
+            "you_shunned",
+            "any"
+        ],
+        [
+            ""
+        ]
+    ],
+    "they_forgiven_J3": [
+        [
+            "they_forgiven",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J4": [
+        [
+            "they_forgiven",
+            "you_df",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J5": [
+        [
+            "they_forgiven",
+            "you_df",
+            "murderedyou",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J6": [
+        [
+            "they_forgiven",
+            "you_sc",
+            "murderedyou",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
     ]
 }
