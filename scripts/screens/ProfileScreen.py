@@ -1237,12 +1237,16 @@ class ProfileScreen(Screens):
             elif "attended half-moon" in game.switches and game.switches["attended half-moon"]:
                 self.profile_elements["halfmoon"].disable()
 
-        if (self.the_cat.outside) and self.the_cat.ID == game.clan.your_cat.ID and not self.the_cat.dead and self.the_cat.exiled or self.the_cat.status == 'former Clancat':
-            self.exile_return_button.show()
+        if self.the_cat.outside and self.the_cat.ID == game.clan.your_cat.ID and not self.the_cat.dead and (self.the_cat.exiled or self.the_cat.status == 'former Clancat'):
             if game.clan.exile_return:
                 self.exile_return_button.disable()
+            else:
+                self.exile_return_button.show()
         else:
             self.exile_return_button.hide()
+
+        # if self.the_cat.shunned == 0 and self.the_cat.revealed > 0 and not self.the_cat.outside and not self.the_cat.exiled:
+        #     print("This cat has been forgiven for murder.")
 
     def determine_previous_and_next_cat(self):
         """'Determines where the next and previous buttons point too."""

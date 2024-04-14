@@ -3859,6 +3859,18 @@
             "I'm sure whatever you did can't be as bad as that ... right?"
         ]
     ],
+    "you_shunned_8": [
+        [
+            "you_shunned",
+            "they_kitten",
+            "kitten"
+        ],
+        [
+            "Hey, y_c!",
+            "r_c told me that no one should be friends with you because you made a bad mistake.",
+            "I'll still be your friend, though! Just don't tell r_c about it, okay?"
+        ]
+    ],
     "starclan_they_living": [
         [
             "you_sc",
@@ -3928,10 +3940,10 @@
             "any"
         ],
         [
-            "[t_c is tearing clumps of dirt form the ground beneath them. You ask why,]",
-            "This place sucks. I'm trying to destroy it.",
+            "[t_c is tearing clumps of dirt from the ground beneath them. You ask why.]",
+            "This place sucks! I'm trying to destroy it.",
             "I want to go live with the starry cats.",
-            "[Decide to join them. Maybe you two can dig far enough that you end up someplace new.]"
+            "[You decide to join them. Maybe you two can dig far enough that you end up someplace new.]"
         ]
     ],
     "sckit2": [
@@ -4407,6 +4419,219 @@
         [
             "It's not fair! It's not fair!",
             "Make them pay, y_c!"
+        ]
+    ],
+    "murderedthemkit_J1": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit_J2": [
+        [
+            "murderedthem",
+            "any",
+            "they_df"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit_J3": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_shunned"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit_J4": [
+        [
+            "murderedthem",
+            "any",
+            "they_df",
+            "you_shunned"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit_J5": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit_J6": [
+        [
+            "murderedthem",
+            "any",
+            "they_df",
+            "you_shunned",
+            "you_grieving"
+        ],
+        [
+            "Did I do something wrong?"
+        ]
+    ],
+    "murderedthemkit_J7": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "littermate"
+        ],
+        [
+            "We were supposed to grow up together!",
+            "Why did you do that to me, y_c?"
+        ]
+    ],
+    "murderedthemkit_J8": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "littermate",
+            "you_shunned"
+        ],
+        [
+            "We were supposed to grow up together!",
+            "Why did you do that to me, y_c?"
+        ]
+    ],
+    "murderedthemkit_J9": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "littermate",
+            "you_shunned"
+        ],
+        [
+            "I wish we could've played together some more...",
+            "I guess you didn't really want to, though."
+        ]
+    ],
+    "murderedthemkit_J10": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "littermate",
+            "warrior",
+            "medicine cat",
+            "mediator",
+            "queen",
+            "deputy",
+            "leader",
+            "elder"
+        ],
+        [
+            "I've been here a really long time...",
+            "Does y_p still miss me?"
+        ]
+    ],
+    "kitmurderedyou_J1": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc"
+        ],
+        [
+            "Wait, you're still here?",
+            "[Startled, t_c rushes away to the nursery]"
+        ]
+    ],
+    "kitmurderedyou_J2": [
+        [
+            "murderedyou",
+            "any",
+            "you_df"
+        ],
+        [
+            "Wait, you're still here?",
+            "[Startled, t_c rushes away to the nursery]"
+        ]
+    ],
+    "kitmurderedyou_J3": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_df"
+        ],
+        [
+            "Hi, y_c.",
+            "Are you still mad at me?"
+        ]
+    ],
+    "kitmurderedyou_J4": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_df"
+        ],
+        [
+            "Hi, y_c.",
+            "Are you still mad at me?"
+        ]
+    ],
+    "kitmurderedyou_J5": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_sc"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "kitmurderedyou_J6": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_sc"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyoukit_J7": [
+        [
+            "murderedyou",
+            "any",
+            "you_sc",
+            "they_grieving"
+        ],
+        [
+            "I'm sorry. I really am."
+        ]
+    ],
+    "murderedyoukit_J8": [
+        [
+            "murderedyou",
+            "any",
+            "you_df",
+            "they_grieving"
+        ],
+        [
+            "I'm sorry. I really am."
         ]
     ]
 }

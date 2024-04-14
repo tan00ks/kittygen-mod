@@ -371,7 +371,7 @@ class MurderScreen(Screens):
         if not accomplice or not accompliced:
             punishment_chance = 1
         if punishment_chance == 1 or punishment_chance == 3:
-            you.revealed = game.clan.age
+            you.revealed = you.moons # so forgiven dialogue can go away later wo me having to make a new parameter
         if punishment_chance == 1:
             if accomplice and not accompliced:
                 a_s = randint(1,2)

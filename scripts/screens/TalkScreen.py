@@ -481,6 +481,34 @@ class TalkScreen(Screens):
             if "you_sc" in tags and you.df:
                 continue
 
+            murdered_them = False
+            if you.history:
+                if you.history.murder:
+                    for murder_event in you.history.murder["is_murderer"]:
+                        if cat.ID == murder_event.get("victim"):
+                            murdered_them = True
+                            break
+
+            if murdered_them and "murderedthem" not in tags:
+                continue
+
+            if "murderedthem" in tags and not murdered_them:
+                continue
+
+            murdered_you = False
+            if cat.history:
+                if cat.history.murder:
+                    for murder_event in cat.history.murder["is_murderer"]:
+                        if you.ID == murder_event.get("victim"):
+                            murdered_you = True
+                            break
+
+            if murdered_you and "murderedyou" not in tags:
+                continue
+
+            if "murderedyou" in tags and not murdered_you:
+                continue
+
             if "grief stricken" in cat.illnesses:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
                 if "grievingyou" in tags:
@@ -493,14 +521,40 @@ class TalkScreen(Screens):
             if "grief stricken" in you.illnesses:
                 dead_cat = Cat.all_cats.get(you.illnesses['grief stricken'].get("grief_cat"))
                 if "grievingthem" in tags:
-                    if dead_cat.name == cat.name:
-                        print ('You are grieving the death of this cat.')
-                        
                     if dead_cat.name != cat.name:
                         continue
                 else:
                     if dead_cat.name == cat.name:
                         continue
+            
+            # FORGIVEN TAGS
+
+            youreforgiven = False
+            theyreforgiven = False
+
+            if you.moons < you.revealed + 10: # after ten moons, 100% regular dialogue returns
+                if you.history:
+                    if you.history.murder:
+                        if "is_murderer" in you.history.murder:
+                            if len(you.history.murder["is_murderer"]) > 0 and you.shunned == 0 and "you_forgiven" not in tags:
+                                continue
+                            else:
+                                youreforgiven = True
+            if cat.moons < cat.revealed + 10:
+                if cat.history:
+                    if cat.history.murder:
+                        if "is_murderer" in cat.history.murder:
+                            if len(cat.history.murder["is_murderer"]) > 0 and cat.shunned == 0 and "they_forgiven" not in tags:
+                                continue
+                            else:
+                                theyreforgiven = True
+            
+            if "you_forgiven" in tags and (you.shunned > 0 or not youreforgiven):
+                continue
+
+            if "they_forgiven" in tags and (cat.shunned > 0 or not theyreforgiven):
+                continue
+
 
             roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
             if any(r in roles for r in tags):
@@ -883,7 +937,7 @@ class TalkScreen(Screens):
             game.clan.talks.clear()
 
         weights2 = []
-        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving"]
+        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving", "you_forgiven", "they_forgiven"]
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
             num_fam_mentor_tags = 1

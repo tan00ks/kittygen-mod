@@ -1950,5 +1950,18 @@
             "o_cClan has once again, overstepped some boundaries, and look- I'm not one to shudder in fear when facing other leaders- but... The deputy just became leader. And are proving to be a rather big problem. No-",
             "No I'm sorry, I shouldn't be discussing this out loud. I just- I just want to guarantee the safety of c_nClan. No matter what."
         ]
+    ],
+    "murderedthem_leader_J1": [
+        [
+            "murderedthem",
+            "any",
+            "they_sc",
+            "they_leader"
+        ],
+        [
+            "How dare you speak to me in StarClan when you have such disrespect for your ancestors?",
+            "Nine lives I was given, and you deemed yourself important enough to take the last of them.",
+            "I hope you never join me here. I'll see you in the Dark Forest one day, I promise you."
+        ]
     ]
 }
