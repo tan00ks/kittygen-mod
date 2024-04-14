@@ -1079,7 +1079,7 @@ class Events:
 
         # Add old events
         if not all_events:
-            return 
+            return
         if f"{status} old" in all_events:
             possible_events = possible_events + all_events[f"{status} old"]
 
