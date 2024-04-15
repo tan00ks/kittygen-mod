@@ -234,7 +234,7 @@ class ProfileScreen(Screens):
                                 if self.search_bar.get_text().lower() in ac.lower():
                                     inventory_len+=1
                         self.max_pages = math.ceil(inventory_len/18)
-                        if self.page == 0 and self.max_pages == 1:
+                        if self.page == 0 and (self.max_pages == 1 or self.max_pages == 0):
                             self.previous_page_button.disable()
                             self.next_page_button.disable()
                         elif self.page == 0:
@@ -294,7 +294,7 @@ class ProfileScreen(Screens):
                 if self.page < self.max_pages - 1:
                     self.page += 1
 
-                if self.page == 0 and self.max_pages == 1:
+                if self.page == 0 and (self.max_pages == 1 or self.max_pages == 0):
                     self.previous_page_button.disable()
                     self.next_page_button.disable()
                 elif self.page == 0:
@@ -370,7 +370,7 @@ class ProfileScreen(Screens):
                                 inventory_len+=1
                                 new_inv.append(ac)
                     self.max_pages = math.ceil(inventory_len/18)
-                    if self.max_pages == 1:
+                    if (self.max_pages == 1 or self.max_pages == 0):
                         self.previous_page_button.disable()
                         self.next_page_button.disable()
                     if self.page == 0:
@@ -378,6 +378,8 @@ class ProfileScreen(Screens):
                     
                     if cat.pelt.inventory:
                         for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len + start_index)], start = start_index):
+                            if accessory in cat.pelt.wild_accessories and cat.not_working():
+                                continue
                             if accessory in cat.pelt.accessories:
                                 self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
                             else:
@@ -741,7 +743,7 @@ class ProfileScreen(Screens):
                             inventory_len+=1
                             new_inv.append(ac)
                 self.max_pages = math.ceil(inventory_len/18)
-                if self.max_pages == 1:
+                if (self.max_pages == 1 or self.max_pages == 0):
                     self.previous_page_button.disable()
                     self.next_page_button.disable()
                 if self.page == 0:
@@ -750,6 +752,8 @@ class ProfileScreen(Screens):
                     for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len + start_index)], start = start_index):
                         try:
                             if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
+                                if accessory in cat.pelt.wild_accessories and cat.not_working():
+                                    continue
                                 if accessory in cat.pelt.accessories:
                                     self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
                                 else:
@@ -2498,7 +2502,7 @@ class ProfileScreen(Screens):
                     new_inv.append(ac)
         self.max_pages = math.ceil(inventory_len/18)
         
-        if self.max_pages == 1:
+        if (self.max_pages == 1 or self.max_pages == 0):
             self.previous_page_button.disable()
             self.next_page_button.disable()
         if self.page == 0:
@@ -2507,6 +2511,8 @@ class ProfileScreen(Screens):
             for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len)], start = start_index):
                 try:
                     if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
+                        if accessory in cat.pelt.wild_accessories and cat.not_working():
+                            continue
                         if accessory in cat.pelt.accessories:
                             self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
                         else:
@@ -3144,7 +3150,7 @@ class ProfileScreen(Screens):
             if self.search_bar.is_focused and self.search_bar.get_text() == "search":
                 self.search_bar.set_text("")
                 self.page = 0
-                if self.page == 0 and self.max_pages == 1:
+                if self.page == 0 and (self.max_pages == 1 or self.max_pages == 0):
                     self.previous_page_button.disable()
                     self.next_page_button.disable()
                 elif self.page == 0:
