@@ -234,7 +234,7 @@ class ProfileScreen(Screens):
                                 if self.search_bar.get_text().lower() in ac.lower():
                                     inventory_len+=1
                         self.max_pages = math.ceil(inventory_len/18)
-                        if self.page == 0 and self.max_pages == 1:
+                        if self.page == 0 and (self.max_pages == 1 or self.max_pages == 0):
                             self.previous_page_button.disable()
                             self.next_page_button.disable()
                         elif self.page == 0:
@@ -294,7 +294,7 @@ class ProfileScreen(Screens):
                 if self.page < self.max_pages - 1:
                     self.page += 1
 
-                if self.page == 0 and self.max_pages == 1:
+                if self.page == 0 and (self.max_pages == 1 or self.max_pages == 0):
                     self.previous_page_button.disable()
                     self.next_page_button.disable()
                 elif self.page == 0:
@@ -370,7 +370,7 @@ class ProfileScreen(Screens):
                                 inventory_len+=1
                                 new_inv.append(ac)
                     self.max_pages = math.ceil(inventory_len/18)
-                    if self.max_pages == 1:
+                    if (self.max_pages == 1 or self.max_pages == 0):
                         self.previous_page_button.disable()
                         self.next_page_button.disable()
                     if self.page == 0:
@@ -378,6 +378,8 @@ class ProfileScreen(Screens):
                     
                     if cat.pelt.inventory:
                         for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len + start_index)], start = start_index):
+                            if accessory in cat.pelt.wild_accessories and cat.not_working():
+                                continue
                             if accessory in cat.pelt.accessories:
                                 self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
                             else:
@@ -741,7 +743,7 @@ class ProfileScreen(Screens):
                             inventory_len+=1
                             new_inv.append(ac)
                 self.max_pages = math.ceil(inventory_len/18)
-                if self.max_pages == 1:
+                if (self.max_pages == 1 or self.max_pages == 0):
                     self.previous_page_button.disable()
                     self.next_page_button.disable()
                 if self.page == 0:
@@ -750,6 +752,8 @@ class ProfileScreen(Screens):
                     for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len + start_index)], start = start_index):
                         try:
                             if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
+                                if accessory in cat.pelt.wild_accessories and cat.not_working():
+                                    continue
                                 if accessory in cat.pelt.accessories:
                                     self.accessory_buttons[str(i) + str(randint(0,5000))] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
                                 else:
@@ -1092,15 +1096,15 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].enable()
         elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.outside and not game.clan.your_cat.outside:
         
-            cat_dead_condition_sc = self.the_cat.dead and not self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) and game.clan.your_cat.moons >=6))
-            cat_dead_condition_df = self.the_cat.dead and self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) and game.clan.your_cat.moons >=6) or game.clan.your_cat.joined_df)
-            cat_dead_condition_ur = self.the_cat.dead and self.the_cat.ID in game.clan.unknown_cats and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST) and game.clan.your_cat.moons >=6))
+            cat_dead_condition_sc = self.the_cat.dead and not self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) and game.clan.your_cat.moons >=1))
+            cat_dead_condition_df = self.the_cat.dead and self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) and game.clan.your_cat.moons >=1) or game.clan.your_cat.joined_df)
+            cat_dead_condition_ur = self.the_cat.dead and self.the_cat.ID in game.clan.unknown_cats and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.GHOST) and game.clan.your_cat.moons >=1))
 
             cat_dead_conditions = cat_dead_condition_sc or cat_dead_condition_df or cat_dead_condition_ur
 
-            cat_alive_condition_sc = game.clan.your_cat.dead and not game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) and self.the_cat.moons >= 6))
-            cat_alive_condition_df = game.clan.your_cat.dead and game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) and self.the_cat.moons >= 6) or self.the_cat.joined_df)
-            cat_alive_condition_ur = game.clan.your_cat.dead and game.clan.your_cat.ID in game.clan.unknown_cats and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.GHOST) and self.the_cat.moons >= 6))
+            cat_alive_condition_sc = game.clan.your_cat.dead and not game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.STAR) and self.the_cat.moons >= 1))
+            cat_alive_condition_df = game.clan.your_cat.dead and game.clan.your_cat.df and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.DARK) and self.the_cat.moons >= 1) or self.the_cat.joined_df)
+            cat_alive_condition_ur = game.clan.your_cat.dead and game.clan.your_cat.ID in game.clan.unknown_cats and (self.the_cat.dead or (self.the_cat.skills.meets_skill_requirement(SkillPath.GHOST) and self.the_cat.moons >= 1))
             cat_alive_skills_condition = cat_alive_condition_sc or cat_alive_condition_df or cat_alive_condition_ur
             
             if cat_dead_conditions or cat_alive_skills_condition:
@@ -1549,7 +1553,7 @@ class ProfileScreen(Screens):
         output += "\n"
         # CAT SKILLS
 
-        if the_cat.moons < 6:
+        if the_cat.moons < 1:
             output += "???"
         else:
             output += the_cat.skills.skill_string()
@@ -2498,7 +2502,7 @@ class ProfileScreen(Screens):
                     new_inv.append(ac)
         self.max_pages = math.ceil(inventory_len/18)
         
-        if self.max_pages == 1:
+        if (self.max_pages == 1 or self.max_pages == 0):
             self.previous_page_button.disable()
             self.next_page_button.disable()
         if self.page == 0:
@@ -2507,6 +2511,8 @@ class ProfileScreen(Screens):
             for a, accessory in enumerate(new_inv[start_index:min(end_index, inventory_len)], start = start_index):
                 try:
                     if self.search_bar.get_text() in ["", "search"] or self.search_bar.get_text().lower() in accessory.lower():
+                        if accessory in cat.pelt.wild_accessories and cat.not_working():
+                            continue
                         if accessory in cat.pelt.accessories:
                             self.accessory_buttons[str(i)] = UIImageButton(scale(pygame.Rect((200 + pos_x, 730 + pos_y), (100, 100))), "", object_id="#fav_marker")
                         else:
@@ -3144,7 +3150,7 @@ class ProfileScreen(Screens):
             if self.search_bar.is_focused and self.search_bar.get_text() == "search":
                 self.search_bar.set_text("")
                 self.page = 0
-                if self.page == 0 and self.max_pages == 1:
+                if self.page == 0 and (self.max_pages == 1 or self.max_pages == 0):
                     self.previous_page_button.disable()
                     self.next_page_button.disable()
                 elif self.page == 0:

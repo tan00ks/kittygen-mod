@@ -96,7 +96,7 @@ class Events:
         # 1 = reg patrol 2 = lifegen patrol 3 = df patrol 4 = date
         game.switches['patrolled'] = []
         game.switches['window_open'] = False
-        if game.clan.your_cat.status == "medicine cat apprentice":
+        if game.clan.your_cat.status == "medicine cat apprentice" or game.clan.your_cat.status == "medicine cat":
             game.switches["attended half-moon"] = False
         
         if any(
@@ -1079,7 +1079,7 @@ class Events:
 
         # Add old events
         if not all_events:
-            return 
+            return
         if f"{status} old" in all_events:
             possible_events = possible_events + all_events[f"{status} old"]
 
@@ -2197,10 +2197,13 @@ class Events:
                            f'promising a new era for the Clans.'
                 else:
                     c = random.choice([1, 2, 3])
-                    if game.clan.biome == 'Forest':
-                        moonplace = 'Moongrove'
-                    else:
-                        moonplace = 'Moonfalls'
+                    moonplace_dict = {
+                        "Beach": "Mooncove",
+                        "Mountainous": "Moonfalls",
+                        "Forest": "Moonhollow",
+                        "Plains": "Moongrove"
+                    }
+                    moonplace = moonplace_dict.get(game.clan.biome, "Moonplace")
                     if c == 1:
                         text = str(game.clan.deputy.name.prefix) + str(
                             game.clan.deputy.name.suffix) + \
@@ -2973,6 +2976,9 @@ class Events:
         targets = []
 
         if cat.age in ["kitten", "newborn"]:
+            return
+
+        if cat.ID == game.clan.your_cat.ID:
             return
         
         # if this cat is unstable and aggressive, we lower the random murder chance

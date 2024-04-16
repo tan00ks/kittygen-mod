@@ -238,7 +238,7 @@ class ChooseRebornScreen(Screens):
 
             info = self.selected_cat.status + "\n" + \
                    self.selected_cat.genderalign + "\n" + self.selected_cat.personality.trait + "\n"
-            if self.selected_cat.moons < 6:
+            if self.selected_cat.moons < 1:
                 info += "???"
             else:
                 info += self.selected_cat.skills.skill_string(short=True)
@@ -310,7 +310,7 @@ class ChooseRebornScreen(Screens):
                 if not cat.dead and not cat.outside and not cat.ID == game.clan.your_cat.ID:
                     valid_mentors.append(cat)
             else:
-                if cat.dead and not cat.ID == game.clan.your_cat.ID and not cat.ID == game.clan.instructor.ID and not cat.ID == game.clan.demon.ID:
+                if cat.dead and not cat.ID == game.clan.your_cat.ID and not cat.ID == game.clan.instructor.ID and not cat.ID == game.clan.demon.ID and not cat.ID in game.clan.unknown_cats:
                     valid_mentors.append(cat)
         
         return valid_mentors

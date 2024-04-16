@@ -13,6 +13,8 @@ import pygame_gui
 from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
 from enum import Enum  # pylint: disable=no-name-in-module
+from scripts.housekeeping.version import get_version_info, VERSION_NAME
+
 
 class RelationType(Enum):
     """An enum representing the possible age groups of a cat"""
@@ -442,7 +444,7 @@ class TalkScreen(Screens):
             #     continue
 
             # Status tags
-            if you.status not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags and "newborn" not in tags:
+            if you.status not in tags and "any" not in tags and "young elder" not in tags and "no_kit" not in tags:
                 continue
             elif "young elder" in tags and cat.status == 'elder' and cat.moons >= 100:
                 continue
@@ -925,6 +927,10 @@ class TalkScreen(Screens):
                         add_on2 += " g"
                     if cat.shunned > 0:
                         add_on2 += " sh"
+                    try:
+                        add_on2 += " " + VERSION_NAME
+                    except:
+                        print("failed to add on version name")
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_1", clusters_1)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("c_2", clusters_2)
                     possible_texts['general'][1][0] = possible_texts['general'][1][0].replace("r_1", you.status + add_on)
@@ -1241,7 +1247,7 @@ class TalkScreen(Screens):
                 if "r_w2" in text:
                     alive_app2 = choice(alive_apps)
                     counter = 0
-                    while alive_app2.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
+                    while alive_app2.ID == game.clan.your_cat.ID or alive_app2.ID == cat.ID:
                         alive_app2 = choice(alive_apps)
                         counter+=1
                         if counter == 30:
