@@ -2294,7 +2294,7 @@
         [
             "you_shunned",
             "they_sc",
-            "kitten"
+            "you_kitten"
         ],
         [
             "You're so gifted, little one. I hope you don't continue to use it for evil."
@@ -2304,7 +2304,7 @@
         [
             "you_shunned",
             "they_df",
-            "kitten"
+            "you_kitten"
         ],
         [
             "You're doing well."
@@ -2332,6 +2332,19 @@
         [
             "Yikes, bad moon, huh?",
             "Chin up, kit. You're doing well."
+        ]
+    ],
+    "youkit_sh_J30": [
+        [
+        "you_shunned",
+        "they_df",
+        "you_kitten"
+        ],
+        [
+            "Huh. I never expected that from you, little kit...",
+            "I think we should be friends. What do you say?",
+            "[You give t_c a tenative nod. They smile.]",
+            "Great, great..."
         ]
     ],
     "stable_shunned_you_Kit_01": [
@@ -3092,6 +3105,23 @@
             "... ... ...",
             "... ... ... ... ...",
             "r_m has some explaining to do."
+        ]
+    ],
+    "revived_grievingyou4": [
+        [
+            "they_grieving",
+            "grievingyou",
+            "any",
+            "from_parent",
+            "from_adopted_parent"
+        ],
+        [
+            "[t_c wearily blinks open their eyes.]",
+            "... y_c? No, you're...",
+            "[t_c bolts upright in their nest and glances around the clearing. Every other cat in camp is looking at them, waiting for their reaction to your miraculous recovery.]",
+            "Oh... oh, StarClan, my baby! You're really here!",
+            "[They pull you into the tightest hug you've ever felt and begins licking your head in between sobs.]",
+            "[You nuzzle into their chest. It's good to be home!]"
         ]
     ],
     "kitmurderedthem1": [

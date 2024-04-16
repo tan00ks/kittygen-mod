@@ -512,6 +512,8 @@ class TalkScreen(Screens):
             if "grief stricken" in cat.illnesses:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
                 if "grievingyou" in tags:
+                    # if not game.clan.your_cat.dead:
+                    #     cat.illnesses.remove('grief stricken')
                     if dead_cat.name != game.clan.your_cat.name:
                         continue
                 else:

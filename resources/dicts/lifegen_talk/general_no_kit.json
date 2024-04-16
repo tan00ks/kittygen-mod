@@ -13829,6 +13829,17 @@
             "[The air is thick with sadness as you lay near t_c.]"
         ]
     ],
+    "grieving_sh_J33": [
+        [
+            "Any",
+            "both_shunned",
+            "you_grieving",
+            "they_grieving"
+        ],
+        [
+            "Oh, this was a huge mistake..."
+        ]
+    ],
     "starclan_default": [
         [
             "they_sc",
@@ -14946,6 +14957,19 @@
             "You really killed another cat?",
             "Huh. Maybe you're not as mouse-hearted as I thought.",
             "No, you're still a mouse-heart, just... not as big of one."
+        ]
+    ],
+    "dead_youshunned9":
+    [
+        [
+            "they_df",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "Hey, who do you think you'll get next?",
+            "r_c is pretty annoying... from my point of view, anyway.",
+            "Your choice, though, of course."
         ]
     ],
     "sc_living_kitten": [
