@@ -896,7 +896,8 @@ def adjust_list_text(list_of_items):
     :param list_of_items: the list of items you want converted
     :return: the new string
     """
-
+    if len(list_of_items) == 0:
+        return ""
     if len(list_of_items) == 1:
         insert = f"{list_of_items[0]}"
     elif len(list_of_items) == 2:
