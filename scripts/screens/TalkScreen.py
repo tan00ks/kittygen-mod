@@ -1235,7 +1235,7 @@ class TalkScreen(Screens):
                     return ""
                 alive_app = choice(alive_apps)
                 counter = 0
-                while alive_app.ID == game.clan.your_cat or alive_app.ID == cat.ID:
+                while alive_app.ID == game.clan.your_cat.ID or alive_app.ID == cat.ID:
                     counter+=1
                     if counter == 30:
                         return ""
