@@ -2609,7 +2609,8 @@
         "ReportFail": [
             "Mouse-dung!",
             "[Your ears bend back slightly at their harsh tone.]",
-            "I'm sorry y_c, I didn't mean to yell... I'm just worried, StarClan knows how dangerous twolegs can be. Thank you for your honesty, I'll keep asking around. Hopefully, I can find them. Get back to me if you see d_n.",
+            "I'm sorry y_c, I didn't mean to yell... I'm just worried, StarClan knows how dangerous twolegs can be.",
+            "Thank you for your honesty, I'll keep asking around. Hopefully, I can find them. Get back to me if you see d_n.",
             "[You watch as t_c bounds off to ask more cats around camp, their stress evident in every step... Maybe you should help them?]"
         ],
         "ReportFail_choices": {
@@ -2625,7 +2626,8 @@
         "YouHelp": [
             "[t_c needs your help, this is an urgent matter that requires your assistance, for the sake of the clan! You get off your paws and begin to question the cats around you. Some more helpful than others.]",
             "[After endless rounds of asking your clanmates, t_c approaches you out of break and tired. Much to their surprise, you look the same.]",
-            "Thank you for helping me, y_c. Looks like some others are also asking around. You should see r_m, they're like a kitten with a mossball. StarClan, where is d_n? It's like they just up and disappeared-",
+            "Thank you for helping me, y_c. Looks like some others are also asking around. You should see r_m, they're like a kitten with a mossball.",
+            "StarClan, where is d_n? It's like they just up and disappeared-",
             "[As if on cue, d_n enters the camp with a mouse in their jaw, beside them is l_n who looks relaxed until they see the utter disarray the camp is in.]",
             "[Warriors running left and right, the kits in a panic, apprentices unsure what to do, elders and queens trying to settle the kits, medicine cats trying to gather the warriors and the poor mediators who are trying to settle the camp.]",
             "[A voice cuts through the crowd as l_n yells above the chaos, their gaze narrows as they demand to know the meaning of this mess. All eyes fall onto t_c and you...]",
