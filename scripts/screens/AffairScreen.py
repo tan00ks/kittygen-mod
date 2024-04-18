@@ -216,6 +216,7 @@ class AffairScreen(Screens):
             if self.get_fail_consequence() == 0:
                 ceremony_txt = self.adjust_txt(choice(self.mu_txt['fail breakup']), affair_cat)
                 for i in game.clan.your_cat.mate:
+                    Cat.fetch_cat(i).get_ill("heartbroken")
                     Cat.fetch_cat(i).unset_mate(game.clan.your_cat)
                     Cat.fetch_cat(i).relationships.get(game.clan.your_cat.ID).dislike += randint(10,30)
                     Cat.fetch_cat(i).relationships.get(game.clan.your_cat.ID).comfortable -= randint(10,30)
