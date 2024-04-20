@@ -2094,7 +2094,9 @@
         [
             "elder",
             "random_cat",
-            "sweet"
+            "sweet",
+            "they_deaf",
+            "you_deaf"
         ],
         [
             "[You've lived many moons, but never have you seen a deputy quite like t_c.]",
@@ -2138,6 +2140,20 @@
             "[You couldn't imagine how that pressure would feel, a crushing weight on your shoulders. The fear of failure and mistakes, how that could lead to one, if not all the lives of those kits.]",
             "[You smile confidently as the light bounces off their fur. You know that it won't happen, you know d_n is a good leader, a true spirit, and a just warrior. They'll be fine in whatever happens next.]",
             "[You look to l_n, who couldn't look more prouder.]"
+        ]
+    ],
+    "grieving_sh_J1": [
+        [
+            "Any",
+            "they_shunned",
+            "they_grieving",
+            "you_leader",
+            "leader"
+        ],
+        [
+            "I'm sorry, y_c. I didn't do very well as your deputy, did I?",
+            "[t_c's voice is hardly more than a whisper. You've never seen them so sad. You force yourself not to sympathise-- they've earned this punishment.]",
+            "That's fine, you don't have to respond."
         ]
     ]
 }

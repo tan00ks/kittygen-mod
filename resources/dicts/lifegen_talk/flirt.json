@@ -2072,5 +2072,41 @@
         [
             "[t_c playfully taps you with their tail before pulling it away before anyone cat see.]"
         ]
+    ],
+    "flirt_sh_J30": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "You're very cruel, y_c."
+        ]
+    ],
+    "flirt_sh_J31": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "No, no, don't do that. Not now."
+        ]
+    ],
+    "flirt_sh_J32": [
+        [
+            "Any",
+            "you_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "Maybe I could have liked you if you weren't so evil."
+        ]
     ]
 }

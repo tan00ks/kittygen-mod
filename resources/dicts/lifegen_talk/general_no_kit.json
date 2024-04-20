@@ -14765,6 +14765,97 @@
             "You can't really be a Dark Forest cat... Please tell me I'm seeing things."
         ]
     ],
+    "revived_grievingyou1": [
+        [
+            "they_grieving",
+            "grievingyou",
+            "any"
+        ],
+        [
+            "I've... I've gone so mad that I'm hallucinating y_c...",
+            "Oh, StarClan...",
+            "[t_c stumbles away from you and towards the medicine den.]"
+        ]
+    ],
+    "revived_grievingyou2": [
+        [
+            "they_grieving",
+            "grievingyou",
+            "any"
+        ],
+        [
+            "[t_c stares at you, dumbfounded, for a long time.]",
+            "I... how... y_c...",
+            "They told me you were dead.",
+            "How are you here now?"
+        ]
+    ],
+    "revived_grievingyou3": [
+        [
+            "they_grieving",
+            "grievingyou",
+            "any"
+        ],
+        [
+            "...",
+            "... ... ...",
+            "... ... ... ... ...",
+            "r_m has some explaining to do."
+        ]
+    ],
+    "revived_grievingyou4": [
+        [
+            "they_grieving",
+            "grievingyou",
+            "they_shunned",
+            "any"
+        ],
+        [
+            "What...? What is happening?"
+        ]
+    ],
+    "revived_murderedyou_J1": [
+        [
+            "murderedyou"
+            
+        ],
+        [
+            "What are you doing here?"
+        ]
+    ],
+    "revived_murderedyou_J2": [
+        [
+            "murderedyou",
+            "they_shunned"
+            
+        ],
+        [
+            "What are you doing here?"
+        ]
+    ],
+    "revived_murderedyou_J3": [
+        [
+            "murderedyou",
+            "they_shunned",
+            "they_grieving"
+            
+        ],
+        [
+            "What are you doing here?"
+        ]
+    ],
+    "revived_murderedyou_J4": [
+        [
+            "murderedyou",
+            "they_shunned",
+            "they_grieving",
+            "grievingyou"
+            
+        ],
+        [
+            "Oh, StarClan, this... is too much for me."
+        ]
+    ],
     "dead_theygrieving1": [
         [
             "you_sc",
@@ -15368,6 +15459,18 @@
             "Letting you back in will be the hugest mistake c_nClan will ever make."
         ]
     ],
+    "youforgiven_J10" : [
+        [
+            "they_forgiven",
+            "you_forgiven"
+        ],
+        [
+            "[It feels strange, sitting next to t_c, knowing both of your pasts.]",
+            "Enjoying being back in the Clan?",
+            "[You give a curt nod.]",
+            "Good. That's good. Me too."
+        ]
+    ],
     "they_forgiven_J1": [
         [
             "they_forgiven",
@@ -15439,6 +15542,83 @@
         ],
         [
             "[t_c looks guilty.]"
+        ]
+    ],
+    "theyshunned_insult_J1" : [
+        [
+            "they_shunned",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "I know."
+        ]
+    ],
+    "theyshunned_insult_J2" : [
+        [
+            "they_shunned",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "You're not the first cat I've heard that from today."
+        ]
+    ],
+    "theyshunned_insult_J3" : [
+        [
+            "they_shunned",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "You think you're better than me, but you're not. I know it."
+        ]
+    ],
+    "bothshunned_insult_J1" : [
+        [
+            "both_shunned",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Don't be rude. We're both going through a lot right now."
+        ]
+    ],
+    "bothshunned_insult_J2" : [
+        [
+            "both_shunned",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "You're not exactly a pillar of morality yourself, you know."
+        ]
+    ],
+    "bothshunned_insult_J3" : [
+        [
+            "both_shunned",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Hearing that is starting to get old."
+        ]
+    ],
+    "youshunned_insult_J1" : [
+        [
+            "you_shunned",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Am I supposed to take your opinion seriously after what you've done?"
         ]
     ]
 }

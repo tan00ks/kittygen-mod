@@ -3593,7 +3593,6 @@
         [
             "you_sc",
             "they_sc",
-            "they_df",
             "queen"
         ],
         [
@@ -4640,7 +4639,8 @@
             "any"
         ],
         [
-            "... ... ..."
+            "... ... ...",
+            "[t_c still seems nervous around you.]"
         ]
     ],
     "youforgiven_J2": [
@@ -4649,7 +4649,10 @@
             "any"
         ],
         [
-            "... ... ..."
+            "Hey, r_q told me I don't have to be scared of you anymore!",
+            "Finally, we can play!",
+            "[t_c leaps for your leg and latches on like a tick.]",
+            "Let's go!"
         ]
     ],
     "youforgiven_J3": [
@@ -4669,7 +4672,8 @@
             "any"
         ],
         [
-            "... ... ..."
+            "They're not mad at you anymore, y_c?",
+            "Will they eventually forgive me, too?"
         ]
     ],
     "youforgiven_J5": [
@@ -4700,7 +4704,7 @@
             "any"
         ],
         [
-            "Letting you back in will be the hugest mistake c_nClan will ever make."
+            "I'm glad c_nClan forgave you. I'm sorry I made you mad."
         ]
     ],
     "youforgiven_J8": [
@@ -4711,7 +4715,8 @@
             "any"
         ],
         [
-            "Letting you back in will be the hugest mistake c_nClan will ever make."
+            "Is c_nClan really forgiving you?",
+            "You're a bad cat. They shouldn't do that!"
         ]
     ],
     "they_forgiven_J1": [

@@ -1938,6 +1938,15 @@
             "Whatever it is, go ask l_n."
         ]
     ],
+    "leadershunned_J2": [
+        [
+            "they_shunned",
+            "any"
+        ],
+        [
+            "[t_c is staring at their old den longingly.]"
+        ]
+    ],
     "stable_Leader_Gen_01": [
         [
             "Any",
