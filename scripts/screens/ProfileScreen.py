@@ -43,9 +43,9 @@ def accessory_display_name(cat):
 
     if accessory in Pelt.collars:
         collar_colors = {'crimson': 'red', 'blue': 'blue', 'yellow': 'yellow', 'cyan': 'cyan',
-                         'red': 'orange', 'lime': 'lime', 'green': 'green', 'rainbow': 'rainbow',
-                         'black': 'black', 'spikes': 'spiky', 'white': 'white', 'pink': 'pink',
-                         'purple': 'purple', 'multi': 'multi', 'indigo': 'indigo'}
+                        'red': 'orange', 'lime': 'lime', 'green': 'green', 'rainbow': 'rainbow',
+                        'black': 'black', 'spikes': 'spiky', 'white': 'white', 'pink': 'pink',
+                        'purple': 'purple', 'multi': 'multi', 'indigo': 'indigo'}
         collar_color = next((color for color in collar_colors if acc_display.startswith(color)), None)
 
         if collar_color:
@@ -606,24 +606,24 @@ class ProfileScreen(Screens):
                     self.build_profile()
                     self.update_disabled_buttons_and_text()
                 if self.the_cat.dead:
-                  if self.the_cat.ID != game.clan.instructor.ID and self.the_cat.ID != game.clan.demon.ID:
-                    if self.the_cat.df:
-                        self.the_cat.outside, self.the_cat.exiled = False, False
-                        self.the_cat.df = False
-                        game.clan.add_to_starclan(self.the_cat)
-                        self.the_cat.thought = "Is relieved to set paw in StarClan"
-                    else:
-                        self.the_cat.outside, self.the_cat.exiled = False, False
-                        self.the_cat.df = True
-                        game.clan.add_to_darkforest(self.the_cat)
-                        self.the_cat.thought = "Is distraught after being sent to the Place of No Stars"
+                    if self.the_cat.ID != game.clan.instructor.ID and self.the_cat.ID != game.clan.demon.ID:
+                        if self.the_cat.df:
+                            self.the_cat.outside, self.the_cat.exiled = False, False
+                            self.the_cat.df = False
+                            game.clan.add_to_starclan(self.the_cat)
+                            self.the_cat.thought = "Is relieved to set paw in StarClan"
+                        else:
+                            self.the_cat.outside, self.the_cat.exiled = False, False
+                            self.the_cat.df = True
+                            game.clan.add_to_darkforest(self.the_cat)
+                            self.the_cat.thought = "Is distraught after being sent to the Place of No Stars"
 
 
-                  if self.the_cat.ID == game.clan.demon.ID and game.clan.followingsc == True:
-                            game.clan.followingsc = False
+                    if self.the_cat.ID == game.clan.demon.ID and game.clan.followingsc == True:
+                                game.clan.followingsc = False
 
-                  elif self.the_cat.ID == game.clan.instructor.ID and not game.clan.followingsc:
-                       game.clan.followingsc = True
+                    elif self.the_cat.ID == game.clan.instructor.ID and not game.clan.followingsc:
+                        game.clan.followingsc = True
 
 
 
@@ -791,16 +791,16 @@ class ProfileScreen(Screens):
                             continue
                 self.profile_elements["cat_image"].kill()
                 self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((200, 400), (300, 300))),
-                                                                         pygame.transform.scale(
-                                                                             self.the_cat.sprite,
-                                                                             (300, 300)), manager=MANAGER)
+                                                                        pygame.transform.scale(
+                                                                            self.the_cat.sprite,
+                                                                            (300, 300)), manager=MANAGER)
                 self.profile_elements["cat_image"].disable()
                 self.profile_elements["cat_info_column1"].kill()
                 self.profile_elements["cat_info_column1"] = UITextBoxTweaked(self.generate_column1(self.the_cat),
-                                                                     scale(pygame.Rect((600, 460), (360, 380))),
-                                                                     object_id=get_text_box_theme(
-                                                                         "#text_box_22_horizleft"),
-                                                                     line_spacing=0.95, manager=MANAGER)
+                                                                    scale(pygame.Rect((600, 460), (360, 380))),
+                                                                    object_id=get_text_box_theme(
+                                                                        "#text_box_22_horizleft"),
+                                                                    line_spacing=0.95, manager=MANAGER)
 
 
     def screen_switches(self):
@@ -809,33 +809,31 @@ class ProfileScreen(Screens):
 
         # Set up the menu buttons, which appear on all cat profile images.
         self.next_cat_button = UIImageButton(scale(pygame.Rect((1244, 50), (306, 60))), "", object_id="#next_cat_button"
-                                             , manager=MANAGER)
+                                            , manager=MANAGER)
         self.previous_cat_button = UIImageButton(scale(pygame.Rect((50, 50), (306, 60))), "",
-                                                 object_id="#previous_cat_button"
-                                                 , manager=MANAGER)
+                                                object_id="#previous_cat_button"
+                                                , manager=MANAGER)
         self.back_button = UIImageButton(scale(pygame.Rect((50, 120), (210, 60))), "", object_id="#back_button"
-                                         , manager=MANAGER)
+                                        , manager=MANAGER)
         self.inspect_button = UIImageButton(scale(pygame.Rect((1482, 120),(68,68))), "",
                                             object_id="#magnify_button",
                                             manager=MANAGER)
         
-        # self.exile_return_button = UIImageButton(scale(pygame.Rect((670, 210), (254, 56))), "Return Home",
-        #                                           object_id="#exile_return_button",  tool_tip_text='Ask your Clan for your nest back.', manager=MANAGER)
         self.exile_return_button = UIImageButton(scale(pygame.Rect((746, 220), (68, 68))), "Return Home",
-                                                  object_id="#exile_return_button",  tool_tip_text='Ask your Clan for your nest back.', manager=MANAGER)
+                                                object_id="#exile_return_button",  tool_tip_text='Ask your Clan for your nest back.', manager=MANAGER)
         
         self.relations_tab_button = UIImageButton(scale(pygame.Rect((96, 840), (352, 60))), "",
-                                                  object_id="#relations_tab_button", manager=MANAGER)
+                                                object_id="#relations_tab_button", manager=MANAGER)
         self.roles_tab_button = UIImageButton(scale(pygame.Rect((448, 840), (352, 60))), "",
-                                              object_id="#roles_tab_button"
-                                              , manager=MANAGER)
+                                            object_id="#roles_tab_button"
+                                            , manager=MANAGER)
         self.personal_tab_button = UIImageButton(scale(pygame.Rect((800, 840), (352, 60))), "",
-                                                 object_id="#personal_tab_button", manager=MANAGER)
+                                                object_id="#personal_tab_button", manager=MANAGER)
         self.dangerous_tab_button = UIImageButton(scale(pygame.Rect((1152, 840), (352, 60))), "",
-                                                  object_id="#dangerous_tab_button", manager=MANAGER)
+                                                object_id="#dangerous_tab_button", manager=MANAGER)
 
         self.backstory_tab_button = UIImageButton(scale(pygame.Rect((96, 1244), (352, 60))), "",
-                                                  object_id="#backstory_tab_button", manager=MANAGER)
+                                                object_id="#backstory_tab_button", manager=MANAGER)
 
         self.conditions_tab_button = UIImageButton(
             scale(pygame.Rect((448, 1244), (352, 60))),
@@ -845,11 +843,11 @@ class ProfileScreen(Screens):
 
 
         self.placeholder_tab_3 = UIImageButton(scale(pygame.Rect((800, 1244), (352, 60))), "",
-                                               object_id="#cat_tab_3_blank_button", starting_height=1, manager=MANAGER)
+                                            object_id="#cat_tab_3_blank_button", starting_height=1, manager=MANAGER)
         self.placeholder_tab_3.disable()
 
         self.accessories_tab_button = UIImageButton(scale(pygame.Rect((1152, 1244), (352, 60))), "",
-                                               object_id="#accessories_tab_button", starting_height=1, manager=MANAGER)
+                                            object_id="#accessories_tab_button", starting_height=1, manager=MANAGER)
         if self.the_cat.moons == 0:
             self.accessories_tab_button.disable()
         else:
@@ -933,40 +931,40 @@ class ProfileScreen(Screens):
 
 
         self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(cat_name,
-                                                                          scale(pygame.Rect((50, 280), (-1, 80))),
-                                                                          object_id=get_text_box_theme(
-                                                                              "#text_box_40_horizcenter"),
-                                                                          manager=MANAGER)
+                                                                        scale(pygame.Rect((50, 280), (-1, 80))),
+                                                                        object_id=get_text_box_theme(
+                                                                            "#text_box_40_horizcenter"),
+                                                                        manager=MANAGER)
         name_text_size = self.profile_elements["cat_name"].get_relative_rect()
 
         self.profile_elements["cat_name"].kill()
 
         self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(cat_name,
                                                                           scale(pygame.Rect(
-                                                                              (800 - name_text_size.width, 280),
-                                                                              (name_text_size.width * 2, 80))),
-                                                                          object_id=get_text_box_theme(
-                                                                              "#text_box_40_horizcenter"),
-                                                                          manager=MANAGER)
+                                                                            (800 - name_text_size.width, 280),
+                                                                            (name_text_size.width * 2, 80))),
+                                                                        object_id=get_text_box_theme(
+                                                                            "#text_box_40_horizcenter"),
+                                                                        manager=MANAGER)
 
         # Write cat thought
         self.profile_elements["cat_thought"] = pygame_gui.elements.UITextBox(self.the_cat.thought,
-                                                                             scale(pygame.Rect((200, 340), (1200, 80))),
-                                                                             wrap_to_height=True,
-                                                                             object_id=get_text_box_theme(
-                                                                                 "#text_box_30_horizcenter_spacing_95")
-                                                                             , manager=MANAGER)
+                                                                            scale(pygame.Rect((200, 340), (1200, 80))),
+                                                                            wrap_to_height=True,
+                                                                            object_id=get_text_box_theme(
+                                                                                "#text_box_30_horizcenter_spacing_95")
+                                                                            , manager=MANAGER)
 
         self.profile_elements["cat_info_column1"] = UITextBoxTweaked(self.generate_column1(self.the_cat),
-                                                                     scale(pygame.Rect((600, 460), (360, 380))),
-                                                                     object_id=get_text_box_theme(
-                                                                         "#text_box_22_horizleft"),
-                                                                     line_spacing=0.95, manager=MANAGER)
+                                                                    scale(pygame.Rect((600, 460), (360, 380))),
+                                                                    object_id=get_text_box_theme(
+                                                                        "#text_box_22_horizleft"),
+                                                                    line_spacing=0.95, manager=MANAGER)
         self.profile_elements["cat_info_column2"] = UITextBoxTweaked(self.generate_column2(self.the_cat),
-                                                                     scale(pygame.Rect((980, 460), (500, 360))),
-                                                                     object_id=get_text_box_theme(
-                                                                         "#text_box_22_horizleft"),
-                                                                     line_spacing=0.95, manager=MANAGER)
+                                                                    scale(pygame.Rect((980, 460), (500, 360))),
+                                                                    object_id=get_text_box_theme(
+                                                                        "#text_box_22_horizleft"),
+                                                                    line_spacing=0.95, manager=MANAGER)
 
         # Set the cat backgrounds.
         if game.clan.clan_settings['backgrounds']:
