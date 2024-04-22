@@ -1331,7 +1331,7 @@ class Events:
                         return
                 c = Cat.all_cats.get(random.choice(game.clan.clan_cats))
                 counter = 0
-                while not c.relationships.get(game.clan.your_cat.ID) or c.relationships.get(game.clan.your_cat.ID).romantic_love < 10:
+                while not c.relationships.get(game.clan.your_cat.ID) or c.relationships.get(game.clan.your_cat.ID).romantic_love < 10 or c.outside:
                     if counter == 15:
                         return
                     c = Cat.all_cats.get(random.choice(game.clan.clan_cats))
@@ -3218,7 +3218,7 @@ class Events:
                 if cat.outside or cat.dead or cat.moons < 6:
                     cat = Cat.all_cats.get(random.choice(game.clan.clan_cats))
                 else:
-                    return
+                    break
             if current_disaster["collateral_damage"]:
                 if random.randint(1,10) == 1:
                     if random.randint(1,5) == 1:
