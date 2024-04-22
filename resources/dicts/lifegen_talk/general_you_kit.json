@@ -225,7 +225,7 @@
         [
             "What's that, y_c? You wanna play? Sure! You can be the leader, and I'll be the rogue.",
             "Ahem ...",
-            "Stop right there, clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
+            "Stop right there, Clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
             "Wait, stop! What are you doing? AHHH!!!!",
             "Too ... powerful ... bleeegh!",
             "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
@@ -240,7 +240,7 @@
             "you_orphaned"
         ],
         [
-            "Is this little scrap of fur the new addition to the clan?",
+            "Is this little scrap of fur the new addition to the Clan?",
             "Hmph. Let's just hope they stay out of trouble, that seems to be an issue for a lot of the kits around here."
         ]
     ],
@@ -383,7 +383,7 @@
             "upstanding"
         ],
         [
-            "It's important to listen and learn, little y_c. This clan relies on each of us doing our part."
+            "It's important to listen and learn, little y_c. This Clan relies on each of us doing our part."
         ]
     ],
     "you_kitten_5": [
@@ -484,7 +484,7 @@
         [
             "What's that, y_c? You wanna play? Sure! You can be the leader, and I'll be the rogue.",
             "Ahem ...",
-            "Stop right there, clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
+            "Stop right there, Clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
             "Wait, stop! What are you doing? AHHH!!!!",
             "Too ... powerful ... bleeegh!",
             "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
@@ -656,7 +656,7 @@
         ],
         [
             "The stars seem so distant, yet I feel like our ancestors are right here, watching over us.",
-            "Do you ever wonder, y_c, about our purpose in this vast clan?",
+            "Do you ever wonder, y_c, about our purpose in this vast Clan?",
             "Ah... you're too young to be thinking of this."
         ]
     ],
@@ -799,7 +799,7 @@
         [
             "What's that, y_c? You wanna play? Sure! You can be the leader, and I'll be the rogue.",
             "Ahem ...",
-            "Stop right there, clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
+            "Stop right there, Clan cat! Where do you think you're going? I, leader of the rogues, will stop you! Muahahaha!",
             "Wait, stop! What are you doing? AHHH!!!!",
             "Too ... powerful ... bleeegh!",
             "[t_c flops over on the ground dramatically. You clamber up onto their body and tug on their ears, giggling hysterically.]"
@@ -1114,7 +1114,7 @@
             "y_c, you want a badger ride?",
             "C'mere.",
             "[You clamber onto t_c's back and they parade you around camp, laughing and giggling.]",
-            "[The rest of your clanmates seem awestruck. t_c must not act like this very often.]",
+            "[The rest of your Clanmates seem awestruck. t_c must not act like this very often.]",
             "[But, with you, they're always soft and gentle.]"
         ]
     ],
@@ -1129,7 +1129,7 @@
             "y_c, you want a badger ride?",
             "C'mon, then.",
             "[You clamber onto t_c's back and they parade you around camp, laughing and giggling.]",
-            "[The rest of your clanmates seem awestruck. t_c must not act like this very often.]",
+            "[The rest of your Clanmates seem awestruck. t_c must not act like this very often.]",
             "[But, with you, they're always fun and gentle!]"
         ]
     ],
@@ -1534,7 +1534,7 @@
             "Hi there, little one! Have your parents taught you about how kittens are born yet?",
             "No? Oh, you poor thing.",
             "So, you see... When one cat loves another very much...",
-            "H-Hey, r_w what are you doing?! I'm just trying to educate the clan's kits!"
+            "H-Hey, r_w what are you doing?! I'm just trying to educate the Clan's kits!"
         ]
     ],
     "unabashed_murder": [
@@ -1570,7 +1570,7 @@
             "What's it like? It feels like it's eating me up from the inside, tearing me apart, ripping me open, swallowing me whole. This hole, this pit, it's agonising. But- that's the cost to lose someone you love.",
             "With love, comes loss, that's the price we pay. And it's so worth it. Because if we could do it again, we would, and wouldn't change a thing. To love is both a blessing and a curse. Don't let the fear of losing someone stop you from loving them, ever.",
             "Cherish every moment, every fight, every breath.",
-            "Thank you for visiting me, y_c. You remind me so much of them, thank you... Now run off and play, and please, y_c, never stop loving those around you. Kin or clanmate."
+            "Thank you for visiting me, y_c. You remind me so much of them, thank you... Now run off and play, and please, y_c, never stop loving those around you. Kin or Clanmate."
         ]
     ],
     "stable_12": [
@@ -1609,7 +1609,7 @@
         [
             "Really, you want to hear the song again? Ok, fine... Remember, you asked for this.",
             "There's no place like c_nClan, because here we are wild and free! And nobody can disagree! Look at the stars, the way they shine! StarClan has given us bountiful time.",
-            "And prey and rocks and leaves of gold- may StarClan continue to sing the songs of old. From once before and now onwards, as a clan we strive forward. We push on. And this is the c_nClan cats' song!"
+            "And prey and rocks and leaves of gold- may StarClan continue to sing the songs of old. From once before and now onwards, as a Clan we strive forward. We push on. And this is the c_nClan cats' song!"
         ]
     ],
     "insult_1": [
@@ -1694,7 +1694,7 @@
             "Are you worried about your apprentice's ceremony, y_c?",
             "Oh, don't worry. It's not so bad. You just have to worry about pleasing your mentor, that's all.",
             "Well, I guess there's the training to consider, too. All those battle moves to memorize, and hunting positions ... Plus, there's apprentices' den politics, too. Making friends isn't always easy.",
-            "Not to mention the assessments, the huge territory, the crushing loneliness, the massive weight of your clanmates' expectations on your shoulders ...",
+            "Not to mention the assessments, the huge territory, the crushing loneliness, the massive weight of your Clanmates' expectations on your shoulders ...",
             "... I'm sorry, what was I talking about? Oh, yeah. You'll be fine, don't worry."
         ]
     ],
@@ -1929,7 +1929,7 @@
             "stable"
         ],
         [
-            "Little tiny baby! Little tiny baby! Every kitty in the clan look at this little tiny baby!!!",
+            "Little tiny baby! Little tiny baby! Every kitty in the Clan look at this little tiny baby!!!",
             "[You look up and slowly nod your head along to the strange tune t_c sings.]",
             "Yippee! See, I can sing! y_c thinks so! Hey t_s did you see that? HEY! Don't shake your head at me! If y_c thinks I can sing then they must be right!"
         ]
@@ -2399,7 +2399,7 @@
             "[t_c scrambles to their paws, blood leaking down their shoulder where the queen attacked them. The commotion wakes the rest of the camp, concerned cats emerging from their dens.]",
             "You! You Dark Forest spawn! This was all YOU!",
             "[They lift their head to the stars and scream to the Clan.]",
-            "We lost a clanmate! To a kit, nonetheless! And yet we stand here and protect the killer?! EVIL WILL SPREAD!",
+            "We lost a Clanmate! To a kit, nonetheless! And yet we stand here and protect the killer?! EVIL WILL SPREAD!",
             "Make no mistake! They killed once, they'll kill again! And I <b>won't</b> let that happen!",
             "[r_q tells t_c to go to the medicine den and stay there. The Clan will not harm you. t_c shows brief confusion before hissing their response.]",
             "Just know, you can't protect them forever! One day, when you're not there, I will banish this evil myself! I don't care if blood stains my paws. Because at least I'll know StarClan will forgive me. They will never forgive you.",
@@ -2478,7 +2478,7 @@
         ],
         [
             "You're a strange kitten, and that's saying something coming from me.",
-            "For a cat so young to murder... I can only hope Starclan is looking out for us."
+            "For a cat so young to murder... I can only hope StarClan is looking out for us."
         ]
     ],
     "strange_sh_H10": [
