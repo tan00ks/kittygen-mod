@@ -13840,6 +13840,28 @@
             "Oh, this was a huge mistake..."
         ]
     ],
+    "grieving_sh_J34": [
+        [
+            "Any",
+            "you_shunned",
+            "you_grieving",
+            "they_grieving"
+        ],
+        [
+            "[You and t_c are both too sad to try to speak.]"
+        ]
+    ],
+    "grieving_sh_J35": [
+        [
+            "Any",
+            "they_shunned",
+            "you_grieving",
+            "they_grieving"
+        ],
+        [
+            "[You and t_c are both too sad to try to speak.]"
+        ]
+    ],
     "starclan_default": [
         [
             "they_sc",
