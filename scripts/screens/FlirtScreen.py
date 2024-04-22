@@ -223,6 +223,12 @@ class FlirtScreen(Screens):
                 else:
                     if len(talk[0]) == 2 and "reject" not in talk[0]:
                         continue
+
+            if "you_shunned" in talk[0] and game.clan.your_cat.shunned == 0:
+                continue
+            if "they_shunned" in talk[0] and cat.shunned == 0:
+                continue
+            
             if "mate" in talk[0] and cat.ID not in game.clan.your_cat.mate:
                 continue
             if ('leafbare' in talk[0] and game.clan.current_season != 'Leaf-bare') or ('newleaf' in talk[0] and game.clan.current_season != 'Newleaf') or ('leaffall' in talk[0] and game.clan.current_season != 'Leaf-bare') or ('greenleaf' in talk[0] and game.clan.current_season != 'Greenleaf'):
