@@ -2,8 +2,7 @@
     "deaf1": [
         [
             "Any",
-            "only_you_deaf",
-            "notyet"
+            "only_you_deaf"
         ],
         [
             "[t_c waves at you with a smile, trotting towards you from across camp with a small bird in their jaws.]",
@@ -18,8 +17,7 @@
             "only_they_deaf",
             "Newleaf",
             "Greenleaf",
-            "Leafbare",
-            "notyet"
+            "Leafbare"
         ],
         [
             "[During a harsh thunderstorm, kits and warriors alike hide in their dens, flinching at the thunderclaps above,]",
@@ -12602,8 +12600,7 @@
         [
             "you_shunned",
             "only_you_deaf",
-            "no_kit",
-            "notyet"
+            "no_kit"
         ],
         [
             "[As you approach the fresh-kill pile at the end of the day, every other cat's belly full, t_c shoots you a harsh look.]",
@@ -12617,8 +12614,7 @@
         [
             "they_shunned",
             "only_you_deaf",
-            "no_kit",
-            "notyet"
+            "no_kit"
         ],
         [
             "[An annoyed t_c is calling out to any cat that passes them. Do they think that they'll be able to annoy the Clan into forgiving them?]",
@@ -12632,8 +12628,7 @@
         [
             "any",
             "both_shunned",
-            "only_you_deaf",
-            "notyet"
+            "only_you_deaf"
         ],
         [
             "... ... .."
@@ -12643,8 +12638,7 @@
         [
             "any",
             "both_shunned",
-            "only_you_deaf",
-            "notyet"
+            "only_you_deaf"
         ],
         [
             "... ... .."
@@ -12655,8 +12649,7 @@
             "any",
             "both_shunned",
             "only_you_deaf",
-            "only_they_deaf",
-            "notyet"
+            "only_they_deaf"
         ],
         [
             "... ... .."

@@ -423,9 +423,6 @@ class TalkScreen(Screens):
             if "insult" in tags:
                 continue
 
-            if "notyet" in tags:
-                continue
-
             # bc i dont wanna remove my deaf dialogue rn lol
 
             if you.moons == 0 and "newborn" not in tags:
@@ -861,7 +858,95 @@ class TalkScreen(Screens):
             #     continue
             # if "only_you_blind" in tags and "blind" not in cat.illnesses:
             #     continue
-            
+
+            if "only_they_deaf" in tags:
+                continue
+            if "only_they_blind" in tags:
+                continue
+
+            # remove when dialogue is implemented
+
+
+            if "you_allergies" in tags and "allergies" not in you.illnesses:
+                continue
+            if "they_allergies" in tags and "allergies" not in cat.illnesses:
+                continue
+
+            if "you_jointpain" in tags and "constant joint pain" not in you.illnesses:
+                continue
+            if "they_jointpain" in tags and "constant join pain" not in cat.illnesses:
+                continue
+
+            if "you_dizzy" in tags and "constantly dizzy" not in you.illnesses:
+                continue
+            if "they_dizzy" in tags and "constantly dizzy" not in cat.illnesses:
+                continue
+
+            if "you_nightmares" in tags and "constant nightmares" not in you.illnesses:
+                continue
+            if "they_nightmares" in tags and "constant nightmares" not in cat.illnesses:
+                continue
+
+            if "you_crookedjaw" in tags and "crooked jaw" not in you.illnesses:
+                continue
+            if "they_crookedjaw" in tags and "crooked jaw" not in cat.illnesses:
+                continue
+
+            if "you_failingeyesight" in tags and "failing eyesight" not in you.illnesses:
+                continue
+            if "they_failingeyesight" in tags and "failing eyesight" not in cat.illnesses:
+                continue
+
+            if "you_lastinggrief" in tags and "lasting grief" not in you.illnesses:
+                continue
+            if "they_lastinggrief" in tags and "lasting grief" not in cat.illnesses:
+                continue
+
+            # if "you_missingleg" in tags and "lost a leg" not in you.illnesses and "born without a leg" not in you.illnesses:
+            #     continue
+            # if "they_missingleg" in tags and "lost a leg" not in cat.illnesses and "born without a leg" not in cat.illnesses:
+            #     continue
+
+            # if "you_missingtail" in tags and "lost their tail" not in you.illnesses and "born without a tail" not in you.illnesses:
+            #     continue
+            # if "they_missingtail" in tags and "lost their tail" not in cat.illnesses and "born without a tail" not in cat.illnesses:
+            #     continue
+
+            if "you_paralyzed" in tags and "paralyzed" not in you.illnesses:
+                continue
+            if "they_paralyzed" in tags and "paralyzed" not in cat.illnesses:
+                continue
+
+            if "you_hearingloss" in tags and "partial hearing loss" not in you.illnesses:
+                continue
+            if "they_hearingloss" in tags and "partial hearing loss" not in cat.illnesses:
+                continue
+
+            if "you_headaches" in tags and "persistent headaches" not in you.illnesses:
+                continue
+            if "they_headaches" in tags and "persistent headaches" not in cat.illnesses:
+                continue
+
+            if "you_raspylungs" in tags and "raspy lungs" not in you.illnesses:
+                continue
+            if "they_raspylungs" in tags and "raspy lungs" not in cat.illnesses:
+                continue
+
+            if "you_recurringshock" in tags and "recurring shock" not in you.illnesses:
+                continue
+            if "they_recurringshock" in tags and "recurring shock" not in cat.illnesses:
+                continue
+
+            if "you_seizureprone" in tags and "seizure prone" not in you.illnesses:
+                continue
+            if "they_seizureprone" in tags and "seizure prone" not in cat.illnesses:
+                continue
+
+            if "you_wastingdisease" in tags and "wasting disease" not in you.illnesses:
+                continue
+            if "they_wastingdisease" in tags and "wasting disease" not in cat.illnesses:
+                continue
+
             # Relationship conditions
             if you.ID in cat.relationships:
                 if cat.relationships[you.ID].dislike < 30 and 'hate' in tags:
