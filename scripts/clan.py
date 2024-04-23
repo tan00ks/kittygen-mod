@@ -132,6 +132,7 @@ class Clan():
         self.inheritance = {}
         self.murdered = False
         self.exile_return = False
+        self.affair = False
         self.achievements = []
         self.talks = []
         
@@ -473,7 +474,8 @@ class Clan():
             "source_build": get_version_info().is_source_build,
             "your_cat": self.your_cat.ID,
             "murdered": self.murdered,
-            "exile_return": self.exile_return
+            "exile_return": self.exile_return,
+            "affair": self.affair
         }
 
         # LEADER DATA

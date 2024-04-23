@@ -2692,7 +2692,7 @@ class ProfileScreen(Screens):
                 tool_tip_text='Have an affair with one of your clanmates',
                 starting_height=2, manager=MANAGER
             )
-            if len(game.clan.your_cat.mate) == 0:
+            if len(game.clan.your_cat.mate) == 0 or game.clan.affair:
                 self.affair_button.disable()
             if game.clan.your_cat.mate:
                 alive_mate = False
