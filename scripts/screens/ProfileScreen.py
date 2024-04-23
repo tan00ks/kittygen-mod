@@ -433,8 +433,8 @@ class ProfileScreen(Screens):
                     event.ui_element == self.profile_elements["talk"]:
                 self.the_cat.talked_to = True
                 if not self.the_cat.dead and not game.clan.your_cat.dead and game.clan.your_cat.ID in self.the_cat.relationships and self.the_cat.ID in game.clan.your_cat.relationships:
-                    self.the_cat.relationships[game.clan.your_cat.ID].platonic_like += randint(1,5)
-                    game.clan.your_cat.relationships[self.the_cat.ID].platonic_like += randint(1,5)
+                    self.the_cat.relationships[game.clan.your_cat.ID].platonic_like += randint(0,5)
+                    game.clan.your_cat.relationships[self.the_cat.ID].platonic_like += randint(0,5)
                 self.change_screen('talk screen')
             elif "insult" in self.profile_elements and \
                     event.ui_element == self.profile_elements["insult"]:
