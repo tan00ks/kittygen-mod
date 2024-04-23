@@ -1336,28 +1336,47 @@ class PickPath(UIWindow):
     def process_event(self, event):
         super().process_event(event)
 
-        if event.type == pygame_gui.UI_BUTTON_START_PRESS:
-            if event.ui_element == self.begin_anew_button:
-                game.switches['window_open'] = False
-                game.clan.your_cat.status = 'medicine cat apprentice'
-                self.kill()
-            elif event.ui_element == self.not_yet_button:
-                game.switches['window_open'] = False
-                game.clan.your_cat.status = 'apprentice'
-                self.kill()
-            elif event.ui_element == self.mediator_button:
-                game.switches['window_open'] = False
-                game.clan.your_cat.status = 'mediator apprentice'
-                self.kill()
-            elif event.ui_element == self.queen_button:
-                game.switches['window_open'] = False
-                game.clan.your_cat.status = "queen's apprentice"
-                self.kill()
-            elif event.ui_element == self.random_button:
-                game.switches['window_open'] = False
-                
-                game.clan.your_cat.status = random.choice(['mediator apprentice','apprentice','medicine cat apprentice', "queen's apprentice"])
-                self.kill()
+        try:
+
+            if event.type == pygame_gui.UI_BUTTON_START_PRESS:
+                if event.ui_element == self.begin_anew_button:
+                    game.switches['window_open'] = False
+                    if game.clan.your_cat.moons < 12:
+                        game.clan.your_cat.status = 'medicine cat apprentice'
+                    else:
+                        game.clan.your_cat.status = 'medicine cat'
+                    self.kill()
+                elif event.ui_element == self.not_yet_button:
+                    game.switches['window_open'] = False
+                    if game.clan.your_cat.moons < 12:
+                        game.clan.your_cat.status = 'apprentice'
+                    else:
+                        game.clan.your_cat.status = 'warrior'
+                    self.kill()
+                elif event.ui_element == self.mediator_button:
+                    game.switches['window_open'] = False
+                    if game.clan.your_cat.moons < 12:
+                        game.clan.your_cat.status = 'mediator apprentice'
+                    else:
+                        game.clan.your_cat.status = 'mediator'
+                    self.kill()
+                elif event.ui_element == self.queen_button:
+                    game.switches['window_open'] = False
+                    if game.clan.your_cat.moons < 12:
+                        game.clan.your_cat.status = "queen's apprentice"
+                    else:
+                        game.clan.your_cat.status = "queen"
+                    self.kill()
+                elif event.ui_element == self.random_button:
+                    game.switches['window_open'] = False
+                    if game.clan.your_cat.moons < 12:
+                        game.clan.your_cat.status = random.choice(['mediator apprentice','apprentice','medicine cat apprentice', "queen's apprentice"])
+                    else:
+                        game.clan.your_cat.status = random.choice(['mediator','warrior','medicine cat', "queen"])
+                    
+                    self.kill()
+        except:
+            print('Error with PickPath window!')
                 
 class DeathScreen(UIWindow):
     def __init__(self, last_screen):
@@ -1461,6 +1480,7 @@ class DeathScreen(UIWindow):
                 if game.clan.your_cat.ID in game.clan.unknown_cats:
                     game.clan.unknown_cats.remove(game.clan.your_cat.ID)
                 you = game.clan.your_cat
+                
                 if you.moons == 0 and you.status != "newborn":
                     you.status = 'newborn'
                 elif you.moons < 6 and you.status != "kitten":

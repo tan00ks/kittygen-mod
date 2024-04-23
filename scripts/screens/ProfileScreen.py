@@ -1240,11 +1240,13 @@ class ProfileScreen(Screens):
                 self.profile_elements["halfmoon"].disable()
 
         if self.the_cat.ID == game.clan.your_cat.ID:
-            if not self.the_cat.dead and self.the_cat.outside:
+            if not self.the_cat.dead and self.the_cat.exiled or self.the_cat.status == 'former_Clancat':
                 if game.clan.exile_return:
                     self.exile_return_button.disable()
                 else:
                     self.exile_return_button.show()
+            else:
+                self.exile_return_button.hide()
         else:
             self.exile_return_button.hide()
 

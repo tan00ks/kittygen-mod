@@ -221,7 +221,7 @@ class Cat():
         self.insulted = False
         self.flirted = False
         self.joined_df = False
-        self.revealed = 0
+        self.forgiven = 0
         self.inventory = []
         self.revives = 0
         self.no_kits = False
@@ -470,32 +470,33 @@ class Cat():
         if game.clan and game.clan.game_mode != 'classic' and not (self.outside or self.exiled) and body is not None:
             self.grief(body)
 
-        if not self.outside and self.status not in ["loner", "kittypet", "rogue", "former Clancat"]:
-            #^^ seems redundant but fixes a bug where, if following the DF before the mc
-            # is born, and mc is not clanborn, their birth parent will be in both the DF and UR
-            Cat.dead_cats.append(self)
-            if game.clan.followingsc is False:
-                self.df = True
-                self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
-                game.clan.add_to_darkforest(self)
-            else:
-                self.thought = 'Is surprised to find themselves walking the stars of Silverpelt'
-                
-            if self.history:
-                if self.history.murder:
-                    if "is_murderer" in self.history.murder:
-                        if len(self.history.murder["is_murderer"]) > 2:
-                            self.df = True
-                            self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
-                            game.clan.add_to_darkforest(self)
+        if not self.outside:
+            if self.status not in ["loner", "kittypet", "rogue", "former Clancat"]:
+                #^^ seems redundant but fixes a bug where, if following the DF before the mc
+                # is born, and mc is not clanborn, their birth parent will be in both the DF and UR
+                Cat.dead_cats.append(self)
+                if game.clan.followingsc is False:
+                    self.df = True
+                    self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
+                    game.clan.add_to_darkforest(self)
+                else:
+                    self.thought = 'Is surprised to find themselves walking the stars of Silverpelt'
+                    
+                if self.history:
+                    if self.history.murder:
+                        if "is_murderer" in self.history.murder:
+                            if len(self.history.murder["is_murderer"]) > 2:
+                                self.df = True
+                                self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
+                                game.clan.add_to_darkforest(self)
 
-            if self.shunned > 0 and self.revealed > 1:
-                self.df = True
-                self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
-                game.clan.add_to_darkforest(self)
-            elif self.shunned > 0 and self.revealed == 1:
-                self.thought = "Is shocked they made it into StarClan"
-                game.clan.add_to_starclan(self)
+                if self.shunned > 0 and self.forgiven > 1:
+                    self.df = True
+                    self.thought = "Is startled to find themselves wading in the muck of a shadowed forest"
+                    game.clan.add_to_darkforest(self)
+                elif self.shunned == 0 and self.forgiven > 0:
+                    self.thought = "Is shocked they made it into StarClan"
+                    game.clan.add_to_starclan(self)
             
         else:
             self.thought = "Is fascinated by the new ghostly world they've stumbled into"
@@ -3380,7 +3381,7 @@ class Cat():
                 "insulted": self.insulted if self.insulted else False,
                 "flirted": self.flirted if self.flirted else False,
                 "joined_df": self.joined_df if self.joined_df else False,
-                "revealed": self.revealed if self.revealed and isinstance(self.revealed, int) else 0,
+                "forgiven": self.forgiven if self.forgiven and isinstance(self.forgiven, int) else 0,
                 "inventory": self.pelt.inventory if self.pelt.inventory else [],
                 "revives": self.revives if self.revives else 0,
                 "backstory_str": self.backstory_str if self.backstory_str else "",

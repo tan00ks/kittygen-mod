@@ -539,7 +539,9 @@ class TalkScreen(Screens):
             youreforgiven = False
             theyreforgiven = False
 
-            if you.moons < you.revealed + 10: # after ten moons, 100% regular dialogue returns
+
+
+            if game.clan.age < you.forgiven + 10: # after ten moons, 100% regular dialogue returns
                 if you.history:
                     if you.history.murder:
                         if "is_murderer" in you.history.murder:
@@ -547,7 +549,8 @@ class TalkScreen(Screens):
                                 continue
                             else:
                                 youreforgiven = True
-            if cat.moons < cat.revealed + 10:
+                                
+            if game.clan.age < cat.forgiven + 10:
                 if cat.history:
                     if cat.history.murder:
                         if "is_murderer" in cat.history.murder:
@@ -782,21 +785,22 @@ class TalkScreen(Screens):
                     continue
 
             # If you have murdered someone and have been revealed
-            if "murder" in tags and you.shunned == 1:
-                if game.clan.your_cat.revealed:
-                    if game.clan.your_cat.history:
-                        if "is_murderer" in game.clan.your_cat.history.murder:
-                            if len(game.clan.your_cat.history.murder["is_murderer"]) == 0:
-                                continue
-                            if 'accomplices' in game.switches:
-                                if cat.ID in game.switches['accomplices']:
-                                    continue
-                        else:
-                            continue
-                    else:
-                        continue
-                else:
-                    continue
+
+            # if "murder" in tags and you.shunned == 1: # "murder" tag is gone, shunned is dealt with elsewhere
+            #     if game.clan.your_cat.revealed:
+            #         if game.clan.your_cat.history:
+            #             if "is_murderer" in game.clan.your_cat.history.murder:
+            #                 if len(game.clan.your_cat.history.murder["is_murderer"]) == 0:
+            #                     continue
+            #                 if 'accomplices' in game.switches:
+            #                     if cat.ID in game.switches['accomplices']:
+            #                         continue
+            #             else:
+            #                 continue
+            #         else:
+            #             continue
+            #     else:
+            #         continue
 
             if "war" in tags:
                 if game.clan.war.get("at_war", False):

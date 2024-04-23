@@ -680,7 +680,6 @@ class History:
         murder_history = History.get_murders(cat)
         victim_history = History.get_murders(victim)
 
-        cat.revealed = cat.moons
         if cat.shunned == 0:
             cat.shunned = 1
             cat.thought = "Is upset that they have been shunned"
