@@ -78,7 +78,7 @@ class MoonplaceScreen(Screens):
                 (500, 870)),
             manager=MANAGER)
         self.profile_elements["cat_name"] = pygame_gui.elements.UITextBox(str(self.the_cat.name),
-                                                                       scale(pygame.Rect((300, 870), (-1, 80))),
+                                                                    scale(pygame.Rect((300, 870), (-1, 80))),
                                                                           object_id="#text_box_34_horizcenter_light",
                                                                           manager=MANAGER)
 
@@ -96,9 +96,9 @@ class MoonplaceScreen(Screens):
                                         object_id="#back_button", manager=MANAGER)
         self.scroll_container = pygame_gui.elements.UIScrollingContainer(scale(pygame.Rect((500, 970), (900, 300))))
         self.text = pygame_gui.elements.UITextBox("",
-                                                  scale(pygame.Rect((0, 0), (900, -100))),
-                                                  object_id="#text_box_30_horizleft",
-                                                  container=self.scroll_container,
+                                                scale(pygame.Rect((0, 0), (900, -100))),
+                                                object_id="#text_box_30_horizleft",
+                                                container=self.scroll_container,
                                                 manager=MANAGER)
 
         self.textbox_graphic = pygame_gui.elements.UIImage(
@@ -108,9 +108,9 @@ class MoonplaceScreen(Screens):
         # self.textbox_graphic.hide()
 
         self.profile_elements["cat_image"] = pygame_gui.elements.UIImage(scale(pygame.Rect((70, 900), (400, 400))),
-                                                                         pygame.transform.scale(
-                                                                             generate_sprite(self.the_cat),
-                                                                             (400, 400)), manager=MANAGER)
+                                                                        pygame.transform.scale(
+                                                                            generate_sprite(self.the_cat),
+                                                                            (400, 400)), manager=MANAGER)
         self.paw = pygame_gui.elements.UIImage(
                 scale(pygame.Rect((1370, 1180), (30, 30))),
                 image_cache.load_image("resources/images/cursor.png").convert_alpha()
@@ -325,21 +325,41 @@ class MoonplaceScreen(Screens):
         return self.get_adjusted_txt(choice(possible_texts["intros"][med_type]) + other_med_greeting + choice(possible_texts["moonplace"]["starclan_general"]) + prophecy, cat)
 
     def get_other_med_greeting(self, possible_texts):
+        """ Handles other medicine cat greetings at the Moonplace """
         other_clan_random = choice(game.switches["other_med_clan"])
         other_clan_random_index = game.switches["other_med_clan"].index(other_clan_random)
         other_meds = game.switches["other_med"][other_clan_random_index]
-        
+        possible_greetings = []
         if len(other_meds) == 1:
-            greeting = possible_texts["med_cat_greetings"]["general_greeting_one_med"]
+            possible_greetings.extend(possible_texts["med_cat_greetings"]["general_greeting_one_med"])
+            possible_greetings.extend(possible_texts["med_cat_greetings"][f"general_greeting_{other_clan_random.temperament}_one_med"])
+            if game.clan.war.get("at_war", True) and other_clan_random.name == game.clan.war["enemy"]:
+                possible_greetings.extend(possible_texts["med_cat_greetings"]["general_greeting_war_one_med"])
+            if other_clan_random.relations > 16:
+                possible_greetings.extend(possible_texts["med_cat_greetings"]["general_greeting_friendly_one_med"])
+            elif other_clan_random.relations < 7:
+                possible_greetings.extend(possible_texts["med_cat_greetings"]["general_greeting_unfriendly_one_med"])
+        else:
+            possible_greetings.extend(possible_texts["med_cat_greetings"]["general_greeting_multi_med"])
+            possible_greetings.extend(possible_texts["med_cat_greetings"][f"general_greeting_{other_clan_random.temperament}_multi_med"])
+            if game.clan.war.get("at_war", True) and other_clan_random.name == game.clan.war["enemy"]:
+                possible_greetings.extend(possible_texts["med_cat_greetings"]["general_greeting_war_multi_med"])
+            if other_clan_random.relations > 16:
+                possible_greetings.extend(possible_texts["med_cat_greetings"]["general_greeting_friendly_multi_med"])
+            elif other_clan_random.relations < 7:
+                possible_greetings.extend(possible_texts["med_cat_greetings"]["general_greeting_unfriendly_multi_med"])
+
+        greeting = [choice(possible_greetings)]
+
+        if len(other_meds) == 1:
             greeting = [s.replace("o_cn", str(other_clan_random.name) + "Clan").replace("o_c_m", str(other_meds[0])) for s in greeting]
         elif len(other_meds) == 2:
-            greeting = possible_texts["med_cat_greetings"]["general_greeting_multi_med"]
             greeting = [s.replace("o_cn", str(other_clan_random.name) + "Clan").replace("o_c_m", f"{other_meds[0]} and {other_meds[1]}") for s in greeting]
         elif len(other_meds) == 3:
-            greeting = possible_texts["med_cat_greetings"]["general_greeting_multi_med"]
             greeting = [s.replace("o_cn", str(other_clan_random.name) + "Clan").replace("o_c_m", f"{other_meds[0]}, {other_meds[1]}, and {other_meds[2]}") for s in greeting]
 
         return greeting
+    
 
     def get_adjusted_txt(self, text, cat):
         you = game.clan.your_cat
