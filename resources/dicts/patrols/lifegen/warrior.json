@@ -662,7 +662,7 @@
         ],
         "fail_outcomes": [
             {
-                "text": "You leap towards the path, but miss the landing slamming into one of the boards- scaring all the birds away. Your clanmates are happy you're okay but are unimpressed by your fall",
+                "text": "You leap towards the path, but miss the landing slamming into one of the boards- scaring all the birds away. Your clanmates are happy you're okay but are unimpressed by your fall.",
                 "exp": 0,
                 "weight": 20
             }

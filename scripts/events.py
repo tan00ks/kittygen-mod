@@ -379,6 +379,7 @@ class Events:
             self.generate_exile_event()
             
         game.clan.murdered = False
+        game.clan.affair = False
         game.clan.exile_return = False
         
         self.check_achievements()

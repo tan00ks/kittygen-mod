@@ -790,8 +790,25 @@ class Patrol():
         chosen_failure = choices(fail_outcomes, weights=[x.weight for x in fail_outcomes])[0]
         
         final_event, success = self.calculate_success(chosen_success, chosen_failure)
-        
-        print(f"PATROL ID: {self.patrol_event.patrol_id} | SUCCESS: {success}")        
+
+        if success and game.current_screen == "patrol screen4":
+            try:
+                game.clan.your_cat.relationships[self.patrol_random_cat.ID].romantic_love += randint(1,5)
+                game.clan.your_cat.relationships[self.patrol_random_cat.ID].trust += randint(1,5)
+                game.clan.your_cat.relationships[self.patrol_random_cat.ID].comfortable += randint(1,5)
+                self.patrol_random_cat.relationships[game.clan.your_cat.ID].romantic_love += randint(1,5)
+                self.patrol_random_cat.relationships[game.clan.your_cat.ID].trust += randint(1,5)
+                self.patrol_random_cat.relationships[game.clan.your_cat.ID].comfortable += randint(1,5)
+            except:
+                print("ERROR: handling relationship changes in date patrol")
+        elif not success and game.current_screen == "patrol screen4":
+            try:
+                self.patrol_random_cat.relationships[game.clan.your_cat.ID].romantic_love -= randint(1,5)
+                self.patrol_random_cat.relationships[game.clan.your_cat.ID].trust -= randint(1,5)
+                self.patrol_random_cat.relationships[game.clan.your_cat.ID].comfortable -= randint(1,5)
+            except:
+                print("ERROR: handling relationship changes in date patrol")
+        print(f"PATROL ID: {self.patrol_event.patrol_id} | SUCCESS: {success}")
         
         # Run the chosen outcome
         return final_event.execute_outcome(self)
