@@ -305,10 +305,10 @@
             "upstanding"
         ],
         [
-            "Is it really true that you're allowed to just ... travel between the clans as you please?",
+            "Is it really true that you're allowed to just ... travel between the Clans as you please?",
             "Whoa! That's so cool!!! I've always wanted to explore the other territories, but I've never been allowed.",
             "Is it true that o_cClan cats can swim like fish? Or that their territory is full of snakes?",
-            "[You and t_c have a long conversation about the other clans. With each detail you share, their eyes grow bigger and bigger.]"
+            "[You and t_c have a long conversation about the other Clans. With each detail you share, their eyes grow bigger and bigger.]"
         ]
     ],
     "assertivekit_queensapp1": [
@@ -886,7 +886,7 @@
         ],
         [
             "[You decide to eavesdrop onto one of t_c's games.]",
-            "Hey, stop right there! You're trespassing on clan territory!",
+            "Hey, stop right there! You're trespassing on Clan territory!",
             "No! Please don't hurt me!",
             "Too late! Get ready to join your ancestors in StarClan!",
             "NOOOOOOoooo...",
@@ -1101,7 +1101,7 @@
         [
             "y_c!! Hi!! Can you teach me how to do a hunting pounce, pretty please??",
             "So I just... focus on those feathers over there? Mnnn... Rawr!",
-            "I got it I got it!!! Thank you so much!! When I become an apprentice, I'm gonna make sure the whole clan has plenty of food! And imma give you my very first catch, okay?"
+            "I got it I got it!!! Thank you so much!! When I become an apprentice, I'm gonna make sure the whole Clan has plenty of food! And imma give you my very first catch, okay?"
         ]
     ],
     "sweet_kit_14": [
@@ -1183,7 +1183,7 @@
         [
             "Ah ah- I'm not following you around- I'm just walking in the same direction.. Um... not purposefully!!",
             "... Okay okay, I was.",
-            "I wanna be just like you when I grow up! You're so mature and cool and everyone likes you, you make sure the clan is safe and happy and I wanna do that too!!",
+            "I wanna be just like you when I grow up! You're so mature and cool and everyone likes you, you make sure the Clan is safe and happy and I wanna do that too!!",
             "Could you maybe teach me a thing or two...?"
         ]
     ],
@@ -1195,7 +1195,7 @@
         ],
         [
             "y_c!! y_c!! Look at what I caught!! It's a little bug!",
-            "Does this mean I'll be a really good hunter? I wanna make sure the clan is nice and happy no matter what!!"
+            "Does this mean I'll be a really good hunter? I wanna make sure the Clan is nice and happy no matter what!!"
         ]
     ],
     "sweet_kit_22": [
@@ -1517,7 +1517,7 @@
             "d_c!!!",
             "Where ... What ...",
             "Uh ...",
-            "[They look around at their clanmates guiltily. There's no need to explain. Everyone knows what happened.]",
+            "[They look around at their Clanmates guiltily. There's no need to explain. Everyone knows what happened.]",
             "[Still, this is the third time this week they've woken up screaming, and if it happens again, they just might scare off all the prey left on the territory!]"
         ]
     ],
@@ -2210,7 +2210,7 @@
         [
             "Morning y_c. Ready to start the day? Ready to train? To be a warrior?",
             "C'mon! Look at us, sitting here in a nursery, no, you and me, we're destined for great things! That's why when I'm a warrior and you're a warrior, we're going to be on patrols together all the time.",
-            "We'll bring back the most prey! Fight the biggest warriors! I can see it, can't you? Imagine the both of us, fighting for the clan. I can't wait!"
+            "We'll bring back the most prey! Fight the biggest warriors! I can see it, can't you? Imagine the both of us, fighting for the Clan. I can't wait!"
         ]
     ],
     "stable_kit_08": [
@@ -2234,7 +2234,7 @@
         [
             "Welcome to warrior training, y_c. First thing's first, let's fix that posture. Head up! Tail straight! Chin- lift that chin. Great!",
             "Now, show me your happy face. Good! Now your sad face. Eggcellent! Now, show me angry! No! More anger, bare those teeth.",
-            "Think of me as a scary warrior who's about to attack your clanmates, you wouldn't want that, would you? YES! Perfect, pull those ears back a little more, and- wow, you actually look pretty scary.",
+            "Think of me as a scary warrior who's about to attack your Clanmates, you wouldn't want that, would you? YES! Perfect, pull those ears back a little more, and- wow, you actually look pretty scary.",
             "Second task, as a warrior you must always know how to defend yourself- HEY! Did you just swipe at me- don't knock me over, I didn't say fight yet!"
         ]
     ],
@@ -2390,7 +2390,7 @@
         [
             "Can I ask you a question, y_c?",
             "Why do we follow the warrior code? It just sounds strange because why do we let cats of the past tell us who we have to be? I get it but- I just hope StarClan has a plan for me, a great one!",
-            "Maybe I'll be a leader? Someone who you can rely on. Or a deputy, proud to serve the clan! Maybe a warrior, strong like you. Or what about a medicine cat? Or a queen?",
+            "Maybe I'll be a leader? Someone who you can rely on. Or a deputy, proud to serve the Clan! Maybe a warrior, strong like you. Or what about a medicine cat? Or a queen?",
             "I don't know yet, but when I do, I'll tell you! And, you'll be there to help me, right?"
         ]
     ],
@@ -2437,7 +2437,7 @@
         ],
         [
             "o_cClan cats!!",
-            "[They hide behind your leg as the leader of the other clan enters your camp. Probably should let them know why they're visiting.]"
+            "[They hide behind your leg as the leader of the other Clan enters your camp. Probably should let them know why they're visiting.]"
         ]
     ],
     "neurotic_kit__26": [
@@ -2962,7 +2962,7 @@
             "stable"
         ],
         [
-            "Little tiny baby! Little tiny baby! Every kitty in the clan look at this little tiny baby!!!",
+            "Little tiny baby! Little tiny baby! Every kitty in the Clan look at this little tiny baby!!!",
             "[You look up and slowly bop your head along to the strange tune t_c sings.]",
             "Yippee! See, I can sing! y_c thinks so! Hey t_s did you see that? HEY! Don't shake your head at me! If y_c thinks I can sing then they must be right!"
         ]
@@ -3354,7 +3354,7 @@
             "*Cough* *Cough*",
             "Oh ... y_c! Did you come to visit me on my special vacation in the medicine den?",
             "r_m told me that, if I'm really good, they'll go out and get me a really special gift from the territory ...",
-            "I wonder what it'll be? Maybe a really cool feather? Ooh, or a twoleg thing!",
+            "I wonder what it'll be? Maybe a really cool feather? Ooh, or a Twoleg thing!",
             "I can't wait to see what it is."
         ]
     ],
@@ -3589,11 +3589,10 @@
             "[t_c just stares up at you for a moment before waddling away towards the nursery.]"
         ]
     ],
-    "starclan_kit1": [
+    "starClan_kit1": [
         [
             "you_sc",
             "they_sc",
-            "they_df",
             "queen"
         ],
         [
@@ -3626,7 +3625,7 @@
             "[t_c presses against you, tears brimming their eyes, and before you know it, you're bringing them into a tight embrace. At least, even through all this, you have each other.]"
         ]
     ],
-    "starclankit_default1": [
+    "starClankit_default1": [
         [
             "they_sc",
             "you_sc",
@@ -3638,7 +3637,7 @@
             "I miss them too."
         ]
     ],
-    "starclankit_default2": [
+    "starClankit_default2": [
         [
             "they_sc",
             "you_sc",
@@ -3871,7 +3870,7 @@
             "I'll still be your friend, though! Just don't tell r_c about it, okay?"
         ]
     ],
-    "starclan_they_living": [
+    "starClan_they_living": [
         [
             "you_sc",
             "kitten",
@@ -4632,6 +4631,153 @@
         ],
         [
             "I'm sorry. I really am."
+        ]
+    ],
+    "youforgiven_J1": [
+        [
+            "you_forgiven",
+            "any"
+        ],
+        [
+            "... ... ...",
+            "[t_c still seems nervous around you.]"
+        ]
+    ],
+    "youforgiven_J2": [
+        [
+            "you_forgiven",
+            "any"
+        ],
+        [
+            "Hey, r_q told me I don't have to be scared of you anymore!",
+            "Finally, we can play!",
+            "[t_c leaps for your leg and latches on like a tick.]",
+            "Let's go!"
+        ]
+    ],
+    "youforgiven_J3": [
+        [
+            "you_forgiven",
+            "they_forgiven",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J4": [
+        [
+            "you_forgiven",
+            "they_shunned",
+            "any"
+        ],
+        [
+            "They're not mad at you anymore, y_c?",
+            "Will they eventually forgive me, too?"
+        ]
+    ],
+    "youforgiven_J5": [
+        [
+            "you_forgiven",
+            "they_sc",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J6": [
+        [
+            "you_forgiven",
+            "they_df",
+            "any"
+        ],
+        [
+            "... ... ..."
+        ]
+    ],
+    "youforgiven_J7": [
+        [
+            "you_forgiven",
+            "they_sc",
+            "murderedthem",
+            "any"
+        ],
+        [
+            "I'm glad c_nClan forgave you. I'm sorry I made you mad."
+        ]
+    ],
+    "youforgiven_J8": [
+        [
+            "you_forgiven",
+            "they_df",
+            "murderedthem",
+            "any"
+        ],
+        [
+            "Is c_nClan really forgiving you?",
+            "You're a bad cat. They shouldn't do that!"
+        ]
+    ],
+    "they_forgiven_J1": [
+        [
+            "they_forgiven",
+            "any"
+        ],
+        [
+            ""
+        ]
+    ],
+    "they_forgiven_J2": [
+        [
+            "they_forgiven",
+            "you_shunned",
+            "any"
+        ],
+        [
+            ""
+        ]
+    ],
+    "they_forgiven_J3": [
+        [
+            "they_forgiven",
+            "you_sc",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J4": [
+        [
+            "they_forgiven",
+            "you_df",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J5": [
+        [
+            "they_forgiven",
+            "you_df",
+            "murderedyou",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
+        ]
+    ],
+    "they_forgiven_J6": [
+        [
+            "they_forgiven",
+            "you_sc",
+            "murderedyou",
+            "any"
+        ],
+        [
+            "[t_c looks guilty.]"
         ]
     ]
 }

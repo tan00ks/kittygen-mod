@@ -423,9 +423,6 @@ class TalkScreen(Screens):
             if "insult" in tags:
                 continue
 
-            if "notyet" in tags:
-                continue
-
             # bc i dont wanna remove my deaf dialogue rn lol
 
             if you.moons == 0 and "newborn" not in tags:
@@ -497,8 +494,8 @@ class TalkScreen(Screens):
                             murdered_them = True
                             break
 
-            if murdered_them and "murderedthem" not in tags:
-                continue
+            # if murdered_them and "murderedthem" not in tags:
+            #     continue
 
             if "murderedthem" in tags and not murdered_them:
                 continue
@@ -511,8 +508,8 @@ class TalkScreen(Screens):
                             murdered_you = True
                             break
 
-            if murdered_you and "murderedyou" not in tags:
-                continue
+            # if murdered_you and "murderedyou" not in tags:
+            #     continue
 
             if "murderedyou" in tags and not murdered_you:
                 continue
@@ -520,6 +517,8 @@ class TalkScreen(Screens):
             if "grief stricken" in cat.illnesses:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
                 if "grievingyou" in tags:
+                    # if not game.clan.your_cat.dead:
+                    #     cat.illnesses.remove('grief stricken')
                     if dead_cat.name != game.clan.your_cat.name:
                         continue
                 else:
@@ -540,19 +539,22 @@ class TalkScreen(Screens):
             youreforgiven = False
             theyreforgiven = False
 
-            if you.moons < you.revealed + 10: # after ten moons, 100% regular dialogue returns
+
+
+            if game.clan.age < you.forgiven + 10: # after ten moons, 100% regular dialogue returns
                 if you.history:
                     if you.history.murder:
                         if "is_murderer" in you.history.murder:
-                            if len(you.history.murder["is_murderer"]) > 0 and you.shunned == 0 and "you_forgiven" not in tags:
+                            if len(you.history.murder["is_murderer"]) > 0 and you.shunned == 0 and not you.dead and "you_forgiven" not in tags:
                                 continue
                             else:
                                 youreforgiven = True
-            if cat.moons < cat.revealed + 10:
+                                
+            if game.clan.age < cat.forgiven + 10:
                 if cat.history:
                     if cat.history.murder:
                         if "is_murderer" in cat.history.murder:
-                            if len(cat.history.murder["is_murderer"]) > 0 and cat.shunned == 0 and "they_forgiven" not in tags:
+                            if len(cat.history.murder["is_murderer"]) > 0 and cat.shunned == 0 and not cat.dead and  "they_forgiven" not in tags:
                                 continue
                             else:
                                 theyreforgiven = True
@@ -783,21 +785,22 @@ class TalkScreen(Screens):
                     continue
 
             # If you have murdered someone and have been revealed
-            if "murder" in tags and you.shunned == 1:
-                if game.clan.your_cat.revealed:
-                    if game.clan.your_cat.history:
-                        if "is_murderer" in game.clan.your_cat.history.murder:
-                            if len(game.clan.your_cat.history.murder["is_murderer"]) == 0:
-                                continue
-                            if 'accomplices' in game.switches:
-                                if cat.ID in game.switches['accomplices']:
-                                    continue
-                        else:
-                            continue
-                    else:
-                        continue
-                else:
-                    continue
+
+            # if "murder" in tags and you.shunned == 1: # "murder" tag is gone, shunned is dealt with elsewhere
+            #     if game.clan.your_cat.revealed:
+            #         if game.clan.your_cat.history:
+            #             if "is_murderer" in game.clan.your_cat.history.murder:
+            #                 if len(game.clan.your_cat.history.murder["is_murderer"]) == 0:
+            #                     continue
+            #                 if 'accomplices' in game.switches:
+            #                     if cat.ID in game.switches['accomplices']:
+            #                         continue
+            #             else:
+            #                 continue
+            #         else:
+            #             continue
+            #     else:
+            #         continue
 
             if "war" in tags:
                 if game.clan.war.get("at_war", False):
@@ -873,7 +876,95 @@ class TalkScreen(Screens):
             #     continue
             # if "only_you_blind" in tags and "blind" not in cat.illnesses:
             #     continue
-            
+
+            if "only_they_deaf" in tags:
+                continue
+            if "only_they_blind" in tags:
+                continue
+
+            # remove when dialogue is implemented
+
+
+            if "you_allergies" in tags and "allergies" not in you.illnesses:
+                continue
+            if "they_allergies" in tags and "allergies" not in cat.illnesses:
+                continue
+
+            if "you_jointpain" in tags and "constant joint pain" not in you.illnesses:
+                continue
+            if "they_jointpain" in tags and "constant join pain" not in cat.illnesses:
+                continue
+
+            if "you_dizzy" in tags and "constantly dizzy" not in you.illnesses:
+                continue
+            if "they_dizzy" in tags and "constantly dizzy" not in cat.illnesses:
+                continue
+
+            if "you_nightmares" in tags and "constant nightmares" not in you.illnesses:
+                continue
+            if "they_nightmares" in tags and "constant nightmares" not in cat.illnesses:
+                continue
+
+            if "you_crookedjaw" in tags and "crooked jaw" not in you.illnesses:
+                continue
+            if "they_crookedjaw" in tags and "crooked jaw" not in cat.illnesses:
+                continue
+
+            if "you_failingeyesight" in tags and "failing eyesight" not in you.illnesses:
+                continue
+            if "they_failingeyesight" in tags and "failing eyesight" not in cat.illnesses:
+                continue
+
+            if "you_lastinggrief" in tags and "lasting grief" not in you.illnesses:
+                continue
+            if "they_lastinggrief" in tags and "lasting grief" not in cat.illnesses:
+                continue
+
+            # if "you_missingleg" in tags and "lost a leg" not in you.illnesses and "born without a leg" not in you.illnesses:
+            #     continue
+            # if "they_missingleg" in tags and "lost a leg" not in cat.illnesses and "born without a leg" not in cat.illnesses:
+            #     continue
+
+            # if "you_missingtail" in tags and "lost their tail" not in you.illnesses and "born without a tail" not in you.illnesses:
+            #     continue
+            # if "they_missingtail" in tags and "lost their tail" not in cat.illnesses and "born without a tail" not in cat.illnesses:
+            #     continue
+
+            if "you_paralyzed" in tags and "paralyzed" not in you.illnesses:
+                continue
+            if "they_paralyzed" in tags and "paralyzed" not in cat.illnesses:
+                continue
+
+            if "you_hearingloss" in tags and "partial hearing loss" not in you.illnesses:
+                continue
+            if "they_hearingloss" in tags and "partial hearing loss" not in cat.illnesses:
+                continue
+
+            if "you_headaches" in tags and "persistent headaches" not in you.illnesses:
+                continue
+            if "they_headaches" in tags and "persistent headaches" not in cat.illnesses:
+                continue
+
+            if "you_raspylungs" in tags and "raspy lungs" not in you.illnesses:
+                continue
+            if "they_raspylungs" in tags and "raspy lungs" not in cat.illnesses:
+                continue
+
+            if "you_recurringshock" in tags and "recurring shock" not in you.illnesses:
+                continue
+            if "they_recurringshock" in tags and "recurring shock" not in cat.illnesses:
+                continue
+
+            if "you_seizureprone" in tags and "seizure prone" not in you.illnesses:
+                continue
+            if "they_seizureprone" in tags and "seizure prone" not in cat.illnesses:
+                continue
+
+            if "you_wastingdisease" in tags and "wasting disease" not in you.illnesses:
+                continue
+            if "they_wastingdisease" in tags and "wasting disease" not in cat.illnesses:
+                continue
+
             # Relationship conditions
             if you.ID in cat.relationships:
                 if cat.relationships[you.ID].dislike < 30 and 'hate' in tags:
@@ -957,7 +1048,7 @@ class TalkScreen(Screens):
             game.clan.talks.clear()
 
         weights2 = []
-        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving", "you_forgiven", "they_forgiven"]
+        weighted_tags = ["you_pregnant", "they_pregnant", "from_mentor", "from_your_parent", "from_adopted_parent", "adopted_parent", "half sibling", "littermate", "siblings_mate", "cousin", "adopted_sibling", "parents_siblings", "from_mentor", "from_your_kit", "from_your_apprentice", "from_mate", "from_parent", "adopted_parent", "from_kit", "sibling", "from_adopted_kit", "they_injured", "they_ill", "you_injured", "you_ill", "you_grieving", "you_forgiven", "they_forgiven", "murderedyou", "murderedthem"]
         for item in texts_list.values():
             tags = item["tags"] if "tags" in item else item[0]
             num_fam_mentor_tags = 1

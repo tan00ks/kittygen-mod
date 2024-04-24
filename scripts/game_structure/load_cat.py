@@ -58,6 +58,8 @@ def json_load():
             
             if "shunned" not in cat:
                 cat["shunned"] = False
+            if "revealed" in cat:
+                cat["forgiven"] = cat["revealed"]
 
             new_cat = Cat(ID=cat["ID"],
                         prefix=cat["name_prefix"],
@@ -185,7 +187,7 @@ def json_load():
             new_cat.insulted = cat["insulted"] if "insulted" in cat else False
             new_cat.flirted = cat['flirted'] if "flirted" in cat else False
             new_cat.joined_df = cat["joined_df"] if "joined_df" in cat else False
-            new_cat.revealed = cat["revealed"] if "revealed" in cat else 0
+            new_cat.forgiven = cat["forgiven"] if "forgiven" in cat else 0
             new_cat.revives = cat["revives"] if "revives" in cat else 0
             new_cat.courage = cat["courage"] if "courage" in cat else 0
             new_cat.intelligence = cat["intelligence"] if "intelligence" in cat else 0

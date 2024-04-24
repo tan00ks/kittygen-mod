@@ -36,7 +36,7 @@ from scripts.utility import get_cluster, get_alive_kits, get_alive_cats, get_ali
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
 from scripts.game_structure.windows import SaveError
-from scripts.game_structure.windows import RetireScreen, DeputyScreen, NameKitsWindow
+from scripts.game_structure.windows import RetireScreen, DeputyScreen, NameKitsWindow, PickPath
 from enum import Enum, auto
 
 class BirthType(Enum):
@@ -1796,9 +1796,19 @@ class Events:
         if additional_cats:
             text += " {PRONOUN/m_c/subject/CAP} {VERB/m_c/bring/brings} along {PRONOUN/m_c/poss} "
             if len(additional_cats) > 1:
-                text += str(len(additional_cats)) + " childen."
+                text += str(len(additional_cats)) + " children."
             else:
                 text += "child."
+
+        if lost_cat.ID == game.clan.your_cat.ID:
+            if lost_cat.status == "kitten" and lost_cat.moons > 4:
+                if lost_cat.moons < 119:
+                    PickPath('events screen')
+                    if lost_cat.moons < 12:
+                        self.generate_app_ceremony()
+                else:
+                    lost_cat.status = 'elder'
+                
          
         text = event_text_adjust(Cat, text, lost_cat, clan=game.clan)
         
@@ -3417,6 +3427,7 @@ class Events:
             # these numbers are kind of crazy but i wanted to keep the one randint
             if fate in [1, 2, 5, 6, 10, 11]:
                 cat.shunned = 0
+                cat.forgiven = game.clan.age
                 cat.exiled = False
                 cat.outside = False
                 cat.add_to_clan()
