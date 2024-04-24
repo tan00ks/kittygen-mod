@@ -6,14 +6,14 @@ from scripts.utility import scale
 
 from .Screens import Screens
 
-from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors, get_text_box_theme
+from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
 from scripts.game_structure.image_button import UIImageButton
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER, screen
 from enum import Enum  # pylint: disable=no-name-in-module
-from scripts.housekeeping.version import VERSION_NAME, get_version_info
+from scripts.housekeeping.version import VERSION_NAME
 
 
 class RelationType(Enum):
@@ -58,8 +58,6 @@ class TalkScreen(Screens):
         self.choicepanel = False
         self.textbox_graphic = None
         self.cat_dict = {}
-        self.version_number = None
-        self.version_background = None
 
 
     def screen_switches(self):
@@ -119,27 +117,6 @@ class TalkScreen(Screens):
             )
         self.paw.visible = False
 
-        self.version_background = UIImageButton(scale(pygame.Rect((1420, 1344), (1400, 55))), "", object_id="blank_button", manager=MANAGER)
-        self.version_background.disable()
-
-        if game.settings['fullscreen']:
-            self.version_number = pygame_gui.elements.UILabel(
-                pygame.Rect((1500, 1350), (-1, -1)), get_version_info().version_number[0:8],
-                object_id=get_text_box_theme())
-            # Adjust position
-            self.version_number.set_position(
-                (1600 - self.version_number.get_relative_rect()[2] - 8,
-                1400 - self.version_number.get_relative_rect()[3]))
-        else:
-            self.version_number = pygame_gui.elements.UILabel(
-                pygame.Rect((700, 650), (-1, -1)), get_version_info().version_number[0:8],
-                object_id=get_text_box_theme())
-            # Adjust position
-            self.version_number.set_position(
-                (800 - self.version_number.get_relative_rect()[2] - 8,
-                700 - self.version_number.get_relative_rect()[3]))
-
-
 
     def exit_screen(self):
         self.text.kill()
@@ -168,8 +145,6 @@ class TalkScreen(Screens):
         for option_bg in self.option_bgs:
             self.option_bgs[option_bg].kill()
         self.option_bgs = {}
-        self.version_number.kill()
-        self.version_background.kill()
 
     def update_camp_bg(self):
         light_dark = "light"

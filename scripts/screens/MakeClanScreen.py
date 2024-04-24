@@ -922,7 +922,7 @@ class MakeClanScreen(Screens):
                                                                   MakeClanScreen.your_name_txt2, manager=MANAGER)
         self.elements['background'].disable()
 
-        self.elements["version_background"] = UIImageButton(scale(pygame.Rect((1420, 1344), (1400, 55))), "", object_id="blank_button", manager=MANAGER)
+        self.elements["version_background"] = UIImageButton(scale(pygame.Rect((1450, 1344), (1400, 55))), "", object_id="blank_button", manager=MANAGER)
         self.elements["version_background"].disable()
 
         if game.settings['fullscreen']:
