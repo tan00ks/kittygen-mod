@@ -250,6 +250,11 @@ class Pelt():
         self.reverse = reverse
         self.skin = skin
 
+        if inventory is None:
+            self.inventory = []
+        else:
+            self.inventory = inventory
+
     @staticmethod
     def generate_new_pelt(gender:str, parents:tuple=(), age:str="adult", dead_for=0):
         new_pelt = Pelt()
