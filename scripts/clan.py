@@ -356,7 +356,7 @@ class Clan():
         Places the gone cat into cotc.
         It should not be removed from the list of cats in the clan
         """
-        if cat.ID in Cat.all_cats and cat.outside or cat.outside_clan and cat.ID not in Cat.outside_cats:
+        if cat.ID in Cat.all_cats and cat.outside and cat.ID not in Cat.outside_cats:
             # The outside-value must be set to True before the cat can go to cotc
             Cat.outside_cats.update({cat.ID: cat})
 

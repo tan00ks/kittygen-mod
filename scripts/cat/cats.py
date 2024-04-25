@@ -49,7 +49,6 @@ class Cat():
 
     all_cats: Dict[str, Cat] = {}  # ID: object
     outside_cats: Dict[str, Cat] = {}  # cats outside the clan
-    outside_clan: Dict[str, Cat] = {} # for former clan cats
     id_iter = itertools.count()
 
     all_cats_list: List[Cat] = []
@@ -970,7 +969,7 @@ class Cat():
         ids = []
         for child_id in children:
             child = Cat.all_cats[child_id]
-            if child.outside or child.outside_clan and not child.exiled and child.moons < 12:
+            if child.outside and not child.exiled and child.moons < 12:
                 child.add_to_clan()
                 ids.append(child_id)
         
@@ -1093,7 +1092,7 @@ class Cat():
     def manage_outside_trait(self):
         """To be run every moon on outside cats
             to keep trait and skills making sense."""
-        if not (self.outside or self.exiled or self.outside_clan):
+        if not (self.outside or self.exiled):
             return
         
         self.personality.set_kit(self.is_baby()) #Update kit trait stuff
