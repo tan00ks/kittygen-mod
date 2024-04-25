@@ -59,6 +59,7 @@ class Cat():
     
 
     rank_sort_order = [
+        "kittypet"
         "newborn",
         "kitten",
         "sitter's apprentice",
@@ -68,6 +69,8 @@ class Cat():
         "colony cat",
         "mediator apprentice",
         "mediator",
+        "scout's apprentice"
+        "scout"
         "medicine cat apprentice",
         "medicine cat",
         "deputy",
@@ -1627,7 +1630,7 @@ class Cat():
             where_kitty = 'inside'
         elif self.dead and not self.df :
             where_kitty = 'UR'
-        elif self.dead and self.outside_clan :
+        elif self.dead :
             where_kitty = 'starclan'
         elif self.dead and self.df:
             where_kitty = 'hell'

@@ -191,21 +191,21 @@ class GenerateEvents:
         biome = None
 
         excluded_from_general = []
-        warrior_adjacent_ranks = []
+        colony_adjacent_ranks = []
 
         if event_type == 'death':
-            warrior_adjacent_ranks.extend(["deputy", "apprentice"])
+            colony_adjacent_ranks.extend(["deputy", "apprentice"])
             excluded_from_general.extend(["kitten", "leader", "newborn"])
         elif event_type in ['injury', 'nutrition', 'misc_events', 'new_cat']:
-            warrior_adjacent_ranks.extend(["deputy", "apprentice", "leader"])
+            colony_adjacent_ranks.extend(["deputy", "apprentice", "leader"])
             excluded_from_general.extend(["kitten", "leader", "newborn"])
 
         if cat_type in ["medicine cat", "medicine cat apprentice"]:
             cat_type = "medicine"
         elif cat_type in ["mediator", "mediator apprentice"]:
             cat_type = "mediator"
-        elif cat_type in ["queen", "queen's apprentice"]:
-            cat_type = "queen"
+        elif cat_type in ["sitter", "sitter's apprentice"]:
+            cat_type = "sitter"
 
         # skip the rest of the loading if there is an unrecognised cat type
         if cat_type not in game.clan.CAT_TYPES:
@@ -223,9 +223,9 @@ class GenerateEvents:
             event_list.extend(
                 GenerateEvents.generate_short_events(event_type, cat_type, biome))
 
-            if cat_type in warrior_adjacent_ranks:
+            if cat_type in colony_adjacent_ranks:
                 event_list.extend(
-                    GenerateEvents.generate_short_events(event_type, "warrior", biome))
+                    GenerateEvents.generate_short_events(event_type, "colony", biome))
 
             if cat_type not in excluded_from_general:
                 event_list.extend(
@@ -243,15 +243,15 @@ class GenerateEvents:
             event_list.extend(
                 GenerateEvents.generate_short_events(event_type, cat_type, "general"))
 
-            # WARRIOR-LIKE
-            if cat_type in warrior_adjacent_ranks:
-                # biome specific warrior events for "warrior-like" ranks
+            # colony-LIKE
+            if cat_type in colony_adjacent_ranks:
+                # biome specific colony events for "colony-like" ranks
                 event_list.extend(
-                    GenerateEvents.generate_short_events(event_type, "warrior", biome))
+                    GenerateEvents.generate_short_events(event_type, "colony", biome))
 
-                # any biome warrior events for "warrior-like" ranks
+                # any biome colony events for "colony-like" ranks
                 event_list.extend(
-                    GenerateEvents.generate_short_events(event_type, "warrior", "general"))
+                    GenerateEvents.generate_short_events(event_type, "colony", "general"))
 
             # GENERAL
             if cat_type not in excluded_from_general:
@@ -396,7 +396,7 @@ class GenerateEvents:
                     continue
                 if "other_cat_med_app" in event.tags and other_cat.status != "medicine cat apprentice":
                     continue
-                if "other_cat_warrior" in event.tags and other_cat.status != "warrior":
+                if "other_cat_colony" in event.tags and other_cat.status != "colony":
                     continue
                 if "other_cat_app" in event.tags and other_cat.status != "apprentice":
                     continue
@@ -701,7 +701,7 @@ Tagging Guidelines: (if you add more tags, please add guidelines for them here)
 
 "other_cat" < there is a second cat in this event
 
-"other_cat_med", "other_cat_med_app", "other_cat_warrior", "other_cat_app", "other_cat_kit", "other_cat_lead", "other_cat_dep", "other_cat_elder" < mark the other cat as having to be a certain status, if none of these tags are used then other_cat can be anyone
+"other_cat_med", "other_cat_med_app", "other_cat_colony", "other_cat_app", "other_cat_kit", "other_cat_lead", "other_cat_dep", "other_cat_elder" < mark the other cat as having to be a certain status, if none of these tags are used then other_cat can be anyone
 
 "other_cat_mate" < mark the other cat as having to be the m_c's mate
 "other_cat_child" < mark the other cat as having to be the m_c's kit
@@ -725,7 +725,7 @@ Following tags are used for new cat events:
 "parent" < this litter or kit also comes with a parent (this does not include adoptive parents from within the clan)
 "m_c" < the event text includes the main cat, not just the new cat
 "other_cat" < the event text includes the other cat, not just the new cat and main cat
-"new_warrior", "new_apprentice", "new_medicine cat apprentice", "new_medicine cat" < make the new cat start with the tagged for status
+"new_colony", "new_apprentice", "new_medicine cat apprentice", "new_medicine cat" < make the new cat start with the tagged for status
 "injured" < tag along with a second tag that's the name of the injury you want the new_cat to have
 "major_injury" < tag to give the new cat a random major-severity injury
 

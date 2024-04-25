@@ -43,18 +43,18 @@ class Clan():
     CAT_TYPES = [
         "newborn",
         "kitten",
-        "apprentice", # apprentice replacement
-        "colony cat", # warrior replacement
+        "apprentice",
+        "colony", # warrior replacement
+        "kittypet"
+        "scout"
         "medicine",
         "deputy",
         "leader",
         "elder",
         "mediator",
-        "sitter",
+        "sitter", # queen replacement
         "general",
         "exiled",
-        "former Clancat"
-        "former colony cat"
     ]
     
 
@@ -206,7 +206,7 @@ class Clan():
         created in the 'clan created' screen, not every time
         the program starts
         """
-        self.instructor = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "colony cat",
+        self.instructor = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "colony",
                                              "medicine cat", "leader", "mediator", "sitter", "sitter's apprentice", "deputy", "elder"]),
                               )
         self.instructor.outside = True
@@ -217,7 +217,7 @@ class Clan():
         self.add_to_unknown(self.instructor)
         self.all_clans = []
         
-        self.demon = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "colony cat",
+        self.demon = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "colony",
                                              "medicine cat", "leader", "mediator", "sitter", "sitter's apprentice", "deputy", "elder"]),
                               )
         self.demon.df = True
@@ -298,7 +298,7 @@ class Clan():
         Places the dead cat into StarClan.
         It should not be removed from the list of cats in the clan
         """
-        if cat.ID in Cat.all_cats and cat.dead and cat.outside_clan:
+        if cat.ID in Cat.all_cats and cat.dead:
             # The dead-value must be set to True before the cat can go to starclan
             self.starclan_cats.append(cat.ID)
             if cat.ID in self.darkforest_cats:
@@ -708,7 +708,7 @@ class Clan():
                 game.clan.add_cat(game.clan.instructor)
         else:
             game.clan.instructor = Cat(
-                status=choice(["colony cat", "colony cat", "elder"]))
+                status=choice(["colony", "colony", "elder"]))
             # update_sprite(game.clan.instructor)
             game.clan.instructor.dead = True
             game.clan.add_cat(game.clan.instructor)
@@ -719,7 +719,7 @@ class Clan():
                 game.clan.add_cat(game.clan.demon)
         else:
             game.clan.demon = Cat(
-                status=choice(["colony cat", "colony cat", "elder"]))
+                status=choice(["colony", "colony", "elder"]))
             # update_sprite(game.clan.demon)
             game.clan.demon.dead = True
             game.clan.add_cat(game.clan.demon)
@@ -811,7 +811,7 @@ class Clan():
             game.clan.add_cat(game.clan.instructor)
         else:
             game.clan.instructor = Cat(
-                status=choice(["colony cat", "colony cat", "elder"]))
+                status=choice(["colony", "colony", "elder"]))
             # update_sprite(game.clan.instructor)
             game.clan.instructor.dead = True
             game.clan.add_cat(game.clan.instructor)
@@ -823,7 +823,7 @@ class Clan():
             game.clan.demon.df = True
         else:
             game.clan.demon = Cat(
-                status=choice(["colony cat", "colony cat", "elder"]))
+                status=choice(["colony", "colony", "elder"]))
             game.clan.demon.dead = True
             game.clan.add_cat(game.clan.demon)
             game.clan.demon.df = True
