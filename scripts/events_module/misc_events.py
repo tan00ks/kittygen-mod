@@ -47,7 +47,7 @@ class MiscEvents():
 
             acc_checked_events.append(event)
             
-        reveal = False
+        reveal = None
         victim = None
         cat_history = History.get_murders(cat)
         if cat_history:
@@ -91,6 +91,19 @@ class MiscEvents():
         elif "rel_up" in misc_event.tags:
             difference = 1
             change_clan_relations(other_clan, difference=difference)
+        
+        if "notreveal" in misc_event.tags:
+            reveal = False
+        elif "definite_shun" in misc_event.tags:
+            reveal = True
+        if "notreveal" not in misc_event.tags and "definite_shun" not in misc_event.tags and "murder_reveal" in misc_event.tags:
+            nosnitch = random.randint(1,6) 
+            if nosnitch == 1:
+                reveal = False
+            else:
+                reveal = True
+
+        
 
         event_text = event_text_adjust(Cat, misc_event.event_text, cat, other_cat, other_clan_name, murder_reveal=reveal, victim=victim)
         
@@ -123,16 +136,29 @@ class MiscEvents():
             types.append("other_clans")
         if ceremony:
             types.append("ceremony")
+        if other_cat and not reveal:
+            if "mu" + str(other_cat.name) in event_text:
+                return
+        if "r_c" in event_text:
+            print("r_c was found")
+            print(event_text)
+            return
+        
 
         # to remove double the event
         # (example which might happen would be: "The tension between c_n and o_c is palpable, with even the smallest actions potentially leading to violence.")
         same_text_events = [event for event in game.cur_events_list if event.text == event_text]
         if len(same_text_events) > 0:
             return
+        
+        if reveal and "definite_shun" not in misc_event.tags:
+            event_text += " " + str(other_cat.name) + " has told the Clan about the truth they discovered."
+        elif not reveal and "murder_reveal" in misc_event.tags:
+            event_text += " " + str(other_cat.name) + " has decided to keep their secret."
+
 
         game.cur_events_list.append(Single_Event(event_text, types, involved_cats))
-
-        if reveal:
+        if reveal and victim:
             History.reveal_murder(cat, other_cat, Cat, victim, murder_index)
 
     @staticmethod
@@ -205,20 +231,42 @@ class MiscEvents():
             acc_list.extend(Pelt.plant_accessories)
         if "COLLAR" in possible_accs:
             acc_list.extend(Pelt.collars)
+        if "FLOWER" in possible_accs:
+            acc_list.extend(Pelt.flower_accessories)
+        if "PLANT2" in possible_accs:
+            acc_list.extend(Pelt.plant2_accessories)
+        if "SNAKE" in possible_accs:
+            acc_list.extend(Pelt.snake_accessories)
+        if "SMALLANIMAL" in possible_accs:
+            acc_list.extend(Pelt.smallAnimal_accessories)
+        if "DEADINSECT" in possible_accs:
+            acc_list.extend(Pelt.deadInsect_accessories)
+        if "ALIVEINSECT" in possible_accs:
+            acc_list.extend(Pelt.aliveInsect_accessories)
+        if "FRUIT" in possible_accs:
+            acc_list.extend(Pelt.fruit_accessories)
+        if "CRAFTED" in possible_accs:
+            acc_list.extend(Pelt.crafted_accessories)
+        if "TAIL2" in possible_accs:
+            acc_list.extend(Pelt.tail2_accessories)
 
         for acc in possible_accs:
-            if acc not in ["WILD", "PLANT", "COLLAR"]:
+            if acc not in ["WILD", "PLANT", "COLLAR", "FLOWER", "PLANT2", "SNAKE", "SMALLANIMAL", "DEADINSECT", "ALIVEINSECT", "FRUIT", "CRAFTED", "TAIL2"]:
                 acc_list.append(acc)
 
         if "NOTAIL" in cat.pelt.scars or "HALFTAIL" in cat.pelt.scars:
-            for acc in Pelt.tail_accessories:
-                try:
-                    acc_list.remove(acc)
-                except ValueError:
-                    print(f'attempted to remove {acc} from possible acc list, but it was not in the list!')
+            for acc in Pelt.tail_accessories or Pelt.tail2_accessories:
+                if acc in acc_list:
+                    try:
+                        acc_list.remove(acc)
+                    except ValueError:
+                        print(f'attempted to remove {acc} from possible acc list, but it was not in the list!')
 
-
-        cat.pelt.accessory = random.choice(acc_list)
+        acc = random.choice(acc_list)
+        cat.pelt.accessory = acc
+        if not cat.pelt.inventory:
+            cat.pelt.inventory = []
+        cat.pelt.inventory.append(acc)
 
     @staticmethod
     def handle_murder_self_reveals(cat):

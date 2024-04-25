@@ -178,6 +178,12 @@ class ListScreen(Screens):
             if event.key == pygame.K_LEFT:
                 self.change_screen('patrol screen')
 
+    def get_living_cats(self):
+        self.living_cats = []
+        for the_cat in Cat.all_cats_list:
+            if not the_cat.dead and not the_cat.outside and not the_cat.moons == -1:
+                self.living_cats.append(the_cat)
+
     def screen_switches(self):
         # Determine the starting list of cats.
         if game.last_list_forProfile:
@@ -493,7 +499,7 @@ class ListScreen(Screens):
         self.death_status = 'living'
         self.full_cat_list = []
         for the_cat in Cat.all_cats_list:
-            if not the_cat.dead and not the_cat.outside:
+            if not the_cat.dead and not the_cat.outside and the_cat.moons != -1:
                 self.full_cat_list.append(the_cat)
 
     def get_cotc_cats(self):

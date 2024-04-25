@@ -217,6 +217,14 @@
 		"become_mediator_chances": {
 			"warrior": 5000,
 			"elder": 400
+		},
+		"become_med_chances": {
+			"warrior": 5000,
+			"elder": 400
+		},
+		"become_queen_chances": {
+			"warrior": 5000,
+			"elder": 400
 		}
 	},
 	"lost_cat": {
@@ -261,7 +269,7 @@
 		"cruel season_death_chance": 300,
 		"war_death_modifier_leader": 95,
 		"war_death_modifier": 250,
-		"base_random_murder_chance": 25,
+		"base_random_murder_chance":25,
 		"base_murder_kill_chance": 80,
 		"old_age_death_start": 150,
 		"old_age_death_curve": 4.5,
@@ -290,7 +298,8 @@
 		"max_apprentice_age": {
 			"medicine cat apprentice": 30,
 			"apprentice": 25,
-			"mediator apprentice": 25
+			"mediator apprentice": 25,
+			"queen's apprentice": 25
 		},
 		"min_graduating_age": 10
 	},
@@ -319,5 +328,6 @@
 		"light_mode_background": [206, 194, 168]
 	},
 	"lock_season": false, 
-	"comment": "Forces the season to be locked at the Clan's starting_season"
+	"comment": "Forces the season to be locked at the Clan's starting_season",
+	"debug_ensure_dialogue": ""
 }

@@ -76,7 +76,7 @@ class Freshkill_Pile():
                 "expires_in_4": game.prey_config["start_amount"],
                 "expires_in_3": 0,
                 "expires_in_2": 0,
-                "expires_in_1": 0,
+                "expires_in_1": 0
             }
             self.total_amount = game.prey_config["start_amount"]
         self.nutrition_info = {}
@@ -316,6 +316,8 @@ class Freshkill_Pile():
                 fed_kits.extend(young_kits)
                 relevant_queens.append(queen)
         pregnant_cats = [cat for cat in living_cats if "pregnant" in cat.injuries and cat.ID not in queen_dict.keys()]
+        shunned_cats = [cat for cat in living_cats if cat.shunned]
+
 
         # first split nutrition information into low nutrition and satisfied
         ration_prey = game.clan.clan_settings["ration prey"] if game.clan else False
@@ -352,7 +354,7 @@ class Freshkill_Pile():
             needed_amount = feeding_amount
 
             # check for condition
-            if "pregnant" not in cat.injuries and cat.not_working():
+            if "pregnant" not in cat.injuries and cat.not_working() and not cat.shunned:
                 if game.clan and game.clan.game_mode == "cruel season":
                     feeding_amount += CONDITION_INCREASE
                 needed_amount = feeding_amount
