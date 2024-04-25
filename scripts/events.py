@@ -3233,7 +3233,7 @@ class Events:
         if game.clan.second_disaster:
             self.handle_second_disaster()
     
-    def handle_disaster_impacts(self, current_disaster):        
+    def handle_disaster_impacts(self, current_disaster):      
         for i in range(random.randint(0,2)):
             cat = Cat.all_cats.get(random.choice(game.clan.clan_cats))
             for j in range(20):
@@ -3241,6 +3241,8 @@ class Events:
                     cat = Cat.all_cats.get(random.choice(game.clan.clan_cats))
                 else:
                     break
+            if cat.outside or cat.dead or cat.moons < 6:
+                return
             if current_disaster["collateral_damage"]:
                 if random.randint(1,10) == 1:
                     if random.randint(1,5) == 1:
