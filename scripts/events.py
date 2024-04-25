@@ -1059,6 +1059,8 @@ class Events:
                 resource_dir = "resources/dicts/events/lifegen_events/events_dead_sc/"
             elif game.clan.your_cat.df and not game.clan.your_cat.outside:
                 resource_dir = "resources/dicts/events/lifegen_events/events_dead_df/"
+            elif not game.clan.your_cat.df and game.clan.your_cat.ID in game.clan.unknown_cats:
+                "resources/dicts/events/lifegen_events/events_dead_ur/"
 
         elif game.clan.your_cat.shunned > 0 and not game.clan.your_cat.outside and not game.clan.your_cat.dead:
             resource_dir = "resources/dicts/events/lifegen_events/shunned/"
