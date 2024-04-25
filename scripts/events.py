@@ -1022,6 +1022,10 @@ class Events:
                 if game.clan.your_cat.mate is None:
                     return ""
                 text = text.replace("y_m", str(Cat.fetch_cat(random.choice(game.clan.your_cat.mate)).name))
+            if "df_y_a" in text:
+                if not game.clan.your_cat.dead or not game.clan.your_cat.df or len(game.clan.your_cat.df_apprentices) == 0:
+                    return ""
+                text = text.replace("df_y_a", str(Cat.fetch_cat(random.choice(game.clan.your_cat.df_apprentices)).name))
             if "y_a" in text:
                 if len(game.clan.your_cat.apprentice) == 0 or game.clan.your_cat.apprentice is None:
                     return ""
@@ -1055,6 +1059,8 @@ class Events:
                 resource_dir = "resources/dicts/events/lifegen_events/events_dead_sc/"
             elif game.clan.your_cat.df and not game.clan.your_cat.outside:
                 resource_dir = "resources/dicts/events/lifegen_events/events_dead_df/"
+            elif not game.clan.your_cat.df and game.clan.your_cat.ID in game.clan.unknown_cats:
+                resource_dir = "resources/dicts/events/lifegen_events/events_dead_ur/"
 
         elif game.clan.your_cat.shunned > 0 and not game.clan.your_cat.outside and not game.clan.your_cat.dead:
             resource_dir = "resources/dicts/events/lifegen_events/shunned/"
