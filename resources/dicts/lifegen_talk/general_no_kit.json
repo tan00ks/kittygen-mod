@@ -15565,7 +15565,8 @@
             "they_shunned",
             "any",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "insult"
         ],
         [
             "I know."
@@ -15576,7 +15577,8 @@
             "they_shunned",
             "any",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "insult"
         ],
         [
             "You're not the first cat I've heard that from today."
@@ -15587,7 +15589,8 @@
             "they_shunned",
             "any",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "insult"
         ],
         [
             "You think you're better than me, but you're not. I know it."
@@ -15598,7 +15601,8 @@
             "both_shunned",
             "any",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "insult"
         ],
         [
             "Don't be rude. We're both going through a lot right now."
@@ -15609,7 +15613,8 @@
             "both_shunned",
             "any",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "insult"
         ],
         [
             "You're not exactly a pillar of morality yourself, you know."
@@ -15620,7 +15625,8 @@
             "both_shunned",
             "any",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "insult"
         ],
         [
             "Hearing that is starting to get old."
@@ -15631,7 +15637,8 @@
             "you_shunned",
             "any",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "insult"
         ],
         [
             "Am I supposed to take your opinion seriously after what you've done?"

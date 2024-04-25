@@ -4779,5 +4779,35 @@
         [
             "[t_c looks guilty.]"
         ]
+    ],
+    "shunned_insult": [
+        [
+            "they_shunned",
+            "any",
+            "insult"
+        ],
+        [
+            "[t_c doesn't even react to your insult.]"
+        ]
+    ],
+    "shunned_insult2": [
+        [
+            "you_shunned",
+            "any",
+            "insult"
+        ],
+        [
+            "[t_c doesn't even react to your insult.]"
+        ]
+    ],
+    "shunned_insult3": [
+        [
+            "both_shunned",
+            "any",
+            "insult"
+        ],
+        [
+            "[t_c doesn't even react to your insult.]"
+        ]
     ]
 }
