@@ -789,7 +789,7 @@
             {
                 "text": "You explain that you're both in the Dark Forest, where you can train to become stronger. You offer to bring them to the training area, if they wish to become stronger. r_c calls you a traitor as they refuse, swinging their claws at you though missing as you gracefully dodge their attack. You can't let r_c expose your training like this. Your claws open r_c's throat, and you leave them to fade into the muck. The clan discovers the horrifying scene in the morning.",
                 "exp": 20,
-                "weight": 60,
+                "weight": 10,
                 "dead_cats": ["r_c"],
                 "murder": [
                     {
@@ -994,7 +994,7 @@
             {
                 "text": "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. They are merely standing there watching as the mud starts to swallow you. There's nothing you can do as you sink down and see r_c disappearing into the darkness. Mud cakes your pelt when the clan makes the horrifying discovery in the morning.",
                 "exp": 0,
-                "weight": 60,
+                "weight": 10,
                 "dead_cats": ["y_c"],
                 "murder": [
                     {
