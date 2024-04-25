@@ -445,6 +445,11 @@ class ProfileScreen(Screens):
                     self.the_cat.relationships[game.clan.your_cat.ID].comfortable -= randint(1,5)
                     self.the_cat.relationships[game.clan.your_cat.ID].trust -= randint(1,5)
                     self.the_cat.relationships[game.clan.your_cat.ID].admiration -= randint(1,5)
+                    game.clan.your_cat.relationships[self.the_cat].dislike += randint(1,10)
+                    game.clan.your_cat.relationships[self.the_cat].platonic_like -= randint(1,5)
+                    game.clan.your_cat.relationships[self.the_cat].comfortable -= randint(1,5)
+                    game.clan.your_cat.relationships[self.the_cat].trust -= randint(1,5)
+                    game.clan.your_cat.relationships[self.the_cat].admiration -= randint(1,5)
                 self.change_screen('insult screen')
             elif "flirt" in self.profile_elements and \
                     event.ui_element == self.profile_elements["flirt"]:

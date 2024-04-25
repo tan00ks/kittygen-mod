@@ -1026,6 +1026,11 @@ class Events:
                 if len(game.clan.your_cat.apprentice) == 0 or game.clan.your_cat.apprentice is None:
                     return ""
                 text = text.replace("y_a", str(Cat.fetch_cat(random.choice(game.clan.your_cat.apprentice)).name))
+            if "df_m_n" in text:
+                if game.clan.your_cat.joined_df and not game.clan.your_cat.dead and game.clan.your_cat.df_mentor:
+                    text = text.replace("df_m_n", Cat.all_cats.get(game.clan.your_cat.df_mentor))
+                else:
+                    return ""
             if "m_n" in text or "mentor1" in text:
                 if game.clan.your_cat.mentor is None:
                     return ""

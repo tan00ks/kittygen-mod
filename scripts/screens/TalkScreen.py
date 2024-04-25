@@ -1710,13 +1710,13 @@ class TalkScreen(Screens):
         if "grief stricken" in cat.illnesses:
             try:
                 dead_cat = Cat.all_cats.get(cat.illnesses['grief stricken'].get("grief_cat"))
-                text = [t1.replace("d_c", str(dead_cat.name)) for t1 in text]
+                text = text.replace("d_c", str(dead_cat.name))
             except:
                 return ""
         elif "grief stricken" in you.illnesses:
             try:
                 dead_cat = Cat.all_cats.get(you.illnesses['grief stricken'].get("grief_cat"))
-                text = [t1.replace("d_c", str(dead_cat.name)) for t1 in text]
+                text = text.replace("d_c", str(dead_cat.name))
             except:
                 return ""
         
