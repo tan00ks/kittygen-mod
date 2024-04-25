@@ -14,7 +14,7 @@
             "hunting",
             "small_prey"
         ],
-        "patrol_art": "lg_warrior_default",
+        "patrol_art": "lg_warrior1",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
@@ -52,7 +52,7 @@
             "border",
             "small_prey"
         ],
-        "patrol_art": "lg_warrior_default",
+        "patrol_art": "lg_warrior2",
         "min_cats": 1,
         "max_cats": 3,
         "min_max_status": {},
