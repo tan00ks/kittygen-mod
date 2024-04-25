@@ -489,7 +489,7 @@ class TalkScreen(Screens):
             murdered_them = False
             if you.history:
                 if you.history.murder:
-                    if you.history.murder["is_murderer"]:
+                    if "is_murderer" in you.history.murder:
                         for murder_event in you.history.murder["is_murderer"]:
                             if cat.ID == murder_event.get("victim"):
                                 murdered_them = True
@@ -504,7 +504,7 @@ class TalkScreen(Screens):
             murdered_you = False
             if cat.history:
                 if cat.history.murder:
-                    if cat.history.murder["is_murderer"]:
+                    if "is_murderer" in cat.history.murder:
                         for murder_event in cat.history.murder["is_murderer"]:
                             if you.ID == murder_event.get("victim"):
                                 murdered_you = True
