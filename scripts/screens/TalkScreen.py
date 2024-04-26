@@ -6,7 +6,7 @@ from scripts.utility import scale
 
 from .Screens import Screens
 
-from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors
+from scripts.utility import generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_sitters, get_alive_elders, get_alive_colony
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
@@ -451,9 +451,9 @@ class TalkScreen(Screens):
             elif "newborn" in tags and "kitten" not in tags and you.moons != 0:
                 continue
 
-            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice", "kitten", "newborn"]:
+            if "they_adult" in tags and cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "sitter's apprentice", "kitten", "newborn"]:
                 continue
-            if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
+            if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "sitter's apprentice"]:
                 continue
             
             if not any(t in tags for t in ["they_sc", "they_df"]) and cat.dead:
@@ -496,7 +496,7 @@ class TalkScreen(Screens):
                     if dead_cat.name == cat.name:
                         continue
 
-            roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_queen's_apprentice", "they_warrior", "they_mediator", "they_medicine_cat", "they_queen", "they_deputy", "they_leader", "they_elder", "they_newborn"]
+            roles = ["they_kitten", "they_apprentice", "they_medicine_cat_apprentice", "they_mediator_apprentice", "they_sitter's_apprentice", "they_colony", "they_mediator", "they_medicine_cat", "they_sitter", "they_deputy", "they_leader", "they_elder", "they_newborn"]
             if any(r in roles for r in tags):
                 has_role = False
                 if "they_kitten" in tags and cat.status == "kitten":
@@ -507,15 +507,15 @@ class TalkScreen(Screens):
                     has_role = True
                 elif "they_mediator_apprentice" in tags and cat.status == "mediator apprentice":
                     has_role = True
-                elif "they_queen's_apprentice" in tags and cat.status == "queen's apprentice":
+                elif "they_sitter's_apprentice" in tags and cat.status == "sitter's apprentice":
                     has_role = True
-                elif "they_warrior" in tags and cat.status == "warrior":
+                elif "they_colony" in tags and cat.status == "colony":
                     has_role = True
                 elif "they_mediator" in tags and cat.status == "mediator":
                     has_role = True
                 elif "they_medicine_cat" in tags and cat.status == "medicine cat":
                     has_role = True
-                elif "they_queen" in tags and cat.status == "queen":
+                elif "they_sitter" in tags and cat.status == "sitter":
                     has_role = True
                 elif "they_deputy" in tags and cat.status == "deputy":
                     has_role = True
@@ -1164,7 +1164,7 @@ class TalkScreen(Screens):
                     alive_app = choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
             if "r_w1" in text:
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_colony(Cat)
                 if len(alive_apps) <= 2:
                     return ""
                 alive_app = choice(alive_apps)
@@ -1195,7 +1195,7 @@ class TalkScreen(Screens):
                         alive_app3 = choice(alive_apps)
                     text = text.replace("r_w3", str(alive_app3.name))
             if "r_w" in text:
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_colony(Cat)
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -1231,7 +1231,7 @@ class TalkScreen(Screens):
                     alive_app = choice(alive_apps)
                 text = text.replace("r_d", str(alive_app.name))
             if "r_q" in text:
-                alive_apps = get_alive_queens(Cat)
+                alive_apps = get_alive_sitters(Cat)
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -1325,7 +1325,7 @@ class TalkScreen(Screens):
                     alive_app = choice(alive_apps)
                 text = text.replace("rsh_a", str(alive_app.name))
             if "rsh_w" in text:
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_colony(Cat)
                 if len(alive_apps) < 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -1361,7 +1361,7 @@ class TalkScreen(Screens):
                     alive_app = choice(alive_apps)
                 text = text.replace("rsh_d", str(alive_app.name))
             if "rsh_q" in text:
-                alive_apps = get_alive_queens(Cat)
+                alive_apps = get_alive_sitters(Cat)
                 if len(alive_apps) < 1:
                     return ""
                 alive_app = choice(alive_apps)

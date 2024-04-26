@@ -341,7 +341,7 @@ class EventsScreen(Screens):
         self.timeskip_button = UIImageButton(scale(pygame.Rect((620, 436), (360, 60))), "", object_id="#timeskip_button"
                                              , manager=MANAGER)
 
-        self.death_button = UIImageButton(scale(pygame.Rect((1020, 430), (68, 68))), "", object_id="#warrior", tool_tip_text="Revive"
+        self.death_button = UIImageButton(scale(pygame.Rect((1020, 430), (68, 68))), "", object_id="#colony", tool_tip_text="Revive"
                                              , manager=MANAGER)
         self.death_button.hide()
 

@@ -5,7 +5,7 @@ from .Screens import Screens
 
 from scripts.cat.cats import Cat
 from scripts.game_structure.image_button import UISpriteButton, UIImageButton, UITextBoxTweaked
-from scripts.utility import get_text_box_theme, scale, get_med_cats, shorten_text_to_fit, get_alive_clan_queens
+from scripts.utility import get_text_box_theme, scale, get_med_cats, shorten_text_to_fit, get_alive_clan_sitters
 from scripts.game_structure.game_essentials import game, screen_x, screen_y, MANAGER
 from ..conditions import get_amount_cat_for_one_medic, medical_cats_condition_fulfilled
 
@@ -89,21 +89,21 @@ class AllegiancesScreen(Screens):
         living_cats = [i for i in Cat.all_cats.values() if not (i.dead or i.outside)]
         living_meds = []
         living_mediators = []
-        living_warriors = []
+        living_colony = []
         living_apprentices = []
-        living_queens = []
+        living_sitters = []
         living_kits = []
         living_elders = []
         for cat in living_cats:
             if cat.status == "medicine cat":
                 living_meds.append(cat)
-            elif cat.status == "warrior":
-                living_warriors.append(cat)
+            elif cat.status == "colony":
+                living_colony.append(cat)
             elif cat.status == "mediator":
                 living_mediators.append(cat)
-            elif cat.status == 'queen':
-                living_queens.append(cat)
-            elif cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"]:
+            elif cat.status == 'sitter':
+                living_sitters.append(cat)
+            elif cat.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "sitter's apprentice"]:
                 living_apprentices.append(cat)
             elif cat.status in ["kitten", "newborn"]:
                 living_kits.append(cat)
@@ -111,17 +111,17 @@ class AllegiancesScreen(Screens):
                 living_elders.append(cat)
 
         # Find Queens:
-        queen_dict, living_kits = get_alive_clan_queens(living_cats)
+        sitter_dict, living_kits = get_alive_clan_sitters(living_cats)
 
-        # Remove queens from warrior or elder lists, if they are there.  Let them stay on any other lists. 
-        for q in queen_dict:
-            queen = Cat.fetch_cat(q)
-            if not queen:
+        # Remove sitters from colony or elder lists, if they are there.  Let them stay on any other lists. 
+        for q in sitter_dict:
+            sitter = Cat.fetch_cat(q)
+            if not sitter:
                 continue
-            if queen in living_warriors:
-                living_warriors.remove(queen)
-            elif queen in living_elders:
-                living_elders.remove(queen)
+            if sitter in living_colony:
+                living_colony.remove(sitter)
+            elif sitter in living_elders:
+                living_elders.remove(sitter)
             
         #Clan Leader Box:
         # Pull the Clan leaders
@@ -162,14 +162,14 @@ class AllegiancesScreen(Screens):
             outputs.append(_box)
 
          # Warrior Box:
-        if living_warriors:
+        if living_colony:
             _box = ["", ""]
-            if len(living_warriors) == 1:
-                _box[0] = '<b><u>WARRIOR</u></b>'
+            if len(living_colony) == 1:
+                _box[0] = '<b><u>COLONY CAT</u></b>'
             else:
-                _box[0] = '<b><u>WARRIORS</u></b>'
+                _box[0] = '<b><u>COLONY CATS</u></b>'
             
-            _box[1] = "\n".join([self.generate_one_entry(i) for i in living_warriors])
+            _box[1] = "\n".join([self.generate_one_entry(i) for i in living_colony])
             outputs.append(_box)
         
          # Apprentice Box:
@@ -184,28 +184,28 @@ class AllegiancesScreen(Screens):
             outputs.append(_box)
         
          # Queens and Kits Box:
-        if queen_dict or living_kits or living_queens:
+        if sitter_dict or living_kits or living_sitters:
             _box = ["", ""]
-            _box[0] = '<b><u>QUEENS AND KITS</u></b>'
+            _box[0] = '<b><u>SITTERS AND KITS</u></b>'
             
-            # This one is a bit different.  First all the queens, and the kits they are caring for. 
+            # This one is a bit different.  First all the sitters, and the kits they are caring for. 
             all_entries = []
-            for q in queen_dict:
-                queen = Cat.fetch_cat(q)
-                if not queen:
+            for q in sitter_dict:
+                sitter = Cat.fetch_cat(q)
+                if not sitter:
                     continue
                 kittens = []
-                for k in queen_dict[q]:
+                for k in sitter_dict[q]:
                     kittens += [f"{k.name} - {k.describe_cat(short=True)}"]
                 if len(kittens) == 1:
                     kittens = f" <i>(caring for {kittens[0]})</i>"
                 else:
                     kittens = f" <i>(caring for {', '.join(kittens[:-1])}, and {kittens[-1]})</i>"
 
-                all_entries.append(self.generate_one_entry(queen, kittens))
+                all_entries.append(self.generate_one_entry(sitter, kittens))
 
-            for k in living_queens:
-                if k.ID not in queen_dict.keys():
+            for k in living_sitters:
+                if k.ID not in sitter_dict.keys():
                     all_entries.append(self.generate_one_entry(k))
             #Now kittens without carers
             for k in living_kits:

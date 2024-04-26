@@ -31,7 +31,7 @@ from scripts.events_module.outsider_events import OutsiderEvents
 from scripts.event_class import Single_Event
 from scripts.game_structure.game_essentials import game
 from scripts.cat_relations.relationship import Relationship
-from scripts.utility import get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_sitters, get_alive_elders, get_alive_warriors, get_med_cats, ceremony_text_adjust, \
+from scripts.utility import get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_sitters, get_alive_elders, get_alive_colony, get_med_cats, ceremony_text_adjust, \
     get_current_season, adjust_list_text, ongoing_event_text_adjust, event_text_adjust, create_new_cat, create_outside_cat
 from scripts.events_module.generate_events import GenerateEvents
 from scripts.events_module.relationship.pregnancy_events import Pregnancy_Events
@@ -101,7 +101,7 @@ class Events:
         
         if any(
                 str(cat.status) in {
-                    'leader', 'deputy', 'warrior', 'medicine cat',
+                    'leader', 'deputy', 'colony', 'medicine cat',
                     'medicine cat apprentice', 'apprentice', 'mediator',
                     'mediator apprentice', "sitter", "sitter's apprentice",
                     "scout", "scout's apprentice"
@@ -543,7 +543,7 @@ class Events:
                 if Cat.all_cats.get(cat).pelt.tortiebase in Pelt.plain and not Cat.all_cats.get(cat).pelt.tortiepattern in not_wildcard_patterns and Cat.all_cats.get(cat).pelt.tortiebase != Cat.all_cats.get(cat).pelt.tortiepattern:
                     achievements.add("6")
             ##code block for achievement 31
-            achieve31RankList = ['warrior', 'mediator', 'leader']
+            achieve31RankList = ['colony', 'mediator', 'leader']
             achieve31UsedRanks = []
             if len(Cat.all_cats.get(cat).mate) >= 2:
                 catMateIDs = Cat.all_cats.get(cat).mate.copy()
@@ -585,7 +585,7 @@ class Events:
             
         if len(you.mate) >= 5:
             achievements.add('13')
-        if you.status == 'warrior':
+        if you.status == 'colony':
             achievements.add('14')
         elif you.status == 'medicine cat':
             achievements.add('15')
@@ -728,7 +728,7 @@ class Events:
 
                 elif birth_type == BirthType.ONE_OUTSIDER_PARENT:
                     parent1 = create_new_cat(Cat, Relationship,
-                                                status="warrior",
+                                                status="colony",
                                                 alive=True,
                                                 age=random.randint(15,120),
                                                 outside=False)[0]
@@ -736,13 +736,13 @@ class Events:
 
                 elif birth_type == BirthType.TWO_OUTSIDER_PARENTS:
                     parent1 = create_new_cat(Cat, Relationship,
-                                                status="warrior",
+                                                status="colony",
                                                 alive=True,
                                                 age=random.randint(15,120),
                                                 outside=False)[0]
                     parent1.backstory = random.choice(["loner1", "loner2", "loner4", "kittypet1", "kittypet2", "kittypet3", "kittypet4", "kittypet6", "rogue1", "rogue2", "rogue3", "rogue5", "rogue8", "refugee2", "refugee3", "refugee4"])
                     parent2 = create_new_cat(Cat, Relationship,
-                                                status="warrior",
+                                                status="colony",
                                                 alive=True,
                                                 age=parent1.moons + random.randint(1,5),
                                                 outside=False)[0]
@@ -899,7 +899,7 @@ class Events:
                     alive_app = random.choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
             if "r_w1" in text:
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_colony(Cat)
                 if len(alive_apps) <= 2:
                     return ""
                 alive_app = random.choice(alive_apps)
@@ -918,7 +918,7 @@ class Events:
                         alive_app3 = random.choice(alive_apps)
                     text = text.replace("r_w3", str(alive_app3.name))
             if "r_w" in text:
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_colony(Cat)
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = random.choice(alive_apps)
@@ -1825,7 +1825,7 @@ class Events:
                 elif x.moons < 12:
                     x.status_change('apprentice')
                 elif x.moons < 120:
-                    x.status_change('warrior')
+                    x.status_change('colony')
                 else:
                     x.status_change('elder')      
 
@@ -2240,7 +2240,7 @@ class Events:
                         game.clan.deputy = None
                     self.ceremony(cat, 'elder')
 
-            # apprentice a kitten to either med or warrior
+            # apprentice a kitten to either med or colony
             if cat.moons == cat_class.age_moons["adolescent"][0]:
                 if cat.status == 'kitten':
 
@@ -2449,7 +2449,7 @@ class Events:
             mentor_type = {
                 "medicine cat": ["medicine cat"],
                 "sitter": ["sitter"],
-                "warrior": ["warrior", "deputy", "leader", "elder"],
+                "colony": ["colony", "deputy", "leader", "elder"],
                 "mediator": ["mediator"]
             }
 
@@ -2458,7 +2458,7 @@ class Events:
                 possible_ceremonies.update(self.ceremony_id_by_tag[promoted_to])
 
                 # Get ones for prepared status ----------------------------------------------
-                if promoted_to in ["warrior", "medicine cat", "mediator", "sitter"]:
+                if promoted_to in ["colony", "medicine cat", "mediator", "sitter"]:
                     possible_ceremonies = possible_ceremonies.intersection(
                         self.ceremony_id_by_tag[preparedness])
 
@@ -2601,7 +2601,7 @@ class Events:
 
             # getting the random honor if it's needed
             random_honor = None
-            if promoted_to in ['warrior', 'mediator', 'medicine cat', "sitter"]:
+            if promoted_to in ['colony', 'mediator', 'medicine cat', "sitter"]:
                 resource_dir = "resources/dicts/events/ceremonies/"
                 with open(f"{resource_dir}ceremony_traits.json",
                         encoding="ascii") as read_file:
@@ -2611,7 +2611,7 @@ class Events:
                 except KeyError:
                     random_honor = "hard work"
 
-            if cat.status in ["warrior", "medicine cat", "mediator", "sitter"]:
+            if cat.status in ["colony", "medicine cat", "mediator", "sitter"]:
                 History.add_app_ceremony(cat, random_honor)
             
             ceremony_tags, ceremony_text = self.CEREMONY_TXT[random.choice(
@@ -3425,10 +3425,10 @@ class Events:
                             text = text + f" They have shown that they can be trusted and will rejoin the Clan as a {cat.status}."
 
                         if cat.status == 'deputy':
-                            game.clan.deputy.status_change('warrior')
+                            game.clan.deputy.status_change('colony')
                     else:
                         if cat.moons < 119:
-                            newstatus = 'warrior'
+                            newstatus = 'colony'
                         else:
                             newstatus = 'elder'
                         if cat.ID == game.clan.your_cat.ID:
@@ -3476,7 +3476,7 @@ class Events:
                             text = text + " c_nClan will once more look to them for guidance."
                         cat.specsuffix_hidden = False
                         if game.clan.deputy:
-                            game.clan.deputy.status_change('warrior')
+                            game.clan.deputy.status_change('colony')
                         if game.clan.leader:
                             game.clan.leader.status_change('deputy')
                         cat.status_change('leader')
@@ -3487,7 +3487,7 @@ class Events:
                         else:
                             text = text + " They will not return as the Clan's leader."
                         if cat.moons < 119:
-                            cat.status_change('warrior')
+                            cat.status_change('colony')
                         else:
                             cat.status_change('elder')
 
@@ -3699,19 +3699,19 @@ class Events:
                 else:
                     # If there are no possible deputies, choose someone else, with special text.
 
-                    all_warriors = list(
+                    all_colony = list(
                         filter(
                             lambda x: not x.dead and not x.outside and x.status
-                                      == "warrior", Cat.all_cats_list))
-                    if all_warriors:
-                        random_cat = random.choice(all_warriors)
+                                      == "colony", Cat.all_cats_list))
+                    if all_colony:
+                        random_cat = random.choice(all_colony)
                         involved_cats = [random_cat.ID]
                         text = f"No cat is truly fit to be deputy, " \
                                f"but the position can't remain vacant. " \
                                f"{random_cat.name} is appointed as the new deputy. "
 
                     else:
-                        # Is there are no warriors at all, no one is named deputy.
+                        # Is there are no colony at all, no one is named deputy.
                            
                         text = "There are no cats fit to become deputy. "
                         return

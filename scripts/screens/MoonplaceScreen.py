@@ -6,7 +6,7 @@ from scripts.utility import scale
 
 from .Screens import Screens
 
-from scripts.utility import get_med_cats, generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_queens, get_alive_elders, get_alive_warriors
+from scripts.utility import get_med_cats, generate_sprite, get_cluster, get_alive_kits, get_alive_cats, get_alive_apps, get_alive_meds, get_alive_mediators, get_alive_sitters, get_alive_elders, get_alive_colony
 from scripts.cat.cats import Cat
 from scripts.game_structure import image_cache
 import pygame_gui
@@ -304,7 +304,7 @@ class MoonplaceScreen(Screens):
         with open(f"{resource_dir}", 'r') as read_file:
             possible_texts = ujson.loads(read_file.read())
 
-        if you.status in ["apprentice", "queen's apprentice", "mediator apprentice"]:
+        if you.status in ["apprentice", "sitter's apprentice", "mediator apprentice"]:
             return self.get_adjusted_txt(choice(possible_texts["apprentice_halfmoon"]), cat)
 
         med_type = self.get_med_type(you)
@@ -466,7 +466,7 @@ class MoonplaceScreen(Screens):
                     alive_app = choice(alive_apps)
                 text = text.replace("r_a", str(alive_app.name))
             if "r_w1" in text:
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_colony(Cat)
                 if len(alive_apps) <= 2:
                     return ""
                 alive_app = choice(alive_apps)
@@ -497,7 +497,7 @@ class MoonplaceScreen(Screens):
                         alive_app3 = choice(alive_apps)
                     text = text.replace("r_w3", str(alive_app3.name))
             if "r_w" in text:
-                alive_apps = get_alive_warriors(Cat)
+                alive_apps = get_alive_colony(Cat)
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)
@@ -533,7 +533,7 @@ class MoonplaceScreen(Screens):
                     alive_app = choice(alive_apps)
                 text = text.replace("r_d", str(alive_app.name))
             if "r_q" in text:
-                alive_apps = get_alive_queens(Cat)
+                alive_apps = get_alive_sitters(Cat)
                 if len(alive_apps) <= 1:
                     return ""
                 alive_app = choice(alive_apps)

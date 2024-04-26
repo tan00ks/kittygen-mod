@@ -85,7 +85,7 @@ class QueenScreen(Screens):
                                                      manager=MANAGER)
         if game.settings['dark mode']:
             if self.the_cat.did_activity:
-                self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
+                self.heading2 = pygame_gui.elements.UITextBox("This sitter already worked this moon.",
                                                         scale(pygame.Rect((300, 110), (1000, 160))),
                                                         object_id=get_text_box_theme("#text_box_26"),
                                                         manager=MANAGER)
@@ -97,7 +97,7 @@ class QueenScreen(Screens):
 
         else:
             if self.the_cat.did_activity:
-                self.heading2 = pygame_gui.elements.UITextBox("This queen already worked this moon.",
+                self.heading2 = pygame_gui.elements.UITextBox("This sitter already worked this moon.",
                                                         scale(pygame.Rect((530, 110), (1000, 160))),
                                                         object_id=get_text_box_theme("#text_box_26"),
                                                         manager=MANAGER)
@@ -194,13 +194,13 @@ class QueenScreen(Screens):
 
             if self.next_cat == 0 and check_cat.ID != self.the_cat.ID and check_cat.dead == self.the_cat.dead and \
                     check_cat.ID != game.clan.instructor.ID and not check_cat.exiled and check_cat.status in \
-                    ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"] \
+                    ["apprentice", "medicine cat apprentice", "mediator apprentice", "sitter's apprentice"] \
                     and check_cat.df == self.the_cat.df:
                 self.previous_cat = check_cat.ID
 
             elif self.next_cat == 1 and check_cat.ID != self.the_cat.ID and check_cat.dead == self.the_cat.dead and \
                     check_cat.ID != game.clan.instructor.ID and not check_cat.exiled and check_cat.status in \
-                    ["apprentice", "medicine cat apprentice", "mediator apprentice", "queen's apprentice"] \
+                    ["apprentice", "medicine cat apprentice", "mediator apprentice", "sitter's apprentice"] \
                     and check_cat.df == self.the_cat.df:
                 self.next_cat = check_cat.ID
 

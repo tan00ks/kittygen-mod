@@ -126,7 +126,7 @@ class Cat():
                  backstory="clanborn",
                  parent1=None,
                  parent2=None,
-                 suffix=None,
+                 suffix="",
                  specsuffix_hidden=False,
                  ID=None,
                  moons=None,

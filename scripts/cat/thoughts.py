@@ -279,8 +279,8 @@ class Thoughts():
             status = "medicine_cat_apprentice"
         elif status == "mediator apprentice":
             status = "mediator_apprentice"
-        elif status == "queen's apprentice":
-            status = "queen_apprentice"
+        elif status == "sitter's apprentice":
+            status = "sitter_apprentice"
         elif status == "medicine cat":
             status = "medicine_cat"
         elif status == 'former Clancat':
@@ -302,8 +302,8 @@ class Thoughts():
         else:
             spec_dir = ""
 
-        if main_cat.dead and main_cat.df and status == "warrior":
-            status = 'warrior'
+        if main_cat.dead and main_cat.df and status == "colony":
+            status = 'colony'
         elif status == "apprentice":
             status = "apprentice"
         elif status == "medicine cat":
@@ -316,10 +316,10 @@ class Thoughts():
             status = "mediator"
         elif status == "mediator apprentice":
             status = "mediator_apprentice"
-        elif status == "queen":
-            status = "queen"
-        elif status == "queen's apprentice":
-            status = "queen_apprentice"
+        elif status == "sitter":
+            status = "sitter"
+        elif status == "sitter's apprentice":
+            status = "sitter_apprentice"
         elif status == "deputy":
             status = "deputy"
         elif status == "leader":

@@ -452,8 +452,8 @@ class ProfileScreen(Screens):
                 self.change_screen('med den screen')
             elif "mediation" in self.profile_elements and event.ui_element == self.profile_elements["mediation"]:
                 self.change_screen('mediation screen')
-            elif "sitter" in self.profile_elements and event.ui_element == self.profile_elements["sitter"]:
-                self.change_screen('sitter screen')
+            elif "queen" in self.profile_elements and event.ui_element == self.profile_elements["queen"]:
+                self.change_screen('queen screen')
             elif "halfmoon" in self.profile_elements and event.ui_element == self.profile_elements["halfmoon"]:
                 self.change_screen('moonplace screen')
             elif event.ui_element == self.profile_elements["favourite_button"]:
@@ -1058,7 +1058,7 @@ class ProfileScreen(Screens):
                                             manager=MANAGER)
 
         if self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.dead and not self.the_cat.outside and not game.clan.your_cat.dead and not game.clan.your_cat.outside and not game.clan.your_cat.moons < 0:
-            if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "sitter", "sitter's apprentice"]:
+            if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["talk"] = UIImageButton(scale(pygame.Rect(
                     (726, 220), (68, 68))),
                     "",
@@ -1092,7 +1092,7 @@ class ProfileScreen(Screens):
             cat_alive_skills_condition = cat_alive_condition_sc or cat_alive_condition_df
             
             if cat_dead_conditions or cat_alive_skills_condition:
-                if self.the_cat.status not in ['mediator', 'mediator apprentice', "sitter", "sitter's apprentice"]:
+                if self.the_cat.status not in ['mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                     button_position = (726, 220)
                 else:
                     button_position = (662, 220)
@@ -1107,7 +1107,7 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].enable()
 
         if self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.dead and not self.the_cat.outside and not game.clan.your_cat.dead and not game.clan.your_cat.outside and not game.clan.your_cat.moons < 0:
-            if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "sitter", "sitter's apprentice"]:
+            if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                 self.profile_elements["insult"] = UIImageButton(scale(pygame.Rect(
                     (806, 220), (68, 68))),
                     "",
@@ -1131,7 +1131,7 @@ class ProfileScreen(Screens):
                     self.profile_elements["insult"].enable()
 
             if self.the_cat.is_dateable(game.clan.your_cat):
-                if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "sitter", "sitter's apprentice"]:
+                if self.the_cat.status not in ['leader', 'mediator', 'mediator apprentice', "queen", "queen's apprentice"]:
                     self.profile_elements["flirt"] = UIImageButton(scale(pygame.Rect(
                         (646, 220), (68, 68))),
                         "",
@@ -1183,14 +1183,14 @@ class ProfileScreen(Screens):
             )
             if self.the_cat.dead or self.the_cat.outside:
                 self.profile_elements["mediation"].disable()
-        elif self.the_cat.status in ["sitter", "sitter's apprentice"]:
-            self.profile_elements["sitter"] = UIImageButton(scale(pygame.Rect(
+        elif self.the_cat.status in ["queen", "queen's apprentice"]:
+            self.profile_elements["queen"] = UIImageButton(scale(pygame.Rect(
                 (746, 220), (68, 68))),
                 "",
-                object_id="#sitter_activity_button", manager=MANAGER
+                object_id="#queen_activity_button", manager=MANAGER
             )
             if self.the_cat.dead or self.the_cat.outside:
-                self.profile_elements["sitter"].disable()
+                self.profile_elements["queen"].disable()
         elif self.the_cat.status in ["medicine cat", "medicine cat apprentice"] and self.the_cat.ID == game.clan.your_cat.ID:
             self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(
                 (746, 220), (68, 68))),
@@ -1203,7 +1203,7 @@ class ProfileScreen(Screens):
                 self.profile_elements["halfmoon"].disable()
             elif "attended half-moon" in game.switches and game.switches["attended half-moon"]:
                 self.profile_elements["halfmoon"].disable()
-        elif self.the_cat.status in ["sitter's apprentice", "mediator apprentice", "apprentice"] and self.the_cat.ID == game.clan.your_cat.ID:
+        elif self.the_cat.status in ["queen's apprentice", "mediator apprentice", "apprentice"] and self.the_cat.ID == game.clan.your_cat.ID:
             if self.the_cat.status == "apprentice":
                 self.profile_elements["halfmoon"] = UIImageButton(scale(pygame.Rect(
                     (746, 220), (68, 68))),
@@ -1896,7 +1896,7 @@ class ProfileScreen(Screens):
         #First, just list the mentors:
         if self.the_cat.status in ['kitten', 'newborn']:
                 influence_history = 'This cat has not begun training.'
-        elif self.the_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "sitter's apprentice"]:
+        elif self.the_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
             influence_history = 'This cat has not finished training.'
         else:
             valid_formor_mentors = [Cat.fetch_cat(i) for i in self.the_cat.former_mentor if
@@ -2699,7 +2699,7 @@ class ProfileScreen(Screens):
                 self.manage_roles.disable()
             else:
                 self.manage_roles.enable()
-            if self.the_cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "sitter's apprentice"] \
+            if self.the_cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"] \
                                             or self.the_cat.dead or self.the_cat.outside:
                 self.change_mentor_button.disable()
             else:
@@ -2760,7 +2760,7 @@ class ProfileScreen(Screens):
             # self.change_accessory_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
             #                                      starting_height=2, object_id="#change_accessory_button",
             #                                      manager=MANAGER)
-            if self.the_cat.status in ['leader', 'deputy', 'medicine cat', 'mediator', 'sitter', 'colony']:
+            if self.the_cat.status in ['leader', 'deputy', 'medicine cat', 'mediator', 'queen', 'warrior']:
                 self.request_apprentice_button = UIImageButton(scale(pygame.Rect((804, 1100), (344, 72))), "",
                                                                tool_tip_text='You will be more likely to recieve an apprentice.',
                                                     starting_height=2, object_id="#request_apprentice_button",

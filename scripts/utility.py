@@ -75,7 +75,7 @@ def get_alive_apps(Cat):
 
     return alive_apps
 
-def get_alive_colonys(Cat):
+def get_alive_colony(Cat):
     """
     returns a list of IDs for all living apps in the clan
     """
@@ -108,14 +108,6 @@ def get_alive_sitters(Cat):
     """
     alive_apps = [i for i in Cat.all_cats.values() if
                   (i.status == 'sitter' or i.status == "sitter's apprentice") and not i.dead and not i.outside]
-    return alive_apps
-
-def get_alive_scouts(Cat):
-    """
-    returns a list of IDs for all living apps in the clan
-    """
-    alive_apps = [i for i in Cat.all_cats.values() if
-                  (i.status == "scouts" or i.status == "scout's apprentice") and not i.dead and not i.outside]
     return alive_apps
 
 def get_alive_elders(Cat):
@@ -331,9 +323,9 @@ def create_new_cat(Cat,
             age = 0
         elif litter or kit:
             age = randint(1, 5)
-        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice', "scout's apprentice"):
+        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice'):
             age = randint(6, 11)
-        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice', "scout's apprentice") and litter:
+        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice') and litter:
             age = randint(20, 30)
         elif status == 'colony':
             age = randint(23, 120)
@@ -434,15 +426,14 @@ def create_new_cat(Cat,
                 if scarchance == 1 or 2 or 3:
                     scar = choice(Pelt.scars1)
                     new_cat.pelt.scars.append(scar)
-                    if new_cat.status in ["colony", "scout", "deputy", "leader"]:
+                    if new_cat.status in ["colony", "deputy", "leader"]:
                         scarchance = randint(1,2)
                         if scarchance == 1:
                             scar = choice(Pelt.scars3)
                             new_cat.pelt.scars.append(scar)
                     elif new_cat.status in ["medicine cat", "apprentice", 
                     "elder", "medicine cat apprentice", "sitter", "mediator", 
-                    "sitter's apprentice", "mediator apprentice",
-                    "scout's apprentice"]:
+                    "sitter's apprentice", "mediator apprentice"]:
                         scarchance = randint(1,8)
                         if scarchance == 1:
                             scar = choice(Pelt.scars3)
