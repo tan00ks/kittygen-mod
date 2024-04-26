@@ -1409,10 +1409,11 @@ class PatrolOutcome():
         
         History.add_death(cat, death_text=final_death_history)
         if self.murder:
-            you = game.clan.your_cat
-            # i cant get this to work if the murderer isnt y_c LOL
+            for x in patrol.patrol_cats:
+                if x.ID != cat.ID:
+                    other_cat = x
             
-            History.add_murders(cat, you, True, f"{you.name} killed this cat.")
+            History.add_murders(cat, other_cat, True, f"{other_cat.name} killed this cat in the Dark Forest.")
     
     def __handle_accs(self, cat: Cat, acc_list: str) -> str:
 

@@ -798,7 +798,7 @@
                     }
                 ],
                 "history_text": {
-                    "reg_death": "m_c was murdered by in the Dark Forest.",
+                    "reg_death": "m_c was murdered in the Dark Forest.",
                     "lead_death": "murdered in the Dark Forest"
                 }
                 
@@ -900,7 +900,7 @@
         "weight": 20,
         "intro_text": "As you wade deeper into the sticky mud of the Dark Forest's domain, you can't help but feel glistering eyes on your pelt, filling it with prickles and uncertainty. The pitiful rustling of leaves makes you anxious and fearful, and you ponder who or what could be watching you at this time...",
         "decline_text": "You wake up, horrified. Maybe your little stay at the Dark Forest didn't go unnoticed.",
-        "chance_of_success": 60,
+        "chance_of_success": 10,
         "success_outcomes": [
             {
                 "text": "You quickly turn around, only to come eyes to eyes with r_c! They don't seem bothered by your presence, bounding over to you with a welcoming sparkle in their eyes. They seem.. Happy? They explain to you that they've been needing a place to gossip, and when they stumbled over the shadows of the Dark Forest, they couldn't help themselves! Apparently the Clan hasn't been very accepting of their rumors.. But here you are! When you return home from the ever-lasting darkness, you have more secrets than you can carry.",
@@ -994,8 +994,14 @@
             {
                 "text": "The feeling won't leave you alone, rather increases. It feels like hundreds of ants are crawling in your fur, dragging you downwards into the mud. You turn around, yelping, and come face to face with r_c. They are merely standing there watching as the mud starts to swallow you. There's nothing you can do as you sink down and see r_c disappearing into the darkness. Mud cakes your pelt when the clan makes the horrifying discovery in the morning.",
                 "exp": 0,
-                "weight": 30,
+                "weight": 10,
                 "dead_cats": ["y_c"],
+                "murder": [
+                    {
+                        "murderer": ["r_c"],
+                        "victim": ["y_c"]
+                    }
+                ],
                 "history_text": {
                     "reg_death": "m_c died after being left for dead in the Dark Forest.",
                     "lead_death": "{VERB/m_c/were/was} left for dead in the Dark Forest "
