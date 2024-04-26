@@ -58,7 +58,7 @@ class Cat():
     
 
     rank_sort_order = [
-        "kittypet"
+        "housepet"
         "newborn",
         "kitten",
         "sitter's apprentice",
@@ -66,10 +66,10 @@ class Cat():
         "elder",
         "apprentice",
         "colony cat",
-        "mediator apprentice",
-        "mediator",
         "scout's apprentice"
         "scout"
+        "mediator apprentice",
+        "mediator",
         "medicine cat apprentice",
         "medicine cat",
         "deputy",
@@ -287,7 +287,7 @@ class Cat():
                 self.age = 'kitten'
             elif status == 'elder':
                 self.age = 'senior'
-            elif status in ['apprentice', 'mediator apprentice', 'medicine cat apprentice', "sitter's apprentice"]:
+            elif status in ['apprentice', 'mediator apprentice', "scout's apprentice", 'medicine cat apprentice', "sitter's apprentice"]:
                 self.age = 'adolescent'
             else:
                 self.age = choice(['young adult', 'adult', 'adult', 'senior adult'])
@@ -743,7 +743,7 @@ class Cat():
             if you.moons > 119:
                 you.status_change("elder")
             elif you.moons > 12:
-                you.status_change("colony cat")
+                you.status_change("colony")
             elif you.moons > 6:
                 you.status_change("apprentice")
             else:
@@ -977,7 +977,7 @@ class Cat():
 
     def status_change(self, new_status, resort=False):
         """ Changes the status of a cat. Additional functions are needed if you want to make a cat a leader or deputy.
-            new_status = The new status of a cat. Can be 'apprentice', 'medicine cat apprentice', 'colony cat'
+            new_status = The new status of a cat. Can be 'apprentice', 'medicine cat apprentice', 'colony'
                         'medicine cat', 'elder'.
             resort = If sorting type is 'rank', and resort is True, it will resort the cat list. This should
                     only be true for non-timeskip status changes. """
@@ -998,6 +998,8 @@ class Cat():
                 self.status = "mediator apprentice"
             elif game.clan.your_cat.status == "medicine cat":
                 self.status = "medicine cat apprentice"
+            elif game.clan.your_cat.status == "scout":
+                self.status = "scout's apprentice"
             else:
                 self.status = "apprentice"
             game.switches["request apprentice"] = False
@@ -1017,6 +1019,9 @@ class Cat():
             pass
         
         elif self.status == "sitter's apprentice":
+            pass
+
+        elif self.status == "scout's apprentice":
             pass
 
         elif self.status == 'colony cat':
@@ -1058,6 +1063,9 @@ class Cat():
             pass
 
         elif self.status == "sitter's apprentice":
+            pass
+
+        elif self.status == "scout's apprentice":
             pass
 
         # update class dictionary
@@ -1604,7 +1612,7 @@ class Cat():
         self.personality.set_kit(self.is_baby())
         # Upon age-change
 
-        if self.status in ['apprentice', 'mediator apprentice', 'medicine cat apprentice', "sitter's apprentice"]:
+        if self.status in ['apprentice', 'mediator apprentice', 'medicine cat apprentice', "sitter's apprentice", "scout's apprentice"]:
             self.update_mentor()
 
     def thoughts(self):
@@ -2171,9 +2179,9 @@ class Cat():
         #There are some special tasks we need to do for apprentice
         # Note that although you can unretire cats, they will be a full colony cat/med_cat/mediator
 
-        if self.moons > 6 and self.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "sitter's apprentice"]:
+        if self.moons > 6 and self.status in ["apprentice", "medicine cat apprentice", "mediator apprentice", "sitter's apprentice", "scout's apprentice"]:
             _ment = Cat.fetch_cat(self.mentor) if self.mentor else None
-            self.status_change("colony cat") # Temp switch them to colony cat, so the following step will work
+            self.status_change("colony") # Temp switch them to colony cat, so the following step will work
             self.rank_change_traits_skill(_ment)
 
         self.status_change("elder")
@@ -2301,12 +2309,14 @@ class Cat():
         if self.status == 'medicine cat apprentice' and potential_mentor.status != 'medicine cat':
             return False
         if self.status == 'apprentice' and potential_mentor.status not in [
-            'leader', 'deputy', 'colony cat'
+            'leader', 'deputy', 'colony'
         ]:
             return False
         if self.status == 'mediator apprentice' and potential_mentor.status != 'mediator':
             return False
         if self.status == "sitter's apprentice" and potential_mentor.status != 'sitter':
+            return False
+        if self.status == "scout's apprentice" and potential_mentor.status != "scout":
             return False
         
         if potential_mentor.moons <= 0:
@@ -2360,7 +2370,8 @@ class Cat():
         illegible_for_mentor = self.dead or self.outside or self.exiled or self.shunned > 0 or self.dead_for > 1 or self.status not in ["apprentice",
                                                                                                                                         "mediator apprentice",
                                                                                                                                         "medicine cat apprentice",
-                                                                                                                                        "sitter's apprentice"]
+                                                                                                                                        "sitter's apprentice",
+                                                                                                                                        "scout's apprentice"]
         if illegible_for_mentor:
             self.__remove_mentor()
             return

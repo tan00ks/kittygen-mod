@@ -45,7 +45,7 @@ class Clan():
         "kitten",
         "apprentice",
         "colony", # warrior replacement
-        "kittypet"
+        "housepet"
         "scout"
         "medicine",
         "deputy",
@@ -206,8 +206,8 @@ class Clan():
         created in the 'clan created' screen, not every time
         the program starts
         """
-        self.instructor = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "colony",
-                                             "medicine cat", "leader", "mediator", "sitter", "sitter's apprentice", "deputy", "elder"]),
+        self.instructor = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "scout's apprentice", "colony",
+                                             "medicine cat", "scout", "leader", "mediator", "sitter", "sitter's apprentice", "deputy", "elder"]),
                               )
         self.instructor.outside = True
         self.instructor.dead = True
@@ -217,8 +217,8 @@ class Clan():
         self.add_to_unknown(self.instructor)
         self.all_clans = []
         
-        self.demon = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "colony",
-                                             "medicine cat", "leader", "mediator", "sitter", "sitter's apprentice", "deputy", "elder"]),
+        self.demon = Cat(status=choice(["apprentice", "mediator apprentice", "medicine cat apprentice", "scout's apprentice", "colony",
+                                             "medicine cat", "scout", "leader", "mediator", "sitter", "sitter's apprentice", "deputy", "elder"]),
                               )
         self.demon.df = True
         self.demon.dead = True
@@ -259,6 +259,8 @@ class Clan():
                 Cat.all_cats.get(cat_id).status_change("sitter's apprentice")
             elif Cat.all_cats.get(cat_id).status == 'medicine cat apprentice':
                 Cat.all_cats.get(cat_id).status_change('medicine cat apprentice')
+            elif Cat.all_cats.get(cat_id).status == "scout's apprentice":
+                Cat.all_cats.get(cat_id).status_change("scout's apprentice")
             Cat.all_cats.get(cat_id).thoughts()
 
         game.save_cats()

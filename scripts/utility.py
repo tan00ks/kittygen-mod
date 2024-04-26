@@ -28,10 +28,10 @@ from scripts.game_structure.game_essentials import game, screen_x, screen_y
 #                              Counting Cats                                   #
 # ---------------------------------------------------------------------------- #
 
-def get_alive_clan_queens(living_cats):
+def get_alive_clan_sitters(living_cats):
     living_kits = [cat for cat in living_cats if not (cat.dead or cat.outside) and cat.status in ["kitten", "newborn"]]
 
-    queen_dict = {}
+    sitter_dict = {}
     for cat in living_kits.copy():
         parents = cat.get_parents()
         #Fetch parent object, only alive and not outside. 
@@ -42,20 +42,20 @@ def get_alive_clan_queens(living_cats):
         if len(parents) == 1 or len(parents) > 2 or\
             all(i.gender == "male" for i in parents) or\
             parents[0].gender == "female":
-            if parents[0].ID in queen_dict:
-                queen_dict[parents[0].ID].append(cat)
+            if parents[0].ID in sitter_dict:
+                sitter_dict[parents[0].ID].append(cat)
                 living_kits.remove(cat)
             else:
-                queen_dict[parents[0].ID] = [cat]
+                sitter_dict[parents[0].ID] = [cat]
                 living_kits.remove(cat)
         elif len(parents) == 2:
-            if parents[1].ID in queen_dict:
-                queen_dict[parents[1].ID].append(cat)
+            if parents[1].ID in sitter_dict:
+                sitter_dict[parents[1].ID].append(cat)
                 living_kits.remove(cat)
             else:
-                queen_dict[parents[1].ID] = [cat]
+                sitter_dict[parents[1].ID] = [cat]
                 living_kits.remove(cat)
-    return queen_dict, living_kits
+    return sitter_dict, living_kits
 
 def get_alive_kits(Cat):
     """
@@ -75,12 +75,12 @@ def get_alive_apps(Cat):
 
     return alive_apps
 
-def get_alive_warriors(Cat):
+def get_alive_colonys(Cat):
     """
     returns a list of IDs for all living apps in the clan
     """
     alive_apps = [i for i in Cat.all_cats.values() if
-                  i.status == 'warrior' and not i.dead and not i.outside]
+                  i.status == 'colony' and not i.dead and not i.outside]
 
     return alive_apps
 
@@ -102,12 +102,20 @@ def get_alive_mediators(Cat):
 
     return alive_apps
 
-def get_alive_queens(Cat):
+def get_alive_sitters(Cat):
     """
     returns a list of IDs for all living apps in the clan
     """
     alive_apps = [i for i in Cat.all_cats.values() if
-                  (i.status == 'queen' or i.status == "queen's apprentice") and not i.dead and not i.outside]
+                  (i.status == 'sitter' or i.status == "sitter's apprentice") and not i.dead and not i.outside]
+    return alive_apps
+
+def get_alive_scouts(Cat):
+    """
+    returns a list of IDs for all living apps in the clan
+    """
+    alive_apps = [i for i in Cat.all_cats.values() if
+                  (i.status == "scouts" or i.status == "scout's apprentice") and not i.dead and not i.outside]
     return alive_apps
 
 def get_alive_elders(Cat):
@@ -323,11 +331,11 @@ def create_new_cat(Cat,
             age = 0
         elif litter or kit:
             age = randint(1, 5)
-        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice'):
+        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice', "scout's apprentice"):
             age = randint(6, 11)
-        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice') and litter:
+        elif status in ('apprentice', 'medicine cat apprentice', 'mediator apprentice', "scout's apprentice") and litter:
             age = randint(20, 30)
-        elif status == 'warrior':
+        elif status == 'colony':
             age = randint(23, 120)
         elif status == 'medicine cat':
             age = randint(23, 140)
@@ -345,7 +353,7 @@ def create_new_cat(Cat,
         elif 6 <= age <= 11:
             status = "apprentice"
         elif age >= 12:
-            status = "warrior"
+            status = "colony"
         elif age >= 120:
             status = 'elder'
 
@@ -426,14 +434,15 @@ def create_new_cat(Cat,
                 if scarchance == 1 or 2 or 3:
                     scar = choice(Pelt.scars1)
                     new_cat.pelt.scars.append(scar)
-                    if new_cat.status in ["warrior", "deputy", "leader"]:
+                    if new_cat.status in ["colony", "scout", "deputy", "leader"]:
                         scarchance = randint(1,2)
                         if scarchance == 1:
                             scar = choice(Pelt.scars3)
                             new_cat.pelt.scars.append(scar)
                     elif new_cat.status in ["medicine cat", "apprentice", 
-                    "elder", "medicine cat apprentice", "queen", "mediator", 
-                    "queen's apprentice", "mediator apprentice"]:
+                    "elder", "medicine cat apprentice", "sitter", "mediator", 
+                    "sitter's apprentice", "mediator apprentice",
+                    "scout's apprentice"]:
                         scarchance = randint(1,8)
                         if scarchance == 1:
                             scar = choice(Pelt.scars3)
