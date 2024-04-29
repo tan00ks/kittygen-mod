@@ -611,17 +611,29 @@ class ProfileScreen(Screens):
                     self.build_profile()
                     self.update_disabled_buttons_and_text()
                 if self.the_cat.dead:
+                #     elif self.the_cat.dead:
+                # if not self.the_cat.outside and not self.the_cat.df:
+                #     object_id = "#exile_df_button"
+                # elif self.the_cat.df and not self.the_cat.outside:
+                #     object_id = "#send_ur_button"
+                # else:
+                #     object_id = "#guide_sc_button"
                     if self.the_cat.ID != game.clan.instructor.ID and self.the_cat.ID != game.clan.demon.ID:
-                        if self.the_cat.df:
+                        if event.ui_object_id == "#guide_sc_button":
                             self.the_cat.outside, self.the_cat.exiled = False, False
                             self.the_cat.df = False
                             game.clan.add_to_starclan(self.the_cat)
                             self.the_cat.thought = "Is relieved to set paw in StarClan"
-                        else:
+                        elif event.ui_object_id == "#exile_df_button":
                             self.the_cat.outside, self.the_cat.exiled = False, False
                             self.the_cat.df = True
                             game.clan.add_to_darkforest(self.the_cat)
                             self.the_cat.thought = "Is distraught after being sent to the Place of No Stars"
+                        elif event.ui_object_id == "#send_ur_button":
+                            self.the_cat.outside, self.the_cat.exiled = True, False
+                            self.the_cat.df = False
+                            game.clan.add_to_unknown(self.the_cat)
+                            self.the_cat.thought = "Is wandering the Unknown Residence"
 
 
                     if self.the_cat.ID == game.clan.demon.ID and game.clan.followingsc == True:
@@ -1097,7 +1109,7 @@ class ProfileScreen(Screens):
                     self.profile_elements["talk"].disable()
                 else:
                     self.profile_elements["talk"].enable()
-        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID and not self.the_cat.outside and not game.clan.your_cat.outside:
+        elif game.clan.your_cat.moons >= 0 and self.the_cat.ID != game.clan.your_cat.ID:
         
             cat_dead_condition_sc = self.the_cat.dead and not self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.STAR) and game.clan.your_cat.moons >=1))
             cat_dead_condition_df = self.the_cat.dead and self.the_cat.df and (game.clan.your_cat.dead or (game.clan.your_cat.skills.meets_skill_requirement(SkillPath.DARK) and game.clan.your_cat.moons >=1) or game.clan.your_cat.joined_df)
@@ -2838,8 +2850,11 @@ class ProfileScreen(Screens):
                     self.exile_cat_button.disable()
 
             elif self.the_cat.dead:
-                object_id = "#exile_df_button"
-                if self.the_cat.df:
+                if not self.the_cat.outside and not self.the_cat.df:
+                    object_id = "#exile_df_button"
+                elif self.the_cat.df and not self.the_cat.outside:
+                    object_id = "#send_ur_button"
+                else:
                     object_id = "#guide_sc_button"
 
                 if game.clan.instructor.ID == self.the_cat.ID:
@@ -2869,6 +2884,8 @@ class ProfileScreen(Screens):
                                                           "Error",
                                                           object_id=object_id,
                                                           starting_height=2, manager=MANAGER)
+                    if object_id == "#send_ur_button":
+                        self.exile_cat_button.tool_tip_text = "Send to Unknown Residence"
             else:
                 self.exile_cat_button = UIImageButton(
                     scale(pygame.Rect((1156, 900), (344, 72))),

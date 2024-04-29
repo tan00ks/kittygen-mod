@@ -455,14 +455,14 @@ class TalkScreen(Screens):
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
             
-            if not any(t in tags for t in ["they_sc", "they_df"]) and cat.dead:
+            if not any(t in tags for t in ["they_sc", "they_df", "they_ur"]) and cat.dead:
                 continue
-            if not any(t in tags for t in ["you_sc", "you_df"]) and you.dead:
+            if not any(t in tags for t in ["you_sc", "you_df", "you_ur"]) and you.dead:
                 continue
 
-            if any(t in tags for t in ["they_sc", "they_df"]) and not cat.dead:
+            if any(t in tags for t in ["they_sc", "they_df", "they_ur"]) and not cat.dead:
                 continue
-            if any(t in tags for t in ["you_sc", "you_df"]) and not you.dead:
+            if any(t in tags for t in ["you_sc", "you_df", "you_ur"]) and not you.dead:
                 continue
 
             if "you_dftrainee" in tags and not you.joined_df:
@@ -477,13 +477,17 @@ class TalkScreen(Screens):
             if "they_not_dftrainee" in tags and cat.joined_df:
                 continue
 
-            if "they_df" in tags and not cat.df:
+            if "they_df" in tags and (not cat.df or cat.outside):
                 continue
-            if "you_df" in tags and not you.df:
+            if "you_df" in tags and (not you.df or you.outside):
                 continue
-            if "they_sc" in tags and cat.df:
+            if "they_sc" in tags and (cat.df or cat.outside):
                 continue
-            if "you_sc" in tags and you.df:
+            if "you_sc" in tags and (you.df or you.outside):
+                continue
+            if "they_ur" in tags and not cat.outside:
+                continue
+            if "you_ur" in tags and not you.outside:
                 continue
 
             murdered_them = False
@@ -1018,16 +1022,20 @@ class TalkScreen(Screens):
                     add_on2 = ""
                     if you.dead and you.df:
                         add_on = " df"
-                    elif you.dead and not you.df:
+                    elif you.dead and not you.df and not you.outside:
                         add_on = " sc"
+                    elif you.dead and not you.df and you.outside:
+                        add_on = " ur"
                     if "grief stricken" in you.illnesses:
                         add_on += " g"
                     if you.shunned > 0:
                         add_on += " sh"
                     if cat.dead and cat.df:
                         add_on2 = " df"
-                    elif cat.dead and not cat.df:
+                    elif cat.dead and not cat.df and not cat.outside:
                         add_on2 = " sc"
+                    elif cat.dead and not cat.df and cat.outisde:
+                        add_on2 = " ur"
                     if "grief stricken" in cat.illnesses:
                         add_on2 += " g"
                     if cat.shunned > 0:

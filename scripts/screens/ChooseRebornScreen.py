@@ -310,7 +310,7 @@ class ChooseRebornScreen(Screens):
                 if not cat.dead and not cat.outside and not cat.ID == game.clan.your_cat.ID:
                     valid_mentors.append(cat)
             else:
-                if cat.dead and not cat.ID == game.clan.your_cat.ID and not cat.ID == game.clan.instructor.ID and not cat.ID == game.clan.demon.ID and not cat.ID in game.clan.unknown_cats:
+                if cat.dead and not cat.ID == game.clan.your_cat.ID and not cat.ID == game.clan.instructor.ID and not cat.ID == game.clan.demon.ID:
                     valid_mentors.append(cat)
         
         return valid_mentors
