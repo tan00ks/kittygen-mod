@@ -15790,7 +15790,7 @@
         ],
         [
             "[Cautiously, you sniff through the undergrowth of the waking world, your past home. Your ghostly paws unable to feel much, it's much harder to navigate than when you were alive.]",
-            "[Somehow, you notice the ghost in front of you. It's a strange scent-- the scent of absolute nothingness, somehow.]",
+            "[Still, you notice the ghost in front of you. It's a strange scent-- the scent of absolute nothingness, somehow.]",
             "[The feeling is gone before you can consider what to do about it. They must have run off.]"
         ]
     ],
@@ -15841,7 +15841,7 @@
             "they_deaf"
         ],
         [
-            "[t_c stares at you in awe.]"
+            "[t_c doesn't seem to notice you.]"
         ]
     ],
     "they_ur_J17" : [
