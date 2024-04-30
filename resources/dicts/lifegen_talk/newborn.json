@@ -1412,5 +1412,44 @@
         [
             "Grr..."
         ]
+    ],
+    "newborn_ur_J1" : [
+        [
+            "they_ur",
+            "any"
+        ],
+        [
+            "... Mew..."
+        ]
+    ],
+    "newborn_ur_J2" : [
+        [
+            "they_ur",
+            "you_sc",
+            "any"
+        ],
+        [
+            "... Mew..."
+        ]
+    ],
+    "newborn_ur_J3" : [
+        [
+            "they_ur",
+            "you_df",
+            "any"
+        ],
+        [
+            "... Mew..."
+        ]
+    ],
+    "newborn_ur_J4" : [
+        [
+            "they_ur",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "... Mew..."
+        ]
     ]
 }

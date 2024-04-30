@@ -15643,5 +15643,366 @@
         [
             "Am I supposed to take your opinion seriously after what you've done?"
         ]
+    ],
+    "they_ur_J1" : [
+        [
+            "they_ur",
+            "any"
+        ],
+        [
+            "I'm surprised you can see me.",
+            "Cats have looked straight through me for so long. I'm not very sure of what to say...",
+            "How's... being alive?"
+        ]
+    ],
+    "they_ur_J2" : [
+        [
+            "they_ur",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "Oh, yikes...",
+            "I'm sure they'll forgive you. Don't look so sad."
+        ]
+    ],
+    "they_ur_J3" : [
+        [
+            "they_ur",
+            "you_grieving",
+            "any"
+        ],
+        [
+            "Chin up. d_c would hate to see you so upset."
+        ]
+    ],
+    "they_ur_J4" : [
+        [
+            "they_ur",
+            "you_grieving",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "It's times like this where I don't envy the living..."
+        ]
+    ],
+    "they_ur_J5" : [
+        [
+            "they_ur",
+            "you_ur",
+            "any"
+        ],
+        [
+            "I tried to catch a mouse earlier, but it just ran through my paws.",
+            "I don't know how I keep forgetting!"
+        ]
+    ],
+    "they_ur_J6" : [
+        [
+            "they_ur",
+            "you_ur",
+            "any",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "Sometimes, I'm glad to still be on the ground, rather than up in the clouds in my afterlife.",
+            "Hear those birds? Do you think dead cats anywhere else get to hear that?"
+        ]
+    ],
+    "they_ur_J7" : [
+        [
+            "they_ur",
+            "you_ur",
+            "any",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[You find t_c sticking their ghostly paw through the trunk of a tree, watching curiously.]",
+            "[When they see you, you both crack up.]",
+            "Hahahaha!",
+            "[It looks silly, but you can't pretend you've never done the same.]"
+        ]
+    ],
+    "they_ur_J8" : [
+        [
+            "they_ur",
+            "you_ur",
+            "any",
+            "you_deaf",
+            "they_deaf",
+            "they_blind",
+            "you_blind"
+        ],
+        [
+            "[You couldn't hear nor see in the waking world, and now, as a ghost, you can hardly even feel.]",
+            "[Still, your sense of smell allows you to feel t_c's presence next to you. Your chest vibrates with a purr.]"
+        ]
+    ],
+    "they_ur_J9" : [
+        [
+            "they_ur",
+            "you_df",
+            "any"
+        ],
+        [
+            "What are you doing here?",
+            "Go back to the hole you came from. I don't want your goop to get all over the real world."
+        ]
+    ],
+    "they_ur_J10" : [
+        [
+            "they_ur",
+            "you_df",
+            "any",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[t_c doesn't notice you prowling through the undergrowth of the waking world.]"
+        ]
+    ],
+    "they_ur_J11" : [
+        [
+            "they_ur",
+            "you_df",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Aah! Dark Forest cat! Get out of the waking world, now!",
+            "[In your adventures through the world you once called home, a ghost seems to have scented you.]",
+            "[You feel a hollow, ghostly claw rake your muzzle before you can react, and with a hiss, they flee.]"
+        ]
+    ],
+    "they_ur_J12" : [
+        [
+            "they_ur",
+            "you_df",
+            "any",
+            "you_blind",
+            "they_blind",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[Cautiously, you sniff through the undergrowth of the waking world, your past home. Your ghostly paws unable to feel much, it's much harder to navigate than when you were alive.]",
+            "[Somehow, you notice the ghost in front of you. It's a strange scent-- the scent of absolute nothingness, somehow.]",
+            "[The feeling is gone before you can consider what to do about it. They must have run off.]"
+        ]
+    ],
+    "they_ur_J13" : [
+        [
+            "they_ur",
+            "you_sc",
+            "any"
+        ],
+        [
+            "Whoa, a StarClan cat? How are you here?",
+            "Do you have any room up there?",
+            "Haha. Didn't think so."
+        ]
+    ],
+    "they_ur_J14" : [
+        [
+            "they_ur",
+            "you_sc",
+            "any",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[t_c stares at you in awe.]"
+        ]
+    ],
+    "they_ur_J15" : [
+        [
+            "they_ur",
+            "you_sc",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "StarClan cat? What are you doing here?"
+        ]
+    ],
+    "they_ur_J16" : [
+        [
+            "they_ur",
+            "you_sc",
+            "any",
+            "you_blind",
+            "they_blind",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[t_c stares at you in awe.]"
+        ]
+    ],
+    "they_ur_J17" : [
+        [
+            "they_ur",
+            "any",
+            "you_forgiven"
+        ],
+        [
+            "The Clan has welcomed you back, have they?",
+            "Don't mess it up again. I doubt they'll be so kind a second time."
+        ]
+    ],
+    "you_ur_J1" : [
+        [
+            "you_ur",
+            "any"
+        ],
+        [
+            "I always knew ghosts were real.",
+            "How do you not fall through the ground? Are you still able to eat? If I jumped on you, would I fall right through?",
+            "Sorry. It's just... weird."
+        ]
+    ],
+    "you_ur_J2" : [
+        [
+            "you_ur",
+            "they_shunned",
+            "any"
+        ],
+        [
+            "Cats are just looking right through me, like I don't exist.",
+            "Heh, I guess I'm just like you now, huh?"
+        ]
+    ],
+    "you_ur_J3" : [
+        [
+            "you_ur",
+            "they_grieving",
+            "any"
+        ],
+        [
+            "Don't tell me it's going to get better, ghost. You have no idea."
+        ]
+    ],
+    "you_ur_J4" : [
+        [
+            "you_ur",
+            "they_grieving",
+            "they_shunned",
+            "any"
+        ],
+        [
+            "Don't tell me it's going to get better, ghost. You have no idea."
+        ]
+    ],
+    "you_ur_J5" : [
+        [
+            "you_ur",
+            "they_df",
+            "any"
+        ],
+        [
+            "Goodness, it must be so boring to be you.",
+            "You should come visit the Dark Forest sometime, if you're able.",
+            "It's not as easy, but it's certainly not as boring."
+        ]
+    ],
+    "you_ur_J6" : [
+        [
+            "you_ur",
+            "they_df",
+            "any",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister]",
+            "[It must be a Dark Forest cat! You turn to confront the cat, but you're left spinning as the scent dissipates. They must have left.]"
+        ]
+    ],
+    "you_ur_J7" : [
+        [
+            "you_ur",
+            "they_df",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister]",
+            "[It must be a Dark Forest cat! You turn to confront the cat, but you're left spinning as the scent dissipates. They must have left.]"
+        ]
+    ],
+    "you_ur_J8" : [
+        [
+            "you_ur",
+            "they_df",
+            "any",
+            "you_blind",
+            "they_blind",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[You feel the presence of another ghost. But they smell slightly different. Slightly more sinister]",
+            "[It must be a Dark Forest cat! You turn to confront the cat, but you're left spinning as the scent dissipates. They must have left.]"
+        ]
+    ],
+    "you_ur_J9" : [
+        [
+            "you_ur",
+            "they_sc",
+            "any"
+        ],
+        [
+            "I wish I could live down here like you, sometimes.",
+            "It is fun to watch the Clan from so closely? I usually have to do so from above.",
+            "[You can't help but feel a bit sour at t_c's remarks. You'd give anything to join them up in StarClan.]",
+            "What? You don't agree?"
+        ]
+    ],
+    "you_ur_J10" : [
+        [
+            "you_ur",
+            "they_sc",
+            "any",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[You feel the presence of another ghost. But they smell slightly different.]",
+            "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
+        ]
+    ],
+    "you_ur_J11" : [
+        [
+            "you_ur",
+            "they_sc",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "[You feel the presence of another ghost. But they smell slightly different.]",
+            "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
+        ]
+    ],
+    "you_ur_J12" : [
+        [
+            "you_ur",
+            "they_sc",
+            "any",
+            "you_blind",
+            "they_blind",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[You feel the presence of another ghost. But they smell slightly different.]",
+            "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
+        ]
     ]
 }

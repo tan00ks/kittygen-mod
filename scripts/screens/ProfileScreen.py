@@ -1470,7 +1470,7 @@ class ProfileScreen(Screens):
 
         # STATUS
         if the_cat.outside and not (the_cat.exiled or the_cat.df) and the_cat.status not in ['kittypet', 'loner', 'rogue',
-                                                                             'former Clancat']:
+            'former Clancat'] and not the_cat.dead:
             output += "<font color='#FF0000'>lost</font>"
         elif the_cat.exiled:
             output += "<font color='#FF0000'>exiled</font>"
@@ -1492,6 +1492,11 @@ class ProfileScreen(Screens):
                 output += "<font color ='#A8BBFF'>" "StarClan " + the_cat.status + "</font>"
             else:
                 output += "<font color ='#2B3DC3'>" "StarClan " + the_cat.status + "</font>"
+        elif the_cat.dead and not the_cat.df and the_cat.outside:
+            if game.settings['dark mode']:
+                output += "<font color ='#CE9DFF'>" "ghost " + the_cat.status + "</font>"
+            else:
+                output += "<font color ='#450E7B'>" "ghost " + the_cat.status + "</font>"
         else:
             output += the_cat.status
 

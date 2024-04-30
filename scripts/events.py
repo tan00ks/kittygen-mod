@@ -338,7 +338,7 @@ class Events:
                 self.generate_birth_event()
             elif game.clan.your_cat.moons < 6:
                 self.generate_events() 
-            elif game.clan.your_cat.moons == 6 and game.clan.your_cat.shunned == 0:
+            elif game.clan.your_cat.moons == 6:
                 self.generate_app_ceremony()
             elif game.clan.your_cat.status in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 self.generate_events()
@@ -1139,12 +1139,15 @@ class Events:
 
     def generate_app_ceremony(self):
         try:
-            game.clan.your_cat.status_change(game.clan.your_cat.status)
             ceremony_txt = ""
-            if game.clan.your_cat.mentor:
-                ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony'])
+            if game.clan.your_cat.shunned != 0:
+                ceremony_txt = ceremony_txt = random.choice(self.b_txt['apprentice ceremony shunned'])
             else:
-                ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony no mentor'])
+                game.clan.your_cat.status_change(game.clan.your_cat.status)
+                if game.clan.your_cat.mentor:
+                    ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony'])
+                else:
+                    ceremony_txt = random.choice(self.b_txt[game.clan.your_cat.status + ' ceremony no mentor'])
             ceremony_txt = ceremony_txt.replace('c_n', str(game.clan.name))
             ceremony_txt = ceremony_txt.replace('y_c', str(game.clan.your_cat.name))
             try:
@@ -3447,7 +3450,7 @@ class Events:
                 cat.outside = False
                 cat.add_to_clan()
                 if cat.ID == game.clan.your_cat.ID:
-                    text = "A Clan meeting is called one day, and your clanmates vote to forgive you for what you did."
+                    text = "A Clan meeting is called one day, and your Clanmates vote to forgive you for what you did."
                 else:
                     text = random.choice([
                         f"After showing genuine remorse and guilt, {cat.name} has been forgiven and welcomed back into {game.clan.name}Clan, though some are quicker to forgive than others.",
