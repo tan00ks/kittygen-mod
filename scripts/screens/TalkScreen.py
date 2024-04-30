@@ -170,9 +170,11 @@ class TalkScreen(Screens):
         for leaf in leaves:
 
             platform_dir = ""
-            if self.the_cat.dead and not self.the_cat.df:
+            if self.the_cat.dead and self.the_cat.outside and not self.the_cat.df:
+                platform_dir = "resources/images/urbg.png"
+            elif self.the_cat.dead and not self.the_cat.outside and not self.the_cat.df:
                 platform_dir = "resources/images/starclanbg.png"
-            elif self.the_cat.dead and self.the_cat.df:
+            elif self.the_cat.dead and not self.the_cat.outside and self.the_cat.df:
                 platform_dir = "resources/images/darkforestbg.png"
             else:
                 platform_dir = f'{camp_bg_base_dir}/{biome}/{leaf}_{camp_nr}_{light_dark}.png'
@@ -546,23 +548,18 @@ class TalkScreen(Screens):
             theyreforgiven = False
 
 
-
             if game.clan.age < you.forgiven + 10: # after ten moons, 100% regular dialogue returns
                 if you.history:
                     if you.history.murder:
                         if "is_murderer" in you.history.murder:
-                            if len(you.history.murder["is_murderer"]) > 0 and you.shunned == 0 and not you.dead and "you_forgiven" not in tags:
-                                continue
-                            else:
+                            if len(you.history.murder["is_murderer"]) > 0 and you.shunned == 0 and not you.dead and "you_forgiven" in tags:
                                 youreforgiven = True
                                 
             if game.clan.age < cat.forgiven + 10:
                 if cat.history:
                     if cat.history.murder:
                         if "is_murderer" in cat.history.murder:
-                            if len(cat.history.murder["is_murderer"]) > 0 and cat.shunned == 0 and not cat.dead and  "they_forgiven" not in tags:
-                                continue
-                            else:
+                            if len(cat.history.murder["is_murderer"]) > 0 and cat.shunned == 0 and not cat.dead and  "they_forgiven" in tags:
                                 theyreforgiven = True
             
             if "you_forgiven" in tags and (you.shunned > 0 or not youreforgiven):
@@ -1034,7 +1031,7 @@ class TalkScreen(Screens):
                         add_on2 = " df"
                     elif cat.dead and not cat.df and not cat.outside:
                         add_on2 = " sc"
-                    elif cat.dead and not cat.df and cat.outisde:
+                    elif cat.dead and not cat.df and cat.outside:
                         add_on2 = " ur"
                     if "grief stricken" in cat.illnesses:
                         add_on2 += " g"
