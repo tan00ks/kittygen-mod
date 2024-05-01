@@ -308,16 +308,16 @@
     {
         "id": "daring_leader",
         "thoughts": [
-            "Was praticing pulling off dangerous tricks and battle moves",
-            "Is puffing out {PRONOUN/m_c/poss} chest admiring the Clan",
-            "Is in the medicine den thanks to a failed trick",
-            "Nearly had a whisker sliced off after dodging a recently awaken badger",
+            "Practicing daring tricks and battle moves",
+            "Puffing out {PRONOUN/m_c/poss} chest admiringly at the Clan",
+            "In the medicine den due to a failed trick",
+            "Nearly had a whisker sliced off dodging a recently awakened badger",
             "Accepted a challenge to leap across the highest point in camp",
-            "Is being cheeky during {PRONOUN/m_c/poss} Clan annoucements",
-            "Was seen chasing out a fox to the border alone",
-            "Coldly scared off a rogue that was infringing on c_n's territory",
-            "Is proposing a risky idea to gather a hefty amount of prey",
-            "Was seen leaping in the back of a predator to nip its neck better"
+            "Is being cheeky during {PRONOUN/m_c/poss} Clan announcements",
+            "Seen chasing out a fox to the border alone",
+            "Coldly scared off a rogue infringing on c_n's territory",
+            "Proposing a risky idea to gather a hefty amount of prey",
+            "Seen leaping onto the back of a predator to better nip its neck"
         ],
         "main_trait_constraint": [
             "daring"
@@ -326,18 +326,18 @@
     {
         "id": "flamboyant_leader",
         "thoughts": [
-            "Doesn't feel bashful as the Clan showers {PRONOUN/m_c/object} with praises",
-            "Is giving others {PRONOUN/m_c/poss} insightful knowledge",
-            "Was too busy prattling nonsense to even begin a Clan meeting",
-            "Repeatedly chatters about {PRONOUN/m_c/poss} legacy",
-            "Self-proclaimed that c_n is StarClan's favorite Clan",
-            "Is relaxing in their downtime by furnishing {PRONOUN/m_c/poss} coat with alluring flowering and trickets",
-            "Hopes to sophisticate c_n",
-            "Is combing out {PRONOUN/m_c/poss} coat with {PRONOUN/m_c/poss} tongue until it's shiny",
-            "Took the time to clean any mess in {PRONOUN/m_c/poss} sight",
-            "Is struting throughout the camp with a waving tail",
+            "Is unabashed as the Clan showers {PRONOUN/m_c/object} with praises",
+            "Imparting {PRONOUN/m_c/poss} insightful knowledge to others",
+            "Too busy spouting nonsense to start a Clan meeting",
+            "Constantly boasts about {PRONOUN/m_c/poss} legacy",
+            "Self-proclaims that c_n is StarClan's favorite",
+            "Relaxes by adorning {PRONOUN/m_c/poss} coat with alluring flowers and trinkets",
+            "Aims to sophisticate c_n",
+            "Combing out {PRONOUN/m_c/poss} coat with {PRONOUN/m_c/poss} tongue until shiny",
+            "Takes time to clean any mess within sight",
+            "Struts throughout camp with a waving tail",
             "Has an eccentric style",
-            "Is overdramatic"
+            "Is dramatically expressive"
         ],
         "main_trait_constraint": [
             "flamboyant"
@@ -346,26 +346,26 @@
     {
         "id": "gloomy_leader",
         "thoughts": [
-            "Is thinking out loud the worse outcomes in hypothetical scenarios",
-            "Rather be in {PRONOUN/m_c/poss} nest than having to face whatever appears",
-            "Is being extra jumpy today",
-            "Thought {PRONOUN/m_c/subject} saw a grey cloud ahead, sighing that trouble is brewing",
-            "Is proposing having multiple camps in case the Clan's home was destoryed",
-            "Feels as if StarClan is punishing {PRONOUN/m_c/object} whenever something inconvenience happans",
-            "Thanks c_n will starve if a single prey went missing",
-            "Is hoping {PRONOUN/m_c/poss} leadership isn't putting the Clan in dire situations",
-            "Having trouble maintaining {PRONOUN/m_c/poss} composture in difficult times",
-            "Has already viewed different outcomes and knows the best less destruction to survive",
-            "Has planned out possible emergency exits",
-            "Is heavily sighing",
-            "Is curled up in {PRONOUN/m_c/poss} nest",
-            "Knows wars are inevitable",
-            "Wants to let {PRONOUN/m_c/poss} pelt down",
-            "Wasn't feeling very peckish today",
-            "{PRONOUN/m_c/poss/CAP} voice was soft-spoken in Clan meetings",
-            "Can find peace in solitude than with Clanmates",
-            "Knows {PRONOUN/m_c/subject} {VERB/m_c/has/have} beloved friends and kin, but overthinks trouble harming them",
-            "Knows {PRONOUN/m_c/subject} {VERB/m_c/is/are} beloved, but has a hard time persistently telling {PRONOUN/m_c/self} that",
+            "Voicing the worst outcomes in hypothetical scenarios",
+            "Prefers being in {PRONOUN/m_c/poss} nest to facing the unknown",
+            "Is extra jumpy today",
+            "Sighed at a grey cloud, fearing impending trouble",
+            "Proposing multiple camps in case the Clan's home is destroyed",
+            "Feels punished by StarClan at every inconvenience",
+            "Thinks c_n will starve if a single prey goes missing",
+            "Hopes {PRONOUN/m_c/poss} leadership isn't endangering the Clan",
+            "Struggling to maintain {PRONOUN/m_c/poss} composure in tough times",
+            "Has envisioned various outcomes and knows the least destructive options",
+            "Planned out possible emergency exits",
+            "Often sighs heavily",
+            "Curled up in {PRONOUN/m_c/poss} nest",
+            "Believes wars are inevitable",
+            "Lets {PRONOUN/m_c/poss} pelt down",
+            "Is not very hungry today",
+            "{PRONOUN/m_c/poss/CAP} voice is soft-spoken in Clan meetings",
+            "Finds more peace in solitude than with Clanmates",
+            "Knows {PRONOUN/m_c/subject} {VERB/m_c/has/have} beloved friends and kin but overthinks potential harm",
+            "Knows {PRONOUN/m_c/subject} {VERB/m_c/is/are} beloved but struggles to reassure {PRONOUN/m_c/self}",
             "Fears death is near"
         ],
         "main_trait_constraint": [
@@ -375,18 +375,18 @@
     {
         "id": "humble_leader",
         "thoughts": [
-            "Is graceful for {PRONOUN/m_c/poss} Clanmates to being their leader",
-            "Is hoping the territory size is perfect for a growing Clan",
-            "While the size of the prey pile could be bigger, {PRONOUN/m_c/subject} {VERB/m_c/is/are} glad the Clan has one",
-            "Doesn't particularly cares if being leader is important, so long {PRONOUN/m_c/poss} Clanmates are safe",
-            "Doesn't mind if {PRONOUN/m_c/subject} didn't get the best moss for {PRONOUN/m_c/poss} nest",
-            "Is praying no wars happans under {PRONOUN/m_c/poss} leadership",
-            "Feels as if having one life is fair",
-            "Is ready to lay down every life for c_n",
-            "Is bashful at every victory",
-            "Would rather let a Clanmate take the spotlight",
-            "Feels as if the other Clans trample over {PRONOUN/m_c/object}",
-            "Was told by a rude Clanmate {PRONOUN/m_c/subject}{VERB/m_c/'s/'re} a stick in the mud"
+            "Grateful for {PRONOUN/m_c/poss} Clanmates' support in being their leader",
+            "Hopes the territory is perfectly sized for a growing Clan",
+            "While wishing for a bigger prey pile, {PRONOUN/m_c/subject} {VERB/m_c/is/are} happy to have one",
+            "Leadership importance is secondary as long as {PRONOUN/m_c/poss} Clanmates are safe",
+            "Indifferent to not having the best moss for {PRONOUN/m_c/poss} nest",
+            "Prays that no wars occur under {PRONOUN/m_c/poss} leadership",
+            "Feels having one life is just",
+            "Ready to sacrifice every life for c_n",
+            "Bashful after every victory",
+            "Prefers letting a Clanmate take the spotlight",
+            "Feels trampled by the other Clans",
+            "A rude Clanmate called {PRONOUN/m_c/subject} a stick in the mud"
         ],
         "main_trait_constraint": [
             "humble"
@@ -395,20 +395,20 @@
     {
         "id": "insecure_leader",
         "thoughts": [
-            "Thinks {PRONOUN/m_c/subject} don't deserve StarClan's blessing of 9 lives",
-            "Wonders if cats like {PRONOUN/m_c/object} as a leader",
-            "KNows wars are ineviable",
-            "Is still trying to find out why and how {PRONOUN/m_c/subject} became leader",
-            "Is scared of losing all of {PRONOUN/m_c/poss} lives at once",
-            "Repeatedly ask the medicine cat if StarClan wasn't lying giving {PRONOUN/m_c/poss} nines lives",
-            "Can't help but envision {PRONOUN/m_c/poss} leadership is distressing to {PRONOUN/m_c/poss} Clanmates",
-            "Has difficult moments trying to find {PRONOUN/m_c/poss} voice in Clan meetings",
-            "Knows leadership is burdersome, but is trying {PRONOUN/m_c/poss} best for c_n",
-            "Can't help but feels {PRONOUN/m_c/poss} rise to leadership was unfavorable by the masses",
-            "Prefers quietly observing {PRONOUN/m_c/poss} surroundings than maintaining the Clan",
-            "Doesn't want to defy order and traditions depsite wanting c_n to improve",
-            "Is willing to prove to both c_n and {PRONOUN/m_c/poss} recongnition",
-            "Hides behind {PRONOUN/m_c/poss} whiskers whenever {PRONOUN/m_c/subject} {VERB/m_c/was/were} given vaildation"
+            "Doubts deserving StarClan's blessing of nine lives",
+            "Questions if cats appreciate {PRONOUN/m_c/object} as a leader",
+            "Knows wars are inevitable",
+            "Still pondering the reasons for becoming leader",
+            "Fears losing all of {PRONOUN/m_c/poss} lives at once",
+            "Repeatedly asks the medicine cat if StarClan truly granted {PRONOUN/m_c/poss} nine lives",
+            "Worries {PRONOUN/m_c/poss} leadership distresses {PRONOUN/m_c/poss} Clanmates",
+            "Struggles to find {PRONOUN/m_c/poss} voice in Clan meetings",
+            "Acknowledges the burden of leadership but strives to do best for c_n",
+            "Feels {PRONOUN/m_c/poss} rise to leadership wasn't well-received",
+            "Prefers observing {PRONOUN/m_c/poss} surroundings over managing the Clan",
+            "Hesitates to defy order and tradition despite wanting improvements for c_n",
+            "Eager to prove worth to both c_n and earn recognition",
+            "Hides behind {PRONOUN/m_c/poss} whiskers when receiving validation"
         ],
         "main_trait_constraint": [
             "insecure"
@@ -418,12 +418,12 @@
         "id": "strange_leader",
         "thoughts": [
             "No thoughts, head empty",
-            "Insists that {PRONOUN/m_c/subject} received ten lives instead of nine",
+            "Insists on having received ten lives instead of nine",
             "Has a crazed look in {PRONOUN/m_c/poss} eyes",
-            "Is wondering how many cats would agree to changing the Clan's name...",
-            "Is mimicking a stone standing still",
-            "Has been staring at {PRONOUN/m_c/poss} Clanmates for awhile without fluttering an eye",
-            "Told {PRONOUN/m_c/poss} Clanmates to get ready for something that appeared in a dream, but doesn't elaborate"
+            "Ponders how many cats would agree to change the Clan's name",
+            "Mimics a stone, standing completely still",
+            "Has been staring at {PRONOUN/m_c/poss} Clanmates for a while without blinking",
+            "Told {PRONOUN/m_c/poss} Clanmates to prepare for something from a dream, without details"
         ],
         "main_trait_constraint": [
             "strange"
@@ -432,16 +432,16 @@
     {
         "id": "rebellious_leader",
         "thoughts": [
-            "Has no qualms changing the Warrior Code to whatever fits {PRONOUN/m_c/poss} mood",
-            "Believes changing the status quo over traditions will improve the Clans",
-            "Encourging patrols to edge closer to neighboring Clan's territories",
-            "{PRONOUN/m_c/subject/CAP} doesn't want StarClan to stick their noses in {PRONOUN/m_c/poss} affairs",
-            "Has it easy showing {PRONOUN/m_c/poss} emotions on {PRONOUN/m_c/poss} fur",
-            "Was mocking the other Clan leaders during Gatherings",
-            "Rolled {PRONOUN/m_c/poss} eyes at everything",
-            "Wants to challenge anything that life throws at {PRONOUN/m_c/object}",
-            "Is resilience to naysayers",
-            "Is implusive to bending the rules for c_n"
+            "No qualms about changing the Warrior Code as {PRONOUN/m_c/poss} mood dictates",
+            "Believes in shaking up the status quo over tradition for Clan improvement",
+            "Encourages patrols to edge closer to neighboring Clan territories",
+            "{PRONOUN/m_c/subject/CAP} wants no StarClan interference in {PRONOUN/m_c/poss} affairs",
+            "Easily shows {PRONOUN/m_c/poss} emotions through {PRONOUN/m_c/poss} fur",
+            "Mocks other Clan leaders during Gatherings",
+            "Rolls {PRONOUN/m_c/poss} eyes at everything",
+            "Eager to challenge anything life throws at {PRONOUN/m_c/object}",
+            "Resilient to naysayers",
+            "Impulsive about bending rules for c_n"
         ],
         "main_trait_constraint": [
             "rebellious"
@@ -450,17 +450,17 @@
     {
         "id": "righteous_leader",
         "thoughts": [
-            "Is reliance to the Code",
-            "Proclaimed is the judge and jury in the Clan",
-            "Claims calamities derive from disloyal Clanmates",
-            "Believes {PRONOUN/m_c/poss} voice surpasses others",
-            "Will not abolish traditions if it doesn't suit {PRONOUN/m_c/poss} needs",
-            "Will not proceed a situation if {PRONOUN/m_c/subject} {VERB/m_c/doesn't/don't} have the final word",
-            "Ban warriors from hunting in different territories",
-            "Loath lying to or going against StarClan",
-            "Is willing to lie down {PRONOUN/m_c/poss} life for c_n",
-            "Is keen to preserve the Clan whatever the cost",
-            "Knows justice will prevail to those that wronged {PRONOUN/m_c/object}"
+            "Is reliant on the Code",
+            "Acts as judge and jury within the Clan",
+            "Attributes calamities to disloyal Clanmates",
+            "Believes {PRONOUN/m_c/poss} voice should prevail",
+            "Refuses to abolish traditions that don't suit {PRONOUN/m_c/poss} needs",
+            "Won't proceed without having the final say",
+            "Bans warriors from hunting in other territories",
+            "Despises lying to or opposing StarClan",
+            "Willing to sacrifice {PRONOUN/m_c/poss} life for c_n",
+            "Determined to preserve the Clan at any cost",
+            "Confident that justice will catch up to those who wronged {PRONOUN/m_c/object}"
         ],
         "main_trait_constraint": [
             "righteous"
@@ -469,21 +469,21 @@
     {
         "id": "loving_leader",
         "thoughts": [
-            "Would sometimes avert {PRONOUN/m_c/poss} eyes on codebreakers",
-            "Is offering equal hugs to kits",
-            "Doesn't think it's an issue allowing outsiders to join c_n",
-            "Is reverence for {PRONOUN/m_c/poss} alterative use of strenght and wisdom",
-            "Can smooth even the prickly of cats",
-            "The plausibility to send fear in others is low, but never zero",
-            "Will unveil the wrath of a smiling cat to trespassers",
-            "Is systematically creating patrols and overseeing Clanmates taking care of",
-            "Is a bit iffy being looked down upon for being soft",
-            "Is a second parent to {PRONOUN/m_c/poss} Clanmates",
-            "Is overbearing to be included in everything",
-            "{PRONOUN/m_c/poss/CAP} overprotectiveness prevented work to be done",
-            "Has prioritizes defending more than fighting",
-            "Pondering promoting kits to apprentices when they're a bit older",
-            "Can't help but envision if the other Clans' kits are unloved and need to be brought to c_n instead"
+            "Sometimes looks the other way when codebreakers are involved",
+            "Offers equal affection to all kits",
+            "Welcomes outsiders into c_n without hesitation",
+            "Reveres {PRONOUN/m_c/poss} alternative use of strength and wisdom",
+            "Can soothe even the most prickly of cats",
+            "Believes in the low possibility of instilling fear, though never impossible",
+            "Will unleash the wrath of a smiling cat on trespassers",
+            "Systematically organizes patrols and ensures Clanmates' care",
+            "Slightly bothered by being seen as too soft",
+            "Acts as a second parent to {PRONOUN/m_c/poss} Clanmates",
+            "Feels overwhelmed by the need to be involved in everything",
+            "{PRONOUN/m_c/poss/CAP} overprotectiveness hampers work",
+            "Prioritizes defense over combat",
+            "Considers delaying kit promotions to apprenticeship for maturity",
+            "Wonders if other Clans' kits feel unloved and need c_n's care"
         ],
         "main_trait_constraint": [
             "loving"
@@ -492,18 +492,18 @@
     {
         "id": "troublesome_leader",
         "thoughts": [
-            "Rolls {PRONOUN/m_c/poss} eyes as r_c suggests sharing their fresh-kill with the other Clans",
-            "Convice {PRONOUN/m_c/self} other cats are incompetent",
-            "Is having fun bossing others around",
-            "Is opinionated running c_n {PRONOUN/m_c/poss} way",
-            "Allows patrols to sneak through other Clans terriorties and steal prey",
-            "Tries to conceal any jealousy and insecurities",
-            "Was told off for being an overgrown kit than a leader",
-            "Is providing kits the perfect pranks to pull",
-            "Is tensing r_c on an embarassing kithood memory",
-            "Boasting c_n's greatness in Gatherings",
-            "Gloating the leader's word is law",
-            "Is annoying Clanmates"
+            "Rolls {PRONOUN/m_c/poss} eyes as r_c suggests sharing fresh-kill with other Clans",
+            "Convinces {PRONOUN/m_c/self} other cats are incompetent",
+            "Enjoys bossing others around",
+            "Opinionated about running c_n {PRONOUN/m_c/poss} way",
+            "Allows patrols to sneak through other Clans' territories to steal prey",
+            "Tries to conceal any jealousy or insecurities",
+            "Scolded for acting more like an overgrown kit than a leader",
+            "Teaches kits the perfect pranks",
+            "Teases r_c with an embarrassing kithood memory",
+            "Boasts about c_n's greatness at Gatherings",
+            "Proclaims the leader's word as law",
+            "Annoys Clanmates regularly"
         ],
         "main_trait_constraint": [
             "troublesome"
@@ -512,21 +512,21 @@
     {
         "id": "sneaky_leader",
         "thoughts": [
-            "Is concealing more knowledge than what {PRONOUN/m_c/subject} shows",
-            "Is digging up long-forgotten knowledge about c_n's history",
-            "Has been sneaking out of the camp more often latetly...",
-            "Coerce the medicine cat to reveal every omen to {PRONOUN/m_c/object} only",
-            "Tricked a pair of rogues loughing in the Clan's territories with a clever attack",
-            "Lied in a Clan meeting to not share information",
-            "Was found speaking to an unknown cat near the border alone",
-            "Found a loophole through the Warrior Code {PRONOUN/m_c/subject} took advantage of",
-            "Threatening a cat to reveal their secrets",
-            "Is hard to study",
-            "Was observing the Clan with a glint in {PRONOUN/m_c/poss} eyes",
-            "Isn't denying snooping through Clanmates' nests",
-            "Commanded a Clanmate to surveil a certain cat",
-            "Can easily switch {PRONOUN/m_c/poss} expressions",
-            "Had swiped r_c's prey"
+            "Hides more knowledge than {PRONOUN/m_c/subject} lets on",
+            "Uncovers long-forgotten knowledge about c_n's history",
+            "Has been sneaking out of camp frequently",
+            "Coerces the medicine cat to share omens with {PRONOUN/m_c/object} exclusively",
+            "Tricked a pair of rogues lurking in the Clan's territory with a clever ploy",
+            "Lied during a Clan meeting to withhold information",
+            "Found speaking to an unknown cat near the border alone",
+            "Exploited a loophole in the Warrior Code",
+            "Threatens a cat to disclose their secrets",
+            "Difficult to understand",
+            "Observed the Clan with a calculating look",
+            "Doesn't deny snooping through Clanmates' nests",
+            "Ordered a Clanmate to spy on a certain cat",
+            "Easily shifts {PRONOUN/m_c/poss} expressions",
+            "Stole r_c's prey"
         ],
         "main_trait_constraint": [
             "sneaky"
@@ -535,21 +535,21 @@
     {
         "id": "nervous_leader",
         "thoughts": [
-            "Feels as if {PRONOUN/m_c/subject}{VERB/m_c/'s/'re} a constant target",
-            "Doesn't feel like {PRONOUN/m_c/subject} {VERB/m_c/has/have} nine lives",
-            "Wants to improve c_n, but doesn't know how",
-            "Is distraught {PRONOUN/m_c/subject} might accidently initiate a war",
-            "Has orgazine today's workload, but an inconvience startled {PRONOUN/m_c/object}",
-            "Doesn't want to overstep {PRONOUN/m_c/poss} presences with the other leaders",
-            "Wants to make {PRONOUN/m_c/poss} leadership fulfilling",
-            "Was feeling sheepish in a Clan meeting",
-            "Tried to raise {PRONOUN/m_c/poss} voice in a Gathering, but was talked over and shrink low",
-            "Tried to raise {PRONOUN/m_c/poss} voice in a Gathering, but couldn't find the words, so the deputy had to take over",
-            "Tried to raise {PRONOUN/m_c/poss} voice in a Gathering and succeed, giving {PRONOUN/m_c/self} a silent cheer",
-            "Hopes c_n prosper under {PRONOUN/m_c/poss} leadership",
-            "Is darting {PRONOUN/m_c/poss} eyes at sudden movements",
-            "Is self-conscious Clanmates view {PRONOUN/m_c/object} as weak",
-            "Thought being leader would make {PRONOUN/m_c/object} less jumpy"
+            "Feels constantly targeted",
+            "Doesn't believe {PRONOUN/m_c/subject} {VERB/m_c/has/have} nine lives",
+            "Wants to improve c_n but is unsure how",
+            "Worries about accidentally starting a war",
+            "Organized today's tasks but was startled by a minor inconvenience",
+            "Avoids overstepping with other leaders",
+            "Aims to make {PRONOUN/m_c/poss} leadership fulfilling",
+            "Felt sheepish in a Clan meeting",
+            "Tried to speak up in a Gathering but was overshadowed, shrinking away",
+            "Failed to find words in a Gathering, letting the deputy take over",
+            "Successfully spoke up in a Gathering, quietly cheered for {PRONOUN/m_c/self}",
+            "Hopes c_n thrives under {PRONOUN/m_c/poss} leadership",
+            "Eyes dart at sudden movements",
+            "Is self-conscious about being viewed as weak",
+            "Thought leadership would make {PRONOUN/m_c/object} less nervous"
         ],
         "main_trait_constraint": [
             "nervous"
@@ -558,14 +558,14 @@
     {
         "id": "strict_leader",
         "thoughts": [
-            "Is willing to discipline a Clanmate for disobeying both {PRONOUN/m_c/object} and the Code",
-            "Will not allow Clanmates to proceed anything without {PRONOUN/m_c/poss} authorization",
-            "Has a firm schedule Clanmates must heed to",
-            "Has a narrow view instead of pursuing something new",
-            "Pondering having apprentices be versatile to applease {PRONOUN/m_c/object}",
-            "Will never comply to outsiders roaming outside",
-            "Has a high expectation to {PRONOUN/m_c/poss} Clan",
-            "Refuse to tolerate mistakes under {PRONOUN/m_c/poss} leadership"
+            "Willing to discipline a Clanmate for disobeying both {PRONOUN/m_c/object} and the Code",
+            "Doesn't allow Clanmates to act without {PRONOUN/m_c/poss} approval",
+            "Enforces a strict schedule that all Clanmates must follow",
+            "Has a rigid view, shunning new approaches",
+            "Considers training apprentices in various skills to please {PRONOUN/m_c/object}",
+            "Forbids outsiders from roaming freely",
+            "Holds high expectations for {PRONOUN/m_c/poss} Clan",
+            "Refuses to tolerate mistakes under {PRONOUN/m_c/poss} leadership"
         ],
         "main_trait_constraint": [
             "strict"
@@ -574,18 +574,18 @@
     {
         "id": "oblivious_leader",
         "thoughts": [
-            "Was found wandering about outside of camp",
-            "Doesn't know personal boundaries",
-            "Announced a Clan meeting to be located in {PRONOUN/m_c/poss} nest",
-            "Didn't know {PRONOUN/m_c/subject} fringed across borders",
-            "Is lenient to coderbreakers",
-            "Didn't know it's already twilight",
-            "Seems to be dazed often",
-            "Had to be told multiple times where the borders {PRONOUN/m_c/subject} made was",
-            "Would often be in {PRONOUN/m_c/poss} own world",
-            "Accidently bumped into r_c, meowing {PRONOUN/m_c/subject} didn't notice {PRONOUN/r_c/object}",
-            "Called r_c another name",
-            "Didn't notice the litters of features attached to {PRONOUN/m_c/poss} fur"
+            "Found wandering outside of camp",
+            "Unaware of personal boundaries",
+            "Announced a Clan meeting in {PRONOUN/m_c/poss} nest",
+            "Unaware of crossing borders",
+            "Is lenient towards codebreakers",
+            "Unaware that it was already twilight",
+            "Often appears dazed",
+            "Needs frequent reminders about the borders {PRONOUN/m_c/subject} established",
+            "Often lost in {PRONOUN/m_c/poss} own world",
+            "Accidentally bumped into r_c, admitting to not noticing {PRONOUN/r_c/object}",
+            "Mistakenly called r_c by another name",
+            "Unaware of the litters of feathers attached to {PRONOUN/m_c/poss} fur"
         ],
         "main_trait_constraint": [
             "oblivious"
@@ -594,21 +594,21 @@
     {
         "id": "mellow_leader",
         "thoughts": [
-            "Perfers going with the flow",
-            "Is basking in the glowing sunlight and soft breeze through {PRONOUN/m_c/poss} coat",
-            "Often reasurres to {PRONOUN/m_c/poss} Clanmates bad things breftly passess",
-            "Is happily watching a butterfly flutter by",
-            "Is snoring asleep in {PRONOUN/m_c/poss} nest",
-            "Is the best cat to snooze on",
-            "Is handing out sage advice to {PRONOUN/m_c/poss} Clanmates",
+            "Prefers going with the flow",
+            "Basks in the glowing sunlight and soft breeze through {PRONOUN/m_c/poss} coat",
+            "Reassures {PRONOUN/m_c/poss} Clanmates that bad things pass quickly",
+            "Happily watches butterflies flutter by",
+            "Falls asleep snoring in {PRONOUN/m_c/poss} nest",
+            "Known as the best cat to snooze on",
+            "Offers sage advice to {PRONOUN/m_c/poss} Clanmates",
             "Vibes as the Clan's older sibling",
-            "Sending out good vibes",
+            "Radiates good vibes",
             "Constantly purring"
         ],
         "main_trait_constraint": [
             "mellow"
         ]
-    },
+    },    
     {
         "id": "leader_meanie_deputy_meanie",
         "thoughts": [
