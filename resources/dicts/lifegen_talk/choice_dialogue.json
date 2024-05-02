@@ -2855,5 +2855,37 @@
             "Well, there's no rush, darling.",
             "You can be anything you want to be when the time comes."
         ]
+    },
+    "they_df_sh_ch_R1": {
+        "tags": [
+            "they_df",
+            "you_shunned"
+        ],
+        "intro": [
+            "y_c? I had a question for you that I want you to answer genuinely. Do you regret what you did?",
+            "It's alright if you don't, and it's alright if you do. I just wanted to find out."
+        ],
+        "intro_choices": {
+            "choice1": {
+                "text": "I do",
+                "next_scene": "regret_ido"
+            },
+            "choice2": {
+                "text": "I don't",
+                "next_scene": "regret_idont"
+            }
+        },
+        
+            
+        "I do":[
+            "I see... Some advice to you then? Work for forgiveness and don't give up. Show them you deserve a second chance.",
+            "Everyone makes mistakes sometimes. You don't need to explain that to anyone either. Just do your best from now on.",
+            "You only live once after all. Make the most of it. And if you end up here in the end... It was still worth a try, right?"
+        ],
+        "I don't":[
+            "No shame in that at all. Respectable choice, really.",
+            "Just don't get caught if you do it again. I'd hate to see you kicked out for something like this. Those star-blind fools will know in the end...",
+            "But what your Clanmates don't know in life won't hurt them." 
+        ] 
     }
 }

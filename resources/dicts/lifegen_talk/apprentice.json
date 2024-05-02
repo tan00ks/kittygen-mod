@@ -2861,5 +2861,63 @@
             "They're all so miserable. They don't see the fun in this place like you and me.",
             "Now, come on! I found a super sturdy tree we can practice climbing!"
         ]
+    ],
+    "trainee_living_3c": [
+        [
+            "they_dftrainee",
+            "you_not_dftrainee",
+            "any",
+            "platonic_love",
+            "they_app",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "I can tell you anything, right, t_c?",
+            "[You nod. t_c hesitates before speaking again.]",
+            "I... joined the Dark Forest. There's a cat there called t_df_mn. They're going to train me.",
+            "Why, you ask? I just want to be strong enough to protect you!"
+        ]
+    ],
+    "trainee_living_4c": [
+        [
+            "they_dftrainee",
+            "any",
+            "they_app",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Guess what! A StarClan cat visited me in my dreams last night. They said they're going to teach me some super special StarClan battle moves!"
+        ]
+    ],
+    "trainee_df_5c": [
+        [
+            "they_dftrainee",
+            "you_df",
+            "they_app",
+                    "you_blind",
+                    "they_blind"
+        ],
+        [
+            "If... If I don't want to join the Dark Forest anymore, what do I do? Is there someone I can talk to?",
+            "[Others would kill t_c for those words. You hiss that they should never think about leaving ever again.]"
+        ]
+    ],
+    "trainee_living_6c": [
+        [
+            "apprentice",
+            "they_app",
+            "you_dftrainee",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "[You settle into your nest, preparing yourself for a night of Dark Forest training.]",
+            "[Next to you, t_c is snoring loudly.]"
+        ]
     ]
+        
+        
+        
 }

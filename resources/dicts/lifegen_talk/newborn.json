@@ -1451,5 +1451,34 @@
         [
             "... Mew..."
         ]
-    ]
+    ],
+    "sc_sc_kit_R2": [
+        [
+            "they_newborn",
+            "they_sc",
+            "you_sc",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Mew!",
+            "[Oh, it's t_c. Should they be over here? Their family is probably looking for them.]"
+        ]
+    ],
+    
+    "df_df_kit_R1": [
+        [
+            "they_newborn",
+            "they_df",
+            "you_df",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Mewwww...",
+            "[t_c is whining for comfort again. They should know better by now that it's not coming.]"
+        ]
+    ]  
 }
