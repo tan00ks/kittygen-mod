@@ -1510,5 +1510,24 @@
             "[You hesitate for a moment at the pleading look in t_c's eyes, but eventually shake your head. They aren't well-trained enough for this.]",
             "Oh... okay..."
         ]
+    ],
+    "trainee_living_3c": [
+        [
+            "medicine cat apprentice",
+            "you_dftrainee",
+            "they_not_dftrainee",
+            "from_mentor",
+            "they_blind"
+        ],
+        [
+            "[t_c is leading you to the apprentice training area.]",
+            "All medicine cats need to take part in basic battle training lessons.",
+            "Nervous? Don't worry, you'll hopefully never have to use these skills. It's just a precaution!",
+            "Alright, now let me show you a basic battle stance.",
+            "[t_c moves into a battle stance. Their form is sloppy -- df_m_n would never allow that.]",
+            "[You settle in and prepare yourself for a long day of learning things you already know.]"
+            
+        ]
     ]
+        
 }

@@ -4900,10 +4900,11 @@
             "they_ur",
             "you_ur",
             "any",
-            "you_deaf",
-            "they_deaf",
-            "they_blind",
-            "you_blind"
+            "only_you_deaf",
+            "only_they_deaf",
+            "only_they_blind",
+            "only_you_blind"
+            
         ],
         [
             "[You couldn't hear nor see in the waking world, and now, as a ghost, you can hardly even feel.]",
@@ -5016,7 +5017,9 @@
     "you_ur_J1": [
         [
             "you_ur",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "I always knew ghosts were real.",
@@ -5028,7 +5031,9 @@
         [
             "you_ur",
             "they_shunned",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "y_c, everycat is still mad at me!",
@@ -5063,7 +5068,9 @@
         [
             "you_ur",
             "they_df",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "Is it super boring to be a ghost?",
@@ -5121,7 +5128,7 @@
         ],
         [
             "I wish I could live down here like you, sometimes.",
-            "It is fun to watch the Clan from so closely? I have to look at them from up high.",
+            "Is it fun to watch the Clan from so closely? I have to look at them from up high.",
             "[You can't help but feel a bit sour at t_c's remarks. You'd give anything to join them up in StarClan.]",
             "What?"
         ]

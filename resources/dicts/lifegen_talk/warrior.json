@@ -3226,5 +3226,18 @@
             "Do any of your Clanmates know you're here?",
             "Okay... just let me know if they do. We'll have to take care of them."
         ]
+    ],
+    "trainee_living_5c": [
+        [
+            "warrior",
+            "they_warrior",
+            "you_dftrainee",
+                    "you_blind",
+                    "they_blind"
+        ],
+        [
+            "[You settle into your nest, preparing yourself for a night of Dark Forest training.]",
+        "[Next to you, t_c is snoring loudly.]"
+        ]
     ]
 }

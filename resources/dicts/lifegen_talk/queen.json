@@ -1726,5 +1726,23 @@
             "[r_k rolls around onto t_c's paw playfully. They look up with big buggy eyes. t_c's gaze softens.]",
             "And I honestly think I wouldn't change it for the world. I know that might be hard for some cats to understand, y_c. But I cannot put into words how thankful I am that I wake up and do this job every day."
         ]
+    ],
+    "df_df_R1": [
+        [
+            "they_queen",
+            "they_df",
+            "you_df",
+            "any",
+            "they_blind"
+        ],
+        [
+            "[t_c is corralling a few kits, hissing when any other cats come close. Should you help them?]",
+            "Get away from them, mangepelts!",
+            "y_c! A familiar face! Please, can you help me keep the little ones safe? I know everyone is here for a reason, but I can't let anything happen to them. Regardless of what any of us have done in life.",
+            "Here, take this one.",
+            "[t_c nudges a kit to you to pick up. The foul taste of the muck-covered fur sticks to your tongue. Disgusting. Is t_c getting back at you for something?]",
+            "[Thankfully their safe zone isn't too far. You place the quiet kit in the so-called nest of dead grass.]",
+            "I know it's not much, but... I can't get rid of old habits. Young spirits like them could have changed. They shouldn't have been judged so fast nor so harshly. And... Thank you. I appreciate the help. I owe you."
+        ]
     ]
 }

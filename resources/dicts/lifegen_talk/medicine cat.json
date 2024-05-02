@@ -2077,5 +2077,36 @@
             "You wouldn't happen to know the best way to treat r_s, would you? They're not responding to the usual methods...",
             "[You and t_c have a lengthy conversation, debating possible rememdies for their ill patient.]"
         ]
-    ]
+    ],
+    "trainee_living_2c": [
+        [
+            "they_dftrainee",
+            "medicine cat",
+            "medicine cat apprentice",
+            "they_blind"
+        ],
+        [
+            "[t_c visits your den once again. Their pelt is looking ragged, with clumps of fur missing from their shoulder.]",
+            "I got these from some thorns I found in my nest. I must not have sorted through the moss properly...",
+            "[... You don't believe them.]"
+        ]
+    ],
+    "trainee_living_4c": [
+        [
+            "any",
+            "they_medicine_cat",
+            "they_medicine_cat_apprentice",
+            "you_dftrainee",
+            "they_not_dftrainee"
+        ],
+        [
+            "[You're in the medicine den again, getting some treatment for the minor scratches you received from Dark Forest training.]",
+            "[t_c chews up a poultice of marigold and spreads it on your wounds.]",
+            "You know, y_c...",
+            "Not many cats are in here as often as you are.",
+            "There's been a lot of 'thorns' in your bedding lately.",
+            "[t_c pauses and looks you in the eyes.]",
+            "Make sure you're making the right choices, okay?"
+        ]
+    ]  
 }
