@@ -1749,6 +1749,11 @@ class FlirtScreen(Screens):
             if r:
                 cat.relationships.get(game.clan.your_cat.ID).romantic_love += randint(1,10)
                 game.clan.your_cat.relationships.get(cat.ID).romantic_love += randint(1,10)
+            else:
+                cat.relationships.get(game.clan.your_cat.ID).romantic_love -= randint(1,5)
+                cat.relationships.get(game.clan.your_cat.ID).comfortable -= randint(1,5)
+                cat.relationships.get(game.clan.your_cat.ID).dislike += randint(1,5)
+
             return r
         else:
             return False

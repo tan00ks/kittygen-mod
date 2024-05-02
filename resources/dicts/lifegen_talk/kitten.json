@@ -4810,7 +4810,7 @@
             "[t_c doesn't even react to your insult.]"
         ]
     ],
-    "they_ur_J1" : [
+    "they_ur_J1": [
         [
             "they_ur",
             "any"
@@ -4820,7 +4820,7 @@
             "Should we play some moss-ball? It goes right through my paws, sometimes... but I'm feeling good today! Let's try!"
         ]
     ],
-    "they_ur_J2" : [
+    "they_ur_J2": [
         [
             "they_ur",
             "you_shunned",
@@ -4832,7 +4832,7 @@
             "What? Yes, I can! Watch me!"
         ]
     ],
-    "they_ur_J3" : [
+    "they_ur_J3": [
         [
             "they_ur",
             "you_grieving",
@@ -4842,7 +4842,7 @@
             "Aw. It'll all be better soon, y_c."
         ]
     ],
-    "they_ur_J4" : [
+    "they_ur_J4": [
         [
             "they_ur",
             "you_grieving",
@@ -4855,7 +4855,7 @@
             "What? Yes, I can! Watch me!"
         ]
     ],
-    "they_ur_J5" : [
+    "they_ur_J5": [
         [
             "they_ur",
             "you_ur",
@@ -4867,7 +4867,7 @@
             "Oh. Well, that was fun, too. Try it!"
         ]
     ],
-    "they_ur_J6" : [
+    "they_ur_J6": [
         [
             "they_ur",
             "you_ur",
@@ -4880,7 +4880,7 @@
             "Hear those birds? Do you think dead cats anywhere else get to hear that?"
         ]
     ],
-    "they_ur_J7" : [
+    "they_ur_J7": [
         [
             "they_ur",
             "you_ur",
@@ -4895,7 +4895,7 @@
             "[It looks silly, but you can't pretend you've never done the same.]"
         ]
     ],
-    "they_ur_J8" : [
+    "they_ur_J8": [
         [
             "they_ur",
             "you_ur",
@@ -4911,7 +4911,7 @@
             "[Still, your sense of smell allows you to feel t_c's presence next to you. Your chest vibrates with a purr.]"
         ]
     ],
-    "they_ur_J9" : [
+    "they_ur_J9": [
         [
             "they_ur",
             "you_df",
@@ -4922,7 +4922,7 @@
             "[t_c turns to run as soon as they see you.]"
         ]
     ],
-    "they_ur_J10" : [
+    "they_ur_J10": [
         [
             "they_ur",
             "you_df",
@@ -4934,7 +4934,7 @@
             "[t_c doesn't notice you prowling through the undergrowth of the waking world.]"
         ]
     ],
-    "they_ur_J11" : [
+    "they_ur_J11": [
         [
             "they_ur",
             "you_df",
@@ -4948,7 +4948,7 @@
             "[You feel a hollow, ghostly claw rake your muzzle before you can react, and with a hiss, they flee.]"
         ]
     ],
-    "they_ur_J12" : [
+    "they_ur_J12": [
         [
             "they_ur",
             "you_df",
@@ -4964,7 +4964,7 @@
             "[The feeling is gone before you can consider what to do about it. They must have run off.]"
         ]
     ],
-    "they_ur_J13" : [
+    "they_ur_J13": [
         [
             "they_ur",
             "you_sc",
@@ -4976,7 +4976,7 @@
             "Haha. Didn't think so."
         ]
     ],
-    "they_ur_J14" : [
+    "they_ur_J14": [
         [
             "they_ur",
             "you_sc",
@@ -4988,7 +4988,7 @@
             "[t_c stares at you in awe.]"
         ]
     ],
-    "they_ur_J15" : [
+    "they_ur_J15": [
         [
             "they_ur",
             "you_sc",
@@ -5000,7 +5000,7 @@
             "StarClan cat? What are you doing here?"
         ]
     ],
-    "they_ur_J16" : [
+    "they_ur_J16": [
         [
             "they_ur",
             "you_sc",
@@ -5014,7 +5014,7 @@
             "[t_c doesn't seem to notice you.]"
         ]
     ],
-    "you_ur_J1" : [
+    "you_ur_J1": [
         [
             "you_ur",
             "any",
@@ -5027,7 +5027,7 @@
             "Sorry. It's just... weird."
         ]
     ],
-    "you_ur_J2" : [
+    "you_ur_J2": [
         [
             "you_ur",
             "they_shunned",
@@ -5041,7 +5041,7 @@
             "... Fine."
         ]
     ],
-    "you_ur_J3" : [
+    "you_ur_J3": [
         [
             "you_ur",
             "they_grieving",
@@ -5053,7 +5053,7 @@
             "[t_c sniffles into their paws. They don't care enough to notice you.]"
         ]
     ],
-    "you_ur_J4" : [
+    "you_ur_J4": [
         [
             "you_ur",
             "they_grieving",
@@ -5064,7 +5064,7 @@
             "[t_c sniffles into their paws. They don't care enough to notice you.]"
         ]
     ],
-    "you_ur_J5" : [
+    "you_ur_J5": [
         [
             "you_ur",
             "they_df",
@@ -5079,7 +5079,7 @@
             "Do you not think so?"
         ]
     ],
-    "you_ur_J6" : [
+    "you_ur_J6": [
         [
             "you_ur",
             "they_df",
@@ -5092,7 +5092,7 @@
             "[It must be a Dark Forest cat! You turn to confront the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
     ],
-    "you_ur_J7" : [
+    "you_ur_J7": [
         [
             "you_ur",
             "they_df",
@@ -5105,7 +5105,7 @@
             "[It must be a Dark Forest cat! You turn to confront the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
     ],
-    "you_ur_J8" : [
+    "you_ur_J8": [
         [
             "you_ur",
             "they_df",
@@ -5120,7 +5120,7 @@
             "[It must be a Dark Forest cat! You turn to confront the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
     ],
-    "you_ur_J9" : [
+    "you_ur_J9": [
         [
             "you_ur",
             "they_sc",
@@ -5133,7 +5133,7 @@
             "What?"
         ]
     ],
-    "you_ur_J10" : [
+    "you_ur_J10": [
         [
             "you_ur",
             "they_sc",
@@ -5146,7 +5146,7 @@
             "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
     ],
-    "you_ur_J11" : [
+    "you_ur_J11": [
         [
             "you_ur",
             "they_sc",
@@ -5159,7 +5159,7 @@
             "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
     ],
-    "you_ur_J12" : [
+    "you_ur_J12": [
         [
             "you_ur",
             "they_sc",
@@ -5172,6 +5172,40 @@
         [
             "[You feel the presence of another ghost. But they smell slightly different.]",
             "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
+        ]
+    ],
+    "ur_living_1c": [
+        [
+            "you_ur",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "If you ever get bored, you can play with me!"
+        ]
+    ],
+    "ur_living_2c": [
+        [
+            "you_ur",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Doesn't it get lonely, just wandering forever and ever and ever?"
+        ]
+    ],
+    "ur_living_7c": [
+        [
+            "you_ur",
+            "any",
+            "you_blind"
+        ],
+        [
+            "I told r_m about you, but they said I was lying.",
+            "No one is allowed to see ghosts besides them, I guess.",
+            "Does that mean I have to become a medicine cat?"
         ]
     ]
 }
