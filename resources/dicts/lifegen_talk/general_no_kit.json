@@ -16646,7 +16646,7 @@
             "[It was a Leafbare border patrol, you'd encountered an o_cClan patrol that refused to leave.]",
             "[You and your patrol start to chase them when they run across the ice, you run after them.]",
             "[Suddenly, the world blurs and a loud splash is heard, your world growing dark, the cold like claws in your stomach.]",
-            "['Is this it…?']",
+            "['Is this it...?']",
             "[You feel teeth in your scruff, your body being dragged to the surface by a cat you couldn't see, but had a familiar scent.]",
             "[It's later, after you fall asleep, where you figure out the identity of the cat.]",
             "y_c! Thank the woods you're alive... Please, please don't do that again.",
@@ -17065,8 +17065,8 @@
             "they_dftrainee",
             "you_dftrainee",
             "any",
-                    "you_blind",
-                    "they_blind"
+            "you_blind",
+            "they_blind"
         ],
         [
             "Think we'll learn something new tonight? I hope so."
@@ -17093,8 +17093,8 @@
             "they_dftrainee",
             "you_dftrainee",
             "any",
-                    "you_blind",
-                    "they_blind"
+            "you_blind",
+            "they_blind"
         ],
         [
             "Even though we're both training in the Dark Forest... it doesn't mean we'll end up there, right? After we die?"
@@ -17414,8 +17414,8 @@
             "they_df",
             "from_df_mentor",
             "you_app",
-                    "you_blind",
-                    "they_blind"
+            "you_blind",
+            "they_blind"
         ],
         [
             "You've been slacking in your training recently, y_c. Don't think I haven't noticed.",
@@ -17429,8 +17429,8 @@
             "any",
             "you_dftrainee",
             "they_df",
-                    "you_blind",
-                    "they_blind"
+            "you_blind",
+            "they_blind"
         ],
         [
             "What do you seek to gain from training here?",
