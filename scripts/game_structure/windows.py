@@ -1467,12 +1467,13 @@ class DeathScreen(UIWindow):
                 game.clan.your_cat.revives +=1
                 game.clan.your_cat.dead = False
                 game.clan.your_cat.df = False
+                game.clan.your_cat.outside = False
                 game.clan.your_cat.dead_for = 0
                 game.clan.your_cat.moons+=1
                 game.clan.your_cat.update_mentor()
                 game.switches['continue_after_death'] = False
-                # if game.clan.your_cat.outside:
-                #     game.clan.add_to_clan(game.clan.your_cat)
+                if game.clan.your_cat.outside:
+                    game.clan.add_to_clan(game.clan.your_cat)
                 if game.clan.your_cat.ID in game.clan.starclan_cats:
                     game.clan.starclan_cats.remove(game.clan.your_cat.ID)
                 if game.clan.your_cat.ID in game.clan.darkforest_cats:
