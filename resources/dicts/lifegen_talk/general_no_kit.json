@@ -17674,5 +17674,19 @@
             "I can see you and talk to you, isn't that exciting?? I thought dead cats would be more excited..."
 
         ]
+    ],
+    "they_df_sh_R7": [
+        [
+            "they_df",
+            "you_shunned",
+            "any"
+        ],
+        [
+            "There you are, y_c. Word's gotten around that your Clan has turned their backs on you. How are you holding up?",
+            "The life you lead will be a difficult one from now on. Nobody to blame but yourself for that, either. It was your choice.",
+            "Hey, I'm not saying anything poorly about it. This is a friendly reminder that actions have consequences, you know?",
+            "Remember to stay aware of that for your future. Only you can decide how to navigate your life. And if it brings you here in death?",
+            "That's all on you."
+        ]
     ]
 }
