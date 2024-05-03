@@ -43,15 +43,15 @@
         ],
         "intro_choices": {
             "choice1": {
-                "text": "Support l_n",
+                "text": "[Support l_n]",
                 "next_scene": "support"
             },
             "choice2": {
-                "text": "Diss l_n",
+                "text": "[Diss l_n]",
                 "next_scene": "diss"
             },
             "choice3": {
-                "text": "Refuse to answer",
+                "text": "[Refuse to answer]",
                 "next_scene": "refuse"
             }
         },
