@@ -3933,6 +3933,7 @@
     "deadnewborn_ur_J1": [
         [
             "they_ur",
+            "you_ur",
             "you_newborn"
         ],
         [
@@ -3941,7 +3942,8 @@
     ],
     "deadnewborn_ur_J2": [
         [
-            "they_sc",
+            "you_sc",
+            "they_ur",
             "you_newborn"
         ],
         [
@@ -3950,11 +3952,12 @@
     ],
     "deadnewborn_ur_J3": [
         [
-            "they_df",
+            "you_df",
+            "they_ur",
             "you_newborn"
         ],
         [
-            "Pitiful thing..."
+            "Poor thing..."
         ]
     ]
 }
