@@ -3929,5 +3929,35 @@
             "[You feel the presence of another ghost. But they smell slightly different.]",
             "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
         ]
+    ],
+    "deadnewborn_ur_J1": [
+        [
+            "they_ur",
+            "you_ur",
+            "you_newborn"
+        ],
+        [
+            "Poor thing..."
+        ]
+    ],
+    "deadnewborn_ur_J2": [
+        [
+            "you_sc",
+            "they_ur",
+            "you_newborn"
+        ],
+        [
+            "Poor thing..."
+        ]
+    ],
+    "deadnewborn_ur_J3": [
+        [
+            "you_df",
+            "they_ur",
+            "you_newborn"
+        ],
+        [
+            "Poor thing..."
+        ]
     ]
 }
