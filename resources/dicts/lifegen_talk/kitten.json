@@ -5207,5 +5207,110 @@
             "No one is allowed to see ghosts besides them, I guess.",
             "Does that mean I have to become a medicine cat?"
         ]
+    ],
+    "they_df_sh_kit_R1": [
+        [
+            "you_shunned",
+            "they_kitten",
+            "any",
+            "they_blind",
+            "you_blind",
+            "you_dftrainee",
+            "they_df"
+        ],
+        [
+            "[t_c barrels into you with tangible excitement.]",
+            "y_c! y_c! One of the warriors told me you were being shunned! They said you got caught killing someone!",
+            "[t_c has an unsettling smile on their face.]",
+            "Now you'll be here forever, right? You won't go to the starry place the older cats sometimes talk about?",
+            "They don't like it there, so I don't want you going there if you die.",
+            "You can stay here with us, and we can be best friends forever! Even if your Clan forgives you, you'll always belong here! It's great!"
+        ]
+    ],
+    "they_df_sh_kit_R2": [
+        [
+            "you_shunned",
+            "they_kitten",
+            "any",
+            "they_df"
+        ],
+        [
+            "[t_c is staring at your paws. After an uncomfortable moment you ask why.]",
+            "I heard your Clanmates haven't forgiven you for the blood on your paws. No matter how you try to wash it off it's still there.",
+            "[Your paws are clean of blood. You made sure of that. A glance down confirms that they have nothing but Dark Forest mud speckled on them.]",
+            "... It's still there. I can see it. You haven't forgiven yourself. Maybe you never will.",
+            "How do you expect them to?"
+        ]
+    ],
+    "they_df_sh_kit_R3": [
+        [
+            "you_shunned",
+            "they_kitten",
+            "any",
+            "they_blind",
+            "you_blind",
+            "they_df"
+        ],
+        [
+            "[There's an innocence even to kittens inhabiting the Dark Forest. t_c is no exception.]",
+            "So... Your Clanmates aren't playing with you anymore? That's mean. Why?",
+            "[Given where t_c is... There's no need to be subtle. You softly tell them what you've done.]",
+            "And they don't like you anymore for that? That's weird. And mean! It's okay y_c, I'll still be your friend! I'll always be here when you visit!",
+            "Nothing you do changes how cool you are! I wish I got to be as big and tough as you. But then-- I wouldn't let anyone be mean to me!",
+            "If I meet your Clanmates I'll give them a good swipe! The one you taught me!"
+        ]
+    ],
+    "they_df_sh_kit_R4": [
+        [
+            "you_shunned",
+            "they_kitten",
+            "any",
+            "they_blind",
+            "they_df"
+        ],
+        [
+            "[Something small leaps on you out of nowhere. Before you can instinctively swipe, though, you notice it's t_c looking mischievous.]",
+            "[They bite your ear hard enough to draw blood. You fall playfully down in defeat and tell them such.]",
+            "Ha! Gotcha y_c! That was way too easy!",
+            "[You'd forgotten that the kittens of the Dark Forest didn't abide by living rules. Unlike the kittens instructed to leave you alone, t_c is all over you still.]",
+            "[It's a nice reminder that you're not alone. And to watch your surroundings at all times...]",
+            "[... Your ear hurts.]"
+        ]
+    ],
+    "they_df_sh_kit_R5": [
+        [
+            "you_shunned",
+            "they_kitten",
+            "any",
+            "they_blind",
+            "you_blind",
+            "you_dftrainee",
+            "they_df"
+        ],
+        [
+            "[Despite your living Clanmates avoiding you, your Clanmates here in the Dark Forest haven't changed at all.]",
+            "[Here comes t_c now, pelt filthy from playing in the foul muck.]",
+            "y_c, come play with us! Well - the older cats are saying it's 'training'--",
+            "[t_c makes a funny face at the word.]",
+            "-- but it really is just a learning game like the queens used to have us play. But it's a really fun one! Let's go! You can be my teammate!"
+        ]
+    ],
+    "they_df_sh_kit_R6": [
+        [
+            "you_shunned",
+            "they_kitten",
+            "any",
+            "they_blind",
+            "you_blind",
+            "you_dftrainee",
+            "they_df"
+        ],
+        [
+            "I'm tiiiirrrred, y_c...",
+            "[t_c flops against you where you're laying down for a quick break. It's strange - all of the living kittens have been told to avoid you.]",
+            "[You nearly forgot those rules don't apply here. It's a pleasant reminder.]",
+            "I'm taking a nap... I'm taking a nap right here... You're nice and warm...",
+            "[A tiny purr rumbles from t_c as they settle in at your side. In your gratitude for the company, you spend some time grooming mud from their fur.]"
+        ]
     ]
 }

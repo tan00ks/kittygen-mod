@@ -2916,8 +2916,42 @@
             "[You settle into your nest, preparing yourself for a night of Dark Forest training.]",
             "[Next to you, t_c is snoring loudly.]"
         ]
-    ]
-        
-        
-        
+    ],
+    "they_df_sh_app_R1": [
+        [
+            "you_shunned",
+            "they_app",
+            "any",
+            "you_dftrainee",
+            "they_df"
+        ],
+        [
+            "Oh, there you are, y_c. Do you have a moment?",
+            "[You almost start to remind t_c that you're being shunned by the Clan. But this is the Dark Forest. Your punishment doesn't apply here.]",
+            "I wanted to practice a move my mentor taught me the other day. I thought you'd be the perfect cat to train with today.",
+            "Why? Well... why not?",
+            "I just thought of you first. If you don't want to, that's fine. I'll find someone else. It's no fur off my back.",
+            "[Your experience with isolation in the waking world has you quickly shake your head. Company is more than welcome now.]",
+            "Great! Let's go to the clearing over there. I'll explain the move on the way."
+        ]
+    ],
+    "they_df_sh_app_R2": [
+        [
+            "you_shunned",
+            "they_app",
+            "any",
+            "you_dftrainee",
+            "they_df"
+        ],
+        [
+            "[t_c is watching you thoughtfully. You ask if they need something.]",
+            "Huh? Oh, no. I'm just thinking. Er, can I ask you a question?",
+            "What's it like, being shunned by your Clan? I just can't imagine it.",
+            "Like, okay, I know it's a punishment, but, like, how? I like being left alone. If no one bothered me I'd be thrilled. I just don't understand why it bothers you.",
+            "It's not a punishment at all. Seriously. Kinda dumb way to try and teach you 'murder is wrong' like the star-blind preach.",
+            "And how could you let yourself be caught? For real, that was a dumb move. But hey, what do I know?",
+            "I suppose it's not my problem anyways. Not something I'll ever have to deal with. See you.",
+            "[... What just happened...?]"
+        ]
+    ] 
 }
