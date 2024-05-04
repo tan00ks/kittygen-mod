@@ -3030,7 +3030,7 @@
         ],
         "intro": [
             "[t_c is tearing all the moss in r_q’s nest to shreds.]",
-            "[Should … Should you try and stop them?]"
+            "[Should ... Should you try and stop them?]"
         ],
         "intro_choices": {
             "choice1": {
@@ -3163,9 +3163,9 @@
             "random_cat"
         ],
         "intro": [
-            "Erm … Hi.",
+            "Erm ... Hi.",
             "Maybe you should check in on r_c sometime. Do you do check-ins? I don’t actually know.",
-            "Um, anyways, they’re worrying me a little lately … sort of walking with a limp. I don’t know if it’s just in my head, or if they’re really hurt.",
+            "Um, anyways, they’re worrying me a little lately ... sort of walking with a limp. I don’t know if it’s just in my head, or if they’re really hurt.",
             "Either way, you should check."
         ],
         "intro_choices": {
@@ -3207,7 +3207,7 @@
         "intro": [
             "y_c. I have something for you.",
             "[t_c drops a smooth pebble at your paws.]",
-            "I … saw it on patrol, and thought you might like it to play with.",
+            "I ... saw it on patrol, and thought you might like it to play with.",
             "Do you like it?"
         ],
         "intro_choices": {
