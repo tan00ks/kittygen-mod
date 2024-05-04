@@ -975,7 +975,7 @@ class PatrolOutcome():
             
             for cat in patrol.new_cats[-1]:
                 if cat.dead:
-                    if cat.df and cat.dead_for > 10:
+                    if cat.dead_for > 10:
                         results.append(f"You have met {cat.name}.")
                     else:
                         results.append(f"{cat.name}'s ghost now wanders.")
@@ -1128,6 +1128,11 @@ class PatrolOutcome():
             if status is None:
                 status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
 
+        if "newstarcat" in attribute_list:
+        # gives a random status if none was specified in the patrol. kitten cannot be chosen randomly
+            if status is None:
+                status = choice(["elder", "elder", "elder", "elder", "elder", "apprentice", "warrior", "warrior", "warrior", "warrior", "warrior", "warrior", "mediator apprentice", "mediator", "mediator", "medicine cat apprentice", "medicine cat", "medicine cat", "medicine cat", "medicine cat", "queen's apprentice", "queen", "queen", "queen", "queen","leader"])
+
         #and age, dependant on status
             if status in "kitten":
                 age = randint(1,5)
@@ -1152,6 +1157,8 @@ class PatrolOutcome():
             cat_type = "former Clancat"
         elif "newdfcat" in attribute_list:
             cat_type = status
+        elif "newstarcat" in attribute_list:
+            cat_type = status
         else:
             cat_type = choice(['kittypet', 'loner', 'former Clancat'])
         
@@ -1169,6 +1176,8 @@ class PatrolOutcome():
                     chosen_backstory = choice(["oldstarclan1", "oldstarclan2", "oldstarclan3"])
             else:
                 chosen_backstory = choice(BACKSTORIES["backstory_categories"]["df_backstories"])
+        if "newstarcat" in attribute_list:
+            chosen_backstory = choice(BACKSTORIES["backstory_categories"]["starclan_backstories"])
         else:
             if status in ("kitten", "newborn"):
                 chosen_backstory = choice(BACKSTORIES["backstory_categories"]["abandoned_backstories"])
@@ -1225,6 +1234,12 @@ class PatrolOutcome():
                     thought = "Was startled by a new trainee"
                 else:
                     thought = "Is curious about the trainee they just met"
+
+        if "newstarcat" in attribute_list:
+            alive = False
+            outside = False
+            new_name = True
+            thought = "Is curious about the living cat they just met"
             
             
         
