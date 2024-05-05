@@ -333,5 +333,7 @@
 	"affair_success_pregnancy_chance": 20,
 	"affair_relationship_change_lb": 10,
 	"affair_relationship_change_ub": 30,
+	"murder_chance":-1,
+	"accomplice_chance":-1,
 	"debug_ensure_dialogue": ""
 }
