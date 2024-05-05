@@ -355,7 +355,7 @@ class TalkScreen(Screens):
         resource_dir = "resources/dicts/lifegen_talk/"
         possible_texts = {}
 
-        if cat.status not in ['loner', 'rogue', 'former Clancat', 'kittypet', 'exiled']:
+        if cat.status != 'exiled':
             with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
 
@@ -363,15 +363,21 @@ class TalkScreen(Screens):
             with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
                 possible_texts.update(ujson.loads(read_file.read()))
 
-        if cat.status not in ['kitten', "newborn"] and you.status not in ['kitten', 'newborn']:
-            with open(f"{resource_dir}general_no_kit.json", 'r') as read_file:
-                possible_texts2 = ujson.loads(read_file.read())
-                possible_texts.update(possible_texts2)
+        if cat.status in ['former Clancat', "rogue", "loner", "kittypet"]:
+            with open(f"{resource_dir}general_outsider.json", 'r') as read_file:
+                possible_texts4 = ujson.loads(read_file.read())
+                possible_texts.update(possible_texts4)
+        else:
 
-        if cat.status not in ['kitten', "newborn"] and you.status in ['kitten', 'newborn']:
-            with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
-                possible_texts3 = ujson.loads(read_file.read())
-                possible_texts.update(possible_texts3)
+            if cat.status not in ['kitten', "newborn"] and you.status not in ['kitten', 'newborn']:
+                with open(f"{resource_dir}general_no_kit.json", 'r') as read_file:
+                    possible_texts2 = ujson.loads(read_file.read())
+                    possible_texts.update(possible_texts2)
+
+            if cat.status not in ['kitten', "newborn"] and you.status in ['kitten', 'newborn']:
+                with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
+                    possible_texts3 = ujson.loads(read_file.read())
+                    possible_texts.update(possible_texts3)
 
         if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,3)==1:
             with open(f"{resource_dir}crush.json", 'r') as read_file:
@@ -458,14 +464,14 @@ class TalkScreen(Screens):
             if "they_app" in tags and cat.status not in ['apprentice', 'medicine cat apprentice', 'mediator apprentice', "queen's apprentice"]:
                 continue
             
-            if not any(t in tags for t in ["they_sc", "they_df", "they_ur"]) and cat.dead:
+            if not any(t in tags for t in ["they_dead", "they_sc", "they_df", "they_ur"]) and cat.dead:
                 continue
-            if not any(t in tags for t in ["you_sc", "you_df", "you_ur"]) and you.dead:
+            if not any(t in tags for t in ["you_dead", "you_sc", "you_df", "you_ur"]) and you.dead:
                 continue
 
-            if any(t in tags for t in ["they_sc", "they_df", "they_ur"]) and not cat.dead:
+            if any(t in tags for t in ["they_dead", "they_sc", "they_df", "they_ur"]) and not cat.dead:
                 continue
-            if any(t in tags for t in ["you_sc", "you_df", "you_ur"]) and not you.dead:
+            if any(t in tags for t in ["you_dead", "you_sc", "you_df", "you_ur"]) and not you.dead:
                 continue
 
             if "they_kittypet" in tags and not cat.status == "kittypet":
@@ -511,6 +517,8 @@ class TalkScreen(Screens):
             if "they_ur" in tags and not cat.outside:
                 continue
             if "you_ur" in tags and not you.outside:
+                continue
+            if "they_dead" in tags and not cat.dead:
                 continue
 
             murdered_them = False
