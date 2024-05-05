@@ -1725,6 +1725,19 @@ class TalkScreen(Screens):
             except:
                 return ""
         
+        if "d_c" in text:
+            if "d_c" in self.cat_dict:
+                text = text.replace("d_c", self.cat_dict["d_c"])
+            else:
+                try:
+                    dead_cat = Cat.all_cats.get(game.clan.starclan_cats[-1])
+                    if not dead_cat:
+                        return ""
+                    self.cat_dict["d_c"] = str(dead_cat.name)
+                    text = text.replace("d_c", str(dead_cat.name))
+                except:
+                    return ""
+        
         if "rsh_c" in text:
             random_cat = choice(self.get_living_cats())
             counter = 0

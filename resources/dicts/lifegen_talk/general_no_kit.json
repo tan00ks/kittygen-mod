@@ -14856,7 +14856,8 @@
     ],
     "revived_murderedyou_J1": [
         [
-            "murderedyou"
+            "murderedyou",
+            "any"
         ],
         [
             "What are you doing here?"
@@ -14865,7 +14866,8 @@
     "revived_murderedyou_J2": [
         [
             "murderedyou",
-            "they_shunned"
+            "they_shunned",
+            "any"
         ],
         [
             "What are you doing here?"
@@ -14875,7 +14877,8 @@
         [
             "murderedyou",
             "they_shunned",
-            "they_grieving"
+            "they_grieving",
+            "any"
         ],
         [
             "What are you doing here?"
@@ -14886,7 +14889,8 @@
             "murderedyou",
             "they_shunned",
             "they_grieving",
-            "grievingyou"
+            "grievingyou",
+            "any"
         ],
         [
             "Oh, StarClan, this... is too much for me."
@@ -15499,7 +15503,8 @@
     "youforgiven_J10": [
         [
             "they_forgiven",
-            "you_forgiven"
+            "you_forgiven",
+            "any"
         ],
         [
             "[It feels strange, sitting next to t_c, knowing both of your pasts.]",
@@ -16213,7 +16218,7 @@
             "they_sc",
             "any",
             "they_brooding",
-            "they_cool",
+            "cool",
             "you_blind"
             
         ],
@@ -16466,11 +16471,12 @@
             "[And being lucky enough to end up in the afterlife with t_c is just the prey on top.]"
         ]
     ],
-   "UR_H9": [
+    "UR_H9": [
         [
             "they_ur",
             "you_ur",
-            "neurotic"
+            "neurotic",
+            "any"
         ],
         [
             "I kinda like that I can snoop around in the living world and no one notices.",
@@ -17346,7 +17352,8 @@
             "they_dftrainee",
             "you_df",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "any"
         ],
         [
             "If StarClan cares so much about the Clans, why don't they have their own trainees?"
@@ -17357,7 +17364,8 @@
             "they_dftrainee",
             "you_df",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "any"
         ],
         [
             "If my Clan finds out that I'm training here, they'll understand, right?",
@@ -17369,7 +17377,8 @@
             "they_adult",
             "you_dftrainee",
             "they_not_dftrainee",
-            "sweet"
+            "sweet",
+            "any"
         ],
         [
             "... y_c?",
@@ -17384,7 +17393,8 @@
             "they_adult",
             "you_dftrainee",
             "they_not_dftrainee",
-            "sweet"
+            "sweet",
+            "any"
         ],
         [
             "[You wince as you wake up, last night's training was a bit too rough, and you're all scratched up.]",
@@ -17398,7 +17408,8 @@
             "they_adult",
             "you_dftrainee",
             "they_not_dftrainee",
-            "sweet"
+            "sweet",
+            "any"
         ],
         [
             "[You were sent outside to complete a task, t_c tagging along with you. Everything goes fine at first...]",
