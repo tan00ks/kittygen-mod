@@ -3443,7 +3443,7 @@ class Events:
                     fate = random.randint(1,3)
 
             # these numbers are kind of crazy but i wanted to keep the one randint
-            if fate in [1, 2, 5, 6, 10, 11]:
+            if fate in [1, 2, 3, 5, 6, 10, 11]:
                 cat.shunned = 0
                 cat.forgiven = game.clan.age
                 cat.exiled = False
@@ -3533,7 +3533,7 @@ class Events:
 
                 game.cur_events_list.insert(0, Single_Event(text, "alert", involved_cats))
 
-            elif fate in [3, 4, 7, 12]:
+            elif fate in [7, 12]:
                 cat.outside = True
                 cat.status = "former Clancat"
                 game.clan.add_to_outside(cat)
