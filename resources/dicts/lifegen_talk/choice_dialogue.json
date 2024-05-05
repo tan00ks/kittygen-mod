@@ -2948,7 +2948,7 @@
         ],
         "no": [
             "Hmph. Of course not. How typical.",
-            "Any longer and I’ll start to believe our ancestors have given up on us."
+            "Any longer and I'll start to believe our ancestors have given up on us."
         ]
     },
     "brooding_bullyAJ": {
@@ -2961,7 +2961,7 @@
             "random_cat"
         ],
         "intro": [
-            "What’s the matter, y_c? Missing something?",
+            "What's the matter, y_c? Missing something?",
             "[t_c holds your favorite moss-ball high above your head.]",
             "What are you gonna do about it? Come take it from me?",
             "Hahahaha!"
@@ -3029,8 +3029,8 @@
             "they_younger"
         ],
         "intro": [
-            "[t_c is tearing all the moss in r_q’s nest to shreds.]",
-            "[Should … Should you try and stop them?]"
+            "[t_c is tearing all the moss in r_q's nest to shreds.]",
+            "[Should ... Should you try and stop them?]"
         ],
         "intro_choices": {
             "choice1": {
@@ -3163,9 +3163,9 @@
             "random_cat"
         ],
         "intro": [
-            "Erm … Hi.",
-            "Maybe you should check in on r_c sometime. Do you do check-ins? I don’t actually know.",
-            "Um, anyways, they’re worrying me a little lately … sort of walking with a limp. I don’t know if it’s just in my head, or if they’re really hurt.",
+            "Erm ... Hi.",
+            "Maybe you should check in on r_c sometime. Do you do check-ins? I don't actually know.",
+            "Um, anyways, they're worrying me a little lately ... sort of walking with a limp. I don't know if it's just in my head, or if they're really hurt.",
             "Either way, you should check."
         ],
         "intro_choices": {
@@ -3207,7 +3207,7 @@
         "intro": [
             "y_c. I have something for you.",
             "[t_c drops a smooth pebble at your paws.]",
-            "I … saw it on patrol, and thought you might like it to play with.",
+            "I ... saw it on patrol, and thought you might like it to play with.",
             "Do you like it?"
         ],
         "intro_choices": {

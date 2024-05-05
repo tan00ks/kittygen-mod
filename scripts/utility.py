@@ -498,7 +498,7 @@ def create_new_cat(Cat,
         if not alive:
             new_cat.die()
 
-        if df:
+        if not alive and df:
             new_cat.df = True
         else:
         # give apprentice aged cat a mentor
@@ -518,6 +518,10 @@ def create_new_cat(Cat,
         if new_cat.df:
             new_cat.dead_for = randint(90,190)
             new_cat.dead = True
+            new_cat.status = status
+
+        if new_cat.dead and not new_cat.df and not new_cat.outside:
+            new_cat.dead_for = randint(90,190)
             new_cat.status = status
      
 
