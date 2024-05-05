@@ -114,7 +114,8 @@
             "from_parent",
             "you_orphaned",
             "they_ur",
-            "you_sc"
+            "you_sc",
+            "any"
         ],
         [
             "[t_c drifts to where you stand. They tilt their head and smile warily.]",
@@ -600,7 +601,8 @@
             "from_your_kit",
             "they_grieving",
             "you_grieving",
-            "dead_close"
+            "dead_close",
+            "any"
         ],
         [
             "y_c...",
@@ -627,7 +629,7 @@
             "they_sc",
             "you_df",
             "they_kitten",
-            "You_any",
+            "you_any",
             "you_blind",
             "they_blind"
         ],
@@ -822,12 +824,13 @@
     "elder_H1": [
         [
             "they_elder",
-            "you_younger",
+            "they_older",
             "you_blind",
             "they_blind",
             "introspective",
             "stable",
-            "upstanding"
+            "upstanding",
+            "any"
         ],
         [
             "Legends are lessons that ring with truth. They're not just stories.",
@@ -957,7 +960,8 @@
         [
             "you_grieving",
             "from_mate",
-            "they_blind"
+            "they_blind",
+            "any"
         ],
         [
             "It's quiet. You're quiet.",
@@ -1004,7 +1008,8 @@
             "introspective",
             "unabashed",
             "they_sc",
-            "you_sc"
+            "you_sc",
+            "any"
         ],
         [
             "Do you ever wonder what the Dark Forest cats are doing, in that vile nature they call home after death?",
@@ -1021,7 +1026,8 @@
             "unabashed",
             "you_clanborn",
             "you_clanfounder",
-            "you_originallyanotherclan"
+            "you_originallyanotherclan",
+            "any"
         ],
         [
             "Oh, hit the road, Jack.",
@@ -1036,7 +1042,8 @@
             "they_sc",
             "you_sc",
             "cool",
-            "introspective"
+            "introspective",
+            "any"
         ],
         [
             "[You have been feeling down lately, and ask t_c how they're so calm about being away from their loved ones who are still alive.]",
@@ -1053,8 +1060,8 @@
         [
             "from_mentor",
             "they_mediator",
-            "you_mediator_apprentince",
-            "you_apprentince",
+            "you_mediator_apprentice",
+            "you_apprentice",
             "they_leader",
             "you_neurotic",
             "you_blind"

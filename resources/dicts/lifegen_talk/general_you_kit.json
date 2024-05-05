@@ -2287,7 +2287,8 @@
         [
             "you_shunned",
             "they_older",
-            "they_deaf"
+            "they_deaf",
+            "any"
         ],
         [
             "[t_c looks at you sceptically, like they're trying to figure something out.]"

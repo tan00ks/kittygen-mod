@@ -2896,8 +2896,9 @@
             "they_dftrainee",
             "you_df",
             "they_app",
-                    "you_blind",
-                    "they_blind"
+            "any",
+            "you_blind",
+            "they_blind"
         ],
         [
             "If... If I don't want to join the Dark Forest anymore, what do I do? Is there someone I can talk to?",
@@ -2953,5 +2954,5 @@
             "I suppose it's not my problem anyways. Not something I'll ever have to deal with. See you.",
             "[... What just happened...?]"
         ]
-    ] 
+    ]
 }
