@@ -1506,5 +1506,244 @@
             "[They gently nudge you with their muzzle, and you squirm, their touch feeling like wisps of wind.]",
             "I'll leave you be, I'm sure somecat is looking for you."
         ]
+    ],
+    "newborn_1dead_dead": [
+        [
+            "Any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_2dead_dead": [
+        [
+            "Any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_3dead_dead": [
+        [
+            "Any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_4dead_dead": [
+        [
+            "Any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_5dead_dead": [
+        [
+            "Any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_6dead_dead": [
+        [
+            "Any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_7dead_dead": [
+        [
+            "Any",
+            "insult",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_11dead_dead": [
+        [
+            "any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_12dead_dead": [
+        [
+            "any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_13dead_dead": [
+        [
+            "any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_14dead_dead": [
+        [
+            "any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_15dead_dead": [
+        [
+            "any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_16dead_dead": [
+        [
+            "any",
+            "you_dead",
+            "they_dead",
+            "they_outside"
+        ],
+        [
+            "Grr..."
+        ]
+    ],
+    "newborn_1dead": [
+        [
+            "Any",
+            "they_dead"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_2dead": [
+        [
+            "Any",
+            "they_dead"
+        ],
+        [
+            "Meow!"
+        ]
+    ],
+    "newborn_3dead": [
+        [
+            "Any",
+            "they_dead"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_4dead": [
+        [
+            "Any",
+            "they_dead"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_5dead": [
+        [
+            "Any",
+            "they_dead"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
+    ],
+    "newborn_1new": [
+        [
+            "newborn",
+            "you_dead",
+            "they_dead"
+        ],
+        [
+            "Mew?"
+        ]
+    ],
+    "newborn_2new": [
+        [
+            "Any"
+        ],
+        [
+            "newborn",
+            "you_dead",
+            "they_dead"
+        ]
+    ],
+    "newborn_3new": [
+        [
+            "newborn",
+            "you_dead",
+            "they_dead"
+        ],
+        [
+            "Purrrrr..."
+        ]
+    ],
+    "newborn_4new": [
+        [
+            "newborn",
+            "you_dead",
+            "they_dead"
+        ],
+        [
+            "Mrow!"
+        ]
+    ],
+    "newborn_5new": [
+        [
+            "newborn",
+            "you_dead",
+            "they_dead"
+        ],
+        [
+            "MROOOOOOOOW!!!!!!!!"
+        ]
     ]
 }
