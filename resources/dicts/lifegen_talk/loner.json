@@ -3,7 +3,11 @@
         [
             "they_dead",
             "you_dead",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind",
+            "you_deaf",
+            "they_deaf"
         ],
         [
             "This isn't what I expected from the afterlife."
@@ -12,10 +16,42 @@
     "dead_loner_J2": [
         [
             "they_dead",
-            "any"
+            "any",
+            "you_blind",
+            "they_blind",
+            "you_deaf",
+            "they_deaf"
         ],
         [
             "This isn't what I expected from the afterlife."
         ]
-    ]
+    ],
+    "sc_ur_loner_Ren1": [
+        [
+            "you_sc",
+            "they_loner",
+            "they_ur",
+            "any"
+        ],
+        [
+            "Oh- I haven't seen you before. Did you get lost?",
+            "[You finally glance around at your surroundings. Ah, yes, you definitely have gotten yourself lost.]",
+            "[You look at t_c. They seem like they know the area better than you.]",
+            "[You ask for their help home and t_c happily points you in the right direction.]"
+        ]
+    ],
+    "sc_ur_loner_c": [
+        [
+            "you_sc",
+            "they_loner",
+            "they_ur",
+            "any",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "What's your name? y_c? Oh, what a pretty name.",
+            "What do you think my name would be if I were a Clan cat?"
+        ]
+    ]  
 }

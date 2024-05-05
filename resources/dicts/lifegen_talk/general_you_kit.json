@@ -3960,5 +3960,49 @@
         [
             "Poor thing..."
         ]
-    ]
+    ],
+    "urnew_sckit_R3": [
+        [
+            "newborn",
+            "they_kitten",
+            "you_ur",
+            "they_sc"
+        ],
+        [
+            "Hello y_c! How are you today?",
+            "Oh, you've got a funny look on your face, umm... Okay...Oh! Are you wondering why I'm here and not in StarClan?",
+            "I got permission to come visit you! Isn't that great?",
+            "Heehee, we're friends y_c, so of course I'll come visit. But it was a really long walk so I'm tired! Let's take a nap before we play."
+        ]
+    ],
+    "urnew_sckit_R4": [
+        [
+            "newborn",
+            "they_kitten",
+            "you_ur",
+            "they_sc",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "[t_c seems lost in thought at the border. You squeak to catch their attention.]",
+            "y_c! You scared me! I thought you were one of those meanie dark muddy cats! Whew, I thought they were gonna get me...",
+            "But it's just you. How are you y_c?"
+        ]
+    ],
+    "scnew_urkit_R5": [
+        [
+            "newborn",
+            "they_kitten",
+            "you_ur",
+            "they_sc",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "[t_c has joined you for a crawl along the border. They're literally crawling alongside you.]",
+            "This is sooooooo sloooooooooooooow y_c! Crawl faster!",
+            "[You try, but you have tiny legs.]"
+        ]
+    ]    
 }

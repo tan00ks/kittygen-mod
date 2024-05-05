@@ -19,5 +19,125 @@
             "My housefolk got a dog recently.",
             "I miss them, but, wow... I'm glad I don't have to deal with that."
         ]
-    ]
+    ],
+    "dead_kittypet_J3": [
+        [
+            "they_ur",
+            "any",
+            "no_kit",
+            "they_kittypet"
+        ],
+        [
+            "You know, the way you Clan cats live your lives is... interesting.",
+            "Why not just find some housefolk? They're very nice, and you can enjoy all sorts of things, like warm blankets, free food, and all the cuddles you want.",
+            "Why are you making that face?"
+        ]
+    ],
+    "dead_kittypet_J4": [
+        [
+            "they_ur",
+            "any",
+            "they_kitten",
+            "they_kittypet"
+        ],
+        [
+            "Hi! Um, I think I lost my housefolk. You wouldn't know where they are, would you?",
+            "Oh, housefolk are, like, these big cats with no fur, and they walk on their back paws, and they have these big warm dens full of lots of stuff!",
+            "Mine are very nice. They were very happy to have me, I just don't know where they went...",
+            "[You tell the kit that you're sorry, but you don't think you can help them.]",
+            "Oh, okay, that's fine. I'll keep looking."
+        ]
+    ],
+    "dead_kittypet_J5": [
+        [
+            "they_ur",
+            "any",
+            "they_kittypet"
+        ],
+        [
+            "[You find t_c near the Clan border, staring off into the trees.]",
+            "Oh! Hi, y_c. I'm just... looking.",
+            "I lost my housefolk forever ago, and I feel like I'll never find them, when I look at how big the world is.",
+            "Do you think they're around here, somewhere? They must be so sad without me..."
+        ]
+    ],
+    "dead_kittypet_J6": [
+        [
+            "they_ur",
+            "any",
+            "they_kittypet",
+            "they_kitten",
+            "you_not_kit"
+        ],
+        [
+            "y_c! y_c! Look, look, look!",
+            "[As soon as they catch sight of you, t_c turns and sprints away. You run to catch up, almost losing their translucent pelt in the scenery.]",
+            "[They stop short of a weird hole in the ground and point to it.]",
+            "Here! Look! It's a pawprint from some housefolk! There's a bunch of them! They came from this way!",
+            "They don't smell familiar, but, maybe they're from my housefolk, and they've finally come looking for me!",
+            "[You ensure t_c that, yes, maybe that's true, and at the same time, make a mental note to inform the rest of the Clan about Twolegs on the territory.]"
+        ]
+    ],
+    "car_c": [
+        [
+            "you_sc",
+            "they_kittypet",
+            "they_ur",
+            "any"
+        ],
+        [
+            "[t_c is watching the Thunderpath.]",
+            "Sometimes I just sit here and make sure that the cars don't hit any cats.",
+            "They're usually pretty smart and slow down when they see anyone crossing the road... but I watch just in case.",
+            "[You don't understand most of the words that t_c is meowing.]"
+        ]
+    ],
+    "you_sc_they_ur_CM1": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "you_sc",
+            "no_kit" 
+        ],
+        [
+            "[You see a curious t_c peeking their head over the border. With a graceful leap, their misty paws hit the star-littered ground.]",
+            "Oh! Hello there!",
+            "Jee, you Clan cats are less scary than I thought you were.",
+            "Sad that I only figured that out once... you know...",
+            "[You offer the kittypet to hunt with you in StarClan for a while, and they cautiously accept, allowing you to show them the ropes. After a few catches, they return to their side of the border.]", 
+            "Thank you, y_c! I had a lovely time, but I have to go back to watching over my housefolk. They still need me."
+        ]
+    ],
+    "sckit_urnew_R1": [
+        [
+            "kitten",
+            "they_newborn",
+            "you_sc",
+            "they_ur",
+            "they_kittypet"
+        ],
+        [
+            "Mewwww...",
+            "[Oh! A tiny kittypet kit has wandered to the border you were playing at.]",
+            "Mew? Mew!",
+            "[They toddle as fast as they can to your side and cuddle in. Maybe they're not a StarClan cat... But you can give them some company!]",
+            "[t_c drifts to sleep. Soon enough, so do you. When a queen finds you all alone later you don't mention the strange little visitor.]"
+        ]
+    ],
+    "sckit_urnew_R2": [
+        [
+            "kitten",
+            "they_newborn",
+            "you_sc",
+            "they_ur",
+            "they_kittypet"
+        ],
+        [
+            "[You're retrieving a moss-ball from near the border when you notice a newborn kittypet kit with transparent, misty fur that waves softly.]",
+            "Mew?",
+            "Mew mew!",
+            "[They bap the mossball with a teeny tiny paw! Though they can't play properly, you invite t_c to join you and your friends for a bit. They're content with company.]",
+            "[It's sad to see them go later.]"
+        ]
+    ] 
 }
