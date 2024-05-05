@@ -376,6 +376,11 @@ class TalkScreen(Screens):
                     possible_texts2 = ujson.loads(read_file.read())
                     possible_texts.update(possible_texts2)
 
+            if cat.status not in ["newborn"] and you.status not in ['newborn']:
+                with open(f"{resource_dir}general_no_newborn.json", 'r') as read_file:
+                    possible_texts4 = ujson.loads(read_file.read())
+                    possible_texts.update(possible_texts4)
+
             if cat.status not in ['kitten', "newborn"] and you.status in ['kitten', 'newborn']:
                 with open(f"{resource_dir}general_you_kit.json", 'r') as read_file:
                     possible_texts3 = ujson.loads(read_file.read())

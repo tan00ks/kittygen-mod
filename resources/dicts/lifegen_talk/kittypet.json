@@ -20,6 +20,155 @@
             "I miss them, but, wow... I'm glad I don't have to deal with that."
         ]
     ],
+    "you_living_they_outsider_sc_CM1": [
+        [
+            "they_sc",
+            "any"
+        ],
+        [
+            "[t_c is staring around them, their eyes wide as they watch starry-pelted cats walk by. Suddenly, they turn to you, seeming surprised.]",
+            "Oh! t_c! Are you -- No, it's not your time yet.",
+            "[You slowly recognize that this is a cat that you've never seen nor heard of before. You gently question why they're here.]",
+            "I don't know, but no one seems to mind.",
+            "No matter that I wasn't one of you in life, if I ended up here... It must be my duty to protect you.",
+            "So I will."
+        ]
+    ],
+    "live_df_ps_1": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "How curious... a creature, roaming these rooted confinements.",
+            "Do not be afraid, your fear will not aid you. I had to learn that the hard way, alone."
+        ]
+    ],
+    "live_df_ps_2": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "It seems you are lost in more ways than one.",
+            "As am I, I suppose we have that much in common. Lucky you."
+        ]
+    ],
+    "live_df_ps_3": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "You can run as much as you'd like.",
+            "In time, the trees will start to whisper misguidance to you.",
+            "Then, you will never find your way home."
+        ]
+    ],
+    "live_df_ps_4": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "I've seen wondrous lands, even whilst alone and afraid.",
+            "It makes me bitter, you know. Knowing all that is out there...",
+            "Yet, the place I was supposed to call home is the same that drags me here."
+        ]
+    ],
+    "live_df_ps_5": [
+        [
+            "they_df",
+            "any"
+        ],
+        [
+            "You can't trust anyone, I learnt that out there.",
+            "You shouldn't even trust me.."
+        ]
+    ],
+    "dead_outsider_J7": [
+        [
+            "they_df",
+            "any",
+            "no_kit"
+        ],
+        [
+            "How awful must I have been, to end up in the hell for a belief that I didn't even hold?",
+            "[t_c chuckles.]",
+            "Guess I'd better start learning some of this 'Clan' stuff. Hey, wanna teach me?"
+        ]
+    ],
+    "living_ur_kit_Guy1": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "kitten",
+            "newborn"
+        ],
+        [
+            "Do you have a family, little one?",
+            "Oh... you're one of them. I'm glad you have someone to look out for you."
+        ]
+    ],
+    "living_ur_Guy2": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "any"
+        ],
+        [
+            "[t_c visibly flinches when they see you, their wispy, otherworldly pelt shaking.]",
+            "Oh- a Clancat! I didn't know I was on your territory... or that you could see me.",
+            "[The kittypet seems to disappear into mist in front of you. You can't help but wonder where they go.]"
+        ]
+    ],
+    "ur_parent_newborn_CM1": [
+        [
+            "newborn",
+            "kitten",
+            "they_ur",
+            "any",
+            "from_parent"
+        ],
+        [
+            "Look, look! t_m!",
+            "I told you that they were safe, even when they're so far away...",
+            "Now what did those nice cats name you again? y_c? Strange... but beautiful.",
+            "Just like you, my kit."
+        ]
+    ],
+    "living_to_ur_kittypet_CM1": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "any"
+        ],
+        [
+            "Eep!",
+            "[t_c startles when you approach, the cat crouching a bit as they cower away from you.]",
+            "[You assure the kittypet that you won't hurt them.]",
+            "Really? Isn't that what you 'Clan' cats do? I thought you all hated housecats...",
+            "[You bring up the fact it doesn't make much sense to chase off a cat that's already dead.]",
+            "You're right, I suppose. Sometimes I swear others can see me, too, though. Not everycat is so kind... thank you, but I should leave.",
+            "[You give t_c a light wave of your tail as they disappear into the horizon beyond, their wispy shape fading into nothing but a pale glow.]"
+        ]
+    ],
+    "living_to_ur_kittypet_CM2": [
+        [
+            "they_ur",
+            "they_kittypet",
+            "no_kit"
+        ],
+        [
+            "[You go out for a hunting trip, and upon a rock, basking in the early morning sunlight, sits a spirit, purring contently.]",
+            "[You move closer, and they tilt their head just enough to catch a glimpse of you, yawning.]",
+            "Isn't this weather wonderful?",
+            "You wouldn't believe how hard it is to feel warm like this anymore.",
+            "You should join me, while you can still enjoy it to its fullest.",
+            "[After a moment, you clamber up onto the rock, pressing yourself close to the ghostly cat. They purr, shifting themself aside to give you the full ray of sun.]",
+            "[It really is wonderful.]"
+        ]
+    ],
     "dead_kittypet_J3": [
         [
             "they_ur",
@@ -80,7 +229,7 @@
     ],
     "car_c": [
         [
-            "you_sc",
+            "you_dead",
             "they_kittypet",
             "they_ur",
             "any"
@@ -140,4 +289,59 @@
             "[It's sad to see them go later.]"
         ]
     ] 
+=======
+    "df_kittypet_c": [
+        [
+            "you_df",
+            "they_kittypet",
+            "they_ur",
+            "any"
+        ],
+        [
+            "[t_c approaches you, tail high and eyes bright.]",
+            "Hi! What are you doing here? Are you lost?",
+            "[It feels so strange to talk to a cat who isn't immediately hostile towards you. You aren't even sure how to respond.]"
+        ]
+    ],
+    "df_kittypet_c2": [
+        [
+            "you_df",
+            "they_kittypet",
+            "they_ur",
+            "any"
+        ],
+        [
+            "What's on my agenda today... Hm...",
+            "Well, I was going to go visit my Housefolk, see how they're doing. I think they've been lonely without me bothering them all day, haha! Someone's got to take care of them.",
+            "After that, I'll go say hi to the kits, and take a nap by the old oak. Or maybe I should go to the river instead? What do you think? I like the oak better but-",
+            "[You growl for this kittypet to just <i>stop talking</i>, but they ignore you and continue rambling on.]"
+        ]
+    ],
+    "UR_backstory_H1": [
+        [
+            "they_ur",
+            "you_ur",
+            "they_kittypet",
+            "any"
+        ],
+        [
+            "I think I'm struggling a bit without the Twolegs that took care of me.",
+            "I like to visit them sometimes... I know they can't see me but I'm at peace just watching them go about their lives."
+        ]
+    ],
+    "ur_ur_kittypet_Guy1": [
+        [
+            "you_ur",
+            "they_ur",
+            "they_kittypet",
+            "you_blind",
+            "they_blind",
+            "any"
+        ],
+        [
+            "Hello y_c!",
+            "Have you seen the new housefolk that moved in to your old home?",
+            "They brought a kitten with them!"
+        ]
+    ]
 }
