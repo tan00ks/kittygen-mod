@@ -358,8 +358,12 @@ class TalkScreen(Screens):
         if cat.status != 'exiled':
             with open(f"{resource_dir}{cat.status}.json", 'r') as read_file:
                 possible_texts = ujson.loads(read_file.read())
-                
-        if cat.status in ["rogue", "loner", "kittypet"]: # not former clancat-- they only get their status file
+
+        if cat.status not in ['loner', 'rogue', 'former Clancat', 'kittypet', 'exiled']:
+            with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
+                possible_texts.update(ujson.loads(read_file.read()))
+
+        if cat.status in ["rogue", "loner", "kittypet"]: # former clancats only get their own file so we can write general dialogue about not knowing what a clan is
             with open(f"{resource_dir}general_outsider.json", 'r') as read_file:
                 possible_texts4 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts4)
