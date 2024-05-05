@@ -6,7 +6,7 @@
             "any"
         ],
         [
-            "This isn't what I expected from the afterlife."
+            "This isn't what I expected from the afterlife. Was this what you were hoping for?"
         ]
     ],
     "dead_outsider_J2": [
@@ -15,7 +15,173 @@
             "any"
         ],
         [
-            "This isn't what I expected from the afterlife."
+            "I don't know why you can see me. It kind of freaks me out."
+        ]
+    ],
+    "dead_outsider_J3": [
+        [
+            "they_sc",
+            "you_ur",
+            "any"
+        ],
+        [
+            "I don't think it's fair that I'm over here, and you're not.",
+            "Maybe there's some way I could sneak you in..?",
+            "No, no, I couldn't do that. If I do, they might kick me out...",
+            "I'm sorry, y_c."
+        ]
+    ],
+    "dead_outsider_J4": [
+        [
+            "they_dead",
+            "you_shunned",
+            "any",
+            "they_blind",
+            "you_blind",
+            "no_kit"
+        ],
+        [
+            "Clans are cruel. This wouldn't be happening to you if you just left."
+        ]
+    ],
+    "dead_outsider_J5": [
+        [
+            "they_dead",
+            "grievingthem",
+            "you_grieving",
+            "any",
+            "they_deaf",
+            "they_blind",
+            "you_deaf",
+            "no_kit"
+        ],
+        [
+            "[t_c butts their ghostly head against yours.]",
+            "[You can't tell if being able to see them as a ghost makes you more happy or sad.]",
+            "[Their pelt is translucent, lacking any colour or feeling...]",
+            "[You miss the living t_c. So, so much.]"
+        ]
+    ],
+    "dead_outsider_J6": [
+        [
+            "they_dead",
+            "you_grieving",
+            "any",
+            "they_blind",
+            "you_blind",
+            "no_kit"
+        ],
+        [
+            "I'm sorry for your loss, y_c.",
+            "Clanmates... they really care for each other, don't they?"
+        ]
+    ],
+    "dead_outsider_J7": [
+        [
+            "they_df",
+            "any",
+            "no_kit"
+        ],
+        [
+            "How awful must I have been, to end up in the hell for a belief that I didn't even hold?",
+            "[t_c chuckles.]",
+            "Guess I'd better start learning some of this 'Clan' stuff. Hey, wanna teach me?"
+        ]
+    ],
+    "dead_outsider_J8": [
+        [
+            "they_df",
+            "you_sc",
+            "no_kit"
+        ],
+        [
+            "Do you StarClan cats think this is funny? You enjoy sending helpless cats to purgatory forever, even when they're not from a Clan?",
+            "I don't belong here. I've seen the ghosts that wander the living world. I'm supposed to be one of them."
+        ]
+    ],
+    "dead_outsider_J9": [
+        [
+            "they_df",
+            "you_ur",
+            "no_kit"
+        ],
+        [
+            "Hey, Clan cat.",
+            "Wanna swap places? I'll be a ghost, and you can join your Clan's afterlife. It's not fair for either of to be where we are, anyhow.",
+            "What? It's only fair! Come on!"
+        ]
+    ],
+    "dead_outsider_J10": [
+        [
+            "they_df",
+            "you_df",
+            "no_kit"
+        ],
+        [
+            "This sucks."
+        ]
+    ],
+    "dead_outsider_J11": [
+        [
+            "they_df",
+            "you_sc",
+            "kitten"
+        ],
+        [
+            "Hey, there, buddy.",
+            "How did you get over here? Is there an open spot at the border? Can you show me?"
+        ]
+    ],
+    "dead_outsider_J12": [
+        [
+            "they_df",
+            "you_ur",
+            "kitten"
+        ],
+        [
+            "Are... are you lost?",
+            "So am I."
+        ]
+    ],
+    "dead_outsider_J13": [
+        [
+            "they_df",
+            "you_df",
+            "kitten"
+        ],
+        [
+            "An outsider and a kit in the Dark Forest.",
+            "I think these 'StarClan' cats need to take a good look at who it really is they're sending to purgatory."
+        ]
+    ],
+    "dead_outsider_J14": [
+        [
+            "they_dead",
+            "you_shunned",
+            "grievingthem",
+            "you_grieving",
+            "any",
+            "no_kit",
+            "you_deaf",
+            "they_deaf"
+        ],
+        [
+            "[t_c gives you a sympathetic look.]"
+        ]
+    ],
+    "dead_outsider_J15": [
+        [
+            "they_dead",
+            "you_shunned",
+            "grievingthem",
+            "you_grieving",
+            "any",
+            "no_kit",
+            "you_blind",
+            "they_blind"
+        ],
+        [
+            "Aw, y_c. Bad moon, huh?"
         ]
     ]
 }

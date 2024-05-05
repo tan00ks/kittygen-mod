@@ -363,11 +363,13 @@ class TalkScreen(Screens):
             with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
                 possible_texts.update(ujson.loads(read_file.read()))
 
-        if cat.status in ['former Clancat', "rogue", "loner", "kittypet"]:
+        if cat.status in ["rogue", "loner", "kittypet"]: # former clancats only get their own file so we can write general dialogue about not knowing what a clan is
             with open(f"{resource_dir}general_outsider.json", 'r') as read_file:
                 possible_texts4 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts4)
         else:
+            with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
+                possible_texts.update(ujson.loads(read_file.read()))
 
             if cat.status not in ['kitten', "newborn"] and you.status not in ['kitten', 'newborn']:
                 with open(f"{resource_dir}general_no_kit.json", 'r') as read_file:
@@ -473,6 +475,7 @@ class TalkScreen(Screens):
                 continue
             if any(t in tags for t in ["you_dead", "you_sc", "you_df", "you_ur"]) and not you.dead:
                 continue
+
 
             if "they_kittypet" in tags and not cat.status == "kittypet":
                 continue
