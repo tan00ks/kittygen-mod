@@ -16060,8 +16060,8 @@
             "they_deaf"
         ],
         [
-            "[You feel the presence of another ghost. But they smell slightly different.]",
-            "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
+            "...",
+            "[t_c's sparkles are almost blinding.]"
         ]
     ],
     "you_ur_J11": [
@@ -16073,8 +16073,11 @@
             "they_blind"
         ],
         [
-            "[You feel the presence of another ghost. But they smell slightly different.]",
-            "[It must be a StarClan cat! You turn to the cat, but you're left spinning as the scent dissipates. They must have left.]"
+            "Is it better being stuck down here than up in StarClan, would you say?",
+            "I mean, no, you wouldn't know what StarClan is like to really say, but...",
+            "I don't know. It gets a bit boring up there sometimes. I like to feel the ground beneath me sometimes.",
+            "['Sometimes', they say. You'd like to feel clouds and sun and endless prey sometimes, too.]",
+            "[You hold your tongue. Best not to snap at a StarClan cat.]"
         ]
     ],
     "you_ur_J12": [
