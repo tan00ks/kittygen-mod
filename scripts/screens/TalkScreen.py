@@ -643,6 +643,9 @@ class TalkScreen(Screens):
             if "they_grieving" in tags and "grief stricken" not in cat.illnesses and not cat.dead:
                 continue
 
+            if "you_not_kit" in tags and game.clan.your_cat.moons < 6:
+                continue
+
             # Cluster tags
             if any(i in self.get_cluster_list() for i in tags):
                 if cluster1 not in tags and cluster2 not in tags and ("they_"+cluster1 not in tags) and ("they_"+cluster2 not in tags):
