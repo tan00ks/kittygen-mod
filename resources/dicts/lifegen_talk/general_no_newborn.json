@@ -1338,5 +1338,77 @@
             "Tch, isn't that a laugh. On today's list of things that will never happen: hedgehogs flying, and t_c visiting a shrink.",
             "Try this one on, sweetheart: 'mind your own business'. You got your baggage, and I got mine. Let's leave it at that."
         ]
+    ],
+    "general_shunned_you_Apprentice_CM1": [
+        [
+            "Any",
+            "both_shunned",
+            "apprentice",
+            "they_apprentice"
+        ],
+        [
+            "y_c?",
+            "[You look over to t_c, sitting only a bit away from you.]",
+            "Do... you think we'll ever get to be warriors?",
+            "I know what I did was terrible, what <i>we</i> did was terrible. But, surely, they.... c_nClan wouldn't...",
+            "[t_c breaks down sobbing before you even manage to get a word in.]"
+        ]
+    ],
+    "df_living_you_shunned_CM1": [
+        [
+            "any",
+            "you_shunned",
+            "they_kitten",
+            "they_df"
+        ],
+        [
+            "Why are they all so mad at you, y_c?",
+            "[t_c catches you off-guard, their tiny pelt sticky with muck as they press in closer to you.]",
+            "You've seen the way they look at you, right?",
+            "I thought Clanmates were supposed to stick together forever and ever.",
+            "But now you're here with me, and I would never act like that! I promise!"
+        ]
+    ],
+    "general_they_shunned_mediator_CM1": [
+        [
+            "Any",
+            "they_shunned",
+            "they_mediator"
+        ],
+        [
+            "My job in this clan is - <i>was</i> to solve problems.",
+            "[You watch as t_c presses their claws out, digging them into the ground below. Suddenly, they swing their head around, glaring at you.]",
+            "I <i>solved</i> the problem.",
+            "Cats like you, y_c, would never understand."
+        ]
+    ],
+    "general_kit_they_shunned_CM1": [
+        [
+            "any",
+            "they_shunned",
+            "they_kitten",
+            "kitten"
+        ],
+        [
+            "[t_c comes running up to you, their little eyes bright with excitement.]",
+            "I know I'm supposed to not talk to anyone, but that's SO boring, and I managed to slip past r_w! So now we can play, okay?",
+            "[You watch as r_w storms back into the main nursery, taking a struggling t_c back into their separate corner.]",
+            "y_c!!"
+        ]
+    ],
+    "general_you_shunned_mate_CM1": [
+        [
+            "any",
+            "you_shunned",
+            "from_mate"
+        ],
+        [
+            "[t_c can barely look at you. You see them glance to you, not searching for your eyes.]",
+            "Why did you do it, y_c? I loved you, I... I still love you.",
+            "No- no! Stay away from me! How dare you do this - you killed them!",
+            "I just can't wrap my head around it, y_c, how a cat I thought I knew so well... why?",
+            "Did you do it for me? Did you think I wanted this? Or was it for your own sick desires?!",
+            "Whatever, I don't care. Don't even look at me. StarClan forbid I ever sink to the level where I love you again."
+        ]
     ]
 }
