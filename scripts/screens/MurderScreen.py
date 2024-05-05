@@ -70,7 +70,13 @@ class MurderScreen(Screens):
             elif event.ui_element == self.confirm_mentor and self.selected_cat:
                     r = randint(1,100)
                     accompliced = False
-                    if r < self.get_accomplice_chance(game.clan.your_cat, self.selected_cat):
+                    chance = self.get_accomplice_chance(game.clan.your_cat, self.selected_cat)
+                    if game.config["accomplice_chance"] != -1:
+                        try:
+                            chance = game.config["accomplice_chance"]
+                        except:
+                            pass
+                    if r < chance:
                         accompliced = True
                         if 'accomplices' in game.switches:
                             game.switches['accomplices'].append(self.selected_cat.ID)
@@ -276,6 +282,11 @@ class MurderScreen(Screens):
         r = randint(0,100)
         r2 = randint(-10, 10)
         chance = self.get_kill(game.clan.your_cat, self.cat_to_murder, accomplice, accompliced)
+        if game.config["murder_chance"] != -1:
+            try:
+                chance = game.config["murder_chance"]
+            except:
+                pass
         murdered = r < max(5, chance + r2)
         you = game.clan.your_cat
         cat_to_murder = self.cat_to_murder
@@ -667,6 +678,11 @@ class MurderScreen(Screens):
                 if not self.selected_cat.dead and not self.selected_cat.outside:
                     c_text = ""
                     chance = self.get_accomplice_chance(game.clan.your_cat, self.selected_cat)
+                    if game.config["accomplice_chance"] != -1:
+                        try:
+                            chance = game.config["accomplice_chance"]
+                        except:
+                            pass
                     if chance < 30:
                         c_text = "very low"
                     elif chance < 40:
