@@ -110,7 +110,8 @@
     "living_ur_loner_Guy1": [
         [
             "they_ur",
-            "they_loner"
+            "they_loner",
+            "any"
         ],
         [
             "Are you happy in a clan?",
@@ -154,7 +155,8 @@
         [
             "they_ur",
             "they_loner",
-            "you_ur"
+            "you_ur",
+            "any"
         ],
         [
             "Still wandering?",

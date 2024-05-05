@@ -272,7 +272,8 @@
         [
             "they_ur",
             "you_ur",
-            "they_kittypet"
+            "they_kittypet",
+            "any"
         ],
         [
             "I think I'm struggling a bit without the Twolegs that took care of me.",
@@ -285,7 +286,8 @@
             "they_ur",
             "they_kittypet",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "any"
         ],
         [
             "Hello y_c!",

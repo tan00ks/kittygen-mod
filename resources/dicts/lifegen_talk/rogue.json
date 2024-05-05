@@ -285,7 +285,8 @@
         [
             "they_ur",
             "they_rogue",
-            "you_ur"
+            "you_ur",
+            "any"
         ],
         [
             "We may be dead, but I still expect you to respect my territory."
@@ -295,7 +296,8 @@
         [
             "they_ur",
             "they_rogue",
-            "you_ur"
+            "you_ur",
+            "any"
         ],
         [
             "Cross that line, and you cross <i>me</i>."
