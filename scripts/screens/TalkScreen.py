@@ -480,6 +480,13 @@ class TalkScreen(Screens):
             if "they_loner" not in tags and cat.status == "loner":
                 continue
 
+            if "they_outside" in tags and not cat.outside:
+                continue
+            if "they_dead" in tags and not cat.dead:
+                continue
+            if "you_dead" in tags and not you.dead:
+                continue
+
             if "you_dftrainee" in tags and not you.joined_df:
                 continue
 
