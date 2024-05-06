@@ -1706,6 +1706,16 @@
             "Mew?"
         ]
     ],
+    "newborn_2new": [
+        [
+            "newborn",
+            "you_dead",
+            "they_dead"
+        ],
+        [
+            "[t_c is rolling around in the grass.]"
+        ]
+    ],
     "newborn_3new": [
         [
             "newborn",

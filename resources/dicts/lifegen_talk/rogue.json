@@ -96,21 +96,7 @@
             "t_c. It meant a lot to me, even though it wasn't as grand as a Clancat's.",
             "I take careful steps to ensure I never forget it."
         ]
-    ],
-    "you_living_they_outsider_sc_CM1": [
-        [
-            "they_sc",
-            "any"
-        ],
-        [
-            "[t_c is staring around them, their eyes wide as they watch starry-pelted cats walk by. Suddenly, they turn to you, seeming surprised.]",
-            "Oh! t_c! Are you -- No, it's not your time yet.",
-            "[You slowly recognize that this is a cat that you've never seen nor heard of before. You gently question why they're here.]",
-            "I don't know, but no one seems to mind.",
-            "No matter that I wasn't one of you in life, if I ended up here... It must be my duty to protect you.",
-            "So I will."
-        ]
-    ],
+   ],
     "live_df_ps_1": [
         [
             "they_df",
