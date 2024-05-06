@@ -363,7 +363,8 @@ class TalkScreen(Screens):
             with open(f"{resource_dir}choice_dialogue.json", 'r') as read_file:
                 possible_texts.update(ujson.loads(read_file.read()))
 
-        if cat.status in ["rogue", "loner", "kittypet"]: # former clancats only get their own file so we can write general dialogue about not knowing what a clan is
+        if cat.status in ["rogue", "loner", "kittypet"]:
+            # former clancats only get their own file so we can write general dialogue about not knowing what a clan is
             with open(f"{resource_dir}general_outsider.json", 'r') as read_file:
                 possible_texts4 = ujson.loads(read_file.read())
                 possible_texts.update(possible_texts4)
@@ -386,10 +387,10 @@ class TalkScreen(Screens):
                     possible_texts3 = ujson.loads(read_file.read())
                     possible_texts.update(possible_texts3)
 
-        if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,3)==1:
-            with open(f"{resource_dir}crush.json", 'r') as read_file:
-                possible_texts3 = ujson.loads(read_file.read())
-                possible_texts.update(possible_texts3)
+            if cat.status not in ['kitten', 'newborn'] and you.status not in ['kitten', 'newborn'] and randint(1,3)==1:
+                with open(f"{resource_dir}crush.json", 'r') as read_file:
+                    possible_texts3 = ujson.loads(read_file.read())
+                    possible_texts.update(possible_texts3)
 
         return self.filter_texts(cat, possible_texts)
 
@@ -488,12 +489,15 @@ class TalkScreen(Screens):
                 continue
             if "they_loner" in tags and not cat.status == "loner":
                 continue
-            if "they_kittypet" not in tags and cat.status == "kittypet":
-                continue
-            if "they_rogue" not in tags and cat.status == "rogue":
-                continue
-            if "they_loner" not in tags and cat.status == "loner":
-                continue
+
+            # if "they_kittypet" not in tags and cat.status == "kittypet":
+            #     continue
+            # if "they_rogue" not in tags and cat.status == "rogue":
+            #     continue
+            # if "they_loner" not in tags and cat.status == "loner":
+            #     continue
+
+            # the status files already separate these, so statuses can be untagged in general
 
             if "they_outside" in tags and not cat.outside:
                 continue
