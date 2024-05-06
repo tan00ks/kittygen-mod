@@ -246,14 +246,14 @@
             "they_ur",
             "they_kittypet",
             "you_sc",
-            "no_kit" 
+            "no_kit"
         ],
         [
             "[You see a curious t_c peeking their head over the border. With a graceful leap, their misty paws hit the star-littered ground.]",
             "Oh! Hello there!",
             "Jee, you Clan cats are less scary than I thought you were.",
             "Sad that I only figured that out once... you know...",
-            "[You offer the kittypet to hunt with you in StarClan for a while, and they cautiously accept, allowing you to show them the ropes. After a few catches, they return to their side of the border.]", 
+            "[You offer the kittypet to hunt with you in StarClan for a while, and they cautiously accept, allowing you to show them the ropes. After a few catches, they return to their side of the border.]",
             "Thank you, y_c! I had a lovely time, but I have to go back to watching over my housefolk. They still need me."
         ]
     ],
@@ -288,8 +288,7 @@
             "[They bap the mossball with a teeny tiny paw! Though they can't play properly, you invite t_c to join you and your friends for a bit. They're content with company.]",
             "[It's sad to see them go later.]"
         ]
-    ] 
-=======
+    ],
     "df_kittypet_c": [
         [
             "you_df",
