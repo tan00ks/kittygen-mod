@@ -1715,7 +1715,7 @@ class TalkScreen(Screens):
         # Your DF Mentor
         if "df_m_n" in text:
             if you.joined_df and not you.dead and you.df_mentor:
-                text = text.replace("df_m_n", Cat.all_cats.get(you.df_mentor))
+                text = text.replace("df_m_n", str(Cat.all_cats.get(you.df_mentor).name))
             else:
                 return ""
             
@@ -1728,7 +1728,7 @@ class TalkScreen(Screens):
         # Their DF metnor
         if "t_df_mn" in text:
             if cat.joined_df and not cat.dead and cat.df_mentor:
-                text = text.replace("df_m_n", Cat.all_cats.get(cat.df_mentor))
+                text = text.replace("df_m_n", str(Cat.all_cats.get(cat.df_mentor).name))
             else:
                 return ""
         
