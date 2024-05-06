@@ -2924,6 +2924,7 @@
     },
     "brooding_tomedappAJ1": {
         "tags": [
+            "no_kit",
             "medicine cat apprentice",
             "medicine cat",
             "brooding"
@@ -3124,7 +3125,7 @@
         ],
         "intro": [
             "Y'know, if you really think about it, not caring too much about anything is kinda like a superpower.",
-            "If you don't feel anything, then nothing can hurt you. Like a suit of armor around your heart, or something.",
+            "If you don't feel anything, then nothing can hurt you. Like a thicket of burrs around your heart, or something.",
             "Isn't it incredible, the things I come up with? We should really claim ownership over this technique, y_c. We could be making a fortune here."
         ],
         "intro_choices": {
