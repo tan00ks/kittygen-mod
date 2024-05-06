@@ -27,7 +27,8 @@
             "they_ur",
             "they_rogue",
             "you_sc",
-            "they_blind"
+            "they_blind",
+            "any"
         ],
         [
             "[You aren't surprised to see t_c at the border. Again.]",
@@ -37,14 +38,14 @@
             "[Somethings never change, even when you're dead.]"
         ]
     ],
-
-   "sc_urrogue_ps_1": [
+    "sc_urrogue_ps_1": [
         [
             "they_ur",
             "they_rogue",
             "you_sc",
             "you_deaf",
-            "they_deaf"
+            "they_deaf",
+            "any"
         ],
         [
             "[You feel eyes peering at you from the fog, wandering near the border of stars and mist.]",
@@ -52,13 +53,13 @@
             "[Though, once they see you've spotted them, they turn tail and run.]"
         ]
     ],
-
-   "sc_urrogue_ps_2": [
+    "sc_urrogue_ps_2": [
         [
             "they_ur",
             "they_rogue",
             "you_sc",
-            "they_blind"
+            "they_blind",
+            "any"
         ],
         [
             "Hello?",
@@ -67,12 +68,12 @@
             "Would you mind asking your StarClan friends if they used to know me?"
         ]
     ],
-
-   "sc_urrogue_ps_3": [
+    "sc_urrogue_ps_3": [
         [
             "they_ur",
             "they_rogue",
-            "you_sc"
+            "you_sc",
+            "any"
         ],
         [
             "[You find yourself a little lost, stumbling around the mist trying to find your way out.]",
@@ -81,14 +82,14 @@
             "[They guide you out, but they seem to disappear when you go to thank them.]"
         ]
     ],
-
-   "sc_urrogue_ps_4": [
+    "sc_urrogue_ps_4": [
         [
             "they_ur",
             "they_rogue",
             "you_sc",
             "you_blind",
-            "they_blind"
+            "they_blind",
+            "any"
         ],
         [
             "What was my name?",
