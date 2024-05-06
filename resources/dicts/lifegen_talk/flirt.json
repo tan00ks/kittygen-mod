@@ -2108,5 +2108,30 @@
         [
             "Maybe I could have liked you if you weren't so evil."
         ]
+    ],
+    "flirt_sh_J33": [
+        [
+            "Any",
+            "they_shunned",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "Oh, um... thank you..."
+        ]
+    ],
+    "flirt_sh_J34": [
+        [
+            "Any",
+            "they_shunned",
+            "grievingyou",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "What's going on..?"
+        ]
     ]
 }
