@@ -495,10 +495,11 @@ class InsultScreen(Screens):
             murdered_them = False
             if you.history:
                 if you.history.murder:
-                    for murder_event in you.history.murder["is_murderer"]:
-                        if cat.ID == murder_event.get("victim"):
-                            murdered_them = True
-                            break
+                    if "is_murderer" in you.history.murder:
+                        for murder_event in you.history.murder["is_murderer"]:
+                            if cat.ID == murder_event.get("victim"):
+                                murdered_them = True
+                                break
 
             # if murdered_them and "murderedthem" not in tags:
             #     continue
@@ -509,10 +510,11 @@ class InsultScreen(Screens):
             murdered_you = False
             if cat.history:
                 if cat.history.murder:
-                    for murder_event in cat.history.murder["is_murderer"]:
-                        if you.ID == murder_event.get("victim"):
-                            murdered_you = True
-                            break
+                    if "is_murderer" in cat.history.murder:
+                        for murder_event in cat.history.murder["is_murderer"]:
+                            if you.ID == murder_event.get("victim"):
+                                murdered_you = True
+                                break
 
             # if murdered_you and "murderedyou" not in tags:
             #     continue
