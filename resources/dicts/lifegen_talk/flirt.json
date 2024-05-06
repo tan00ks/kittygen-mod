@@ -2133,5 +2133,42 @@
         [
             "What's going on..?"
         ]
+    ],
+    "flirt_sh_J35": [
+        [
+            "Any",
+            "grievingyou",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "What's going on..?"
+        ]
+    ],
+    "flirt_sh_J36": [
+        [
+            "Any",
+            "they_shunned",
+            "they_grieving",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "What's going on..?"
+        ]
+    ],
+    "flirt_sh_J37": [
+        [
+            "Any",
+            "they_grieving",
+            "they_blind",
+            "you_blind",
+            "flirt"
+        ],
+        [
+            "What's going on..?"
+        ]
     ]
 }
