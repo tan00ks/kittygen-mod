@@ -1706,16 +1706,6 @@
             "Mew?"
         ]
     ],
-    "newborn_2new": [
-        [
-            "Any"
-        ],
-        [
-            "newborn",
-            "you_dead",
-            "they_dead"
-        ]
-    ],
     "newborn_3new": [
         [
             "newborn",
@@ -1746,5 +1736,5 @@
             "MROOOOOOOOW!!!!!!!!"
         ]
     ]
-    
+
 }
