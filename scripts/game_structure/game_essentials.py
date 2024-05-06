@@ -26,6 +26,9 @@ class Game():
     just_died = []  # keeps track of which cats died this moon via die()
 
     cur_events_list = []
+    next_events_list = []
+    other_events_list = []
+    your_events_list = []
     ceremony_events_list = []
     birth_death_events_list = []
     relation_events_list = []
@@ -134,7 +137,9 @@ class Game():
         'window_open': False,
         'skip_conditions': [],
         'show_history_moons': False,
-        'fps': 30
+        'fps': 30,
+        'windows_dict': [],
+        'continue_after_death': False
     }
     all_screens = {}
     cur_events = {}
@@ -442,6 +447,8 @@ class Game():
 
         copy_of_info = ""
         for cat in game.cat_to_fade:
+            if cat not in self.cat_class.all_cats:
+                continue
 
             inter_cat = self.cat_class.all_cats[cat]
 
@@ -500,7 +507,7 @@ class Game():
         Save current events list to events.json
         """
         events_list = []
-        for event in game.cur_events_list:
+        for event in game.cur_events_list + game.other_events_list:
             events_list.append(event.to_dict())
         game.safe_save(
             f"{get_save_dir()}/{game.clan.name}/events.json", events_list)

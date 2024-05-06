@@ -56,6 +56,11 @@ def json_load():
     for i, cat in enumerate(cat_data):
         try:
             
+            if "shunned" not in cat:
+                cat["shunned"] = False
+            if "revealed" in cat:
+                cat["forgiven"] = cat["revealed"]
+
             new_cat = Cat(ID=cat["ID"],
                         prefix=cat["name_prefix"],
                         suffix=cat["name_suffix"],
@@ -105,7 +110,9 @@ def json_load():
                 tint=cat["tint"] if "tint" in cat else "none",
                 scars=cat["scars"] if "scars" in cat else [],
                 accessory=cat["accessory"],
-                opacity=cat["opacity"] if "opacity" in cat else 100
+                opacity=cat["opacity"] if "opacity" in cat else 100,
+                accessories=cat["accessories"] if "accessories" in cat else [],
+                inventory = cat["inventory"] if "inventory" in cat else []
             )
             
             # Runs a bunch of apperence-related convertion of old stuff. 
@@ -144,6 +151,7 @@ def json_load():
             new_cat.no_mates = cat["no_mates"] if "no_mates" in cat else False
             new_cat.no_retire = cat["no_retire"] if "no_retire" in cat else False
             new_cat.exiled = cat["exiled"]
+            new_cat.shunned = cat["shunned"]
 
             if "skill_dict" in cat:
                 new_cat.skills = CatSkills(cat["skill_dict"])
@@ -169,12 +177,26 @@ def json_load():
             new_cat.apprentice = cat["current_apprentice"]
             new_cat.former_apprentices = cat["former_apprentices"]
             new_cat.df = cat["df"] if "df" in cat else False
-
+            new_cat.shunned = cat["shunned"] if "shunned" in cat else False
             new_cat.outside = cat["outside"] if "outside" in cat else False
             new_cat.faded_offspring = cat["faded_offspring"] if "faded_offspring" in cat else []
             new_cat.prevent_fading = cat["prevent_fading"] if "prevent_fading" in cat else False
             new_cat.favourite = cat["favourite"] if "favourite" in cat else False
-            
+            new_cat.w_done = cat["w_done"] if "w_done" in cat else False
+            new_cat.talked_to = cat["talked_to"] if "talked_to" in cat else False
+            new_cat.insulted = cat["insulted"] if "insulted" in cat else False
+            new_cat.flirted = cat['flirted'] if "flirted" in cat else False
+            new_cat.backstory_str = cat["backstory_str"] if "backstory_str" in cat else ""
+            new_cat.joined_df = cat["joined_df"] if "joined_df" in cat else False
+            new_cat.forgiven = cat["forgiven"] if "forgiven" in cat else 0
+            new_cat.revives = cat["revives"] if "revives" in cat else 0
+            new_cat.courage = cat["courage"] if "courage" in cat else 0
+            new_cat.intelligence = cat["intelligence"] if "intelligence" in cat else 0
+            new_cat.empathy = cat["empathy"] if "empathy" in cat else 0
+            new_cat.compassion = cat["compassion"] if "compassion" in cat else 0
+            new_cat.did_activity = cat["did_activity"] if "did_activity" in cat else False
+            new_cat.df_mentor = cat["df_mentor"] if "df_mentor" in cat else None
+            new_cat.df_apprentices = cat["df_apprentices"] if "df_apprentices" in cat else []
             if "died_by" in cat or "scar_event" in cat or "mentor_influence" in cat:
                 new_cat.convert_history(
                     cat["died_by"] if "died_by" in cat else [],
@@ -256,9 +278,9 @@ def csv_load(all_cats):
             # SPRITE: kitten(13) - apprentice(14) - warrior(15) - elder(16) - eye colour(17) - reverse(18)
             # - white patches(19) - pattern(20) - tortiebase(21) - tortiepattern(22) - tortiecolour(23) - skin(24) - skill(25) - NONE(26) - spec(27) - accessory(28) -
             # spec2(29) - moons(30) - mate(31)
-            # dead(32) - SPRITE:dead(33) - exp(34) - dead for _ moons(35) - current apprentice(36)
-            # (BOOLS, either TRUE OR FALSE) paralyzed(37) - no kits(38) - exiled(39)
-            # genderalign(40) - former apprentices list (41)[FORMER APPS SHOULD ALWAYS BE MOVED TO THE END]
+            # dead(32) - SPRITE:dead(33) - exp(34) - dead for _ moons(35) - shunned moons (36) current apprentice(37)
+            # (BOOLS, either TRUE OR FALSE) paralyzed(38) - no kits(39) - exiled(40)
+            # genderalign(41) - former apprentices list (42)[FORMER APPS SHOULD ALWAYS BE MOVED TO THE END]
             if i.strip() != '':
                 attr = i.split(',')
                 for x in range(len(attr)):
@@ -370,22 +392,27 @@ def csv_load(all_cats):
                 game.switches[
                     'error_message'] = '14There was an error loading cat # ' + str(
                     attr[0])
-                if len(attr) > 36 and attr[36] is not None:
-                    the_cat.apprentice = attr[36].split(';')
+                if len(attr) > 36:
+                    the_cat.dead_for = int(attr[36])
                 game.switches[
                     'error_message'] = '15There was an error loading cat # ' + str(
                     attr[0])
-                if len(attr) > 37:
-                    the_cat.pelt.paralyzed = bool(attr[37])
+                if len(attr) > 37 and attr[37] is not None:
+                    the_cat.apprentice = attr[37].split(';')
+                game.switches[
+                    'error_message'] = '15There was an error loading cat # ' + str(
+                    attr[0])
                 if len(attr) > 38:
-                    the_cat.no_kits = bool(attr[38])
+                    the_cat.pelt.paralyzed = bool(attr[38])
                 if len(attr) > 39:
-                    the_cat.exiled = bool(attr[39])
+                    the_cat.no_kits = bool(attr[39])
                 if len(attr) > 40:
-                    the_cat.genderalign = attr[40]
+                    the_cat.exiled = bool(attr[40])
+                if len(attr) > 41:
+                    the_cat.genderalign = attr[41]
                 if len(attr
-                       ) > 41 and attr[41] is not None:  # KEEP THIS AT THE END
-                    the_cat.former_apprentices = attr[41].split(';')
+                       ) > 42 and attr[42] is not None:  # KEEP THIS AT THE END
+                    the_cat.former_apprentices = attr[42].split(';')
         game.switches[
             'error_message'] = 'There was an error loading this clan\'s mentors, apprentices, relationships, or sprite info.'
         for inter_cat in all_cats.values():

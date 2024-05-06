@@ -35,86 +35,86 @@ class History:
         if "mentor" in self.mentor_influence:
             del self.mentor_influence["mentor"]
 
-        """ 
-        want save to look like
-        {
-        "beginning":{
-            "clan_born": bool,
-            "birth_season": season,
-            "age": age,
-            "moon": moon
-            },
-        "mentor_influence":{
-            "trait": {
-                "mentor_id": {
-                    "lawfulness": 0
-                    ...
-                    "strings": []
-                }
-            },
-            "skill": {
-                "mentor_id": {
-                    "path": 0,
-                    string: []
-                }
-            }
-        "app_ceremony": {
-            "honor": honor,
-            "graduation_age": age,
-            "moon": moon
-            },
-        "lead_ceremony": full ceremony text,
-        "possible_history": {
-            "condition name": {
-                "involved": ID
-                "death_text": text
-                "scar_text": text
-                },
-            "condition name": {
-                "involved": ID
-                "death_text": text
-                "scar_text": text
-                },
-            },
-        "died_by": [
-            {
-                "involved": ID,
-                "text": text,
-                "moon": moon
-            }
-            ],
-        "scar_events": [
-            {
-                'involved': ID,
-                'text': text,
-                "moon": moon
-            },
-            {
-                'involved': ID,
-                "text": text,
-                "moon": moon
-            }
-            ]
-        "murder": {
-            "is_murderer": [
-                    {
-                    "victim": ID,
-                    "revealed": bool,
-                    "moon": moon
-                    },
-                ]
-            "is_victim": [
-                    {
-                    "murderer": ID,
-                    "revealed": bool,
-                    "text": same text as the death history for this murder (revealed history)
-                    "unrevealed_text": unrevealed death history
-                    "moon": moon
-                    },
-                ]
-            }
-        }
-        """
+        # """ 
+        # want save to look like
+        # {
+        # "beginning":{
+        #     "clan_born": bool,
+        #     "birth_season": season,
+        #     "age": age,
+        #     "moon": moon
+        #     },
+        # "mentor_influence":{
+        #     "trait": {
+        #         "mentor_id": {
+        #             "lawfulness": 0
+        #             ...
+        #             "strings": []
+        #         }
+        #     },
+        #     "skill": {
+        #         "mentor_id": {
+        #             "path": 0,
+        #             string: []
+        #         }
+        #     }
+        # "app_ceremony": {
+        #     "honor": honor,
+        #     "graduation_age": age,
+        #     "moon": moon
+        #     },
+        # "lead_ceremony": full ceremony text,
+        # "possible_history": {
+        #     "condition name": {
+        #         "involved": ID
+        #         "death_text": text
+        #         "scar_text": text
+        #         },
+        #     "condition name": {
+        #         "involved": ID
+        #         "death_text": text
+        #         "scar_text": text
+        #         },
+        #     },
+        # "died_by": [
+        #     {
+        #         "involved": ID,
+        #         "text": text,
+        #         "moon": moon
+        #     }
+        #     ],
+        # "scar_events": [
+        #     {
+        #         'involved': ID,
+        #         'text': text,
+        #         "moon": moon
+        #     },
+        #     {
+        #         'involved': ID,
+        #         "text": text,
+        #         "moon": moon
+        #     }
+        #     ]
+        # "murder": {
+        #     "is_murderer": [
+        #             {
+        #             "victim": ID,
+        #             "revealed": bool,
+        #             "moon": moon
+        #             },
+        #         ]
+        #     "is_victim": [
+        #             {
+        #             "murderer": ID,
+        #             "revealed": bool,
+        #             "text": same text as the death history for this murder (revealed history)
+        #             "unrevealed_text": unrevealed death history
+        #             "moon": moon
+        #             },
+        #         ]
+        #     }
+        # }
+        # """
 
     # ---------------------------------------------------------------------------- #
     #                                   utility                                    #
@@ -149,7 +149,7 @@ class History:
     # ---------------------------------------------------------------------------- #
 
     @staticmethod
-    def add_beginning(cat, clan_born=False):
+    def add_beginning(cat, df=False, clan_born=False):
         """
         adds joining age and moon info to the cat's history save
         :param cat: cat object
@@ -158,12 +158,20 @@ class History:
             return
         History.check_load(cat)
 
-        cat.history.beginning = {
-            "clan_born": clan_born,
-            "birth_season": game.clan.current_season if clan_born else None,
-            "age": cat.moons,
+        if cat.df is True:
+
+            cat.history.beginning = {
             "moon": game.clan.age
         }
+        else:
+            cat.history.beginning = {
+                "clan_born": clan_born,
+                "birth_season": game.clan.current_season if clan_born else None,
+                "age": cat.moons,
+                "moon": game.clan.age
+            }
+      
+            
 
     @staticmethod
     def add_mentor_facet_influence_strings(cat):
@@ -171,8 +179,7 @@ class History:
         adds mentor influence to the cat's history save
         :param cat: cat object
         """
-        History.check_load(cat)
-        
+        History.check_load(cat) 
         if not cat.history.mentor_influence["trait"]:
             return
         
@@ -219,6 +226,8 @@ class History:
                     elif cat.history.mentor_influence["trait"][_ment][_fac] < 0:
                         cat.history.mentor_influence["trait"][_ment]["strings"].append(random.choice(facet_influence_text[_fac + "_lower"]))
 
+    
+    
     @staticmethod
     def add_mentor_skill_influence_strings(cat):
         """
@@ -249,11 +258,32 @@ class History:
                 SkillPath.CAMP: [ "caring for camp" ],
                 SkillPath.HEALER: [ "healing" ],
                 SkillPath.STAR: [ "connecting to starclan" ],
+                SkillPath.DARK: [ "connecting to the dark forest" ],
                 SkillPath.OMEN: [ "finding omens" ],
                 SkillPath.DREAM: [ "understanding dreams" ],
                 SkillPath.CLAIRVOYANT: [ "predicting the future" ],
                 SkillPath.PROPHET: [ "understanding prophecies" ],
-                SkillPath.GHOST: [ "connecting to the afterlife" ]
+                SkillPath.GHOST: [ "connecting to the afterlife" ],
+                SkillPath.EXPLORER: ["exploring unknown areas"],
+                SkillPath.TRACKER: ["tracking down scents"],
+                SkillPath.ARTISTAN: ["decorating dens"],
+                SkillPath.GUARDIAN: ["guarding the camp"],
+                SkillPath.TUNNELER: ["tunneling"],
+                SkillPath.NAVIGATOR: ["navigating unknown territory"],
+                SkillPath.SONG: ["using their voice"],
+                SkillPath.GRACE: ["watching where they step"],
+                SkillPath.CLEAN: ["keeping themself tidy"],
+                SkillPath.INNOVATOR: ["solving problems"],
+                SkillPath.COMFORTER: ["comforting others"],
+                SkillPath.MATCHMAKER: ["matchmaking"],
+                SkillPath.THINKER: ["thinking outside of the box"],
+                SkillPath.COOPERATIVE: ["being a team player"],
+                SkillPath.SCHOLAR: ["learning new things"],
+                SkillPath.TIME: ["managing their time"],
+                SkillPath.TREASURE: ["finding gifts"],
+                SkillPath.FISHER: ["fishing"],
+                SkillPath.LANGUAGE: ["using their words"],
+                SkillPath.SLEEPER: ["self-care"]
             }
         
         for _ment in cat.history.mentor_influence["skill"]:
@@ -458,42 +488,42 @@ class History:
 
     @staticmethod
     def get_beginning(cat):
-        """
-        returns the beginning info, example of structure:
+        # """
+        # returns the beginning info, example of structure:
 
-        "beginning":{
-            "clan_born": bool,
-            "birth_season": season,
-            "age": age,
-            "moon": moon
-            },
+        # "beginning":{
+        #     "clan_born": bool,
+        #     "birth_season": season,
+        #     "age": age,
+        #     "moon": moon
+        #     },
 
-        if beginning info is empty, a NoneType is returned
-        :param cat: cat object
-        """
+        # if beginning info is empty, a NoneType is returned
+        # :param cat: cat object
+        # """
         History.check_load(cat)
         return cat.history.beginning
 
     @staticmethod
     def get_mentor_influence(cat):
-        """
-        Returns mentor influence dict, example of structure:
+        # """
+        # Returns mentor influence dict, example of structure:
 
-        "mentor_influence":{
-            "mentor": ID
-            "skill": skill
-            "second_skill": second skill
-            "trait": {
-                "mentor_id":
-                    "lawfulness": 0,
-                    ...
-                    "strings": []
-            },
-            "skill": skill
-        }
+        # "mentor_influence":{
+        #     "mentor": ID
+        #     "skill": skill
+        #     "second_skill": second skill
+        #     "trait": {
+        #         "mentor_id":
+        #             "lawfulness": 0,
+        #             ...
+        #             "strings": []
+        #     },
+        #     "skill": skill
+        # }
 
-        if mentor influence is empty, a NoneType is returned
-        """
+        # if mentor influence is empty, a NoneType is returned
+        # """
         History.check_load(cat)
         return cat.history.mentor_influence
 
@@ -649,6 +679,19 @@ class History:
         victim = Cat.fetch_cat(victim)
         murder_history = History.get_murders(cat)
         victim_history = History.get_murders(victim)
+
+        if cat.shunned == 0:
+            cat.shunned = 1
+            cat.thought = "Is upset that they have been shunned"
+
+            if random.randint(1,4) == 1:
+                cat.get_injured("guilt")
+
+            for app in cat.apprentice:
+                fetched_cat = Cat.fetch_cat(app)
+                if fetched_cat:
+                    fetched_cat.update_mentor()
+                cat.update_mentor()
 
         if murder_history:
             if "is_murderer" in murder_history:
